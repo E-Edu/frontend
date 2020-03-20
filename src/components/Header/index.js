@@ -8,24 +8,7 @@ class Header extends Component {
 	}
 
 	render() {
-		return (
-			<div className='header'>
-				<header className='App-header'>
-					<div>
-						<button>
-							<img src={logo}></img>
-							E-Edu
-						</button>
-					</div>
-					<div>
-						<button>Home</button>
-					</div>
-					<div>
-						<button>Anmeldung</button>
-					</div>
-				</header>
-			</div>
-		);
+		return <div className='header'>Header</div>;
 	}
 }
 

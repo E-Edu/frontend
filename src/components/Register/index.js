@@ -8,7 +8,7 @@ class Template extends Component {
 	state = {};
 
 	render() {
-		return <div></div>;
+		return <div>Register</div>;
 	}
 }
 
