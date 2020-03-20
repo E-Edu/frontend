@@ -8,21 +8,7 @@ class Footer extends Component {
 	state = {};
 
 	render() {
-		return (
-			<div>
-				Footer:
-				<ul>
-					Help:
-					<li>Link</li>
-					<li>Link</li>
-				</ul>
-				<ul>
-					Task:
-					<li>Create</li>
-					<li>Make</li>
-				</ul>
-			</div>
-		);
+		return <div>Footer</div>;
 	}
 }
 
