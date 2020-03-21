@@ -56,7 +56,7 @@ class Landing extends Component {
                             />
                         </div>
                         <div id="text-content">
-                            <h2>Education for all</h2>
+                            <h2>Education For All</h2>
                             <h4>
                                 Keine Ahnung was ich schreiben soll, das ist ein
                                 Feature Text. Bitte etwas besseres überlegen
