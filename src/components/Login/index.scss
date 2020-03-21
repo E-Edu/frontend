@@ -1,5 +1,5 @@
 body {
-    font-family: Medium 80px/129px Hind Siliguri;;
+    font-family: Medium 80px/129px Hind Siliguri;
 }
 /* 
 *white bachgroundcanvas
@@ -31,7 +31,7 @@ body {
         border-radius:6px;
         padding: 4px;
         outline:none;
-        border: 1px solid #000033;
+        border: 1px solid #0B132B;;
         width: 90%;
         
         margin: 10px auto;
@@ -48,8 +48,8 @@ body {
         
         border-radius:6px;
         padding:4px;
-        outline: black;
-        border: 1px solid #000033;
+        outline: #0B132B;;
+        border: 1px solid #0B132B;;
         margin: 10px auto;
         width: 70%;
        
@@ -62,10 +62,10 @@ body {
     };
     /*sets size and color of the login-button*/
     #login{
-        background: #00b3b3;
-         margin: 10px auto;
-        border:none;
-         width: 70%;
+        background: #5BC0BE;
+        margin: 10px auto;
+        border-color: #303030;
+        width: 70%;
     };
     /*sets the size of the google-icon in the google-login-field*/
     #googleBild{
@@ -78,13 +78,13 @@ body {
     #google-login{
         width: 70%;
         background: none;
-         margin: 10px auto;
-         font-family:ubuntuLight;
+        margin: 10px auto;
+        font-family:Medium 80px/129px Hind Siliguri;
         border-radius:10px;
         padding:4px;
-        outline: black;
+        outline: #0B132B;
         
-        border: 1px solid #000033;
+        border: 1px solid #0B132B;
     };
     /*sets the position of the two eye-icons in the password-field*/
     .eye{
