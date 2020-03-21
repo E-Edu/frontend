@@ -1,0 +1,28 @@
+name: Docker Build
+
+#on:
+#  push:
+#    branches:
+#      - master
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: npm install
+      - run: npm install -g react-scripts
+      - run: npm run build
+      - name: Docker Build & Push
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: eedu/frontend
+          tags: latest
