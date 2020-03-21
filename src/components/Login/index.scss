@@ -7,7 +7,7 @@ body {
 .box {
     width: 20%;
     height:30%;
-    padding:3%;
+    padding:7%;
     position:absolute;
     top:50%;
     left:50%;
@@ -26,6 +26,7 @@ body {
     /*field that displays the text and all buttons and input-fields of the login*/
     .box-inhalt{
          margin-top:-10%;
+         bottom:40%;
      }; /*sets size and form of the input-boxes for password and email*/
     .input-box {
         border-radius:6px;

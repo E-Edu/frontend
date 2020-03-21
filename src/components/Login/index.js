@@ -31,27 +31,27 @@ class Template extends Component {
 	render() {
 		return (
 		<div>
-			/**describes the login-popup */
+			
 			<form className="box" action = "loginPop.html" method="post">
         	<div className="boxinhalt">
     
         		<h1 id = "Headline"> L O G I N</h1>
-				/**describes the email-input-box */
+				
       			<div className="input-box">
         			<input type="text" name="" placeholder="Enter Email..." className="input-field" required></input>
             	</div>
-				/**describes the password-input-box */
+				
         		<div className="input-box"> 
            
            			<input type="password" value="" id="passwort" placeholder="Enter Password..."  className="input-field" required></input>
-					/**describes the two eye-icons in the field */
+					
             		<span className="eye" onclick="changeVisibility()">
                 		<i id="hide1"className="fa fa-eye"></i>
                 		<i id="hide2"className="fa fa-eye-slash" ></i>
             		</span>
 
        			</div>
-				/**describes the google-login-field */
+				
        			<button id="google-login"><img id="googleBild" src="google-logo.png"></img> Log In with Google </button>
        			<input type="submit" className="" id= "login" className="button" value="Log In"></input>         
       		</div>
