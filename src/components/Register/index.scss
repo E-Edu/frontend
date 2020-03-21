@@ -1,5 +1,11 @@
-body {
-    font-family: Medium 80px/129px Hind Siliguri;
+@import url("https://fonts.googleapis.com/css?family=Arimo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap");
+
+form {
+    font-family: "Arimo", sans-serif;
+    font-family: "Hind Siliguri", sans-serif;
+
+    //font-family: Medium 80px/129px Hind Siliguri;
     a {
         text-decoration: none;
         color: #687d9a;
@@ -19,17 +25,12 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: lightblue;
-    }
-}
 /* 
 *white bachgroundcanvas
 */
 .box {
     width: 38%;
-    height: 35%;
+    height: 585, 8px;
     padding: 5%;
     position: absolute;
     top: 50%;
@@ -46,6 +47,7 @@ body {
 
     /*field that displays the text and all buttons and input-fields of the login*/
     .box-inhalt {
+        text-align: center;
         margin-top: -10%;
     } /*sets size and form of the input-boxes for password and email*/
     .input-box {
@@ -56,6 +58,7 @@ body {
         width: 100%;
         box-sizing: border-box;
         margin: 10px 0;
+
         /*sets size of the actual inputfields in the input-boxes*/
         input {
             width: 100%;
@@ -125,13 +128,20 @@ body {
 
     .btn-UI {
         margin: 5%;
-        width: 40%;
-        height: 38px;
+        width: 230px;
+        height: 49px;
+
         background: #ffffff 0% 0% no-repeat padding-box;
         border: 2px solid #303030;
         border-radius: 20px;
         opacity: 1;
         cursor: pointer;
+
+        text-align: center;
+        font: Regular 32px/28px Arimo;
+        letter-spacing: 0.48px;
+        color: #0b132b;
+        opacity: 1;
     }
 
     .btn-weiter {
@@ -143,12 +153,15 @@ body {
     /*sets position of the headline "LOGIN"*/
     #Headline {
         text-align: center;
-        font: Medium 80px/129px Hind Siliguri;
+        font-family: Hind Siliguri;
+        font-weight: 500;
+        font-size: 32px;
         letter-spacing: 24px;
         color: #0b132b;
         opacity: 1;
         text-transform: uppercase;
     }
+
     /*sets size and color of the login-button*/
     #login {
         background: #00b3b3;
@@ -182,5 +195,29 @@ body {
     /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
     #hide1 {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .box {
+        #Headline {
+            text-align: center;
+            font-family: Hind Siliguri;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 12px;
+            color: #0b132b;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        width: 70%;
+    }
+    .btn-UI {
+        max-width: 150px;
     }
 }
