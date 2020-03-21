@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import {Link} from "react-router-dom";
 
 class Footer extends Component {
 	constructor(props) {
@@ -10,8 +11,9 @@ class Footer extends Component {
 	render() {
 		return <div className='Footer'>
 			<div id='legal'>
-				<a href="#">Impressum</a>
-				<a href="#">Datenschutzerklärung</a>
+				<Link to='/imprint'>Impressum</Link>
+				<Link to='/privacy'>Datenschutzerklärung</Link>
+				<Link to='/credits'>Credits</Link>
 			</div>
 			<div id='Copyright'>
 				<span>&copy; 2020 The Morpheus Tutorials Community</span>

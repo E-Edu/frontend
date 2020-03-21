@@ -12,7 +12,6 @@ $Second: #5BC0BE;
   align-items: center;
 }
 #title{
-  display: inline;
   margin: 0;
   padding-left: 30px;
   text-align: left;
@@ -20,7 +19,7 @@ $Second: #5BC0BE;
   letter-spacing: 0;
   color: $Second;
 }
-.BTN{
+.BTN_Log{
   height: 50px;
   width: 159px;
   border: 2px solid $Second;
@@ -39,7 +38,7 @@ $Second: #5BC0BE;
   color: $Second;
   transition: all 0.2s;
 }
-#Button_Box{
+#Button_Box_Landing{
   margin-right: 96px;
 }
 #Button_Login:hover{
@@ -58,5 +57,29 @@ $Second: #5BC0BE;
   background-color: rgba(91, 192, 190, 0.3);
 }
 #Button_Register:focus{
+  outline: none;
+}
+#Button_Box_Dashbord{
+  margin-right: 96px;
+}
+#Button_Box_Dashboard{
+  margin-right: 96px;
+}
+.BTN_Dash{
+  margin: 0 1rem;
+  background-color: transparent;
+  border: none;
+  color: $Second;
+}
+#Button_Info:hover{
+  cursor: pointer;
+}
+#Button_Logout:hover{
+  cursor: pointer;
+}
+#Button_Info:focus{
+  outline: none;
+}
+#Button_Logout:focus{
   outline: none;
 }
