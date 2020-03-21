@@ -3,7 +3,6 @@ import './index.css';
 import Header from '../../components/Header';
 import Home_icon from '../../Assets/icons/home.svg';
 import Task_icon from '../../Assets/icons/alert-circle.svg';
-import Home_icon from '../../Assets/icons/home.svg';
 
 class Template extends Component {
 	constructor(props) {
