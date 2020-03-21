@@ -1,0 +1,50 @@
+/*Blaue leiste oben*/
+.leisteOben{
+    height: 80px;
+    background: #0B132B 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+/*E-EDU schrift*/
+.eduSchrift{
+    margin-top: 5px;
+    margin-left: 30px;
+    width: 140px;
+    height: 71px;
+
+    text-align: left;
+    font: Bold 44px/71px Hind Siliguri;
+    letter-spacing: 0;
+    color: #5BC0BE;
+    opacity: 1;
+}
+
+/*Für die Privacy überschrift*/
+.headingFont{
+    margin-left: 300px;
+    height: 110px;
+    margin-top: 133px;
+    width: 500px;
+
+    text-align: center;
+    font-family:Hind Siliguri;
+    font-size:80px;
+    color: #0B132B;
+    opacity: 1;
+}
+
+/*Für die Textbox*/
+.fontBox{
+    margin-top: 5px;
+    margin-left: 300px;
+    margin-top: 5px;
+    width:659px;
+    height:659px;
+
+    text-align: left;
+    font: Hind Siliguri;
+    font-size:20px;
+    letter-spacing: 0;
+    color: #0B132B;
+    opacity: 1;
+}
