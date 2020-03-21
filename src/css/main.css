@@ -13,7 +13,7 @@ body input {
 }
 
 .font-Arimo {
-  font-family: "Arimo", sans-serif;
+  font-family: "Arimo", sans-serif !important;
 }
 
 .text-greenBlue {
