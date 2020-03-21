@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 import { Route } from 'react-router-dom';
-import Login from '../../components/Login';
-import Register from '../../components/Register';
+import Login from '../../components/Login/';
+import Register from '../../components/Register/';
 
 class Landing extends Component {
 	constructor(props) {

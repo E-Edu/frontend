@@ -10,11 +10,9 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<Header></Header>
 				<Route path={['/login', '/register', '/']} component={Landing} />
 				<Route path='/task' component={Task} />
 				<Route path='/dashboard' component={Dashboard} />
-				<Footer></Footer>
 			</Router>
 		);
 	}
