@@ -1,103 +1,94 @@
-$dark: #1C2541;
-$bluegray: #3A506B;
-$primary: #5BC0BE;
+$dark: #1c2541;
+$bluegray: #3a506b;
+$primary: #5bc0be;
 
-body {
-    font-family: Medium 80px/129px Hind Siliguri;
-    cursor: default;
+.content {
+	margin-bottom: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-    .content {
-        margin-bottom: 120px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+	.picture {
+		margin-top: 20px;
+		width: 30%;
 
+		img {
+			width: 100%;
+		}
+	}
 
-        .picture {
-            margin-top: 20px;
-            width: 30%;
+	.credits {
+		.featuretext {
+			text-align: center;
+			color: $bluegray;
 
-            img {
-                width: 100%;
-            }
-        }
+			.heading {
+				font-size: 80px;
+				color: $dark;
+			}
 
-        .credits {
-            .featuretext {
-                text-align: center;
-                color: $bluegray;
+			.communityproject {
+				font-size: 40px;
 
-                .heading {
-                    font-size: 80px;
-                    color: $dark;
-                }
+				span {
+					color: $primary;
+				}
+			}
 
-                .communityproject {
-                    font-size: 40px;
+			.teilnehmende {
+				font-size: 30px;
+			}
+		}
 
-                    span {
-                        color: $primary;
-                    }
-                }
+		.mitwirkende {
+			.subheading {
+				text-align: center;
+				font-size: 40px;
+				color: $bluegray;
+				font-weight: bolder;
+				margin-bottom: 60px;
+				margin-top: 40px;
+			}
 
-                .teilnehmende {
-                    font-size: 30px;
-                }
-            }
+			.morpheus {
+				.idea {
+					font-size: 30px;
+					font-style: normal;
+					text-align: center;
+					color: $primary;
+					font-weight: normal;
+					margin: 10px 0;
+				}
 
-            .mitwirkende {
-                .subheading {
-                    text-align: center;
-                    font-size: 40px;
-                    color: $bluegray;
-                    font-weight: bolder;
-                    margin-bottom: 60px;
-                    margin-top: 40px;
-                }
+				.name {
+					text-align: center;
+					font-size: 20px;
+					color: $bluegray;
+					margin-top: 5px;
+				}
+			}
 
-                .morpheus {
-                    .idea {
-                        font-size: 30px;
-                        font-style: normal;
-                        text-align: center;
-                        color: $primary;
-                        font-weight: normal;
-                        margin: 10px 0;
-                    }
+			.credits-container {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
 
-                    .name {
-                        text-align: center;
-                        font-size: 20px;
-                        color: $bluegray;
-                        margin-top: 5px;
-                    }
+				.cerdits-heading {
+					text-align: center;
+					font-size: 30px;
+					font-style: normal;
+					color: $primary;
+					font-weight: normal;
+					margin: 10px 0;
+				}
 
-                }
-
-                .credits-container {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-
-                    .cerdits-heading {
-                        text-align: center;
-                        font-size: 30px;
-                        font-style: normal;
-                        color: $primary;
-                        font-weight: normal;
-                        margin: 10px 0;
-                    }
-
-                    .credits-name {
-                        text-align: center;
-                        font-size: 20px;
-                        color: $bluegray;
-                        margin: 5px 0;
-                    }
-                }
-            }
-        }
-
-    }
+				.credits-name {
+					text-align: center;
+					font-size: 20px;
+					color: $bluegray;
+					margin: 5px 0;
+				}
+			}
+		}
+	}
 }

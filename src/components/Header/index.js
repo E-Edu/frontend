@@ -14,7 +14,7 @@ class Header extends Component {
 		switch (this.props.side) {
 			case 'Landing':
 				return (
-					<div className='header'>
+					<div className='headerNavbar'>
 						<div>
 							<h1 id='title'>E-EDU</h1>
 						</div>
@@ -30,7 +30,7 @@ class Header extends Component {
 				);
 			case 'Dashboard':
 				return (
-					<div className='header'>
+					<div className='headerNavbar'>
 						<div>
 							<h1 id='title'>E-EDU</h1>
 						</div>

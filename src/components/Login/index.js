@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./index.scss";
+import eye from "../../Assets/icons/eye.svg";
+import eyeOff from "../../Assets/icons/eye-off.svg";
 
 class Template extends Component {
     constructor(props) {
@@ -68,7 +70,7 @@ class Template extends Component {
 
     render() {
         return (
-            <div>
+            <div className="loginComponent">
                 {/*describes the login-popup*/}
                 <form
                     className="box"
@@ -77,7 +79,7 @@ class Template extends Component {
                     method="post"
                 >
                     <div className="boxinhalt">
-                        <h1 id="Headline"> L O G I N</h1>
+                        <h1 id="Headline">L O G I N</h1>
                         {/*describes the email-input-box*/}
                         <div className="input-box">
                             <input
@@ -105,12 +107,12 @@ class Template extends Component {
                                 className="eye"
                                 onClick={this.changeVisibility}
                             >
-                                <img id="hide1" src="assets/eye.svg" />
-                                <img id="hide2" src="assets/eye-off.svg" />
+                                <img id="hide1" src={eye} />
+                                <img id="hide2" src={eyeOff} />
                             </span>
                         </div>
                         {/*describes the google-login-field*/}
-                        <button id="google-login">
+                        <button className="pointer" id="google-login">
                             <img
                                 id="googleBild"
                                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
@@ -119,9 +121,8 @@ class Template extends Component {
                         </button>
                         <input
                             type="submit"
-                            className=""
                             id="login"
-                            className="button"
+                            className="button pointer"
                             value="Log In"
                         />
                     </div>
