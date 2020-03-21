@@ -23,7 +23,6 @@ class App extends Component {
                 <Route path="/imprint" component={Imprint} />
                 <Route path="/privacy" component={Privacy} />
                 <Route path="/credits" component={Credits} />
-                >>>>>>> experimental
             </Router>
         );
     }
