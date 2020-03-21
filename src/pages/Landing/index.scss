@@ -4,7 +4,7 @@
 	width: 100vw;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 80px;
+	padding-top: 80px;
 }
 #landigpage-image {
 	padding: 0 1rem;
@@ -30,8 +30,8 @@
 }
 
 .react-modal-body {
+	top: -10%;
 	width: auto !important;
 	.react-modal-body-close {
-		display: none;
 	}
 }
