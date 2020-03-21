@@ -5,6 +5,7 @@ import Login from '../../components/Login';
 import Register from '../../components/Register';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Landing_Image from '../../Assets/Picture/landingpage-teaching.svg'
 
 class Landing extends Component {
 	constructor(props) {
@@ -23,7 +24,7 @@ class Landing extends Component {
 					</div>
 					<div id='content'>
 						<div id='image-landigpage'>
-							<img id='landigpage-img' src="landingpage-teaching.svg" alt="landigpage-teaching image"/>
+							<img id='landigpage-img' src={Landing_Image} alt="landigpage-teaching image"/>
 						</div>
 						<div id='text-content'>
 							<h2>Education for all</h2>
