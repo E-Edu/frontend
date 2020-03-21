@@ -10,9 +10,12 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<Route path={['/login', '/register', '/']} component={Landing} />
+				<Route path={['/login', '/register', '/']} exact component={Landing} />
 				<Route path='/task' component={Task} />
 				<Route path='/dashboard' component={Dashboard} />
+				<Route path='/imprint' component={Imprint} />
+				<Route path='/privacy' component={Privacy} />
+				<Route path='/credits' component={Credits} />
 			</Router>
 		);
 	}

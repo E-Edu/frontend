@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import './index.css';
-import { Route } from 'react-router-dom';
-import Login from '../../components/Login/';
-import Register from '../../components/Register/';
+import './index.scss';
+import { Route, Redirect } from 'react-router-dom';
+import Login from '../../components/Login';
+import Register from '../../components/Register';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Landing_Image from '../../Assets/Picture/landingpage-teaching.svg';
+import Modal from 'react-animated-modal';
 
 class Landing extends Component {
 	constructor(props) {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import {Link} from "react-router-dom";
 
 class Footer extends Component {
 	constructor(props) {
@@ -8,7 +9,16 @@ class Footer extends Component {
 	state = {};
 
 	render() {
-		return <div>Footer</div>;
+		return <div className='Footer'>
+			<div id='legal'>
+				<Link to='/imprint'>Impressum</Link>
+				<Link to='/privacy'>Datenschutzerklärung</Link>
+				<Link to='/credits'>Credits</Link>
+			</div>
+			<div id='Copyright'>
+				<span>&copy; 2020 The Morpheus Tutorials Community</span>
+			</div>
+		</div>;
 	}
 }
 
