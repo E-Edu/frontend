@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./index.scss";
+import { Link, Redirect } from "react-router-dom";
 
 class Register extends React.Component {
     constructor(props) {
@@ -8,8 +9,11 @@ class Register extends React.Component {
             firstName: "",
             lastName: "",
             password: "",
+            password2: "",
             mail: "",
             role: "",
+            accepted: false,
+            visible: true,
             clicked: false
         };
     }
@@ -27,13 +31,43 @@ class Register extends React.Component {
         });
     };
 
+    handlePrivacy = () => {
+        this.setState({
+            accepted: !this.state.accepted
+        });
+        console.log(this.state.accepted);
+    };
+
+    handleSpecial = e => {
+        console.log(this.state.role);
+
+        this.setState({
+            role: e.target.value
+        });
+        setTimeout(() => {
+            console.log(this.state.role);
+        }, 2000);
+    };
+
+    handleRedirect = () => {
+        this.props.history.push("/");
+    };
+
+    /*
+    handleSpecial(e) {
+        this.setState({
+            role: e.target.value
+        });
+        console.log(e.target.value);
+    }
+*/
     render() {
         return (
             <div>
                 <div>
                     <form className="box" action="loginPop.html" method="post">
                         <div className="boxinhalt">
-                            <h1 id="Headline"> R E G I S T E R</h1>
+                            <h1 id="Headline">Register</h1>
 
                             {(() => {
                                 if (this.state.clicked) {
@@ -91,13 +125,32 @@ class Register extends React.Component {
 
                                             <div className="checkContainer">
                                                 <p>
-                                                    <input type="checkbox"></input>{" "}
+                                                    <input
+                                                        onClick={
+                                                            this.handlePrivacy
+                                                        }
+                                                        type="checkbox"
+                                                    ></input>{" "}
                                                     Ich habe die{" "}
-                                                    <a href="">
+                                                    <Link to="/">
                                                         Datenschutzbestimmungen
-                                                    </a>{" "}
+                                                    </Link>{" "}
                                                     gelesen und akzeptiert
                                                 </p>
+                                            </div>
+                                            <div
+                                                onClick={this.handleRedirect}
+                                                className="btn-UI-container"
+                                            >
+                                                <button className="btn-UI">
+                                                    Abbrechen
+                                                </button>
+                                                <button
+                                                    onClick={this.handleClick}
+                                                    className="btn-UI btn-weiter"
+                                                >
+                                                    Submit
+                                                </button>
                                             </div>
                                         </span>
                                     );
@@ -127,32 +180,43 @@ class Register extends React.Component {
                                             </div>
                                             <div className="btn-group roleBtn">
                                                 <button
+                                                    onClick={this.handleSpecial}
+                                                    value="Student"
                                                     className="btn-specialButton"
                                                     id="btn-specialButton1"
                                                 >
                                                     Student
                                                 </button>
                                                 <button
+                                                    onClick={this.handleSpecial}
+                                                    value="Teacher"
                                                     className="btn-specialButton"
                                                     id="btn-specialButton2"
                                                 >
                                                     Teacher
                                                 </button>
                                             </div>
+
+                                            <div className="btn-UI-container">
+                                                <button
+                                                    onClick={
+                                                        this.handleRedirect
+                                                    }
+                                                    className="btn-UI"
+                                                >
+                                                    Abbrechen
+                                                </button>
+                                                <button
+                                                    onClick={this.handleClick}
+                                                    className="btn-UI btn-weiter"
+                                                >
+                                                    Weiter
+                                                </button>
+                                            </div>
                                         </span>
                                     );
                                 }
                             })()}
-
-                            <div className="btn-UI-container">
-                                <button className="btn-UI">Abbrechen</button>
-                                <button
-                                    onClick={this.handleClick}
-                                    className="btn-UI btn-weiter"
-                                >
-                                    Weiter
-                                </button>
-                            </div>
                         </div>
                     </form>
                 </div>

@@ -1,12 +1,35 @@
 body {
     font-family: Medium 80px/129px Hind Siliguri;
+    a {
+        text-decoration: none;
+        color: #687d9a;
+        transition: all 0.2s;
+    }
+
+    p {
+        color: #687d9a;
+        transition: all 0.2s;
+    }
+
+    a:hover {
+        color: #5bc0be;
+    }
+    a:focus {
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
 /* 
 *white bachgroundcanvas
 */
 .box {
-    width: 20%;
-    height: 30%;
+    width: 38%;
+    height: 35%;
     padding: 5%;
     position: absolute;
     top: 50%;
@@ -119,7 +142,12 @@ body {
 
     /*sets position of the headline "LOGIN"*/
     #Headline {
-        padding-top: -50%;
+        text-align: center;
+        font: Medium 80px/129px Hind Siliguri;
+        letter-spacing: 24px;
+        color: #0b132b;
+        opacity: 1;
+        text-transform: uppercase;
     }
     /*sets size and color of the login-button*/
     #login {
