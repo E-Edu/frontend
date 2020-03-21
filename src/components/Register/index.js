@@ -18,6 +18,20 @@ class Register extends React.Component {
         };
     }
 
+    componentDidUpdate() {
+        console.log("------------------- D E B U G ------------------");
+        console.log("firstName: " + this.state.firstName);
+        console.log("lastName: " + this.state.lastName);
+        console.log("password: " + this.state.password);
+        console.log("password2: " + this.state.password2);
+        console.log("mail: " + this.state.mail);
+        console.log("role: " + this.state.role);
+        console.log("accepted: " + this.state.accepted);
+        console.log("visible: " + this.state.visible);
+        console.log("clicked: " + this.state.clicked);
+        console.log("------------------- D E B U G...END ------------");
+    }
+
     handleInput = field => {
         var newState = {};
         newState[field.target.name] = field.target.value;
@@ -35,12 +49,14 @@ class Register extends React.Component {
         this.setState({
             accepted: !this.state.accepted
         });
-        console.log(this.state.accepted);
+        setTimeout(() => {
+            console.log(this.state.accepted);
+        }, 2000);
     };
 
     handleSpecial = e => {
         console.log(this.state.role);
-
+        e.preventDefault();
         this.setState({
             role: e.target.value
         });
@@ -51,6 +67,20 @@ class Register extends React.Component {
 
     handleRedirect = () => {
         this.props.history.push("/");
+    };
+
+    handleSubmit = () => {
+        console.log("------------------- S U B M I T ------------------");
+        console.log("firstName: " + this.state.firstName);
+        console.log("lastName: " + this.state.lastName);
+        console.log("password: " + this.state.password);
+        console.log("password2: " + this.state.password2);
+        console.log("mail: " + this.state.mail);
+        console.log("role: " + this.state.role);
+        console.log("accepted: " + this.state.accepted);
+        console.log("visible: " + this.state.visible);
+        console.log("clicked: " + this.state.clicked);
+        console.log("------------------- S U B M I T ... END------------");
     };
 
     /*
@@ -75,8 +105,10 @@ class Register extends React.Component {
                                         <span>
                                             <div className="input-box">
                                                 <input
+                                                    onChange={this.handleInput}
                                                     type="text"
-                                                    name=""
+                                                    name="mail"
+                                                    value={this.state.mail}
                                                     placeholder="Email"
                                                     className="input-field"
                                                     required
@@ -85,6 +117,9 @@ class Register extends React.Component {
 
                                             <div className="input-box">
                                                 <input
+                                                    onChange={this.handleInput}
+                                                    name="password"
+                                                    value={this.state.password}
                                                     type="password"
                                                     id="passwort"
                                                     placeholder="Passwort"
@@ -105,6 +140,9 @@ class Register extends React.Component {
 
                                             <div className="input-box">
                                                 <input
+                                                    onChange={this.handleInput}
+                                                    value={this.state.password2}
+                                                    name="password2"
                                                     type="password"
                                                     id="passwort"
                                                     placeholder="Passwort wiederholen"
@@ -128,6 +166,9 @@ class Register extends React.Component {
                                                     <input
                                                         onClick={
                                                             this.handlePrivacy
+                                                        }
+                                                        value={
+                                                            this.state.accepted
                                                         }
                                                         type="checkbox"
                                                     ></input>{" "}
@@ -162,6 +203,7 @@ class Register extends React.Component {
                                                     onChange={this.handleInput}
                                                     type="text"
                                                     name="firstName"
+                                                    value={this.state.firstName}
                                                     placeholder="Vorname"
                                                     className="input-field"
                                                     required
@@ -173,6 +215,7 @@ class Register extends React.Component {
                                                     onChange={this.handleInput}
                                                     type="text"
                                                     name="lastName"
+                                                    value={this.state.lastName}
                                                     placeholder="Nachname"
                                                     className="input-field"
                                                     required
