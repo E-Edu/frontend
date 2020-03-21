@@ -28,7 +28,6 @@ class Header extends Component {
 						</div>
 					</div>
 				);
-				break;
 			case 'Dashboard':
 				return (
 					<div className='header'>
@@ -53,7 +52,6 @@ class Header extends Component {
 						</div>
 					</div>
 				);
-				break;
 		}
 		return null;
 	}
