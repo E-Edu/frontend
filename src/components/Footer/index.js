@@ -8,7 +8,15 @@ class Footer extends Component {
 	state = {};
 
 	render() {
-		return <div>Footer</div>;
+		return <div className='Footer'>
+			<div id='legal'>
+				<a href="#">Impressum</a>
+				<a href="#">Datenschutzerklärung</a>
+			</div>
+			<div id='Copyright'>
+				<span>&copy; 2020 The Morpheus Tutorials Community</span>
+			</div>
+		</div>;
 	}
 }
 
