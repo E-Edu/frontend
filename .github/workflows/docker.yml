@@ -21,8 +21,8 @@ jobs:
       - run: npm build
       - name: Docker Build & Push
         uses: docker/build-push-action@v1
-          with:
-            username: ${{ secrets.DOCKER_USERNAME }}
-            password: ${{ secrets.DOCKER_PASSWORD }}
-            repository: eedu/frontend
-            tags: latest
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: eedu/frontend
+          tags: latest
