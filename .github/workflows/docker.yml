@@ -5,6 +5,8 @@ name: Docker Build
 #    branches:
 #      - master
 
+on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
