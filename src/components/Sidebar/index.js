@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import icons from './icons'
 
 class MenuElement extends Component {
 	constructor(props) {
@@ -33,11 +34,11 @@ class MenuElement extends Component {
 		if (this.state.name) {
 			nameText = <span>{this.state.name}</span>;
 		}
-		const filename = "assets/icons/" + this.state.file + ending;
+		const filename = this.state.file + ending;
 		return (
 			<Link to={"/" + this.props.url} className="menuElement" key={this.state.file} style={{marginTop: 50, display: "block"}}
 			   onMouseEnter={this.onMouseEnterHandler} onMouseLeave={this.onMouseLeaveHandler}>
-				<img src={filename} alt=""/>
+				<img src={icons[filename]} alt=""/>
 				<br/>
 				{nameText}
 			</Link>
