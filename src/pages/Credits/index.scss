@@ -1,0 +1,116 @@
+#content-credits {
+    width: 100%;
+    height: 100vh;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". img . "". text .";
+
+    #image-credits {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+    }
+
+    #text-credits {
+        grid-area: text;
+        margin-bottom: 10rem;
+
+        h2 {
+            font-size: 80px;
+            margin: 2rem 0 0 0;
+            text-align: center;
+            font: SemiBold 80px/20px Hind Siliguri;
+            letter-spacing: 0;
+            color: #1C2541;
+            opacity: 1;
+        }
+
+        h3 {
+            text-align: center;
+            font: Regular 40px/60px Hind Siliguri;
+            letter-spacing: 0;
+            color: #3A506B;
+            font-size: 40px;
+
+            span {
+                text-align: center;
+                font: Regular 40px/60px Hind Siliguri;
+                letter-spacing: 0;
+                color: #5BC0BE;
+            }
+        }
+
+        p {
+            text-align: center;
+            font: Regular 30px/45px Hind Siliguri;
+            letter-spacing: 0;
+            color: #3A506B;
+            opacity: 1;
+            font-size: 30px;
+        }
+
+        .mitwirkende {
+            text-align: center;
+            font: Bold 40px/60px Hind Siliguri;
+            letter-spacing: 0;
+            color: #3A506B;
+            opacity: 1;
+            font-size: 40px;
+        }
+
+        .leitung {
+            text-align: center;
+            font: Regular 30px/45px Hind Siliguri;
+            letter-spacing: 0;
+            color: #5BC0BE;
+            opacity: 1;
+            font-size: 30px;
+
+            span {
+                text-align: center;
+                font: Regular 20px/45px Hind Siliguri;
+                letter-spacing: 0;
+                color: #3A506B;
+                opacity: 1;
+                font-size: 20px;
+            }
+        }
+
+        #list {
+            display: flex;
+
+            #logo {
+                width: 150px;
+            }
+
+            #Orga,
+            #backend,
+            #frontend,
+            #des,
+            #logo {
+                margin: 0 3rem 0 0;
+
+                .titel-list {
+                    p {
+                        font: Regular 30px/45px Hind Siliguri;
+                        letter-spacing: 0;
+                        color: #5BC0BE;
+                        opacity: 1;
+                        font-size: 30px;
+                    }
+                }
+
+                div {
+                    text-align: center;
+                    font: Regular 20px/45px Hind Siliguri;
+                    letter-spacing: 0;
+                    color: #3A506B;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
