@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import { Link } from 'react-router-dom';
 
 class MenuElement extends Component {
 	constructor(props) {
