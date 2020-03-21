@@ -18,7 +18,7 @@ jobs:
           node-version: '12.x'
       - run: npm install
       - run: npm install -g react-scripts
-      - run: npm build
+      - run: npm run build
       - name: Docker Build & Push
         uses: docker/build-push-action@v1
         with:
