@@ -1,22 +1,22 @@
 #Menu {
-  left: 0;
-  width: 115px;
-  height: 1108px;
-  background: #0B132B 0 0 no-repeat padding-box;
-  text-align: center;
-  color: #687D9A;
-  opacity: 1;
-}
+	left: 0;
+	width: 115px;
+	height: 1108px;
+	background: #0b132b 0 0 no-repeat padding-box;
+	text-align: center;
+	color: #687d9a;
+	opacity: 1;
 
-a.menuElement {
-  margin-top: 50px;
-  display: block;
-}
+	a.menuElement {
+		margin-top: 50px;
+		display: block;
+	}
 
-a.menuElement:hover {
-  cursor: pointer;
-}
+	a.menuElement:hover {
+		cursor: pointer;
+	}
 
-a.menuElement:focus {
-  outline: none;
+	a.menuElement:focus {
+		outline: none;
+	}
 }
