@@ -1,33 +1,64 @@
 import React, { Component } from 'react';
-import './index.css';
-import { Route } from 'react-router-dom';
+import './index.scss';
+import { Route, Redirect } from 'react-router-dom';
 import Login from '../../components/Login';
 import Register from '../../components/Register';
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Modal from 'react-animated-modal';
 
 class Landing extends Component {
 	constructor(props) {
 		super(props);
 	}
-	state = {};
+	state = { showModal: false, redirect: false };
 
 	render() {
 		return (
 			<div className='landing'>
 				<Header side='Landing'></Header>
 				<div className='Main'>
-					<div className='popup'>
-						<Route path='/login' component={Login} />
-						<Route path='/register' component={Register} />
-					</div>
+					{(() => {
+						if (this.state.redirect) {
+							this.setState({ redirect: false });
+
+							return <Redirect exact to={this.state.redirect} />;
+						}
+					})()}
+					<Route
+						exact
+						path={['/login', '/register']}
+						render={() => {
+							if (!this.state.showModal && !this.state.redirect) {
+								this.setState({ showModal: true });
+							}
+						}}
+					></Route>
+					<Modal
+						visible={this.state.showModal}
+						closemodal={() => {
+							console.log('close modal');
+							this.setState({ showModal: false, redirect: '/' });
+						}}
+						type='fadeIn'
+					>
+						<Route exact path='/login' component={Login} />
+						<Route exact path='/register' component={Register} />
+					</Modal>
 					<div id='content'>
 						<div id='image-landigpage'>
-							<img id='landigpage-img' src="landingpage-teaching.svg" alt="landigpage-teaching image"/>
+							<img
+								id='landigpage-img'
+								src='landingpage-teaching.svg'
+								alt='landigpage-teaching image'
+							/>
 						</div>
 						<div id='text-content'>
 							<h2>Education for all</h2>
-							<h4>Keine Ahnung was ich schreiben soll, das ist ein Feature Text. Bitte etwas besseres überlegen</h4>
+							<h4>
+								Keine Ahnung was ich schreiben soll, das ist ein Feature Text. Bitte
+								etwas besseres überlegen
+							</h4>
 						</div>
 					</div>
 				</div>
