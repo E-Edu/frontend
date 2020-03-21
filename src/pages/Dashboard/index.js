@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './index.css';
 import Header from "../../components/Header";
+import Home_icon from '../../Assets/icons/home.svg';
+import Task_icon from "../../Assets/icons/alert-circle.svg";
+import Hom_icon from '../../Assets/icons/home.svg';
 
 class Template extends Component {
 	constructor(props) {
@@ -10,9 +13,16 @@ class Template extends Component {
 
 	render() {
 		return <div className='main'>
-			<Header side='Dashboard'></Header>
+			<Header side='Dashboard'/>
 			<div className="sidebar">
-				<a href="">Test</a>
+				<a href='#' className="Menu" id='Home'>
+					<img src={Home_icon} alt="Home"/>
+					<span>Home</span>
+				</a>
+				<a href='#' className="Menu" id='Task'>
+					<img src={Task_icon} alt="Task"/>
+					<span>Home</span>
+				</a>
 			</div>
 			<div className="content">
 				<div className="box">
