@@ -1,3 +1,39 @@
 body {
     font-family: Medium 80px/129px Hind Siliguri;;
 }
+
+.box {
+    width: 20%;
+    height:30%;
+    padding:3%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background: white;
+    text-align: center;
+    border-radius:4px;
+    color:#000033;
+    -moz-box-shadow: 0 0 10px #888;
+    -webkit-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+     -o-box-shadow: 0 0 10px #888;
+
+    .input-box {
+        border-radius:6px;
+        padding: 4px;
+        outline:none;
+        border: 1px solid #000033;
+        width: 90%;
+        
+        margin: 10px auto;
+
+        input {
+            width: 100%;
+            border:none;
+            outline:none;
+            background:transparent;
+        };
+    };
+
+}
