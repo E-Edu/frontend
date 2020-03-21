@@ -1,0 +1,62 @@
+$Primary: #0B132B;
+$Second: #5BC0BE;
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 80px;
+  background: $Primary 0% 0% no-repeat padding-box;
+  align-items: center;
+}
+h1{
+  display: inline;
+  margin: 0;
+  padding-left: 30px;
+  text-align: left;
+  font: Bold 44px/71px Hind Siliguri;
+  letter-spacing: 0;
+  color: $Second;
+}
+.BTN{
+  height: 50px;
+  width: 159px;
+  border: 2px solid $Second;
+  border-radius: 10px;
+  font: 26px/42px Hind Siliguri;
+  font-weight: 400;
+  background-color: Transparent;
+}
+#Button_Login{
+  color: #0B132B;
+  background-color: $Second;
+  margin-right: 56px;
+  transition: all 0.5s;
+}
+#Button_Register{
+  color: $Second;
+  transition: all 0.2s;
+}
+#Button_Box{
+  margin-right: 96px;
+}
+#Button_Login:hover{
+  cursor: pointer;
+  background-color: rgba(91, 192, 190, 0.8);
+}
+#Button_Register:hover{
+  cursor: pointer;
+  background-color: rgba(91, 192, 190, 0.3);
+}
+#Button_Login:focus{
+  outline: none;
+}
+#Button_Register:hover{
+  cursor: pointer;
+  background-color: rgba(91, 192, 190, 0.3);
+}
+#Button_Register:focus{
+  outline: none;
+}
