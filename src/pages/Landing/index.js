@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import Login from '../../components/Login';
 import Register from '../../components/Register';
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 class Landing extends Component {
 	constructor(props) {
@@ -30,6 +31,7 @@ class Landing extends Component {
 						</div>
 					</div>
 				</div>
+				<Footer></Footer>
 			</div>
 		);
 	}
