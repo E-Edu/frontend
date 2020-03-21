@@ -1,85 +1,86 @@
-$Primary: #0B132B;
-$Second: #5BC0BE;
+$Primary: #0b132b;
+$Second: #5bc0be;
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 80px;
-  background: $Primary 0% 0% no-repeat padding-box;
-  align-items: center;
-}
-#title{
-  margin: 0;
-  padding-left: 30px;
-  text-align: left;
-  font: Bold 44px/71px Hind Siliguri;
-  letter-spacing: 0;
-  color: $Second;
-}
-.BTN_Log{
-  height: 50px;
-  width: 159px;
-  border: 2px solid $Second;
-  border-radius: 10px;
-  font: 26px/42px Hind Siliguri;
-  font-weight: 400;
-  background-color: Transparent;
-}
-#Button_Login{
-  color: #0B132B;
-  background-color: $Second;
-  margin-right: 56px;
-  transition: all 0.5s;
-}
-#Button_Register{
-  color: $Second;
-  transition: all 0.2s;
-}
-#Button_Box_Landing{
-  margin-right: 96px;
-}
-#Button_Login:hover{
-  cursor: pointer;
-  background-color: rgba(91, 192, 190, 0.8);
-}
-#Button_Register:hover{
-  cursor: pointer;
-  background-color: rgba(91, 192, 190, 0.3);
-}
-#Button_Login:focus{
-  outline: none;
-}
-#Button_Register:hover{
-  cursor: pointer;
-  background-color: rgba(91, 192, 190, 0.3);
-}
-#Button_Register:focus{
-  outline: none;
-}
-#Button_Box_Dashbord{
-  margin-right: 96px;
-}
-#Button_Box_Dashboard{
-  margin-right: 96px;
-}
-.BTN_Dash{
-  margin: 0 1rem;
-  background-color: transparent;
-  border: none;
-  color: $Second;
-}
-#Button_Info:hover{
-  cursor: pointer;
-}
-#Button_Logout:hover{
-  cursor: pointer;
-}
-#Button_Info:focus{
-  outline: none;
-}
-#Button_Logout:focus{
-  outline: none;
+.headerNavbar {
+	display: flex;
+	justify-content: space-between;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 80px;
+	background: $Primary 0% 0% no-repeat padding-box;
+	align-items: center;
+
+	#title {
+		margin: 0;
+		padding-left: 30px;
+		text-align: left;
+		font: Bold 44px/71px Hind Siliguri;
+		letter-spacing: 0;
+		color: $Second;
+	}
+	.BTN_Log {
+		height: 50px;
+		width: 159px;
+		border: 2px solid $Second;
+		border-radius: 10px;
+		font: 26px/42px Hind Siliguri;
+		font-weight: 400;
+		background-color: Transparent;
+	}
+	#Button_Login {
+		color: #0b132b;
+		background-color: $Second;
+		margin-right: 56px;
+		transition: all 0.5s;
+	}
+	#Button_Register {
+		color: $Second;
+		transition: all 0.2s;
+	}
+	#Button_Box_Landing {
+		margin-right: 96px;
+	}
+	#Button_Login:hover {
+		cursor: pointer;
+		background-color: rgba(91, 192, 190, 0.8);
+	}
+	#Button_Register:hover {
+		cursor: pointer;
+		background-color: rgba(91, 192, 190, 0.3);
+	}
+	#Button_Login:focus {
+		outline: none;
+	}
+	#Button_Register:hover {
+		cursor: pointer;
+		background-color: rgba(91, 192, 190, 0.3);
+	}
+	#Button_Register:focus {
+		outline: none;
+	}
+	#Button_Box_Dashbord {
+		margin-right: 96px;
+	}
+	#Button_Box_Dashboard {
+		margin-right: 96px;
+	}
+	.BTN_Dash {
+		margin: 0 1rem;
+		background-color: transparent;
+		border: none;
+		color: $Second;
+	}
+	#Button_Info:hover {
+		cursor: pointer;
+	}
+	#Button_Logout:hover {
+		cursor: pointer;
+	}
+	#Button_Info:focus {
+		outline: none;
+	}
+	#Button_Logout:focus {
+		outline: none;
+	}
 }
