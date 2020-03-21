@@ -12,12 +12,20 @@ class Landing extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='Main'>
 				<div className='popup'>
 					<Route path='/login' component={Login} />
 					<Route path='/register' component={Register} />
 				</div>
-				Landing
+				<div id='content'>
+					<div id='image-landigpage'>
+						<img id='landigpage-img' src="landingpage-teaching.svg" alt="landigpage-teaching image"/>
+					</div>
+					<div id='text-content'>
+						<h2>Education for all</h2>
+						<h4>Keine Ahnung was ich schreiben soll, das ist ein Feature Text. Bitte etwas besseres überlegen</h4>
+					</div>
+				</div>
 			</div>
 		);
 	}

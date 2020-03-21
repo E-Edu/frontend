@@ -10,7 +10,7 @@ class Header extends Component {
 	render() {
 		return <div className='header'>
 			<div>
-				<h1>E-EDU</h1>
+				<h1 id='title'>E-EDU</h1>
 			</div>
 			<div id='Button_Box'>
 				<button className='BTN' id='Button_Login'>LOGIN</button>
