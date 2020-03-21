@@ -42,6 +42,7 @@ class Header extends Component {
 								<img src={Logout_Image} alt='Logout' />
 							</button>
 						</div>
+					</div>
 				);
 		}
 		return null;
