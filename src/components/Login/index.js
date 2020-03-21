@@ -68,7 +68,7 @@ class Template extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='loginComponent'>
 				{/*describes the login-popup*/}
 				<form
 					className='box'
