@@ -33,7 +33,8 @@ class MenuElement extends Component {
 		if (this.state.name) {
 			nameText = <span>{this.state.name}</span>;
 		}
-		const filename = 'Assets/icons/' + this.state.file + ending;
+		const file = icons[this.state.file + ending];
+
 		return (
 			<Link
 				to={'/' + this.props.url}
@@ -43,7 +44,7 @@ class MenuElement extends Component {
 				onMouseEnter={this.onMouseEnterHandler}
 				onMouseLeave={this.onMouseLeaveHandler}
 			>
-				<img src={filename} alt='' />
+				<img src={file} alt='' />
 				<br />
 				{nameText}
 			</Link>
