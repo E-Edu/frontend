@@ -1,3 +1,11 @@
-# Please fill out with content
-
 version: '3.7'
+
+services:
+    web:
+        image: nginx
+        volumes:
+            - ./build:/usr/share/nginx/html
+        ports:
+            - '80:80'
+        environment:
+            - NGINX_PORT=80
