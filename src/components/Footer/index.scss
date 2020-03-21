@@ -1,0 +1,33 @@
+$Primary: #0B132B;
+$Second: #5BC0BE;
+
+.Footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 80px;
+  background-color: $Primary;
+}
+a{
+  text-decoration: none;
+  color: #687D9A;
+  padding: 0 1rem;
+  transition: all 0.2s;
+}
+a:hover{
+   color: $Second;
+}
+a:focus{
+  outline: none;
+}
+span{
+  color: #687D9A;
+}
+#Copyright{
+  padding-top: 0.7rem;
+}
