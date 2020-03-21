@@ -1,21 +1,26 @@
 body {
 	font-family: Medium 80px/129px Hind Siliguri;
 }
-/* 
+
+/*
 *white bachgroundcanvas
 */
 .box {
-	width: 20vw;
-	height: 30vh;
-	padding: 3%;
-	background: white;
-	text-align: center;
-	border-radius: 4px;
-	color: #000033;
-	-moz-box-shadow: 0 0 10px #888;
-	-webkit-box-shadow: 0 0 10px #888;
-	box-shadow: 0 0 10px #888;
-	-o-box-shadow: 0 0 10px #888;
+	width: 20%;
+    height: 30%;
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    text-align: center;
+    border-radius: 4px;
+    color: #000033;
+    -moz-box-shadow: 0 0 10px #888;
+    -webkit-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    -o-box-shadow: 0 0 10px #888;
 
 	/*field that displays the text and all buttons and input-fields of the login*/
 	.box-inhalt {
@@ -86,4 +91,83 @@ body {
 	#hide1 {
 		display: none;
 	}
+	
+    /*field that displays the text and all buttons and input-fields of the login*/
+    .box-inhalt {
+        margin-top: -10%;
+    }
+
+    /*sets size and form of the input-boxes for password and email*/
+    .input-box {
+        border-radius: 6px;
+        padding: 4px;
+        outline: none;
+        border: 1px solid #0B132B;;
+        width: 90%;
+        position: relative;
+        margin: 10px auto;
+        /*sets size of the actual inputfields in the input-boxes*/
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+    }
+
+    /*sets the form and size of all buttons*/
+    .button {
+        border-radius: 6px;
+        padding: 4px;
+        outline: #0B132B;;
+        border: 1px solid #0B132B;;
+        margin: 10px auto;
+        width: 70%;
+        background: none;
+    }
+
+    /*sets position of the headline "LOGIN"*/
+    #Headline {
+        padding-top: -50%;
+    }
+
+    /*sets size and color of the login-button*/
+    #login {
+        background: #5BC0BE;
+        margin: 10px auto;
+        border-color: #303030;
+        width: 70%;
+    }
+
+    /*sets the size of the google-icon in the google-login-field*/
+    #googleBild {
+        width: 15px;
+        padding: 0 0.5rem;
+    }
+
+    /*describes the field for the google-login*/
+    #google-login {
+        width: 70%;
+        background: none;
+        margin: 10px auto;
+        font-family: Medium 80px/129px Hind Siliguri;
+        border-radius: 10px;
+        padding: 4px;
+        outline: #0B132B;
+        border: 1px solid #0B132B;
+    }
+
+    /*sets the position of the two eye-icons in the password-field*/
+    .eye {
+        position: absolute;
+        top: 0;
+        right: 8px;
+    }
+
+    /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
+    #hide1 {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
 }
