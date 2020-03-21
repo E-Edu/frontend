@@ -1,116 +1,103 @@
-#content-credits {
-    width: 100%;
-    height: 100vh;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: ". img . "". text .";
+$dark: #1C2541;
+$bluegray: #3A506B;
+$primary: #5BC0BE;
 
-    #image-credits {
-        grid-area: img;
+body {
+    font-family: Medium 80px/129px Hind Siliguri;
+    cursor: default;
+
+    .content {
+        margin-bottom: 120px;
         display: flex;
-        justify-content: center;
-    }
+        flex-direction: column;
+        align-items: center;
 
-    #text-credits {
-        grid-area: text;
-        margin-bottom: 10rem;
 
-        h2 {
-            font-size: 80px;
-            margin: 2rem 0 0 0;
-            text-align: center;
-            font: SemiBold 80px/20px Hind Siliguri;
-            letter-spacing: 0;
-            color: #1C2541;
-            opacity: 1;
+        .picture {
+            margin-top: 20px;
+            width: 30%;
+
+            img {
+                width: 100%;
+            }
         }
 
-        h3 {
-            text-align: center;
-            font: Regular 40px/60px Hind Siliguri;
-            letter-spacing: 0;
-            color: #3A506B;
-            font-size: 40px;
-
-            span {
+        .credits {
+            .featuretext {
                 text-align: center;
-                font: Regular 40px/60px Hind Siliguri;
-                letter-spacing: 0;
-                color: #5BC0BE;
-            }
-        }
+                color: $bluegray;
 
-        p {
-            text-align: center;
-            font: Regular 30px/45px Hind Siliguri;
-            letter-spacing: 0;
-            color: #3A506B;
-            opacity: 1;
-            font-size: 30px;
-        }
+                .heading {
+                    font-size: 80px;
+                    color: $dark;
+                }
 
-        .mitwirkende {
-            text-align: center;
-            font: Bold 40px/60px Hind Siliguri;
-            letter-spacing: 0;
-            color: #3A506B;
-            opacity: 1;
-            font-size: 40px;
-        }
+                .communityproject {
+                    font-size: 40px;
 
-        .leitung {
-            text-align: center;
-            font: Regular 30px/45px Hind Siliguri;
-            letter-spacing: 0;
-            color: #5BC0BE;
-            opacity: 1;
-            font-size: 30px;
-
-            span {
-                text-align: center;
-                font: Regular 20px/45px Hind Siliguri;
-                letter-spacing: 0;
-                color: #3A506B;
-                opacity: 1;
-                font-size: 20px;
-            }
-        }
-
-        #list {
-            display: flex;
-
-            #logo {
-                width: 150px;
-            }
-
-            #Orga,
-            #backend,
-            #frontend,
-            #des,
-            #logo {
-                margin: 0 3rem 0 0;
-
-                .titel-list {
-                    p {
-                        font: Regular 30px/45px Hind Siliguri;
-                        letter-spacing: 0;
-                        color: #5BC0BE;
-                        opacity: 1;
-                        font-size: 30px;
+                    span {
+                        color: $primary;
                     }
                 }
 
-                div {
+                .teilnehmende {
+                    font-size: 30px;
+                }
+            }
+
+            .mitwirkende {
+                .subheading {
                     text-align: center;
-                    font: Regular 20px/45px Hind Siliguri;
-                    letter-spacing: 0;
-                    color: #3A506B;
-                    opacity: 1;
+                    font-size: 40px;
+                    color: $bluegray;
+                    font-weight: bolder;
+                    margin-bottom: 60px;
+                    margin-top: 40px;
+                }
+
+                .morpheus {
+                    .idea {
+                        font-size: 30px;
+                        font-style: normal;
+                        text-align: center;
+                        color: $primary;
+                        font-weight: normal;
+                        margin: 10px 0;
+                    }
+
+                    .name {
+                        text-align: center;
+                        font-size: 20px;
+                        color: $bluegray;
+                        margin-top: 5px;
+                    }
+
+                }
+
+                .credits-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+
+                    .cerdits-heading {
+                        text-align: center;
+                        font-size: 30px;
+                        font-style: normal;
+                        color: $primary;
+                        font-weight: normal;
+                        margin: 10px 0;
+                    }
+
+                    .credits-name {
+                        text-align: center;
+                        font-size: 20px;
+                        color: $bluegray;
+                        margin: 5px 0;
+                    }
                 }
             }
         }
+
     }
 }

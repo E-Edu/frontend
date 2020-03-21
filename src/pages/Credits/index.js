@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import Login from '../../components/Login';
-import Register from '../../components/Register';
+import React, {Component} from 'react';
+import './index.scss';
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import './index.scss';
+
 class Credits extends Component {
     constructor(props) {
         super(props);
@@ -13,90 +11,94 @@ class Credits extends Component {
 
     render() {
         return <div className='credits'>
-            <Header side='Landing'></Header>
-            <div className='Main'>
-                <div className='popup'>
-                    <Route path='/login' component={Login} />
-                    <Route path='/register' component={Register} />
+            <Header side='Landing'/>
+            <div className="content">
+                <div className="picture">
+                    <img src="assets/credits-heroimage.svg" alt="Hero image"/>
                 </div>
-            </div>
-
-            <div id='content-credits'>
-                <div id='image-credits'>
-                    <img id='credits-img' src="undraw_team_page_pgpr.svg" alt="undraw_team_page_pgpr" />
-                </div>
-                <div id='text-credits'>
-                    <h2>E-Edu</h2>
-                    <h3>
-                        Ein Community Projekt der<br /> theMorpheus Community <br />Im Rahmen des <span>#WirVsVirusHackertron</span> 2020
-                    </h3>
-                    <p>
-                        An diesem Projekt haben 67 begeisterte  <br />Entwickler*innen, Designer*innen,  <br />Organisator*innen mitgewirkt.
-                    </p>
-                    <p className='mitwirkende'>
-                        Mitwirkende
-                    </p>
-                    <p className='leitung'>
-                        Projektidee und Leitung <br />
-                        <span>
-                            TheMorpheus (Cedric)
-                        </span>
-
-                    </p>
-                    <div id='list'>
-                        <div id='Orga'>
-                            <div className='titel-list'>
-                                <p>Organisation</p>
-                            </div>
-                            <div>
-                                Hans Peter (13)
-                            </div>
+                <div className="credits">
+                    <div className="featuretext">
+                        <h1 className="heading">E-Edu</h1>
+                        <p className="communityproject">
+                            Ein Community Projekt der<br/>
+                            theMorpheus Community<br/>
+                            Im Rahmen des <span>#WirVsVirusHackertron</span> 2020
+                        </p>
+                        <p className="teilnehmende">
+                            An diesem Projekt haben 67 begeisterte<br/>
+                            Entwickler*innen, Designer*innen,<br/>
+                            Organisator*innen mitgewirkt.
+                        </p>
+                    </div>
+                    <div className="mitwirkende">
+                        <h2 className="subheading">Mitwirkende</h2>
+                        <div className="morpheus">
+                            <h3 className="idea">Projektidee und Leitung</h3>
+                            <p className="name">TheMorpheus (Cedric)</p>
                         </div>
-                        <div id='backend'>
-                            <div className='titel-list'>
-                                <p>Backend</p>
+                        <div className="credits-container">
+                            <div className="orga">
+                                <h4 className="cerdits-heading">Organisation</h4>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
                             </div>
-                            <div>
-                                Hans Peter (13)
+                            <div className="backend">
+                                <h4 className="cerdits-heading">Backend</h4>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
                             </div>
-                            <div>
-                                Hans Peter (13)
+                            <div className="frontend">
+                                <h4 className="cerdits-heading">Frontend</h4>
+                                <p className="credits-name">Lea Laufner (18)</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
+                                <p className="credits-name">Peter</p>
                             </div>
-                            <div>
-                                Hans Peter (13)
+                            <div className="design">
+                                <h4 className="cerdits-heading">Design/Layout</h4>
+                                <p className="credits-name">Adrian Görisch (24)</p>
+                                <p className="credits-name">Peter</p>
                             </div>
-                        </div>
-                        <div id='frontend'>
-                            <div className='titel-list'>
-                                <p>Frontend</p>
-                            </div>
-                            <div>
-                                Hans Peter (13)
-                            </div>
-                        </div>
-                        <div id='des'>
-                            <div className='titel-list'>
-                                <p>Design/Layout</p>
-                            </div>
-                            <div>
-                                Hans Peter (13)
-                            </div>
-                        </div>
-                        <div id='logo'>
-                            <div className='titel-list'>
-                                <p>Logo</p>
-                            </div>
-                            <div>
-                                Hans Peter (13)
+                            <div className="logo">
+                                <h4 className="cerdits-heading">Logo</h4>
+                                <p className="credits-name">Peter</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <Footer></Footer>
-        </div >;
+            <Footer/>
+        </div>;
     }
 }
 
