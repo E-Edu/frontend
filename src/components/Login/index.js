@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './index.scss';
+import eye from '../../Assets/icons/eye.svg';
+import eyeOff from '../../Assets/icons/eye-off.svg';
 
 class Template extends Component {
 	constructor(props) {
@@ -100,8 +102,8 @@ class Template extends Component {
 							/>
 							{/*describes the two eye-icons in the field*/}
 							<span className='eye' onClick={this.changeVisibility}>
-								<img id='hide1' src='assets/eye.svg' />
-								<img id='hide2' src='assets/eye-off.svg' />
+								<img id='hide1' src={eye} />
+								<img id='hide2' src={eyeOff} />
 							</span>
 						</div>
 						{/*describes the google-login-field*/}
