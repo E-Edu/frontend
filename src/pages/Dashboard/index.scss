@@ -1,17 +1,19 @@
-.main {
-	display: flex;
-	flex-flow: row;
-}
-.sidebar {
-	height: 100vw;
-	width: 100px;
-	left: 0;
-	top: 0;
-	background-color: #0b132b;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-.Menu {
-	margin: 1rem 0;
+.dashboard {
+	.main {
+		display: flex;
+		flex-flow: row;
+	}
+	.sidebar {
+		height: 100vw;
+		width: 100px;
+		left: 0;
+		top: 0;
+		background-color: #0b132b;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.Menu {
+		margin: 1rem 0;
+	}
 }

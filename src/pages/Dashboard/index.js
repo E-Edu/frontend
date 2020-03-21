@@ -12,7 +12,7 @@ class Template extends Component {
 
 	render() {
 		return (
-			<div className='main'>
+			<div className='dashboard'>
 				<Header side='Dashboard' />
 				<div className='sidebar'>
 					<a href='#' className='Menu' id='Home'>
