@@ -25,7 +25,7 @@ class App extends Component {
                 <Route path='/privacy' component={Privacy} />
                 <Route path='/credits' component={Credits} />
                 <Route path='/reports/list' component={ReportsList} />
-				<Route path='/correctionReview' component={CorrectionReview} />
+		<Route path='/correction/review' component={CorrectionReview} />
 			</Router>
 		);
 	}
