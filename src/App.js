@@ -10,6 +10,7 @@ import ReportsList from "./pages/Reports/List";
 import Result from './pages/Result';
 import Settings from "./pages/Settings";
 import CorrectionReview from "./pages/CorrectionReview";
+import AddTeacher from "./pages/AddTeacher";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
                 <Route path='/correction/review' component={CorrectionReview}/>
                 <Route path='/result' component={Result}/>
                 <Route path='/settings' component={Settings}/>
+                <Route path='/teacher/add' component={AddTeacher}/>
             </Router>
         );
     }
