@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.scss';
-import '../../../css/main.css';
 import icon_info from '../../../Assets/icons/info.svg';
 import icon_mail from '../../../Assets/icons/mail.svg';
 import icon_teacher from '../../../Assets/icons/teacher.svg';

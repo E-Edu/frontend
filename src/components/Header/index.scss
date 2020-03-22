@@ -2,6 +2,8 @@ $Primary: #0b132b;
 $Second: #5bc0be;
 
 .headerNavbar {
+	position: fixed;
+	z-index: 3;
 	display: flex;
 	justify-content: space-between;
 	top: 0px;
@@ -12,6 +14,7 @@ $Second: #5bc0be;
 	align-items: center;
 
 	#title {
+		z-index: 22;
 		margin: 0;
 		padding-left: 30px;
 		text-align: left;
