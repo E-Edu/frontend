@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import Header from '../../components/Header';
-import Home_icon from './src/Assets/icons/home.svg';
+/*import Home_icon from './src/Assets/icons/home.svg';*/
 import Task_icon from '../../Assets/icons/alert-circle.svg';
 import Sidebar from '../../components/Sidebar';
 
@@ -15,7 +15,7 @@ class Template extends Component {
 		return (
 			<div className='dashboard'>
 				<Header side='Dashboard' />
-				<Sidebar></Sidebar>
+				{/*<Sidebar></Sidebar>*/}
 				<div className='content'>
 					<div className='box'>
 						<div className='image'>
