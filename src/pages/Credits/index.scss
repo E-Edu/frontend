@@ -66,11 +66,14 @@ body {
                     }
 
                     .name {
+                        display: block;
                         text-align: center;
                         font-size: 20px;
                         color: $bluegray;
                         margin-top: 5px;
                     }
+
+                    margin-bottom: 20px;
 
                 }
 
@@ -90,6 +93,7 @@ body {
                     }
 
                     .credits-name {
+                        display: block;
                         text-align: center;
                         font-size: 20px;
                         color: $bluegray;
