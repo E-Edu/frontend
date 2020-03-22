@@ -50,6 +50,7 @@
   #downloadimage {
     width: 27px;
     height: 27px;
+    margin-left: 3rem;
   }
 
   .CertificatesRow {
@@ -153,7 +154,13 @@
     letter-spacing: 0;
     color: #1c2541;
     opacity: 1;
-
+    input{
+      text-align: center;
+      border: none;
+      background: transparent;
+      font-size: 20px;
+      width: 8rem;
+    }
     img {
       margin-left: 15px;
     }
@@ -184,7 +191,7 @@
       border-radius: 200px;
       height: 100%;
       z-index: -2;
-      width: 25%;
+      width: 17.79%;
     }
 
     #levelbar_font {
