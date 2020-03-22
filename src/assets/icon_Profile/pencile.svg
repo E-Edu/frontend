@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.234" height="22.234" viewBox="0 0 22.234 22.234">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: none;
+            stroke: #3A506B;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2px;
+            }
+        </style>
+    </defs>
+    <path id="Icon_feather-edit-2" data-name="Icon feather-edit-2" class="cls-1"
+          d="M18.13,4.093a2.853,2.853,0,0,1,4.035,4.035L8.548,21.744,3,23.257,4.513,17.71Z"
+          transform="translate(-2 -2.024)"/>
+</svg>
