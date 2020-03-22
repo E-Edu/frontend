@@ -1,11 +1,9 @@
 .resultContentHeader {
   display: flex;
   width: 100%;
-
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-
   .resultLeft {
     margin-left: 109px;
 
@@ -20,22 +18,126 @@
 
 }
 
+  .profile_subjekt{
+    height: 110px;
+    width: 435px;
+    background-color: transparent;
+    border: 1px solid #707070;
+    border-radius: 11px;
+    margin: 5px;
+    
+
+    .profileTop{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+    }
+    .profileBottom{
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+    }
+  }
+  .profile_certifikate{
+    height:84px;
+    width: 460px;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    margin:5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:0;
+
+    #downloadimage{
+      width: 27px;
+      height: 27px;
+      
+    }
+
+    .CertificatesRow{
+      width: 80%;
+      margin: 0;
+      .titelCertificate{
+        display:flex;
+        flex-direction:row;
+        color:#5BC0BE;
+        font-weight:bold;
+        font-size:26px;
+        padding:0;
+        margin:0;
+      }
+      .dateCertificate{
+        display:flex;
+        flex-direction:row;
+        color:#0B132B;
+        font-size:16px;
+        padding:0;
+        margin:0;
+      }
+  
+    }
+  
+    .favorite_certificate{
+      display:flex;
+      flex-direction:row;  
+      
+
+    }
+  
+
+    p{
+      margin:0;
+      margin-left:40px;
+      margin-top:5px;
+  
+    }
+    #badgetitle{
+      margin-left:5px;
+    }
+
+    #badgeimage{
+      margin-left: 10px;
+    }
+   
+  }
+
+
+#favorite_certificate{
+  text-align:center;
+}
 #profile_head {
-
   display: flex;
-
   width: 100%;
   flex-direction: column;
-
-
+  align-items: center;
+  justify-content: center;
+  .profile_h2{
+    color: #1C2541;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .profile_span_padding_l{
+    padding-left: 0.5rem;
+  }
+  .profile_span_padding_r{
+    padding-right: 0.5rem;
+  }
+  .profile_flex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   .central {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    img {
-      color: #3A506B;
-      margin-right: 0.5%;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    white-space: nowrap;
+    .img{
+      stroke: #3A506B;
+      margin-right: 0.2rem;
       max-width: 27px;
     }
   }
@@ -74,8 +176,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-
   #levelbar_back {
     position: relative;
     height: 50px;
@@ -105,5 +207,99 @@
       font: Bold 26px/31px Arimo;
       color: #5BC0BE;
     }
+
+
+
+
   }
+}
+#level_rank{
+  display:flex;
+  align-items: center;
+  margin-top: 1rem;
+  img{
+    width: 27px;
+  height: 27px;
+    margin-right: 0.8rem;
+    
+  }
+  span{
+    text-align: left;
+    font: Bold 26px/31px Arimo;
+    letter-spacing: 0;
+    color: #5BC0BE;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+}
+
+
+.profile_subjekt_img{
+  border: 1px solid #5BC0BE;
+  border-radius: 100px;
+
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-right: 1.5rem;
+  width: 62px;
+  height: 62px;
+}   
+   
+#logo {
+
+  width: 30px;
+  height: 30px;
+  padding: 16px;
+
+
+  
+}
+
+#favorite_subject{
+  text-align:center;
+  
+  #profile_f_box{
+    text-align: left;
+    display:flex;
+    flex-direction:row;
+    padding:5px;
+  }
+}
+
+#profile_certificate_box{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 31%;
+  margin: 0 2rem;
+  
+}
+#title{
+   
+
+  text-align: left;
+  font-size:36px; 
+  letter-spacing: 0;
+  color: #0B132B;
+  opacity: 1;
+  
+}
+
+#text{
+  justify-content: left;
+
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+#fach_info{
+  text-align: left;
+}
+
+#pb{
+  max-width: 110px;
+  max-height: 110px;
+  border: 2px solid #5BC0BE;
+  border-radius: 100px;
 }
