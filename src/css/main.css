@@ -25,5 +25,25 @@ body input {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+}
+
+.resultContentHeader {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.resultContentHeader .resultLeft {
+  margin-left: 109px;
+}
+
+.resultContentHeader .resultLeft .resultSubject {
+  margin-right: 40px;
+  margin-top: 34px;
+  font-weight: bolder;
+  color: #0B132B;
+  font-size: 60px;
 }
