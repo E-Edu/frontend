@@ -1,0 +1,21 @@
+h1.text-content{
+  font: Medium 60px/97px Hind Siliguri;
+  padding: 0;
+  top: 120px;
+  left: 220px;
+  width: 200px;
+  height: 100px;
+}
+
+.report-component{
+  position: relative;
+  margin-bottom: 20px;
+  left: 50%;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  width: 1000px;
+  height: 120px;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  font: Regular 20px/23px Arimo;
+}

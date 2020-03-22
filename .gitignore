@@ -69,3 +69,7 @@ package-lock.json
 
 # Build directory
 build/
+
+# ignore sass cache
+*.sass-cache
+*.css.map
