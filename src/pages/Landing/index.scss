@@ -7,9 +7,11 @@
 		align-items: center;
 		padding-top: 80px;
 	}
+
 	#landigpage-image {
 		padding: 0 1rem;
 	}
+
 	#text-content {
 		display: flex;
 		flex-direction: column;
@@ -19,11 +21,13 @@
 		width: 50%;
 		padding: 0 1rem;
 	}
+
 	#text-content h2 {
 		font: Bold 68px/110px Hind Siliguri;
 		margin-bottom: 1rem;
 		padding: 0;
 	}
+
 	#text-content h4 {
 		font: Bold 35px/57px Hind Siliguri;
 		padding: 0;
@@ -33,6 +37,7 @@
 	.react-modal-body {
 		top: -10%;
 		width: auto !important;
+
 		.react-modal-body-close {
 		}
 	}
