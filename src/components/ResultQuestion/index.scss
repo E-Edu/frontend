@@ -1,115 +1,133 @@
-.resultQuestionbox{
-    border:1px solid #707070;
+$bluegrey: #0B132B;
+$grey: #3A506B;
+$red: #BA1919;
+$warmGrey: #707070;
+$turquoise: #5BC0BE;
+$lightGrey: #687D9A;
+$mediumBlue: #1C2541;
+$lightBlue: #96B4DD;
+
+.resultQuestionbox {
+    border: 1px solid #707070;
     border-radius: 8px;
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     height: 126px;
-    
-    
-    .resultStatusBar{
-        padding:126px 8px 0 0;
-      
-        
-        border-top-left-radius:8px;
-        border-bottom-left-radius:8px;
-        background-color:#19BA3F
-        
+
+    .resultStatusBar {
+        padding: 126px 8px 0 0;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
     }
-    .resultContent{
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
+
+    .resultContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: calc(100% - 12px);
         padding: 12px;
-        
-        .resultTop{
-            display:flex;
-            flex-direction:row;
-            justify-content:space-between;
-       
-            .resultLeftTop{
-                display:flex;
-                flex-direction:row;
-                justify-content:space-between;
-                align-items:baseline;
-            
-                p:first-child{
-                    margin-right:1rem;
+
+        .resultTop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .resultLeftTop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+
+                p:first-child {
+                    margin-right: 1rem;
                 }
-                .resultQuestionLabel{
-                    color:$grey;
-                    font-size:16px;
-                    padding-top:0;
-                    margin-top:0;
+
+                .resultQuestionLabel {
+                    color: $grey;
+                    font-size: 16px;
+                    padding-top: 0;
+                    margin-top: 0;
                 }
-                .resultQuestionTitel{
-                    color:#707070;
+
+                .resultQuestionTitel {
+                    color: #707070;
                     font-size: 20px;
-                    margin-top:0;
+                    margin-top: 0;
                 }
             }
-            .resultRightTop{
-                display:flex;
-                flex-direction:row;
-                justify-content:space-between;
-                .resultRating{
-                    color:$grey;
-                    font-size:16px;
-                    margin-top:0;
+
+            .resultRightTop {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .resultRating {
+                    color: $grey;
+                    font-size: 16px;
+                    margin-top: 0;
                 }
-                .resultRatingIcons{
-                    color:$grey;
-                    font-size:16px;
-                    margin-top:0;
+
+                .resultRatingIcons {
+                    color: $grey;
+                    font-size: 16px;
+                    margin-top: 0;
                 }
             }
         }
-        .resultBottom{
-            display:flex;
-            flex-direction:row;
-            justify-content:space-between;
-            height:40px;
-            color:$grey;
-            .resultLeftBottom{
-                display:flex;
-                flex-direction:row;
-                align-items:baseline;
-                padding-bottom:0;
-                margin-bottom:0;
-                height:40px;
-                .resultMyAnswer{
-                    color:$grey;
-                    font-size:16px;
-                    margin-bottom:0;
+
+        .resultBottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 40px;
+            color: $grey;
+
+            .resultLeftBottom {
+                display: flex;
+                flex-direction: row;
+                align-items: baseline;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                height: 40px;
+
+                .resultMyAnswer {
+                    color: $grey;
+                    font-size: 16px;
+                    margin-bottom: 0;
                 }
-                width:50%;
-                p:first-child{
-                    padding-right:5px;
-                    padding-bottom:0;
-                    margin-bottom:0;
+
+                width: 50%;
+
+                p:first-child {
+                    padding-right: 5px;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
                 }
             }
-            .resultRightBottom{
-                display:flex;
-                flex-direction:row;      
-                width:50%;
-                margin-bottom:0;
-                align-items:baseline;
-                height:40px;
-            
-                p:first-child{
-                    padding-right:5px;
-                    padding-bottom:0px;
-                    margin-bottom:0;
-                }   
-                .resultMyAnswer{
-                    font-size:16px;
-                    margin-bottom:0;
+
+            .resultRightBottom {
+                display: flex;
+                flex-direction: row;
+                width: 50%;
+                margin-bottom: 0;
+                align-items: baseline;
+                height: 40px;
+
+                p:first-child {
+                    padding-right: 5px;
+                    padding-bottom: 0px;
+                    margin-bottom: 0;
                 }
-                .resultRightAnswer{
-                    font-size:16px;
-                    padding-bottom:0px;
-                    margin-bottom:0;
+
+                .resultMyAnswer {
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+
+                .resultRightAnswer {
+                    font-size: 16px;
+                    padding-bottom: 0px;
+                    margin-bottom: 0;
                 }
             }
         }
