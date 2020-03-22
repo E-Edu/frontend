@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './index.scss';
-import icon_info from '../../../Assets/icons/info.svg';
-import icon_mail from '../../../Assets/icons/mail.svg';
-import icon_teacher from '../../../Assets/icons/teacher.svg';
-import icon_thumbs_up from '../../../Assets/icons/thumbs-up.svg';
-import icon_thumbs_down from '../../../Assets/icons/thumbs-down.svg';
+import icon_info from '../../../assets/icons/info.svg';
+import icon_mail from '../../../assets/icons/mail.svg';
+import icon_teacher from '../../../assets/icons/teacher.svg';
+import icon_thumbs_up from '../../../assets/icons/thumbs-up.svg';
+import icon_thumbs_down from '../../../assets/icons/thumbs-down.svg';
 
 class Report extends Component {
     constructor(props) {

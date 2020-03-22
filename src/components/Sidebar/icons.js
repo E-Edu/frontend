@@ -1,19 +1,19 @@
-import alertcircleactive from '../../Assets/icons/alert-circle-active.svg';
-import alertcircle from '../../Assets/icons/alert-circle.svg';
-import checkactive from '../../Assets/icons/check-active.svg';
-import check from '../../Assets/icons/check.svg';
-import editactive from '../../Assets/icons/edit-active.svg';
-import edit from '../../Assets/icons/edit.svg';
-import homeactive from '../../Assets/icons/home-active.svg';
-import home from '../../Assets/icons/home.svg';
-import listactive from '../../Assets/icons/list-active.svg';
-import list from '../../Assets/icons/list.svg';
-import pluscircleactive from '../../Assets/icons/plus-circle-active.svg';
-import pluscircle from '../../Assets/icons/plus-circle.svg';
-import settingsactive from '../../Assets/icons/settings-active.svg';
-import settings from '../../Assets/icons/settings.svg';
-import useractive from '../../Assets/icons/user-active.svg';
-import user from '../../Assets/icons/user.svg';
+import alertcircleactive from '../../assets/icons/alert-circle-active.svg';
+import alertcircle from '../../assets/icons/alert-circle.svg';
+import checkactive from '../../assets/icons/check-active.svg';
+import check from '../../assets/icons/check.svg';
+import editactive from '../../assets/icons/edit-active.svg';
+import edit from '../../assets/icons/edit.svg';
+import homeactive from '../../assets/icons/home-active.svg';
+import home from '../../assets/icons/home.svg';
+import listactive from '../../assets/icons/list-active.svg';
+import list from '../../assets/icons/list.svg';
+import pluscircleactive from '../../assets/icons/plus-circle-active.svg';
+import pluscircle from '../../assets/icons/plus-circle.svg';
+import settingsactive from '../../assets/icons/settings-active.svg';
+import settings from '../../assets/icons/settings.svg';
+import useractive from '../../assets/icons/user-active.svg';
+import user from '../../assets/icons/user.svg';
 
 export default ({
     "alert-circle-active.svg": alertcircleactive,
