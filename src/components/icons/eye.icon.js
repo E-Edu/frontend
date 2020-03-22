@@ -1,7 +1,7 @@
 import './index.scss';
 import React, {Component} from 'react';
 
-class UsersIcon extends Component {
+class EyeIcon extends Component {
     constructor(props) {
         super(props);
     }
@@ -25,4 +25,4 @@ class UsersIcon extends Component {
     }
 }
 
-export default UsersIcon;
+export default EyeIcon;

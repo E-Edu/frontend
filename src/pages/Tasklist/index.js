@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
-import userIcon from '../../assets/icon_Profile/user.svg';
-import usersIcon from '../../assets/icon_Profile/users.svg';
+import UsersIcon from "../../components/icons/users.icon.js";
+import UserIcon from '../../components/icons/users.icon.js';
 
 {/*class Task extends React.Component{
 	render(){
@@ -13,7 +13,8 @@ import usersIcon from '../../assets/icon_Profile/users.svg';
 			</div>
 		);
 	}
-}*/}
+}*/
+} from "../../components/icons/user.icon";
 
 class Teacher_Task extends React.Component {
 
@@ -47,11 +48,11 @@ class Tasklist extends React.Component {
 					<div className='resultCenter'>
                         <span className='resultSubject'>
 							<div>
-								<img src={userIcon} alt="user"/>
+								<UserIcon/>
 								<span>213</span><span>Punkte</span>
 							</div>
                             <div>
-								<img src={usersIcon} alt="users"/>
+								<UsersIcon/>
 								<span>21.323</span><span>Punkte</span>
 							</div>
                         </span>
