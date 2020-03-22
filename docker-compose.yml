@@ -1,11 +1,8 @@
 version: '3.7'
 
 services:
-    web:
-        image: nginx
-        volumes:
-            - ./build:/usr/share/nginx/html
+    frontend:
+        image: eedu/frontend:latest
+        restart: always
         ports:
-            - '80:80'
-        environment:
-            - NGINX_PORT=80
+            - 5004:80
