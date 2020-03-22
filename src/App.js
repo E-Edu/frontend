@@ -9,6 +9,8 @@ import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
 import Sidebar from "./components/Sidebar";
 import Result from './pages/Result';
+import CorrectionReview from "./pages/CorrectionReview";
+
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -24,6 +26,7 @@ class App extends Component {
                 <Route path='/privacy' component={Privacy} />
                 <Route path='/credits' component={Credits} />
                 <Route path='/reports/list' component={ReportsList} />
+				<Route path='/correction/review' component={CorrectionReview} />
 				<Route path='/result' component={Result} />
 			</Router>
 		);
