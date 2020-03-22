@@ -13,6 +13,13 @@ $Second: #5bc0be;
 	background: $Primary 0% 0% no-repeat padding-box;
 	align-items: center;
 
+	.logo{
+		margin-left: 45px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
 	#title {
 		z-index: 22;
 		margin: 0;
