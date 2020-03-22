@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Header from '../../components/Header';
-import Home_icon from './src/Assets/icons/home.svg';
+/*import Home_icon from './src/Assets/icons/home.svg';*/
 import Task_icon from '../../Assets/icons/alert-circle.svg';
 
 class Template extends Component {
@@ -16,7 +16,7 @@ class Template extends Component {
 				<Header side='Dashboard' />
 				<div className='sidebar'>
 					<a href='#' className='Menu' id='Home'>
-						<img src={Home_icon} alt='Home' />
+						<img src="assets/home.svg" alt='Home' />
 						<span>Home</span>
 					</a>
 					<a href='#' className='Menu' id='Task'>
