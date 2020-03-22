@@ -26,11 +26,14 @@ class CorrectionReview extends Component {
                     <div className='correctionHeader'>
                         <h1>Korrektur</h1>
                         <button className='correctionMode'>Korrekturmodus</button>
-
-
                     </div>
                     <div className='correctionQuestionBox'>
                     
+                        <CorrectionReviewBoxes/>
+                        <CorrectionReviewBoxes/>
+                        <CorrectionReviewBoxes/>
+                        <CorrectionReviewBoxes/>
+                        <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                     
 
