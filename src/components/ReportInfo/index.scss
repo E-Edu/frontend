@@ -1,0 +1,166 @@
+.reportcontainer {
+    background-color: yellow;
+    margin: 0 auto;
+
+    width: 40%;
+    height: 300px;
+    padding: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    /*text-align: center;*/
+    border-radius: 4px;
+    color: #000033;
+    -moz-box-shadow: 0 0 10px #888;
+    -webkit-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    -o-box-shadow: 0 0 10px #888; 
+
+}
+
+.reportcontainer{
+    .topInfos{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .subjectPath{
+        font-size: 14px;  
+    }
+/*Infos an der Rechten seite*/
+    .InfosRight{
+        text-align: right;
+        font-size:14px;
+        width:49.5%;
+        
+
+        #likes{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            span{
+                margin-left: 1.5rem;
+                font: Regular 20px/23px Arimo;
+                letter-spacing: 0;
+                color: #3A506B;
+                opacity: 1;
+            }
+            img{
+                margin-left: 0.5rem;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        #teacher{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img{
+                margin-left: 0.5rem;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        #messages{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            img{
+                margin-left: 0.5rem;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        
+    }
+/*Aufgaben Überschrift*/
+    .TaskName{
+        margin-top:5px;
+        text-align: center;
+        font-size: 20px;
+    }
+/*Aufgaben Text*/
+    .TaskText{
+        margin-top:6px;
+        max-height:100px;
+        font-size: 12px;
+    }
+/*Behalte und Löschen Button*/  
+    .Buttons{
+        display:flex;
+        justify-content: center;
+        margin-top: 2rem;
+        .row-1{
+            display: flex;
+            max-height: 50%;
+            width: 40%;
+            vertical-align: center;
+            align-items: flex-start;
+            justify-content: space-between;
+
+
+
+
+        }
+        margin-bottom: 1rem;
+    }
+
+    .half:active {
+        box-shadow: 5px 5px 10px silver inset;
+        transform: translateY(4px);
+    }
+
+    .half{
+        box-shadow: 5px 5px 10px silver ;
+        width: 100px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 8px;
+        opacity: 1;
+        height: 2.5rem;
+        font: Regular 23px Arimo;
+        cursor: pointer;
+    }
+
+/* Fertig Button*/
+    #doneDiv{
+        display: flex;
+        justify-content: center;
+    #done{
+        background: #5BC0BE 0% 0% no-repeat padding-box;
+        min-width: 40%;
+        justify-content: center;
+        justify-self: center;
+        
+    }
+    .button{
+        box-shadow: 5px 5px 5px silver ;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 8px;
+        opacity: 1;
+        height: 2.5rem;
+    
+        text-align: center;
+        font: Regular 23px/27px Arimo;
+        letter-spacing: 0;
+        color: #3A506B;
+        opacity: 1;
+        cursor: pointer;
+    
+    }
+
+
+    .button:active{
+        background-color: #3e8e41;
+        box-shadow: 5px 5px 10px silver inset;
+        transform: translateY(4px);
+    }
+
+    
+
+}
+
+}
