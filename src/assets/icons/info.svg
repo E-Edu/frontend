@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="25.5" height="25.5" viewBox="0 0 25.5 25.5"><defs><style>.a{fill:none;stroke:#3a506b;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><g transform="translate(-1.25 -1.25)"><circle class="a" cx="12" cy="12" r="12" transform="translate(2 2)"/><line class="a" y1="4.8" transform="translate(14 14)"/><line class="a" x2="0.012" transform="translate(14 9.2)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="16" x2="12" y2="12"></line>
+    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+</svg>

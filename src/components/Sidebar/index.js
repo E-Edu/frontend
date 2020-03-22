@@ -68,7 +68,7 @@ class Sidebar extends Component {
             ['Meine Aufgaben', 'list', 'dashboard'],
             ['Korrektur', 'check', 'dashboard'],
             ['Reports', 'alert-circle', 'dashboard'],
-            ['Lehrer hinzufügen', 'user', 'dashboard'],
+            ['Lehrer hinzufügen', 'teacher', 'dashboard'],
         ];
         let sitesHtml = sites.map(site => {
             let active = false;

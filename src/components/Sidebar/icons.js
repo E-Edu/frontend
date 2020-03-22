@@ -14,6 +14,7 @@ import settingsactive from '../../assets/icons/settings-active.svg';
 import settings from '../../assets/icons/settings.svg';
 import useractive from '../../assets/icons/user-active.svg';
 import user from '../../assets/icons/user.svg';
+import teacher from '../../assets/icons/teacher.svg';
 
 export default ({
     "alert-circle-active.svg": alertcircleactive,
@@ -32,4 +33,5 @@ export default ({
     "settings.svg": settings,
     "user-active.svg": useractive,
     "user.svg": user,
+    "teacher.svg": teacher,
 });
