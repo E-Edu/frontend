@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.scss';
 import Header from '../../components/Header';
-import Home_icon from '../../Assets/icons/home.svg';
-import Task_icon from '../../Assets/icons/alert-circle.svg';
+import Home_icon from '../../assets/icons/home.svg';
+import Task_icon from '../../assets/icons/alert-circle.svg';
 import Sidebar from '../../components/Sidebar';
 
 class Template extends Component {

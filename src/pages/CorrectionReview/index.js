@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { useParams } from 'react-router-dom';
-import Thumbs_Up from '../../Assets/icons/thumbs-up.svg';
-import Thumbs_Down from '../../Assets/icons/thumbs-down.svg';
+import Thumbs_Up from '../../assets/icons/thumbs-up.svg';
+import Thumbs_Down from '../../assets/icons/thumbs-down.svg';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes';

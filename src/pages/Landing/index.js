@@ -5,7 +5,7 @@ import Login from '../../components/Login';
 import Register from '../../components/Register';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Landing_Image from '../../Assets/Picture/landingpage-teaching.svg';
+import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
 import Modal from 'react-animated-modal';
 
 class Landing extends Component {

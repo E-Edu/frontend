@@ -2,12 +2,12 @@
 import React, { Component } from 'react';
 import './index.scss';
 import { useParams } from 'react-router-dom';
-import Thumbs_Up from '../../Assets/icons/thumbs-up.svg';
-import Thumbs_Down from '../../Assets/icons/thumbs-down.svg';
+import Thumbs_Up from '../../assets/icons/thumbs-up.svg';
+import Thumbs_Down from '../../assets/icons/thumbs-down.svg';
 
-import Calendar from '../../Assets/icons/calendar.svg';
-import User from '../../Assets/icons/user.svg';
-import Edit from '../../Assets/icons/edit.svg';
+import Calendar from '../../assets/icons/calendar.svg';
+import User from '../../assets/icons/user.svg';
+import Edit from '../../assets/icons/edit.svg';
 
 
 class CorrectionReviewBoxes extends Component {
