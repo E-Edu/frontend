@@ -3,6 +3,7 @@ import './index.scss';
 import Header from '../../components/Header';
 import Home_icon from '../../Assets/icons/home.svg';
 import Task_icon from '../../Assets/icons/alert-circle.svg';
+import Sidebar from '../../components/Sidebar';
 
 class Template extends Component {
 	constructor(props) {
@@ -14,16 +15,7 @@ class Template extends Component {
 		return (
 			<div className='dashboard'>
 				<Header side='Dashboard' />
-				<div className='sidebar'>
-					<a href='#' className='Menu' id='Home'>
-						<img src={Home_icon} alt='Home' />
-						<span>Home</span>
-					</a>
-					<a href='#' className='Menu' id='Task'>
-						<img src={Task_icon} alt='Task' />
-						<span>Home</span>
-					</a>
-				</div>
+				<Sidebar></Sidebar>
 				<div className='content'>
 					<div className='box'>
 						<div className='image'>
