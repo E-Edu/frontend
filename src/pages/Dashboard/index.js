@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 import Header from '../../components/Header';
-/*import Home_icon from './src/Assets/icons/home.svg';*/
-import Task_icon from '../../Assets/icons/alert-circle.svg';
+import Home_icon from '../../assets/icons/home.svg';
+import Task_icon from '../../assets/icons/alert-circle.svg';
 
 class Template extends Component {
 	constructor(props) {
@@ -16,7 +16,7 @@ class Template extends Component {
 				<Header side='Dashboard' />
 				<div className='sidebar'>
 					<a href='#' className='Menu' id='Home'>
-						<img src="assets/home.svg" alt='Home' />
+						<img src={Home_icon} alt='Home' />
 						<span>Home</span>
 					</a>
 					<a href='#' className='Menu' id='Task'>
