@@ -1,35 +1,13 @@
-/*für die Blaue Leiste*/
+
 
 .imprint {
-	.leisteOben {
-		top: 0px;
-		height: 80px;
-		background: #0b132b 0% 0% no-repeat padding-box;
-		opacity: 1;
-	}
-	.eduSchrift {
-		/*Layout Properties*/
-		margin-left: 30px;
-		width: 123px;
-		height: 71px;
-
-		/*UI Properties*/
-		text-align: left;
-		font: Bold 44px/71px Hind Siliguri;
-		letter-spacing: 0;
-		color: #5bc0be;
-		opacity: 1;
-	}
 
 	.headingFont {
-		/*Layout Properties*/
-		margin-left: 300px;
-		height: 110px;
+		margin-left: 19%;
 		margin-top: 133px;
 		width: 381px;
 
-		/*UI Properties*/
-		text-align: center;
+		text-align: left;
 		font-family: Hind Siliguri;
 		font-size: 80px;
 		color: #0b132b;
@@ -37,14 +15,12 @@
 	}
 
 	.fontBox {
-		/*Layout Properties*/
 		margin-top: 5px;
-		margin-left: 300px;
+		margin-left: 19%;
 		margin-top: 5px;
 		width: 659px;
 		height: 659px;
 
-		/*UI Properties*/
 		text-align: left;
 		font: Hind Siliguri;
 		font-size: 20px;

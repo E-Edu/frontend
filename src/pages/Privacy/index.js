@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import Header from '../../components/Header';
 
 class Privacy extends Component {
 	constructor(props) {
@@ -10,9 +11,7 @@ class Privacy extends Component {
 	render() {
 		return (
 			<div className='privacy'>
-				<div className='leisteOben'>
-					<div className='eduSchrift'>E-EDU</div>
-				</div>
+				<Header side='Landing'/>
 				<div className='headingFont'>Privacy policy</div>
 				<div className='fontBox'>
 					hallo ich bin so ein Text
