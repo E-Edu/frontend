@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Home_icon from '../../Assets/icons/home.svg';
-import Task_icon from '../../Assets/icons/alert-circle.svg';
+import Home_icon from '../../assets/icons/home.svg';
+import Task_icon from '../../assets/icons/alert-circle.svg';
 import './index.scss'
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
-import codeimg from '../../../src/Assets/icons/dashboard/code.svg';
-import calendar from '../../../src/Assets/icons/dashboard/calendar.svg';
-import user from '../../../src/Assets/icons/dashboard/user.svg';
-import users from '../../../src/Assets/icons/dashboard/users.svg';
-import text from '../../../src/Assets/icons/dashboard/file-text.svg';
-import codepen from '../../../src/Assets/icons/dashboard/codepen.svg';
-import zap from '../../../src/Assets/icons/dashboard/zap.svg';
+import codeimg from '../../../src/assets/icons/dashboard/code.svg';
+import calendar from '../../../src/assets/icons/dashboard/calendar.svg';
+import user from '../../../src/assets/icons/dashboard/user.svg';
+import users from '../../../src/assets/icons/dashboard/users.svg';
+import text from '../../../src/assets/icons/dashboard/file-text.svg';
+import codepen from '../../../src/assets/icons/dashboard/codepen.svg';
+import zap from '../../../src/assets/icons/dashboard/zap.svg';
 
 
 class DashboardBox extends Component {
