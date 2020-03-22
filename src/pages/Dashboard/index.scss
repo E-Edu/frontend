@@ -4,94 +4,38 @@ $primary: #5bc0be;
 $border: #707070;
 
 
-.dashboard {
-    margin: 0;
-    padding: 0;
 
-
+#Menu {
+    position: absolute;
 }
 
-.head {
-    grid-area: header;
-}
-
-.sid {
-
-    grid-area: side;
-    display: flex;
-    float: left;
 
 
-}
-
-#content {
-
-
+#contentdashboard {
+    margin: 0 0 0 10rem;
 
     .content-dashboard {
-
         display: grid;
-        grid-template-columns: minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px);
-        grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+        grid-template-columns: minmax(200px, 400px) minmax(200px, 400px) minmax(200px, 400px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
 
-        .box {
+        .DashbordBox {
             margin: 5rem 2rem 0 5rem;
             padding: 0;
             border: 1px solid $border;
             border-radius: 10px;
-            height: 12rem;
+            height: 10rem;
             width: 23rem;
+            float: left;
 
             #color {
                 float: left;
                 border-radius: 10px 0 0 10px;
-                height: 12rem;
+                height: 10rem;
                 width: 10px;
-                background-color: #FF0000;
-            }
-
-            #color2 {
-                float: left;
-                border-radius: 10px 0 0 10px;
-                height: 12rem;
-                width: 10px;
-                background-color: #202bb5;
-            }
-
-            #color3 {
-                float: left;
-                border-radius: 10px 0 0 10px;
-                height: 12rem;
-                width: 10px;
-                background-color: #000000;
-            }
-
-            #color4 {
-                float: left;
-                border-radius: 10px 0 0 10px;
-                height: 12rem;
-                width: 10px;
-                background-color: orangered;
-            }
-
-            #color5 {
-                float: left;
-                border-radius: 10px 0 0 10px;
-                height: 12rem;
-                width: 10px;
-                background-color: #B520AB;
-            }
-
-            #color6 {
-                float: left;
-                border-radius: 10px 0 0 10px;
-                height: 12rem;
-                width: 10px;
-                background-color: #5E5E5E;
             }
 
             .top {
-
                 .icon {
                     margin: 0.5em 0 0 1em;
                     padding: 5px;
@@ -101,7 +45,7 @@ $border: #707070;
                 }
 
                 p {
-                    margin: 0 0 0 2em;
+                    margin: 0 0 0 1em;
                     font: Medium 36px/58px Hind Siliguri;
                     letter-spacing: 0;
                     color: #0B132B;
@@ -115,7 +59,7 @@ $border: #707070;
                     display: block;
                     float: left;
                     text-align: center;
-                    margin: 0 0 0 10.5em;
+                    margin: 0 0 0 3em;
                     text-align: left;
                     font: Medium 12px/19px Hind Siliguri;
                     letter-spacing: 0;
@@ -126,7 +70,7 @@ $border: #707070;
 
             .exercise {
                 float: left;
-                margin: 0 0 0 5em;
+                margin: 0 0 0 4em;
 
                 img {
                     float: left;
@@ -146,12 +90,13 @@ $border: #707070;
             }
 
             .stats {
-                margin: 1em 0 0 5em;
+
+                margin: 1em 0 0 3em;
                 float: left;
 
                 p {
                     float: left;
-                    margin: 0 1em 0 0;
+                    margin: 0 0 0 0.5em;
                     text-align: left;
                     font: Medium 16px/26px Hind Siliguri;
                     letter-spacing: 0;
@@ -162,11 +107,9 @@ $border: #707070;
 
                 img {
                     float: left;
-                    margin: 0 1em 0 0;
+                    margin: 0 0 0 1em;
                 }
             }
         }
     }
-
-
 }
