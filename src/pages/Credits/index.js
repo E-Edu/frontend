@@ -95,6 +95,7 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/Loopmaxx">Tim</a>
                                 <a className="credits-name" href="https://github.com/Terraminator">TERRAMINATOR</a>
                                 <a className="credits-name" href="https://github.com/mibkvr">Max</a>
+                                <a className="credits-name" href="https://github.com/blacklyger">BlackLyger</a>
                             </div>
                             <div className="frontend">
                                 <h4 className="cerdits-heading">Frontend</h4>
