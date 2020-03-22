@@ -11,100 +11,90 @@
       margin-right: 40px;
       margin-top: 34px;
       font-weight: bolder;
-      color: #0B132B;
+      color: #0b132b;
       font-size: 60px;
     }
   }
-
 }
 
-  .profile_subjekt{
-    height: 110px;
-    width: 435px;
-    background-color: transparent;
-    border: 1px solid #707070;
-    border-radius: 11px;
-    margin: 5px;
-    
+.profile_subjekt {
+  height: 110px;
+  width: 435px;
+  background-color: transparent;
+  border: 1px solid #707070;
+  border-radius: 11px;
+  margin: 5px;
 
-    .profileTop{
-      display:flex;
-      flex-direction:row;
-      align-items:center;
-    }
-    .profileBottom{
-      display:flex;
-      flex-direction:row;
-      align-items:center;
-    }
-  }
-  .profile_certifikate{
-    height:84px;
-    width: 460px;
-    border: 1px solid #707070;
-    border-radius: 8px;
-    margin:5px;
+  .profileTop {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding:0;
+  }
+  .profileBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.profile_certifikate {
+  height: 84px;
+  width: 460px;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
 
-    #downloadimage{
-      width: 27px;
-      height: 27px;
-      
-    }
-
-    .CertificatesRow{
-      width: 80%;
-      margin: 0;
-      .titelCertificate{
-        display:flex;
-        flex-direction:row;
-        color:#5BC0BE;
-        font-weight:bold;
-        font-size:26px;
-        padding:0;
-        margin:0;
-      }
-      .dateCertificate{
-        display:flex;
-        flex-direction:row;
-        color:#0B132B;
-        font-size:16px;
-        padding:0;
-        margin:0;
-      }
-  
-    }
-  
-    .favorite_certificate{
-      display:flex;
-      flex-direction:row;  
-      
-
-    }
-  
-
-    p{
-      margin:0;
-      margin-left:40px;
-      margin-top:5px;
-  
-    }
-    #badgetitle{
-      margin-left:5px;
-    }
-
-    #badgeimage{
-      margin-left: 10px;
-    }
-   
+  #downloadimage {
+    width: 27px;
+    height: 27px;
   }
 
+  .CertificatesRow {
+    width: 80%;
+    margin: 0;
+    .titelCertificate {
+      display: flex;
+      flex-direction: row;
+      color: #5bc0be;
+      font-weight: bold;
+      font-size: 26px;
+      padding: 0;
+      margin: 0;
+    }
+    .dateCertificate {
+      display: flex;
+      flex-direction: row;
+      color: #0b132b;
+      font-size: 16px;
+      padding: 0;
+      margin: 0;
+    }
+  }
 
-#favorite_certificate{
-  text-align:center;
+  .favorite_certificate {
+    display: flex;
+    flex-direction: row;
+  }
+
+  p {
+    margin: 0;
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+  #badgetitle {
+    margin-left: 5px;
+  }
+
+  #badgeimage {
+    margin-left: 10px;
+  }
+}
+
+#favorite_certificate {
+  text-align: center;
 }
 #profile_head {
   display: flex;
@@ -112,18 +102,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .profile_h2{
-    color: #1C2541;
+  .profile_h2 {
+    color: #1c2541;
     font-size: 30px;
     font-weight: 300;
   }
-  .profile_span_padding_l{
+  .profile_span_padding_l {
     padding-left: 0.5rem;
   }
-  .profile_span_padding_r{
+  .profile_span_padding_r {
     padding-right: 0.5rem;
   }
-  .profile_flex-row{
+  .profile_flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -135,8 +125,8 @@
     flex-direction: column;
     padding-top: 0.5rem;
     white-space: nowrap;
-    .img{
-      stroke: #3A506B;
+    .img {
+      stroke: #3a506b;
       margin-right: 0.2rem;
       max-width: 27px;
     }
@@ -148,7 +138,7 @@
     text-align: left;
     font-size: 16px;
     letter-spacing: 0;
-    color: #3A506B;
+    color: #3a506b;
     opacity: 1;
   }
 
@@ -161,7 +151,7 @@
     text-align: left;
     font-size: 26px;
     letter-spacing: 0;
-    color: #1C2541;
+    color: #1c2541;
     opacity: 1;
 
     img {
@@ -190,7 +180,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background-color: #5BC0BE;
+      background-color: #5bc0be;
       border-radius: 200px;
       height: 100%;
       z-index: -2;
@@ -205,37 +195,31 @@
 
     #level_Rang {
       font: Bold 26px/31px Arimo;
-      color: #5BC0BE;
+      color: #5bc0be;
     }
-
-
-
-
   }
 }
-#level_rank{
-  display:flex;
+#level_rank {
+  display: flex;
   align-items: center;
   margin-top: 1rem;
-  img{
+  img {
     width: 27px;
-  height: 27px;
+    height: 27px;
     margin-right: 0.8rem;
-    
   }
-  span{
+  span {
     text-align: left;
     font: Bold 26px/31px Arimo;
     letter-spacing: 0;
-    color: #5BC0BE;
+    color: #5bc0be;
     text-transform: uppercase;
     opacity: 1;
   }
 }
 
-
-.profile_subjekt_img{
-  border: 1px solid #5BC0BE;
+.profile_subjekt_img {
+  border: 1px solid #5bc0be;
   border-radius: 100px;
 
   margin-left: 1rem;
@@ -243,63 +227,55 @@
   margin-right: 1.5rem;
   width: 62px;
   height: 62px;
-}   
-   
-#logo {
+}
 
+#logo {
   width: 30px;
   height: 30px;
   padding: 16px;
-
-
-  
 }
 
-#favorite_subject{
-  text-align:center;
-  
-  #profile_f_box{
+#favorite_subject {
+  text-align: center;
+
+  #profile_f_box {
     text-align: left;
-    display:flex;
-    flex-direction:row;
-    padding:5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
   }
 }
 
-#profile_certificate_box{
-  display:flex;
-  flex-direction:row;
+#profile_certificate_box {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   flex-basis: 31%;
   margin: 0 2rem;
-  
 }
-#title{
-   
-
+#title {
   text-align: left;
-  font-size:36px; 
+  font-size: 36px;
   letter-spacing: 0;
-  color: #0B132B;
+  color: #0b132b;
   opacity: 1;
-  
 }
 
-#text{
+#text {
   justify-content: left;
 
   align-items: center;
   flex-direction: column;
   text-align: left;
 }
-#fach_info{
+#fach_info {
   text-align: left;
 }
 
-#pb{
+#pb {
   max-width: 110px;
   max-height: 110px;
-  border: 2px solid #5BC0BE;
+  border: 2px solid #5bc0be;
   border-radius: 100px;
 }
