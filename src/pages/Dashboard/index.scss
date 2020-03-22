@@ -1,0 +1,172 @@
+$dark: #0B132B;
+$bluegray: #3a506b;
+$primary: #5bc0be;
+$border: #707070;
+
+
+.dashboard {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.head {
+    grid-area: header;
+}
+
+.sid {
+
+    grid-area: side;
+    display: flex;
+    float: left;
+
+
+}
+
+#content {
+
+
+
+    .content-dashboard {
+
+        display: grid;
+        grid-template-columns: minmax(300px, 500px) minmax(300px, 500px) minmax(300px, 500px);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+
+        .box {
+            margin: 5rem 2rem 0 5rem;
+            padding: 0;
+            border: 1px solid $border;
+            border-radius: 10px;
+            height: 12rem;
+            width: 23rem;
+
+            #color {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: #FF0000;
+            }
+
+            #color2 {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: #202bb5;
+            }
+
+            #color3 {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: #000000;
+            }
+
+            #color4 {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: orangered;
+            }
+
+            #color5 {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: #B520AB;
+            }
+
+            #color6 {
+                float: left;
+                border-radius: 10px 0 0 10px;
+                height: 12rem;
+                width: 10px;
+                background-color: #5E5E5E;
+            }
+
+            .top {
+
+                .icon {
+                    margin: 0.5em 0 0 1em;
+                    padding: 5px;
+                    border: 2px solid $primary;
+                    border-radius: 50px;
+                    float: left;
+                }
+
+                p {
+                    margin: 0 0 0 2em;
+                    font: Medium 36px/58px Hind Siliguri;
+                    letter-spacing: 0;
+                    color: #0B132B;
+                    opacity: 1;
+                    font-size: 36px;
+                    float: left;
+                    text-align: center;
+                }
+
+                span {
+                    display: block;
+                    float: left;
+                    text-align: center;
+                    margin: 0 0 0 10.5em;
+                    text-align: left;
+                    font: Medium 12px/19px Hind Siliguri;
+                    letter-spacing: 0;
+                    color: $bluegray;
+                    font-size: 12px;
+                }
+            }
+
+            .exercise {
+                float: left;
+                margin: 0 0 0 5em;
+
+                img {
+                    float: left;
+                    margin-right: 3px;
+                    padding-top: 11px;
+                }
+
+                p {
+                    float: left;
+                    text-align: left;
+                    font: Medium 16px/26px Hind Siliguri;
+                    letter-spacing: 0;
+                    color: #303030;
+                    opacity: 1;
+                    font-size: 16px;
+                }
+            }
+
+            .stats {
+                margin: 1em 0 0 5em;
+                float: left;
+
+                p {
+                    float: left;
+                    margin: 0 1em 0 0;
+                    text-align: left;
+                    font: Medium 16px/26px Hind Siliguri;
+                    letter-spacing: 0;
+                    color: #303030;
+                    opacity: 1;
+                    font-size: 16px;
+                }
+
+                img {
+                    float: left;
+                    margin: 0 1em 0 0;
+                }
+            }
+        }
+    }
+
+
+}
