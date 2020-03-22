@@ -1,0 +1,50 @@
+.resultContentHeader{
+    display:flex;
+    width:100%;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:baseline;
+    .resultLeft{
+        margin-left:109px;
+
+        .resultSubject{
+            margin-right:40px;
+            margin-top:34px;
+            font-weight: bolder;
+            color: #0B132B;
+            font-size: 60px;
+        }
+    }
+    .resultCenter{
+        margin-left:109px;
+
+        .resultSubject{
+            margin-right:40px;
+            margin-top:34px;
+            font-weight: bolder;
+            color: #0B132B;
+            font-size: 60px;
+        }
+    }
+    .resultRight{
+        margin-right:109px;
+        .resultSubject{
+            margin-right:40px;
+            margin-top:34px;
+            font-weight: bolder;
+            color: #0B132B;
+            font-size: 60px;
+        }
+    }
+    .Tasklist_Content{
+        .teacher_information{
+            img{
+                max-width: 110px;
+                max-height: 110px;
+                border: 2px solid #5BC0BE;
+                border-radius: 100px;
+            }
+        }
+    }
+}
