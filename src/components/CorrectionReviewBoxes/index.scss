@@ -1,0 +1,39 @@
+.correctionBox{
+    border: 1px solid #707070;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 117px;
+    width:971px;
+
+    .correctionBoxHeader{
+        color:#1C2541;
+        font-weight:normal;
+        font-size:20px;
+        .correctionDifficulty{
+            font-size:16px;
+            text-align:center;
+            background-color:#19BA3F62;
+            border: 1px solid #19BA3F;
+
+
+        }
+
+    }
+    .correctionBoxBottom{
+        color:#1C2541;
+        font-size:20px;
+        .correctionPupil{
+
+        
+        }
+        .correctionDate{
+
+        }
+        .correctionCorrect{
+
+        }
+
+    }
+
+}
