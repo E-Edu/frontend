@@ -22,20 +22,22 @@ class MenuElement extends Component {
         this.setActivity(false);
     };
 
+
     render() {
-        let ending;
+
+        let color;
         // get the right filename, if active or not
         if (!this.state.active) {
-            ending = '.svg';
+            color = '#96B4DD';
         } else {
-            ending = '-active.svg';
+            color = '#5BC0BE';
         }
         let nameText = '';
         if (this.state.name) {
-            nameText = <p style={{margin: '0 12px', overflowWrap: 'break-word', textAlign: 'center'}}>{this.state.name}</p>;
+            nameText = <p style={{margin: '0 12px', overflowWrap: 'break-word', textAlign: 'center', color: color}}>{this.state.name}</p>;
         }
-        const file = icons[this.state.file + ending];
 
+        const File = icons[this.state.file];
         return (
             <Link
                 to={'/' + this.props.url}
@@ -45,8 +47,8 @@ class MenuElement extends Component {
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}
             >
-                <img className="iconSize" src={file} alt=''/>
-                <br/>
+
+                <File stroke={color}/>
                 {nameText}
             </Link>
         );
@@ -63,19 +65,15 @@ class Sidebar extends Component {
         const sites = [
             //TODO edit the addresses of pages
             ['Home', 'home', 'dashboard'],
-            ['Aufgaben', 'edit', 'dashboard'],
+            ['Aufgaben', 'edit', 'task'],
             ['Neue Aufgabe', 'plus-circle', 'dashboard'],
             ['Meine Aufgaben', 'list', 'dashboard'],
-            ['Korrektur', 'check', 'dashboard'],
-            ['Reports', 'alert-circle', 'dashboard'],
-            ['Lehrer hinzufügen', 'user', 'dashboard'],
+            ['Korrektur', 'check', 'correction/review'],
+            ['Reports', 'alert-circle', 'reports/list'],
+            ['Lehrer hinzufügen', 'teacher', 'profile'],
         ];
         let sitesHtml = sites.map(site => {
-            let active = false;
-            if (this.state.activeName === site[1]) {
-                active = true;
-            }
-            return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={active}/>;
+            return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={this.state.activeName === site[1]}/>;
         });
         return (
             <div id='Menu'>
@@ -83,8 +81,8 @@ class Sidebar extends Component {
                     {sitesHtml}
                 </div>
                 <div className="bottomIcons">
-                    <MenuElement name="" file="settings" url="dashboard" active={false}/>
-                    <MenuElement name="" file="user" url="dashboard" active={false}/>
+                    <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'}/>
+                    <MenuElement name="" file="user" url="dashboard" active={this.state.activeName === 'user'}/>
                 </div>
             </div>
         );
