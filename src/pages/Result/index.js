@@ -2,6 +2,8 @@ import React from 'react';
 import './index.scss';
 import Header from '../../components/Header';
 import ResultQuestion from '../../components/ResultQuestion';
+import User from '../../Assets/icons/user.svg';
+import Users from '../../Assets/icons/users.svg';
 
 
 class Result extends React.Component {
@@ -28,11 +30,11 @@ class Result extends React.Component {
                         </div>
                         <div className='resultRight'>
                             <div className='resultPoints'>
-                                <p>icon </p>
+                                <img src={User} alt=""/>
                                 <p><span> 213</span> Punkte</p>
                             </div>
                             <div className='resultPoints'>
-                                <p>icon </p>
+                                <img src={Users} alt=""/>
                                 <p><span> 21.323</span> Punkte</p>
                             </div>
                         </div>
@@ -49,7 +51,7 @@ class Result extends React.Component {
                     </div>
                     <div className='resultQuestions'>
                         {this.results.map(((value, index) => {
-                            return <div className="resultQuestion" key={index}><ResultQuestion color={value} index={index+1}/></div>
+                            return <div className="resultQuestion" key={index}><ResultQuestion color={value} index={index + 1}/></div>
                         }))}
                     </div>
                 </div>
