@@ -9,7 +9,6 @@ import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
 import Sidebar from "./components/Sidebar";
 import Result from './pages/Result';
-import Sidebar from "./components/Sidebar";
 import CorrectionReview from "./pages/CorrectionReview";
 
 
