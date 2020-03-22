@@ -2,310 +2,311 @@
 @import url("https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap");
 
 div.register {
-  padding: 1rem;
+    padding: 1rem;
 
-  form {
-    margin-top: 7rem;
-    font-family: "Hind Siliguri", sans-serif;
+    form {
+        margin-top: 7rem;
+        font-family: "Hind Siliguri", sans-serif;
 
-    //font-family: Medium 80px/129px Hind Siliguri;
-    a {
-      text-decoration: none;
-      transition: all 0.2s;
-      margin: 0 0.2rem;
-      color: #0b132b;
+        //font-family: Medium 80px/129px Hind Siliguri;
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+            margin: 0 0.2rem;
+            color: #0b132b;
+        }
+
+        p {
+            color: #0b132b;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: #5bc0be;
+        }
+
+        a:focus {
+            outline: 0;
+            color: #5bc0be;
+        }
     }
 
-    p {
-      color: #0b132b;
-      transition: all 0.2s;
-    }
-
-    a:hover {
-      color: #5bc0be;
-    }
-
-    a:focus {
-      outline: 0;
-      color: #5bc0be;
-    }
-  }
-
-  /*
+    /*
   *white bachgroundcanvas
   */
-  .box {
-    width: 50vw;
-    height: 35vh;
-    padding: 0;
-    background: white;
-    text-align: center;
-    border-radius: 4px;
-    color: #000033;
-    //-moz-box-shadow: 0 0 10px #888;
-    //-webkit-box-shadow: 0 0 10px #888;
-    //box-shadow: 0 0 10px #888;
-    //-o-box-shadow: 0 0 10px #888;
-
-    // error class for form validation
-
-    /*field that displays the text and all buttons and input-fields of the login*/
-    .box-inhalt {
-      text-align: center;
-      margin-top: -10%;
-    }
-
-    /*sets size and form of the input-boxes for password and email*/
-    .input-box {
-      border-radius: 6px;
-      padding: 4px;
-      outline: none;
-      border: 1px solid #000033;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 10px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      /*sets size of the actual inputfields in the input-boxes*/
-      input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-      }
-    }
-
-    .eye {
-      cursor: pointer;
-      max-height: 24px;
-    }
-
-    /*sets the form and size of all buttons*/
-    .button {
-      border-radius: 6px;
-      padding: 4px;
-      outline: black;
-      border: 1px solid #000033;
-      margin: 10px auto;
-      width: 70%;
-
-      background: none;
-    }
-
-    // --------------- Basti --------------
-    .input-box-initial {
-      display: none;
-    }
-
-    .roleBtn {
-      display: flex;
-
-      .btn-specialButton {
-        flex-grow: 1;
-      }
-
-      .btn-specialButton:focus {
-        background-color: #5bc0be;
-        outline: 0em;
-      }
-    }
-
-    .btn-group button {
-      border: 1px solid #000033;
-      background-color: white;
-      border-left: none;
-      padding: 10px 24px;
-      cursor: pointer;
-      width: 45%;
-    }
-
-    .btn-group:after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    .btn-group :first-child {
-      border: 1px solid #000033;
-      border-radius: 6px 0 0 6px;
-    }
-
-    .btn-group :last-child {
-      border-radius: 0 6px 6px 0;
-    }
-
-    .btn-group button:not(:last-child) {
-      border-right: none; /* Prevent double borders */
-    }
-
-    .btn-group button:hover {
-      background-color: #5bc0be;
-    }
-
-    .btn-UI-container {
-      margin-top: 0.4rem;
-    }
-
-    .btn-UI {
-      margin-left: 18px;
-      margin-right: 18px;
-      margin-top: 2px;
-      width: 230px;
-      height: 49px;
-
-      background: #ffffff 0% 0% no-repeat padding-box;
-      border: 2px solid #303030;
-      border-radius: 20px;
-      opacity: 1;
-      cursor: pointer;
-
-      text-align: center;
-      font: Regular 32px/28px Arimo;
-      letter-spacing: 0.48px;
-      color: #0b132b;
-      opacity: 1;
-    }
-
-    .btn-weiter {
-      background-color: #5bc0be;
-    }
-
-    .btn-Base {
-      opacity: 1;
-      background-color: #5bc0be;
-    }
-
-    .btn-Disabled {
-      background-color: #5bc0be;
-      opacity: 0.3;
-    }
-
-    // --------------- Basti ENDE
-
-    /*sets position of the headline "LOGIN"*/
-    #Headline {
-      text-align: center;
-      font-family: Hind Siliguri;
-      font-weight: 500;
-      font-size: 32px;
-      letter-spacing: 24px;
-      color: #0b132b;
-      opacity: 1;
-      text-transform: uppercase;
-    }
-
-    /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
-    #hide1 {
-      display: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .checkContainer p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .privacycheck {
-        appearance: none;
-        -webkit-appearance: none;
-        background: #ffffff 0% 0% no-repeat padding-box;
-        border: 2px solid #0b132b;
-        border-radius: 10px;
-        opacity: 1;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-right: 1rem;
-      }
-
-      .privacycheck:checked {
-        background: #5bc0be 0% 0% no-repeat padding-box;
-      }
-
-      input:focus {
-        outline: none;
-      }
-    }
-
-    .input-field {
-      text-align: left;
-      font: Italic 20px/29px Arimo;
-      letter-spacing: 0.5px;
-      color: #0b132b;
-      opacity: 1;
-    }
-
-    .input-field::placeholder {
-      text-align: left;
-      font: Italic 20px/29px Arimo;
-      letter-spacing: 0.5px;
-      color: #0b132b;
-    }
-  }
-
-  @media only screen and (max-width: 830px) {
     .box {
-      #Headline {
+        width: 50vw;
+        height: 35vh;
+        padding: 0;
+        background: white;
         text-align: center;
-        font-family: Hind Siliguri;
-        font-weight: 500;
-        font-size: 20px;
-        letter-spacing: 0.25rem;
-        color: #0b132b;
-        opacity: 1;
-        text-transform: uppercase;
-      }
+        border-radius: 4px;
+        color: #000033;
+        //-moz-box-shadow: 0 0 10px #888;
+        //-webkit-box-shadow: 0 0 10px #888;
+        //box-shadow: 0 0 10px #888;
+        //-o-box-shadow: 0 0 10px #888;
 
-      .btn-UI-container {
-        margin-top: 2px;
-      }
+        // error class for form validation
 
-      .btn-UI {
-        margin: 0.2rem;
-      }
-
-      height: 300px;
-    }
-    .checkContainer p {
-      font-size: 12px;
-
-      .privacycheck {
-        min-width: 20px;
-        min-height: 20px;
-      }
-
-      white-space: pre-line;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .box {
-      width: 10rem;
-      height: 300px;
-
-      .btn-UI {
-        max-width: 5rem;
-        max-height: 2rem;
-        margin: 0.2rem;
-        border-radius: 12px;
-      }
-
-      .roleBtn {
-        .btn-specialButton {
-          padding: 2px;
-          font-size: 10px;
+        /*field that displays the text and all buttons and input-fields of the login*/
+        .box-inhalt {
+            text-align: center;
+            margin-top: -10%;
         }
-      }
 
-      .btn-UI-container {
-        margin-top: 2px;
-      }
+        /*sets size and form of the input-boxes for password and email*/
+        .input-box {
+            border-radius: 6px;
+            padding: 4px;
+            outline: none;
+            border: 1px solid #000033;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-      .checkContainer p {
-        font-size: 8px;
-      }
+            /*sets size of the actual inputfields in the input-boxes*/
+            input {
+                width: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+            }
+        }
+
+        .eye {
+            cursor: pointer;
+            max-height: 24px;
+        }
+
+        /*sets the form and size of all buttons*/
+        .button {
+            border-radius: 6px;
+            padding: 4px;
+            outline: black;
+            border: 1px solid #000033;
+            margin: 10px auto;
+            width: 70%;
+
+            background: none;
+        }
+
+        // --------------- Basti --------------
+        .input-box-initial {
+            display: none;
+        }
+
+        .roleBtn {
+            display: flex;
+
+            .btn-specialButton {
+                flex-grow: 1;
+            }
+
+            .btn-specialButton:focus {
+                background-color: #5bc0be;
+                outline: 0em;
+            }
+        }
+
+        .btn-group button {
+            border: 1px solid #000033;
+            background-color: white;
+            border-left: none;
+            padding: 10px 24px;
+            cursor: pointer;
+            width: 45%;
+        }
+
+        .btn-group:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .btn-group :first-child {
+            border: 1px solid #000033;
+            border-radius: 6px 0 0 6px;
+        }
+
+        .btn-group :last-child {
+            border-radius: 0 6px 6px 0;
+        }
+
+        .btn-group button:not(:last-child) {
+            border-right: none; /* Prevent double borders */
+        }
+
+        .btn-group button:hover {
+            background-color: #5bc0be;
+        }
+
+        .btn-UI-container {
+            margin-top: 0.4rem;
+        }
+
+        .btn-UI {
+            margin-left: 18px;
+            margin-right: 18px;
+            margin-top: 2px;
+            width: 230px;
+            height: 49px;
+
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border: 2px solid #303030;
+            border-radius: 20px;
+            opacity: 1;
+            cursor: pointer;
+
+            text-align: center;
+            font: Regular 32px/28px Arimo;
+            letter-spacing: 0.48px;
+            color: #0b132b;
+            opacity: 1;
+        }
+
+        .btn-weiter {
+            background-color: #5bc0be;
+        }
+
+        .btn-Base {
+            opacity: 1;
+            background-color: #5bc0be;
+        }
+
+        .btn-Disabled {
+            background-color: #5bc0be;
+            opacity: 0.3;
+        }
+
+        // --------------- Basti ENDE
+
+        /*sets position of the headline "LOGIN"*/
+        #Headline {
+            text-align: center;
+            font-family: Hind Siliguri;
+            font-weight: 500;
+            font-size: 32px;
+            letter-spacing: 24px;
+            color: #0b132b;
+            opacity: 1;
+            text-transform: uppercase;
+        }
+
+        /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
+        #hide1 {
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .checkContainer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .privacycheck {
+                appearance: none;
+                -webkit-appearance: none;
+                background: #ffffff 0% 0% no-repeat padding-box;
+                border: 2px solid #0b132b;
+                border-radius: 10px;
+                opacity: 1;
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: 1rem;
+            }
+
+            .privacycheck:checked {
+                background: #5bc0be 0% 0% no-repeat padding-box;
+            }
+
+            input:focus {
+                outline: none;
+            }
+        }
+
+        .input-field {
+            text-align: left;
+            font: Italic 20px/29px Arimo;
+            letter-spacing: 0.5px;
+            color: #0b132b;
+            opacity: 1;
+        }
+
+        .input-field::placeholder {
+            text-align: left;
+            font: Italic 20px/29px Arimo;
+            letter-spacing: 0.5px;
+            color: #0b132b;
+        }
     }
-  }
+
+    @media only screen and (max-width: 830px) {
+        .box {
+            #Headline {
+                text-align: center;
+                font-family: Hind Siliguri;
+                font-weight: 500;
+                font-size: 20px;
+                letter-spacing: 0.25rem;
+                color: #0b132b;
+                opacity: 1;
+                text-transform: uppercase;
+            }
+
+            .btn-UI-container {
+                margin-top: 2px;
+            }
+
+            .btn-UI {
+                margin: 0.2rem;
+            }
+
+            height: 300px;
+        }
+        .checkContainer p {
+            font-size: 12px;
+
+            .privacycheck {
+                min-width: 20px;
+                min-height: 20px;
+            }
+
+            white-space: pre-line;
+        }
+        height: 450px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .box {
+            width: 10rem;
+            height: 300px;
+
+            .btn-UI {
+                max-width: 5rem;
+                max-height: 2rem;
+                margin: 0.2rem;
+                border-radius: 12px;
+            }
+
+            .roleBtn {
+                .btn-specialButton {
+                    padding: 2px;
+                    font-size: 10px;
+                }
+            }
+
+            .btn-UI-container {
+                margin-top: 2px;
+            }
+
+            .checkContainer p {
+                font-size: 8px;
+            }
+        }
+    }
 }
