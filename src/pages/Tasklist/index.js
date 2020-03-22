@@ -13,8 +13,7 @@ import UserIcon from '../../components/icons/users.icon.js';
 			</div>
 		);
 	}
-}*/
-} from "../../components/icons/user.icon";
+}*/}
 
 class Teacher_Task extends React.Component {
 
@@ -35,7 +34,11 @@ class Tasklist extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+<<<<<<< HEAD
 	state = {};
+=======
+	state = {};s
+>>>>>>> add icons--add Picture--add Profile--add Tasklist--
 
 	render() {
 		return <div className="Tasklist">
@@ -47,6 +50,7 @@ class Tasklist extends React.Component {
                     </div>
 					<div className='resultCenter'>
                         <span className='resultSubject'>
+<<<<<<< HEAD
 							<div>
 								<UserIcon/>
 								<span>213</span><span>Punkte</span>
@@ -55,11 +59,21 @@ class Tasklist extends React.Component {
 								<UsersIcon/>
 								<span>21.323</span><span>Punkte</span>
 							</div>
+=======
+                            <img src={userIcon} alt="user"/>
+							<span>213</span><span>Punkte</span>
+							<img src={usersIcon} alt="users"/>
+							<span>21.323</span><span>Punkte</span>
+>>>>>>> add icons--add Picture--add Profile--add Tasklist--
                         </span>
                     </div>
 					<div className='resultRight'>
                         <span className='resultSubject'>
+<<<<<<< HEAD
                             <input type="search" id="site-search" name="Search" aria-label="Search" placeholder="Suche"/>
+=======
+                            <input id="" type="search" id="site-search" name="Search" aria-label="Search" placeholder="Suche"/>
+>>>>>>> add icons--add Picture--add Profile--add Tasklist--
                         </span>
                     </div>
                 </div>
