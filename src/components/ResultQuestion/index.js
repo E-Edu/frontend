@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './index.scss';
-import ThumbsUp from '../../Assets/icons/thumbs-up.svg';
-import ThumbsDown from '../../Assets/icons/thumbs-down.svg';
+import ThumbsUp from '../../assets/icons/thumbs-up.svg';
+import ThumbsDown from '../../assets/icons/thumbs-down.svg';
 
 class ResultQuestion extends Component {
     constructor(props) {
