@@ -34,7 +34,7 @@ class Tasklist extends React.Component {
 	constructor(props) {
 		super(props);
 	}
-	state = {};s
+	state = {};
 
 	render() {
 		return <div className="Tasklist">
@@ -46,15 +46,19 @@ class Tasklist extends React.Component {
                     </div>
 					<div className='resultCenter'>
                         <span className='resultSubject'>
-                            <img src={userIcon} alt="user"/>
-							<span>213</span><span>Punkte</span>
-							<img src={usersIcon} alt="users"/>
-							<span>21.323</span><span>Punkte</span>
+							<div>
+								<img src={userIcon} alt="user"/>
+								<span>213</span><span>Punkte</span>
+							</div>
+                            <div>
+								<img src={usersIcon} alt="users"/>
+								<span>21.323</span><span>Punkte</span>
+							</div>
                         </span>
                     </div>
 					<div className='resultRight'>
                         <span className='resultSubject'>
-                            <input id="" type="search" id="site-search" name="Search" aria-label="Search" placeholder="Suche"/>
+                            <input type="search" id="site-search" name="Search" aria-label="Search" placeholder="Suche"/>
                         </span>
                     </div>
                 </div>

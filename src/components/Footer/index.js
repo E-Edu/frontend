@@ -5,10 +5,6 @@ import {Link} from 'react-router-dom';
 class Footer extends Component {
     state = {};
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className='footer-nav'>

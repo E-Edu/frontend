@@ -11,6 +11,7 @@ import Download from '../../assets/icon_Profile/download.svg';
 import './index.scss';
 import '../../css/main.css';
 import Data from './Profile_Config.json';
+import Endpoint from '../../lib/Endpunkt.js';
 
 
 class Profile_Subject extends React.Component {
@@ -65,15 +66,36 @@ class Profile extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            Benutzername: ""
+            Benutzername: "Test",
+            disabled: true
         }
     }
     componentDidUpdate(){
         console.log(this.state);
     }
 
+    ClickHandler_Bearbeiten = () =>{
+        if (this.state.disabled){
+            this.setState({
+                disabled: false
+            });
+        }else{
+            this.setState({
+                disabled: true
+            });
+            //send data to Backend
+        }
+    };
 
+    ChangeHandler_Benutzername = () =>{
+        this.setState({
+            Benutzername: document.getElementById('Benutzername_input').value
+        });
+    };
 
+    Endpoint_ChangeUsername = () =>{
+        Endpoint("","","");
+    }
     render() {
         return (
             <div className='Profil'>
@@ -88,8 +110,10 @@ class Profile extends React.Component {
                         <img id="pb" alt='Profilbild' src="https://yt3.ggpht.com/a/AATXAJzQuI4-bNmqwbklzCjvm576_nZwSdpG5jX-Hw=s176-c-k-c0x00ffffff-no-rj-mo" />
                         <span className="central" id="name">
                             <div className='profile_flex-row'>
-                                <span>Benutzername</span>
-                                <img onClick="" className='pen img' src={Task_icon} />
+                                <input onChange={this.ChangeHandler_Benutzername} id='Benutzername_input' type='text' value={this.state.Benutzername} disabled={this.state.disabled}/>
+                                <a onClick={this.ClickHandler_Bearbeiten}>
+                                    <img className='pen img' src={Task_icon} />
+                                </a>
                             </div>
                         </span>
                     </div>
