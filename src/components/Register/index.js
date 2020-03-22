@@ -1,7 +1,7 @@
-import React from 'react';
-import './index.scss';
-import eye from '../../assets/icons/eye.svg';
-import {Link} from "react-router-dom";
+import React from "react";
+import "./index.scss";
+import eye from "../../assets/icons/eye.svg";
+import { Link, Redirect, useHistory } from "react-router-dom";
 
 class Register extends React.Component {
     constructor(props) {
@@ -16,19 +16,46 @@ class Register extends React.Component {
             accepted: false,
             visible: true,
             clicked: false,
+            valid: false,
+            disabled: true,
             eye: true
         };
     }
 
+    testValid = event => {
+        let data = this.state;
+        let valid = true;
+        Object.keys(data).forEach(function(key) {
+            if (!data[key]) {
+                valid = false;
+            }
+            console.log(key, data[key]);
+        });
+        event.preventDefault();
+        console.log(valid);
+        return valid;
+    };
+
     componentDidUpdate() {
         console.log(this.state);
+        if (
+            this.state.mail != "" &&
+            this.state.role != "" &&
+            this.state.firstName != "" &&
+            this.state.lastName != "" &&
+            this.state.accepted != false &&
+            this.state.password === this.state.password2 &&
+            this.state.disabled
+        ) {
+            this.setState({
+                disabled: false
+            });
+        }
     }
 
     handleInput = field => {
-        var newState = {};
-        newState[field.target.name] = field.target.value;
-        this.setState(newState);
-        console.log(newState);
+        this.setState({ [field.target.name]: field.target.value });
+        console.log(this.state);
     };
 
     handleClick = () => {
@@ -61,37 +88,22 @@ class Register extends React.Component {
         this.props.history.push("/");
     };
 
-    hideEye = () => {
-    };
-
-    handleError = () => {
-        if (this.state.accepted != true) {
-            console.log("Bitte Datenschutz zustimmen");
-            document.getElementById("btn-Submit").disabled = true;
-        }
-        if (this.state.password != this.state.password2) {
-            console.log("Passwörter stimmen nicht überein");
-        }
-        if (this.state.mail == "") {
-            console.log("Mail angeben");
-        }
-        if (this.state.role == "") {
-            console.log("Bitte Rolle angeben");
-        }
-    };
+    hideEye = () => {};
 
     handleSubmit = () => {
-        console.log("------------------- S U B M I T ------------------");
-        console.log("firstName: " + this.state.firstName);
-        console.log("lastName: " + this.state.lastName);
-        console.log("password: " + this.state.password);
-        console.log("password2: " + this.state.password2);
-        console.log("mail: " + this.state.mail);
-        console.log("role: " + this.state.role);
-        console.log("accepted: " + this.state.accepted);
-        console.log("visible: " + this.state.visible);
-        console.log("clicked: " + this.state.clicked);
-        console.log("------------------- S U B M I T ... END------------");
+        console.log("handle error vor dem if");
+        if (
+            this.state.mail != "" &&
+            this.state.role != "" &&
+            this.state.firstName != "" &&
+            this.state.lastName != "" &&
+            this.state.accepted != false &&
+            this.state.password === this.state.password2 &&
+            this.state.disabled
+        ) {
+            console.log("jetzt redirect bitte");
+            this.setState({ redirect: "/dashboard" });
+        }
     };
 
     /*
@@ -103,11 +115,19 @@ class Register extends React.Component {
     }
 */
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect}></Redirect>;
+        }
         return (
             <div className="register">
                 <div className="box">
                     <h1 id="Headline">Register</h1>
-                    <form className="" action="" method="post">
+                    <form
+                        className=""
+                        action=""
+                        method="post"
+                        onSubmit={this.handleSubmit}
+                    >
                         <div className="box-inhalt">
                             {(() => {
                                 if (this.state.clicked) {
@@ -128,8 +148,8 @@ class Register extends React.Component {
                                             <div className="input-box second">
                                                 <input
                                                     onChange={this.handleInput}
-                                                    name="password"
                                                     value={this.state.password}
+                                                    name="password"
                                                     type="password"
                                                     id="passwort"
                                                     placeholder="Passwort"
@@ -137,8 +157,14 @@ class Register extends React.Component {
                                                     required
                                                 />
                                                 <span className="eye">
-													<img className="" src={eye}/>
-                                                    <i id="hide2" className="fa fa-eye-slash"/>
+                                                    <img
+                                                        className=""
+                                                        src={eye}
+                                                    />
+                                                    <i
+                                                        id="hide2"
+                                                        className="fa fa-eye-slash"
+                                                    />
                                                 </span>
                                             </div>
 
@@ -189,10 +215,17 @@ class Register extends React.Component {
                                             </div>
                                             <div
                                                 onClick={this.handleRedirect}
-                                                className="btn-UI-container">
+                                                className="btn-UI-container"
+                                            >
                                                 <button
-                                                    onClick={this.handleError}
-                                                    className="btn-UI btn-Base">Submit</button>
+                                                    className="btn-UI btn-Base"
+                                                    disabled={
+                                                        this.state.disabled
+                                                    }
+                                                    onSubmit={this.handleSubmit}
+                                                >
+                                                    Submit
+                                                </button>
                                             </div>
                                         </span>
                                     );
@@ -245,7 +278,9 @@ class Register extends React.Component {
                                                 <button
                                                     onClick={this.handleClick}
                                                     className="btn-UI btn-weiter"
-                                                >Weiter</button>
+                                                >
+                                                    Weiter
+                                                </button>
                                             </div>
                                         </span>
                                     );

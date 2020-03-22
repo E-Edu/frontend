@@ -1,18 +1,19 @@
+import "./css/main.scss";
+import React, {Component} from "react";
+import Landing from "./pages/Landing";
+import Task from "./pages/Task";
+import Dashboard from "./pages/Dashboard";
 import './css/main.scss';
-import React, {Component} from 'react';
-import Landing from './pages/Landing';
-import Task from './pages/Task';
-import Dashboard from './pages/Dashboard';
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
+import Result from "./pages/Result";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Result from './pages/Result';
 import Settings from "./pages/Settings";
 import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
     render() {
