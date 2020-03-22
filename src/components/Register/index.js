@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./index.scss";
 import { Link, Redirect } from "react-router-dom";
+import Landing_Image from "./img/eye.svg";
 
 class Register extends React.Component {
     constructor(props) {
@@ -14,22 +15,13 @@ class Register extends React.Component {
             role: "",
             accepted: false,
             visible: true,
-            clicked: false
+            clicked: false,
+            eye: true
         };
     }
 
     componentDidUpdate() {
-        console.log("------------------- D E B U G ------------------");
-        console.log("firstName: " + this.state.firstName);
-        console.log("lastName: " + this.state.lastName);
-        console.log("password: " + this.state.password);
-        console.log("password2: " + this.state.password2);
-        console.log("mail: " + this.state.mail);
-        console.log("role: " + this.state.role);
-        console.log("accepted: " + this.state.accepted);
-        console.log("visible: " + this.state.visible);
-        console.log("clicked: " + this.state.clicked);
-        console.log("------------------- D E B U G...END ------------");
+        console.log(this.state);
     }
 
     handleInput = field => {
@@ -69,6 +61,24 @@ class Register extends React.Component {
         this.props.history.push("/");
     };
 
+    hideEye = () => {};
+
+    handleError = () => {
+        if (this.state.accepted != true) {
+            console.log("Bitte Datenschutz zustimmen");
+            document.getElementById("btn-Submit").disabled = true;
+        }
+        if (this.state.password != this.state.password2) {
+            console.log("Passwörter stimmen nicht überein");
+        }
+        if (this.state.mail == "") {
+            console.log("Mail angeben");
+        }
+        if (this.state.role == "") {
+            console.log("Bitte Rolle angeben");
+        }
+    };
+
     handleSubmit = () => {
         console.log("------------------- S U B M I T ------------------");
         console.log("firstName: " + this.state.firstName);
@@ -94,16 +104,15 @@ class Register extends React.Component {
     render() {
         return (
             <div className="registerComponent">
-                <div>
-                    <form className="box" action="loginPop.html" method="post">
+                <div className="box">
+                    <h1 id="Headline">Register</h1>
+                    <form className="" action="" method="post">
                         <div className="boxinhalt">
-                            <h1 id="Headline">Register</h1>
-
                             {(() => {
                                 if (this.state.clicked) {
                                     return (
                                         <span>
-                                            <div className="input-box">
+                                            <div className="input-box second">
                                                 <input
                                                     onChange={this.handleInput}
                                                     type="text"
@@ -115,7 +124,7 @@ class Register extends React.Component {
                                                 ></input>
                                             </div>
 
-                                            <div className="input-box">
+                                            <div className="input-box second">
                                                 <input
                                                     onChange={this.handleInput}
                                                     name="password"
@@ -127,10 +136,10 @@ class Register extends React.Component {
                                                     required
                                                 ></input>
                                                 <span className="eye">
-                                                    <i
-                                                        id="hide1"
-                                                        className="fa fa-eye"
-                                                    ></i>
+                                                    <img
+                                                        className=""
+                                                        src={Landing_Image}
+                                                    ></img>
                                                     <i
                                                         id="hide2"
                                                         className="fa fa-eye-slash"
@@ -138,7 +147,7 @@ class Register extends React.Component {
                                                 </span>
                                             </div>
 
-                                            <div className="input-box">
+                                            <div className="input-box second">
                                                 <input
                                                     onChange={this.handleInput}
                                                     value={this.state.password2}
@@ -150,10 +159,11 @@ class Register extends React.Component {
                                                     required
                                                 ></input>
                                                 <span className="eye">
-                                                    <i
-                                                        id="hide1"
-                                                        className="fa fa-eye"
-                                                    ></i>
+                                                    <img
+                                                        id=""
+                                                        className=""
+                                                        src={Landing_Image}
+                                                    ></img>
                                                     <i
                                                         id="hide2"
                                                         className="fa fa-eye-slash"
@@ -164,6 +174,7 @@ class Register extends React.Component {
                                             <div className="checkContainer">
                                                 <p>
                                                     <input
+                                                        className="privacycheck"
                                                         onClick={
                                                             this.handlePrivacy
                                                         }
@@ -172,11 +183,13 @@ class Register extends React.Component {
                                                         }
                                                         type="checkbox"
                                                     ></input>{" "}
-                                                    Ich habe die{" "}
-                                                    <Link to="/">
-                                                        Datenschutzbestimmungen
-                                                    </Link>{" "}
-                                                    gelesen und akzeptiert
+                                                    <span className="font-arimo">
+                                                        Ich habe die
+                                                        <Link to="/">
+                                                            Datenschutzbestimmungen
+                                                        </Link>
+                                                        gelesen und akzeptiert
+                                                    </span>
                                                 </p>
                                             </div>
                                             <div
@@ -187,8 +200,8 @@ class Register extends React.Component {
                                                     Abbrechen
                                                 </button>
                                                 <button
-                                                    onClick={this.handleClick}
-                                                    className="btn-UI btn-weiter"
+                                                    onClick={this.handleError}
+                                                    className="btn-UI btn-Base"
                                                 >
                                                     Submit
                                                 </button>

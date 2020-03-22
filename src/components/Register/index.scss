@@ -10,10 +10,12 @@ form {
         text-decoration: none;
         color: #687d9a;
         transition: all 0.2s;
+        margin: 0 0.2rem;
+        color: #0b132b;
     }
 
     p {
-        color: #687d9a;
+        color: #0b132b;
         transition: all 0.2s;
     }
 
@@ -21,7 +23,8 @@ form {
         color: #5bc0be;
     }
     a:focus {
-        outline: none;
+        outline: 0rem;
+        color: #5bc0be;
     }
 }
 
@@ -29,8 +32,8 @@ form {
 *white bachgroundcanvas
 */
 .box {
-    width: 38%;
-    height: 585, 8px;
+    width: 50%;
+    height: 300px;
     padding: 5%;
     position: absolute;
     top: 50%;
@@ -45,11 +48,15 @@ form {
     box-shadow: 0 0 10px #888;
     -o-box-shadow: 0 0 10px #888;
 
+    // error class for form validation
+
     /*field that displays the text and all buttons and input-fields of the login*/
     .box-inhalt {
         text-align: center;
         margin-top: -10%;
-    } /*sets size and form of the input-boxes for password and email*/
+    }
+
+    /*sets size and form of the input-boxes for password and email*/
     .input-box {
         border-radius: 6px;
         padding: 4px;
@@ -58,6 +65,9 @@ form {
         width: 100%;
         box-sizing: border-box;
         margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         /*sets size of the actual inputfields in the input-boxes*/
         input {
@@ -66,6 +76,11 @@ form {
             outline: none;
             background: transparent;
         }
+    }
+
+    .eye {
+        cursor: pointer;
+        max-height: 24px;
     }
     /*sets the form and size of all buttons*/
     .button {
@@ -89,10 +104,16 @@ form {
         .btn-specialButton {
             flex-grow: 1;
         }
+
+        .btn-specialButton:focus {
+            background-color: #5bc0be;
+            outline: 0em;
+        }
     }
 
     .btn-group button {
         border: 1px solid #000033;
+        background-color: white;
         border-left: none;
         padding: 10px 24px;
         cursor: pointer;
@@ -123,11 +144,13 @@ form {
     }
 
     .btn-UI-container {
-        margin-top: 38px;
+        margin-top: 0.4rem;
     }
 
     .btn-UI {
-        margin: 5%;
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-top: 2px;
         width: 230px;
         height: 49px;
 
@@ -148,6 +171,15 @@ form {
         background-color: #5bc0be;
     }
 
+    .btn-Base {
+        opacity: 1;
+        background-color: #5bc0be;
+    }
+
+    .btn-Disabled {
+        background-color: #5bc0be;
+        opacity: 0.3;
+    }
     // --------------- Basti ENDE
 
     /*sets position of the headline "LOGIN"*/
@@ -162,39 +194,48 @@ form {
         text-transform: uppercase;
     }
 
-    /*sets size and color of the login-button*/
-    #login {
-        background: #00b3b3;
-        margin: 10px auto;
-        border: none;
-        width: 70%;
-    }
-    /*sets the size of the google-icon in the google-login-field*/
-    #googleBild {
-        width: 15px;
-
-        padding: none;
-    }
-    /*describes the field for the google-login*/
-    #google-login {
-        width: 70%;
-        background: none;
-        margin: 10px auto;
-        font-family: ubuntuLight;
-        border-radius: 10px;
-        padding: 4px;
-        outline: black;
-
-        border: 1px solid #000033;
-    }
-    /*sets the position of the two eye-icons in the password-field*/
-    .eye {
-        position: absolute;
-        right: 20%;
-    }
     /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
     #hide1 {
         display: none;
+        margin: 0;
+        padding: 0;
+    }
+    .checkContainer p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .privacycheck {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border: 2px solid #0b132b;
+            border-radius: 10px;
+            opacity: 1;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+        }
+        .privacycheck:checked {
+            background: #5bc0be 0% 0% no-repeat padding-box;
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+
+    .input-field {
+        text-align: left;
+        font: Italic 20px/29px Arimo;
+        letter-spacing: 0.5px;
+        color: #0b132b;
+        opacity: 1;
+    }
+    .input-field::placeholder {
+        text-align: left;
+        font: Italic 20px/29px Arimo;
+        letter-spacing: 0.5px;
+        color: #0b132b;
     }
 }
 
@@ -205,19 +246,50 @@ form {
             font-family: Hind Siliguri;
             font-weight: 500;
             font-size: 20px;
-            letter-spacing: 12px;
+            letter-spacing: 0.25rem;
             color: #0b132b;
             opacity: 1;
             text-transform: uppercase;
         }
+        .btn-UI-container {
+            margin-top: 2px;
+        }
+        .btn-UI {
+            margin: 0.2rem;
+        }
+        height: 300px;
+    }
+    .checkContainer p {
+        font-size: 12px;
+        .privacycheck {
+            min-width: 20px;
+            min-height: 20px;
+        }
+        white-space: pre-line;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .box {
-        width: 70%;
-    }
-    .btn-UI {
-        max-width: 150px;
+        width: 10rem;
+        height: 300px;
+        .btn-UI {
+            max-width: 5rem;
+            max-height: 2rem;
+            margin: 0.2rem;
+            border-radius: 12px;
+        }
+        .roleBtn {
+            .btn-specialButton {
+                padding: 2px;
+                font-size: 10px;
+            }
+        }
+        .btn-UI-container {
+            margin-top: 2px;
+        }
+        .checkContainer p {
+            font-size: 8px;
+        }
     }
 }
