@@ -14,6 +14,7 @@ class Template extends Component {
 	render() {
 		return (
 			<div className='dashboard'>
+
 				<Header side='Dashboard' />
 				{/*<Sidebar></Sidebar>*/}
 				<div className='content'>
