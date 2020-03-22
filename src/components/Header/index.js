@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from '../../logo.svg';
 import './index.scss';
 import { Link } from 'react-router-dom';
-import Help_Image from '../../Assets/icons/helpcircle.svg';
-import Logout_Image from '../../Assets/icons/logout.svg';
+import Help_Image from '../../assets/icons/helpcircle.svg';
+import Logout_Image from '../../assets/icons/logout.svg';
 
 class Header extends Component {
 	constructor(props) {
@@ -50,3 +50,4 @@ class Header extends Component {
 }
 
 export default Header;
+

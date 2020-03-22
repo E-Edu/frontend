@@ -1,94 +1,107 @@
-$dark: #1c2541;
-$bluegray: #3a506b;
-$primary: #5bc0be;
+$dark: #1C2541;
+$bluegray: #3A506B;
+$primary: #5BC0BE;
 
-.content {
-	margin-bottom: 120px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+body {
+    font-family: Medium 80px/129px Hind Siliguri;
+    cursor: default;
 
-	.picture {
-		margin-top: 20px;
-		width: 30%;
+    .content {
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-		img {
-			width: 100%;
-		}
-	}
 
-	.credits {
-		.featuretext {
-			text-align: center;
-			color: $bluegray;
+        .picture {
+            margin-top: 20px;
+            width: 30%;
 
-			.heading {
-				font-size: 80px;
-				color: $dark;
-			}
+            img {
+                width: 100%;
+            }
+        }
 
-			.communityproject {
-				font-size: 40px;
+        .credits {
+            .featuretext {
+                text-align: center;
+                color: $bluegray;
 
-				span {
-					color: $primary;
-				}
-			}
+                .heading {
+                    font-size: 80px;
+                    color: $dark;
+                }
 
-			.teilnehmende {
-				font-size: 30px;
-			}
-		}
+                .communityproject {
+                    font-size: 40px;
 
-		.mitwirkende {
-			.subheading {
-				text-align: center;
-				font-size: 40px;
-				color: $bluegray;
-				font-weight: bolder;
-				margin-bottom: 60px;
-				margin-top: 40px;
-			}
+                    span {
+                        color: $primary;
+                    }
+                }
 
-			.morpheus {
-				.idea {
-					font-size: 30px;
-					font-style: normal;
-					text-align: center;
-					color: $primary;
-					font-weight: normal;
-					margin: 10px 0;
-				}
+                .teilnehmende {
+                    font-size: 30px;
+                }
+            }
 
-				.name {
-					text-align: center;
-					font-size: 20px;
-					color: $bluegray;
-					margin-top: 5px;
-				}
-			}
+            .mitwirkende {
+                .subheading {
+                    text-align: center;
+                    font-size: 40px;
+                    color: $bluegray;
+                    font-weight: bolder;
+                    margin-bottom: 60px;
+                    margin-top: 40px;
+                }
 
-			.credits-container {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
+                .morpheus {
+                    .idea {
+                        font-size: 30px;
+                        font-style: normal;
+                        text-align: center;
+                        color: $primary;
+                        font-weight: normal;
+                        margin: 10px 0;
+                    }
 
-				.cerdits-heading {
-					text-align: center;
-					font-size: 30px;
-					font-style: normal;
-					color: $primary;
-					font-weight: normal;
-					margin: 10px 0;
-				}
+                    .name {
+                        display: block;
+                        text-align: center;
+                        font-size: 20px;
+                        color: $bluegray;
+                        margin-top: 5px;
+                    }
 
-				.credits-name {
-					text-align: center;
-					font-size: 20px;
-					color: $bluegray;
-					margin: 5px 0;
-				}
-			}
-		}
-	}
+                    margin-bottom: 20px;
+
+                }
+
+                .credits-container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+
+                    .cerdits-heading {
+                        text-align: center;
+                        font-size: 30px;
+                        font-style: normal;
+                        color: $primary;
+                        font-weight: normal;
+                        margin: 10px 0;
+                    }
+
+                    .credits-name {
+                        display: block;
+                        text-align: center;
+                        font-size: 20px;
+                        color: $bluegray;
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+
+    }
 }
