@@ -1,31 +1,50 @@
 #Menu {
-	position: fixed;
-	z-index: 2;
-	left: 0;
-	width: 115px;
-	height: 1108px;
-	background: #0b132b 0 0 no-repeat padding-box;
-	text-align: center;
-	opacity: 1;
-	padding-top: 30px;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    width: 115px;
+    height: 100%;
+    background: #0b132b 0 0 no-repeat padding-box;
+    text-align: center;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
 
-	a.menuElement:first-child {
-		margin-top: 0;
-	}
+    a.menuElement:first-child {
+        margin-top: 0;
+    }
 
-	a.menuElement {
-		flex-direction: column;
-		align-items: center;
-		text-decoration: none;
-		color: #687d9a;
-		margin-top: 50px;
-	}
+    a.menuElement {
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #687d9a;
+        margin: 1.5rem 0;
+        line-height: 1.2em;
+    }
 
-	a.menuElement:hover {
-		cursor: pointer;
-	}
+    a.menuElement:hover {
+        cursor: pointer;
+    }
 
-	a.menuElement:focus {
-		outline: none;
-	}
+    a.menuElement:focus {
+        outline: none;
+    }
+
+    .iconSize {
+        width: 24px;
+        height: 24px;
+
+    }
+
+    .topIcons {
+        margin-top: 100px;
+    }
+
+    .bottomIcons {
+        margin-bottom: 20px;
+    }
 }

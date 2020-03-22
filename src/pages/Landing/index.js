@@ -6,7 +6,7 @@ import Register from '../../components/Register';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
-import Modal from 'react-animated-modal';
+//import Modal from 'react-animated-modal';
 
 class Landing extends Component {
 	constructor(props) {
@@ -35,17 +35,8 @@ class Landing extends Component {
 							}
 						}}
 					></Route>
-					<Modal
-						visible={this.state.showModal}
-						closemodal={() => {
-							console.log('close modal');
-							this.setState({ showModal: false, redirect: '/' });
-						}}
-						type='fadeIn'
-					>
-						<Route exact path='/login' component={Login} />
-						<Route exact path='/register' component={Register} />
-					</Modal>
+
+					
 					<div id='content'>
 						<div id='image-landigpage'>
 							<img
