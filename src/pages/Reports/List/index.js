@@ -83,17 +83,11 @@ class Report extends Component {
 }
 
 class ReportsList extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {};
-
     render() {
         return (
             <div>
-                <Header side='Dashboard' />
-                <h1 className="text-dark text-content">Reports</h1>
+                <Header side='Dashboard'/>
+                <h1 className="text-dark ReportText-content">Reports</h1>
                 <div style={{display: "flex", flexDirection: "column"}}>
                     <Report subject="Mathe | Grundrechnen | Plus" messages="20" teacher="Herr Lehrer Mustermann"
                             likes="3" dislikes="178" difficulty="Leicht"/>

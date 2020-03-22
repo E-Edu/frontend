@@ -70,7 +70,7 @@ class Sidebar extends Component {
             ['Meine Aufgaben', 'list', 'dashboard'],
             ['Korrektur', 'check', 'correction/review'],
             ['Reports', 'alert-circle', 'reports/list'],
-            ['Lehrer hinzufügen', 'teacher', 'profile'],
+            ['Lehrer hinzufügen', 'teacher', 'teacher/add'],
         ];
         let sitesHtml = sites.map(site => {
             return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={this.state.activeName === site[1]}/>;
@@ -82,7 +82,7 @@ class Sidebar extends Component {
                 </div>
                 <div className="bottomIcons">
                     <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'}/>
-                    <MenuElement name="" file="user" url="dashboard" active={this.state.activeName === 'user'}/>
+                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'user'}/>
                 </div>
             </div>
         );
