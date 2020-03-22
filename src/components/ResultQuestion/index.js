@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './index.scss';
-
+import ThumbsUp from '../../Assets/icons/thumbs-up.svg';
+import ThumbsDown from '../../Assets/icons/thumbs-down.svg';
 
 class ResultQuestion extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class ResultQuestion extends Component {
     render() {
         return (
             <div className='resultQuestionbox'>
-                <div class='resultStatusBar' style={{backgroundColor:this.props.color}}></div>
+                <div class='resultStatusBar' style={{backgroundColor: this.props.color}}></div>
                 <div class='resultContent'>
                     <div className='resultTop'>
                         <div className='resultLeftTop'>
@@ -20,7 +21,8 @@ class ResultQuestion extends Component {
                         </div>
                         <div className='resultRightTop'>
                             <p className='resultRating'>Frage bewerten: </p>
-                            <p className='resultRatingIcons'> icon icon</p>
+                            <img src={ThumbsUp} alt=""/>
+                            <img src={ThumbsDown} alt=""/>
                         </div>
                     </div>
                     <div className='resultBottom'>

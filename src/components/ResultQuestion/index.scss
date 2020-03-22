@@ -60,6 +60,11 @@ $lightBlue: #96B4DD;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: baseline;
+
+                img {
+                    margin: 0 5px;
+                }
 
                 .resultRating {
                     color: $grey;
