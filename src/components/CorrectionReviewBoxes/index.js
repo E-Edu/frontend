@@ -1,9 +1,5 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './index.scss';
-import { useParams } from 'react-router-dom';
-import Thumbs_Up from '../../assets/icons/thumbs-up.svg';
-import Thumbs_Down from '../../assets/icons/thumbs-down.svg';
 import Calendar from '../../assets/icons/calendar.svg';
 import User from '../../assets/icons/user.svg';
 import Edit from '../../assets/icons/edit.svg';
@@ -48,9 +44,8 @@ class CorrectionReviewBoxes extends Component {
             </div>
 
 
-
-
         );
     }
 }
+
 export default CorrectionReviewBoxes;
