@@ -21,7 +21,8 @@
         align-items: center;
         text-decoration: none;
         color: #687d9a;
-        /*margin-top: 50px;*/
+        margin: 1rem 0;
+        line-height: 1.2em;
     }
 
     a.menuElement:hover {
@@ -38,11 +39,11 @@
 
     }
 
-    .topIcons{
+    .topIcons {
         margin-top: 100px;
     }
 
-    .bottomIcons{
+    .bottomIcons {
         margin-bottom: 20px;
     }
 }
