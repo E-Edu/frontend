@@ -16,13 +16,13 @@ import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 
 class Profile_Subject extends React.Component {
-    
+
     render() {
         const subject = this.props.Subject;
         const border = "11px solid " + Data["Subject_color"][subject];
         return (
             <div className='profile_subjekt' style={{ borderLeft: border }}>
-                <div className='profileTop' >
+                <div className='profileTop'>
                     <div className='profile_subjekt_img'>
                         <img id="logo" alt="subjekt_img" src={File} />
                     </div>
@@ -78,7 +78,7 @@ class Profile extends React.Component {
         const top = document.getElementById('HeaderNavbarId').clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('contentID').setAttribute("style",`margin-top:${top}px;margin-left:${left}px;`);
-        
+
     }
     ClickHandler_Bearbeiten = () =>{
         if (this.state.disabled){
