@@ -43,7 +43,7 @@ export function register(config) {
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
-              'worker. To learn more, visit https://bit.ly/CRA-PWA'
+              'worker. Um mehr zu erfaren besuche: https://bit.ly/CRA-PWA'
           );
         });
       } else {
@@ -123,7 +123,7 @@ function checkValidServiceWorker(swUrl, config) {
     })
     .catch(() => {
       console.log(
-        'No internet connection found. App is running in offline mode.'
+        'Keine Internetverbindung. App läuft Offline.'
       );
     });
 }

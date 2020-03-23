@@ -15,7 +15,6 @@ class Template extends Component {
         return (
             <div className="dashboard">
                 <Header side="Dashboard" />
-                {/*<Sidebar></Sidebar>*/}
                 <div className="content">
                     <div className="box">
                         <div className="image">
