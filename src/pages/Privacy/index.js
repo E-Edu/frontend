@@ -60,7 +60,7 @@ class Privacy extends Component {
 
 				<h2>Advertising Partners Privacy Policies</h2>
 
-				<P>You may consult this list to find the Privacy Policy for each of the advertising partners of E-Edu Lernplatform.</p>
+				<p>You may consult this list to find the Privacy Policy for each of the advertising partners of E-Edu Lernplatform.</p>
 
 				<p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on E-Edu Lernplatform, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
 
