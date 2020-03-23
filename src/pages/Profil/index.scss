@@ -52,7 +52,10 @@
     height: 27px;
     margin-left: 3rem;
   }
-
+  #downloadimage:hover {
+    cursor: pointer;
+  }
+  
   .CertificatesRow {
     width: 80%;
     margin: 0;
@@ -149,20 +152,34 @@
 
   #name {
     margin-left: 1.5rem;
-    text-align: left;
+    text-align: center;
     font-size: 26px;
     letter-spacing: 0;
     color: #1c2541;
     opacity: 1;
-    input{
+    input:fokus{
+      outline: none;
+    }
+    input:disabled{
       text-align: center;
       border: none;
       background: transparent;
       font-size: 20px;
       width: 8rem;
     }
+    input:enabled{
+      text-align: center;
+      
+      background: transparent;
+      font-size: 20px;
+      width: 8rem;
+    }
     img {
       margin-left: 15px;
+    }
+    img:hover{
+      cursor: pointer;
+      
     }
   }
 }
@@ -245,14 +262,15 @@
 #favorite_subject {
   text-align: center;
 
-  #profile_f_box {
+  #profile_favorite_box {
     text-align: left;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
     padding: 5px;
   }
 }
-
 #profile_certificate_box {
   display: flex;
   flex-direction: row;

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from '../../logo.svg';
 import './index.scss';
 import { Link } from 'react-router-dom';
-import Help_Image from '../../assets/icons/helpcircle.svg';
-import Logout_Image from '../../assets/icons/logout.svg';
+import Help_Image from '../icons/help-circle.icon';
+import Logout_Image from '../icons/logout.icon';
 class Header extends Component {
 	constructor(props) {
 		super(props);
@@ -13,7 +13,7 @@ class Header extends Component {
 		switch (this.props.side) {
 			case 'Landing':
 				return (
-					<div className='headerNavbar'>
+					<div id="HeaderNavbarId" className='headerNavbar'>
 						<div className="logo">
 							<img src="assets/logo.svg" alt="" width="24px"/>
 							<h1 id='title'>E-EDU</h1>
@@ -30,16 +30,16 @@ class Header extends Component {
 				);
 			case 'Dashboard':
 				return (
-					<div className='headerNavbar'>
+					<div id="HeaderNavbarId" className='headerNavbar'>
 						<div>
 							<h1 id='title'>E-EDU</h1>
 						</div>
 						<div id='Button_Box_Dashboard'>
 							<button className='BTN_Dash' id='Button_Info'>
-								<img src={Help_Image} alt='Help' />
+								<Help_Image/>
 							</button>
 							<button className='BTN_Dash' id='Button_Logout'>
-								<img src={Logout_Image} alt='Logout' />
+								<Logout_Image/>
 							</button>
 						</div>
 					</div>
