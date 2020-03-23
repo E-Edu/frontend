@@ -15,7 +15,8 @@ class Header extends Component {
 			case 'Landing':
 				return (
 					<div className='headerNavbar'>
-						<div>
+						<div className="logo">
+							<img src="assets/logo.svg" alt="" width="24px"/>
 							<h1 id='title'>E-EDU</h1>
 						</div>
 						<div id='Button_Box_Landing'>
@@ -32,7 +33,9 @@ class Header extends Component {
 				return (
 					<div className='headerNavbar'>
 						<div>
-							<h1 id='title'>E-EDU</h1>
+							<Link to={'/'} style={{textDecoration: "none"}}>
+								<h1 id='title'>E-EDU</h1>
+							</Link>
 						</div>
 						<div id='Button_Box_Dashboard'>
 							<button className='BTN_Dash' id='Button_Info'>
