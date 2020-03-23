@@ -10,27 +10,34 @@ import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
 import Result from "./pages/Result";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Sidebar from "./components/Sidebar";
 import Settings from "./pages/Settings";
 import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
+import Tasklist from "./pages/Tasklist";
+import Profile from "./pages/Profile";
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <Sidebar/>
                 <Route path={['/login', '/register', '/']} exact component={Landing}/>
-                <Route path='/task' component={Task}/>
-                <Route path='/dashboard' component={Dashboard}/>
-                <Route path='/imprint' component={Imprint}/>
-                <Route path='/privacy' component={Privacy}/>
-                <Route path='/credits' component={Credits}/>
-                <Route path='/reports/list' component={ReportsList}/>
-                <Route path='/correction/review' component={CorrectionReview}/>
-                <Route path='/result' component={Result}/>
-                <Route path='/settings' component={Settings}/>
-                <Route path='/teacher/add' component={AddTeacher}/>
+                <Route path='/imprint' exact component={Imprint}/>
+                <Route path='/privacy' exact component={Privacy}/>
+                <Route path='/credits' exact component={Credits}/>
+                <Route path='/dashboard' exact component={Dashboard}/>
+                {/*Auswahl (Themen)*/}
+                <Route path='/tasklist' exact component={Tasklist}/>
+                <Route path='/task' exact component={Task}/>
+                <Route path='/task/result' exact component={Result}/>
+                {/*Task add*/}
+                {/*Meine Aufgaben*/}
+                <Route path='/correction/review' exact component={CorrectionReview}/>
+                {/*Popup zum Korigieren*/}
+                <Route path='/reports/list' exact component={ReportsList}/>
+                {/*Popup zum anschauen*/}
+                <Route path='/teacher/add' exact component={AddTeacher}/>
+                <Route path='/settings' exact component={Settings}/>
+                <Route path='/profile' exact component={Profile}/>
             </Router>
         );
     }
