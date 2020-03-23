@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
-import down from '../../Assets/icons/thumbs-down.svg';
-import up from '../../Assets/icons/thumbs-up.svg';
-import mail from '../../Assets/icons/mail.svg';
-import teacher from '../../Assets/icons/teacher.svg';
+import down from '../../assets/icons/thumbs-down.svg';
+import up from '../../assets/icons/thumbs-up.svg';
+import mail from '../../assets/icons/mail.svg';
+import teacher from '../../assets/icons/teacher.svg';
 /*
     -subject 
     -theme
