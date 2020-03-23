@@ -54,7 +54,7 @@ class Report extends Component {
                         </div>
                         <span style={{
                             display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
-                            width: 400, right: 0, justifyContent: "flex-end", backgroundColor: bgColor,
+                            right: 0, justifyContent: "flex-end", backgroundColor: bgColor,
                             borderWidth: 1, borderStyle: "solid", borderColor: bgColor[1], borderRadius: 10,
                             padding: "0px 5px"
                         }}>{this.state.difficulty}</span>
