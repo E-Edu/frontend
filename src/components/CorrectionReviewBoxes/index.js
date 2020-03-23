@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import './index.scss';
 import Calendar from '../../assets/icons/calendar.svg';
-import User from '../../assets/icons/user.svg';
-import Edit from '../../assets/icons/edit.svg';
+import User from '../icons/user.icon';
+import Edit from '../icons/edit.icon';
 
 
 class CorrectionReviewBoxes extends Component {

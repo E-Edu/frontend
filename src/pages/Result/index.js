@@ -2,8 +2,8 @@ import React from 'react';
 import './index.scss';
 import Header from '../../components/Header';
 import ResultQuestion from '../../components/ResultQuestion';
-import User from '../../assets/icons/user.svg';
-import Users from '../../assets/icons/users.svg';
+import User from '../../components/icons/user.icon';
+import Users from '../../components/icons/users.icon';
 
 
 class Result extends React.Component {

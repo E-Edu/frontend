@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './index.scss';
-import eye from '../../assets/icons/eye.svg';
-import eyeOff from '../../assets/icons/eye-off.svg';
+import eye from '../icons/eye.icon';
+import eyeOff from '../icons/eye-off.icon';
 
 class Template extends Component {
 	constructor(props) {
