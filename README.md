@@ -1,6 +1,6 @@
 # README
 
-Hier findet man den Frontend-Teil des E-Edu Projekts, welches eine Herausfordeung auf dem [bundesweiten Hackathon WirVsVirus](https://wirvsvirushackathon.org/). Dieses Repository ist part der Open-Source E-Learnung Platform, die sich jedoch erst in der Alpha-Phase befindet
+Hier findet man den Frontend-Teil des E-Edu Projekts, welches eine Herausfordeung auf dem [bundesweiten Hackathon WirVsVirus](https://wirvsvirushackathon.org/). Dieses Repository ist ein Teil der Open-Source E-Learnung Platform, die sich jedoch erst in der Alpha-Phase befindet
 
 ## Mitmachen
 
