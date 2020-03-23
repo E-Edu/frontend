@@ -18,6 +18,4 @@ Fill out docker-compose.yml
 
 Fill out GitHub Action workflow
 
-Fill out Privacy Policy
-
 Look [here](https://github.com/E-Edu/frontend/projects/2)
