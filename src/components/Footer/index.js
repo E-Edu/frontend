@@ -15,6 +15,7 @@ class Footer extends Component {
 					<Link to='/imprint'>Impressum</Link>
 					<Link to='/privacy'>Datenschutzerklärung</Link>
 					<Link to='/credits'>Credits</Link>
+					<Link to='https://github.com/E-Edu/general'>GitHub</Link>
 				</div>
 				<div id='Copyright'>
 					<span>&copy; 2020 The Morpheus Tutorials Community</span>

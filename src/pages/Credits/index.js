@@ -108,6 +108,7 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/xR4iden">Sebastian Sturm</a>
                                 <a className="credits-name" href="https://github.com/8x2xy">Drake</a>
                                 <a className="credits-name" href="https://github.com/harry939">harry</a>
+                                <a className="credits-name" href="https://github.com/K0XI">Timo Kox</a>
                                 <a className="credits-name" href="https://github.com/max606">Max A.</a>
                                 <a className="credits-name" href="https://github.com/TimyStream">Timy Stream</a>
                                 <a className="credits-name" href="https://github.com/RuyRun">RuyRun</a>

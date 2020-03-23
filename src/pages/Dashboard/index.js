@@ -15,7 +15,6 @@ class Template extends Component {
         return (
             <div className="dashboard">
                 <Header side="Dashboard" />
-                {/*<Sidebar></Sidebar>*/}
                 <div className="content">
                     <div className="box">
                         <div className="image">
@@ -28,7 +27,7 @@ class Template extends Component {
                                 <img
                                     className="Calender_icon"
                                     src=""
-                                    alt="KAlender Icon"
+                                    alt="Kalender Icon"
                                 />
                                 <span className="weekend_task_text" />
                             </div>
