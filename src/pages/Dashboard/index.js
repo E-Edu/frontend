@@ -28,7 +28,7 @@ class Template extends Component {
                                 <img
                                     className="Calender_icon"
                                     src=""
-                                    alt="KAlender Icon"
+                                    alt="Kalender Icon"
                                 />
                                 <span className="weekend_task_text" />
                             </div>
