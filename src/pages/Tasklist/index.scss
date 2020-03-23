@@ -1,12 +1,7 @@
 .resultContentHeader{
-    display:flex;
     width:100%;
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:baseline;
     .resultLeft{
-        margin-left:109px;
+        margin-left:190px;
 
         .resultSubject{
             margin-right:40px;
@@ -16,36 +11,118 @@
             font-size: 60px;
         }
     }
-    .resultCenter{
-        margin-left:109px;
 
-        .resultSubject{
-            margin-right:40px;
-            margin-top:34px;
-            font-size: 20px;
-            img{
+        .Middle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        .resultCenter{
 
+            .resultSubject{
+                margin-right:40px;
+                margin-top:34px;
+                font-size: 20px;
+                display:flex;
+
+                .icon{
+                    margin-right: 0.5rem;
+                }                
+                .points{
+                    color: #3A506B;
+                }
+            
             }
         }
     }
-    .resultRight{
-        margin-right:109px;
-        .resultSubject{
-            margin-right:40px;
-            margin-top:34px;
-            font-weight: bolder;
-            color: #0B132B;
-            font-size: 60px;
+        .resultRight{
+            margin-right:109px;
+            .resultSubject{
+                margin-right:40px;
+                margin-top:34px;
+                font-weight: bolder;
+                color: #0B132B;
+                font-size: 60px;
+                #input-search {
+                    width: 391px;
+                    height: 43px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border: 1px solid #3A506B;
+                    border-radius: 8px;
+                    div{
+                        padding: 0 0.5rem;
+                        padding-bottom: 5px;
+                    }
+                }
+                input{
+                    width: 391px;
+                    height: 43px;
+                    background: transparent;
+                    opacity: 1;
+                    border: none;
+                    text-align: left;
+                    font-size: 20px;
+                    letter-spacing: 0;
+                    color: #3A506B;
+                    opacity: 1;
+                }
+                input:focus{
+                    outline: none;
+                }
+            }
+        }
+    
+
+}
+.Tasklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .teacher_information{
+        img{
+            max-width: 110px;
+            max-height: 110px;
+            border: 2px solid #5BC0BE;
+            border-radius: 100px;
         }
     }
-    .Tasklist_Content{
-        .teacher_information{
-            img{
-                max-width: 110px;
-                max-height: 110px;
-                border: 2px solid #5BC0BE;
-                border-radius: 100px;
+    .Task{
+        display: flex;
+        flex-direction: column;
+        margin:10px;
+        height: 120px;
+        width: 975px;
+        border: 1px solid #707070;
+        border-radius: 8px;
+        .Task_Head{
+            margin: 0 1rem;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .Task_Head_Elements{
+                display: flex;
+                flex-direction: row;
+                .Task_element{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0 1rem;
+                }
             }
+            span{
+                padding: 0 0.3rem;
+            }
+        }
+        .Task_Bottom{
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: row;
         }
     }
 }
+
+
