@@ -33,7 +33,9 @@ class Header extends Component {
 				return (
 					<div className='headerNavbar'>
 						<div>
-							<h1 id='title'>E-EDU</h1>
+							<Link to={'/'} style={{textDecoration: "none"}}>
+								<h1 id='title'>E-EDU</h1>
+							</Link>
 						</div>
 						<div id='Button_Box_Dashboard'>
 							<button className='BTN_Dash' id='Button_Info'>
