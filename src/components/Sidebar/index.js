@@ -1,85 +1,92 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './index.scss';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import icons from './icons';
 
 class MenuElement extends Component {
-	constructor(props) {
-		super(props);
-		this.state = { active: props.active, file: props.file, name: props.name };
-	}
+    constructor(props) {
+        super(props);
+        this.state = {active: props.active, file: props.file, name: props.name};
+    }
 
-	setActivity(activity) {
-		// the active changes the icon
-		this.setState({ active: activity || this.props.active });
-	}
-	onMouseEnterHandler = () => {
-		this.setActivity(true);
-	};
+    setActivity(activity) {
+        // the active changes the icon
+        this.setState({active: activity || this.props.active});
+    }
 
-	onMouseLeaveHandler = () => {
-		this.setActivity(false);
-	};
+    onMouseEnterHandler = () => {
+        this.setActivity(true);
+    };
 
-	render() {
-		let ending;
-		// get the right filename, if active or not
-		if (!this.state.active) {
-			ending = '.svg';
-		} else {
-			ending = '-active.svg';
-		}
-		let nameText = '';
-		if (this.state.name) {
-			nameText = <span>{this.state.name}</span>;
-		}
-		const file = icons[this.state.file + ending];
+    onMouseLeaveHandler = () => {
+        this.setActivity(false);
+    };
 
-		return (
-			<Link
-				to={'/' + this.props.url}
-				className='menuElement'
-				key={this.state.file}
-				style={{ marginTop: 50, display: 'block' }}
-				onMouseEnter={this.onMouseEnterHandler}
-				onMouseLeave={this.onMouseLeaveHandler}
-			>
-				<img src={file} alt='' />
-				<br />
-				{nameText}
-			</Link>
-		);
-	}
+
+    render() {
+
+        let color;
+        // get the right filename, if active or not
+        if (!this.state.active) {
+            color = '#96B4DD';
+        } else {
+            color = '#5BC0BE';
+        }
+        let nameText = '';
+        if (this.state.name) {
+            nameText = <p style={{margin: '0 12px', overflowWrap: 'break-word', textAlign: 'center', color: color}}>{this.state.name}</p>;
+        }
+
+        const File = icons[this.state.file];
+        return (
+            <Link
+                to={'/' + this.props.url}
+                className='menuElement'
+                key={this.state.file}
+                style={{display: 'block'}}
+                onMouseEnter={this.onMouseEnterHandler}
+                onMouseLeave={this.onMouseLeaveHandler}
+            >
+
+                <File stroke={color}/>
+                {nameText}
+            </Link>
+        );
+    }
 }
 
 class Sidebar extends Component {
-	constructor(props) {
-		super(props);
-		this.state = { activeName: props.active };
-	}
+    constructor(props) {
+        super(props);
+        this.state = {activeName: props.active};
+    }
 
-	render() {
-		const sites = [
-			//TODO edit the addresses of pages
-			['Menu', 'home', 'dashboard'],
-			['Aufgaben', 'edit', 'dashboard'],
-			['Neue Aufgabe', 'plus-circle', 'dashboard'],
-			['Meine Aufgaben', 'list', 'dashboard'],
-			['Korrektur', 'check', 'dashboard'],
-			['Reports', 'alert-circle', 'dashboard'],
-			['Add teacher', 'user', 'dashboard'],
-			['', 'settings', 'dashboard'],
-			['', 'user', 'dashboard']
-		];
-		let sitesHtml = sites.map(site => {
-			let active = false;
-			if (this.state.activeName === site[1]) {
-				active = true;
-			}
-			return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={active} />;
-		});
-		return <div id='Menu'>{sitesHtml}</div>;
-	}
+    render() {
+        const sites = [
+            //TODO edit the addresses of pages
+            ['Home', 'home', 'dashboard'],
+            ['Aufgaben', 'edit', 'task'],
+            ['Neue Aufgabe', 'plus-circle', 'dashboard'],
+            ['Meine Aufgaben', 'list', 'dashboard'],
+            ['Korrektur', 'check', 'correction/review'],
+            ['Reports', 'alert-circle', 'reports/list'],
+            ['Lehrer hinzufügen', 'teacher', 'teacher/add'],
+        ];
+        let sitesHtml = sites.map(site => {
+            return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={this.state.activeName === site[1]}/>;
+        });
+        return (
+            <div id='Menu'>
+                <div className="topIcons">
+                    {sitesHtml}
+                </div>
+                <div className="bottomIcons">
+                    <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'}/>
+                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'user'}/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Sidebar;

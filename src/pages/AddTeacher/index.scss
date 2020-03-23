@@ -1,0 +1,31 @@
+h1.AddTeacherText-content {
+  position: relative;
+  font: Medium 60px/97px Hind Siliguri;
+  padding: 0;
+  margin-top: 120px;
+  width: 400px;
+  height: 50px;
+}
+
+.AddTeacherReport-component {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  left: 50%;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  width: 1000px;
+  height: 100px;
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  font: Regular 20px/23px Arimo;
+
+  .clickable:hover {
+    cursor: pointer;
+  }
+
+  .clickable:focus {
+    outline: none;
+  }
+
+}

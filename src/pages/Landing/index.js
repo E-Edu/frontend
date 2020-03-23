@@ -5,7 +5,7 @@ import Login from '../../components/Login';
 import Register from '../../components/Register';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import Landing_Image from '../../Assets/Picture/landingpage-teaching.svg';
+import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
 import Modal from 'react-animated-modal';
 
 class Landing extends Component {
@@ -35,6 +35,7 @@ class Landing extends Component {
 							}
 						}}
 					></Route>
+
 					<Modal
 						visible={this.state.showModal}
 						closemodal={() => {
@@ -46,6 +47,7 @@ class Landing extends Component {
 						<Route exact path='/login' component={Login} />
 						<Route exact path='/register' component={Register} />
 					</Modal>
+
 					<div id='content'>
 						<div id='image-landigpage'>
 							<img

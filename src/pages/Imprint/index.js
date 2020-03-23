@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
+import Header from '../../components/Header';
 
 class Imprint extends Component {
 	constructor(props) {
@@ -10,9 +11,7 @@ class Imprint extends Component {
 	render() {
 		return (
 			<div className='imprint'>
-				<div className='leisteOben'>
-					<div className='eduSchrift'>E-EDU</div>
-				</div>
+				<Header side="Landing"/>
 				<div className='headingFont'>Imprint</div>
 				<div className='fontBox'>
 					hallo ich bin so ein Text
