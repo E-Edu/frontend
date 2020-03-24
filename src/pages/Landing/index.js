@@ -55,10 +55,10 @@ class Landing extends Component {
 						</div>
 						<div id='text-content'>
 							<h2>Education for all</h2>
-							<h4>
-								Keine Ahnung was ich schreiben soll, das ist ein Feature Text. Bitte
-								etwas besseres überlegen
-							</h4>
+							<h4>E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team "The Morpheus Tutorials" erstellt wurde.<br/>
+								E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können</h4>
+						{/*	<h3>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können und danach entscheiden ob sie die aufgaben gut fanden.*/}
+						{/*		Lehrer haben die Möglichkeit die von ihnen erstellte Aufgaben zu kontrollieren und können sehen wie die Schüler ihre Aufgaben abgestimmt haben.</h3>*/}
 						</div>
 					</div>
 				</div>
