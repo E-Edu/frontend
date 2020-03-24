@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import eye from "../../assets/icons/eye.svg";
+import eye_off from "../../assets/icons/eye-off.svg";
 import teacher from "../../assets/icons/teacher.svg";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import axios from 'axios';
@@ -21,13 +22,11 @@ class Register extends React.Component {
             mail: "",
             role: "",
             accepted: false,
-            visible: true,
             clicked: false,
-            valid: false,
             disabled: true,
-            redirectTo: "",
             persons: [],
-            eye: true
+            isPasswordShown: false,
+            isPasswordShown2: false
         };
     }
 
@@ -46,22 +45,6 @@ class Register extends React.Component {
 
 
       // ----------------- AXIOS END -------------------------
-
-
-    testValid = event => {
-        let data = this.state;
-        let valid = true;
-        Object.keys(data).forEach(function(key) {
-            if (!data[key]) {
-                valid = false;
-            }
-            console.log(key, data[key]);
-        });
-        event.preventDefault();
-        console.log(valid);
-        return valid;
-    };
-
     componentDidUpdate() {
         
         if (
@@ -84,12 +67,15 @@ class Register extends React.Component {
         //console.log(this.state);
     };
 
+    // Shows second page of register
     handleClick = () => {
         this.setState({
             clicked: true
         });
+
     };
 
+    // Determines if user accepted the privacy policy
     handlePrivacy = () => {
         this.setState({
             accepted: !this.state.accepted
@@ -99,6 +85,7 @@ class Register extends React.Component {
         }, 2000);
     };
 
+    // Handles the two special Buttons student and teacher
     handleSpecial = e => {
         console.log(this.state.role);
         e.preventDefault();
@@ -115,9 +102,20 @@ class Register extends React.Component {
         this.props.history.push("/");
     };
 */
-    hideEye = () => {};
+    
+    // Toggeles the password field to text - toggles the icon in the jsx (ternary statement below)
+    togglePassword = () => {
+        const {isPasswordShown} = this.state
+        this.setState({ isPasswordShown: !isPasswordShown })
+    };
 
-//------------- POST 
+    // Toggeles the second password field to text - toggles the icon in the jsx (ternary statement below)
+    togglePassword2 = () => {
+        const {isPasswordShown2} = this.state
+        this.setState({ isPasswordShown2: !isPasswordShown2 })
+    };
+
+    // Sends the form - implemented on the submit button, not onSubmit (Form)
     handleSubmit = event => {
         console.log("--- SUBMIT FUNKTION ---")
         event.preventDefault();
@@ -148,11 +146,11 @@ class Register extends React.Component {
     }
 */
     render() {
-        /*
-        if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}></Redirect>;
-        }
-        */
+
+    // constants for the toggle functions (eye and password)
+    const { isPasswordShown } = this.state
+    const { isPasswordShown2 } = this.state
+
         return (
             <div className="register">
                 <div className="box">
@@ -182,16 +180,16 @@ class Register extends React.Component {
                                                     onChange={this.handleInput}
                                                     value={this.state.password}
                                                     name="password"
-                                                    type="password"
+                                                    type={(isPasswordShown) ? "text" : "password"}
                                                     id="passwort"
                                                     placeholder="Passwort"
                                                     className="input-field"
                                                     required
                                                 />
-                                                <span className="eye">
+                                                <span className="eye" onClick={this.togglePassword}>
                                                     <img
                                                         className=""
-                                                        src={eye}
+                                                        src={(isPasswordShown) ? eye_off : eye}
                                                     />
                                                     <i
                                                         id="hide2"
@@ -202,10 +200,10 @@ class Register extends React.Component {
 
                                             <div className="input-box second">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleInput} 
                                                     value={this.state.password2}
                                                     name="password2"
-                                                    type="password"
+                                                    type={(isPasswordShown2) ? "text" : "password"}
                                                     id="passwort"
                                                     placeholder="Passwort wiederholen"
                                                     className="input-field"
@@ -213,9 +211,8 @@ class Register extends React.Component {
                                                 />
                                                 <span className="eye">
                                                     <img
-                                                        id=""
-                                                        className=""
-                                                        src={eye}
+                                                        onClick={this.togglePassword2}
+                                                        src={(isPasswordShown2) ? eye_off : eye}
                                                     />
                                                     <i
                                                         id="hide2"
@@ -250,14 +247,13 @@ class Register extends React.Component {
                                                 className="btn-UI-container"
                                             >
                                                 <button
-                                                    to="/dashboard"
+                                                    to="/"
                                                     onClick={this.handleSubmit}
                                                     type="submit"
                                                     className="btn-UI btn-Base"
                                                     disabled={
                                                         this.state.disabled
-                                                    }
-                                                    
+                                                    }  
                                                 >
                                                     Submit
                                                 </button>
@@ -305,7 +301,7 @@ class Register extends React.Component {
                                                     className="btn-specialButton"
                                                     id="btn-specialButton2"
                                                 >
-                                                    Teacher
+                                                    Teacher       
                                                 </button>
                                             </div>
 
