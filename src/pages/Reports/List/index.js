@@ -6,6 +6,8 @@ import icon_teacher from '../../../assets/icons/teacher.svg';
 import icon_thumbs_up from '../../../assets/icons/thumbs-up.svg';
 import icon_thumbs_down from '../../../assets/icons/thumbs-down.svg';
 import Header from "../../../components/Header";
+import ReportInfo from "../../../components/ReportInfo";
+import Modal from 'react-animated-modal';
 import Sidebar from "../../../components/Sidebar";
 
 class Report extends Component {
@@ -16,6 +18,26 @@ class Report extends Component {
             dislikes: props.dislikes, difficulty: props.difficulty, messages: props.messages, subject: props.subject
         }
     }
+
+    showModal = () => {
+        if (!this.state.showModal) {
+            this.setState({showModal: true})
+        }
+    };
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyPress);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.handleKeyPress);
+    }
+
+    handleKeyPress = (event) => {
+        if (event.keyCode === 27) {
+            this.setState({showModal: false})
+        }
+    };
 
     render() {
         let bgColor = ["rgba(25, 186, 63, 0.3)", "rgba(25, 186, 63, 1)"];
@@ -33,6 +55,13 @@ class Report extends Component {
         }
         return (
             <div className="report-component text-dark">
+                <Modal visible={this.state.showModal}
+                       closemodal={() => {
+                           this.setState({showModal: false});
+                       }}
+                       type="fadeIn">
+                    <ReportInfo/>
+                </Modal>
                 <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
                     <p style={{marginLeft: 20}}>{this.props.subject}</p>
                     <div style={{
@@ -63,7 +92,8 @@ class Report extends Component {
                 </div>
                 <div style={{marginTop: 30, display: "flex", alignItems: "center", justifyContent: "space-between"}}>
                     <div style={{width: 400}}>
-                        <img style={{marginLeft: 20}} src={icon_info} alt="info-icon"/>
+                        <img style={{marginLeft: 20}} src={icon_info} alt="info-icon" className="InfoIcon"
+                             onClick={this.showModal}/>
                     </div>
                     <div style={{display: "flex", alignItems: "center"}}>
                         <img src={icon_mail} alt="mail-icon"/>
