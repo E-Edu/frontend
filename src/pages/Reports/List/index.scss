@@ -9,14 +9,30 @@ h1.ReportText-content {
 }
 
 .report-component{
-  position: relative;
+  display: flex;
   margin-bottom: 20px;
-  left: 50%;
+  flex-direction: column;
   border: 1px solid #707070;
   border-radius: 10px;
   width: 1000px;
   height: 120px;
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
+  justify-content: center;
   font: Regular 20px/23px Arimo;
+
+  .react-modal {
+    top: 0;
+    left: 0;
+  }
+
+  .reportcontainer .InfosRight {
+    padding-top: 1.2rem;
+  }
+
+  .InfoIcon:hover {
+    cursor: pointer;
+  }
+
+  .animate-modal-overlay-enter-done, .react-modal-overlay {
+    background: none;
+  }
 }
