@@ -26,7 +26,7 @@ class App extends Component {
                 <Route path='/credits' exact component={Credits}/>
                 <Route path='/dashboard' exact component={Dashboard}/>
                 {/*Auswahl (Themen)*/}
-                <Route path='/tasklist' exact component={Tasklist}/>
+                <Route path='/task/list' exact component={Tasklist}/>
                 <Route path='/task' exact component={Task}/>
                 <Route path='/task/result' exact component={Result}/>
                 {/*Task add*/}

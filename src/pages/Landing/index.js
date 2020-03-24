@@ -9,15 +9,12 @@ import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
 import Modal from 'react-animated-modal';
 
 class Landing extends Component {
-	constructor(props) {
-		super(props);
-	}
 	state = { showModal: false, redirect: false };
 
 	render() {
 		return (
 			<div className='landing'>
-				<Header side='Landing'></Header>
+				<Header side='Landing'/>
 				<div className='Main'>
 					{(() => {
 						if (this.state.redirect) {
@@ -27,14 +24,14 @@ class Landing extends Component {
 						}
 					})()}
 					<Route
-						exact
-						path={['/login', '/register']}
-						render={() => {
-							if (!this.state.showModal && !this.state.redirect) {
-								this.setState({ showModal: true });
-							}
-						}}
-					></Route>
+	exact
+	path={['/login', '/register']}
+	render={() => {
+		if (!this.state.showModal && !this.state.redirect) {
+			this.setState({showModal: true});
+		}
+	}}
+	/>
 
 					<Modal
 						visible={this.state.showModal}

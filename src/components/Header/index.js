@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import Help_Image from '../../assets/icons/helpcircle.svg';
 import Logout_Image from '../../assets/icons/logout.svg';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		switch (this.props.side) {
 			case 'Landing':

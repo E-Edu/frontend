@@ -6,6 +6,7 @@ import icon_teacher from '../../../assets/icons/teacher.svg';
 import icon_thumbs_up from '../../../assets/icons/thumbs-up.svg';
 import icon_thumbs_down from '../../../assets/icons/thumbs-down.svg';
 import Header from "../../../components/Header";
+import Sidebar from "../../../components/Sidebar";
 
 class Report extends Component {
     constructor(props) {
@@ -83,16 +84,25 @@ class Report extends Component {
 }
 
 class ReportsList extends Component {
+    componentDidMount() {
+        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
+        const left = document.getElementById('Menu').clientWidth;
+        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
+    }
+
     render() {
         return (
             <div>
                 <Header side='Dashboard'/>
-                <h1 className="text-dark ReportText-content">Reports</h1>
-                <div style={{display: "flex", flexDirection: "column"}}>
-                    <Report subject="Mathe | Grundrechnen | Plus" messages="20" teacher="Herr Lehrer Mustermann"
-                            likes="3" dislikes="178" difficulty="Leicht"/>
-                    <Report subject="Englisch | Grammatik | Komma" messages="100" teacher="Herr Lehrer Mustermann"
-                            likes="20" dislikes="1" difficulty="Schwer"/>
+                <Sidebar active="reports/list"/>
+                <div id="main">
+                    <h1 className="text-dark ReportText-content">Reports</h1>
+                    <div style={{display: "flex", flexDirection: "column"}}>
+                        <Report subject="Mathe | Grundrechnen | Plus" messages="20" teacher="Herr Lehrer Mustermann"
+                                likes="3" dislikes="178" difficulty="Leicht"/>
+                        <Report subject="Englisch | Grammatik | Komma" messages="100" teacher="Herr Lehrer Mustermann"
+                                likes="20" dislikes="1" difficulty="Schwer"/>
+                    </div>
                 </div>
             </div>
         );

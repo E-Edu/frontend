@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.scss';
 import UsersIcon from "../../components/icons/user.icon.js";
 import UserIcon from '../../components/icons/users.icon.js';
@@ -31,7 +31,7 @@ class Task extends React.Component {
                         <span>Fragen</span>
                     </div>
                     <div className='Task_element'>
-                        <Award className="ico" stroke="#3A506B" />
+                        <Award className="ico" stroke="#3A506B"/>
                         <span>{this.props.richtige_Fragen}</span>
                     </div>
                     <span style={{
@@ -50,7 +50,6 @@ class Task extends React.Component {
 }
 
 
-
 class Tasklist extends React.Component {
     constructor(props) {
         super(props);
@@ -58,24 +57,26 @@ class Tasklist extends React.Component {
             Search: ""
         }
     }
+
     componentDidMount() {
-        const top = document.getElementById('HeaderNavbarId').clientHeight;
+        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
         const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('TasklistID').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
+        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }
+
     OnChangeSearch = () => {
         this.setState({
             Search: document.getElementById("site-search").value
         });
         //Übergabe an Backend
-    }
+    };
 
     render() {
 
         return <div>
-            <Header side='Dashboard' />
+            <Header side='Dashboard'/>
             <Sidebar active="task/list"/>
-            <div className="Tasklist" id="TasklistID">
+            <div className="Tasklist" id="main">
                 <div className='resultContentHeader'>
                     <div className='resultLeft'>
                         <span className='resultSubject'>
@@ -87,7 +88,7 @@ class Tasklist extends React.Component {
                         <div className='resultCenter'>
 
                             <div className='resultSubject'>
-                                <UsersIcon className="ico" stroke="#3A506B" />
+                                <UsersIcon className="ico" stroke="#3A506B"/>
                                 <span className="points">213</span><span className="points">Punkte</span>
                             </div>
 
@@ -95,7 +96,7 @@ class Tasklist extends React.Component {
                         <div className='resultCenter' id="second">
 
                             <div className='resultSubject'>
-                            <UserIcon className="ico" stroke="#3A506B" />
+                                <UserIcon className="ico" stroke="#3A506B"/>
 
                                 <span className="points">21.323</span><span className="points">Punkte</span>
                             </div>
@@ -106,17 +107,21 @@ class Tasklist extends React.Component {
                         <span className='resultSubject'>
                             <div id='input-search'>
                                 <Search height="30" width="30"/>
-                                <input onChange={this.OnChangeSearch} type="text" id="site-search" name="Search" aria-label="Search"
-                                       placeholder="Suche" />
+                                <input onChange={this.OnChangeSearch} type="text" id="site-search" name="Search"
+                                       aria-label="Search"
+                                       placeholder="Suche"/>
                             </div>
                         </span>
                     </div>
 
                 </div>
                 <div id="Task-Content-List">
-                    <Task name="Aufgabe 1" Anzahl_Fragen="12" richtige_Fragen="10" schwere="Leicht" Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon." />
-                    <Task name="Aufgabe 2" Anzahl_Fragen="20" richtige_Fragen="13" schwere="Mittel" Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon." />
-                    <Task name="Aufgabe 3" Anzahl_Fragen="10" richtige_Fragen="5" schwere="Schwer" Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon." />
+                    <Task name="Aufgabe 1" Anzahl_Fragen="12" richtige_Fragen="10" schwere="Leicht"
+                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    <Task name="Aufgabe 2" Anzahl_Fragen="20" richtige_Fragen="13" schwere="Mittel"
+                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    <Task name="Aufgabe 3" Anzahl_Fragen="10" richtige_Fragen="5" schwere="Schwer"
+                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
                 </div>
             </div>
         </div>;

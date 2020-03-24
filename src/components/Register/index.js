@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import eye from "../../assets/icons/eye.svg";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 class Register extends React.Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class Register extends React.Component {
     testValid = event => {
         let data = this.state;
         let valid = true;
-        Object.keys(data).forEach(function(key) {
+        Object.keys(data).forEach(function (key) {
             if (!data[key]) {
                 valid = false;
             }
@@ -39,11 +39,11 @@ class Register extends React.Component {
     componentDidUpdate() {
         console.log(this.state);
         if (
-            this.state.mail != "" &&
-            this.state.role != "" &&
-            this.state.firstName != "" &&
-            this.state.lastName != "" &&
-            this.state.accepted != false &&
+            this.state.mail !== "" &&
+            this.state.role !== "" &&
+            this.state.firstName !== "" &&
+            this.state.lastName !== "" &&
+            this.state.accepted !== false &&
             this.state.password === this.state.password2 &&
             this.state.disabled
         ) {
@@ -54,7 +54,7 @@ class Register extends React.Component {
     }
 
     handleInput = field => {
-        this.setState({ [field.target.name]: field.target.value });
+        this.setState({[field.target.name]: field.target.value});
         console.log(this.state);
     };
 
@@ -88,21 +88,22 @@ class Register extends React.Component {
         this.props.history.push("/");
     };
 
-    hideEye = () => {};
+    hideEye = () => {
+    };
 
     handleSubmit = () => {
         console.log("handle error vor dem if");
         if (
-            this.state.mail != "" &&
-            this.state.role != "" &&
-            this.state.firstName != "" &&
-            this.state.lastName != "" &&
-            this.state.accepted != false &&
+            this.state.mail !== "" &&
+            this.state.role !== "" &&
+            this.state.firstName !== "" &&
+            this.state.lastName !== "" &&
+            this.state.accepted !== false &&
             this.state.password === this.state.password2 &&
             this.state.disabled
         ) {
             console.log("jetzt redirect bitte");
-            this.setState({ redirect: "/dashboard" });
+            this.setState({redirect: "/dashboard"});
         }
     };
 
@@ -116,7 +117,7 @@ class Register extends React.Component {
 */
     render() {
         if (this.state.redirect) {
-            return <Redirect to={this.state.redirect}></Redirect>;
+            return <Redirect to={this.state.redirect}/>;
         }
         return (
             <div className="register">
@@ -160,6 +161,7 @@ class Register extends React.Component {
                                                     <img
                                                         className=""
                                                         src={eye}
+                                                        alt="eye"
                                                     />
                                                     <i
                                                         id="hide2"
@@ -184,6 +186,7 @@ class Register extends React.Component {
                                                         id=""
                                                         className=""
                                                         src={eye}
+                                                        alt="eye"
                                                     />
                                                     <i
                                                         id="hide2"
