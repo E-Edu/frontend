@@ -3,22 +3,23 @@ import React, { Component } from "react";
 import Landing from "./pages/Landing";
 import Task from "./pages/Task";
 import Dashboard from "./pages/Dashboard";
+import "./css/main.scss";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
 import Result from "./pages/Result";
-//import Profile from "./pages/Profile";
-//import Settings from "./pages/Settings";
-
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Settings from "./pages/Settings";
+import CorrectionReview from "./pages/CorrectionReview";
+import AddTeacher from "./pages/AddTeacher";
 
 class App extends Component {
     render() {
-        //<Route path="/profile" component={Profile}/>
-        //<Route path="/settings" component={Settings}/>
         return (
             <Router>
+                <Sidebar />
                 <Route
                     path={["/login", "/register", "/"]}
                     exact
@@ -30,7 +31,10 @@ class App extends Component {
                 <Route path="/privacy" component={Privacy} />
                 <Route path="/credits" component={Credits} />
                 <Route path="/reports/list" component={ReportsList} />
+                <Route path="/correction/review" component={CorrectionReview} />
                 <Route path="/result" component={Result} />
+                <Route path="/settings" component={Settings} />
+                <Route path="/teacher/add" component={AddTeacher} />
             </Router>
         );
     }
