@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.scss";
 import eye from "../../assets/icons/eye.svg";
+import teacher from "../../assets/icons/teacher.svg";
 import { Link, Redirect, useHistory } from "react-router-dom";
 
 class Register extends React.Component {
@@ -18,6 +19,7 @@ class Register extends React.Component {
             clicked: false,
             valid: false,
             disabled: true,
+            redirectTo: "",
             eye: true
         };
     }
