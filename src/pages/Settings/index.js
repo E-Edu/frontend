@@ -16,6 +16,10 @@ class Settings extends Component {
                             <td width="200px" className="topic">Email</td>
                             <td>test@test.de</td>
                         </tr>
+                        <div>
+                            {/* Datenbankverbindung Schnittstellen Team? */}
+                            <span>Ändern</span>
+                        </div>
                         <tr>
                             <td className="topic">Passwort</td>
                             <td>************</td>
@@ -32,6 +36,10 @@ class Settings extends Component {
                         <tr>
                             <td className="topic">Sprache</td>
                             <td>Deutsch</td>
+                            <div>
+                                {/* Mehr Sprachen */}
+                                <span>Ändern</span>
+                            </div>
                         </tr>
                     </table>
                 </div>
