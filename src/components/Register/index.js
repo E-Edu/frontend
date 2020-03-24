@@ -3,6 +3,12 @@ import "./index.scss";
 import eye from "../../assets/icons/eye.svg";
 import teacher from "../../assets/icons/teacher.svg";
 import { Link, Redirect, useHistory } from "react-router-dom";
+import axios from 'axios';
+
+/*
+. Form triggert nicht durch onSubmit -> aktuell in btn-submit durch die "onClick={this.handleSubmit]" Funktion
+*/
+
 
 class Register extends React.Component {
     constructor(props) {
@@ -20,9 +26,27 @@ class Register extends React.Component {
             valid: false,
             disabled: true,
             redirectTo: "",
+            persons: [],
             eye: true
         };
     }
+
+
+
+    // ----------------- AXIOS -------------------------
+
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
+          .then(res => {
+            const user = res.data;
+            this.setState({ persons: res.data });
+            console.log(res)
+          })
+      }
+
+
+      // ----------------- AXIOS END -------------------------
+
 
     testValid = event => {
         let data = this.state;
@@ -39,7 +63,7 @@ class Register extends React.Component {
     };
 
     componentDidUpdate() {
-        console.log(this.state);
+        
         if (
             this.state.mail != "" &&
             this.state.role != "" &&
@@ -57,7 +81,7 @@ class Register extends React.Component {
 
     handleInput = field => {
         this.setState({ [field.target.name]: field.target.value });
-        console.log(this.state);
+        //console.log(this.state);
     };
 
     handleClick = () => {
@@ -86,26 +110,33 @@ class Register extends React.Component {
         }, 2000);
     };
 
+    /*
     handleRedirect = () => {
         this.props.history.push("/");
     };
-
+*/
     hideEye = () => {};
 
-    handleSubmit = () => {
-        console.log("handle error vor dem if");
-        if (
-            this.state.mail != "" &&
-            this.state.role != "" &&
-            this.state.firstName != "" &&
-            this.state.lastName != "" &&
-            this.state.accepted != false &&
-            this.state.password === this.state.password2 &&
-            this.state.disabled
-        ) {
-            console.log("jetzt redirect bitte");
-            this.setState({ redirect: "/dashboard" });
+//------------- POST 
+    handleSubmit = event => {
+        console.log("--- SUBMIT FUNKTION ---")
+        event.preventDefault();
+
+        const user = {
+            name: this.state.firstName
+        /*
+            first_name: this.state.firstName,
+            last_name: this.state.lastName,
+            email: this.state.mail,
+            role: this.state.role  <--- eventuell einen neuen State<int> machen
+        */
         }
+
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        })
     };
 
     /*
@@ -117,18 +148,17 @@ class Register extends React.Component {
     }
 */
     render() {
+        /*
         if (this.state.redirect) {
             return <Redirect to={this.state.redirect}></Redirect>;
         }
+        */
         return (
             <div className="register">
                 <div className="box">
                     <h1 id="Headline">Register</h1>
                     <form
-                        className=""
-                        action=""
-                        method="post"
-                        onSubmit={this.handleSubmit}
+                        method="post"   
                     >
                         <div className="box-inhalt">
                             {(() => {
@@ -220,11 +250,14 @@ class Register extends React.Component {
                                                 className="btn-UI-container"
                                             >
                                                 <button
+                                                    to="/dashboard"
+                                                    onClick={this.handleSubmit}
+                                                    type="submit"
                                                     className="btn-UI btn-Base"
                                                     disabled={
                                                         this.state.disabled
                                                     }
-                                                    onSubmit={this.handleSubmit}
+                                                    
                                                 >
                                                     Submit
                                                 </button>
