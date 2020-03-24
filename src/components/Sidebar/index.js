@@ -63,17 +63,16 @@ class Sidebar extends Component {
 
     render() {
         const sites = [
-            //TODO edit the addresses of pages
             ['Home', 'home', 'dashboard'],
             ['Aufgaben', 'edit', 'task'],
             ['Neue Aufgabe', 'plus-circle', 'dashboard'],
-            ['Meine Aufgaben', 'list', 'dashboard'],
+            ['Meine Aufgaben', 'list', 'task/list'],
             ['Korrektur', 'check', 'correction/review'],
             ['Reports', 'alert-circle', 'reports/list'],
             ['Lehrer hinzufügen', 'teacher', 'teacher/add'],
         ];
         let sitesHtml = sites.map(site => {
-            return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={this.state.activeName === site[1]}/>;
+            return <MenuElement name={site[0]} file={site[1]} url={site[2]} active={this.state.activeName === site[2]} key={site[0]}/>;
         });
         return (
             <div id='Menu'>
@@ -82,7 +81,7 @@ class Sidebar extends Component {
                 </div>
                 <div className="bottomIcons">
                     <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'}/>
-                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'user'}/>
+                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'profile'}/>
                 </div>
             </div>
         );

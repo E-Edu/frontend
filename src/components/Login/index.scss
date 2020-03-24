@@ -1,6 +1,6 @@
 .loginComponent {
-	/*
-*white bachgroundcanvas
+/*
+* white bachgroundcanvas
 */
 	.box {
 		width: 50vw;
@@ -25,8 +25,8 @@
 			outline: none;
 			border: 1px solid #0b132b;
 			width: 90%;
-
 			margin: 10px auto;
+
 			/*sets size of the actual inputfields in the input-boxes*/
 			input {
 				width: 100%;
@@ -43,9 +43,9 @@
 			border: 1px solid #0b132b;
 			margin: 10px auto;
 			width: 70%;
-
 			background: none;
 		}
+		
 		/*sets position of the headline "LOGIN"*/
 		#Headline {
 			padding-top: -50%;

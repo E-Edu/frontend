@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './index.scss';
-import down from '../../Assets/icons/thumbs-down.svg';
-import up from '../../Assets/icons/thumbs-up.svg';
-import mail from '../../Assets/icons/mail.svg';
-import teacher from '../../Assets/icons/teacher.svg';
+import down from '../../assets/icons/thumbs-down.svg';
+import up from '../../assets/icons/thumbs-up.svg';
+import mail from '../../assets/icons/mail.svg';
+import teacher from '../../assets/icons/teacher.svg';
 /*
-    -subject 
+    -subject
     -theme
     -themeart
     -Dislikes
@@ -19,21 +19,21 @@ class ReportInfo extends Component{
     constructor(){
         super();
         this.state ={
-            subject:"Mathe",
-            theme:"Grundrechnen",
-            themeart:"Plus",
-            dislikes:"178",
-            likes:"3",
-            teacher:"Herr Lehrer Mustermann",
-            messages:"20",
-            TaskName:"Äpfel und Birnen",
-            TaskText:"Peter hat 3 Äpfel und 4 Birnen. Er gibt 2 Äpfel und 1 Birne ab.  Wieviele Äpfel hat Peter noch?",
+            subject: "Mathe",
+            theme: "Grundrechnen",
+            themeart: "Plus",
+            dislikes: "178",
+            likes: "3",
+            teacher: "Herr Lehrer Mustermann",
+            messages: "20",
+            TaskName: "Äpfel und Birnen",
+            TaskText: "Peter hat 3 Äpfel und 4 Birnen. Er gibt 2 Äpfel und 1 Birne ab.  Wie viele Äpfel hat Peter noch?",
         };
     }
     handleClick = () => {
         console.log("Hi")
     }
-    
+
     render(){
         return(
         <div className="reportcontainer">
@@ -58,8 +58,8 @@ class ReportInfo extends Component{
                     <button onClick={this.handleClick} className="half">Behalten</button>
                     <button className="half">Löschen</button>
                 </div>
-                
-               
+
+
             </div>
             <div id="doneDiv">
                 <button id="done" className="button">Fertig</button>
