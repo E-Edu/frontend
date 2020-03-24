@@ -9,11 +9,11 @@ import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
 import './index.scss';
 import '../../css/main.css';
-import Data from './Profile_Config.json';
+import Data from '../../lib/Subjekt_Config.json';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 
-class ProfileSubject extends React.Component {
+class Profile_Subject extends React.Component {
 
     render() {
         const subject = this.props.Subject;
@@ -77,7 +77,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
+        const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }

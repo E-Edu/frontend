@@ -1,21 +1,16 @@
-.dashboard {
-	.main {
-		display: flex;
-		flex-flow: row;
-	}
-	.sidebar {
-		height: 100vw;
-		width: 100px;
-		left: 0;
-		top: 0;
-		background-color: #0b132b;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-	.Menu {
-		padding: 0 1rem;
-		transition: all 0.2s;
-		margin: 1rem 0;
-	}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  .Subjekt {
+    width: 435px;
+    height: 200px;
+    border: 1px solid #707070;
+    border-radius: 13px;
+  }
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+  }
 }
