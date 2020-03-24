@@ -3,11 +3,6 @@ import './index.scss';
 import Header from '../../components/Header';
 
 class Privacy extends Component {
-	constructor(props) {
-		super(props);
-	}
-	state = {};
-
 	render() {
 		return (
 			<div className='privacy'>

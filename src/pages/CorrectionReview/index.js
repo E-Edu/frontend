@@ -1,49 +1,42 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './index.scss';
-import { useParams } from 'react-router-dom';
-import Thumbs_Up from '../../assets/icons/thumbs-up.svg';
-import Thumbs_Down from '../../assets/icons/thumbs-down.svg';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes';
 
 
-
 class CorrectionReview extends Component {
-    constructor(props) {
-        super(props);
+    componentDidMount() {
+        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
+        const left = document.getElementById('Menu').clientWidth;
+        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }
-
 
     render() {
         return (
-            
-                <div className='correctionContent'>
-                    <Header side='Dashboard' />
-                    <Sidebar side='Dashboard' />
-                   
+            <div>
+                <Header side='Dashboard'/>
+                <Sidebar active="correction/review"/>
+                <div className='correctionContent' id="main">
                     <div className='correctionHeader'>
                         <h1>Korrektur</h1>
                         <button className='correctionMode'>Korrekturmodus</button>
                     </div>
                     <div className='correctionQuestionBox'>
-                    
+
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
-                    
+
 
                     </div>
                 </div>
-                
-            
+            </div>
         );
-       
-
     }
 }
+
 export default CorrectionReview;
