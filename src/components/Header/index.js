@@ -33,12 +33,12 @@ class Header extends Component {
 							</Link>
 						</div>
 						<div id='Button_Box_Dashboard'>
-							<button className='BTN_Dash' id='Button_Info'>
+							<Link to="/imprint" className='BTN_Dash' id='Button_Info'>
 								<img src={Help_Image} alt='Help' />
-							</button>
-							<button className='BTN_Dash' id='Button_Logout'>
+							</Link>
+							<Link className='BTN_Dash' id='Button_Logout'>
 								<img src={Logout_Image} alt='Logout' />
-							</button>
+							</Link>
 						</div>
 					</div>
 				);
