@@ -2,60 +2,60 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap%22');
 
 body {
-	// Original Font Size for Every Site [Timy]
-	font-size: 15px !important;
-	// Official Primary Font [Timy]
-	font-family: 'Hind Siliguri', sans-serif !important;
-	// Use Complete Space of Browser [Timy]
-	width: 100% !important;
-	height: 100% !important;
+  // Original Font Size for Every Site [Timy]
+  font-size: 15px !important;
+  // Official Primary Font [Timy]
+  font-family: 'Hind Siliguri', sans-serif !important;
+  // Use Complete Space of Browser [Timy]
+  width: 100% !important;
+  height: 100% !important;
 
-	// Input Change
-	input {
-		border: 0.13333334rem solid #1c2541;
-		border-radius: 0.6666667rem;
-	}
+  // Input Change
+  input {
+    border: 0.13333334rem solid #1c2541;
+    border-radius: 0.6666667rem;
+  }
 }
 
 // Official Secondary Font [Timy]
 .font-Arimo {
-	font-family: "Arimo", sans-serif !important;
+  font-family: "Arimo", sans-serif !important;
 }
 
 // Official Primary Colour [Timy]
 .text-greenBlue {
-	color: #5bc0be !important;
+  color: #5bc0be !important;
 }
 
 // Official Secondary Colour [Timy]
 .text-dark {
-	color: #0b132b !important;
+  color: #0b132b !important;
 }
 
 // Change Font for Code Blocks => Informatik [Timy]
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
 }
 
 // original Subject header for Pages [Timy]
-.resultContentHeader{
-	// Display Mode [Timy]
-    display:flex;
-	width:100%;
-	// Flex Stuff [Timy]
-    flex-direction: row;
-    justify-content: space-between;
-	align-items:baseline;
-	// Left Result [Timy]
-    .resultLeft{
-        margin-left:7.266667rem;
-		// The Subject itself [Timy]
-        .resultSubject{
-            margin-right:2.6666667rem;
-            margin-top:2.2666667rem;
-            font-weight: bolder;
-            color: #0B132B;
-            font-size: 4.0rem;
-        }
+.resultContentHeader {
+  // Display Mode [Timy]
+  display: flex;
+  width: 100%;
+  // Flex Stuff [Timy]
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  // Left Result [Timy]
+  .resultLeft {
+    margin-left: 7.266667rem;
+    // The Subject itself [Timy]
+    .resultSubject {
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
+      font-weight: bolder;
+      color: #0B132B;
+      font-size: 4.0rem;
     }
+  }
 }
