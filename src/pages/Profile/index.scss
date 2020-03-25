@@ -5,25 +5,25 @@
   justify-content: space-between;
   align-items: baseline;
   .resultLeft {
-    margin-left: 109px;
+    margin-left: 7.266667rem;
 
     .resultSubject {
-      margin-right: 40px;
-      margin-top: 34px;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
       font-weight: bolder;
       color: #0b132b;
-      font-size: 60px;
+      font-size: 4.0rem;
     }
   }
 }
 
 .profile_subjekt {
-  height: 110px;
-  width: 435px;
+  height: 7.3333335rem;
+  width: 29.0rem;
   background-color: transparent;
-  border: 1px solid #707070;
-  border-radius: 11px;
-  margin: 5px;
+  border: 0.06666667rem solid #707070;
+  border-radius: 10.06666667rem;
+  margin: 0.33333334rem;
 
   .profileTop {
     display: flex;
@@ -37,19 +37,19 @@
   }
 }
 .profile_certifikate {
-  height: 84px;
-  width: 460px;
-  border: 1px solid #707070;
-  border-radius: 8px;
-  margin: 5px;
+  height: 5.6rem;
+  width: 44.0rem;
+  border: 0.06666667rem solid #707070;
+  border-radius: 0.53333336rem;
+  margin: 0.33333334rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0;
 
   #downloadimage {
-    width: 27px;
-    height: 27px;
+    width: 1.8rem;
+    height: 1.8rem;
     margin-left: 3rem;
   }
   #downloadimage:hover {
@@ -64,7 +64,7 @@
       flex-direction: row;
       color: #5bc0be;
       font-weight: bold;
-      font-size: 26px;
+      font-size: 1.7333333rem;
       padding: 0;
       margin: 0;
     }
@@ -72,7 +72,7 @@
       display: flex;
       flex-direction: row;
       color: #0b132b;
-      font-size: 16px;
+      font-size: 1.0666667rem;
       padding: 0;
       margin: 0;
     }
@@ -85,15 +85,15 @@
 
   p {
     margin: 0;
-    margin-left: 40px;
-    margin-top: 5px;
+    margin-left: 2.6666667rem;
+    margin-top: 0.33333334rem;
   }
   #badgetitle {
-    margin-left: 5px;
+    margin-left: 0.33333334rem;
   }
 
   #badgeimage {
-    margin-left: 10px;
+    margin-left: 0.6666667rem;
   }
 }
 
@@ -108,7 +108,7 @@
   justify-content: center;
   .profile_h2 {
     color: #1c2541;
-    font-size: 30px;
+    font-size: 2.0rem;
     font-weight: 300;
   }
   .profile_span_padding_l {
@@ -132,7 +132,7 @@
     .img {
       stroke: #3a506b;
       margin-right: 0.2rem;
-      max-width: 27px;
+      max-width: 1.8rem;
     }
   }
 
@@ -140,7 +140,7 @@
     margin-bottom: 0.2%;
     font-weight: 400;
     text-align: left;
-    font-size: 16px;
+    font-size: 1.0666667rem;
     letter-spacing: 0;
     color: #3a506b;
     opacity: 1;
@@ -153,7 +153,7 @@
   #name {
     margin-left: 1.5rem;
     text-align: center;
-    font-size: 26px;
+    font-size: 1.7333333rem;
     letter-spacing: 0;
     color: #1c2541;
     opacity: 1;
@@ -164,18 +164,18 @@
       text-align: center;
       border: none;
       background: transparent;
-      font-size: 20px;
+      font-size: 1.3333334rem;
       width: 8rem;
     }
     input:enabled{
       text-align: center;
       
       background: transparent;
-      font-size: 20px;
+      font-size: 1.3333334rem;
       width: 8rem;
     }
     img {
-      margin-left: 15px;
+      margin-left: 10.33333334rem;
     }
     img:hover{
       cursor: pointer;
@@ -194,18 +194,18 @@
   text-align: center;
   #levelbar_back {
     position: relative;
-    height: 50px;
-    width: 490px;
+    height: 3.3333333rem;
+    width: 32.666668rem;
     background-color: transparent;
-    border: 1px solid #707070;
-    border-radius: 200px;
+    border: 0.06666667rem solid #707070;
+    border-radius: 13.333333rem;
 
     #levelbar_front {
       position: absolute;
       left: 0;
       top: 0;
       background-color: #5bc0be;
-      border-radius: 200px;
+      border-radius: 13.333333rem;
       height: 100%;
       z-index: -2;
       width: 17.79%;
@@ -218,7 +218,7 @@
     }
 
     #level_Rang {
-      font: Bold 26px/31px Arimo;
+      font: Bold 1.7333333rem/30.06666667rem Arimo;
       color: #5bc0be;
     }
   }
@@ -228,13 +228,13 @@
   align-items: center;
   margin-top: 1rem;
   img {
-    width: 27px;
-    height: 27px;
+    width: 1.8rem;
+    height: 1.8rem;
     margin-right: 0.8rem;
   }
   span {
     text-align: left;
-    font: Bold 26px/31px Arimo;
+    font: Bold 1.7333333rem/30.06666667rem Arimo;
     letter-spacing: 0;
     color: #5bc0be;
     text-transform: uppercase;
@@ -243,20 +243,20 @@
 }
 
 .profile_subjekt_img {
-  border: 1px solid #5bc0be;
-  border-radius: 100px;
+  border: 0.06666667rem solid #5bc0be;
+  border-radius: 6.6666665rem;
 
   margin-left: 1rem;
   margin-top: 0.5rem;
   margin-right: 1.5rem;
-  width: 62px;
-  height: 62px;
+  width: 4.133333rem;
+  height: 4.133333rem;
 }
 
 #logo {
-  width: 30px;
-  height: 30px;
-  padding: 16px;
+  width: 2.0rem;
+  height: 2.0rem;
+  padding: 1.0666667rem;
 }
 
 #favorite_subject {
@@ -268,7 +268,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap-reverse;
-    padding: 5px;
+    padding: 0.33333334rem;
   }
 }
 #profile_certificate_box {
@@ -282,7 +282,7 @@
 }
 #title {
   text-align: left;
-  font-size: 36px;
+  font-size: 2.4rem;
   letter-spacing: 0;
   color: #0b132b;
   opacity: 1;
@@ -301,8 +301,8 @@
 }
 
 #pb {
-  max-width: 110px;
-  max-height: 110px;
-  border: 2px solid #5bc0be;
-  border-radius: 100px;
+  max-width: 7.3333335rem;
+  max-height: 7.3333335rem;
+  border: 0.13333334rem solid #5bc0be;
+  border-radius: 6.6666665rem;
 }

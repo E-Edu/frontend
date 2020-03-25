@@ -11,7 +11,7 @@ import File from "../../components/icons/file-text.icon.js";
 class Subjekt extends React.Component {
     render() {
         const subject = this.props.Subject;
-        const border = "11px solid " + Data["Subject_color"][subject];
+        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
         return (
             <div className='Subjekt' style={{ borderLeft: border }}>
                 <div className="image">

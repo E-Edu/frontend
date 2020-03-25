@@ -38,7 +38,7 @@ class Task extends React.Component {
                         display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
                         right: 0, justifyContent: "flex-end", backgroundColor: bgColor,
                         borderWidth: 1, borderStyle: "solid", borderColor: bgColor[1], borderRadius: 10,
-                        padding: "0px 5px"
+                        padding: "0.0rem 0.33333334rem"
                     }}>{this.props.schwere}</span>
                 </div>
             </div>

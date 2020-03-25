@@ -1,14 +1,14 @@
 .resultContentHeader{
     width:100%;
     .resultLeft{
-        margin-left:190px;
+        margin-left:12.666667rem;
 
         .resultSubject{
-            margin-right:40px;
-            margin-top:34px;
+            margin-right:2.6666667rem;
+            margin-top:2.2666667rem;
             font-weight: bolder;
             color: #0B132B;
-            font-size: 60px;
+            font-size: 4.0rem;
         }
     }
 
@@ -20,9 +20,9 @@
         .resultCenter{
 
             .resultSubject{
-                margin-right:40px;
-                margin-top:34px;
-                font-size: 20px;
+                margin-right:2.6666667rem;
+                margin-top:2.2666667rem;
+                font-size: 1.3333334rem;
                 display:flex;
 
                 .icon{
@@ -36,34 +36,34 @@
         }
     }
         .resultRight{
-            margin-right:109px;
+            margin-right:7.266667rem;
             .resultSubject{
-                margin-right:40px;
-                margin-top:34px;
+                margin-right:2.6666667rem;
+                margin-top:2.2666667rem;
                 font-weight: bolder;
                 color: #0B132B;
-                font-size: 60px;
+                font-size: 4.0rem;
                 #input-search {
-                    width: 391px;
-                    height: 43px;
+                    width: 26.066668rem;
+                    height: 2.8666666rem;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    border: 1px solid #3A506B;
-                    border-radius: 8px;
+                    border: 0.06666667rem solid #3A506B;
+                    border-radius: 0.53333336rem;
                     div{
                         padding: 0 0.5rem;
-                        padding-bottom: 5px;
+                        padding-bottom: 0.33333334rem;
                     }
                 }
                 input{
-                    width: 391px;
-                    height: 43px;
+                    width: 26.066668rem;
+                    height: 2.8666666rem;
                     background: transparent;
                     opacity: 1;
                     border: none;
                     text-align: left;
-                    font-size: 20px;
+                    font-size: 1.3333334rem;
                     letter-spacing: 0;
                     color: #3A506B;
                     opacity: 1;
@@ -84,20 +84,20 @@
     position: relative;
     .teacher_information{
         img{
-            max-width: 110px;
-            max-height: 110px;
-            border: 2px solid #5BC0BE;
-            border-radius: 100px;
+            max-width: 7.3333335rem;
+            max-height: 7.3333335rem;
+            border: 0.13333334rem solid #5BC0BE;
+            border-radius: 6.6666665rem;
         }
     }
     .Task{
         display: flex;
         flex-direction: column;
-        margin:10px;
-        height: 120px;
-        width: 975px;
-        border: 1px solid #707070;
-        border-radius: 8px;
+        margin:0.6666667rem;
+        height: 11.3333334rem;
+        width: 970.33333334rem;
+        border: 0.06666667rem solid #707070;
+        border-radius: 0.53333336rem;
         .Task_Head{
             margin: 0 1rem;
             margin-top: 1rem;
