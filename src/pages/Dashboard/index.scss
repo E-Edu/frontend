@@ -6,23 +6,23 @@
   align-items: center;
   .Subjekt {
     margin: 1.5rem;
-    width: 435px;
-    height: 200px;
-    border: 1px solid #707070;
-    border-radius: 13px;
+    width: 29.0rem;
+    height: 13.333333rem;
+    border: 0.06666667rem solid #707070;
+    border-radius: 0.8666667rem;
     display: flex;
     .image{
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 50px;
-      border: 1px solid #5BC0BE;
-      width: 58px;
-      height: 58px;
+      border-radius: 3.3333333rem;
+      border: 0.06666667rem solid #5BC0BE;
+      width: 3.8666666rem;
+      height: 3.8666666rem;
       margin: 0.7rem 0rem 0rem 1.2rem;
       .icon{
-        width:40px; 
-        height: 40px;
+        width:2.6666667rem; 
+        height: 2.6666667rem;
       }
     }
 
@@ -36,7 +36,7 @@
       justify-content: flex-start;
       .subject_name{
         text-align: left;
-        font-size:36px; 
+        font-size:2.4rem; 
         font-family: Hind Siliguri;
         margin: 0;
         letter-spacing: 0;
@@ -44,7 +44,7 @@
       }
       .under_name{
         text-align: left;
-        font-size: 12px ;
+        font-size: 0.8rem ;
         letter-spacing: 0;
         color: #3A506B;
         opacity: 1;
@@ -54,11 +54,11 @@
       .points{
         display: flex;
         align-items: center;
-        margin-left: -2px;
+        margin-left: -0.13333334rem;
         span{
           white-space:nowrap;
           font-weight: 500;
-          font-size: 16px;
+          font-size: 1.0666667rem;
         }
       }
 
@@ -69,13 +69,13 @@
         align-items: center;
         flex-wrap: nowrap;
         span{
-          margin-left: 12px;
+          margin-left: 0.8rem;
           white-space:nowrap;
           font-weight: 500;
         }
         #calender{
-          width: 27px;
-          height: 27px;
+          width: 1.8rem;
+          height: 1.8rem;
         }
       }
 
@@ -94,23 +94,23 @@
 }
 
 div.Subjekts_content > div > div.box-content > div.weekend_task.flex-row > div{
-  width: 27px;
-  height: 27px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > div > svg{
-  width: 32px;
-  height: 28px;
+  width: 2.1333334rem;
+  height: 1.8666667rem;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > div > svg{
-  width: 27px;
-  height: 27px;
+  width: 1.8rem;
+  height: 1.8rem;
   margin-left: 3.25rem;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > span.user_Points{
-  margin-right: 4px;
+  margin-right: 0.26666668rem;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > span.community_Points{
-  margin-right: 4px;
-  margin-left: 7px;
+  margin-right: 0.26666668rem;
+  margin-left: 0.46666667rem;
 }

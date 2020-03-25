@@ -17,7 +17,7 @@ class Profile_Subject extends React.Component {
 
     render() {
         const subject = this.props.Subject;
-        const border = "11px solid " + Data["Subject_color"][subject];
+        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
         return (
             <div className='profile_subjekt' style={{borderLeft: border}}>
                 <div className='profileTop'>

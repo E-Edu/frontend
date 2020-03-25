@@ -22,7 +22,7 @@ class Settings extends Component {
                     <div className="settingsContent">
                         <table>
                             <tr>
-                                <td width="200px" className="topic">Email</td>
+                                <td width="13.333333rem" className="topic">Email</td>
                                 <td>test@test.de</td>
                             </tr>
                             <div>
