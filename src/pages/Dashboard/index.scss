@@ -1,21 +1,116 @@
-.dashboard {
-	.main {
-		display: flex;
-		flex-flow: row;
-	}
-	.sidebar {
-		height: 100vw;
-		width: 100px;
-		left: 0;
-		top: 0;
-		background-color: #0b132b;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-	.Menu {
-		padding: 0 1rem;
-		transition: all 0.2s;
-		margin: 1rem 0;
-	}
+.Subjekts_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .Subjekt {
+    margin: 1.5rem;
+    width: 435px;
+    height: 200px;
+    border: 1px solid #707070;
+    border-radius: 13px;
+    display: flex;
+    .image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      border: 1px solid #5BC0BE;
+      width: 58px;
+      height: 58px;
+      margin: 0.7rem 0rem 0rem 1.2rem;
+      .icon{
+        width:40px; 
+        height: 40px;
+      }
+    }
+
+    .box-content{
+      width:50%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5rem;
+      margin-top: 0.7rem;
+      justify-content: flex-start;
+      .subject_name{
+        text-align: left;
+        font-size:36px; 
+        font-family: Hind Siliguri;
+        margin: 0;
+        letter-spacing: 0;
+        color: #0B132B;
+      }
+      .under_name{
+        text-align: left;
+        font-size: 12px ;
+        letter-spacing: 0;
+        color: #3A506B;
+        opacity: 1;
+        margin-top: -0.5rem;
+      }
+
+      .points{
+        display: flex;
+        align-items: center;
+        margin-left: -2px;
+        span{
+          white-space:nowrap;
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+
+      .weekend_task{
+        margin-top: 1.25rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        span{
+          margin-left: 12px;
+          white-space:nowrap;
+          font-weight: 500;
+        }
+        #calender{
+          width: 27px;
+          height: 27px;
+        }
+      }
+
+
+      .points{
+        display: flex;
+      }
+    }
+
+  }
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+div.Subjekts_content > div > div.box-content > div.weekend_task.flex-row > div{
+  width: 27px;
+  height: 27px;
+}
+
+div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > div > svg{
+  width: 32px;
+  height: 28px;
+}
+div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > div > svg{
+  width: 27px;
+  height: 27px;
+  margin-left: 3.25rem;
+}
+div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > span.user_Points{
+  margin-right: 4px;
+}
+div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > span.community_Points{
+  margin-right: 4px;
+  margin-left: 7px;
 }
