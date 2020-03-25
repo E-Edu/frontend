@@ -65,16 +65,16 @@ class Sidebar extends Component {
     }
 
     render() {
-        const permission = 2; // TODO get this from user-ms
+        const permission = 3; // TODO get this from user-ms
         const sites = [
             //Name, icon name, route, permission, spacer before it
             ['Home', 'home', 'dashboard', 0],
             ['Aufgaben', 'edit', 'task', 0],
-            ['Neue Aufgabe', 'plus-circle', 'dashboard', 1, true],
-            ['Meine Aufgaben', 'list', 'task/list', 1],
+            ['Neue Aufgabe', 'plus-circle', 'dashboard', 2, true],
+            ['Meine Aufgaben', 'list', 'task/list', 2],
             ['Korrektur', 'check', 'correction/review', 1],
-            ['Reports', 'alert-circle', 'reports/list', 2, true],
-            ['Lehrer hinzufügen', 'teacher', 'teacher/add', 2],
+            ['Reports', 'alert-circle', 'reports/list', 3, true],
+            ['Lehrer hinzufügen', 'teacher', 'teacher/add', 3],
         ];
         let sitesHtml = sites.map(site => {
             if (permission >= site[3]) {
