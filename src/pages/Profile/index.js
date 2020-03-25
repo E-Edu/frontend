@@ -176,10 +176,10 @@ class Profile extends React.Component {
                             <div>
                                 <h2 className='font-Arimo profile_h2'>Favorisierte Fächer</h2>
                                 <div id="profile_favorite_box">
-                                    <ProfileSubject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
-                                    <ProfileSubject Subject="Mathe"
+                                    <Profile_Subject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
+                                    <Profile_Subject Subject="Mathe"
                                                     Underline="2 x 3 macht 4 Widdewiddewitt und 3 macht 9"/>
-                                    <ProfileSubject Subject="Informatik" Underline="0110001101000101110111"/>
+                                    <Profile_Subject Subject="Informatik" Underline="0110001101000101110111"/>
                                 </div>
                             </div>
                         </div>
