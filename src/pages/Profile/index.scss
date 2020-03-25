@@ -1,3 +1,4 @@
+
 .resultContentHeader {
   display: flex;
   width: 100%;
@@ -19,11 +20,11 @@
 
 .profile_subjekt {
   height: 110px;
-  width: 435px;
+  width: 400px;
   background-color: transparent;
   border: 1px solid #707070;
   border-radius: 11px;
-  margin: 5px;
+  margin: 5px 15px;
 
   .profileTop {
     display: flex;
@@ -37,11 +38,12 @@
   }
 }
 .profile_certifikate {
+  flex-wrap: nowrap;
   height: 84px;
-  width: 460px;
+  width: 412px;
   border: 1px solid #707070;
   border-radius: 8px;
-  margin: 5px;
+  margin: 10px 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,7 +52,7 @@
   #downloadimage {
     width: 27px;
     height: 27px;
-    margin-left: 3rem;
+    margin-left: 2.5rem;
   }
   #downloadimage:hover {
     cursor: pointer;
@@ -90,6 +92,7 @@
   }
   #badgetitle {
     margin-left: 5px;
+    white-space:nowrap;
   }
 
   #badgeimage {
@@ -129,9 +132,10 @@
     flex-direction: column;
     padding-top: 0.5rem;
     white-space: nowrap;
+ 
     .img {
       stroke: #3a506b;
-      margin-right: 0.2rem;
+      margin-right: 0.4rem;
       max-width: 27px;
     }
   }
@@ -151,7 +155,7 @@
   }
 
   #name {
-    margin-left: 1.5rem;
+    margin-left: 2.3rem;
     text-align: center;
     font-size: 26px;
     letter-spacing: 0;
@@ -305,4 +309,14 @@
   max-height: 110px;
   border: 2px solid #5bc0be;
   border-radius: 100px;
+}
+#user_icon, #trending_icon, #calender_icon{
+  color: #3A506B;
+
+}
+#trending_icon{
+  height: 30px;
+}
+#user_icon, #calender_icon{
+  height: 24px;
 }
