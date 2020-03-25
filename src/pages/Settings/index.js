@@ -17,38 +17,30 @@ class Settings extends Component {
                 <Header side='Dashboard'/>
                 <Sidebar active="settings"/>
                 <div className="settings" id="main">
-                    <Header side='Dashboard'/>
-                    <h1 className="text-dark" style={{position: "relative", top: 100, left: 150}}>Einstellungen</h1>
+                    <h1 className="text-dark">Einstellungen</h1>
                     <div className="settingsContent">
                         <table>
                             <tr>
                                 <td width="200px" className="topic">Email</td>
-                                <td>test@test.de</td>
-                            </tr>
-                            <div>
+                                <td width="120px">test@test.de</td>
+                                <td>Ändern</td>
                                 {/* Datenbankverbindung Schnittstellen Team? */}
-                                <span>Ändern</span>
-                            </div>
+                            </tr>
                             <tr>
                                 <td className="topic">Passwort</td>
                                 <td>************</td>
                                 <td>
-                                    <div>
-                                        {/* TODO edit icon
+                                    {/* TODO edit icon
                                         import EditIcon from "../../assets/icons/edit.icon;
                                         <EditIcon stroke={"#3A506B"} width={20} height={20}/>
                                         */}
-                                        <span>Ändern</span>
-                                    </div>
+                                    Ändern
                                 </td>
                             </tr>
                             <tr>
                                 <td className="topic">Sprache</td>
                                 <td>Deutsch</td>
-                                <div>
-                                    {/* Mehr Sprachen */}
-                                    <span>Ändern</span>
-                                </div>
+                                <td>Ändern</td>
                             </tr>
                         </table>
                     </div>
