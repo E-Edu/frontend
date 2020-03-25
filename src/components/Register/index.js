@@ -60,7 +60,7 @@ class Register extends React.Component {
     // Stores text input into corresponding states
     handleInput = field => {
         this.setState({ [field.target.name]: field.target.value });
-        //console.log(this.state);
+        console.log(this.state.mail);
     };
 
     // Shows second page of register
@@ -118,6 +118,7 @@ class Register extends React.Component {
         const user = {
             name: this.state.firstName
             /*
+			<<< HIER WENN SCHNITTSTELLE DA >>>
             first_name: this.state.firstName,
             last_name: this.state.lastName,
             email: this.state.mail,
@@ -133,14 +134,6 @@ class Register extends React.Component {
             });
     };
 
-    /*
-    handleSpecial(e) {
-        this.setState({
-            role: e.target.value
-        });
-        console.log(e.target.value);
-    }
-*/
     render() {
         // constants for the toggle functions (eye and password)
         const { isPasswordShown } = this.state;
@@ -159,7 +152,7 @@ class Register extends React.Component {
                                             <div className="input-box second">
                                                 <input
                                                     onChange={this.handleInput}
-                                                    type="text"
+                                                    type="email"
                                                     name="mail"
                                                     value={this.state.mail}
                                                     placeholder="Email"
