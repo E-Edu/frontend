@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./index.scss";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
-import Data from "../../lib/Subjekt_Config";
+import Data from "../../lib/Color_Config";
 import File from "../../components/icons/file-text.icon.js";
 
 class Subjekt extends React.Component {
