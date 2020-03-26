@@ -15,7 +15,7 @@ class Subjekt extends React.Component {
         return (
             <div className='Subjekt' style={{ borderLeft: border }}>
                 <div className="image">
-                    <File strokewidth="1.5" className="icon" width="40" height="40" stroke="#000000" />
+                    <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
                 </div>
                 <div className="box-content">
                     <h3 className="subject_name">{this.props.Subject}</h3>
@@ -46,7 +46,7 @@ class dashboard extends React.Component {
     componentDidMount() {
         const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('dashboard').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
+        document.getElementById('dashboard').setAttribute("style", `margin-top:${top}px;margin-left:${left} - 3px);`);
     }
 
     render() {
