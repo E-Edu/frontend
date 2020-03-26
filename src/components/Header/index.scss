@@ -30,21 +30,22 @@ $Second: #5bc0be;
 		color: $Second;
 	}
 	.BTN_Log {
-		height: 50px;
+		max-height: 30px;
 		width: 159px;
 		border: 2px solid $Second;
 		border-radius: 10px;
-		font: 26px/42px Hind Siliguri;
+		font: 22px/42px Hind Siliguri;
 		font-weight: 400;
 		background-color: Transparent;
 		text-decoration: none;
-		padding: 5px 10px;
+		padding: 2.5px 26.21px;
 	}
 	#Button_Login {
 		color: #0b132b;
 		background-color: $Second;
 		margin-right: 56px;
 		transition: all 0.5s;
+		padding: 2.5px 40px;
 	}
 	#Button_Register {
 		color: $Second;
