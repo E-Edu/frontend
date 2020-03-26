@@ -1,13 +1,16 @@
 .Subjekts_content {
+  margin-top: 8rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-left: 1.5rem;
   .Subjekt {
-    margin: 1.5rem;
-    width: 435px;
-    height: 200px;
+    margin: 1.2rem 2rem 1.2rem 3rem;
+    
+    width: 340px;
+    height: 160px;
     border: 1px solid #707070;
     border-radius: 13px;
     display: flex;
@@ -17,12 +20,12 @@
       align-items: center;
       border-radius: 50px;
       border: 1px solid #5BC0BE;
-      width: 58px;
-      height: 58px;
-      margin: 0.7rem 0rem 0rem 1.2rem;
+      width: 45px;
+      height: 45px;
+      margin: 0.5rem 0rem 0rem 0.8rem;
       .icon{
-        width:40px; 
-        height: 40px;
+        width:30px; 
+        height: 30px;
       }
     }
 
@@ -31,12 +34,12 @@
       height: 80%;
       display: flex;
       flex-direction: column;
-      margin-left: 1.5rem;
-      margin-top: 0.7rem;
+      margin-left: 0.8rem;
+      margin-top: 0.65rem;
       justify-content: flex-start;
       .subject_name{
         text-align: left;
-        font-size:36px; 
+        font-size:28px; 
         font-family: Hind Siliguri;
         margin: 0;
         letter-spacing: 0;
@@ -44,7 +47,7 @@
       }
       .under_name{
         text-align: left;
-        font-size: 12px ;
+        font-size: 0.8rem ;
         letter-spacing: 0;
         color: #3A506B;
         opacity: 1;
@@ -56,26 +59,29 @@
         align-items: center;
         margin-left: -2px;
         span{
+          display: flex;
+          align-items: center;
           white-space:nowrap;
           font-weight: 500;
-          font-size: 16px;
+          font-size: 13px;
         }
       }
 
       .weekend_task{
-        margin-top: 1.25rem;
-        margin-bottom: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
         span{
-          margin-left: 12px;
+          margin-left: 8px;
           white-space:nowrap;
           font-weight: 500;
+          font-size: 13px;
         }
         #calender{
-          width: 27px;
-          height: 27px;
+          width: 1.8rem;
+          height: 1.8rem;
         }
       }
 
@@ -94,23 +100,24 @@
 }
 
 div.Subjekts_content > div > div.box-content > div.weekend_task.flex-row > div{
-  width: 27px;
-  height: 27px;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > div > svg{
   width: 32px;
-  height: 28px;
+  height: 25px;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > div > svg{
   width: 27px;
-  height: 27px;
-  margin-left: 3.25rem;
+  height: 24px;
+  margin-left: 2rem;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.user_points.flex-row > span.user_Points{
-  margin-right: 4px;
+  margin-right: 0.26666668rem;
 }
 div.Subjekts_content > div > div.box-content > div.points > div.community_points.flex-row > span.community_Points{
   margin-right: 4px;
-  margin-left: 7px;
+  margin-left: 5px;
 }
+

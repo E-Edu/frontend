@@ -1,21 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
 import "./index.scss";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
-import Data from "../../lib/Subjekt_Config";
+import Data from "../../lib/Color_Config";
 import File from "../../components/icons/file-text.icon.js";
 
 class Subjekt extends React.Component {
     render() {
         const subject = this.props.Subject;
-        const border = "11px solid " + Data["Subject_color"][subject];
+        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
         return (
             <div className='Subjekt' style={{ borderLeft: border }}>
                 <div className="image">
-                    <File strokewidth="1.5" className="icon" width="40" height="40" stroke="#000000" />
+                    <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
                 </div>
                 <div className="box-content">
                     <h3 className="subject_name">{this.props.Subject}</h3>
@@ -46,14 +46,14 @@ class dashboard extends React.Component {
     componentDidMount() {
         const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('dashboard').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
+        document.getElementById('dashboard').setAttribute("style", `margin-top:${top}px;margin-left:${left} - 3px);`);
     }
 
     render() {
         return (
             <div id="dashboard">
                 <Header side="Dashboard" />
-                <Sidebar />
+                <Sidebar active="dashboard"/>
                 <div className="Subjekts_content">
                     <Subjekt Subject="Deutsch" Underline="Sprachen lernen - Babel" Weekendtask="4/5" Points="213" Community_Points="21.323" />
                     <Subjekt Subject="Mathe" Underline="1 x  3 macht 4 und 3 macht 9" Weekendtask="4/5" Points="213" Community_Points="21.323" />

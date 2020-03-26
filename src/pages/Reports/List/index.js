@@ -9,6 +9,7 @@ import Header from "../../../components/Header";
 import ReportInfo from "../../../components/ReportInfo";
 import Modal from 'react-animated-modal';
 import Sidebar from "../../../components/Sidebar";
+import colorData from "../../../lib/Color_Config";
 
 class Report extends Component {
     constructor(props) {
@@ -40,19 +41,8 @@ class Report extends Component {
     };
 
     render() {
-        let bgColor = ["rgba(25, 186, 63, 0.3)", "rgba(25, 186, 63, 1)"];
-        switch (this.state.difficulty) {
-            case "Mittel":
-                bgColor[0] = "rgba(255, 186, 0, 0.3)";
-                bgColor[1] = "rgba(255, 186, 0, 1)";
-                break;
-            case "Schwer":
-                bgColor[0] = "rgba(186, 25, 25, 0.3)";
-                bgColor[1] = "rgba(186, 25, 25, 1)";
-                break;
-            default:
-                break;
-        }
+        const color = colorData.Difficulty_color[this.state.difficulty];
+        let bgColor = [color.bg, color.border];
         return (
             <div className="report-component text-dark">
                 <Modal visible={this.state.showModal}
@@ -84,9 +74,9 @@ class Report extends Component {
                         </div>
                         <span style={{
                             display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
-                            right: 0, justifyContent: "flex-end", backgroundColor: bgColor,
+                            right: 0, justifyContent: "flex-end", backgroundColor: bgColor[0],
                             borderWidth: 1, borderStyle: "solid", borderColor: bgColor[1], borderRadius: 10,
-                            padding: "0px 5px"
+                            padding: "0.0rem 0.33333334rem"
                         }}>{this.state.difficulty}</span>
                     </div>
                 </div>
