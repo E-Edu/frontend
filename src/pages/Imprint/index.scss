@@ -4,28 +4,35 @@
 
 	.headingFont {
 		margin-left: 19%;
-		margin-top: 133px;
-		width: 381px;
+		margin-top: 8.866667rem;
+		width: 25.4rem;
 
 		text-align: left;
 		font-family: Hind Siliguri;
-		font-size: 80px;
+		font-size: 5.3333335rem;
 		color: #0b132b;
 		opacity: 1;
 	}
 
 	.fontBox {
-		margin-top: 5px;
+		margin-top: 0.33333334rem;
 		margin-left: 19%;
-		margin-top: 5px;
-		width: 659px;
-		height: 659px;
+		margin-top: 0.33333334rem;
+		width: 43.933334rem;
+		height: 43.933334rem;
 
 		text-align: left;
 		font: Hind Siliguri;
-		font-size: 20px;
+		font-size: 1.3333334rem;
 		letter-spacing: 0;
 		color: #0b132b;
 		opacity: 1;
+	}
+	
+	.font0.8rem{
+		font-size: 0.8rem;
+	}
+	.underline{
+		text-decoration: underline;
 	}
 }

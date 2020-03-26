@@ -3,12 +3,12 @@
     margin-top: 1rem;
     background: white;
     /*text-align: center;*/
-    border-radius: 4px;
+    border-radius: 0.26666668rem;
     color: #000033;
-    -moz-box-shadow: 0 0 10px #888;
-    -webkit-box-shadow: 0 0 10px #888;
-    box-shadow: 0 0 10px #888;
-    -o-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 0.6666667rem #888;
+    -webkit-box-shadow: 0 0 0.6666667rem #888;
+    box-shadow: 0 0 0.6666667rem #888;
+    -o-box-shadow: 0 0 0.6666667rem #888;
 }
 
 .reportcontainer{
@@ -18,12 +18,12 @@
         margin-bottom: 2rem;
     }
     .subjectPath{
-        font-size: 14px;  
+        font-size: 0.93333334rem;  
     }
 /*Infos an der Rechten seite*/
     .InfosRight{
         text-align: right;
-        font-size:14px;
+        font-size:0.93333334rem;
         width:49.5%;
 
 
@@ -33,15 +33,15 @@
             justify-content: flex-end;
             span{
                 margin-left: 1.5rem;
-                font: Regular 20px/23px Arimo;
+                font: Regular 1.3333334rem/1.5333333rem Arimo;
                 letter-spacing: 0;
                 color: #3A506B;
                 opacity: 1;
             }
             img{
                 margin-left: 0.5rem;
-                width: 20px;
-                height: 20px;
+                width: 1.3333334rem;
+                height: 1.3333334rem;
             }
         }
         #teacher{
@@ -50,8 +50,8 @@
             justify-content: flex-end;
             img{
                 margin-left: 0.5rem;
-                width: 20px;
-                height: 20px;
+                width: 1.3333334rem;
+                height: 1.3333334rem;
             }
         }
         #messages{
@@ -60,23 +60,23 @@
             justify-content: flex-end;
             img{
                 margin-left: 0.5rem;
-                width: 20px;
-                height: 20px;
+                width: 1.3333334rem;
+                height: 1.3333334rem;
             }
         }
         
     }
 /*Aufgaben Überschrift*/
     .TaskName{
-        margin-top:5px;
+        margin-top:0.33333334rem;
         text-align: center;
-        font-size: 20px;
+        font-size: 1.3333334rem;
     }
 /*Aufgaben Text*/
     .TaskText{
-        margin-top:6px;
-        max-height:100px;
-        font-size: 12px;
+        margin-top:0.4rem;
+        max-height:6.6666665rem;
+        font-size: 0.8rem;
     }
 /*Behalte und Löschen Button*/  
     .Buttons{
@@ -99,19 +99,19 @@
     }
 
     .half:active {
-        box-shadow: 5px 5px 10px silver inset;
-        transform: translateY(4px);
+        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver inset;
+        transform: translateY(0.26666668rem);
     }
 
     .half{
-        box-shadow: 5px 5px 10px silver ;
-        width: 100px;
+        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver ;
+        width: 6.6666665rem;
         background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #707070;
-        border-radius: 8px;
+        border: 0.06666667rem solid #707070;
+        border-radius: 0.53333336rem;
         opacity: 1;
         height: 2.5rem;
-        font: Regular 23px Arimo;
+        font: Regular 1.5333333rem Arimo;
         cursor: pointer;
     }
 
@@ -127,15 +127,15 @@
         
     }
     .button{
-        box-shadow: 5px 5px 5px silver ;
+        box-shadow: 0.33333334rem 0.33333334rem 0.33333334rem silver ;
         background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid #707070;
-        border-radius: 8px;
+        border: 0.06666667rem solid #707070;
+        border-radius: 0.53333336rem;
         opacity: 1;
         height: 2.5rem;
     
         text-align: center;
-        font: Regular 23px/27px Arimo;
+        font: Regular 1.5333333rem/1.8rem Arimo;
         letter-spacing: 0;
         color: #3A506B;
         opacity: 1;
@@ -146,8 +146,8 @@
 
     .button:active{
         background-color: #3e8e41;
-        box-shadow: 5px 5px 10px silver inset;
-        transform: translateY(4px);
+        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver inset;
+        transform: translateY(0.26666668rem);
     }
 
     

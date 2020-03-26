@@ -9,15 +9,15 @@ import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
 import './index.scss';
 import '../../css/main.css';
-import Data from './Profile_Config.json';
+import Data from '../../lib/Subjekt_Config.json';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 
-class ProfileSubject extends React.Component {
+class Profile_Subject extends React.Component {
 
     render() {
         const subject = this.props.Subject;
-        const border = "11px solid " + Data["Subject_color"][subject];
+        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
         return (
             <div className='profile_subjekt' style={{borderLeft: border}}>
                 <div className='profileTop'>
@@ -77,7 +77,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
+        const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }
@@ -176,10 +176,10 @@ class Profile extends React.Component {
                             <div>
                                 <h2 className='font-Arimo profile_h2'>Favorisierte Fächer</h2>
                                 <div id="profile_favorite_box">
-                                    <ProfileSubject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
-                                    <ProfileSubject Subject="Mathe"
+                                    <Profile_Subject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
+                                    <Profile_Subject Subject="Mathe"
                                                     Underline="2 x 3 macht 4 Widdewiddewitt und 3 macht 9"/>
-                                    <ProfileSubject Subject="Informatik" Underline="0110001101000101110111"/>
+                                    <Profile_Subject Subject="Informatik" Underline="0110001101000101110111"/>
                                 </div>
                             </div>
                         </div>

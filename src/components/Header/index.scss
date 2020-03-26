@@ -6,15 +6,15 @@ $Second: #5bc0be;
 	z-index: 3;
 	display: flex;
 	justify-content: space-between;
-	top: 0px;
-	left: 0px;
+	top: 0.0rem;
+	left: 0.0rem;
 	width: 100%;
-	height: 80px;
+	height: 5.3333335rem;
 	background: $Primary 0% 0% no-repeat padding-box;
 	align-items: center;
 
 	.logo{
-		margin-left: 45px;
+		margin-left: 3.0rem;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -23,27 +23,27 @@ $Second: #5bc0be;
 	#title {
 		z-index: 22;
 		margin: 0;
-		padding-left: 30px;
+		padding-left: 2.0rem;
 		text-align: left;
-		font: Bold 44px/71px Hind Siliguri;
+		font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
 		letter-spacing: 0;
 		color: $Second;
 	}
 	.BTN_Log {
-		height: 50px;
-		width: 159px;
-		border: 2px solid $Second;
-		border-radius: 10px;
-		font: 26px/42px Hind Siliguri;
+		height: 3.3333333rem;
+		width: 10.6rem;
+		border: 0.13333334rem solid $Second;
+		border-radius: 0.6666667rem;
+		font: 1.7333333rem/2.8rem Hind Siliguri;
 		font-weight: 400;
 		background-color: Transparent;
 		text-decoration: none;
-		padding: 5px 10px;
+		padding: 0.33333334rem 0.6666667rem;
 	}
 	#Button_Login {
 		color: #0b132b;
 		background-color: $Second;
-		margin-right: 56px;
+		margin-right: 3.7333333rem;
 		transition: all 0.5s;
 	}
 	#Button_Register {
@@ -51,7 +51,7 @@ $Second: #5bc0be;
 		transition: all 0.2s;
 	}
 	#Button_Box_Landing {
-		margin-right: 96px;
+		margin-right: 6.4rem;
 	}
 	#Button_Login:hover {
 		cursor: pointer;
@@ -72,10 +72,10 @@ $Second: #5bc0be;
 		outline: none;
 	}
 	#Button_Box_Dashbord {
-		margin-right: 96px;
+		margin-right: 6.4rem;
 	}
 	#Button_Box_Dashboard {
-		margin-right: 96px;
+		margin-right: 6.4rem;
 	}
 	.BTN_Dash {
 		margin: 0 1rem;
