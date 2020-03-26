@@ -152,7 +152,7 @@ class Register extends React.Component {
             <div className="register">
                 <div className="box">
                     <h1 id="Headline">Register</h1>
-                    <form method="post">
+                    <form method="post" noValidate>
                         <div className="box-inhalt">
                             {(() => {
                                 if (this.state.clicked) {
@@ -166,7 +166,7 @@ class Register extends React.Component {
                                                     value={this.state.mail}
                                                     placeholder="Email"
                                                     className="input-field"
-                                                    required
+                                                    noValidate
                                                 />
                                             </div>
 
@@ -183,7 +183,7 @@ class Register extends React.Component {
                                                     id="passwort"
                                                     placeholder="Passwort"
                                                     className="input-field"
-                                                    required
+                                                    noValidate
                                                 />
                                                 <span
                                                     className="eye"
@@ -219,7 +219,7 @@ class Register extends React.Component {
                                                     id="passwort"
                                                     placeholder="Passwort wiederholen"
                                                     className="input-field"
-                                                    required
+                                                    noValidate
                                                 />
                                                 <span className="eye">
                                                     <img
@@ -289,7 +289,7 @@ class Register extends React.Component {
                                                     value={this.state.firstName}
                                                     placeholder="Vorname"
                                                     className="input-field"
-                                                    required
+                                                    noValidate
                                                 />
                                             </div>
 
