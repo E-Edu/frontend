@@ -1,0 +1,232 @@
+.index{
+   text-align: center;
+}
+.index-body{
+    text-align: center;
+}
+.body{
+    background-color: white;
+}
+.header{
+    background-color: white;
+}
+.Header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 80px;
+    background: #0B132B 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.Head{
+    position: absolute;
+    top: 114px;
+    left: 224px;
+    width: 263px;
+    height: 97px;
+    text-align: left;
+    font: Bold 60px/97px Hind Siliguri;
+    letter-spacing: 0;
+    color: #0B132B;
+    opacity: 1;
+}
+.UserImage{
+    position: absolute;
+    top: 158px;
+    left: 1373px;
+    width: 24px;
+    height: 27px;
+    opacity: 1;
+}
+.UserName{
+    position: absolute;
+    top: 159px;
+    left: 1409px;
+    width: 113px;
+    height: 26px;
+    text-align: left;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.Task{
+    position: absolute;
+    top: 194px;
+    left: 224px;
+    width: 502px;
+    height: 52px;
+    text-align: left;
+    font: Medium 32px/52px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    font-size: x-large;
+    opacity: 1;
+}
+.Questions{
+    position: absolute;
+    font-size: xx-large;
+    top: 348px;
+    left: 224px;
+    width: 95px;
+    height: 52px;
+    text-align: left;
+    font: Medium 32px/52px Hind Siliguri;
+    letter-spacing: 0;
+    color: #687D9A;
+    opacity: 1;
+}
+.TaskTitle{
+    position: absolute;
+    font-size: xx-large;
+    top: 356px;
+    left: 682px;
+    width: 400px;
+    height: 36px;
+    text-align: left;
+    font: Regular 32px/37px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.TaskContent{
+    position: absolute;
+    top: 425px;
+    left: 682px;
+    width: 556px;
+    height: 100px;
+    text-align: left;
+    font: Regular 16px/18px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.AnswerByUser{
+    position: absolute;
+    top: 527px;
+    left: 771px;
+    width: 13px;
+    height: 26px;
+    text-align: left;
+    font: Regular 23px/27px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.Answer{
+    position: absolute;
+    top: 527px;
+    left: 682px;
+    width: 84px;
+    height: 26px;
+    text-align: left;
+    font: Regular 23px/27px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.Divider{
+    position: absolute;
+    top: 587px;
+    left: 683px;
+    width: 556px;
+    height: 0px;
+    border: 1px solid #1C2541;
+    opacity: 1;
+}
+.answerComment{
+    position: absolute;
+    font-size: larger;
+    font-style: italic;
+    top: 609px;
+    left: 683px;
+    width: 556px;
+    height: 76px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #989898;
+    border-radius: 10px;
+    opacity: 1;
+}
+.wrong{
+    cursor: pointer;
+    position: absolute;
+    font-size: large;
+    top: 707px;
+    left: 682px;
+    width: 124px;
+    height: 49px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+}
+.WrongIcon{
+    position: absolute;
+    top: 720px;
+    left: 695px;
+    width: 24px;
+    height: 24px;
+    background: transparent  0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.correct{
+    cursor: pointer;
+    position: absolute;
+    font-size: large;
+    top: 707px;
+    left: 1102px;
+    width: 135px;
+    height: 49px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+}
+.CorrectIcon{
+    position: absolute;
+    top: 723px;
+    left: 1196px;
+    width: 26px;
+    height: 18px;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.Cancel{
+    cursor: pointer;
+    position: absolute;
+    font-size: larger;
+    top: 778px;
+    left: 682px;
+    width: 215px;
+    height: 49px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+}
+.NextQuestion{
+    cursor: pointer;
+    position: absolute;
+    font-size: larger;
+    top: 778px;
+    left: 1023px;
+    width: 215px;
+    height: 49px;
+    background: #5BC0BE 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+}
+.QuestionOne{
+    position: relative;
+    font-size: larger;
+    top: 327px;
+    left: 107px;
+    width: 216px;
+    height: 42px;
+    text-align: left;
+    font: Regular 26px/42px Hind Siliguri;
+    letter-spacing: 0;
+    color: #5BC0BE;
+    opacity: 1;
+}
