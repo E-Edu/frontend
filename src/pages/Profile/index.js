@@ -9,7 +9,7 @@ import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
 import './index.scss';
 import '../../css/main.css';
-import Data from '../../lib/Subjekt_Config.json';
+import Data from '../../lib/Color_Config.json';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 

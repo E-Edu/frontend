@@ -6,22 +6,12 @@ import Sidebar from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Award from "../../components/icons/award.icon";
 import Search from "../../components/icons/search.icon"
+import colorData from "../../lib/Color_Config";
 
 class Task extends React.Component {
     render() {
-        let bgColor = ["rgba(25, 186, 63, 0.3)", "rgba(25, 186, 63, 1)"];
-        switch (this.props.schwere) {
-            case "Mittel":
-                bgColor[0] = "rgba(255, 186, 0, 0.3)";
-                bgColor[1] = "rgba(255, 186, 0, 1)";
-                break;
-            case "Schwer":
-                bgColor[0] = "rgba(186, 25, 25, 0.3)";
-                bgColor[1] = "rgba(186, 25, 25, 1)";
-                break;
-            default:
-                break;
-        }
+        const color = colorData.Difficulty_color[this.props.schwere];
+        let bgColor = [color.bg, color.border];
         return <div className="Task">
             <div className="Task_Head">
                 <span>{this.props.name}</span>

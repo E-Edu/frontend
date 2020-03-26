@@ -22,7 +22,7 @@
         align-items: center;
         text-decoration: none;
         color: #687d9a;
-        margin: 1.5rem 0;
+        margin: 0.6rem 0;
         line-height: 1.2em;
     }
 
@@ -41,7 +41,11 @@
     }
 
     .topIcons {
-        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6.6666665rem;
     }
 
     .bottomIcons {

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./index.scss";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
-import Data from "../../lib/Subjekt_Config";
+import Data from "../../lib/Color_Config";
 import File from "../../components/icons/file-text.icon.js";
 
 class Subjekt extends React.Component {
@@ -53,7 +53,7 @@ class dashboard extends React.Component {
         return (
             <div id="dashboard">
                 <Header side="Dashboard" />
-                <Sidebar />
+                <Sidebar active="dashboard"/>
                 <div className="Subjekts_content">
                     <Subjekt Subject="Deutsch" Underline="Sprachen lernen - Babel" Weekendtask="4/5" Points="213" Community_Points="21.323" />
                     <Subjekt Subject="Mathe" Underline="1 x  3 macht 4 und 3 macht 9" Weekendtask="4/5" Points="213" Community_Points="21.323" />
