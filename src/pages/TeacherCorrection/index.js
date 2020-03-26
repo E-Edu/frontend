@@ -33,17 +33,17 @@ class Correction extends Component{
             <Header className="Header" side="Dashboard"></Header>
             <SideBar></SideBar>
                 <header>
-                    <text id="Head">Korrektur</text>
+                    <text className="Head">Korrektur</text>
                 </header>
                 <div>
-                    <User id="UserImage"></User>
+                    <User className="UserImage"></User>
                     <text className="UserName">{UserName}</text>
                 </div>
                 <div>                        
                     <text className="Task">{TaskName}</text>
                 </div>
                 <div>
-                    <text id="Questions">Fragen</text>
+                    <text className="Questions">Fragen</text>
                     </div>
                     <div> 
         </div>
@@ -119,33 +119,6 @@ class LoadTask extends React.Component{
         const Answers = ["1","1","1","1","1"];
         var correctAnswer = null;
         var id=  this.state.id;
-        console.log("     Hi!     ");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("");
-        console.log("     /\\     ");
-        console.log("    /__\\    ");
-        console.log("   /____\\   ");
-        console.log("  /______\\  ");
-        console.log(" /________\\ ");
-        console.log("/__________\\");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
-        console.log("   |====|   ");
         return(
             <div>
                <div>
@@ -155,20 +128,20 @@ class LoadTask extends React.Component{
         <text className="TaskContent">{taskTexts[id]}</text>
         </div>
         <div>
-            <text id="Answer">Antwort: </text>
+            <text className="Answer">Antwort: </text>
             <text className="Answer">{Answers[id]}</text>
         </div>
         <div>
-            <line id="Divider"></line>
+            <line className="Divider"></line>
         </div>
         <div>
             <textarea className="answerComment">Anmerkung...</textarea>
         </div>
         <div>
             <button className="wrong" onClick={correctAnswer = false,this.SetAnswerAsWrong}>Falsch</button>
-            <Wrong id="WrongIcon"></Wrong>
+            <Wrong className="WrongIcon"></Wrong>
             <button className="correct">Richtig</button>
-            <Correct id="CorrectIcon" onClick={correctAnswer = true,this.SetAnswerAsCorrect}></Correct>
+            <Correct className="CorrectIcon" onClick={correctAnswer = true,this.SetAnswerAsCorrect}></Correct>
         </div>
      <div>
         <button className="Cancel" onClick={this.HandleCancelClick}>Abbrechen</button>
