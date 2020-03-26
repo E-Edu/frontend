@@ -3,9 +3,9 @@
 		display: flex;
 		flex-direction: row;
 		width: 100vw;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
-		padding-top: 80px;
+		margin-top: 150px;
 	}
 	#landigpage-image {
 		padding: 0 1rem;
@@ -18,10 +18,12 @@
 		justify-content: center;
 		width: 50%;
 		padding: 0 1rem;
+		margin-left: 3rem;
 	}
-	#text-content h2 {
+	#text-content #title {
 		font: Bold 68px/110px Hind Siliguri;
 		margin-bottom: 1rem;
+		
 		padding: 0;
 	}
 	#text-content h5 {
@@ -29,8 +31,8 @@
 		padding: 0;
 		margin: 0;
 	}
-	#text-content h4 {
-		font: Bold 35px/57px Hind Siliguri;
+	#text-content #text {
+		font: Bold 25px/45px Hind Siliguri;
 		padding: 0;
 		margin: 0;
 	}
