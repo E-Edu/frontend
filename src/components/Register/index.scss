@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap");
 
-
 UserIcon {
     margin-top: 0.26rem;
 }
@@ -10,7 +9,9 @@ div.register {
     padding: 1rem;
     width: auto;
     height: auto;
-
+    min-height: 426.6px;
+    margin-right: 4rem;
+    margin-left: 4rem;
     form {
         margin-top: 7rem;
         font-family: "Hind Siliguri", sans-serif;
@@ -118,7 +119,10 @@ div.register {
             width: 100%;
 
             div.btn {
-                border: 1px solid #000033;
+                // border-left: 1px solid #000033;
+                border-top: 1px solid #000033;
+                border-bottom: 1px solid #000033;
+
                 background-color: white;
                 //border-left: 1px solid #000033;
                 padding: 10px 24px;
@@ -130,10 +134,14 @@ div.register {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-
+                border-left: 1px solid #000033;
+                height: 1.75rem;
                 span {
                     width: 90%;
                 }
+            }
+            .btn-specialButton2 {
+                border-right: 1px solid #000033;
             }
 
             .btn-specialButton:focus {
@@ -193,6 +201,7 @@ div.register {
 
         .btn-weiter {
             background-color: #5bc0be;
+            margin-top: 1.7rem;
         }
 
         .btn-Base {
