@@ -3,18 +3,18 @@ $bluegray: #3A506B;
 $primary: #5BC0BE;
 
 body {
-    font-family: Medium 80px/129px Hind Siliguri;
+    font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
     cursor: default;
 
     .content {
-        margin-bottom: 120px;
+        margin-bottom: 8.0rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
 
         .picture {
-            margin-top: 20px;
+            margin-top: 1.3333334rem;
             width: 30%;
 
             img {
@@ -28,12 +28,12 @@ body {
                 color: $bluegray;
 
                 .heading {
-                    font-size: 80px;
+                    font-size: 5.3333335rem;
                     color: $dark;
                 }
 
                 .communityproject {
-                    font-size: 40px;
+                    font-size: 2.6666667rem;
 
                     span {
                         color: $primary;
@@ -41,39 +41,39 @@ body {
                 }
 
                 .teilnehmende {
-                    font-size: 30px;
+                    font-size: 2.0rem;
                 }
             }
 
             .mitwirkende {
                 .subheading {
                     text-align: center;
-                    font-size: 40px;
+                    font-size: 2.6666667rem;
                     color: $bluegray;
                     font-weight: bolder;
-                    margin-bottom: 60px;
-                    margin-top: 40px;
+                    margin-bottom: 4.0rem;
+                    margin-top: 2.6666667rem;
                 }
 
                 .morpheus {
                     .idea {
-                        font-size: 30px;
+                        font-size: 2.0rem;
                         font-style: normal;
                         text-align: center;
                         color: $primary;
                         font-weight: normal;
-                        margin: 10px 0;
+                        margin: 0.6666667rem 0;
                     }
 
                     .name {
                         display: block;
                         text-align: center;
-                        font-size: 20px;
+                        font-size: 1.3333334rem;
                         color: $bluegray;
-                        margin-top: 5px;
+                        margin-top: 0.33333334rem;
                     }
 
-                    margin-bottom: 20px;
+                    margin-bottom: 1.3333334rem;
 
                 }
 
@@ -85,19 +85,19 @@ body {
 
                     .cerdits-heading {
                         text-align: center;
-                        font-size: 30px;
+                        font-size: 2.0rem;
                         font-style: normal;
                         color: $primary;
                         font-weight: normal;
-                        margin: 10px 0;
+                        margin: 0.6666667rem 0;
                     }
 
                     .credits-name {
                         display: block;
                         text-align: center;
-                        font-size: 20px;
+                        font-size: 1.3333334rem;
                         color: $bluegray;
-                        margin: 5px 0;
+                        margin: 0.33333334rem 0;
                     }
                 }
             }

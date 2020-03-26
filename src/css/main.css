@@ -8,8 +8,8 @@ body {
 }
 
 body input {
-  border: 2px solid #1c2541;
-  border-radius: 10px;
+  border: 0.13333334rem solid #1c2541;
+  border-radius: 0.6666667rem;
 }
 
 .font-Arimo {
@@ -37,13 +37,13 @@ code {
 }
 
 .resultContentHeader .resultLeft {
-  margin-left: 109px;
+  margin-left: 7.266667rem;
 }
 
 .resultContentHeader .resultLeft .resultSubject {
-  margin-right: 40px;
-  margin-top: 34px;
+  margin-right: 2.6666667rem;
+  margin-top: 2.2666667rem;
   font-weight: bolder;
   color: #0B132B;
-  font-size: 60px;
+  font-size: 4.0rem;
 }

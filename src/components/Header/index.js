@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
 import './index.scss';
 import { Link } from 'react-router-dom';
 import Help_Image from '../../assets/icons/helpcircle.svg';
 import Logout_Image from '../../assets/icons/logout.svg';
 
 class Header extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		switch (this.props.side) {
 			case 'Landing':
 				return (
 					<div className='headerNavbar'>
-						<div>
+						<div className="logo">
+							<img src="assets/logo.svg" alt="" width="1.6rem"/>
 							<h1 id='title'>E-EDU</h1>
 						</div>
 						<div id='Button_Box_Landing'>
@@ -32,15 +28,17 @@ class Header extends Component {
 				return (
 					<div className='headerNavbar'>
 						<div>
-							<h1 id='title'>E-EDU</h1>
+							<Link to={'/'} style={{textDecoration: "none"}}>
+								<h1 id='title'>E-EDU</h1>
+							</Link>
 						</div>
 						<div id='Button_Box_Dashboard'>
-							<button className='BTN_Dash' id='Button_Info'>
+							<Link to="/imprint" className='BTN_Dash' id='Button_Info'>
 								<img src={Help_Image} alt='Help' />
-							</button>
-							<button className='BTN_Dash' id='Button_Logout'>
+							</Link>
+							<Link className='BTN_Dash' id='Button_Logout'>
 								<img src={Logout_Image} alt='Logout' />
-							</button>
+							</Link>
 						</div>
 					</div>
 				);

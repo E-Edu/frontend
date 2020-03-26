@@ -4,7 +4,7 @@ import eye from "../../assets/icons/eye.svg";
 import eye_off from "../../assets/icons/eye-off.svg";
 import teacher from "../../assets/icons/teacher.svg";
 import UserIcon from "../../components/icons/user.icon";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 
 // Regular Expression für die Validierung der Mail
@@ -45,11 +45,11 @@ class Register extends React.Component {
     // ----------------- AXIOS END -------------------------
     componentDidUpdate() {
         if (
-            this.state.mail != "" &&
-            this.state.role != "" &&
-            this.state.firstName != "" &&
-            this.state.lastName != "" &&
-            this.state.accepted != false &&
+            this.state.mail !== "" &&
+            this.state.role !== "" &&
+            this.state.firstName !== "" &&
+            this.state.lastName !== "" &&
+            this.state.accepted !== false &&
             this.state.password === this.state.password2 &&
             this.state.disabled
         ) {

@@ -40,3 +40,4 @@ The title should have the following format:
   - [ ] I put a link in the Section [Related Issue](#related-issue)
 - [ ] I tested my code with multiple browsers
 - [ ] My commit messages are good and understandable
+- [ ] I added the Sidebar and Navbar correctly with code from the [frontend channel](https://github.com/E-Edu/frontend/issues/97)

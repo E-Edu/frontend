@@ -9,15 +9,12 @@ import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
 
 class Landing extends Component {
-    constructor(props) {
-        super(props);
-    }
     state = { showModal: false, redirect: false };
 
     render() {
         return (
             <div className="landing">
-                <Header side="Landing"></Header>
+                <Header side="Landing" />
                 <div className="Main">
                     {(() => {
                         if (this.state.redirect) {
@@ -34,7 +31,7 @@ class Landing extends Component {
                                 this.setState({ showModal: true });
                             }
                         }}
-                    ></Route>
+                    />
 
                     <Modal
                         visible={this.state.showModal}
@@ -57,11 +54,17 @@ class Landing extends Component {
                             />
                         </div>
                         <div id="text-content">
-                            <h2>Education for everyone</h2>
+                            <h2>Education for all</h2>
                             <h4>
-                                Keine Ahnung was ich schreiben soll, das ist ein
-                                Feature Text. Bitte etwas besseres überlegen
+                                E-Edu ist eine Lernplattform die im Rahmen des
+                                Hackathon #WirVsVirus vom Team "The Morpheus
+                                Tutorials" erstellt wurde.
+                                <br />
+                                E-Edu bietet eine Lernplattform für Schüler die
+                                von Lehrern erstellte Aufgaben bearbeiten können
                             </h4>
+                            {/*	<h3>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können und danach entscheiden ob sie die aufgaben gut fanden.*/}
+                            {/*		Lehrer haben die Möglichkeit die von ihnen erstellte Aufgaben zu kontrollieren und können sehen wie die Schüler ihre Aufgaben abgestimmt haben.</h3>*/}
                         </div>
                     </div>
                 </div>
