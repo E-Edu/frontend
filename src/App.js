@@ -15,6 +15,8 @@ import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
 import Tasklist from "./pages/Tasklist";
 import Profile from "./pages/Profile";
+import ChooseTaskPackage from "./pages/ChooseTaskPackage";
+import Correction from "./pages/TeacherCorrection";
 
 class App extends Component {
     render() {
@@ -38,6 +40,8 @@ class App extends Component {
                 <Route path='/teacher/add' exact component={AddTeacher}/>
                 <Route path='/settings' exact component={Settings}/>
                 <Route path='/profile' exact component={Profile}/>
+                <Route path='/choosetaskpackage' exact component={ChooseTaskPackage}/>
+                <Route path='/correction/teachercorrection' exact component ={Correction}/>
             </Router>
         );
     }
