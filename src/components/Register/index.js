@@ -7,9 +7,10 @@ import UserIcon from "../../components/icons/user.icon";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 
-/*
-. Form triggert nicht durch onSubmit -> aktuell in btn-submit durch die "onClick={this.handleSubmit]" Funktion
-*/
+// Regular Expression für die Validierung der Mail
+const emailRegex = RegExp(
+    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
 
 class Register extends React.Component {
     constructor(props) {
@@ -26,7 +27,8 @@ class Register extends React.Component {
             disabled: true,
             persons: [],
             isPasswordShown: false,
-            isPasswordShown2: false
+            isPasswordShown2: false,
+            isPasswordValid: true
         };
     }
 
@@ -110,6 +112,12 @@ class Register extends React.Component {
         this.setState({ isPasswordShown2: !isPasswordShown2 });
     };
 
+    // Validate password --- WORK IN PROGRESS
+    validatePassword = () => {
+        if (this.state.password2 != this.state.password) {
+        }
+    };
+
     // Sends the form - implemented on the submit button, not onSubmit (Form)
     handleSubmit = event => {
         console.log("--- SUBMIT FUNKTION ---");
@@ -138,6 +146,7 @@ class Register extends React.Component {
         // constants for the toggle functions (eye and password)
         const { isPasswordShown } = this.state;
         const { isPasswordShown2 } = this.state;
+        const { isPasswordValid } = this.state;
 
         return (
             <div className="register">
