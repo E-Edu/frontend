@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap");
 
+
+UserIcon {
+    margin-top: 0.26rem;
+}
+
 div.register {
     padding: 1rem;
+    width: auto;
+    height: auto;
 
     form {
         margin-top: 7rem;
@@ -36,7 +43,8 @@ div.register {
   */
     .box {
         width: 50vw;
-        height: 35vh;
+        min-height: 35vh;
+        height: auto;
         padding: 0;
         background: white;
         text-align: center;
@@ -77,6 +85,11 @@ div.register {
             }
         }
 
+        .active {
+            background-color: #5bc0be !important;
+            outline: none;
+        }
+
         .eye {
             cursor: pointer;
             max-height: 1.6rem;
@@ -103,7 +116,8 @@ div.register {
         .roleBtn {
             display: flex;
             width: 100%;
-            button {
+
+            div.btn {
                 border: 1px solid #000033;
                 background-color: white;
                 //border-left: 1px solid #000033;
@@ -145,7 +159,8 @@ div.register {
         }
 
         .btn-group button:not(:last-child) {
-            border-right: none; /* Prevent double borders */
+            border-right: none;
+            /* Prevent double borders */
         }
 
         .btn-group button:hover {
@@ -276,6 +291,7 @@ div.register {
 
             height: 20rem;
         }
+
         .checkContainer p {
             font-size: 0.8rem;
 
@@ -286,6 +302,7 @@ div.register {
 
             white-space: pre-line;
         }
+
         height: 30rem;
     }
 
