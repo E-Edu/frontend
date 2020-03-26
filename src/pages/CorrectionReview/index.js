@@ -22,7 +22,7 @@ class CorrectionReview extends Component {
                         <h1>Korrektur</h1>
                         <button className='correctionMode'>Korrekturmodus</button>
                     </div>
-                    <div className='correctionQuestionBox'>
+                    <div className='box'>
 
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>

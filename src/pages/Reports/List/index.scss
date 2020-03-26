@@ -8,6 +8,7 @@ h1.ReportText-content {
   height: 3.3333333rem;
 }
 
+
 .report-component{
   display: flex;
   margin-bottom: 1.3333334rem;
@@ -16,12 +17,13 @@ h1.ReportText-content {
   border-radius: 0.6666667rem;
   width: 66.666664rem;
   height: 8.0rem;
-  justify-content: center;
   font: Regular 1.3333334rem/1.5333333rem Arimo;
-
+  margin-left: 13.333333rem;
+  
   .react-modal {
     top: 0;
     left: 0;
+    
   }
 
   .reportcontainer .InfosRight {

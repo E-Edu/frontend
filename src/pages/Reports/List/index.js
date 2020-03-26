@@ -54,12 +54,13 @@ class Report extends Component {
                 break;
         }
         return (
+            <div class="mainKontainer">
             <div className="report-component text-dark">
                 <Modal visible={this.state.showModal}
-                       closemodal={() => {
-                           this.setState({showModal: false});
-                       }}
-                       type="fadeIn">
+                    closemodal={() => {
+                        this.setState({showModal: false});
+                    }}
+                    type="fadeIn">
                     <ReportInfo/>
                 </Modal>
                 <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
@@ -93,7 +94,7 @@ class Report extends Component {
                 <div style={{marginTop: 30, display: "flex", alignItems: "center", justifyContent: "space-between"}}>
                     <div style={{width: 400}}>
                         <img style={{marginLeft: 20}} src={icon_info} alt="info-icon" className="InfoIcon"
-                             onClick={this.showModal}/>
+                            onClick={this.showModal}/>
                     </div>
                     <div style={{display: "flex", alignItems: "center"}}>
                         <img src={icon_mail} alt="mail-icon"/>
@@ -107,6 +108,7 @@ class Report extends Component {
                         <img style={{marginLeft: 10}} src={icon_teacher} alt="teacher-icon"/>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
