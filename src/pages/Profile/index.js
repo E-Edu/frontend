@@ -185,7 +185,7 @@ class Profile extends React.Component {
                         </div>
                         <div id="favorite_certificate">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>Zertifikat</h2>
+                                <h2 className='font-Arimo profile_h2'>Zertifikate</h2>
                                 <div id="profile_certificate_box">
 
                                     <ProfileCerficate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>
