@@ -1,12 +1,17 @@
 .settings {
+  position: relative;
+  left: 2.333333rem;
+  top: 8rem;
+  width: 46.666666rem;
+
   .settingsContent {
     position: relative;
     color: #3A506B;
-    left: 150px;
-    top: 120px;
+    left: 10.0rem;
+    top: 8.0rem;
   }
 
   .topic {
-    font-size: 25px;
+    font-size: 1.6666666rem;
   }
 }
