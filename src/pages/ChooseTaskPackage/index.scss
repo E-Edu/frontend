@@ -1,0 +1,529 @@
+.index{
+    text-align: center;
+}
+.index-body{
+    text-align: center;
+}
+
+
+body{
+    background-color: white;
+}
+header{
+    background-color: white;
+}
+.Header{
+    position: absolute;
+    margin-bottom: 0px;
+}
+.groupPointsTV{
+    position: static;
+    top: 150px;
+    left: 1070px;
+    width: 100px;
+    height: 26px;
+    text-align: left;
+    margin-left: 20px;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+    margin-left: 50px;
+}
+.singlePointsTV{
+    position: static;
+    top: 150px;
+    left: 847px;
+    width: 92px;
+    height: 26px;
+    text-align: left;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+    margin-left: 50px;
+}
+.Task1{
+    position: relative;
+    display: block;
+    top: 251px;
+    margin-left: 500px;
+    font-size: 20px;
+    width: 1000px;
+    height: 117px;
+    background: #FFFFFF 0% 0% ;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+   
+}
+.Task2{
+    position: relative;
+    font-size: 20px;
+    display: block;
+    top: 300px;
+    margin-left: 500px;
+    width: 1000px;
+    height: 117px;
+    background: #FFFFFF 0% 0% ;
+    box-sizing: content-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+}
+.Task3{
+    position: relative;
+    display: block;
+    font-size: 20px;
+    margin-left: 500px;
+    top: 351px;
+    width: 1000px;
+    height: 117px;
+    background: #FFFFFF 0% 0% ;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+    margin-bottom: 50px;
+}
+.SearchBox{
+    position: absolute;
+    top: 150px;
+    left: 1393px;
+    width: 391px;
+    height: 43px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #3A506B;
+    border-radius: 8px;
+    opacity: 1;
+    cursor: pointer;
+}
+#SearchBoxIcon{
+    position: absolute;
+    top: 150px;
+    left: 1400px;
+    opacity: 1;
+}
+.SingleUserPoints{
+    position: static;
+    top: 150px;
+    left: 811px;
+    height: 20px;
+}
+.GroupUserPoints{
+    position: static;
+    margin-left: 50px;
+    top: 150px;
+    left: 967px;
+    height: 20px;
+    margin-right: 20px;
+}
+.module{
+    position: absolute;
+    top: 114px;
+    left: 224px;
+    width: 600px;
+    height: 97px;
+    text-align: left;
+    font: Bold 60px/97px Hind Siliguri;
+    letter-spacing: 0;
+    color: #0B132B;
+    opacity: 1;
+}
+.teacher{
+    position: relative;
+    top: 295px;
+    font-size: 30px;
+    margin-left: 50px;
+    width: 140px;
+    height: 48px;
+    text-align: left;
+    font: Medium 30px/48px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+    margin-top: 500px;
+}
+.easyInfo{
+    position: relative;
+    font-size: 20px;
+    left: 200px;
+    width: 74px;
+    height: 25px;
+    background: #19BA3F62 0% 0% no-repeat padding-box;
+    border: 1px  #19BA3F;
+    border-radius: 10px;
+    opacity: 1;
+}
+.middleInfo{
+    position: relative;
+    font-size: 20px;
+    left: 200px;
+    width: 74px;
+    height: 25px;
+    background: #FFBA0080 0% 0% no-repeat padding-box;
+    border: 1px solid #FFBA00;
+    border-radius: 10px;
+    opacity: 1;
+}
+.hardInfo{
+    position: relative;
+    font-size: 20px;
+    left: 200px;
+    width: 74px;
+    height: 25px;
+    background: #BA191967 0% 0% no-repeat padding-box;
+    border: 1px solid #BA1919;
+    border-radius: 10px;
+    opacity: 1;
+}
+.Task1Head{
+    position: static;
+    cursor: pointer;
+    margin-left: 25px;
+    top: 292px;
+    left: 613px;
+    width: 185px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+
+    opacity: 1;
+}
+.Task2Head{
+    position: static;
+    cursor: pointer;
+    margin-left: 25px;
+    top: 429px;
+    left: 613px;
+    width: 185px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Task3Head{
+    position: static;
+    cursor: pointer;
+    margin-left: 25px;
+    top: 566px;
+    left: 613px;
+    width: 185px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Task1Text{
+    position: static;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    margin-left: 25px;
+    top: 330px;
+    left: 613px;
+    width: 904px;
+    height: 40px;
+    text-align: left;
+    font: Regular 16px/18px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.Task2Text{
+    position: static;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    margin-left: 25px;
+    top: 467px;
+    left: 613px;
+    width: 904px;
+    height: 40px;
+    text-align: left;
+    font: Regular 16px/18px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.Task3Text{
+    position: static;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    margin-left: 25px;
+    top: 504px;
+    left: 613px;
+    width: 904px;
+    height: 40px;
+    text-align: left;
+    font: Regular 16px/18px Arimo;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.ProfileImage{
+    position: relative;
+    margin-left: 200px;
+    top: 340px;
+    width: 95px;
+    height: 95px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.Questions1{
+    position: relative;
+    left: 450px;
+    width: 91px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Questions2{
+    position: relative;
+    left: 450px;
+    width: 91px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Questions3{
+    position: relative;
+    left: 450px;
+    width: 80px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Correct1{
+    position: relative;
+    margin-left: 240px;
+    width: 106px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Correct2{
+    position: relative;
+    margin-left: 20px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.Correct3{
+    position: relative;
+    margin-left: 20px;
+    width: 106px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+#Award1{
+    position: relative;
+    top: 5px;
+    left: 215px;
+    width: 17px;
+    height: 26px;
+    opacity: 1;
+}
+#Award2{
+    position: relative;
+    top: 5px;
+    margin-left: 200px;
+    width: 17px;
+    height: 26px;
+    opacity: 1;
+}
+#Award3{
+    position: relative;
+    top: 5px;
+    margin-left: 200px;
+    width: 17px;
+    height: 26px;
+    opacity: 1;
+}
+.SearchText{
+    position: absolute;
+    top: 150px;
+    left: 1443px;
+    width: 42px;
+    height: 26px;
+    text-align: left;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.SingleUserPointsTV{
+    position: static;
+    top: 150px;
+    left: 847px;
+    width: 73px;
+    height: 26px;
+    text-align: left;
+    margin-left: 20px;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+.GroupUserPointsTV{
+    position: static;
+    top: 150px;
+    left: 1200px;
+    width: 92px;
+    height: 26px;
+    text-align: left;
+    margin-left: 20px;
+    font: Medium 16px/26px Hind Siliguri;
+    letter-spacing: 0;
+    color: #3A506B;
+    opacity: 1;
+}
+#SearchDiv{
+    position: absolute;
+    top: 150px;
+    left: 1410px;
+    width: 391px;
+    height: 43px;
+    border: 1px solid #3A506B;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+#SideBar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 115px;
+    height: 1080px;
+    background: #0B132B 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.numberOfAnswersOne{
+    margin-left: 50px;
+    position: static;
+    top: 290px;
+    left: 1299px;
+    width: 156px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.numberOfAnswersTwo{
+    margin-left: 50px;
+    position: static;
+    top: 429px;
+    left: 1299px;
+    width: 156px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+.numberOfAnswersThree{
+    margin-left: 50px;
+    position: static;
+    top: 566px;
+    left: 1299px;
+    width: 156px;
+    height: 22px;
+    text-align: left;
+    font: Regular 20px/23px Arimo;
+    letter-spacing: 0;
+    color: #1C2541;
+    opacity: 1;
+}
+#trendingOne{
+    position: static;
+    top: 297px;
+    left: 1270px;
+    width: 22px;
+    height: 12px;
+    background: transparent  0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+#trendingTwo{
+    position: static;
+    top: 435px;
+    left: 1270px;
+    width: 22px;
+    height: 12px;
+    background: transparent  0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+#trendingThree{
+    position: static;
+    top: 572px;
+    left: 1270px;
+    width: 22px;
+    height: 12px;
+    background: transparent  0% 0% no-repeat padding-box;                                                                                           
+    opacity: 1;
+}
+#PointsDiv{
+    position: absolute;
+    top: 150px;
+    left: 810px;
+    width: 500px;
+    opacity: 1;
+}
+#easyColor{
+    background: #19BA3F62 0% 0% no-repeat padding-box;
+    border: 1px  #19BA3F;
+}
+#middleColor{
+    background: #FFBA0080 0% 0% no-repeat padding-box;
+    border: 1px solid #FFBA00;
+}
+#hardColor{
+    background: #BA191967 0% 0% no-repeat padding-box;
+    border: 1px solid #BA1919;
+}
+.teacherInfoDiv{
+    position: relative;
+    margin-left: 00px;
+    top: 271px;
+}
+#TaskOneBox{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    opacity: 1;
+}
+#Divider{
+    position: relative;
+    margin-top: 100px;
+    width: 1500px;
+    right: 500px;
+}

@@ -1,0 +1,20 @@
+{
+    "Subject_color":  {
+         "Deutsch":"#B52020",
+         "Mathe":"#202BB5",
+         "Informatik":"#303030",
+         "Geschichte":"#F45E00",
+         "Politik":"#B520AB",
+         "Physik":"#707070",
+         "Biologie":"#31AD03",
+         "Religion":"#08B4CB",
+         "Chemie":"#FAE700"
+     },
+     "Rang_Level":{
+         "80": {"Level":"1","Bezeichnung":"Anfänger"},
+         "160": {"Level":"2","Bezeichnung":"Anfänger"},
+         "240": {"Level":"3","Bezeichnung":"Anfänger"},
+         "340": {"Level":"4","Bezeichnung":"Anfänger"}
+     }
+ }
+ 

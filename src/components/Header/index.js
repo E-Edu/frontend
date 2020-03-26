@@ -11,7 +11,7 @@ class Header extends Component {
 				return (
 					<div className='headerNavbar'>
 						<div className="logo">
-							<img src="assets/logo.svg" alt="" width="1.6rem"/>
+							<img src="assets/logo.svg" alt="" width="24px"/>
 							<h1 id='title'>E-EDU</h1>
 						</div>
 						<div id='Button_Box_Landing'>

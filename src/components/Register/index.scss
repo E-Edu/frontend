@@ -8,7 +8,7 @@ div.register {
         margin-top: 7rem;
         font-family: "Hind Siliguri", sans-serif;
 
-        //font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
+        //font-family: Medium 80px/129px Hind Siliguri;
         a {
             text-decoration: none;
             transition: all 0.2s;
@@ -40,12 +40,12 @@ div.register {
         padding: 0;
         background: white;
         text-align: center;
-        border-radius: 0.26666668rem;
+        border-radius: 4px;
         color: #000033;
-        //-moz-box-shadow: 0 0 0.6666667rem #888;
-        //-webkit-box-shadow: 0 0 0.6666667rem #888;
-        //box-shadow: 0 0 0.6666667rem #888;
-        //-o-box-shadow: 0 0 0.6666667rem #888;
+        //-moz-box-shadow: 0 0 10px #888;
+        //-webkit-box-shadow: 0 0 10px #888;
+        //box-shadow: 0 0 10px #888;
+        //-o-box-shadow: 0 0 10px #888;
 
         // error class for form validation
 
@@ -57,13 +57,13 @@ div.register {
 
         /*sets size and form of the input-boxes for password and email*/
         .input-box {
-            border-radius: 0.4rem;
-            padding: 0.26666668rem;
+            border-radius: 6px;
+            padding: 4px;
             outline: none;
-            border: 0.06666667rem solid #000033;
+            border: 1px solid #000033;
             width: 100%;
             box-sizing: border-box;
-            margin: 0.6666667rem 0;
+            margin: 10px 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -79,16 +79,16 @@ div.register {
 
         .eye {
             cursor: pointer;
-            max-height: 1.6rem;
+            max-height: 24px;
         }
 
         /*sets the form and size of all buttons*/
         .button {
-            border-radius: 0.4rem;
-            padding: 0.26666668rem;
+            border-radius: 6px;
+            padding: 4px;
             outline: black;
-            border: 0.06666667rem solid #000033;
-            margin: 0.6666667rem auto;
+            border: 1px solid #000033;
+            margin: 10px auto;
             width: 70%;
 
             background: none;
@@ -113,10 +113,10 @@ div.register {
         }
 
         .btn-group button {
-            border: 0.06666667rem solid #000033;
+            border: 1px solid #000033;
             background-color: white;
             border-left: none;
-            padding: 0.6666667rem 1.6rem;
+            padding: 10px 24px;
             cursor: pointer;
             width: 45%;
         }
@@ -128,12 +128,12 @@ div.register {
         }
 
         .btn-group :first-child {
-            border: 0.06666667rem solid #000033;
-            border-radius: 0.4rem 0 0 0.4rem;
+            border: 1px solid #000033;
+            border-radius: 6px 0 0 6px;
         }
 
         .btn-group :last-child {
-            border-radius: 0 0.4rem 0.4rem 0;
+            border-radius: 0 6px 6px 0;
         }
 
         .btn-group button:not(:last-child) {
@@ -149,21 +149,21 @@ div.register {
         }
 
         .btn-UI {
-            margin-left: 1.2rem;
-            margin-right: 1.2rem;
-            margin-top: 0.13333334rem;
-            width: 15.333333rem;
-            height: 3.2666667rem;
+            margin-left: 18px;
+            margin-right: 18px;
+            margin-top: 2px;
+            width: 230px;
+            height: 49px;
 
             background: #ffffff 0% 0% no-repeat padding-box;
-            border: 0.13333334rem solid #303030;
-            border-radius: 1.3333334rem;
+            border: 2px solid #303030;
+            border-radius: 20px;
             opacity: 1;
             cursor: pointer;
 
             text-align: center;
-            font: Regular 2.1333334rem/1.8666667rem Arimo;
-            letter-spacing: 0.031999998rem;
+            font: Regular 32px/28px Arimo;
+            letter-spacing: 0.48px;
             color: #0b132b;
             opacity: 1;
         }
@@ -189,8 +189,8 @@ div.register {
             text-align: center;
             font-family: Hind Siliguri;
             font-weight: 500;
-            font-size: 2.1333334rem;
-            letter-spacing: 1.6rem;
+            font-size: 32px;
+            letter-spacing: 24px;
             color: #0b132b;
             opacity: 1;
             text-transform: uppercase;
@@ -212,8 +212,8 @@ div.register {
                 appearance: none;
                 -webkit-appearance: none;
                 background: #ffffff 0% 0% no-repeat padding-box;
-                border: 0.13333334rem solid #0b132b;
-                border-radius: 0.6666667rem;
+                border: 2px solid #0b132b;
+                border-radius: 10px;
                 opacity: 1;
                 width: 1.5rem;
                 height: 1.5rem;
@@ -231,27 +231,27 @@ div.register {
 
         .input-field {
             text-align: left;
-            font: Italic 1.3333334rem/1.9333333rem Arimo;
-            letter-spacing: 0.033333335rem;
+            font: Italic 20px/29px Arimo;
+            letter-spacing: 0.5px;
             color: #0b132b;
             opacity: 1;
         }
 
         .input-field::placeholder {
             text-align: left;
-            font: Italic 1.3333334rem/1.9333333rem Arimo;
-            letter-spacing: 0.033333335rem;
+            font: Italic 20px/29px Arimo;
+            letter-spacing: 0.5px;
             color: #0b132b;
         }
     }
 
-    @media only screen and (max-width: 55.333332rem) {
+    @media only screen and (max-width: 830px) {
         .box {
             #Headline {
                 text-align: center;
                 font-family: Hind Siliguri;
                 font-weight: 500;
-                font-size: 1.3333334rem;
+                font-size: 20px;
                 letter-spacing: 0.25rem;
                 color: #0b132b;
                 opacity: 1;
@@ -259,53 +259,53 @@ div.register {
             }
 
             .btn-UI-container {
-                margin-top: 0.13333334rem;
+                margin-top: 2px;
             }
 
             .btn-UI {
                 margin: 0.2rem;
             }
 
-            height: 20.0rem;
+            height: 300px;
         }
         .checkContainer p {
-            font-size: 0.8rem;
+            font-size: 12px;
 
             .privacycheck {
-                min-width: 1.3333334rem;
-                min-height: 1.3333334rem;
+                min-width: 20px;
+                min-height: 20px;
             }
 
             white-space: pre-line;
         }
-        height: 30.0rem;
+        height: 450px;
     }
 
-    @media only screen and (max-width: 40.0rem) {
+    @media only screen and (max-width: 600px) {
         .box {
             width: 10rem;
-            height: 20.0rem;
+            height: 300px;
 
             .btn-UI {
                 max-width: 5rem;
                 max-height: 2rem;
                 margin: 0.2rem;
-                border-radius: 0.8rem;
+                border-radius: 12px;
             }
 
             .roleBtn {
                 .btn-specialButton {
-                    padding: 0.13333334rem;
-                    font-size: 0.6666667rem;
+                    padding: 2px;
+                    font-size: 10px;
                 }
             }
 
             .btn-UI-container {
-                margin-top: 0.13333334rem;
+                margin-top: 2px;
             }
 
             .checkContainer p {
-                font-size: 0.53333336rem;
+                font-size: 8px;
             }
         }
     }

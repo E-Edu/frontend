@@ -25,16 +25,16 @@ $lightBlue: #96B4DD;
             align-items: baseline;
 
             .resultLeft {
-                margin-left: 7.266667rem;
-                margin-top: 2.2666667rem;
+                margin-left: 109px;
+                margin-top: 34px;
 
 
                 .resultSubject {
-                    margin-right: 2.6666667rem;
-                    margin-top: 2.2666667rem;
+                    margin-right: 40px;
+                    margin-top: 34px;
                     font-weight: bolder;
                     color: $bluegrey;
-                    font-size: 4.0rem;
+                    font-size: 60px;
                     font-weight: bolder;
                     font-family: Hind Siliguri;
 
@@ -43,7 +43,7 @@ $lightBlue: #96B4DD;
                 .resultModule {
                     color: $grey;
                     font-weight: bolder;
-                    font-size: 2.1333334rem;
+                    font-size: 32px;
                 }
             }
 
@@ -51,12 +51,12 @@ $lightBlue: #96B4DD;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                margin-right: 16.533333rem;
+                margin-right: 248px;
 
                 img {
-                    width: 1.3333334rem;
-                    height: 1.3333334rem;
-                    margin-right: 0.4rem;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 6px;
                 }
 
                 .resultPoints {
@@ -64,15 +64,15 @@ $lightBlue: #96B4DD;
                     flex-direction: row;
                     align-items: center;
                     color: $grey;
-                    font-size: 1.0666667rem;
+                    font-size: 16px;
                     font-weight: bolder;
 
                     &:first-child {
-                        margin-right: 1.7333333rem;
+                        margin-right: 26px;
                     }
 
                     p {
-                        margin: 0.6666667rem 0;
+                        margin: 10px 0;
                     }
                 }
             }
@@ -83,20 +83,20 @@ $lightBlue: #96B4DD;
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
-            font-size: 2.6666667rem;
+            font-size: 40px;
             color: $grey;
             font-weight: normal;
-            width: 60.0rem;
-            margin-top: 3.3333333rem;
+            width: 900px;
+            margin-top: 50px;
 
             p {
                 margin: 0;
-                font-size: 2.1333334rem;
+                font-size: 32px;
                 color: $grey;
 
                 span {
                     color: $grey;
-                    font-size: 2.6666667rem;
+                    font-size: 40px;
                 }
             }
         }
@@ -106,11 +106,11 @@ $lightBlue: #96B4DD;
             flex-direction: row;
             justify-content: space-between;
             align-items: baseline;
-            width: 60.0rem;
-            margin-top: 2.0rem;
+            width: 900px;
+            margin-top: 30px;
 
             .resultNewPoints {
-                font-size: 4.0rem;
+                font-size: 60px;
                 font-weight: bold;
                 color: #1C2541 !important;
 
@@ -122,22 +122,22 @@ $lightBlue: #96B4DD;
                 justify-content: space-between;
 
                 p {
-                    font-size: 2.0rem;
+                    font-size: 30px;
                     color: $grey;
                     font-weight: normal;
 
                     span {
-                        font-size: 2.6666667rem;
+                        font-size: 40px;
                     }
                 }
             }
         }
 
         .resultQuestions {
-            width: 60.0rem;
+            width: 900px;
 
             .resultQuestion {
-                margin: 0.6666667rem 0;
+                margin: 10px 0;
             }
         }
     }

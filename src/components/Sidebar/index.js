@@ -34,7 +34,7 @@ class MenuElement extends Component {
         }
         let nameText = '';
         if (this.state.name) {
-            nameText = <p style={{margin: '0 0.8rem', overflowWrap: 'break-word', textAlign: 'center', color: color}}>{this.state.name}</p>;
+            nameText = <p style={{margin: '0 12px', overflowWrap: 'break-word', textAlign: 'center', color: color}}>{this.state.name}</p>;
         }
 
         const File = icons[this.state.file];

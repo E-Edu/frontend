@@ -1,14 +1,14 @@
 .resultContentHeader{
     width:100%;
     .resultLeft{
-        margin-left:12.666667rem;
+        margin-left:190px;
 
         .resultSubject{
-            margin-right:2.6666667rem;
-            margin-top:2.2666667rem;
+            margin-right:40px;
+            margin-top:34px;
             font-weight: bolder;
             color: #0B132B;
-            font-size: 4.0rem;
+            font-size: 60px;
         }
     }
 
@@ -20,9 +20,9 @@
         .resultCenter{
 
             .resultSubject{
-                margin-right:2.6666667rem;
-                margin-top:2.2666667rem;
-                font-size: 1.3333334rem;
+                margin-right:40px;
+                margin-top:34px;
+                font-size: 20px;
                 display:flex;
 
                 .icon{
@@ -36,34 +36,34 @@
         }
     }
         .resultRight{
-            margin-right:7.266667rem;
+            margin-right:109px;
             .resultSubject{
-                margin-right:2.6666667rem;
-                margin-top:2.2666667rem;
+                margin-right:40px;
+                margin-top:34px;
                 font-weight: bolder;
                 color: #0B132B;
-                font-size: 4.0rem;
+                font-size: 60px;
                 #input-search {
-                    width: 26.066668rem;
-                    height: 2.8666666rem;
+                    width: 391px;
+                    height: 43px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    border: 0.06666667rem solid #3A506B;
-                    border-radius: 0.53333336rem;
+                    border: 1px solid #3A506B;
+                    border-radius: 8px;
                     div{
                         padding: 0 0.5rem;
-                        padding-bottom: 0.33333334rem;
+                        padding-bottom: 5px;
                     }
                 }
                 input{
-                    width: 26.066668rem;
-                    height: 2.8666666rem;
+                    width: 391px;
+                    height: 43px;
                     background: transparent;
                     opacity: 1;
                     border: none;
                     text-align: left;
-                    font-size: 1.3333334rem;
+                    font-size: 20px;
                     letter-spacing: 0;
                     color: #3A506B;
                     opacity: 1;
@@ -84,20 +84,20 @@
     position: relative;
     .teacher_information{
         img{
-            max-width: 7.3333335rem;
-            max-height: 7.3333335rem;
-            border: 0.13333334rem solid #5BC0BE;
-            border-radius: 6.6666665rem;
+            max-width: 110px;
+            max-height: 110px;
+            border: 2px solid #5BC0BE;
+            border-radius: 100px;
         }
     }
     .Task{
         display: flex;
         flex-direction: column;
-        margin:0.6666667rem;
-        height: 8.0rem;
-        width: 65.0rem;
-        border: 0.06666667rem solid #707070;
-        border-radius: 0.53333336rem;
+        margin:10px;
+        height: 120px;
+        width: 975px;
+        border: 1px solid #707070;
+        border-radius: 8px;
         .Task_Head{
             margin: 0 1rem;
             margin-top: 1rem;

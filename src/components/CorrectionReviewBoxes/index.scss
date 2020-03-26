@@ -1,11 +1,11 @@
 .correctionBox{
-    border: 0.06666667rem solid #707070;
-    border-radius: 0.53333336rem;
+    border: 1px solid #707070;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    height: 7.8rem;
-    width:64.73333rem;
-    margin: 2.3333333rem;
+    height: 117px;
+    width:971px;
+    margin: 35px;
     
 
     .correctionBoxHeader{
@@ -13,20 +13,20 @@
         flex-direction:row;
         color:#1C2541;
         font-weight:normal;
-        font-size:1.3333334rem;
-        margin-top:0.33333334rem;
-        margin-left:1.2rem;
+        font-size:20px;
+        margin-top:5px;
+        margin-left:18px;
         align-items:center;
         justify-content: space-between;
-        margin-right:1.1333333rem;
+        margin-right:17px;
         .correctionDifficulty{
-            font-size:1.0666667rem;
+            font-size:16px;
             text-align:center;
             background-color:#19BA3F62;
-            border: 0.06666667rem solid #19BA3F;
-            width:4.6666665rem;
-            height:1.6666666rem;
-            border-radius:0.8666667rem;
+            border: 1px solid #19BA3F;
+            width:70px;
+            height:25px;
+            border-radius:13px;
             p{
                 padding:0;
                 margin:0;
@@ -38,7 +38,7 @@
         flex-direction:row;
      
         color:#1C2541;
-        font-size:1.3333334rem;
+        font-size:20px;
         width:100%;
         justify-content:space-between;
         align-items:baseline;
@@ -46,7 +46,7 @@
             display:flex;
             flex-direction:row;
             align-items:center;
-            margin-left:1.3333334rem;
+            margin-left:20px;
         
         }
         .correctionDate{
@@ -62,20 +62,20 @@
             display:flex;
             flex-direction:row-reverse;
             align-items:center;
-            margin-right:1.3333334rem;
+            margin-right:20px;
             
 
 
         }
         img{
-            width:1.3333334rem;
-            height:1.3333334rem;
+            width:20px;
+            height:20px;
             color:#1C2541;
             
         }
         p{
             margin:0;
-            padding:0.13333334rem;
+            padding:2px;
         }
 
     }

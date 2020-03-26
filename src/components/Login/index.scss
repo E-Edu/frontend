@@ -8,24 +8,24 @@
 		padding: 0;
 		background: white;
 		text-align: center;
-		border-radius: 0.26666668rem;
+		border-radius: 4px;
 		color: #000033;
-		-moz-box-shadow: 0 0 0.6666667rem #888;
-		-webkit-box-shadow: 0 0 0.6666667rem #888;
-		box-shadow: 0 0 0.6666667rem #888;
-		-o-box-shadow: 0 0 0.6666667rem #888;
+		-moz-box-shadow: 0 0 10px #888;
+		-webkit-box-shadow: 0 0 10px #888;
+		box-shadow: 0 0 10px #888;
+		-o-box-shadow: 0 0 10px #888;
 
 		/*field that displays the text and all buttons and input-fields of the login*/
 		.box-inhalt {
 			margin-top: -10%;
 		} /*sets size and form of the input-boxes for password and email*/
 		.input-box {
-			border-radius: 0.4rem;
-			padding: 0.26666668rem;
+			border-radius: 6px;
+			padding: 4px;
 			outline: none;
-			border: 0.06666667rem solid #0b132b;
+			border: 1px solid #0b132b;
 			width: 90%;
-			margin: 0.6666667rem auto;
+			margin: 10px auto;
 
 			/*sets size of the actual inputfields in the input-boxes*/
 			input {
@@ -37,11 +37,11 @@
 		}
 		/*sets the form and size of all buttons*/
 		.button {
-			border-radius: 0.4rem;
-			padding: 0.26666668rem;
+			border-radius: 6px;
+			padding: 4px;
 			outline: #0b132b;
-			border: 0.06666667rem solid #0b132b;
-			margin: 0.6666667rem auto;
+			border: 1px solid #0b132b;
+			margin: 10px auto;
 			width: 70%;
 			background: none;
 		}
@@ -53,13 +53,13 @@
 		/*sets size and color of the login-button*/
 		#login {
 			background: #5bc0be;
-			margin: 0.6666667rem auto;
+			margin: 10px auto;
 			border-color: #303030;
 			width: 70%;
 		}
 		/*sets the size of the google-icon in the google-login-field*/
 		#googleBild {
-			width: 1.0rem;
+			width: 15px;
 
 			padding: none;
 		}
@@ -67,13 +67,13 @@
 		#google-login {
 			width: 70%;
 			background: none;
-			margin: 0.6666667rem auto;
-			font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
-			border-radius: 0.6666667rem;
-			padding: 0.26666668rem;
+			margin: 10px auto;
+			font-family: Medium 80px/129px Hind Siliguri;
+			border-radius: 10px;
+			padding: 4px;
 			outline: #0b132b;
 
-			border: 0.06666667rem solid #0b132b;
+			border: 1px solid #0b132b;
 		}
 		/*sets the position of the two eye-icons in the password-field*/
 		.eye {
@@ -90,18 +90,18 @@
 			height: 100%;
 			display: flex;
 			flex-direction: column;
-			padding: 0 5.0rem;
+			padding: 0 75px;
 		}
 
 		/*sets size and form of the input-boxes for password and email*/
 		.input-box {
-			border-radius: 0.4rem;
-			padding: 0.26666668rem;
+			border-radius: 6px;
+			padding: 4px;
 			outline: none;
-			border: 0.06666667rem solid #0b132b;
+			border: 1px solid #0b132b;
 			width: 90%;
 			position: relative;
-			margin: 0.6666667rem auto;
+			margin: 10px auto;
 			/*sets size of the actual inputfields in the input-boxes*/
 			input {
 				width: 100%;
@@ -115,11 +115,11 @@
 		/*sets the form and size of all buttons*/
 		.button,
 		button {
-			border-radius: 0.4rem;
-			padding: 0.26666668rem;
+			border-radius: 6px;
+			padding: 4px;
 			outline: #0b132b;
-			border: 0.06666667rem solid #0b132b;
-			margin: 0.6666667rem auto;
+			border: 1px solid #0b132b;
+			margin: 10px auto;
 			width: 70%;
 			background: none;
 			font-size: 1rem;
@@ -134,14 +134,14 @@
 		/*sets size and color of the login-button*/
 		#login {
 			background: #5bc0be;
-			margin: 0.6666667rem auto;
+			margin: 10px auto;
 			border-color: #303030;
 			width: 70%;
 		}
 
 		/*sets the size of the google-icon in the google-login-field*/
 		#googleBild {
-			width: 1.0rem;
+			width: 15px;
 			padding: 0 0.5rem;
 		}
 
@@ -149,19 +149,19 @@
 		#google-login {
 			width: 70%;
 			background: none;
-			margin: 0.6666667rem auto;
-			font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
-			border-radius: 0.6666667rem;
-			padding: 0.26666668rem;
+			margin: 10px auto;
+			font-family: Medium 80px/129px Hind Siliguri;
+			border-radius: 10px;
+			padding: 4px;
 			outline: #0b132b;
-			border: 0.06666667rem solid #0b132b;
+			border: 1px solid #0b132b;
 		}
 
 		/*sets the position of the two eye-icons in the password-field*/
 		.eye {
 			position: absolute;
 			top: 0;
-			right: 0.53333336rem;
+			right: 8px;
 		}
 
 		/*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
