@@ -7,16 +7,17 @@ $lightGrey: #687D9A;
 $mediumBlue: #1C2541;
 $lightBlue: #96B4DD;
 
-.subjectTask {
+#subjectTask {
     font-family: Hind Siliguri;
-    margin-top:114px;
-    margin-left:224px;
+    margin-top: 114px;
+
 
     .subjectTaskContainer {
 
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 80vw;
 
         .subjectTaskContentHeader {
             display: flex;
@@ -27,11 +28,9 @@ $lightBlue: #96B4DD;
             align-items: baseline;
 
             .subjectTaskLeft {
-                margin-left: 109px;
                 margin-top: 34px;
 
                 .subjectTaskSubject {
-                    margin-right: 40px;
                     margin-top: 34px;
                     font-weight: bolder;
                     color: $bluegrey;
@@ -45,6 +44,7 @@ $lightBlue: #96B4DD;
                     color: $grey;
                     font-weight: bolder;
                     font-size: 32px;
+                    margin-left:2.5rem;
                 }
             }
 
@@ -52,12 +52,10 @@ $lightBlue: #96B4DD;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                margin-right: 248px;
 
                 img {
                     width: 20px;
                     height: 20px;
-                    margin-right: 6px;
                 }
 
                 .subjectTaskPoints {
@@ -78,87 +76,115 @@ $lightBlue: #96B4DD;
                 }
             }
         }
-    
     }
 
-    .progressDisplay{
-        margin-top:42px;
-        margin-left:460px;
-        width:100%;
-        .progressBar{
-            height:5px;
-            border:none;
-            background-color:#FFE2E2;
-            
-            margin-right:682px;
-            width:556px;
-            .progressPer{
-                height:5px;
-                background-color:#5BC0BE;
-                border:none;
-                width:40%;
+    .progressDisplay {
+        margin-top: 42px;
+        width: 37.5rem;
+
+
+        .progressBar {
+            height: 5px;
+            border: none;
+            background-color: #FFE2E2;
+            margin-right: 682px;
+            width: 37.5rem;
+
+            .progressPer {
+                height: 5px;
+                background-color: #5BC0BE;
+                border: none;
+                width: 40%;
             }
         }
-        .subjectTaskTitel{
-            margin-top:73px;
-            color:#3A506B;
-            font-size:32px;
-            font-weight:normal;
 
+        .subjectTaskTitel {
+            margin-top: 73px;
+            color: #3A506B;
+            font-size: 32px;
+            font-weight: normal;
         }
-        .subjectTaskDescription{
-            margin-top:30px;
-            color:#3A506B;
-            font-size:16px;
-            
-        }
-        .subjectTaskAnswer{
-            font-size:23px;
-            display:flex;
-            flex-direction:column;
-            width:100%;
-            align-items:center;
-            margin-left:600px;
-            
-            .subjectAnswerHeader {
-                display:flex;
-                flex-direction:row;
-                justify-content:space-between;
-                width: 37.5rem;
 
-                .subjectTaskAnswerfield{
-                    width:556px;
-                    height:48px;
-                    margin-top:17px;
-                    border: 1px solid #707070;
-                    border-radius: 8px;
-                    padding:10px;
-                  
-                }
-            }
+        .subjectTaskDescription {
+            margin-top: 30px;
+            color: #3A506B;
+            font-size: 16px;
+        }
+    }
+
+    .subjectTaskAnswer {
+        font-size: 23px;
+        display: flex;
+        flex-direction: column;
+        width: 37.5rem;
+        align-items: center;
+
+        .subjectTaskAnswerHeader {
+           /* display: flex;
+            flex-direction: row;
+            */
+            margin-right:auto;
+            margin-top:1.6rem;
+            justify-content: space-between;
+            /*width: 37.5rem;*/
+            width: 100%;
+
             
-           
-            .subjectTaskButtons{
-                height:49px;
-                width:215px;
-                font-size:23px;
-                font-weight:normal;
+        }
+        .subjectTaskAnswerfield {
+            width: 100%;
+            margin-top:1rem;
+
+            input {
+                border-radius: 8px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /*width: 37.5rem;*/
+                
                 border: 1px solid #707070;
-                .subjectTaskSkip{
-                    background:none;
-                   
-    
-                }
-                .subjectTaskNext{
-                    background-color: #5BC0BE;
-        
-                }
-    
+                width: 100%;
+                height: 2rem;
+                padding-left: 0.5rem;
+            }
+        }
+
+        .subjectTaskButtons {
+            height: 49px;
+            width: 100%;
+            
+            margin-top:3.4rem;
+            display:flex;
+            flex-direction:row;
+            
+            justify-content:space-between;
+
+
+            .subjectTaskSkip {
+                width:13.4rem;
+                background: none;
+                font-size: 23px;
+                font-weight: normal;
+                border: 1px solid #707070;
+                border-radius:8px;
+                text-align:center;
+               
+                
             }
 
+            .subjectTaskNext {
+                width:13.4rem;
+                background-color: #5BC0BE;
+                border: 1px solid #707070;
+                font-size: 23px;
+                font-weight: normal;
+                border-radius:8px;
+                text-align:center;
+                
+            }
+
+           
         }
-       
-        
     }
 }
 
