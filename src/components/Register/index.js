@@ -12,6 +12,18 @@ const emailRegex = RegExp(
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
+// Validates Form errors
+const formValid = ({ formErrors, ...rest }) => {
+    let valid = true;
+
+    Object.values(formErrors).forEach(val => val.length > 0 && (valid = false));
+    return valid;
+
+    Object.values(rest).forEach(val => {
+        val === null && (valid = false);
+    });
+};
+
 class Register extends React.Component {
     constructor(props) {
         super(props);
@@ -25,24 +37,32 @@ class Register extends React.Component {
             accepted: false,
             clicked: false,
             disabled: true,
-            persons: [],
             isPasswordShown: false,
             isPasswordShown2: false,
-            isPasswordValid: true
+            isPasswordValid: true,
+            formErrors: {
+                firsName: "",
+                lastName: "",
+                role: "",
+                email: "",
+                password: ""
+            }
         };
     }
 
     // ----------------- AXIOS -------------------------
-
+    /*
     componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/users`).then(res => {
             const user = res.data;
             this.setState({ persons: res.data });
             console.log(res);
         });
-    }
+	}
+	*/
 
     // ----------------- AXIOS END -------------------------
+    /*
     componentDidUpdate() {
         if (
             this.state.mail !== "" &&
@@ -57,7 +77,54 @@ class Register extends React.Component {
                 disabled: false
             });
         }
-    }
+	}
+	*/
+
+    handleChange = e => {
+        e.preventDefault();
+        const { name, value } = e.target;
+        let formErrors = this.state.formErrors;
+
+        console.log("Name: ", name);
+        console.log("Value: ", value);
+
+        switch (name) {
+            case "firstName":
+                formErrors.firstName =
+                    value.length < 3 ? "minimum 3 characters required " : "";
+                break;
+
+            case "lastName":
+                formErrors.lastName =
+                    value.length < 3 ? "minimum 3 characters required " : "";
+                break;
+
+            case "role":
+                formErrors.role = value === "" ? "Please select your role" : "";
+
+            case "email":
+                formErrors.email = emailRegex.test(value)
+                    ? ""
+                    : "invalid email address";
+                break;
+
+            case "password":
+                formErrors.password =
+                    value.length < 6 ? "minimum 6 characters required " : "";
+                break;
+            case "password2":
+                formErrors.password2 =
+                    value != value.password
+                        ? "Passwörter sind unterschiedlich"
+                        : "";
+                break;
+            default:
+                break;
+        }
+        this.setState({ formErrors, [name]: value }, () =>
+            console.log(this.state)
+        );
+    };
 
     // Stores text input into corresponding states
     handleInput = field => {
@@ -119,6 +186,7 @@ class Register extends React.Component {
     };
 
     // Sends the form - implemented on the submit button, not onSubmit (Form)
+    /*
     handleSubmit = event => {
         console.log("--- SUBMIT FUNKTION ---");
         event.preventDefault();
@@ -131,7 +199,7 @@ class Register extends React.Component {
             last_name: this.state.lastName,
             email: this.state.mail,
             role: this.state.role  <--- eventuell einen neuen State<int> machen
-        */
+       
         };
 
         axios
@@ -141,18 +209,36 @@ class Register extends React.Component {
                 console.log(res.data);
             });
     };
+*/
+    handleSubmit = e => {
+        e.preventDefault();
+
+        if (formValid(this.state)) {
+            console.log(`
+		-- SUBMITTING --
+		First Name: ${this.state.firstName}
+		Last Name: ${this.state.lastName}
+		Mail: ${this.state.email}
+		Password: ${this.state.password}
+		Role: ${this.state.role}
+		`);
+        } else {
+            console.log("FORM INVALID - ERROR MSG");
+        }
+    };
 
     render() {
         // constants for the toggle functions (eye and password)
         const { isPasswordShown } = this.state;
         const { isPasswordShown2 } = this.state;
         const { isPasswordValid } = this.state;
+        const { formErrors } = this.state;
 
         return (
             <div className="register">
                 <div className="box">
                     <h1 id="Headline">Register</h1>
-                    <form method="post" noValidate>
+                    <form onSubmit={this.handleSubmit} method="post" noValidate>
                         <div className="box-inhalt">
                             {(() => {
                                 if (this.state.clicked) {
@@ -160,7 +246,7 @@ class Register extends React.Component {
                                         <span>
                                             <div className="input-box second">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleChange}
                                                     type="email"
                                                     name="mail"
                                                     value={this.state.mail}
@@ -172,7 +258,7 @@ class Register extends React.Component {
 
                                             <div className="input-box second">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleChange}
                                                     value={this.state.password}
                                                     name="password"
                                                     type={
@@ -208,7 +294,7 @@ class Register extends React.Component {
 
                                             <div className="input-box second">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleChange}
                                                     value={this.state.password2}
                                                     name="password2"
                                                     type={
@@ -283,7 +369,7 @@ class Register extends React.Component {
                                         <span className="input-container">
                                             <div className="input-box">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleChange}
                                                     type="text"
                                                     name="firstName"
                                                     value={this.state.firstName}
@@ -295,7 +381,7 @@ class Register extends React.Component {
 
                                             <div className="input-box">
                                                 <input
-                                                    onChange={this.handleInput}
+                                                    onChange={this.handleChange}
                                                     type="text"
                                                     name="lastName"
                                                     value={this.state.lastName}
@@ -306,8 +392,9 @@ class Register extends React.Component {
                                             </div>
                                             <div className="btn-group roleBtn">
                                                 <button
-                                                    onClick={this.handleSpecial}
+                                                    onClick={this.handleChange}
                                                     value="Student"
+                                                    name="role"
                                                     className="btn-specialButton"
                                                     id="btn-specialButton1"
                                                 >
@@ -315,8 +402,9 @@ class Register extends React.Component {
                                                     <span>Student</span>
                                                 </button>
                                                 <button
-                                                    onClick={this.handleSpecial}
+                                                    onClick={this.handleChange}
                                                     value="Teacher"
+                                                    name="role"
                                                     className="btn-specialButton"
                                                     id="btn-specialButton1"
                                                 >
@@ -328,6 +416,7 @@ class Register extends React.Component {
                                                 <button
                                                     onClick={this.handleClick}
                                                     className="btn-UI btn-weiter"
+                                                    type="button"
                                                 >
                                                     Weiter
                                                 </button>
