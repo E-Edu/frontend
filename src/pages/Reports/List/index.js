@@ -1,24 +1,56 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './index.scss';
 import icon_info from '../../../assets/icons/info.svg';
 import icon_mail from '../../../assets/icons/mail.svg';
 import icon_teacher from '../../../assets/icons/teacher.svg';
-import icon_thumbs_up from '../../../assets/icons/thumbs-up.svg';
-import icon_thumbs_down from '../../../assets/icons/thumbs-down.svg';
-import Header from "../../../components/Header";
-import ReportInfo from "../../../components/ReportInfo";
+import ThumbsUpIcon from '../../../components/icons/thumbs-up.icon';
+import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
+import Header from '../../../components/Header';
+import ReportInfo from '../../../components/ReportInfo';
 import Modal from 'react-animated-modal';
-import Sidebar from "../../../components/Sidebar";
-import colorData from "../../../lib/Color_Config";
+import Sidebar from '../../../components/Sidebar';
+import colorData from '../../../lib/Color_Config';
+
 
 class Report extends Component {
     constructor(props) {
         super(props);
+        // like: 0 - not liked, 1 - liked, 2 -disliked
         this.state = {
-            teacher: props.teacher, likes: props.likes,
-            dislikes: props.dislikes, difficulty: props.difficulty, messages: props.messages, subject: props.subject
+            teacher: props.teacher, likes: Number(props.likes), dislikes: Number(props.dislikes),
+            difficulty: props.difficulty, messages: props.messages, subject: props.subject, like: (props.liked || 0),
+            thumbsInactive: "#3A506B", thumbGreen: colorData.Difficulty_color["Leicht"].border,
+            thumbRed: colorData.Difficulty_color["Schwer"].border
         }
     }
+
+    like = () => {
+        let likes = this.state.likes;
+        let dislikes = this.state.dislikes;
+        if (this.state.like === 1) {
+            this.setState({like: 0, likes: likes-1});
+        }
+        else {
+            if (this.state.like === 2) {
+                this.setState({dislikes: dislikes-1});
+            }
+            this.setState({like: 1, likes: likes+1});
+        }
+    };
+
+    dislike = () => {
+        let likes = this.state.likes;
+        let dislikes = this.state.dislikes;
+        if (this.state.like === 2) {
+            this.setState({like: 0, dislikes: dislikes-1});
+        }
+        else {
+            if (this.state.like === 1) {
+                this.setState({likes: likes-1});
+            }
+            this.setState({like: 2, dislikes: dislikes+1});
+        }
+    };
 
     showModal = () => {
         if (!this.state.showModal) {
@@ -44,7 +76,6 @@ class Report extends Component {
         const color = colorData.Difficulty_color[this.state.difficulty];
         let bgColor = [color.bg, color.border];
         return (
-            <div class="mainKontainer">
             <div className="report-component text-dark">
                 <Modal visible={this.state.showModal}
                     closemodal={() => {
@@ -63,15 +94,21 @@ class Report extends Component {
                             display: "flex", alignItems: "center", marginRight: 20,
                             width: 400, right: 0, justifyContent: "flex-end"
                         }}>
-                            <img style={{marginLeft: 10}} src={icon_thumbs_up} alt="thumps-up-icon"/>
-                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.props.likes}</span>
+                            <div style={{marginLeft: 10}} onClick={this.like}>
+                                <ThumbsUpIcon stroke={this.state.like === 1 ?
+                                  this.state.thumbGreen : this.state.thumbsInactive} />
+                            </div>
+                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.state.likes}</span>
                         </div>
                         <div style={{
                             display: "flex", alignItems: "center", marginRight: 20,
                             width: 400, right: 0, justifyContent: "flex-end"
                         }}>
-                            <img style={{marginLeft: 10}} src={icon_thumbs_down} alt="thumps-down-icon"/>
-                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.props.dislikes}</span>
+                            <div style={{marginLeft: 10}} onClick={this.dislike}>
+                                <ThumbsDownIcon stroke={this.state.like === 2 ?
+                                  this.state.thumbRed : this.state.thumbsInactive} />
+                            </div>
+                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.state.dislikes}</span>
                         </div>
                         <span style={{
                             display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
@@ -99,7 +136,6 @@ class Report extends Component {
                     </div>
                 </div>
             </div>
-            </div>
         );
     }
 
@@ -119,7 +155,8 @@ class ReportsList extends Component {
                 <Sidebar active="reports/list"/>
                 <div id="main">
                     <h1 className="text-dark ReportText-content">Reports</h1>
-                    <div style={{display: "flex", flexDirection: "column"}}>
+                    <div style={{display: "flex", flexDirection: "column", justifyContent: "center",
+                        alignItems: "center"}}>
                         <Report subject="Mathe | Grundrechnen | Plus" messages="20" teacher="Herr Lehrer Mustermann"
                                 likes="3" dislikes="178" difficulty="Leicht"/>
                         <Report subject="Englisch | Grammatik | Komma" messages="100" teacher="Herr Lehrer Mustermann"
