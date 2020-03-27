@@ -16,7 +16,8 @@ $lightBlue: #96B4DD;
         border: 1px solid black;
         border-radius: 8px;
         padding: 0.8rem;
-        width: 360px;
+        min-width: 280px;
+        width:20vw;
         margin-bottom: 1rem;
 
         .iconContainer {

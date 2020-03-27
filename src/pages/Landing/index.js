@@ -23,9 +23,11 @@ class Landing extends Component {
                             return <Redirect exact to={this.state.redirect} />;
                         }
                     })()}
+
+                    {/*TODO Route zurück auf /login /register*/}
                     <Route
                         exact
-                        path={["/login", "/register"]}
+                        path={["/dashboard", "/dashboard"]}
                         render={() => {
                             if (!this.state.showModal && !this.state.redirect) {
                                 this.setState({ showModal: true });
@@ -41,8 +43,9 @@ class Landing extends Component {
                         }}
                         type="fadeIn"
                     >
-                        <Route exact path="/login" component={Login} />
-                        <Route exact path="/register" component={Register} />
+                    {/*TODO Route zurück auf /login /register*/}
+                        <Route exact path="/dashboard" component={Login} />
+                        <Route exact path="/dashboard" component={Register} />
                     </Modal>
 
                     <div id="content">
@@ -54,10 +57,10 @@ class Landing extends Component {
                             />
                         </div>
                         <div id="text-content">
-                            <h2>Education for all</h2>
+                            <h2>Education for everyone</h2>
                             <h4>
                                 E-Edu ist eine Lernplattform die im Rahmen des
-                                Hackathon #WirVsVirus vom Team "The Morpheus
+                                Hackathon <span>#WirVsVirus</span> vom Team "The Morpheus
                                 Tutorials" erstellt wurde.
                                 <br />
                                 E-Edu bietet eine Lernplattform für Schüler die

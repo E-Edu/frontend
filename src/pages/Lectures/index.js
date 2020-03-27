@@ -19,9 +19,9 @@ class Lecture extends React.Component {
                 {name: "Vektoren"},
                 {name: "Lineare Gleichungssysteme"},
                 {name: "Geraden berechnen"},
-                {name: "Ebenen in der VVektorrechnung"},
+                {name: "Ebenen in der Vektorrechnung"},
                 {name: "Lagebeziehung"}
-                ]
+            ]
         },
         {name: "Logik", fields: [{name: "Logik Aufgaben"}]},
         {
@@ -38,7 +38,8 @@ class Lecture extends React.Component {
                 {name: "Integralrechnung"}
             ]
         },
-    ]
+    ];
+
 
     render() {
         return (
