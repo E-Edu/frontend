@@ -16,6 +16,7 @@ import AddTeacher from "./pages/AddTeacher";
 import Tasklist from "./pages/Tasklist";
 import Profile from "./pages/Profile";
 import SubjectTask from "./pages/SubjectTask";
+import Lecture from "./pages/Lectures";
 
 class App extends Component {
     render() {
@@ -30,6 +31,7 @@ class App extends Component {
                 <Route path='/task/list' exact component={Tasklist}/>
                 <Route path='/task' exact component={Task}/>
                 <Route path='/task/result' exact component={Result}/>
+                <Route path='/task/lecture' exact component={Lecture}/>
                 {/*Task add*/}
                 {/*solve subject-task*/}
                 <Route path='/task/subject' exact component={SubjectTask}/>
