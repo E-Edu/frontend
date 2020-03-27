@@ -8,12 +8,11 @@ class ResultQuestion extends Component {
         super(props);
     }
 
-
     render() {
         return (
             <div className='resultQuestionbox'>
-                <div class='resultStatusBar' style={{backgroundColor: this.props.color}}></div>
-                <div class='resultContent'>
+                <div className='resultStatusBar' style={{backgroundColor: this.props.color}}/>
+                <div className='resultContent'>
                     <div className='resultTop'>
                         <div className='resultLeftTop'>
                             <p className='resultQuestionLabel'>Frage {this.props.index} </p>

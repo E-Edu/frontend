@@ -1,157 +1,149 @@
 .reportcontainer {
-    padding: 5%;
-    margin-top: 1rem;
     background: white;
-    /*text-align: center;*/
     border-radius: 0.26666668rem;
     color: #000033;
-    -moz-box-shadow: 0 0 0.6666667rem #888;
-    -webkit-box-shadow: 0 0 0.6666667rem #888;
-    box-shadow: 0 0 0.6666667rem #888;
-    -o-box-shadow: 0 0 0.6666667rem #888;
+    margin-top: 1rem;
+    padding: 5%;
 }
 
-.reportcontainer{
-    .topInfos{
+.reportcontainer {
+    .topInfos {
         display: flex;
         justify-content: space-between;
         margin-bottom: 2rem;
     }
-    .subjectPath{
-        font-size: 0.93333334rem;  
+
+    .subjectPath {
+        font-size: 0.93333334rem;
     }
-/*Infos an der Rechten seite*/
-    .InfosRight{
+
+    /*Infos an der Rechten seite*/
+    .InfosRight {
+        font-size: 0.93333334rem;
         text-align: right;
-        font-size:0.93333334rem;
-        width:49.5%;
+        width: 49.5%;
 
-
-        #likes{
-            display: flex;
+        #likes {
             align-items: center;
+            display: flex;
             justify-content: flex-end;
-            span{
-                margin-left: 1.5rem;
+
+            span {
+                color: #3A506B;
                 font: Regular 1.3333334rem/1.5333333rem Arimo;
                 letter-spacing: 0;
-                color: #3A506B;
+                margin-left: 1.5rem;
                 opacity: 1;
             }
-            img{
+
+            img {
+                height: 1.3333334rem;
                 margin-left: 0.5rem;
                 width: 1.3333334rem;
-                height: 1.3333334rem;
             }
         }
-        #teacher{
-            display: flex;
+
+        #teacher {
             align-items: center;
-            justify-content: flex-end;
-            img{
-                margin-left: 0.5rem;
-                width: 1.3333334rem;
-                height: 1.3333334rem;
-            }
-        }
-        #messages{
             display: flex;
-            align-items: center;
             justify-content: flex-end;
-            img{
+
+            img {
+                height: 1.3333334rem;
                 margin-left: 0.5rem;
                 width: 1.3333334rem;
-                height: 1.3333334rem;
             }
         }
-        
+
+        #messages {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                height: 1.3333334rem;
+                margin-left: 0.5rem;
+                width: 1.3333334rem;
+            }
+        }
+
     }
-/*Aufgaben Überschrift*/
-    .TaskName{
-        margin-top:0.33333334rem;
-        text-align: center;
+
+    /*Aufgaben Überschrift*/
+    .TaskName {
         font-size: 1.3333334rem;
+        margin-top: 0.33333334rem;
+        text-align: center;
     }
-/*Aufgaben Text*/
-    .TaskText{
-        margin-top:0.4rem;
-        max-height:6.6666665rem;
+
+    /*Aufgaben Text*/
+    .TaskText {
         font-size: 0.8rem;
+        margin-top: 0.4rem;
+        max-height: 6.6666665rem;
     }
-/*Behalte und Löschen Button*/  
-    .Buttons{
-        display:flex;
+
+    /*Behalte und Löschen Button*/
+    .Buttons {
+        display: flex;
         justify-content: center;
-        margin-top: 2rem;
-        .row-1{
-            display: flex;
-            max-height: 50%;
-            width: 40%;
-            vertical-align: center;
-            align-items: flex-start;
-            justify-content: space-between;
-
-
-
-
-        }
         margin-bottom: 1rem;
+        margin-top: 2rem;
+
+        .row-1 {
+            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+            max-height: 50%;
+            vertical-align: center;
+            width: 40%;
+        }
     }
 
     .half:active {
-        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver inset;
         transform: translateY(0.26666668rem);
     }
 
-    .half{
-        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver ;
-        width: 6.6666665rem;
+    .half {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 0.06666667rem solid #707070;
         border-radius: 0.53333336rem;
-        opacity: 1;
-        height: 2.5rem;
-        font: Regular 1.5333333rem Arimo;
         cursor: pointer;
+        font: Regular 1.5333333rem Arimo;
+        height: 2.5rem;
+        opacity: 1;
+        width: 6.6666665rem;
     }
 
-/* Fertig Button*/
-    #doneDiv{
+    /* Fertig Button*/
+    #doneDiv {
         display: flex;
         justify-content: center;
-    #done{
-        background: #5BC0BE 0% 0% no-repeat padding-box;
-        min-width: 40%;
-        justify-content: center;
-        justify-self: center;
-        
+
+        #done {
+            background: #5BC0BE 0% 0% no-repeat padding-box;
+            justify-content: center;
+            justify-self: center;
+            min-width: 40%;
+        }
+
+        .button {
+            background: #FFFFFF 0 0 no-repeat padding-box;
+            border: 0.06666667rem solid #707070;
+            border-radius: 0.53333336rem;
+            color: #3A506B;
+            cursor: pointer;
+
+            font: Regular 1.5333333rem/1.8rem Arimo;
+            height: 2.5rem;
+            letter-spacing: 0;
+            opacity: 1;
+            text-align: center;
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            transform: translateY(0.26666668rem);
+        }
     }
-    .button{
-        box-shadow: 0.33333334rem 0.33333334rem 0.33333334rem silver ;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 0.06666667rem solid #707070;
-        border-radius: 0.53333336rem;
-        opacity: 1;
-        height: 2.5rem;
-    
-        text-align: center;
-        font: Regular 1.5333333rem/1.8rem Arimo;
-        letter-spacing: 0;
-        color: #3A506B;
-        opacity: 1;
-        cursor: pointer;
-    
-    }
-
-
-    .button:active{
-        background-color: #3e8e41;
-        box-shadow: 0.33333334rem 0.33333334rem 0.6666667rem silver inset;
-        transform: translateY(0.26666668rem);
-    }
-
-    
-
-}
-
 }

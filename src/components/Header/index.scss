@@ -2,22 +2,22 @@ $Primary: #0b132b;
 $Second: #5bc0be;
 
 .headerNavbar {
-    position: fixed;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
-    top: 0.0rem;
-    left: 0.0rem;
-    width: 100%;
-    height: 5.3333335rem;
-    background: $Primary 0% 0% no-repeat padding-box;
     align-items: center;
+    background: $Primary 0% 0% no-repeat padding-box;
+    display: flex;
+    height: 5.3333335rem;
+    justify-content: space-between;
+    left: 0.0rem;
+    position: fixed;
+    top: 0.0rem;
+    width: 100%;
+    z-index: 3;
 
     .logo {
-        margin-left: 3.0rem;
+        align-items: center;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        margin-left: 3.0rem;
 
         #logoImg {
             height: 90%;
@@ -29,33 +29,33 @@ $Second: #5bc0be;
 	}
 
     #title {
-        z-index: 22;
+        color: $Second;
+        font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
+        letter-spacing: 0;
         margin: 0;
         padding-left: 2.0rem;
         text-align: left;
-        font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
-        letter-spacing: 0;
-        color: $Second;
+        z-index: 22;
     }
 
     .BTN_Log {
-        max-height: 30px;
-        width: 159px;
+        background-color: Transparent;
         border: 2px solid $Second;
         border-radius: 10px;
         font: 22px/42px Hind Siliguri;
         font-weight: 400;
-        background-color: Transparent;
-        text-decoration: none;
+        max-height: 30px;
         padding: 2.5px 26.21px;
+        text-decoration: none;
+        width: 159px;
     }
 
     #Button_Login {
-        color: #0b132b;
         background-color: $Second;
+        color: #0b132b;
         margin-right: 3.7333333rem;
-        transition: all 0.5s;
         padding: 2.5px 40px;
+        transition: all 0.5s;
     }
 
     #Button_Register {
@@ -68,13 +68,13 @@ $Second: #5bc0be;
     }
 
     #Button_Login:hover {
-        cursor: pointer;
         background-color: rgba(91, 192, 190, 0.8);
+        cursor: pointer;
     }
 
     #Button_Register:hover {
-        cursor: pointer;
         background-color: rgba(91, 192, 190, 0.3);
+        cursor: pointer;
     }
 
     #Button_Login:focus {
@@ -82,8 +82,8 @@ $Second: #5bc0be;
     }
 
     #Button_Register:hover {
-        cursor: pointer;
         background-color: rgba(91, 192, 190, 0.3);
+        cursor: pointer;
     }
 
     #Button_Register:focus {
@@ -99,10 +99,10 @@ $Second: #5bc0be;
     }
 
     .BTN_Dash {
-        margin: 0 1rem;
         background-color: transparent;
         border: none;
         color: $Second;
+        margin: 0 1rem;
     }
 
     #Button_Info:hover {
