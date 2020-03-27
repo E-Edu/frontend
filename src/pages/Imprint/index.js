@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import Header from '../../components/Header';
+import Sidebar from "../../components/Sidebar";
 
 class Imprint extends Component {
 	render() {
