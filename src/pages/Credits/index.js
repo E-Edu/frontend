@@ -102,6 +102,7 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/UnlimitedBytes/">UnlimitedBytes</a>
                                 <a className="credits-name" href="http://github.com/Flam3rboy">Samuel</a>
                                 <a className="credits-name" href="https://github.com/Stefan080106">Stefan Arnold</a>
+                                <a className="credits-name" href="https://github.com/404lea">Lea Laufner</a>
                                 <a className="credits-name" href="https://github.com/LukeTimeWalker">LukeTimeWalker</a>
                                 <a className="credits-name" href="https://github.com/kquatsch">kquatsch</a>
                                 <a className="credits-name" href="https://github.com/Johannes1997">GoodCarp</a>
@@ -118,7 +119,6 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/lennardxx">Dummerle</a>
                                 <a className="credits-name" href="https://github.com/abluemer">peaksen</a>
                                 <a className="credits-name" href="https://github.com/Robby3St">Robin</a>
-                                <a className="credits-name" href="https://github.com/404lea">Lea Laufner</a>
                                 <a className="credits-name" href="https://github.com/skittlesvampir">Ben</a>
                                 <a className="credits-name" href="https://github.com/l7jazz">LinusFH</a>
                                 <a className="credits-name" href="https://github.com/MichaelNiers">Sharacan</a>
@@ -127,6 +127,9 @@ class Credits extends Component {
                             </div>
                             <div className="design">
                                 <h4 className="cerdits-heading">Design/Layout</h4>
+                                <a className="credits-name" href="https://github.com/NilocLP">Niloc</a>
+                                <a className="credits-name" href="https://github.com/adrian-goe">Adrian Görisch</a>
+                                <a className="credits-name" href="https://www.sepidehadelpour.design">Sepideh Adelpour</a>
                                 <a className="credits-name" href="https://github.com/post-rex">postrex</a>
                                 <a className="credits-name" href="https://github.com/adamane">adamane</a>
                                 <a className="credits-name" href="https://github.com/RedstoneMedia">RedstoneMedia</a>
@@ -135,10 +138,7 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/Baumeister28">Paul</a>
                                 <a className="credits-name" href="https://github.com/xxnetkw">xxnetkw</a>
                                 <a className="credits-name" href="https://github.com/DevMimas">Marius</a>
-                                <a className="credits-name" href="https://github.com/adrian-goe">Adrian Görisch</a>
                                 <a className="credits-name" href="https://github.com/alex26052005">Let_gaming</a>
-                                <a className="credits-name" href="https://www.sepidehadelpour.design">Sepideh Adelpour</a>
-                                <a className="credits-name" href="https://github.com/NilocLP">Niloc</a>
                             </div>
                         </div>
                     </div>
