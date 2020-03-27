@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './index.scss';
-import Header from '../../components/Header';
-import Sidebar from '../../components/Sidebar';
 import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes';
 
 
@@ -15,23 +13,18 @@ class CorrectionReview extends Component {
     render() {
         return (
             <div>
-                <Header side='Dashboard'/>
-                <Sidebar active="correction/review"/>
                 <div className='correctionContent' id="main">
                     <div className='correctionHeader'>
                         <h1>Korrektur</h1>
                         <button className='correctionMode'>Korrekturmodus</button>
                     </div>
                     <div className='box'>
-
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
                         <CorrectionReviewBoxes/>
-
-
                     </div>
                 </div>
             </div>

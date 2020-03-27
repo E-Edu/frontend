@@ -1,11 +1,8 @@
 import React from 'react';
 import './index.scss';
-import Header from '../../components/Header';
 
 import User from '../../assets/icons/user.svg';
 import Users from '../../assets/icons/users.svg';
-
-import Sidebar from '../../components/Sidebar';
 import {Link} from "react-router-dom";
 
 class SubjectTask extends React.Component {
@@ -23,15 +20,8 @@ class SubjectTask extends React.Component {
     render() {
         return (
             <div>
-                <Header side="Dashboard"/>
-                <Sidebar active="settings"/>
-
-
                 <div id='main'>
-
-
                     <div className='subjectTask' id='subjectTask'>
-
                         <div className='subjectTaskContainer'>
                             <div className='subjectTaskContentHeader'>
                                 <div className='subjectTaskLeft'>
@@ -80,7 +70,7 @@ class SubjectTask extends React.Component {
                                 </div>
 
                                 <div className='subjectTaskButtons'>
-                                    <Link to='/task/result' style={{textDecoration: 'none' , color: "inherit"}}>
+                                    <Link to='/task/result' style={{textDecoration: 'none', color: "inherit"}}>
                                         <button className='subjectTaskSkip'>
                                             Überspringen
                                         </button>

@@ -44,8 +44,6 @@ class Lecture extends React.Component {
     render() {
         return (
             <div id="lecture">
-                <Header side="Dashboard"/>
-                <Sidebar active="settings"/>
 
                 <div id='main'>
                     <TaskHeader module="Mathe"/>

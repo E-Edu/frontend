@@ -5,17 +5,9 @@ import Header from '../../components/Header';
 import Sidebar from "../../components/Sidebar";
 
 class Settings extends Component {
-    componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
-    }
-
     render() {
         return (
             <div>
-                <Header side='Dashboard'/>
-                <Sidebar active="settings"/>
                 <div className="settings" id="main">
                     <h1 className="text-dark">Einstellungen</h1>
                     <div className="settingsContent">

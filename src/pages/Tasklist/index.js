@@ -48,12 +48,6 @@ class Tasklist extends React.Component {
         }
     }
 
-    componentDidMount() {
-        const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
-    }
-
     OnChangeSearch = () => {
         this.setState({
             Search: document.getElementById("site-search").value
@@ -64,8 +58,6 @@ class Tasklist extends React.Component {
     render() {
 
         return <div>
-            <Header side='Dashboard'/>
-            <Sidebar active="task/list"/>
             <div className="Tasklist" id="main">
                 <div className='resultContentHeader'>
                     <div className='resultLeft'>

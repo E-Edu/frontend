@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './index.scss';
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 
 class Credits extends Component {
     constructor(props) {
@@ -12,7 +10,6 @@ class Credits extends Component {
 
     render() {
         return <div className='credits'>
-            <Header side='Landing'/>
             <div className="content">
                 <div className="picture">
                     <img src="assets/credits-heroimage.svg" alt="Hero image"/>
@@ -63,7 +60,8 @@ class Credits extends Component {
                                 <a className="credits-name" href="https://github.com/DerIshak">Ishak</a>
                                 <a className="credits-name" href="https://github.com/Cra-git">Tobias</a>
                                 <a className="credits-name" href="https://github.com/EiSiMo">EiSiMo</a>
-                                <a className="credits-name" href="https://github.com/timon-schelling/">Timon Schelling</a>
+                                <a className="credits-name" href="https://github.com/timon-schelling/">Timon
+                                    Schelling</a>
                                 <a className="credits-name" href="https://github.com/FabiKl">Fabian</a>
                                 <a className="credits-name" href="https://github.com/Bmbus">Jannes</a>
                                 <a className="credits-name" href="https://github.com/MrDrache333">Keno</a>
@@ -129,7 +127,8 @@ class Credits extends Component {
                                 <h4 className="cerdits-heading">Design/Layout</h4>
                                 <a className="credits-name" href="https://github.com/NilocLP">Niloc</a>
                                 <a className="credits-name" href="https://github.com/adrian-goe">Adrian Görisch</a>
-                                <a className="credits-name" href="https://www.sepidehadelpour.design">Sepideh Adelpour</a>
+                                <a className="credits-name" href="https://www.sepidehadelpour.design">Sepideh
+                                    Adelpour</a>
                                 <a className="credits-name" href="https://github.com/post-rex">postrex</a>
                                 <a className="credits-name" href="https://github.com/adamane">adamane</a>
                                 <a className="credits-name" href="https://github.com/RedstoneMedia">RedstoneMedia</a>
@@ -144,7 +143,6 @@ class Credits extends Component {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>;
     }
 }

@@ -1,0 +1,26 @@
+#pageLayout {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    /*grid-template: "header header" "sidebar content" "footer footer";*/
+    grid-template-rows: 86px 1fr auto;
+    grid-template-columns: 123px auto;
+
+    .headerNavbar {
+        grid-area: header;
+    }
+
+    #Menu{
+        grid-area: sidebar;
+    }
+
+    #layoutContainer {
+        grid-area: content;
+        align-self: stretch;
+    }
+
+    .FooterNavbar {
+        grid-area: footer;
+        align-self: end;
+    }
+}
