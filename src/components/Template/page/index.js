@@ -1,27 +1,42 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './index.scss';
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
+import Header from "../../Header";
+import Sidebar from "../../Sidebar";
+import Footer from "../../Footer";
+import {withRouter} from 'react-router-dom';
 
+class PageLayout extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-class Template extends Component {
-	constructor(props) {
-		super(props);
-	}
-	state = {};
-	componentDidMount() {
-		const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
-		const left = document.getElementById('Menu').clientWidth;
-		document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
-	}
-	render() {
-		return (<div>
-			<Header side='Dashboard'/>
-			<Sidebar active="PAGE-ROUTE"/>
-			<div id="main">
-			</div>
-		</div>);
-	}
+    state = {};
+
+    hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
+
+    renderSitebar() {
+        const route = this.props.location.pathname;
+        return this.hiddenSidebarPages.includes(route);
+    }
+
+    gridLayout() {
+        if (this.renderSitebar()) {
+            return "'header header' 'content content' 'footer footer'";
+        }
+        return "'header header' 'sidebar content'";
+    }
+
+    render() {
+        return (
+            <div id="pageLayout" style={{gridTemplateAreas: this.gridLayout()}}>
+                <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'}/>
+                <Sidebar active="PAGE-ROUTE" visible={this.renderSitebar()}/>
+                <div id="layoutContainer">
+                    {this.props.children}
+                </div>
+                <Footer visible={!this.renderSitebar()}/>
+            </div>);
+    }
 }
 
-export default Template;
+export default withRouter(PageLayout);

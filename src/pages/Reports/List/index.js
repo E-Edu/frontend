@@ -142,17 +142,11 @@ class Report extends Component {
 }
 
 class ReportsList extends Component {
-    componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
-    }
+
 
     render() {
         return (
             <div>
-                <Header side='Dashboard'/>
-                <Sidebar active="reports/list"/>
                 <div id="main">
                     <h1 className="text-dark ReportText-content">Reports</h1>
                     <div style={{display: "flex", flexDirection: "column", justifyContent: "center",

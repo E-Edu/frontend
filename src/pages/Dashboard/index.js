@@ -1,7 +1,5 @@
 import React from "react";
 import "./index.scss";
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
@@ -62,8 +60,6 @@ class dashboard extends React.Component {
     render() {
         return (
             <div id="dashboard">
-                <Header side="Dashboard"/>
-                <Sidebar active="dashboard"/>
                 <div className="Subjekts_content">
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
                         <Subjekt Subject="Deutsch" Underline="Sprachen lernen - Babel" Weekendtask="4/5" Points="213"
@@ -74,7 +70,8 @@ class dashboard extends React.Component {
                                  Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Informatik" Underline="0110011111000101110001010100011111011" Weekendtask="4/5" Points="213"
+                        <Subjekt Subject="Informatik" Underline="0110011111000101110001010100011111011"
+                                 Weekendtask="4/5" Points="213"
                                  Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
@@ -82,19 +79,24 @@ class dashboard extends React.Component {
                                  Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Politik" Underline="Du Schaffst das" Weekendtask="4/5" Points="213" Community_Points="21.323"/>
+                        <Subjekt Subject="Politik" Underline="Du Schaffst das" Weekendtask="4/5" Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Physik" Underline="Underline" Weekendtask="4/5" Points="213" Community_Points="21.323"/>
+                        <Subjekt Subject="Physik" Underline="Underline" Weekendtask="4/5" Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Biologie" Underline="Underline" Weekendtask="4/5" Points="213" Community_Points="21.323"/>
+                        <Subjekt Subject="Biologie" Underline="Underline" Weekendtask="4/5" Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Religion" Underline="Underline" Weekendtask="4/5" Points="213" Community_Points="21.323"/>
+                        <Subjekt Subject="Religion" Underline="Underline" Weekendtask="4/5" Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
                     <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Chemie" Underline="Underline" Weekendtask="4/5" Points="213" Community_Points="21.323"/>
+                        <Subjekt Subject="Chemie" Underline="Underline" Weekendtask="4/5" Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
                 </div>
             </div>

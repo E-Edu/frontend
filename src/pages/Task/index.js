@@ -16,8 +16,6 @@ class Template extends Component {
 
 	render() {
 		return (<div>
-			<Header side='Dashboard'/>
-			<Sidebar active="task"/>
 			<div id="main">
 			</div>
 		</div>);

@@ -1,126 +1,141 @@
-.resultContentHeader{
-    width:100%;
-    .resultLeft{
-        margin-left:12.666667rem;
+.resultContentHeader {
+    width: 100%;
 
-        .resultSubject{
-            margin-right:2.6666667rem;
-            margin-top:2.2666667rem;
-            font-weight: bolder;
+    .resultLeft {
+        margin-left: 12.666667rem;
+
+        .resultSubject {
             color: #0B132B;
             font-size: 4.0rem;
+            font-weight: bolder;
+            margin-right: 2.6666667rem;
+            margin-top: 2.2666667rem;
         }
     }
 
-        .Middle{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-        .resultCenter{
+    .Middle {
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
-            .resultSubject{
-                margin-right:2.6666667rem;
-                margin-top:2.2666667rem;
+        .resultCenter {
+
+            .resultSubject {
+                display: flex;
                 font-size: 1.3333334rem;
-                display:flex;
+                margin-right: 2.6666667rem;
+                margin-top: 2.2666667rem;
 
-                .icon{
+                .icon {
                     margin-right: 0.5rem;
-                }                
-                .points{
+                }
+
+                .points {
                     color: #3A506B;
                 }
-            
+
             }
         }
     }
-        .resultRight{
-            margin-right:7.266667rem;
-            .resultSubject{
-                margin-right:2.6666667rem;
-                margin-top:2.2666667rem;
-                font-weight: bolder;
-                color: #0B132B;
-                font-size: 4.0rem;
-                #input-search {
-                    width: 26.066668rem;
-                    height: 2.8666666rem;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    border: 0.06666667rem solid #3A506B;
-                    border-radius: 0.53333336rem;
-                    div{
-                        padding: 0 0.5rem;
-                        padding-bottom: 0.33333334rem;
-                    }
-                }
-                input{
-                    width: 26.066668rem;
-                    height: 2.8666666rem;
-                    background: transparent;
-                    opacity: 1;
-                    border: none;
-                    text-align: left;
-                    font-size: 1.3333334rem;
-                    letter-spacing: 0;
-                    color: #3A506B;
-                    opacity: 1;
-                }
-                input:focus{
-                    outline: none;
+
+    .resultRight {
+        margin-right: 7.266667rem;
+
+        .resultSubject {
+            color: #0B132B;
+            font-size: 4.0rem;
+            font-weight: bolder;
+            margin-right: 2.6666667rem;
+            margin-top: 2.2666667rem;
+
+            #input-search {
+                align-items: center;
+                border: 0.06666667rem solid #3A506B;
+                border-radius: 0.53333336rem;
+                display: flex;
+                flex-direction: row;
+                height: 2.8666666rem;
+                width: 26.066668rem;
+
+                div {
+                    padding: 0 0.5rem;
+                    padding-bottom: 0.33333334rem;
                 }
             }
+
+            input {
+                background: transparent;
+                border: none;
+                color: #3A506B;
+                font-size: 1.3333334rem;
+                height: 2.8666666rem;
+                letter-spacing: 0;
+                opacity: 1;
+                opacity: 1;
+                text-align: left;
+                width: 26.066668rem;
+            }
+
+            input:focus {
+                outline: none;
+            }
         }
-    
+    }
 
 }
-.Tasklist{
+
+.Tasklist {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     position: relative;
-    .teacher_information{
-        img{
-            max-width: 7.3333335rem;
-            max-height: 7.3333335rem;
+
+    .teacher_information {
+        img {
             border: 0.13333334rem solid #5BC0BE;
             border-radius: 6.6666665rem;
+            max-height: 7.3333335rem;
+            max-width: 7.3333335rem;
         }
     }
-    .Task{
-        display: flex;
-        flex-direction: column;
-        margin:0.6666667rem;
-        height: 8.0rem;
-        width: 65.0rem;
+
+    .Task {
         border: 0.06666667rem solid #707070;
         border-radius: 0.53333336rem;
-        .Task_Head{
-            margin: 0 1rem;
-            margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        height: 8.0rem;
+        margin: 0.6666667rem;
+        width: 65.0rem;
+
+        .Task_Head {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            .Task_Head_Elements{
+            margin: 0 1rem;
+            margin-top: 1rem;
+
+            .Task_Head_Elements {
                 display: flex;
                 flex-direction: row;
-                .Task_element{
+
+                .Task_element {
                     display: flex;
                     flex-direction: row;
                     padding: 0 1rem;
                 }
             }
-            span{
+
+            span {
                 padding: 0 0.3rem;
             }
         }
-        .Task_Bottom{
-            margin: 0 1rem;
+
+        .Task_Bottom {
             display: flex;
             flex-direction: row;
+            margin: 0 1rem;
         }
     }
 }

@@ -16,6 +16,5 @@ stories.add('default', () => {
 stories.add('dynamicInput', () => {
     const label = text("Name", data.name);
     const fields = object("Fields", data.fields);
-
     return <LectureGroup name={label} fields={fields}/>;
 });

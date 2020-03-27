@@ -10,20 +10,18 @@ $lightBlue: #96B4DD;
 #lecture {
 
     #main {
-        margin-top: 90px;
-        margin-left: 125px;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
 
         #TaskHeader {
-            width: 90%;
             margin-bottom: 2.5rem;
+            width: 90%;
         }
 
         .LectureGroupe {
+            margin-bottom: 2.5rem;
             width: 90%;
-            margin-bottom: 2rem;
         }
     }
 

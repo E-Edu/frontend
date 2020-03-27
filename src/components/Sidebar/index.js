@@ -26,8 +26,10 @@ class MenuElement extends Component {
     render() {
         let spacer = "";
         if (this.props.spacer) {
-            spacer = <div style={{width: 60, borderWidth: 2, backgroundColor: "#ffffff", borderRadius: 2,
-                height: 1, alignSelf: "center"}}/>;
+            spacer = <div style={{
+                width: 60, borderWidth: 2, backgroundColor: "#ffffff", borderRadius: 2,
+                height: 1, alignSelf: "center"
+            }}/>;
         }
         let color;
         // get the right filename, if active or not
@@ -38,7 +40,12 @@ class MenuElement extends Component {
         }
         let nameText = '';
         if (this.state.name) {
-            nameText = <p style={{margin: '0 0.8rem', overflowWrap: 'break-word', textAlign: 'center', color: color}}>{this.state.name}</p>;
+            nameText = <p style={{
+                margin: '0 0.8rem',
+                overflowWrap: 'break-word',
+                textAlign: 'center',
+                color: color
+            }}>{this.state.name}</p>;
         }
 
         const File = icons[this.state.file];
@@ -83,7 +90,12 @@ class Sidebar extends Component {
             }
             return "";
         });
+
+        if (this.props.visible) {
+            return null;
+        }
         return (
+
             <div id='Menu'>
                 <div className="topIcons">
                     {sitesHtml}

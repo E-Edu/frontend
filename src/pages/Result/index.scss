@@ -9,25 +9,25 @@ $lightBlue: #96B4DD;
 
 .result {
     font-family: Hind Siliguri;
-    margin-top: 100px;
 
     .resultContainer {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
 
         #TaskHeader {
-            width: 90%;
             margin-bottom: 2.5rem;
+            width: 90%;
         }
 
         .resultContentHeader {
+            align-items: baseline;
             display: flex;
-            width: 100%;
 
             flex-direction: row;
             justify-content: space-between;
-            align-items: baseline;
+            width: 100%;
 
             .resultLeft {
                 margin-left: 7.266667rem;
@@ -35,20 +35,20 @@ $lightBlue: #96B4DD;
 
 
                 .resultSubject {
-                    margin-right: 2.6666667rem;
-                    margin-top: 2.2666667rem;
-                    font-weight: bolder;
                     color: $bluegrey;
+                    font-family: Hind Siliguri;
                     font-size: 4.0rem;
                     font-weight: bolder;
-                    font-family: Hind Siliguri;
+                    font-weight: bolder;
+                    margin-right: 2.6666667rem;
+                    margin-top: 2.2666667rem;
 
                 }
 
                 .resultModule {
                     color: $grey;
-                    font-weight: bolder;
                     font-size: 2.1333334rem;
+                    font-weight: bolder;
                 }
             }
 
@@ -59,16 +59,16 @@ $lightBlue: #96B4DD;
                 margin-right: 16.533333rem;
 
                 img {
-                    width: 1.3333334rem;
                     height: 1.3333334rem;
                     margin-right: 0.4rem;
+                    width: 1.3333334rem;
                 }
 
                 .resultPoints {
-                    display: flex;
-                    flex-direction: row;
                     align-items: center;
                     color: $grey;
+                    display: flex;
+                    flex-direction: row;
                     font-size: 1.0666667rem;
                     font-weight: bolder;
 
@@ -84,19 +84,19 @@ $lightBlue: #96B4DD;
         }
 
         .resultEvaluation {
+            align-items: baseline;
+            color: $grey;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            align-items: baseline;
             font-size: 2.6666667rem;
-            color: $grey;
             font-weight: normal;
+            justify-content: space-between;
             width: 60.0rem;
 
             p {
-                margin: 0;
-                font-size: 2.1333334rem;
                 color: $grey;
+                font-size: 2.1333334rem;
+                margin: 0;
 
                 span {
                     color: $grey;
@@ -106,17 +106,17 @@ $lightBlue: #96B4DD;
         }
 
         .resultPointcount {
+            align-items: baseline;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: baseline;
-            width: 60.0rem;
             margin-top: 2.0rem;
+            width: 60.0rem;
 
             .resultNewPoints {
+                color: #1C2541 !important;
                 font-size: 4.0rem;
                 font-weight: bold;
-                color: #1C2541 !important;
 
             }
 
@@ -126,8 +126,8 @@ $lightBlue: #96B4DD;
                 justify-content: space-between;
 
                 p {
-                    font-size: 2.0rem;
                     color: $grey;
+                    font-size: 2.0rem;
                     font-weight: normal;
 
                     span {

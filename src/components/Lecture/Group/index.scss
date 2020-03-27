@@ -27,16 +27,11 @@ $lightBlue: #96B4DD;
         }
 
         .lectureGroupSubjects {
-            display: flex;
-            flex: 1;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1.3rem;
+            grid-template-columns: 1fr 1fr 1fr;
             width: 80%;
-
-            .lectureSubject {
-
-            }
         }
     }
 }

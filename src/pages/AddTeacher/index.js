@@ -5,8 +5,6 @@ import icon_x from '../../assets/icons/x.svg';
 import icon_teacher from '../../assets/icons/teacher.svg';
 import icon_user_plus from '../../assets/icons/user-plus.svg';
 import CheckIcon from '../../components/icons/check.icon';
-import Header from "../../components/Header";
-import Sidebar from "../../components/Sidebar";
 
 class AddRequest extends Component {
     render() {
@@ -99,8 +97,6 @@ class AddTeacher extends Component {
         });
         return (
             <div>
-                <Header side='Dashboard'/>
-                <Sidebar active="teacher/add"/>
                 <div id="main">
                     <div style={{marginLeft: 50}}>
                         <h1 className="text-dark AddTeacherText-content">Lehrer hinzufügen</h1>
