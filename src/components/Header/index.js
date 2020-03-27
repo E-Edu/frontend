@@ -11,7 +11,7 @@ class Header extends Component {
                 return (
                     <div className='headerNavbar'>
                         <div className="logo">
-                            <img id="logoImg" src="assets/logo.svg" alt=""/>
+                            <img id="logoImg" src="/assets/logo.svg" alt=""/>
                             <h1 id='title'>E-EDU</h1>
                         </div>
                         <div id='Button_Box_Landing'>
@@ -30,7 +30,7 @@ class Header extends Component {
                     <div className='headerNavbar'>
                             <Link to={'/'} style={{textDecoration: "none"}}>
                                 <div className="logo">
-                                    <img id="logoImg" src="assets/logo.svg" alt=""/>
+                                    <img id="logoImg" src="/assets/logo.svg" alt=""/>
                                     <h1 id='title'>E-EDU</h1>
                                 </div>
                             </Link>
