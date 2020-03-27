@@ -3,7 +3,7 @@ import './index.scss';
 import {ReactComponent as User} from '../../assets/icons/user.svg';
 import {ReactComponent as Users} from '../../assets/icons/users.svg';
 import {ReactComponent as Award} from '../../assets/icons/award.svg';
-import {ReactComponent as Search} from '../../assets/icons/search.svg';
+import {ReactComponent as Search} from '../../assets/icons/teacher.svg';
 import {ReactComponent as Circle} from '../../assets/icons/circle.svg';
 import SideBar from"../../components/Sidebar";
 import Header from "../../components/Header";
@@ -22,7 +22,7 @@ class ChooseTaskPackage extends Component{ //bei GraphQL Queries und Mutations l
             TestUri2: 'https://api.e-edu.the-morpheus.de/graphql'
             */
         });
-        try{
+      
         client.query({
             query: gql`
               {
@@ -33,9 +33,7 @@ class ChooseTaskPackage extends Component{ //bei GraphQL Queries und Mutations l
             `
           })
           .then(result => console.log(result));
-        }catch{
-            alert("Error");
-        }
+      
         super(props);
         this.state = {
             tasks: [],
