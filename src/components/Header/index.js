@@ -11,7 +11,7 @@ class Header extends Component {
                 return (
                     <div className='headerNavbar'>
                         <div className="logo">
-                            <img id="logoImg" src="assets/logo.svg" alt=""/>
+                            <img id="logoImg" src="/assets/logo.svg" alt=""/>
                             <h1 id='title'>E-EDU</h1>
                         </div>
                         <div id='Button_Box_Landing'>
@@ -30,12 +30,12 @@ class Header extends Component {
                     <div className='headerNavbar'>
                             <Link to={'/'} style={{textDecoration: "none"}}>
                                 <div className="logo">
-                                    <img id="logoImg" src="assets/logo.svg" alt=""/>
+                                    <img id="logoImg" src="/assets/logo.svg" alt=""/>
                                     <h1 id='title'>E-EDU</h1>
                                 </div>
                             </Link>
                         <div id='Button_Box_Dashboard'>
-                            <Link to="/imprint" className='BTN_Dash' id='Button_Info'>
+                            <Link to={{pathname: '/imprint', state: { prevPath: "Dashboard" }}} className='BTN_Dash' id='Button_Info' >
                                 <img src={Help_Image} alt='Help'/>
                             </Link>
                             <Link className='BTN_Dash' id='Button_Logout'>
