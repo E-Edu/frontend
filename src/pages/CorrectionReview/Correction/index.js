@@ -2,24 +2,24 @@ import React, { Component } from "react";
 import './index.scss';
 import Header from '../../../components/Header';
 import SideBar from '../../../components/Sidebar';
-import {ReactComponent as User} from '../../../assets/icons/user.svg';
-import {ReactComponent as Wrong} from '../../../assets/icons/wrong.svg';
-import {ReactComponent as Correct} from '../../../assets/icons/check.svg';
+import {ReactComponent as  UserIcon}  from '../../../assets/icons/user.svg';
+import {ReactComponent as CrossIcon} from '../../../assets/icons/x.svg';
+import  {ReactComponent as CheckIcon} from '../../../assets/icons/check.svg';
 
 class Correction extends Component{
     constructor(props){
         super(props);
         this.state={};
-
     }
+
     HandleCancelClick(){
         window.open('/dashboard',"_self");
     }
     SetAnswerAsWrong(){
-        
+        this.props.correctAnswer = false;
     }
     SetAnswerAsCorrect(){
-
+        this.props.correctAnswer = true;
     }
     componentDidMount() {
         const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
@@ -40,7 +40,7 @@ class Correction extends Component{
                     <text className="Head">Korrektur</text>
                 </header>
                 <div>
-                    <User className="UserImage"></User>
+                    <UserIcon  className="UserImage"/>
                     <text className="UserName">{UserName}</text>
                 </div>
                 <div>                        
@@ -48,12 +48,10 @@ class Correction extends Component{
                 </div>
                 <div>
                     <text className="Questions">Fragen</text>
-                    </div>
-                    <div> 
-        </div>
-             <LoadTask TaskID={id}
-             upDate = {this.Update}/>
-        <List/>   
+                </div>
+                <LoadTask TaskID={id}
+                upDate = {this.Update}/>
+                <List/>   
         </div>
         );
     }
@@ -143,9 +141,9 @@ class LoadTask extends React.Component{
         </div>
         <div>
             <button className="wrong" onClick={correctAnswer = false,this.SetAnswerAsWrong}>Falsch</button>
-            <Wrong className="WrongIcon"></Wrong>
-            <button className="correct">Richtig</button>
-            <Correct className="CorrectIcon" onClick={correctAnswer = true,this.SetAnswerAsCorrect}></Correct>
+            <CrossIcon className="WrongIcon"onClick={correctAnswer = false,this.SetAnswerAsWrong}/>
+            <button className="correct" onClick={correctAnswer = true,this.SetAnswerAsCorrect}>Richtig</button>
+            <CheckIcon className="CorrectIcon" onClick={correctAnswer = true,this.SetAnswerAsCorrect}/>
         </div>
      <div>
         <button className="Cancel" onClick={this.HandleCancelClick}>Abbrechen</button>
@@ -165,10 +163,10 @@ class LoadTask extends React.Component{
         window.open('/dashboard',"_self");
     }
     SetAnswerAsWrong(){
-        
+        this.props.correctAnswer = false;
     }
     SetAnswerAsCorrect(){
-
+        this.props.correctAnswer = true;
     }
    
 }
