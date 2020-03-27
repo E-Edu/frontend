@@ -13,7 +13,7 @@ class CorrectionReviewBoxes extends Component {
 
     render() {
         return (
-            <div className='correctionBox'>
+            <span className='correctionBox'>
                 <div className='correctionBoxHeader'>
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
                     <div className='correctionDifficulty'>
@@ -41,7 +41,7 @@ class CorrectionReviewBoxes extends Component {
                     </div>
 
                 </div>
-            </div>
+            </span>
 
 
         );

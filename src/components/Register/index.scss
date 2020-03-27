@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap");
 
+UserIcon {
+    margin-top: 0.26rem;
+}
+
 div.register {
     padding: 1rem;
-
+    width: auto;
+    height: auto;
+    min-height: 426.6px;
+    margin-right: 4rem;
+    margin-left: 4rem;
     form {
         margin-top: 7rem;
         font-family: "Hind Siliguri", sans-serif;
 
-        //font-family: Medium 80px/129px Hind Siliguri;
+        //font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
         a {
             text-decoration: none;
             transition: all 0.2s;
@@ -31,21 +39,22 @@ div.register {
         }
     }
 
-  /*
+    /*
   * white bachgroundcanvas
   */
     .box {
         width: 50vw;
-        height: 35vh;
+        min-height: 35vh;
+        height: auto;
         padding: 0;
         background: white;
         text-align: center;
-        border-radius: 4px;
+        border-radius: 0.26666668rem;
         color: #000033;
-        //-moz-box-shadow: 0 0 10px #888;
-        //-webkit-box-shadow: 0 0 10px #888;
-        //box-shadow: 0 0 10px #888;
-        //-o-box-shadow: 0 0 10px #888;
+        //-moz-box-shadow: 0 0 0.6666667rem #888;
+        //-webkit-box-shadow: 0 0 0.6666667rem #888;
+        //box-shadow: 0 0 0.6666667rem #888;
+        //-o-box-shadow: 0 0 0.6666667rem #888;
 
         // error class for form validation
 
@@ -57,13 +66,13 @@ div.register {
 
         /*sets size and form of the input-boxes for password and email*/
         .input-box {
-            border-radius: 6px;
-            padding: 4px;
+            border-radius: 0.4rem;
+            padding: 0.26666668rem;
             outline: none;
-            border: 1px solid #000033;
+            border: 0.06666667rem solid #000033;
             width: 100%;
             box-sizing: border-box;
-            margin: 10px 0;
+            margin: 0.6666667rem 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -77,67 +86,89 @@ div.register {
             }
         }
 
+        .active {
+            background-color: #5bc0be !important;
+            outline: none;
+        }
+
         .eye {
             cursor: pointer;
-            max-height: 24px;
+            max-height: 1.6rem;
         }
 
         /*sets the form and size of all buttons*/
         .button {
-            border-radius: 6px;
-            padding: 4px;
+            border-radius: 0.4rem;
+            padding: 0.26666668rem;
             outline: black;
-            border: 1px solid #000033;
-            margin: 10px auto;
+            border: 0.06666667rem solid #000033;
+            margin: 0.6666667rem auto;
             width: 70%;
 
             background: none;
         }
 
-        /* --------------- Basti -------------- */
+        // --------------- Basti --------------
+
         .input-box-initial {
             display: none;
         }
 
         .roleBtn {
             display: flex;
+            width: 100%;
+
+            div.btn {
+                // border-left: 1px solid #000033;
+                border-top: 1px solid #000033;
+                border-bottom: 1px solid #000033;
+
+                background-color: white;
+                //border-left: 1px solid #000033;
+                padding: 10px 24px;
+                cursor: pointer;
+                width: 50%;
+            }
 
             .btn-specialButton {
-                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-left: 1px solid #000033;
+                height: 1.75rem;
+                span {
+                    width: 90%;
+                }
+            }
+            .btn-specialButton2 {
+                border-right: 1px solid #000033;
             }
 
             .btn-specialButton:focus {
                 background-color: #5bc0be;
-                outline: 0em;
+                outline: none;
             }
         }
 
-        .btn-group button {
-            border: 1px solid #000033;
-            background-color: white;
-            border-left: none;
-            padding: 10px 24px;
-            cursor: pointer;
-            width: 45%;
-        }
-
-        .btn-group:after {
+        .btn-group .btn-group:after {
             content: "";
             clear: both;
             display: table;
         }
 
         .btn-group :first-child {
-            border: 1px solid #000033;
             border-radius: 6px 0 0 6px;
+            border-right: none;
         }
 
         .btn-group :last-child {
             border-radius: 0 6px 6px 0;
+            border-left: none;
         }
 
         .btn-group button:not(:last-child) {
-            border-right: none; /* Prevent double borders */
+            border-right: none;
+            /* Prevent double borders */
         }
 
         .btn-group button:hover {
@@ -149,27 +180,28 @@ div.register {
         }
 
         .btn-UI {
-            margin-left: 18px;
-            margin-right: 18px;
-            margin-top: 2px;
-            width: 230px;
-            height: 49px;
+            margin-left: 1.2rem;
+            margin-right: 1.2rem;
+            margin-top: 0.13333334rem;
+            width: 15.333333rem;
+            height: 3.2666667rem;
 
             background: #ffffff 0% 0% no-repeat padding-box;
-            border: 2px solid #303030;
+            border: 2px solid #459695;
             border-radius: 20px;
             opacity: 1;
             cursor: pointer;
 
             text-align: center;
-            font: Regular 32px/28px Arimo;
-            letter-spacing: 0.48px;
+            font: Regular 2.1333334rem/1.8666667rem Arimo;
+            letter-spacing: 0.031999998rem;
             color: #0b132b;
             opacity: 1;
         }
 
         .btn-weiter {
             background-color: #5bc0be;
+            margin-top: 1.7rem;
         }
 
         .btn-Base {
@@ -189,8 +221,8 @@ div.register {
             text-align: center;
             font-family: Hind Siliguri;
             font-weight: 500;
-            font-size: 32px;
-            letter-spacing: 24px;
+            font-size: 2.1333334rem;
+            letter-spacing: 1.6rem;
             color: #0b132b;
             opacity: 1;
             text-transform: uppercase;
@@ -212,8 +244,8 @@ div.register {
                 appearance: none;
                 -webkit-appearance: none;
                 background: #ffffff 0% 0% no-repeat padding-box;
-                border: 2px solid #0b132b;
-                border-radius: 10px;
+                border: 2px solid #459695;
+                border-radius: 4px;
                 opacity: 1;
                 width: 1.5rem;
                 height: 1.5rem;
@@ -231,27 +263,27 @@ div.register {
 
         .input-field {
             text-align: left;
-            font: Italic 20px/29px Arimo;
-            letter-spacing: 0.5px;
+            font: Italic 1.3333334rem/1.9333333rem Arimo;
+            letter-spacing: 0.033333335rem;
             color: #0b132b;
             opacity: 1;
         }
 
         .input-field::placeholder {
             text-align: left;
-            font: Italic 20px/29px Arimo;
-            letter-spacing: 0.5px;
+            font: Italic 1.3333334rem/1.9333333rem Arimo;
+            letter-spacing: 0.033333335rem;
             color: #0b132b;
         }
     }
 
-    @media only screen and (max-width: 830px) {
+    @media only screen and (max-width: 55.333332rem) {
         .box {
             #Headline {
                 text-align: center;
                 font-family: Hind Siliguri;
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 1.3333334rem;
                 letter-spacing: 0.25rem;
                 color: #0b132b;
                 opacity: 1;
@@ -259,54 +291,62 @@ div.register {
             }
 
             .btn-UI-container {
-                margin-top: 2px;
+                margin-top: 0.13333334rem;
             }
 
             .btn-UI {
                 margin: 0.2rem;
             }
 
-            height: 300px;
+            height: 20rem;
         }
+
         .checkContainer p {
-            font-size: 12px;
+            font-size: 0.8rem;
 
             .privacycheck {
-                min-width: 20px;
-                min-height: 20px;
+                min-width: 1.3333334rem;
+                min-height: 1.3333334rem;
             }
 
             white-space: pre-line;
         }
-        height: 450px;
+
+        height: 30rem;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 40rem) {
         .box {
             width: 10rem;
-            height: 300px;
+            height: 20rem;
 
             .btn-UI {
                 max-width: 5rem;
                 max-height: 2rem;
                 margin: 0.2rem;
-                border-radius: 12px;
+                border-radius: 0.8rem;
             }
 
             .roleBtn {
                 .btn-specialButton {
-                    padding: 2px;
-                    font-size: 10px;
+                    padding: 0.13333334rem;
+                    font-size: 0.6666667rem;
                 }
             }
 
             .btn-UI-container {
-                margin-top: 2px;
+                margin-top: 0.13333334rem;
             }
 
             .checkContainer p {
-                font-size: 8px;
+                font-size: 0.53333336rem;
             }
         }
     }
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

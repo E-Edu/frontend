@@ -1,23 +1,23 @@
 import React from 'react';
-import Calender_icon from '../../assets/icons/calendar.svg';
+import Calender_icon from '../../components/icons/calender.icon.js';
 import Tags_icon from '../../assets/icons/tag.svg';
-import User_icon from '../../assets/icons/user.svg';
+import User_icon from '../../components/icons/user.icon.js';
 import Task_icon from '../../assets/icons/pencile.svg';
-import Trending_icon from '../../assets/icons/trending-up.svg';
+import Trending_icon from '../../components/icons/trending-up.icon.js';
 import File from '../../assets/icons/file-text.svg';
 import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
 import './index.scss';
 import '../../css/main.css';
-import Data from './Profile_Config.json';
+import Data from '../../lib/Color_Config.json';
 import Sidebar from '../../components/Sidebar';
 import Header from '../../components/Header';
 
-class ProfileSubject extends React.Component {
+class Profile_Subject extends React.Component {
 
     render() {
         const subject = this.props.Subject;
-        const border = "11px solid " + Data["Subject_color"][subject];
+        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
         return (
             <div className='profile_subjekt' style={{borderLeft: border}}>
                 <div className='profileTop'>
@@ -77,7 +77,7 @@ class Profile extends React.Component {
     }
 
     componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
+        const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }
@@ -130,7 +130,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="points">
                         <span className="central">
                             <div className="profile_flex-row">
-                                <img className='user img' src={User_icon} alt="user icon"/>
+                                <span className='user img' id="user_icon"><User_icon alt="user icon" stroke="#3A506B"/></span>
                                 <span>6.526</span>
                                 <span className='var_info profile_span_padding_l'>Punkte</span>
                             </div>
@@ -140,7 +140,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="trending">
                         <span className="central">
                             <div className="profile_flex-row">
-                                <img className='trending img' src={Trending_icon} alt="trending"/>
+                                <span className='trending img' id="trending_icon"><Trending_icon width="24" height="30" stroke="#3A506B" alt="trending"/></span>
                                 <span>7.231</span>
                                 <span className='var_info profile_span_padding_l'>Fragen</span>
                             </div>
@@ -150,7 +150,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="since">
                         <span className="central">
                             <div className="profile_flex-row">
-                                <img className='calender img' src={Calender_icon} alt="calendar"/>
+                                <span className='calender img' id="calender_icon"><Calender_icon   alt="calendar" stroke="#3A506B"/></span>
                                 <span className='profile_span_padding_r'>Dabei seit</span><span
                                 className='var_info'>21.03.2020</span>
                             </div>
@@ -176,16 +176,16 @@ class Profile extends React.Component {
                             <div>
                                 <h2 className='font-Arimo profile_h2'>Favorisierte Fächer</h2>
                                 <div id="profile_favorite_box">
-                                    <ProfileSubject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
-                                    <ProfileSubject Subject="Mathe"
+                                    <Profile_Subject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
+                                    <Profile_Subject Subject="Mathe"
                                                     Underline="2 x 3 macht 4 Widdewiddewitt und 3 macht 9"/>
-                                    <ProfileSubject Subject="Informatik" Underline="0110001101000101110111"/>
+                                    <Profile_Subject Subject="Informatik" Underline="0110001101000101110111"/>
                                 </div>
                             </div>
                         </div>
                         <div id="favorite_certificate">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>Zertifikat</h2>
+                                <h2 className='font-Arimo profile_h2'>Zertifikate</h2>
                                 <div id="profile_certificate_box">
 
                                     <ProfileCerficate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>

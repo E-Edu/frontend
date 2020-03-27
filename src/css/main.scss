@@ -12,8 +12,8 @@ body {
 
 	// Input Change
 	input {
-		border: 2px solid #1c2541;
-		border-radius: 10px;
+		border: 0.13333334rem solid #1c2541;
+		border-radius: 0.6666667rem;
 	}
 }
 
@@ -48,14 +48,14 @@ code {
 	align-items:baseline;
 	// Left Result [Timy]
     .resultLeft{
-        margin-left:109px;
+        margin-left:7.266667rem;
 		// The Subject itself [Timy]
         .resultSubject{
-            margin-right:40px;
-            margin-top:34px;
+            margin-right:2.6666667rem;
+            margin-top:2.2666667rem;
             font-weight: bolder;
             color: #0B132B;
-            font-size: 60px;
+            font-size: 4.0rem;
         }
     }
 }
