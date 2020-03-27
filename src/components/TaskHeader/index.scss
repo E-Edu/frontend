@@ -11,42 +11,42 @@ $lightBlue: #96B4DD;
     width: 100%;
     /*Header*/
     .lectureHeader {
+        align-items: baseline;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;
         width: 100%;
 
         .lectureHeaderTopic {
+            align-items: baseline;
             display: flex;
             flex-direction: row;
-            align-items: baseline;
 
             .lectureSubject {
                 color: $bluegrey;
+                font-family: Hind Siliguri;
                 font-size: 60px;
                 font-weight: bolder;
-                font-family: Hind Siliguri;
             }
 
             .lectureModule {
                 color: $grey;
-                font-weight: bolder;
                 font-size: 32px;
+                font-weight: bolder;
                 margin-left: 2.5rem;
             }
         }
 
         .lectureHeaderPoints {
+            align-items: baseline;
             display: flex;
             flex-direction: row;
-            align-items: baseline;
 
 
             .lecturePoints {
+                align-items: center;
                 display: flex;
                 flex-direction: row;
-                align-items: center;
 
                 &:first-child {
                     margin-right: 1.2rem;
@@ -64,9 +64,9 @@ $lightBlue: #96B4DD;
             input {
                 border: 1px solid black;
                 border-radius: 0.5rem;
-                width: 13rem;
                 height: 1.7rem;
                 padding: 0 0.4rem;
+                width: 13rem;
 
 
             }

@@ -2,11 +2,9 @@ import React from "react";
 import "./index.scss";
 import eye from "../../assets/icons/eye.svg";
 import eye_off from "../../assets/icons/eye-off.svg";
-import teacher from "../../assets/icons/teacher.svg";
 import TeacherIcon from "../../components/icons/teacher.icon";
 import UserIcon from "../../components/icons/user.icon";
-import { Link, Redirect } from "react-router-dom";
-import axios from "axios";
+import {Link} from "react-router-dom";
 
 // Regular Expression für die Validierung der Mail
 const emailRegex = RegExp(
@@ -14,7 +12,7 @@ const emailRegex = RegExp(
 );
 
 // Validates Form errors
-const formValid = ({ formErrors, ...rest }) => {
+const formValid = ({formErrors, ...rest}) => {
     let valid = true;
 
     Object.values(formErrors).forEach(val => val.length > 0 && (valid = false));
@@ -54,7 +52,7 @@ class Register extends React.Component {
 
     handleChange = e => {
         e.preventDefault();
-        const { name, value } = e.target;
+        const {name, value} = e.target;
         let formErrors = this.state.formErrors;
 
         console.log("Name: ", name);
@@ -88,7 +86,7 @@ class Register extends React.Component {
                 console.log("Break");
                 break;
         }
-        this.setState({ formErrors, [name]: value }, () =>
+        this.setState({formErrors, [name]: value}, () =>
             console.log(this.state)
         );
     };
@@ -125,14 +123,14 @@ class Register extends React.Component {
 
     // Toggeles the password field to text - toggles the icon in the jsx (ternary statement below)
     togglePassword = () => {
-        const { isPasswordShown } = this.state;
-        this.setState({ isPasswordShown: !isPasswordShown });
+        const {isPasswordShown} = this.state;
+        this.setState({isPasswordShown: !isPasswordShown});
     };
 
     // Toggeles the second password field to text - toggles the icon in the jsx (ternary statement below)
     togglePassword2 = () => {
-        const { isPasswordShown2 } = this.state;
-        this.setState({ isPasswordShown2: !isPasswordShown2 });
+        const {isPasswordShown2} = this.state;
+        this.setState({isPasswordShown2: !isPasswordShown2});
     };
 
     // Sends the form - implemented on the submit button, not onSubmit (Form)
@@ -179,10 +177,10 @@ class Register extends React.Component {
 
     render() {
         // constants for the toggle functions (eye and password)
-        const { isPasswordShown } = this.state;
-        const { isPasswordShown2 } = this.state;
-        const { isPasswordValid } = this.state;
-        const { formErrors } = this.state;
+        const {isPasswordShown} = this.state;
+        const {isPasswordShown2} = this.state;
+        const {isPasswordValid} = this.state;
+        const {formErrors} = this.state;
 
         return (
             <div className="register">
@@ -296,19 +294,12 @@ class Register extends React.Component {
                                                     </span>
                                                 </p>
                                             </div>
-                                            <div
-                                                onClick={this.handleRedirect}
-                                                className="btn-UI-container"
-                                            >
-                                                <button
-                                                    to="/"
-                                                    onClick={this.handleSubmit}
-                                                    type="submit"
-                                                    className="btn-UI btn-Base"
-                                                    disabled={
-                                                        this.state.disabled
-                                                    }
-                                                >
+                                            <div onClick={this.handleRedirect} className="btn-UI-container">
+                                                <button to="/"
+                                                        onClick={this.handleSubmit}
+                                                        type="submit"
+                                                        className="btn-UI btn-Base"
+                                                        disabled={this.state.disabled}>
                                                     Submit
                                                 </button>
                                             </div>
@@ -328,7 +319,6 @@ class Register extends React.Component {
                                                     noValidate
                                                 />
                                             </div>
-
                                             <div className="input-box">
                                                 <input
                                                     onChange={this.handleChange}
@@ -341,36 +331,21 @@ class Register extends React.Component {
                                                 />
                                             </div>
                                             <div className="btn-group roleBtn">
-                                                <div
-                                                    onClick={e =>
-                                                        this.handleSpecial(
-                                                            e,
-                                                            "Student"
-                                                        )
-                                                    }
-                                                    className="btn-specialButton btn"
-                                                    className={
-                                                        this.state.isStudent
-                                                            ? "btn-specialButton btn active"
-                                                            : "btn-specialButton btn"
-                                                    }
-                                                    id="btn-specialButton1"
-                                                >
+                                                <div onClick={e => this.handleSpecial(e, "Student")}
+                                                     className="btn-specialButton btn"
+                                                     className={this.state.isStudent ? "btn-specialButton btn active"
+                                                         : "btn-specialButton btn"
+                                                     }
+                                                     id="btn-specialButton1">
                                                     <UserIcon stroke="black"></UserIcon>
                                                     <span>Student</span>
                                                 </div>
 
                                                 <div
-                                                    onClick={e =>
-                                                        this.handleSpecial(
-                                                            e,
-                                                            "Teacher"
-                                                        )
-                                                    }
-                                                    className={
-                                                        this.state.isStudent
-                                                            ? "btn-specialButton btn-specialButton2 btn"
-                                                            : "btn-specialButton btn-specialButton2 btn active"
+                                                    onClick={e => this.handleSpecial(e, "Teacher")}
+                                                    className={this.state.isStudent ?
+                                                        "btn-specialButton btn-specialButton2 btn"
+                                                        : "btn-specialButton btn-specialButton2 btn active"
                                                     }
                                                     id="btn-specialButton2"
                                                 >

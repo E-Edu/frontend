@@ -15,17 +15,17 @@ $lightBlue: #96B4DD;
     height: 8.4rem;
 
     .resultStatusBar {
-        padding: 8.4rem 0.53333336rem 0 0;
-        border-top-left-radius: 0.53333336rem;
         border-bottom-left-radius: 0.53333336rem;
+        border-top-left-radius: 0.53333336rem;
+        padding: 8.4rem 0.53333336rem 0 0;
     }
 
     .resultContent {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: calc(100% - 0.8rem);
         padding: 0.8rem;
+        width: calc(100% - 0.8rem);
 
         .resultTop {
             display: flex;
@@ -33,10 +33,10 @@ $lightBlue: #96B4DD;
             justify-content: space-between;
 
             .resultLeftTop {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: baseline;
 
                 p:first-child {
                     margin-right: 1rem;
@@ -45,8 +45,8 @@ $lightBlue: #96B4DD;
                 .resultQuestionLabel {
                     color: $grey;
                     font-size: 1.0666667rem;
-                    padding-top: 0;
                     margin-top: 0;
+                    padding-top: 0;
                 }
 
                 .resultQuestionTitel {
@@ -57,10 +57,10 @@ $lightBlue: #96B4DD;
             }
 
             .resultRightTop {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: baseline;
 
                 img {
                     margin: 0 0.33333334rem;
@@ -81,19 +81,21 @@ $lightBlue: #96B4DD;
         }
 
         .resultBottom {
+            color: $grey;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             height: 2.6666667rem;
-            color: $grey;
+            justify-content: space-between;
 
             .resultLeftBottom {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
-                align-items: baseline;
-                padding-bottom: 0;
-                margin-bottom: 0;
                 height: 2.6666667rem;
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                width: 50%;
 
                 .resultMyAnswer {
                     color: $grey;
@@ -101,27 +103,25 @@ $lightBlue: #96B4DD;
                     margin-bottom: 0;
                 }
 
-                width: 50%;
-
                 p:first-child {
-                    padding-right: 0.33333334rem;
-                    padding-bottom: 0;
                     margin-bottom: 0;
+                    padding-bottom: 0;
+                    padding-right: 0.33333334rem;
                 }
             }
 
             .resultRightBottom {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
-                width: 50%;
-                margin-bottom: 0;
-                align-items: baseline;
                 height: 2.6666667rem;
+                margin-bottom: 0;
+                width: 50%;
 
                 p:first-child {
-                    padding-right: 0.33333334rem;
-                    padding-bottom: 0.0rem;
                     margin-bottom: 0;
+                    padding-bottom: 0.0rem;
+                    padding-right: 0.33333334rem;
                 }
 
                 .resultMyAnswer {
@@ -131,8 +131,8 @@ $lightBlue: #96B4DD;
 
                 .resultRightAnswer {
                     font-size: 1.0666667rem;
-                    padding-bottom: 0.0rem;
                     margin-bottom: 0;
+                    padding-bottom: 0.0rem;
                 }
             }
         }

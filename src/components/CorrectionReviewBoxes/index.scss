@@ -4,73 +4,73 @@
     display: flex;
     flex-direction: column;
     height: 7.8rem;
-    width:50rem;
     margin: 2.3333333rem 0;
+    width:50rem;
     
 
     .correctionBoxHeader{
+        align-items:center;
+        color:#1C2541;
         display:flex;
         flex-direction:row;
-        color:#1C2541;
-        font-weight:normal;
         font-size:1.3333334rem;
-        margin-top:0.33333334rem;
-        margin-left:1.2rem;
-        align-items:center;
+        font-weight:normal;
         justify-content: space-between;
+        margin-left:1.2rem;
         margin-right:1.1333333rem;
+        margin-top:0.33333334rem;
         .correctionDifficulty{
-            font-size:1.0666667rem;
-            text-align:center;
             background-color:#19BA3F62;
             border: 0.06666667rem solid #19BA3F;
-            width:4.6666665rem;
-            height:1.6666666rem;
             border-radius:0.8666667rem;
+            font-size:1.0666667rem;
+            height:1.6666666rem;
+            text-align:center;
+            width:4.6666665rem;
             p{
-                padding:0;
                 margin:0;
+                padding:0;
             }
         }
     }
     .correctionBoxBottom{
+        align-items:baseline;
+        color:#1C2541;
+     
         display:flex;
         flex-direction:row;
-     
-        color:#1C2541;
         font-size:1.3333334rem;
-        width:100%;
         justify-content:space-between;
-        align-items:baseline;
+        width:100%;
         .correctionPupil{
+            align-items:center;
             display:flex;
             flex-direction:row;
-            align-items:center;
             margin-left:1.3333334rem;
         
         }
         .correctionDate{
+            align-items:center;
             display:flex;
             flex-direction:row;
-            align-items:center;
 
             
 
 
         }
         .correctionCorrect{
+            align-items:center;
             display:flex;
             flex-direction:row-reverse;
-            align-items:center;
             margin-right:1.3333334rem;
             
 
 
         }
         img{
-            width:1.3333334rem;
-            height:1.3333334rem;
             color:#1C2541;
+            height:1.3333334rem;
+            width:1.3333334rem;
             
         }
         p{
