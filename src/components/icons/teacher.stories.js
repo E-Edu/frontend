@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import TeacherIcon from "./teacher.icon";
 
-const stories = storiesOf('TeacherIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('TeacherIcon default', () => {
     return <TeacherIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('TeacherIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

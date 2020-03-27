@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import ThumbsDownIcon from "./thumbs-down.icon";
 
-const stories = storiesOf('ThumbsDownIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('ThumbsDownIcon default', () => {
     return <ThumbsDownIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('ThumbsDownIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

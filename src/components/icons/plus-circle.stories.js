@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import PlusCircleIcon from "./plus-circle.icon";
 
-const stories = storiesOf('PlusCircleIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('PlusCircleIcon default', () => {
     return <PlusCircleIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('PlusCircleIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

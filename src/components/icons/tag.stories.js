@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import TagIcon from "./tag.icon";
 
-const stories = storiesOf('TagIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('TagIcondefault', () => {
     return <TagIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('TagIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

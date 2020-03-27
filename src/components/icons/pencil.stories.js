@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import PencilIcon from "./pencil.icon";
 
-const stories = storiesOf('PencilIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('PencilIcon default', () => {
     return <PencilIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('PencilIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

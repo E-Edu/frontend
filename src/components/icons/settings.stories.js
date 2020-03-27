@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import SettingsIcon from "./settings.icon";
 
-const stories = storiesOf('SettingsIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('SettingsIcon default', () => {
     return <SettingsIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('SettingsIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import LogoutIcon from "./logout.icon";
 
-const stories = storiesOf('LogoutIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('LogoutIcon default', () => {
     return <LogoutIcon/>
 });
 
-stories.add('dynamicProperties', () => {
+stories.add('LogoutIcon dynamicProperties', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");

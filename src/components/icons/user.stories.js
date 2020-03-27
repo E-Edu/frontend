@@ -3,14 +3,14 @@ import {number,color, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 import UserIcon from "./user.icon";
 
-const stories = storiesOf('UserIcon', module);
+const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
-stories.add('default', () => {
+stories.add('UserIcon default', () => {
     return <UserIcon/>
 });
 
-stories.add('dynamicInput', () => {
+stories.add('UserIcon dynamicInput', () => {
     const height = number("height", 24);
     const width = number("width", 24);
     const fill = color("fill", "#ffffff");
