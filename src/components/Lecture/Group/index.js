@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import LectureSubject from "../Subject";
 
-class LectureGroupe extends React.Component {
+class LectureGroup extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -26,4 +26,4 @@ class LectureGroupe extends React.Component {
     }
 }
 
-export default LectureGroupe;
+export default LectureGroup;

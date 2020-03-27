@@ -40,7 +40,6 @@ class Task extends React.Component {
     }
 }
 
-
 class Tasklist extends React.Component {
     constructor(props) {
         super(props);
