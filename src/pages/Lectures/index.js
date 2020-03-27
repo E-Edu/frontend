@@ -3,7 +3,7 @@ import './index.scss';
 import Header from '../../components/Header';
 import Sidebar from '../../components/Sidebar';
 import TaskHeader from "../../components/TaskHeader";
-import LectureGroupe from "../../components/Lecture/Groupe";
+import LectureGroup from "../../components/Lecture/Group";
 
 class Lecture extends React.Component {
     constructor(props) {
@@ -44,14 +44,12 @@ class Lecture extends React.Component {
     render() {
         return (
             <div id="lecture">
-                <Header side="Dashboard"/>
-                <Sidebar active="settings"/>
 
                 <div id='main'>
                     <TaskHeader module="Mathe"/>
 
                     {this.data.map((value, index) => {
-                        return <LectureGroupe key={index} name={value.name} fields={value.fields}/>
+                        return <LectureGroup key={index} name={value.name} fields={value.fields}/>
                     })}
                 </div>
             </div>

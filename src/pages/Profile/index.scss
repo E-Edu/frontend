@@ -1,62 +1,61 @@
-
 .resultContentHeader {
+  align-items: baseline;
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  width: 100%;
   .resultLeft {
     margin-left: 7.266667rem;
 
     .resultSubject {
-      margin-right: 2.6666667rem;
-      margin-top: 2.2666667rem;
-      font-weight: bolder;
       color: #0b132b;
       font-size: 4.0rem;
+      font-weight: bolder;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
     }
   }
 }
 
 .profile_subjekt {
 
-  height: 110px;
-  width: 400px;
   background-color: transparent;
   border: 1px solid #707070;
   border-radius: 11px;
+  height: 110px;
   margin: 5px 15px;
+  width: 400px;
 
   .profileTop {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
   .profileBottom {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
 }
 .profile_certifikate {
 
-  flex-wrap: nowrap;
-  height: 84px;
-  width: 412px;
+  align-items: center;
   border: 1px solid #707070;
   border-radius: 8px;
-  margin: 10px 15px;
-
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
+
+  height: 84px;
+  margin: 10px 15px;
   padding: 0;
+  width: 412px;
 
   #downloadimage {
 
-    width: 27px;
     height: 27px;
     margin-left: 2.5rem;
+    width: 27px;
 
   }
   #downloadimage:hover {
@@ -64,24 +63,24 @@
   }
   
   .CertificatesRow {
-    width: 80%;
     margin: 0;
+    width: 80%;
     .titelCertificate {
+      color: #5bc0be;
       display: flex;
       flex-direction: row;
-      color: #5bc0be;
-      font-weight: bold;
       font-size: 1.7333333rem;
-      padding: 0;
+      font-weight: bold;
       margin: 0;
+      padding: 0;
     }
     .dateCertificate {
+      color: #0b132b;
       display: flex;
       flex-direction: row;
-      color: #0b132b;
       font-size: 1.0666667rem;
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
   }
 
@@ -109,11 +108,11 @@
   text-align: center;
 }
 #profile_head {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
   .profile_h2 {
     color: #1c2541;
     font-size: 2.0rem;
@@ -126,34 +125,34 @@
     padding-right: 0.5rem;
   }
   .profile_flex-row {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
   .central {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     padding-top: 0.5rem;
     white-space: nowrap;
  
     .img {
-      stroke: #3a506b;
       margin-right: 0.4rem;
       max-width: 27px;
+      stroke: #3a506b;
 
     }
   }
 
   .stat {
-    margin-bottom: 0.2%;
-    font-weight: 400;
-    text-align: left;
-    font-size: 1.0666667rem;
-    letter-spacing: 0;
     color: #3a506b;
+    font-size: 1.0666667rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-bottom: 0.2%;
     opacity: 1;
+    text-align: left;
   }
 
   .var_info {
@@ -161,27 +160,27 @@
   }
 
   #name {
-    margin-left: 2.3rem;
-    text-align: center;
+    color: #1c2541;
     font-size: 1.7333333rem;
     letter-spacing: 0;
-    color: #1c2541;
+    margin-left: 2.3rem;
     opacity: 1;
+    text-align: center;
     input:fokus{
       outline: none;
     }
     input:disabled{
-      text-align: center;
-      border: none;
       background: transparent;
+      border: none;
       font-size: 1.3333334rem;
+      text-align: center;
       width: 8rem;
     }
     input:enabled{
-      text-align: center;
-      
       background: transparent;
+      
       font-size: 1.3333334rem;
+      text-align: center;
       width: 8rem;
     }
     img {
@@ -195,60 +194,60 @@
 }
 
 #profile_levelbar {
-  margin-top: 4%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4%;
   text-align: center;
+  width: 100%;
   #levelbar_back {
-    position: relative;
-    height: 3.3333333rem;
-    width: 32.666668rem;
     background-color: transparent;
     border: 0.06666667rem solid #707070;
     border-radius: 13.333333rem;
+    height: 3.3333333rem;
+    position: relative;
+    width: 32.666668rem;
 
     #levelbar_front {
-      position: absolute;
-      left: 0;
-      top: 0;
       background-color: #5bc0be;
       border-radius: 13.333333rem;
       height: 100%;
-      z-index: -2;
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 17.79%;
+      z-index: -2;
     }
 
     #levelbar_font {
+      position: relative;
       text-align: center;
       z-index: 2;
-      position: relative;
     }
 
     #level_Rang {
-      font: Bold 1.7333333rem/2.0666666rem Arimo;
       color: #5bc0be;
+      font: Bold 1.7333333rem/2.0666666rem Arimo;
     }
   }
 }
 #level_rank {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-top: 1rem;
   img {
-    width: 1.8rem;
     height: 1.8rem;
     margin-right: 0.8rem;
+    width: 1.8rem;
   }
   span {
-    text-align: left;
+    color: #5bc0be;
     font: Bold 1.7333333rem/2.0666666rem Arimo;
     letter-spacing: 0;
-    color: #5bc0be;
-    text-transform: uppercase;
     opacity: 1;
+    text-align: left;
+    text-transform: uppercase;
   }
 }
 
@@ -256,54 +255,54 @@
   border: 0.06666667rem solid #5bc0be;
   border-radius: 6.6666665rem;
 
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-  margin-right: 1.5rem;
-  width: 4.133333rem;
   height: 4.133333rem;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+  width: 4.133333rem;
 }
 
 #logo {
-  width: 2.0rem;
   height: 2.0rem;
   padding: 1.0666667rem;
+  width: 2.0rem;
 }
 
 #favorite_subject {
   text-align: center;
 
   #profile_favorite_box {
-    text-align: left;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-wrap: wrap-reverse;
+    justify-content: center;
     padding: 0.33333334rem;
+    text-align: left;
   }
 }
 #profile_certificate_box {
   display: flex;
+  flex-basis: 31%;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  flex-basis: 31%;
   margin: 0 2rem;
   
 }
 #title {
-  text-align: left;
+  color: #0b132b;
   font-size: 2.4rem;
   letter-spacing: 0;
-  color: #0b132b;
   opacity: 1;
+  text-align: left;
   
 }
 
 #text {
-  justify-content: left;
-
   align-items: center;
+
   flex-direction: column;
+  justify-content: left;
   text-align: left;
 }
 #fach_info {
@@ -312,10 +311,10 @@
 
 #pb {
 
-  max-width: 110px;
-  max-height: 110px;
   border: 2px solid #5bc0be;
   border-radius: 100px;
+  max-height: 110px;
+  max-width: 110px;
 }
 #user_icon, #trending_icon, #calender_icon{
   color: #3A506B;

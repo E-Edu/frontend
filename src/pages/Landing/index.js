@@ -1,26 +1,24 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import "./index.scss";
-import { Route, Redirect } from "react-router-dom";
+import {Redirect, Route} from "react-router-dom";
 import Login from "../../components/Login";
 import Register from "../../components/Register";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
 
 class Landing extends Component {
-    state = { showModal: false, redirect: false };
+    state = {showModal: false, redirect: false};
 
     render() {
         return (
             <div className="landing">
-                <Header side="Landing" />
                 <div className="Main">
                     {(() => {
                         if (this.state.redirect) {
-                            this.setState({ redirect: false });
+                            this.setState({redirect: false});
 
-                            return <Redirect exact to={this.state.redirect} />;
+                            return <Redirect exact to={this.state.redirect}/>;
                         }
                     })()}
 
@@ -30,7 +28,7 @@ class Landing extends Component {
                         path={["/dashboard", "/dashboard"]}
                         render={() => {
                             if (!this.state.showModal && !this.state.redirect) {
-                                this.setState({ showModal: true });
+                                this.setState({showModal: true});
                             }
                         }}
                     />
@@ -39,13 +37,13 @@ class Landing extends Component {
                         visible={this.state.showModal}
                         closemodal={() => {
                             console.log("close modal");
-                            this.setState({ showModal: false, redirect: "/" });
+                            this.setState({showModal: false, redirect: "/"});
                         }}
                         type="fadeIn"
                     >
-                    {/*TODO Route zurück auf /login /register*/}
-                        <Route exact path="/dashboard" component={Login} />
-                        <Route exact path="/dashboard" component={Register} />
+                        {/*TODO Route zurück auf /login /register*/}
+                        <Route exact path="/dashboard" component={Login}/>
+                        <Route exact path="/dashboard" component={Register}/>
                     </Modal>
 
                     <div id="content">
@@ -62,7 +60,7 @@ class Landing extends Component {
                                 E-Edu ist eine Lernplattform die im Rahmen des
                                 Hackathon <span>#WirVsVirus</span> vom Team "The Morpheus
                                 Tutorials" erstellt wurde.
-                                <br />
+                                <br/>
                                 E-Edu bietet eine Lernplattform für Schüler die
                                 von Lehrern erstellte Aufgaben bearbeiten können
                             </h4>
@@ -71,7 +69,6 @@ class Landing extends Component {
                         </div>
                     </div>
                 </div>
-                <Footer></Footer>
             </div>
         );
     }

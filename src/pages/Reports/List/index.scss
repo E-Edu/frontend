@@ -1,40 +1,37 @@
 h1.ReportText-content {
-  position: relative;
-  font: Medium 4.0rem/6.4666667rem Hind Siliguri;
-  padding: 0;
-  margin-top: 8.0rem;
-  left: 13.333333rem;
-  width: 13.333333rem;
-  height: 3.3333333rem;
+    position: relative;
+    font: Medium 4.0rem/6.5rem Hind Siliguri;
+    padding: 0 0 0 3rem;
+    width: 13rem;
+    height: 3rem;
 }
 
+.report-component {
+    position: relative;
+    display: flex;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+    border: 0.05rem solid #707070;
+    border-radius: 0.7rem;
+    width: 66.7rem;
+    height: 8rem;
+    font: Regular 1.33rem/1.5rem Arimo;
+    justify-content: center;
 
-.report-component{
-  display: flex;
-  margin-bottom: 1.3333334rem;
-  flex-direction: column;
-  border: 0.06666667rem solid #707070;
-  border-radius: 0.6666667rem;
-  width: 66.666664rem;
-  height: 8.0rem;
-  font: Regular 1.3333334rem/1.5333333rem Arimo;
-  margin-left: 13.333333rem;
-  
-  .react-modal {
-    top: 0;
-    left: 0;
-    
-  }
+    .react-modal {
+        top: 0;
+        left: 0;
+    }
 
-  .reportcontainer .InfosRight {
-    padding-top: 1.2rem;
-  }
+    .reportcontainer .InfosRight {
+        padding-top: 1.2rem;
+    }
 
-  .InfoIcon:hover {
-    cursor: pointer;
-  }
+    .InfoIcon:hover {
+        cursor: pointer;
+    }
 
-  .animate-modal-overlay-enter-done, .react-modal-overlay {
-    background: none;
-  }
+    .animate-modal-overlay-enter-done, .react-modal-overlay {
+        background: none;
+    }
 }

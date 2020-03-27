@@ -1,38 +1,30 @@
-
-
 .imprint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-	.headingFont {
-		margin-left: 19%;
-		margin-top: 8.866667rem;
-		width: 25.4rem;
+    .headingFont {
+        text-align: left;
+        font-family: Hind Siliguri;
+        font-size: 5.3333335rem;
+        color: #0b132b;
+        opacity: 1;
+        width: 50vw;
+    }
 
-		text-align: left;
-		font-family: Hind Siliguri;
-		font-size: 5.3333335rem;
-		color: #0b132b;
-		opacity: 1;
-	}
+    .fontBox {
+        margin-top: 0.33333334rem;
+        margin-top: 0.33333334rem;
+        text-align: left;
+        font: Hind Siliguri;
+        font-size: 1.3333334rem;
+        letter-spacing: 0;
+        color: #0b132b;
+        opacity: 1;
+        width: 50vw;
+    }
 
-	.fontBox {
-		margin-top: 0.33333334rem;
-		margin-left: 19%;
-		margin-top: 0.33333334rem;
-		width: 43.933334rem;
-		height: 43.933334rem;
-
-		text-align: left;
-		font: Hind Siliguri;
-		font-size: 1.3333334rem;
-		letter-spacing: 0;
-		color: #0b132b;
-		opacity: 1;
-	}
-	
-	.font0.8rem{
-		font-size: 0.8rem;
-	}
-	.underline{
-		text-decoration: underline;
-	}
+    .underline {
+        text-decoration: underline;
+    }
 }

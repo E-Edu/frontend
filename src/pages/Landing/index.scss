@@ -1,13 +1,13 @@
 $turquoise: #5BC0BE;
 
 .landing {
+    height: 100%;
     #content {
         display: flex;
         flex-direction: row;
         width: 100vw;
         justify-content: center;
         align-items: center;
-        margin-top: 150px;
     }
 
     #image-landigpage {

@@ -1,29 +1,28 @@
 #Menu {
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    width: 7.6666665rem;
-    height: 100%;
+    align-items: center;
     background: #0b132b 0 0 no-repeat padding-box;
-    text-align: center;
-    opacity: 1;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
-    align-items: center;
+    left: 0;
+    opacity: 1;
+    text-align: center;
     top: 0;
+    width: 7.6666665rem;
+    position: fixed;
 
     a.menuElement:first-child {
         margin-top: 0;
     }
 
     a.menuElement {
-        flex-direction: column;
         align-items: center;
-        text-decoration: none;
         color: #687d9a;
-        margin: 0.6rem 0;
+        flex-direction: column;
         line-height: 1.2em;
+        margin: 0.6rem 0;
+        text-decoration: none;
     }
 
     a.menuElement:hover {
@@ -35,16 +34,15 @@
     }
 
     .iconSize {
-        width: 1.6rem;
         height: 1.6rem;
-
+        width: 1.6rem;
     }
 
     .topIcons {
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         margin-top: 6.6666665rem;
     }
 

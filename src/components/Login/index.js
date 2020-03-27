@@ -4,7 +4,7 @@ import './index.scss';
 import eye from '../../assets/icons/eye.svg';
 import eyeOff from '../../assets/icons/eye-off.svg';
 
-class Template extends Component {
+class Login extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -122,4 +122,4 @@ class Template extends Component {
 	}
 }
 
-export default Template;
+export default Login;

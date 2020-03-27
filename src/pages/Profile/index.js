@@ -76,11 +76,11 @@ class Profile extends React.Component {
         console.log(this.state);
     }
 
-    componentDidMount() {
+/*    componentDidMount() {
         const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
-    }
+    }*/
 
     ClickHandler_Bearbeiten = () => {
         if (this.state.disabled) {
@@ -104,8 +104,6 @@ class Profile extends React.Component {
     render() {
         return (
             <div>
-                <Header side='Dashboard'/>
-                <Sidebar active="profile"/>
                 <div id="main">
                     <div>
                         <div className='resultContentHeader' id="resultContentHeaderID">
