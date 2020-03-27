@@ -10,31 +10,31 @@ $lightBlue: #96B4DD;
 .LectureSubject {
 
     .lectureSubject {
-        display: flex;
-        flex-direction: row;
         align-items: center;
         border: 1px solid black;
         border-radius: 8px;
-        padding: 0.8rem;
-        min-width: 280px;
-        width:20vw;
+        display: flex;
+        flex-direction: row;
         margin-bottom: 1rem;
+        min-width: 280px;
+        padding: 0.8rem;
+        width:20vw;
 
         .iconContainer {
+            align-items: center;
             border: 1px solid $turquoise;
             border-radius: 10000px;
+            display: flex;
+            height: 1.2rem;
+            justify-content: space-around;
             padding: 1rem;
             width: 1.2rem;
-            height: 1.2rem;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
         }
 
         p {
-            margin: 0 0 0 1rem;
-            font-size: 1.25rem;
             color: $grey;
+            font-size: 1.25rem;
+            margin: 0 0 0 1rem;
         }
     }
 }
