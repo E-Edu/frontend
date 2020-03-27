@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Award from "../../components/icons/award.icon";
 import Search from "../../components/icons/search.icon"
 import colorData from "../../lib/Color_Config";
+import {Link} from "react-router-dom";
 
 class Task extends React.Component {
     render() {
@@ -105,13 +106,20 @@ class Tasklist extends React.Component {
                     </div>
 
                 </div>
+
                 <div id="Task-Content-List">
-                    <Task name="Aufgabe 1" Anzahl_Fragen="12" richtige_Fragen="10" schwere="Leicht"
-                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
-                    <Task name="Aufgabe 2" Anzahl_Fragen="20" richtige_Fragen="13" schwere="Mittel"
-                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
-                    <Task name="Aufgabe 3" Anzahl_Fragen="10" richtige_Fragen="5" schwere="Schwer"
-                          Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
+                        <Task name="Aufgabe 1" Anzahl_Fragen="12" richtige_Fragen="10" schwere="Leicht"
+                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    </Link>
+                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
+                        <Task name="Aufgabe 2" Anzahl_Fragen="20" richtige_Fragen="13" schwere="Mittel"
+                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    </Link>
+                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
+                        <Task name="Aufgabe 3" Anzahl_Fragen="10" richtige_Fragen="5" schwere="Schwer"
+                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
+                    </Link>
                 </div>
             </div>
         </div>;

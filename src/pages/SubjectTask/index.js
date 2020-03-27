@@ -6,6 +6,7 @@ import User from '../../assets/icons/user.svg';
 import Users from '../../assets/icons/users.svg';
 
 import Sidebar from '../../components/Sidebar';
+import {Link} from "react-router-dom";
 
 class SubjectTask extends React.Component {
     constructor(props) {
@@ -17,25 +18,20 @@ class SubjectTask extends React.Component {
         maxQuestion: 10
     };
 
-/*    add() {
-        const newValue = this.state.currentQuestion + 1;
-        this.setState({currentQuestion: newValue})
-    }*/
-
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
 
     render() {
         return (
-            <div >
-                <Header side="Dashboard" />
-                <Sidebar active="settings" />
+            <div>
+                <Header side="Dashboard"/>
+                <Sidebar active="settings"/>
 
-            
+
                 <div id='main'>
 
 
-                     <div className='subjectTask' id='subjectTask' >
-                
+                    <div className='subjectTask' id='subjectTask'>
+
                         <div className='subjectTaskContainer'>
                             <div className='subjectTaskContentHeader'>
                                 <div className='subjectTaskLeft'>
@@ -59,8 +55,8 @@ class SubjectTask extends React.Component {
                                 <span>Frage 4 von 10 </span>
                                 <div className='progressBar'>
                                     <div className='progressPer' per='90'
-                                        style={{width: `${(this.state.currentQuestion / this.state.maxQuestion) * 100}%`}}>
-                                    
+                                         style={{width: `${(this.state.currentQuestion / this.state.maxQuestion) * 100}%`}}>
+
                                     </div>
 
                                 </div>
@@ -82,14 +78,18 @@ class SubjectTask extends React.Component {
                                 <div className='subjectTaskAnswerfield'>
                                     <input type="text" placeholder='test'/>
                                 </div>
-                        
+
                                 <div className='subjectTaskButtons'>
-                                    <button className='subjectTaskSkip'>
-                                        Überspringen
-                                    </button>
-                                    <button className='subjectTaskNext' >
-                                        Nächste Frage
-                                    </button>
+                                    <Link to='/task/result' style={{textDecoration: 'none' , color: "inherit"}}>
+                                        <button className='subjectTaskSkip'>
+                                            Überspringen
+                                        </button>
+                                    </Link>
+                                    <Link to='/task/result' style={{textDecoration: 'none', color: "inherit"}}>
+                                        <button className='subjectTaskNext'>
+                                            Nächste Frage
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
