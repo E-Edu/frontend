@@ -5,6 +5,7 @@ import ResultQuestion from '../../components/ResultQuestion';
 import User from '../../assets/icons/user.svg';
 import Users from '../../assets/icons/users.svg';
 import Sidebar from "../../components/Sidebar";
+import TaskHeader from "../../components/TaskHeader";
 
 class Result extends React.Component {
 
@@ -23,7 +24,7 @@ class Result extends React.Component {
                 <Sidebar active="task/result"/>
                 <div className='result' id="main">
                     <div className='resultContainer'>
-                        <div className='resultContentHeader'>
+                        {/*<div className='resultContentHeader'>
                             <div className='resultLeft'>
                                 <span className='resultSubject'>
                                     Mathe
@@ -42,7 +43,8 @@ class Result extends React.Component {
                                     <p><span> 21.323</span> Punkte</p>
                                 </div>
                             </div>
-                        </div>
+                        </div>*/}
+                        <TaskHeader module="Mathe"/>
                         <div className='resultEvaluation'>
                             <span>Auswertung</span>
                             <p>Korrekte Fragen:<span> 7 von 10 </span></p>

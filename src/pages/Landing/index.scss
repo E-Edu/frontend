@@ -1,61 +1,91 @@
+$turquoise: #5BC0BE;
+
 .landing {
-	#content {
-		display: flex;
-		flex-direction: row;
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
-		margin-top: 150px;
-	}
-	#landigpage-image {
-		padding: 0 1rem;
-	}
-	#text-content {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		color: #0b132b;
-		justify-content: center;
-		width: 50%;
-		padding: 0 1rem;
+    #content {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+    }
 
-		margin-left: 3rem;
+    #image-landigpage {
 
-		a {
-			text-decoration: none;
-			color: #687d9a;
-			transition: all 0.2s;
-		}
-		a:hover {
-			color: #5bc0be;
-		}
-		a:focus {
-			outline: none;
-		}
+        width: 50%;
 
-	}
-	#text-content #title {
-		font: Bold 68px/110px Hind Siliguri;
+        img {
+            padding-left: 2rem;
+			margin-left: 2rem;
+        }
+    }
 
-		margin-bottom: 1rem;
-		
-		padding: 0;
-	}
-	#text-content h5 {
-		font: Bold 1.6666666rem/3.3333333rem Hind Siliguri;
-		padding: 0;
-		margin: 0;
-	}
-	#text-content #text {
-		font: Bold 25px/45px Hind Siliguri;
-		padding: 0;
-		margin: 0;
-	}
+    #text-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #0b132b;
+        justify-content: center;
+        width: 50%;
+        padding: 0 1rem;
+        font-size: 2.5rem;
 
-	.react-modal-body {
-		top: -10%;
-		width: auto !important;
-		.react-modal-body-close {
-		}
-	}
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            padding: 0;
+            margin: 0;
+			width: 30vw;
+			span{
+				color: #5BC0BE;
+			}
+        }
+
+        a {
+            text-decoration: none;
+            color: #687d9a;
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            color: #5bc0be;
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+    }
+
+    #text-content #title {
+        font: Bold 68px/110px Hind Siliguri;
+
+        margin-bottom: 1rem;
+
+        padding: 0;
+    }
+
+    #text-content h5 {
+        font: Bold 1.6666666rem/3.3333333rem Hind Siliguri;
+        padding: 0;
+        margin: 0;
+    }
+
+    #text-content #text {
+        font: Bold 25px/45px Hind Siliguri;
+        padding: 0;
+        margin: 0;
+    }
+
+    .react-modal-body {
+        top: -10%;
+        width: auto !important;
+
+        .react-modal-body-close {
+        }
+    }
 }

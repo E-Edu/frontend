@@ -9,12 +9,17 @@ $lightBlue: #96B4DD;
 
 .result {
     font-family: Hind Siliguri;
+    margin-top: 100px;
 
     .resultContainer {
-
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        #TaskHeader {
+            width: 90%;
+            margin-bottom: 2.5rem;
+        }
 
         .resultContentHeader {
             display: flex;
@@ -87,7 +92,6 @@ $lightBlue: #96B4DD;
             color: $grey;
             font-weight: normal;
             width: 60.0rem;
-            margin-top: 3.3333333rem;
 
             p {
                 margin: 0;

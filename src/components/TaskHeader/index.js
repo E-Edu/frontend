@@ -25,6 +25,7 @@ class TaskHeader extends React.Component {
                             <p className="lecturePointText"><span>21.323</span> Punkte</p>
                         </div>
                     </div>
+
                     <div className='lectureHeaderSearch'>
                         <input type="text" placeholder="Suche" className="input"/>
                     </div>
