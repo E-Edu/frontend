@@ -30,21 +30,22 @@ $Second: #5bc0be;
 		color: $Second;
 	}
 	.BTN_Log {
-		height: 3.3333333rem;
-		width: 10.6rem;
-		border: 0.13333334rem solid $Second;
-		border-radius: 0.6666667rem;
-		font: 1.7333333rem/2.8rem Hind Siliguri;
+		max-height: 30px;
+		width: 159px;
+		border: 2px solid $Second;
+		border-radius: 10px;
+		font: 22px/42px Hind Siliguri;
 		font-weight: 400;
 		background-color: Transparent;
 		text-decoration: none;
-		padding: 0.33333334rem 0.6666667rem;
+		padding: 2.5px 26.21px;
 	}
 	#Button_Login {
 		color: #0b132b;
 		background-color: $Second;
 		margin-right: 3.7333333rem;
 		transition: all 0.5s;
+		padding: 2.5px 40px;
 	}
 	#Button_Register {
 		color: $Second;

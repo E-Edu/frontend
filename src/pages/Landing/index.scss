@@ -3,9 +3,9 @@
 		display: flex;
 		flex-direction: row;
 		width: 100vw;
-		justify-content: space-around;
+		justify-content: center;
 		align-items: center;
-		padding-top: 5.3333335rem;
+		margin-top: 150px;
 	}
 	#landigpage-image {
 		padding: 0 1rem;
@@ -18,10 +18,27 @@
 		justify-content: center;
 		width: 50%;
 		padding: 0 1rem;
+
+		margin-left: 3rem;
+
+		a {
+			text-decoration: none;
+			color: #687d9a;
+			transition: all 0.2s;
+		}
+		a:hover {
+			color: #5bc0be;
+		}
+		a:focus {
+			outline: none;
+		}
+
 	}
-	#text-content h2 {
-		font: Bold 4.5333333rem/7.3333335rem Hind Siliguri;
+	#text-content #title {
+		font: Bold 68px/110px Hind Siliguri;
+
 		margin-bottom: 1rem;
+		
 		padding: 0;
 	}
 	#text-content h5 {
@@ -29,8 +46,8 @@
 		padding: 0;
 		margin: 0;
 	}
-	#text-content h4 {
-		font: Bold 2.3333333rem/3.8rem Hind Siliguri;
+	#text-content #text {
+		font: Bold 25px/45px Hind Siliguri;
 		padding: 0;
 		margin: 0;
 	}

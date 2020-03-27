@@ -15,6 +15,7 @@ import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
 import Tasklist from "./pages/Tasklist";
 import Profile from "./pages/Profile";
+import SubjectTask from "./pages/SubjectTask";
 
 class App extends Component {
     render() {
@@ -34,6 +35,8 @@ class App extends Component {
                 <Route path="/task" exact component={Task} />
                 <Route path="/task/result" exact component={Result} />
                 {/*Task add*/}
+                {/*solve subject-task*/}
+                <Route path='/task/subject' exact component={SubjectTask}/>
                 {/*Meine Aufgaben*/}
                 <Route
                     path="/correction/review"

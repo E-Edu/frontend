@@ -1,20 +1,19 @@
+
+
 .correctionContent{
     
     .correctionHeader{
         display:flex;
-        flex-direction:row;
-        
+        justify-content: space-between;
         margin-top:7.6rem;
         
         align-items: center;
-        justify-content:space-between;
-        width:100%;
-        
+
         h1{
             color:#0B132B;
             font-size:4.0rem;
             font-weight:bold;
-            margin-left:14.933333rem;
+            margin-left:6rem;
         }
         .correctionMode{
             background-color:#5BC0BE;
@@ -26,20 +25,18 @@
             font-size:1.7333333rem;
             font-weight:bolder;
             text-align:center;
-            margin-right:10.0rem;
+            margin-right:6rem;
         }
 
     }
-    .correctionQuestionBox{
-        padding:18.066668rem;
-        margin-left:13.666667rem;
-        margin-top:0;
-        padding-top:0;
-        margin-right:31.6rem;
-        width:64.73333rem;
-        
-
+    .box{
+        display:flex;
+        text-align:center;
+        width:100%;
+        margin:0;
+        flex-wrap:wrap;
+        flex-direction: column;
+        align-items: center;
     }
-   
 
 }
