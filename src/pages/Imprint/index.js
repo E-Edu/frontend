@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import './index.scss';
 import Header from '../../components/Header';
+import Sidebar from "../../components/Sidebar";
 
 class Imprint extends Component {
 	render() {
+
+		let head = <Header side="Landing" />;
+      	let side = "";  
+		if (this.props.location.state != undefined) {
+			console.log(this.props.location.state.prevPath);
+			head = <Header side="Dashboard" />;
+			side = <Sidebar active="dashboard" />;
+		}
+
 		return (
 			<div className='imprint'>
-				<Header side="Landing"/>
+				{head}
+				{side}
 				<div className='headingFont'>Imprint</div>
 				<div className='fontBox'>
 				<p class="3DMsoNoSpacing">

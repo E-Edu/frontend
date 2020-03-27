@@ -35,7 +35,7 @@ class Header extends Component {
                                 </div>
                             </Link>
                         <div id='Button_Box_Dashboard'>
-                            <Link to="/imprint" className='BTN_Dash' id='Button_Info'>
+                            <Link to={{pathname: '/imprint', state: { prevPath: "Dashboard" }}} className='BTN_Dash' id='Button_Info' >
                                 <img src={Help_Image} alt='Help'/>
                             </Link>
                             <Link className='BTN_Dash' id='Button_Logout'>
