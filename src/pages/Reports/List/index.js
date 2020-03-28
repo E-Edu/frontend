@@ -19,8 +19,8 @@ class Report extends Component {
         this.state = {
             teacher: props.teacher, likes: Number(props.likes), dislikes: Number(props.dislikes),
             difficulty: props.difficulty, messages: props.messages, subject: props.subject, like: (props.liked || 0),
-            thumbsInactive: "#3A506B", thumbGreen: colorData.Difficulty_color["Leicht"].border,
-            thumbRed: colorData.Difficulty_color["Schwer"].border
+            thumbsInactive: "#3A506B", thumbGreen: colorData.difficultyColor["easy"].border,
+            thumbRed: colorData.difficultyColor["hard"].border
         }
     }
 
@@ -73,7 +73,7 @@ class Report extends Component {
     };
 
     render() {
-        const color = colorData.Difficulty_color[this.state.difficulty];
+        const color = colorData.difficultyColor[this.state.difficulty];
         let bgColor = [color.bg, color.border];
         return (
             <div className="report-component text-dark">

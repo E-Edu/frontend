@@ -10,7 +10,7 @@
          "religion":"#08B4CB",
          "chemistry":"#FAE700"
      },
-    "Difficulty_color": {
+    "difficultyColor": {
       "Easy": {
         "bg": "rgba(25, 186, 63, 0.3)",
         "border": "rgba(25, 186, 63, 1)"

@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 
 class Task extends React.Component {
     render() {
-        const color = colorData.Difficulty_color[this.props.schwere];
+        const color = colorData.difficultyColor[this.props.schwere];
         let bgColor = [color.bg, color.border];
         return <div className="Task">
             <div className="Task_Head">
@@ -60,15 +60,15 @@ class Tasklist extends React.Component {
         this.state.tasks.push(
             {
                 description: "A short description what to do in this task",
-                difficulty: "Easy",
+                difficulty: "easy",
             },
             {
                 description: "A short description what to do in this task",
-                difficulty: "Medium",
+                difficulty: "medium",
             },
             {
                 description: "A short description what to do in this task",
-                difficulty: "Hard",
+                difficulty: "hard",
             }
         );
 
