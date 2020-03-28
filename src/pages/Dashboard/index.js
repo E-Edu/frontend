@@ -64,38 +64,24 @@ class dashboard extends React.Component {
         this.state.subjects.push(
             {
                 nameKey: "german",
-                displayName: Translation.t("subject.german.name"),
-                description: "Sprachen lernen - Babel"
             },
             {
                 nameKey: "computerScience",
-                displayName: Translation.t("subject.computerScience.name"),
-                description: "0110011111000101110001010100011111011"
             },
             {
                 nameKey: "history",
-                displayName: Translation.t("subject.history.name"),
-                description: "I have a dream..."
             },
             {
                 nameKey: "politics",
-                displayName: Translation.t("subject.politics.name"),
-                description: "Du Schaffst da"
             },
             {
                 nameKey: "physics",
-                displayName: Translation.t("subject.physics.name"),
-                description: "Wieso wirfst du mir den Apfel auf den Kopf?!"
             },
             {
                 nameKey: "biology",
-                displayName: Translation.t("subject.biology.name"),
-                description: "Hast du meine Pantoffeltierchen gesehen?"
             },
             {
                 nameKey: "chemistry",
-                displayName: Translation.t("subject.chemistry.name"),
-                description: "Die Chemie stimmt"
             },
         );
     }
@@ -113,7 +99,6 @@ class dashboard extends React.Component {
         console.log(result)
         subjects.push({
             displayName: result.data.subjectById.displayName,
-            description: "<Fetched>"
         });
 
         // push our new states
@@ -128,7 +113,7 @@ class dashboard extends React.Component {
         return this.state.subjects.map((subject, index) => {
             return  <Link key={index} to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
                         <Subjekt subject={Translation.t("subject." + subject.nameKey + ".name")}
-                                 Underline={subject.description}
+                                 Underline={Translation.t("subject." + subject.nameKey + ".description")}
                                  color={Data["subjectColor"][subject.nameKey]}
                                  Weekendtask="4/5"
                                  Points="213"

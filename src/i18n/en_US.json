@@ -2,25 +2,32 @@
   "translation": {
     "subject": {
       "german": {
-        "name": "German"
+        "name": "German",
+        "description": "Language learning - Babel"
       },
       "computerScience": {
-        "name": "Computer Science"
+        "name": "Computer Science",
+        "description": "01010101010101010110"
       },
       "physics": {
-        "name": "Physics"
+        "name": "Physics",
+        "description": "Pay attention to falling apples!"
       },
       "history": {
-        "name": "History"
+        "name": "History",
+        "description": "I have a dream..."
       },
       "politics": {
-        "name": "Political Education"
+        "name": "Political Education",
+        "description": ""
       },
       "biology": {
-        "name": "Biology"
+        "name": "Biology",
+        "description": ""
       },
       "chemistry": {
-        "name": "Chemistry"
+        "name": "Chemistry",
+        "description": ""
       }
     },
     "landingPage": {

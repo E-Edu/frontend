@@ -2,25 +2,32 @@
   "translation": {
     "subject": {
       "german": {
-        "name": "Deutsch"
+        "name": "Deutsch",
+        "description": "Sprachen lernen - Babel"
       },
       "computerScience": {
-        "name": "Informatik"
+        "name": "Informatik",
+        "description": "011111011101101011101001"
       },
       "physics": {
-        "name": "Physik"
+        "name": "Physik",
+        "description": "Wieso wirfst du mir den Apfel auf den Kopf?"
       },
       "history": {
-        "name": "Geschichte"
+        "name": "Geschichte",
+        "description": "I have a dream..."
       },
       "politics": {
-        "name": "Politik"
+        "name": "Politik",
+        "description": "Du schaffst das"
       },
       "biology": {
-        "name": "Biologie"
+        "name": "Biologie",
+        "description": "Hast du meine Pantoffeltierchen gesehen?"
       },
       "chemistry": {
-        "name": "Chemie"
+        "name": "Chemie",
+        "description": "Die Chemie stimmt"
       }
     },
     "landingPage": {
