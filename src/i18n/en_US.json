@@ -1,0 +1,84 @@
+{
+  "translation": {
+    "subject": {
+      "german": {
+        "name": "German",
+        "description": "Language learning - Babel"
+      },
+      "computerScience": {
+        "name": "Computer Science",
+        "description": "01010101010101010110"
+      },
+      "physics": {
+        "name": "Physics",
+        "description": "Pay attention to falling apples!"
+      },
+      "history": {
+        "name": "History",
+        "description": "I have a dream..."
+      },
+      "politics": {
+        "name": "Political Education",
+        "description": ""
+      },
+      "biology": {
+        "name": "Biology",
+        "description": ""
+      },
+      "chemistry": {
+        "name": "Chemistry",
+        "description": ""
+      },
+      "math": {
+        "name": "Mathematics",
+        "description": "Something about apples and bananas"
+      }
+    },
+    "lection": {
+      "math": {
+        "addition": {
+          "name": "Addition"
+        }
+      }
+    },
+    "landingPage": {
+      "title": "Education for everyone",
+      "description": "E-Edu is a platform developed during the #WirVsVirus (We vs Virus) hackathon by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu provides a platform for students to solve tasks created by verified teachers."
+    },
+    "taskList": {
+      "questions": "Questions",
+      "task": "Task",
+      "points": "Points",
+      "search": "Search"
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "task": {
+      "question": "Question",
+      "questions": "Questions",
+      "of": "of",
+      "points": "Points",
+      "answer": "Answer",
+      "skip": "Skip",
+      "nextTask": "Next task"
+    },
+    "settings": {
+      "settings": "Settings",
+      "email": "Email",
+      "password": "Password",
+      "change": "Change",
+      "language": "Language"
+    },
+    "profile": {
+      "memberSince": "Member since",
+      "rank": {
+        "teachingMaster": "The Teaching Master"
+      },
+      "favoriteSubjects": "Favorite Subjects",
+      "certificates": "Certificates"
+    }
+  }
+}

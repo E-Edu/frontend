@@ -1,0 +1,27 @@
+{
+    "subjectColor":  {
+         "german":"#B52020",
+         "math":"#202BB5",
+         "computerScience":"#303030",
+         "history":"#F45E00",
+         "politics":"#B520AB",
+         "physics":"#707070",
+         "biology":"#31AD03",
+         "religion":"#08B4CB",
+         "chemistry":"#FAE700"
+     },
+    "difficultyColor": {
+      "easy": {
+        "backgroundColor": "rgba(25, 186, 63, 0.3)",
+        "borderColor": "rgba(25, 186, 63, 1)"
+      },
+      "medium": {
+        "backgroundColor": "rgba(255, 186, 0, 0.3)",
+        "borderColor": "rgba(255, 186, 0, 1)"
+      },
+      "hard": {
+        "backgroundColor": "rgba(186, 25, 25, 0.3)",
+        "borderColor": "rgba(186, 25, 25, 1)"
+      }
+    }
+ }

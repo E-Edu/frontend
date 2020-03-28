@@ -12,10 +12,12 @@
     "apollo-boost": "^0.4.7",
     "axios": "^0.19.2",
     "graphql": "^14.6.0",
+    "i18next": "^19.3.4",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-animated-modal": "^1.1.1",
     "react-dom": "^16.13.1",
+    "react-i18next": "^11.3.4",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
   },

@@ -1,22 +1,22 @@
 import "./css/main.scss";
 import React, {Component} from "react";
-import Landing from "./pages/Landing";
-import Task from "./pages/Task";
-import Dashboard from "./pages/Dashboard";
-import Imprint from "./pages/Imprint";
-import Privacy from "./pages/Privacy";
-import Credits from "./pages/Credits";
-import ReportsList from "./pages/Reports/List";
-import Result from "./pages/Result";
+import LandingPage from "./pages/Landing/LandingPage";
+import Task from "./pages/Task/Task";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Imprint from "./pages/Imprint/Imprint";
+import Privacy from "./pages/Privacy/Privacy";
+import Credits from "./pages/Credits/Credits";
+import ReportsList from "./pages/Reports/List/ReportsList";
+import TaskEvaluation from "./pages/Result/TaskEvaluation";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Settings from "./pages/Settings";
-import CorrectionReview from "./pages/CorrectionReview";
-import AddTeacher from "./pages/AddTeacher";
-import Tasklist from "./pages/Tasklist";
-import Profile from "./pages/Profile";
-import SubjectTask from "./pages/SubjectTask";
-import Lecture from "./pages/Lectures";
-import PageLayout from "./components/Template/page";
+import Settings from "./pages/Settings/Settings";
+import CorrectionReview from "./pages/CorrectionReview/CorrectionReview";
+import AddTeacher from "./pages/AddTeacher/AddTeacher";
+import TaskList from "./pages/TaskList/TaskList";
+import Profile from "./pages/Profile/Profile";
+import SubjectTask from "./pages/SubjectTask/SubjectTask";
+import Lecture from "./pages/Lecture/Lecture";
+import PageLayout from "./components/Template/page/PageLayout";
 
 class App extends Component {
     render() {
@@ -27,16 +27,16 @@ class App extends Component {
                     <Route
                         path={["/login", "/register", "/"]}
                         exact
-                        component={Landing}
+                        component={LandingPage}
                     />
                     <Route path="/imprint" exact component={Imprint}/>
                     <Route path="/privacy" exact component={Privacy}/>
                     <Route path="/credits" exact component={Credits}/>
                     <Route path="/dashboard" exact component={Dashboard}/>
                     {/*Auswahl (Themen)*/}
-                    <Route path='/task/list' exact component={Tasklist}/>
+                    <Route path='/task/list' exact component={TaskList}/>
                     <Route path='/task' exact component={Task}/>
-                    <Route path='/task/result' exact component={Result}/>
+                    <Route path='/task/result' exact component={TaskEvaluation}/>
                     <Route path='/task/lecture' exact component={Lecture}/>
                     {/*Task add*/}
                     {/*solve subject-task*/}
