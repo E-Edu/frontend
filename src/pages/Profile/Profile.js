@@ -7,11 +7,10 @@ import Trending_icon from '../../components/icons/trending-up.icon.js';
 import File from '../../assets/icons/file-text.svg';
 import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
-import './index.scss';
+import './Profile.scss';
 import '../../css/main.css';
 import Data from '../../lib/Colors.json';
-import Sidebar from '../../components/Sidebar';
-import Header from '../../components/Header';
+import {Translation} from "../../i18n/i18n";
 
 class Profile_Subject extends React.Component {
 
@@ -64,13 +63,15 @@ class ProfileCerficate extends React.Component {
 }
 
 class Profile extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            Benutzername: "Test",
-            disabled: true
-        }
     }
+
+    state = {
+        username: "Morpheus",
+        disabled: true
+    };
 
     componentDidUpdate() {
         console.log(this.state);
@@ -82,23 +83,15 @@ class Profile extends React.Component {
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
     }*/
 
-    ClickHandler_Bearbeiten = () => {
-        if (this.state.disabled) {
-            this.setState({
-                disabled: false
-            });
-        } else {
-            this.setState({
-                disabled: true
-            });
-            //send data to Backend
-        }
+    usernameClickListener = () => {
+        this.state.disabled = !this.state.disabled;
+        this.setState(this.state);
     };
 
-    ChangeHandler_Benutzername = () => {
-        this.setState({
-            Benutzername: document.getElementById('Benutzername_input').value
-        });
+    usernameChangeListener = () => {
+        this.state.username = document.getElementById('usernameInput').value;
+        //TODO: Send data to backend
+        this.setState(this.state);
     };
 
     render() {
@@ -116,9 +109,9 @@ class Profile extends React.Component {
                                  src="https://yt3.ggpht.com/a/AATXAJzQuI4-bNmqwbklzCjvm576_nZwSdpG5jX-Hw=s176-c-k-c0x00ffffff-no-rj-mo"/>
                             <span className="central" id="name">
                             <div className='profile_flex-row'>
-                                <input onChange={this.ChangeHandler_Benutzername} id='Benutzername_input' type='text'
-                                       value={this.state.Benutzername} disabled={this.state.disabled}/>
-                                <a onClick={this.ClickHandler_Bearbeiten}>
+                                <input onChange={this.usernameChangeListener} id='usernameInput' type='text'
+                                       value={this.state.username} disabled={this.state.disabled}/>
+                                <a onClick={this.usernameClickListener}>
                                     <img className='pen img' src={Task_icon} alt="pen"/>
                                 </a>
                             </div>
@@ -130,7 +123,7 @@ class Profile extends React.Component {
                             <div className="profile_flex-row">
                                 <span className='user img' id="user_icon"><User_icon alt="user icon" stroke="#3A506B"/></span>
                                 <span>6.526</span>
-                                <span className='var_info profile_span_padding_l'>Punkte</span>
+                                <span className='var_info profile_span_padding_l'>{Translation.t("task.points")}</span>
                             </div>
                         </span>
                         </div>
@@ -140,7 +133,7 @@ class Profile extends React.Component {
                             <div className="profile_flex-row">
                                 <span className='trending img' id="trending_icon"><Trending_icon width="24" height="30" stroke="#3A506B" alt="trending"/></span>
                                 <span>7.231</span>
-                                <span className='var_info profile_span_padding_l'>Fragen</span>
+                                <span className='var_info profile_span_padding_l'>{Translation.t("task.questions")}</span>
                             </div>
                         </span>
                         </div>
@@ -149,7 +142,7 @@ class Profile extends React.Component {
                         <span className="central">
                             <div className="profile_flex-row">
                                 <span className='calender img' id="calender_icon"><Calender_icon   alt="calendar" stroke="#3A506B"/></span>
-                                <span className='profile_span_padding_r'>Dabei seit</span><span
+                                <span className='profile_span_padding_r'>{Translation.t("profile.memberSince")}</span><span
                                 className='var_info'>21.03.2020</span>
                             </div>
                         </span>
@@ -166,13 +159,13 @@ class Profile extends React.Component {
                             </div>
                             <div id="level_rank">
                                 <img stroke="#5BC0BE" alt="tag" className="tag" src={Tags_icon}/>
-                                <span id="level_Rang">Der lehrende Meister</span>
+                                <span id="level_Rang">{Translation.t("profile.rank.teachingMaster")}</span>
                             </div>
                         </div>
 
                         <div id="favorite_subject">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>Favorisierte Fächer</h2>
+                                <h2 className='font-Arimo profile_h2'>{Translation.t("profile.favoriteSubjects")}</h2>
                                 <div id="profile_favorite_box">
                                     <Profile_Subject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
                                     <Profile_Subject Subject="Mathe"
@@ -183,7 +176,7 @@ class Profile extends React.Component {
                         </div>
                         <div id="favorite_certificate">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>Zertifikate</h2>
+                                <h2 className='font-Arimo profile_h2'>{Translation.t("profile.certificates")}</h2>
                                 <div id="profile_certificate_box">
 
                                     <ProfileCerficate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>

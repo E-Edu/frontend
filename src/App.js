@@ -13,7 +13,7 @@ import Settings from "./pages/Settings/Settings";
 import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
 import TaskList from "./pages/TaskList/TaskList";
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile/Profile";
 import SubjectTask from "./pages/SubjectTask/SubjectTask";
 import Lecture from "./pages/Lectures";
 import PageLayout from "./components/Template/page";

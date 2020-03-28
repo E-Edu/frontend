@@ -60,6 +60,7 @@
       "question": "Question",
       "questions": "Questions",
       "of": "of",
+      "points": "Points",
       "answer": "Answer",
       "skip": "Skip",
       "nextTask": "Next task"
@@ -70,6 +71,14 @@
       "password": "Password",
       "change": "Change",
       "language": "Language"
+    },
+    "profile": {
+      "memberSince": "Member since",
+      "rank": {
+        "teachingMaster": "The Teaching Master"
+      },
+      "favoriteSubjects": "Favorite Subjects",
+      "certificates": "Certificates"
     }
   }
 }

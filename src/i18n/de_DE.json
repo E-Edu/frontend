@@ -59,6 +59,7 @@
     "task": {
       "question": "Frage",
       "questions": "Fragen",
+      "points": "Punkte",
       "of": "von",
       "answer": "Antwort",
       "skip": "Überspringen",
@@ -70,6 +71,14 @@
       "password": "Passwort",
       "change": "Ändern",
       "language": "Sprache"
+    },
+    "profile": {
+      "memberSince": "Dabei seit",
+      "rank": {
+        "teachingMaster": "Der Lehrende Meister"
+      },
+      "favoriteSubjects": "Favorisierte Fächer",
+      "certificates": "Zertifikate"
     }
   }
 }
