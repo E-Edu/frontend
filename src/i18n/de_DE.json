@@ -3,7 +3,29 @@
     "subject": {
       "german": {
         "name": "Deutsch"
+      },
+      "computerScience": {
+        "name": "Informatik"
+      },
+      "physics": {
+        "name": "Physik"
+      },
+      "history": {
+        "name": "Geschichte"
+      },
+      "politics": {
+        "name": "Politik"
+      },
+      "biology": {
+        "name": "Biologie"
+      },
+      "chemistry": {
+        "name": "Chemie"
       }
+    },
+    "landingPage": {
+      "title": "Education for everyone",
+      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team \"The Morpheus Tutorials\" erstellt wurde.\nE-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
     }
   }
 }

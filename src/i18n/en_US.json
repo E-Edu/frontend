@@ -22,6 +22,10 @@
       "chemistry": {
         "name": "Chemistry"
       }
+    },
+    "landingPage": {
+      "title": "Education for everyone",
+      "description": "E-Edu is a platform developed during the #WirVsVirus (We vs Virus) hackathon by the team \"The Morpheus Tutorials\".\nE-Edu provides a platform for students to solve tasks created by verified teachers."
     }
   }
 }
