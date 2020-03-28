@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './TaskHeader.scss';
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
 

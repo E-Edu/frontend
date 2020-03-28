@@ -16,7 +16,7 @@ import TaskList from "./pages/TaskList/TaskList";
 import Profile from "./pages/Profile/Profile";
 import SubjectTask from "./pages/SubjectTask/SubjectTask";
 import Lecture from "./pages/Lecture/Lecture";
-import PageLayout from "./components/Template/page";
+import PageLayout from "./components/Template/page/PageLayout";
 
 class App extends Component {
     render() {

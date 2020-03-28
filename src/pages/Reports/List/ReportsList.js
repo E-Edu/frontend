@@ -5,7 +5,7 @@ import icon_mail from '../../../assets/icons/mail.svg';
 import icon_teacher from '../../../assets/icons/teacher.svg';
 import ThumbsUpIcon from '../../../components/icons/thumbs-up.icon';
 import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
-import ReportInfo from '../../../components/ReportInfo';
+import ReportInfo from '../../../components/ReportInfo/ReportInfo';
 import Modal from 'react-animated-modal';
 import colorData from '../../../lib/Colors';
 import {Translation} from "../../../i18n/i18n";

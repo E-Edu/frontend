@@ -1,6 +1,6 @@
 import React from 'react';
 import './Lecture.scss';
-import TaskHeader from "../../components/TaskHeader";
+import TaskHeader from "../../components/TaskHeader/TaskHeader";
 import LectureGroup from "../../components/Lecture/Group/LectureGroup";
 
 class Lecture extends React.Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.scss';
+import './ReportInfo.scss';
 import down from '../../assets/icons/thumbs-down.svg';
 import up from '../../assets/icons/thumbs-up.svg';
 import mail from '../../assets/icons/mail.svg';

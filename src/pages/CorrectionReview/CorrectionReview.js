@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './CorrectionReview.scss';
-import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes';
+import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes/CorrectionReviewBoxes';
 
 
 class CorrectionReview extends Component {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './ResultQuestion.scss';
 import ThumbsUp from '../../assets/icons/thumbs-up.svg';
 import ThumbsDown from '../../assets/icons/thumbs-down.svg';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./index";
+import Header from "./Header";
 import {radios, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 

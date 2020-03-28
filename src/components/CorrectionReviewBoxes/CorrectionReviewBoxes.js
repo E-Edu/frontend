@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './CorrectionReviewBoxes.scss';
 import Calendar from '../../assets/icons/calendar.svg';
 import User from '../../assets/icons/user.svg';
 import Edit from '../../assets/icons/edit.svg';

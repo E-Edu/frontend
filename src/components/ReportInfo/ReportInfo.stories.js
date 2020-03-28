@@ -1,5 +1,5 @@
 import React from 'react';
-import ReportInfo from "./index";
+import ReportInfo from "./ReportInfo";
 import {withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 

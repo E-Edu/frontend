@@ -1,5 +1,5 @@
 import React from 'react';
-import TaskHeader from "./index";
+import TaskHeader from "./TaskHeader";
 import {text, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 

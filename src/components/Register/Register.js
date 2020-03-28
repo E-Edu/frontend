@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Register.scss";
 import eye from "../../assets/icons/eye.svg";
 import eye_off from "../../assets/icons/eye-off.svg";
 import TeacherIcon from "../../components/icons/teacher.icon";

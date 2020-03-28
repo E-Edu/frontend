@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import './index.scss';
-import Header from "../../Header";
-import Sidebar from "../../Sidebar";
-import Footer from "../../Footer";
+import './PageLayout.scss';
+import Header from "../../Header/Header";
+import Sidebar from "../../Sidebar/Sidebar";
+import Footer from "../../Footer/Footer";
 import {withRouter} from 'react-router-dom';
 
 class PageLayout extends Component {

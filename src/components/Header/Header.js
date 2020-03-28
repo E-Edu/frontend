@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './Header.scss';
 import {Link} from 'react-router-dom';
 import Help_Image from '../../assets/icons/helpcircle.svg';
 import Logout_Image from '../../assets/icons/logout.svg';

@@ -1,16 +1,11 @@
 import React from 'react';
-import Footer from "./index";
+import Login from "./Login";
 import {withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 
-const stories = storiesOf('footer', module);
+const stories = storiesOf('login', module);
 stories.addDecorator(withKnobs);
 
-
 stories.add('default', () => {
-    return <div style={{height:"20vh" ,width:"100vw"}}><Footer/></div>
+    return <Login/>
 });
-
-
-
-

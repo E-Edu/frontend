@@ -1,7 +1,7 @@
 import React from 'react';
 import './TaskEvaluation.scss';
-import ResultQuestion from '../../components/ResultQuestion';
-import TaskHeader from "../../components/TaskHeader";
+import ResultQuestion from '../../components/ResultQuestion/ResultQuestion';
+import TaskHeader from "../../components/TaskHeader/TaskHeader";
 
 class TaskEvaluation extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ResultQuestion from "./index";
+import ResultQuestion from "./ResultQuestion";
 import {withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 

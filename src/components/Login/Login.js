@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './index.scss';
+import './Login.scss';
 import eye from '../../assets/icons/eye.svg';
 import eyeOff from '../../assets/icons/eye-off.svg';
 

@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import "./LandingPage.scss";
 import {Redirect, Route} from "react-router-dom";
-import Login from "../../components/Login";
-import Register from "../../components/Register";
+import Login from "../../components/Login/Login";
+import Register from "../../components/Register/Register";
 import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
 import Query from "../../lib/api/Query";
