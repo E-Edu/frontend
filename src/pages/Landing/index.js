@@ -11,6 +11,7 @@ class Landing extends Component {
     state = {showModal: false, redirect: false};
 
     render() {
+
         return (
             <div className="landing">
                 <div className="Main">
