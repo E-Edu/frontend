@@ -19,7 +19,7 @@ Start storybook server:
 You want to contribute to this project? Great!
 
 [Git Projekt tasks](https://github.com/E-Edu/frontend/projects/2)<br/>
-[Frontend Convention](https://)<br/>
+[Frontend Convention](https://github.com/E-Edu/frontend/blob/experimental/contribution.md)<br/>
 
 Do you have any other questions? 
 Then get in touch with our frontend heads<br/><br/>
