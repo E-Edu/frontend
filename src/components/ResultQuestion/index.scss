@@ -8,24 +8,24 @@ $mediumBlue: #1C2541;
 $lightBlue: #96B4DD;
 
 .resultQuestionbox {
-    border: 1px solid #707070;
-    border-radius: 8px;
+    border: 0.06666667rem solid #707070;
+    border-radius: 0.53333336rem;
     display: flex;
     flex-direction: row;
-    height: 126px;
+    height: 8.4rem;
 
     .resultStatusBar {
-        padding: 126px 8px 0 0;
-        border-top-left-radius: 8px;
-        border-bottom-left-radius: 8px;
+        border-bottom-left-radius: 0.53333336rem;
+        border-top-left-radius: 0.53333336rem;
+        padding: 8.4rem 0.53333336rem 0 0;
     }
 
     .resultContent {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: calc(100% - 12px);
-        padding: 12px;
+        padding: 0.8rem;
+        width: calc(100% - 0.8rem);
 
         .resultTop {
             display: flex;
@@ -33,10 +33,10 @@ $lightBlue: #96B4DD;
             justify-content: space-between;
 
             .resultLeftTop {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: baseline;
 
                 p:first-child {
                     margin-right: 1rem;
@@ -44,95 +44,95 @@ $lightBlue: #96B4DD;
 
                 .resultQuestionLabel {
                     color: $grey;
-                    font-size: 16px;
-                    padding-top: 0;
+                    font-size: 1.0666667rem;
                     margin-top: 0;
+                    padding-top: 0;
                 }
 
                 .resultQuestionTitel {
                     color: #707070;
-                    font-size: 20px;
+                    font-size: 1.3333334rem;
                     margin-top: 0;
                 }
             }
 
             .resultRightTop {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: baseline;
 
                 img {
-                    margin: 0 5px;
+                    margin: 0 0.33333334rem;
                 }
 
                 .resultRating {
                     color: $grey;
-                    font-size: 16px;
+                    font-size: 1.0666667rem;
                     margin-top: 0;
                 }
 
                 .resultRatingIcons {
                     color: $grey;
-                    font-size: 16px;
+                    font-size: 1.0666667rem;
                     margin-top: 0;
                 }
             }
         }
 
         .resultBottom {
+            color: $grey;
             display: flex;
             flex-direction: row;
+            height: 2.6666667rem;
             justify-content: space-between;
-            height: 40px;
-            color: $grey;
 
             .resultLeftBottom {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
-                align-items: baseline;
-                padding-bottom: 0;
+                height: 2.6666667rem;
                 margin-bottom: 0;
-                height: 40px;
-
-                .resultMyAnswer {
-                    color: $grey;
-                    font-size: 16px;
-                    margin-bottom: 0;
-                }
+                padding-bottom: 0;
 
                 width: 50%;
 
-                p:first-child {
-                    padding-right: 5px;
-                    padding-bottom: 0;
+                .resultMyAnswer {
+                    color: $grey;
+                    font-size: 1.0666667rem;
                     margin-bottom: 0;
+                }
+
+                p:first-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    padding-right: 0.33333334rem;
                 }
             }
 
             .resultRightBottom {
+                align-items: baseline;
                 display: flex;
                 flex-direction: row;
-                width: 50%;
+                height: 2.6666667rem;
                 margin-bottom: 0;
-                align-items: baseline;
-                height: 40px;
+                width: 50%;
 
                 p:first-child {
-                    padding-right: 5px;
-                    padding-bottom: 0px;
                     margin-bottom: 0;
+                    padding-bottom: 0.0rem;
+                    padding-right: 0.33333334rem;
                 }
 
                 .resultMyAnswer {
-                    font-size: 16px;
+                    font-size: 1.0666667rem;
                     margin-bottom: 0;
                 }
 
                 .resultRightAnswer {
-                    font-size: 16px;
-                    padding-bottom: 0px;
+                    font-size: 1.0666667rem;
                     margin-bottom: 0;
+                    padding-bottom: 0.0rem;
                 }
             }
         }

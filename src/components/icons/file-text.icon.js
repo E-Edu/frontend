@@ -1,7 +1,7 @@
 import './index.scss';
 import React, {Component} from 'react';
 
-class LogoutIcon extends Component {
+class FileTextIcon extends Component {
     constructor(props) {
         super(props);
     }
@@ -34,4 +34,4 @@ class LogoutIcon extends Component {
     }
 }
 
-export default LogoutIcon;
+export default FileTextIcon;

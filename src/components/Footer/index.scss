@@ -2,21 +2,20 @@ $Primary: #0b132b;
 $Second: #5bc0be;
 
 .FooterNavbar {
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100vw;
-	height: 80px;
 	background-color: $Primary;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	height: 5.3333335rem;
+	justify-content: center;
+	left: 0;
+	width: 100vw;
 
 	a {
-		text-decoration: none;
 		color: #687d9a;
 		padding: 0 1rem;
+		text-decoration: none;
 		transition: all 0.2s;
 	}
 	a:hover {
