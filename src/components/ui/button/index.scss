@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:400,500&display=swap');
+.button{
+  text-align: center;
+  font: Medium 26px/42px Hind Siliguri;
+  font-size: 26px;
+  letter-spacing: 0;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.button:hover{
+  cursor: pointer;
+}
+.button:focus{
+  outline: none;
+}
