@@ -1,0 +1,84 @@
+{
+  "translation": {
+    "subject": {
+      "german": {
+        "name": "Deutsch",
+        "description": "Sprachen lernen - Babel"
+      },
+      "computerScience": {
+        "name": "Informatik",
+        "description": "011111011101101011101001"
+      },
+      "physics": {
+        "name": "Physik",
+        "description": "Wieso wirfst du mir den Apfel auf den Kopf?"
+      },
+      "history": {
+        "name": "Geschichte",
+        "description": "I have a dream..."
+      },
+      "politics": {
+        "name": "Politik",
+        "description": "Du schaffst das"
+      },
+      "biology": {
+        "name": "Biologie",
+        "description": "Hast du meine Pantoffeltierchen gesehen?"
+      },
+      "chemistry": {
+        "name": "Chemie",
+        "description": "Die Chemie stimmt"
+      },
+      "math": {
+        "name": "Mathematik",
+        "description": "Irgendwas mit Äpfeln und Bananen"
+      }
+    },
+    "lection": {
+      "math": {
+        "addition": {
+          "name": "Plus"
+        }
+      }
+    },
+    "landingPage": {
+      "title": "Education for everyone",
+      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>\"The Morpheus Tutorials\"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
+    },
+    "taskList": {
+      "questions": "Fragen",
+      "task": "Aufgabe",
+      "points": "Punkte",
+      "search": "Suche"
+    },
+    "difficulty": {
+      "easy": "Leicht",
+      "medium": "Mittel",
+      "hard": "Schwer"
+    },
+    "task": {
+      "question": "Frage",
+      "questions": "Fragen",
+      "points": "Punkte",
+      "of": "von",
+      "answer": "Antwort",
+      "skip": "Überspringen",
+      "nextTask": "Nächste Aufgabe"
+    },
+    "settings": {
+      "settings": "Einstellungen",
+      "email": "Email",
+      "password": "Passwort",
+      "change": "Ändern",
+      "language": "Sprache"
+    },
+    "profile": {
+      "memberSince": "Dabei seit",
+      "rank": {
+        "teachingMaster": "Der Lehrende Meister"
+      },
+      "favoriteSubjects": "Favorisierte Fächer",
+      "certificates": "Zertifikate"
+    }
+  }
+}

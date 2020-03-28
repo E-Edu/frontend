@@ -1,0 +1,154 @@
+type Query {
+
+    # Generic
+
+    serviceInfoByName(name: String): Service
+
+    # Task
+
+    taskById(taskId: Int): Task
+
+    taskTypeById(taskId: Int): TaskType
+
+    subjectById(subjectId: Int): Subject
+
+    moduleById(moduleId: Int): Module
+
+    lectureById(lectureId: Int): Lecture
+
+    difficultyById(difficultyId: Int): Difficulty
+
+    # User
+
+    userByUserId(userId: ID): User
+
+    userByUserName(firstName: String, lastName: String): User
+
+    userByEmail(email: String): User
+
+    # Ticket
+
+    ticketByTicketId(ticketId: Int): Ticket
+
+}
+
+type Mutation {
+
+    # User
+
+    authenticate(userAuth: UserAuth): UserAuthResult
+
+    jwt(jwtRequest: JwtRequest): JwtResult
+
+}
+
+# ================ Generic ================
+scalar Long
+
+type Service {
+    name: String
+    version: String
+    commit: String
+    buildTime: Long
+}
+
+# ================ Task MicroService ================
+
+type Task {
+    taskId: Int
+    task: String
+    author: User
+    necessaryPoints: Int
+    taskType: TaskType
+    lecture: Lecture
+    difficulty: Difficulty
+}
+
+type TaskType {
+    taskTypeId: Int
+    displayName: String
+}
+
+type Subject {
+    subjectId: Int
+    displayName: String
+}
+
+type Module {
+    moduleId: Int
+    displayName: String
+    subject: Subject
+}
+
+type Lecture {
+    lectureId: Int
+    displayName: String
+    module: Module
+}
+
+type Difficulty {
+    difficultyId: Int
+    displayName: String
+}
+
+# ================ User MicroService ================
+
+type User {
+    userId: ID # UUID
+    firstName: String
+    lastName: String
+    createdAt: String # Unix timestamp » Millis UTC
+    email: String
+    role: Int
+    status: Int
+}
+
+# HTTP Secure Cookie: device_id (optional)
+#   See: https://owasp.org/www-community/Slow_Down_Online_Guessing_Attacks_with_Device_Cookies
+input UserAuth {
+    passwordHash: String # PBKDF2 (3k rounds) hashed password
+    key: String # Email or Username
+}
+
+type UserAuthResult {
+    result: UserAuthResultType
+}
+
+# HTTP Secure Cookie: device_id
+# HTTP Secure Cookie: refresh_token
+#   See: https://auth0.com/learn/refresh-tokens/
+enum UserAuthResultType {
+    SUCCESS, # refresh_token set via HTTP Secure Cookie
+    USER_NOT_FOUND,
+    AUTHENTICATION_FAILED, # Password wrong, banned, too many request...
+    MAINTENANCE
+}
+
+# HTTP Secure Cookie: refresh_token
+# HTTP Secure Cookie: device_id
+input JwtRequest
+
+type JwtResult {
+    token: String # JWT; ONLY stored in the frontend state manager!
+    status: String
+}
+
+enum JwtStatus {
+    INVALID,
+    EXPIRED,
+    VERIFIED
+}
+
+# ================ Report MicroService ================
+
+type Ticket {
+    ticketId: Int
+    task: Task
+    title: String
+    description: String
+    ticketType: TicketType
+}
+
+enum TicketType {
+    NONE
+}
