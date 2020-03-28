@@ -13,7 +13,7 @@ class Task extends React.Component {
         const name = this.props.name;
         const difficulty = this.props.difficulty;
         const description = this.props.description;
-        const questions = this.props.question;
+        const questions = this.props.questions;
         const rightQuestions = this.props.rightQuestions;
         const color = colorData.difficultyColor[difficulty];
         const backgroundColor = color.backgroundColor;
@@ -36,7 +36,7 @@ class Task extends React.Component {
                         right: 0, justifyContent: "flex-end", backgroundColor: backgroundColor,
                         borderWidth: 1, borderStyle: "solid", borderColor: borderColor, borderRadius: 10,
                         padding: "0.0rem 0.33333334rem"
-                    }}>{difficulty}</span>
+                    }}>{Translation.t("difficulty." + difficulty)}</span>
                 </div>
             </div>
             <div className="Task_Bottom">

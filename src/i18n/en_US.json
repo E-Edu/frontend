@@ -39,6 +39,11 @@
       "task": "Task",
       "points": "Points",
       "search": "Search"
+    },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
     }
   }
 }
