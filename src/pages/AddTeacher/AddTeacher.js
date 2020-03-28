@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './AddTeacher.scss';
 import icon_mail from '../../assets/icons/mail.svg';
 import icon_x from '../../assets/icons/x.svg';
 import icon_teacher from '../../assets/icons/teacher.svg';

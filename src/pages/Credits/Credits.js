@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './Credits.scss';
 
 class Credits extends Component {
     constructor(props) {

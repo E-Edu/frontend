@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './Privacy.scss';
 
 class Privacy extends Component {
     render() {

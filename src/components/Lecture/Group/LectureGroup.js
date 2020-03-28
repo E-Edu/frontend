@@ -1,8 +1,9 @@
 import React from 'react';
-import './index.scss';
-import LectureSubject from "../Subject";
+import './LectureGroup.scss';
+import LectureSubject from "../Subject/LectureSubject";
 
 class LectureGroup extends React.Component {
+
     constructor(props) {
         super(props);
     }

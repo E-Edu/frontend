@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./Dashboard.scss";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";

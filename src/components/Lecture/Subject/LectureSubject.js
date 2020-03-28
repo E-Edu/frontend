@@ -1,9 +1,10 @@
 import React from 'react';
-import './index.scss';
+import './LectureSubject.scss';
 import CodepenIcon from "../../icons/codepen.icon";
 import {Link} from "react-router-dom";
 
 class LectureSubject extends React.Component {
+
     constructor(props) {
         super(props);
     }

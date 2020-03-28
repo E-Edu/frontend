@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './Imprint.scss';
 
 class Imprint extends Component {
     render() {

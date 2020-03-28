@@ -1,5 +1,5 @@
 import React from 'react';
-import LectureGroup from "./index";
+import LectureGroup from "./LectureGroup";
 import {object, text, withKnobs} from "@storybook/addon-knobs";
 import {storiesOf} from "@storybook/react";
 

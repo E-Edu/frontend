@@ -1,18 +1,17 @@
 import React from 'react';
-import './index.scss';
+import './TaskEvaluation.scss';
 import ResultQuestion from '../../components/ResultQuestion';
 import TaskHeader from "../../components/TaskHeader";
 
-class Result extends React.Component {
+class TaskEvaluation extends React.Component {
 
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
-
 
     render() {
         return (
             <div>
                 <div className='result' id="main">
-                    <div className='resultContainer'>
+                    <div className='resultContainer'> //TODO: Result -> Evaluation
                         <TaskHeader module="Mathe"/>
                         <div className='resultEvaluation'>
                             <span>Auswertung</span>
@@ -38,4 +37,4 @@ class Result extends React.Component {
     }
 }
 
-export default Result;
+export default TaskEvaluation;

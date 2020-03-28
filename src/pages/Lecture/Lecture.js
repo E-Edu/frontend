@@ -1,11 +1,10 @@
 import React from 'react';
-import './index.scss';
-import Header from '../../components/Header';
-import Sidebar from '../../components/Sidebar';
+import './Lecture.scss';
 import TaskHeader from "../../components/TaskHeader";
-import LectureGroup from "../../components/Lecture/Group";
+import LectureGroup from "../../components/Lecture/Group/LectureGroup";
 
 class Lecture extends React.Component {
+
     constructor(props) {
         super(props);
     }
@@ -40,11 +39,9 @@ class Lecture extends React.Component {
         },
     ];
 
-
     render() {
         return (
             <div id="lecture">
-
                 <div id='main'>
                     <TaskHeader module="Mathe"/>
 

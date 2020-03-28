@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './index.scss';
+import './CorrectionReview.scss';
 import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes';
 
 

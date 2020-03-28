@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./index.scss";
+import "./LandingPage.scss";
 import {Redirect, Route} from "react-router-dom";
 import Login from "../../components/Login";
 import Register from "../../components/Register";
@@ -9,7 +9,7 @@ import Query from "../../lib/api/Query";
 import {gql} from "apollo-boost";
 import {Translation} from "../../i18n/i18n";
 
-class Landing extends Component {
+class LandingPage extends Component {
     state = {showModal: false, redirect: false};
 
     login() {
@@ -82,4 +82,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing;
+export default LandingPage;
