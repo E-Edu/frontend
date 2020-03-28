@@ -41,12 +41,15 @@ class Task extends React.Component {
 }
 
 class Tasklist extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            Search: ""
-        }
     }
+
+    state = {
+        search: "",
+        tasks: [],
+    };
 
     OnChangeSearch = () => {
         this.setState({
@@ -54,6 +57,48 @@ class Tasklist extends React.Component {
         });
         //Übergabe an Backend
     };
+
+    loadFakeData() {
+        this.state.tasks.push(
+            {
+                description: "A short description what to do in this task",
+                difficulty: "Easy",
+            },
+            {
+                description: "A short description what to do in this task",
+                difficulty: "Medium",
+            },
+            {
+                description: "A short description what to do in this task",
+                difficulty: "Hard",
+            }
+        );
+
+        this.setState(this.state);
+    }
+
+    componentDidMount() {
+        this.loadFakeData();
+    }
+
+    renderTasks() {
+        console.log("render tasks", this.state)
+        console.log("tasks", this.state.tasks.length)
+        for (let task of this.state.tasks) {
+            console.error(task)
+        }
+        return this.state.tasks.map((value, index) => {
+            console.log("task: ",value)
+            return  <Link key={index} to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
+                        <Task
+                            name={"Aufgabe " + (index + 1)}
+                            Anzahl_Fragen="12"
+                            richtige_Fragen="10"
+                            schwere={value.difficulty}
+                            Beschreibung={value.description}/>
+                    </Link>
+        });
+    }
 
     render() {
 
@@ -99,18 +144,7 @@ class Tasklist extends React.Component {
                 </div>
 
                 <div id="Task-Content-List">
-                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
-                        <Task name="Aufgabe 1" Anzahl_Fragen="12" richtige_Fragen="10" schwere="Leicht"
-                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
-                    </Link>
-                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
-                        <Task name="Aufgabe 2" Anzahl_Fragen="20" richtige_Fragen="13" schwere="Mittel"
-                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
-                    </Link>
-                    <Link to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
-                        <Task name="Aufgabe 3" Anzahl_Fragen="10" richtige_Fragen="5" schwere="Schwer"
-                              Beschreibung="Kurzer Beschreibungstext eine Aufgabe, die für Grundschüler gedacht ist. Das ergibt keinen Sinn, da die den text eh nicht lesen werden. Naja mir egal… Ältere Schüler*innen schon."/>
-                    </Link>
+                    {this.renderTasks()}
                 </div>
             </div>
         </div>;
