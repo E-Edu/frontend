@@ -8,6 +8,7 @@ import File from "../../components/icons/file-text.icon.js";
 import {Link} from "react-router-dom";
 import Query from "../../lib/api/Query";
 import {Subject} from "../../lib/api/model/Model";
+import {gql} from "apollo-boost";
 
 class Subjekt extends React.Component {
     render() {
@@ -92,7 +93,20 @@ class dashboard extends React.Component {
 
     async loadSubjects() {
         let subjects = [];
-        await new Query().subjects(subjects).execute();
+        let result = await Query.queryGQL(gql`
+            query {
+                subjectById(subjectId: 0) {
+                    displayName
+                }
+            }
+        `);
+
+        console.log(result)
+        subjects.push({
+            displayName: result.data.subjectById.displayName,
+            description: "<Fetched>"
+        });
+
         // push our new states
         for (let subject of subjects)
             this.state.subjects.push(subject);
