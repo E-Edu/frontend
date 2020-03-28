@@ -80,7 +80,6 @@ class Landing extends Component {
                                 E-Edu bietet eine Lernplattform für Schüler die
                                 von Lehrern erstellte Aufgaben bearbeiten können
                             </h4>
-                            <button onClick={this.login}>Login</button>
                             {/*	<h3>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können und danach entscheiden ob sie die aufgaben gut fanden.*/}
                             {/*		Lehrer haben die Möglichkeit die von ihnen erstellte Aufgaben zu kontrollieren und können sehen wie die Schüler ihre Aufgaben abgestimmt haben.</h3>*/}
                         </div>
