@@ -3,7 +3,7 @@ import "./index.scss";
 import CalenderIcon from "../../components/icons/calender.icon.js";
 import UserIcon from "../../components/icons/user.icon";
 import UsersIcon from "../../components/icons/users.icon";
-import Data from "../../lib/Color_Config";
+import Data from "../../lib/Colors";
 import File from "../../components/icons/file-text.icon.js";
 import {Link} from "react-router-dom";
 import Query from "../../lib/api/Query";

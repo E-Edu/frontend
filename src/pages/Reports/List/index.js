@@ -9,7 +9,7 @@ import Header from '../../../components/Header';
 import ReportInfo from '../../../components/ReportInfo';
 import Modal from 'react-animated-modal';
 import Sidebar from '../../../components/Sidebar';
-import colorData from '../../../lib/Color_Config';
+import colorData from '../../../lib/Colors';
 
 
 class Report extends Component {

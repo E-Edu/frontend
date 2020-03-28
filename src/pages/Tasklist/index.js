@@ -4,7 +4,7 @@ import UsersIcon from "../../components/icons/user.icon.js";
 import UserIcon from '../../components/icons/users.icon.js';
 import Award from "../../components/icons/award.icon";
 import Search from "../../components/icons/search.icon"
-import colorData from "../../lib/Color_Config";
+import colorData from "../../lib/Colors";
 import {Link} from "react-router-dom";
 
 class Task extends React.Component {
