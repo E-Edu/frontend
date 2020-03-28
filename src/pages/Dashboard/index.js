@@ -8,18 +8,21 @@ import File from "../../components/icons/file-text.icon.js";
 import {Link} from "react-router-dom";
 import Query from "../../lib/api/Query";
 import {gql} from "apollo-boost";
+import {Translation} from "../../i18n/i18n";
 
 class Subjekt extends React.Component {
     render() {
-        const subject = this.props.Subject;
-        const border = "0.73333335rem solid " + Data["Subject_color"][subject];
+        const subject = this.props.subject;
+        const color = this.props.color;
+        const border = "0.73333335rem solid " + color;
+
         return (
             <div className='Subjekt' style={{borderLeft: border}}>
                 <div className="image">
                     <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000"/>
                 </div>
                 <div className="box-content">
-                    <h3 className="subject_name">{this.props.Subject}</h3>
+                    <h3 className="subject_name">{subject}</h3>
                     <span className="under_name">{this.props.Underline}</span>
                     <div className="weekend_task flex-row">
                         <CalenderIcon id="calender" width="27" height="27" stroke="#000000"/>
@@ -60,31 +63,38 @@ class dashboard extends React.Component {
     loadFakeData() {
         this.state.subjects.push(
             {
-                displayName: "Deutsch",
+                nameKey: "german",
+                displayName: Translation.t("subject.german.name"),
                 description: "Sprachen lernen - Babel"
             },
             {
-                displayName: "Informatik",
+                nameKey: "computerScience",
+                displayName: Translation.t("subject.computerScience.name"),
                 description: "0110011111000101110001010100011111011"
             },
             {
-                displayName: "Geschichte",
+                nameKey: "history",
+                displayName: Translation.t("subject.history.name"),
                 description: "I have a dream..."
             },
             {
-                displayName: "Politik",
+                nameKey: "politics",
+                displayName: Translation.t("subject.politics.name"),
                 description: "Du Schaffst da"
             },
             {
-                displayName: "Physik",
+                nameKey: "physics",
+                displayName: Translation.t("subject.physics.name"),
                 description: "Wieso wirfst du mir den Apfel auf den Kopf?!"
             },
             {
-                displayName: "Biologie",
+                nameKey: "biology",
+                displayName: Translation.t("subject.biology.name"),
                 description: "Hast du meine Pantoffeltierchen gesehen?"
             },
             {
-                displayName: "Chemie",
+                nameKey: "chemistry",
+                displayName: Translation.t("subject.chemistry.name"),
                 description: "Die Chemie stimmt"
             },
         );
@@ -116,9 +126,13 @@ class dashboard extends React.Component {
 
     renderSubjects() {
         return this.state.subjects.map((subject, index) => {
-            return <Link key={index} to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject={subject.displayName} Underline={subject.description} Weekendtask="4/5" Points="213"
-                         Community_Points="21.323"/>
+            return  <Link key={index} to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
+                        <Subjekt subject={Translation.t("subject." + subject.nameKey + ".name")}
+                                 Underline={subject.description}
+                                 color={Data["subjectColor"][subject.nameKey]}
+                                 Weekendtask="4/5"
+                                 Points="213"
+                                 Community_Points="21.323"/>
                     </Link>
         });
     }

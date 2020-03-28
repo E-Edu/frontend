@@ -1,0 +1,27 @@
+{
+  "translation": {
+    "subject": {
+      "german": {
+        "name": "German"
+      },
+      "computerScience": {
+        "name": "Computer Science"
+      },
+      "physics": {
+        "name": "Physics"
+      },
+      "history": {
+        "name": "History"
+      },
+      "politics": {
+        "name": "Political Education"
+      },
+      "biology": {
+        "name": "Biology"
+      },
+      "chemistry": {
+        "name": "Chemistry"
+      }
+    }
+  }
+}

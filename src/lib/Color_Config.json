@@ -1,15 +1,14 @@
 {
-    "Subject_color":  {
-         "Deutsch":"#B52020",
-         "Mathe":"#202BB5",
-         "Math":"#202BB5",
-         "Informatik":"#303030",
-         "Geschichte":"#F45E00",
-         "Politik":"#B520AB",
-         "Physik":"#707070",
-         "Biologie":"#31AD03",
-         "Religion":"#08B4CB",
-         "Chemie":"#FAE700"
+    "subjectColor":  {
+         "german":"#B52020",
+         "math":"#202BB5",
+         "computerScience":"#303030",
+         "history":"#F45E00",
+         "politics":"#B520AB",
+         "physics":"#707070",
+         "biology":"#31AD03",
+         "religion":"#08B4CB",
+         "chemistry":"#FAE700"
      },
     "Difficulty_color": {
       "Easy": {
