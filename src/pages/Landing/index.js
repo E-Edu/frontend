@@ -3,15 +3,30 @@ import "./index.scss";
 import {Redirect, Route} from "react-router-dom";
 import Login from "../../components/Login";
 import Register from "../../components/Register";
-import Footer from "../../components/Footer";
 import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
+import Query from "../../lib/api/Query";
+import {gql} from "apollo-boost";
 
 class Landing extends Component {
     state = {showModal: false, redirect: false};
 
-    render() {
+    login() {
+        Query.mutationGQL(gql`mutation {
+            authenticate(userAuth: { passwordHash: "Test", key: "Max" }) {
+                result
+            }
+            jwt {
+                token
+                status
+            }
+        }
+        `).then((response) => {
+            console.log(response.data);
+        });
+    }
 
+    render() {
         return (
             <div className="landing">
                 <div className="Main">
@@ -65,6 +80,7 @@ class Landing extends Component {
                                 E-Edu bietet eine Lernplattform für Schüler die
                                 von Lehrern erstellte Aufgaben bearbeiten können
                             </h4>
+                            <button onClick={this.login}>Login</button>
                             {/*	<h3>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können und danach entscheiden ob sie die aufgaben gut fanden.*/}
                             {/*		Lehrer haben die Möglichkeit die von ihnen erstellte Aufgaben zu kontrollieren und können sehen wie die Schüler ihre Aufgaben abgestimmt haben.</h3>*/}
                         </div>
@@ -73,7 +89,6 @@ class Landing extends Component {
             </div>
         );
     }
-
 }
 
 export default Landing;
