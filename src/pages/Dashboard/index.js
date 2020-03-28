@@ -6,6 +6,8 @@ import UsersIcon from "../../components/icons/users.icon";
 import Data from "../../lib/Color_Config";
 import File from "../../components/icons/file-text.icon.js";
 import {Link} from "react-router-dom";
+import Query from "../../lib/api/Query";
+import {Subject} from "../../lib/api/model/Model";
 
 class Subjekt extends React.Component {
     render() {
@@ -46,58 +48,78 @@ class Subjekt extends React.Component {
 }
 
 class dashboard extends React.Component {
-    componentDidMount() {
-        const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('dashboard').setAttribute("style", `margin-top:${top}px;margin-left:${left} - 3px);`);
-    }
 
+    state = {
+        subjects: [],
+    };
 
     navigate(path) {
         this.props.history.push(`/${path}`);
+    }
+
+    loadFakeData() {
+        this.state.subjects.push(
+            {
+                displayName: "Deutsch",
+                description: "Sprachen lernen - Babel"
+            },
+            {
+                displayName: "Informatik",
+                description: "0110011111000101110001010100011111011"
+            },
+            {
+                displayName: "Geschichte",
+                description: "I have a dream..."
+            },
+            {
+                displayName: "Politik",
+                description: "Du Schaffst da"
+            },
+            {
+                displayName: "Physik",
+                description: "Wieso wirfst du mir den Apfel auf den Kopf?!"
+            },
+            {
+                displayName: "Biologie",
+                description: "Hast du meine Pantoffeltierchen gesehen?"
+            },
+            {
+                displayName: "Chemie",
+                description: "Die Chemie stimmt"
+            },
+        );
+    }
+
+    async loadSubjects() {
+        let subjects = [];
+        await new Query().subjects(subjects).execute();
+        // push our new states
+        for (let subject of subjects)
+            this.state.subjects.push(subject);
+
+        // refresh the state
+        this.setState(this.state);
+    }
+
+    renderSubjects() {
+        return this.state.subjects.map((subject, index) => {
+            return <Link key={index} to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
+                        <Subjekt Subject={subject.displayName} Underline={subject.description} Weekendtask="4/5" Points="213"
+                         Community_Points="21.323"/>
+                    </Link>
+        });
+    }
+
+    componentDidMount() {
+        this.loadSubjects();
+        this.loadFakeData();
     }
 
     render() {
         return (
             <div id="dashboard">
                 <div className="Subjekts_content">
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Deutsch" Underline="Sprachen lernen - Babel" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Mathe" Underline="1 x  3 macht 4 und 3 macht 9" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Informatik" Underline="0110011111000101110001010100011111011"
-                                 Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Geschichte" Underline="I have a dream..." Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Politik" Underline="Du Schaffst das" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Physik" Underline="Underline" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Biologie" Underline="Underline" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Religion" Underline="Underline" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
-                    <Link to='/task/lecture' style={{textDecoration: 'none', color: "inherit"}}>
-                        <Subjekt Subject="Chemie" Underline="Underline" Weekendtask="4/5" Points="213"
-                                 Community_Points="21.323"/>
-                    </Link>
+                    {this.renderSubjects()}
                 </div>
             </div>
         );
