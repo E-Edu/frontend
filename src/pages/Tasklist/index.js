@@ -2,8 +2,6 @@ import React from 'react';
 import './index.scss';
 import UsersIcon from "../../components/icons/user.icon.js";
 import UserIcon from '../../components/icons/users.icon.js';
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
 import Award from "../../components/icons/award.icon";
 import Search from "../../components/icons/search.icon"
 import colorData from "../../lib/Color_Config";

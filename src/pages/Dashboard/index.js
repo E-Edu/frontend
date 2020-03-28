@@ -7,7 +7,6 @@ import Data from "../../lib/Color_Config";
 import File from "../../components/icons/file-text.icon.js";
 import {Link} from "react-router-dom";
 import Query from "../../lib/api/Query";
-import {Subject} from "../../lib/api/model/Model";
 import {gql} from "apollo-boost";
 
 class Subjekt extends React.Component {
