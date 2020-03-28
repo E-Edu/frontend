@@ -63,6 +63,13 @@
       "answer": "Answer",
       "skip": "Skip",
       "nextTask": "Next task"
+    },
+    "settings": {
+      "settings": "Settings",
+      "email": "Email",
+      "password": "Password",
+      "change": "Change",
+      "language": "Language"
     }
   }
 }

@@ -9,7 +9,7 @@ import Credits from "./pages/Credits";
 import ReportsList from "./pages/Reports/List";
 import Result from "./pages/Result";
 import {BrowserRouter as Router, Route} from "react-router-dom";
-import Settings from "./pages/Settings";
+import Settings from "./pages/Settings/Settings";
 import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
 import TaskList from "./pages/TaskList/TaskList";

@@ -63,6 +63,13 @@
       "answer": "Antwort",
       "skip": "Überspringen",
       "nextTask": "Nächste Aufgabe"
+    },
+    "settings": {
+      "settings": "Einstellungen",
+      "email": "Email",
+      "password": "Passwort",
+      "change": "Ändern",
+      "language": "Sprache"
     }
   }
 }
