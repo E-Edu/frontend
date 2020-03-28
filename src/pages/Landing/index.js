@@ -7,6 +7,7 @@ import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
 import Query from "../../lib/api/Query";
 import {gql} from "apollo-boost";
+import {Translation} from "../../i18n/i18n";
 
 class Landing extends Component {
     state = {showModal: false, redirect: false};
@@ -71,17 +72,8 @@ class Landing extends Component {
                             />
                         </div>
                         <div id="text-content">
-                            <h2>Education for everyone</h2>
-                            <h4>
-                                E-Edu ist eine Lernplattform die im Rahmen des
-                                Hackathon <span>#WirVsVirus</span> vom Team "The Morpheus
-                                Tutorials" erstellt wurde.
-                                <br/>
-                                E-Edu bietet eine Lernplattform für Schüler die
-                                von Lehrern erstellte Aufgaben bearbeiten können
-                            </h4>
-                            {/*	<h3>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können und danach entscheiden ob sie die aufgaben gut fanden.*/}
-                            {/*		Lehrer haben die Möglichkeit die von ihnen erstellte Aufgaben zu kontrollieren und können sehen wie die Schüler ihre Aufgaben abgestimmt haben.</h3>*/}
+                            <h2 dangerouslySetInnerHTML={{__html: Translation.t("landingPage.title")}} />
+                            <h4 dangerouslySetInnerHTML={{__html: Translation.t("landingPage.description")}} />
                         </div>
                     </div>
                 </div>

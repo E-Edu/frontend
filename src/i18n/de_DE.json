@@ -25,7 +25,7 @@
     },
     "landingPage": {
       "title": "Education for everyone",
-      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team \"The Morpheus Tutorials\" erstellt wurde.\nE-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
+      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>\"The Morpheus Tutorials\"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
     }
   }
 }
