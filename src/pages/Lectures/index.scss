@@ -1,0 +1,29 @@
+$bluegrey: #0B132B;
+$grey: #3A506B;
+$red: #BA1919;
+$warmGrey: #707070;
+$turquoise: #5BC0BE;
+$lightGrey: #687D9A;
+$mediumBlue: #1C2541;
+$lightBlue: #96B4DD;
+
+#lecture {
+
+    #main {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        #TaskHeader {
+            margin-bottom: 2.5rem;
+            width: 90%;
+        }
+
+        .LectureGroupe {
+            margin-bottom: 2.5rem;
+            width: 90%;
+        }
+    }
+
+
+}
