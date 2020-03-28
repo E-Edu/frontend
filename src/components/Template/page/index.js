@@ -10,12 +10,17 @@ class PageLayout extends Component {
         super(props);
     }
 
-    state = {};
+    state = {
+        visible: false
+    };
 
     hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
 
     renderSitebar() {
         const route = this.props.location.pathname;
+        /*this.setState(() => {
+            return {visible: true};
+        });*/
         return this.hiddenSidebarPages.includes(route);
     }
 
@@ -34,6 +39,9 @@ class PageLayout extends Component {
                 <div id="layoutContainer">
                     {this.props.children}
                 </div>
+          {/*      {
+                    this.state.visible && <Footer/>
+                }*/}
                 <Footer visible={!this.renderSitebar()}/>
             </div>);
     }

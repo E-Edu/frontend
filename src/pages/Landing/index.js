@@ -3,12 +3,28 @@ import "./index.scss";
 import {Redirect, Route} from "react-router-dom";
 import Login from "../../components/Login";
 import Register from "../../components/Register";
-import Footer from "../../components/Footer";
 import Landing_Image from "../../assets/Picture/landingpage-teaching.svg";
 import Modal from "react-animated-modal";
+import Query from "../../lib/api/Query";
+import {gql} from "apollo-boost";
 
 class Landing extends Component {
     state = {showModal: false, redirect: false};
+
+    login() {
+        Query.mutationGQL(gql`mutation {
+            authenticate(userAuth: { passwordHash: "Test", key: "Max" }) {
+                result
+            }
+            jwt {
+                token
+                status
+            }
+        }
+        `).then((response) => {
+            console.log(response.data);
+        });
+    }
 
     render() {
         return (
@@ -72,7 +88,6 @@ class Landing extends Component {
             </div>
         );
     }
-
 }
 
 export default Landing;
