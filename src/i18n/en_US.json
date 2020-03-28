@@ -33,6 +33,12 @@
     "landingPage": {
       "title": "Education for everyone",
       "description": "E-Edu is a platform developed during the #WirVsVirus (We vs Virus) hackathon by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu provides a platform for students to solve tasks created by verified teachers."
+    },
+    "taskList": {
+      "questions": "Questions",
+      "task": "Task",
+      "points": "Points",
+      "search": "Search"
     }
   }
 }

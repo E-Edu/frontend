@@ -1,44 +1,52 @@
 import React from 'react';
-import './index.scss';
+import './TaskList.scss';
 import UsersIcon from "../../components/icons/user.icon.js";
 import UserIcon from '../../components/icons/users.icon.js';
 import Award from "../../components/icons/award.icon";
 import Search from "../../components/icons/search.icon"
 import colorData from "../../lib/Colors";
 import {Link} from "react-router-dom";
+import {Translation} from "../../i18n/i18n";
 
 class Task extends React.Component {
     render() {
-        const color = colorData.difficultyColor[this.props.schwere];
-        let bgColor = [color.bg, color.border];
+        const name = this.props.name;
+        const difficulty = this.props.difficulty;
+        const description = this.props.description;
+        const questions = this.props.question;
+        const rightQuestions = this.props.rightQuestions;
+        const color = colorData.difficultyColor[difficulty];
+        const backgroundColor = color.backgroundColor;
+        const borderColor = color.borderColor;
+
         return <div className="Task">
             <div className="Task_Head">
-                <span>{this.props.name}</span>
+                <span>{name}</span>
                 <div className='Task_Head_Elements'>
                     <div className='Task_element'>
-                        <span>{this.props.Anzahl_Fragen}</span>
-                        <span>Fragen</span>
+                        <span>{questions}</span>
+                        <span>{Translation.t("taskList.questions")}</span>
                     </div>
                     <div className='Task_element'>
                         <Award className="ico" stroke="#3A506B"/>
-                        <span>{this.props.richtige_Fragen}</span>
+                        <span>{rightQuestions}</span>
                     </div>
                     <span style={{
                         display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
-                        right: 0, justifyContent: "flex-end", backgroundColor: bgColor,
-                        borderWidth: 1, borderStyle: "solid", borderColor: bgColor[1], borderRadius: 10,
+                        right: 0, justifyContent: "flex-end", backgroundColor: backgroundColor,
+                        borderWidth: 1, borderStyle: "solid", borderColor: borderColor, borderRadius: 10,
                         padding: "0.0rem 0.33333334rem"
-                    }}>{this.props.schwere}</span>
+                    }}>{difficulty}</span>
                 </div>
             </div>
             <div className="Task_Bottom">
-                <span>{this.props.Beschreibung}</span>
+                <span>{description}</span>
             </div>
         </div>
     }
 }
 
-class Tasklist extends React.Component {
+class TaskList extends React.Component {
 
     constructor(props) {
         super(props);
@@ -50,10 +58,9 @@ class Tasklist extends React.Component {
     };
 
     OnChangeSearch = () => {
-        this.setState({
-            Search: document.getElementById("site-search").value
-        });
-        //Übergabe an Backend
+        this.state.search(document.getElementById("site-search").value);
+        //TODO: Backend request
+        this.setState(this.state);
     };
 
     loadFakeData() {
@@ -80,20 +87,14 @@ class Tasklist extends React.Component {
     }
 
     renderTasks() {
-        console.log("render tasks", this.state)
-        console.log("tasks", this.state.tasks.length)
-        for (let task of this.state.tasks) {
-            console.error(task)
-        }
-        return this.state.tasks.map((value, index) => {
-            console.log("task: ",value)
+        return this.state.tasks.map((task, index) => {
             return  <Link key={index} to='/task/subject' style={{ textDecoration: 'none', color: "inherit" }}>
                         <Task
-                            name={"Aufgabe " + (index + 1)}
-                            Anzahl_Fragen="12"
-                            richtige_Fragen="10"
-                            schwere={value.difficulty}
-                            Beschreibung={value.description}/>
+                            name={Translation.t("taskList.task") + " " + (index + 1)}
+                            questions="12"
+                            rightQuestions="10"
+                            difficulty={task.difficulty}
+                            description={task.description}/>
                     </Link>
         });
     }
@@ -104,9 +105,7 @@ class Tasklist extends React.Component {
             <div className="Tasklist" id="main">
                 <div className='resultContentHeader'>
                     <div className='resultLeft'>
-                        <span className='resultSubject'>
-                            Task
-                        </span>
+                        <span className='resultSubject'>{Translation.t("taskList.task")}</span>
                     </div>
 
                     <div className="Middle">
@@ -114,7 +113,7 @@ class Tasklist extends React.Component {
 
                             <div className='resultSubject'>
                                 <UsersIcon className="ico" stroke="#3A506B"/>
-                                <span className="points">213</span><span className="points">Punkte</span>
+                                <span className="points">213</span><span className="points">{Translation.t("taskList.points")}</span>
                             </div>
 
                         </div>
@@ -123,7 +122,7 @@ class Tasklist extends React.Component {
                             <div className='resultSubject'>
                                 <UserIcon className="ico" stroke="#3A506B"/>
 
-                                <span className="points">21.323</span><span className="points">Punkte</span>
+                                <span className="points">21.323</span><span className="points">{Translation.t("taskList.points")}</span>
                             </div>
 
                         </div>
@@ -132,9 +131,9 @@ class Tasklist extends React.Component {
                         <span className='resultSubject'>
                             <div id='input-search'>
                                 <Search height="30" width="30"/>
-                                <input onChange={this.OnChangeSearch} type="text" id="site-search" name="Search"
+                                <input onChange={this.OnChangeSearch} type="text" id="site-search" name="search"
                                        aria-label="Search"
-                                       placeholder="Suche"/>
+                                       placeholder={Translation.t("taskList.search")}/>
                             </div>
                         </span>
                     </div>
@@ -150,4 +149,4 @@ class Tasklist extends React.Component {
     }
 }
 
-export default Tasklist;
+export default TaskList;
