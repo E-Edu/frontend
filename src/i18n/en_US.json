@@ -28,6 +28,17 @@
       "chemistry": {
         "name": "Chemistry",
         "description": ""
+      },
+      "math": {
+        "name": "Mathematics",
+        "description": "Something about apples and bananas"
+      }
+    },
+    "lection": {
+      "math": {
+        "addition": {
+          "name": "Addition"
+        }
       }
     },
     "landingPage": {
@@ -44,6 +55,14 @@
       "easy": "Easy",
       "medium": "Medium",
       "hard": "Hard"
+    },
+    "task": {
+      "question": "Question",
+      "questions": "Questions",
+      "of": "of",
+      "answer": "Answer",
+      "skip": "Skip",
+      "nextTask": "Next task"
     }
   }
 }

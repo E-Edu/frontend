@@ -1,9 +1,10 @@
 import React from 'react';
-import './index.scss';
+import './SubjectTask.scss';
 
 import User from '../../assets/icons/user.svg';
 import Users from '../../assets/icons/users.svg';
 import {Link} from "react-router-dom";
+import {Translation} from "../../i18n/i18n";
 
 class SubjectTask extends React.Component {
     constructor(props) {
@@ -17,7 +18,22 @@ class SubjectTask extends React.Component {
 
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
 
+    renderDescription(description) {
+        return description.split("\n").map((value, index) => {
+            return (
+                <span key={index}>{value}<br/></span>
+            );
+        });
+    }
+
     render() {
+        //TODO: Pass these arguments
+        const taskTitle = "Äpfel und Birnen";
+        const description = "Peter hat 3 Äpfel und 4 Birnen. Er gibt Lena 2 Äpfel und 1 Birne ab.\n" +
+                            "Wieviele Äpfel hat Peter noch?";
+        const subject = "math";
+        const lection = "addition";
+
         return (
             <div>
                 <div id='main'>
@@ -25,24 +41,24 @@ class SubjectTask extends React.Component {
                         <div className='subjectTaskContainer'>
                             <div className='subjectTaskContentHeader'>
                                 <div className='subjectTaskLeft'>
-                                    <span className='subjectTaskSubject'>Mathe</span>
-                                    <span className='subjectTaskModule'>Plus</span>
+                                    <span className='subjectTaskSubject'>{Translation.t("subject." + subject + ".name")}</span>
+                                    <span className='subjectTaskModule'>{Translation.t("lection." + subject + "." + lection + ".name")}</span>
                                 </div>
                                 <div className='subjectTaskRight'>
                                     <div className='subjectTaskPoints'>
                                         <img src={User} alt=""/>
-                                        <p><span> 213</span> Punkte</p>
+                                        <p><span> 213</span> {Translation.t("taskList.points")}</p>
                                     </div>
                                     <div className='subjectTaskPoints'>
                                         <img src={Users} alt=""/>
-                                        <p><span> 21.323</span> Punkte</p>
+                                        <p><span> 21.323</span> {Translation.t("taskList.points")}</p>
                                     </div>
                                 </div>
                             </div>
 
 
                             <div className='progressDisplay'>
-                                <span>Frage 4 von 10 </span>
+                                <span>{Translation.t("task.question")} 4 {Translation.t("task.of")} 10 </span>
                                 <div className='progressBar'>
                                     <div className='progressPer' per='90'
                                          style={{width: `${(this.state.currentQuestion / this.state.maxQuestion) * 100}%`}}>
@@ -51,19 +67,15 @@ class SubjectTask extends React.Component {
 
                                 </div>
                                 <div className='subjectTaskTitel'>
-                                    <span>Äpfel und Birnen</span>
-
+                                    <span>{taskTitle}</span>
                                 </div>
                                 <div className='subjectTaskDescription'>
-                                    <span>
-                                        Peter hat 3 Äpfel und 4 Birnen. Er gibt Lena 2 Äpfel und 1 Birne ab. <br/>
-                                        Wieviele Äpfel hat Peter noch?
-                                    </span>
+                                    {this.renderDescription(description)}
                                 </div>
                             </div>
                             <div className='subjectTaskAnswer'>
                                 <div className='subjectTaskAnswerHeader'>
-                                    <span> Antwort </span>
+                                    <span>{Translation.t("task.answer")}</span>
                                 </div>
                                 <div className='subjectTaskAnswerfield'>
                                     <input type="text" placeholder='test'/>
@@ -72,12 +84,12 @@ class SubjectTask extends React.Component {
                                 <div className='subjectTaskButtons'>
                                     <Link to='/task/result' style={{textDecoration: 'none', color: "inherit"}}>
                                         <button className='subjectTaskSkip'>
-                                            Überspringen
+                                            {Translation.t("task.skip")}
                                         </button>
                                     </Link>
                                     <Link to='/task/result' style={{textDecoration: 'none', color: "inherit"}}>
                                         <button className='subjectTaskNext'>
-                                            Nächste Frage
+                                            {Translation.t("task.nextTask")}
                                         </button>
                                     </Link>
                                 </div>

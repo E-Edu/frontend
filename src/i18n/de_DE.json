@@ -28,6 +28,17 @@
       "chemistry": {
         "name": "Chemie",
         "description": "Die Chemie stimmt"
+      },
+      "math": {
+        "name": "Mathematik",
+        "description": "Irgendwas mit Äpfeln und Bananen"
+      }
+    },
+    "lection": {
+      "math": {
+        "addition": {
+          "name": "Plus"
+        }
       }
     },
     "landingPage": {
@@ -44,6 +55,14 @@
       "easy": "Leicht",
       "medium": "Mittel",
       "hard": "Schwer"
+    },
+    "task": {
+      "question": "Frage",
+      "questions": "Fragen",
+      "of": "von",
+      "answer": "Antwort",
+      "skip": "Überspringen",
+      "nextTask": "Nächste Aufgabe"
     }
   }
 }

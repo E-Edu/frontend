@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './index.scss';
-import Sidebar from "../../components/Sidebar";
-import Header from "../../components/Header";
+import './Task.scss';
+
 class Template extends Component {
+
 	constructor(props) {
 		super(props);
 	}
+
 	state = {};
 
 	componentDidMount() {

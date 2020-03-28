@@ -1,7 +1,7 @@
 import "./css/main.scss";
 import React, {Component} from "react";
 import Landing from "./pages/Landing";
-import Task from "./pages/Task";
+import Task from "./pages/Task/Task";
 import Dashboard from "./pages/Dashboard";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
@@ -14,7 +14,7 @@ import CorrectionReview from "./pages/CorrectionReview";
 import AddTeacher from "./pages/AddTeacher";
 import TaskList from "./pages/TaskList/TaskList";
 import Profile from "./pages/Profile";
-import SubjectTask from "./pages/SubjectTask";
+import SubjectTask from "./pages/SubjectTask/SubjectTask";
 import Lecture from "./pages/Lectures";
 import PageLayout from "./components/Template/page";
 
