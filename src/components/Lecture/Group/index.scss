@@ -1,0 +1,37 @@
+$bluegrey: #0B132B;
+$grey: #3A506B;
+$red: #BA1919;
+$warmGrey: #707070;
+$turquoise: #5BC0BE;
+$lightGrey: #687D9A;
+$mediumBlue: #1C2541;
+$lightBlue: #96B4DD;
+
+.LectureGroupe {
+
+    .lectureGroup {
+        align-items: start;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        .lectureGroupTitle {
+            color: $grey;
+            font-size: 1.8rem;
+            width: 20%;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .lectureGroupSubjects {
+            display: grid;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1.3rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+        }
+    }
+}
