@@ -1,21 +1,33 @@
-# README
+# E-Edu Frontend
 
-Hier findet man den Frontend-Teil des E-Edu Projekts, welches eine Herausfordeung auf dem [bundesweiten Hackathon WirVsVirus](https://wirvsvirushackathon.org/). Dieses Repository ist ein Teil der Open-Source E-Learnung Platform, die sich jedoch erst in der Alpha-Phase befindet
+This projects contains the source code for the Frontend which is responsible for everything related to Frontend in the E-Edu system.
 
-## Mitmachen
+## How to install the Reactjs and all other packages
+Install React packages:
+```Npm i```<br/>
+Install storybook:
+```Npm i storybook```<br/>
 
-Das Projekt wird von der Community auch nach dem Ende des Hackathons noch weitergeführt und wir würden uns freuen, wenn DU [mitmachst](https://discord.gg/MZhy5hd).
+## How to start the localhost server
+Start react developer server:
+```npm start```<br/>
+Start storybook server:
+```npm run storybook```<br/>
 
-## Installation
+## Contribute
 
-Die Installationsanleitung des Tools findest du hier: Link ergänzen?
+You want to contribute to this project? Great!
 
-## TODO
+[Git Projekt tasks](https://github.com/E-Edu/frontend/projects/2)<br/>
+[Frontend Convention](https://github.com/E-Edu/frontend/blob/experimental/contribution.md)<br/>
 
-Fill out Dockerfile
+Do you have any other questions? 
+Then get in touch with our frontend heads<br/><br/>
+Stefan<br>
+Discord: Stefan#3460<br/>
+Timy<br/>
+Discord: Timy Stream#2019
+## License
 
-Fill out docker-compose.yml
-
-Fill out GitHub Action workflow
-
-Look [here](https://github.com/E-Edu/frontend/projects/2)
+This project is licensed under the `GNU General Public License v3.0`<br>
+See `LICENSE` for more information
