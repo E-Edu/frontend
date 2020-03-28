@@ -6,7 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Imprint from "./pages/Imprint";
 import Privacy from "./pages/Privacy";
 import Credits from "./pages/Credits";
-import ReportsList from "./pages/Reports/List";
+import ReportsList from "./pages/Reports/List/ReportsList";
 import Result from "./pages/Result";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Settings from "./pages/Settings/Settings";

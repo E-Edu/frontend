@@ -12,11 +12,12 @@ import '../../css/main.css';
 import Data from '../../lib/Colors.json';
 import {Translation} from "../../i18n/i18n";
 
-class Profile_Subject extends React.Component {
+class ProfileSubject extends React.Component {
 
     render() {
-        const subject = this.props.Subject;
+        const subject = this.props.subject;
         const border = "0.73333335rem solid " + Data["subjectColor"][subject];
+
         return (
             <div className='profile_subjekt' style={{borderLeft: border}}>
                 <div className='profileTop'>
@@ -25,25 +26,21 @@ class Profile_Subject extends React.Component {
                     </div>
                     <div id="text">
                         <div className='profile_subjekt_name'>
-                            <span id="title">{this.props.Subject}</span>
+                            <span id="title">{Translation.t("subject." + subject + ".name")}</span>
                         </div>
-
                         <div className="profile_subjekt_underline">
-                            <span id="fach_info">{this.props.Underline}</span>
+                            <span id="fach_info">{Translation.t("subject." + subject + ".description")}</span>
                         </div>
                     </div>
-
                 </div>
-
                 <div className='profileBottom'>
-
                 </div>
             </div>
         )
     }
 }
 
-class ProfileCerficate extends React.Component {
+class ProfileCertificate extends React.Component {
     render() {
         return (
             <div className='profile_certifikate'>
@@ -108,44 +105,44 @@ class Profile extends React.Component {
                             <img id="pb" alt='Profilbild'
                                  src="https://yt3.ggpht.com/a/AATXAJzQuI4-bNmqwbklzCjvm576_nZwSdpG5jX-Hw=s176-c-k-c0x00ffffff-no-rj-mo"/>
                             <span className="central" id="name">
-                            <div className='profile_flex-row'>
-                                <input onChange={this.usernameChangeListener} id='usernameInput' type='text'
-                                       value={this.state.username} disabled={this.state.disabled}/>
-                                <a onClick={this.usernameClickListener}>
-                                    <img className='pen img' src={Task_icon} alt="pen"/>
-                                </a>
-                            </div>
-                        </span>
+                                <div className='profile_flex-row'>
+                                    <input onChange={this.usernameChangeListener} id='usernameInput' type='text'
+                                           value={this.state.username} disabled={this.state.disabled}/>
+                                    <a onClick={this.usernameClickListener}>
+                                        <img className='pen img' src={Task_icon} alt="pen"/>
+                                    </a>
+                                </div>
+                            </span>
                         </div>
 
                         <div className="central stat font-arimo" id="points">
-                        <span className="central">
-                            <div className="profile_flex-row">
-                                <span className='user img' id="user_icon"><User_icon alt="user icon" stroke="#3A506B"/></span>
-                                <span>6.526</span>
-                                <span className='var_info profile_span_padding_l'>{Translation.t("task.points")}</span>
-                            </div>
-                        </span>
+                            <span className="central">
+                                <div className="profile_flex-row">
+                                    <span className='user img' id="user_icon"><User_icon alt="user icon" stroke="#3A506B"/></span>
+                                    <span>6.526</span>
+                                    <span className='var_info profile_span_padding_l'>{Translation.t("task.points")}</span>
+                                </div>
+                            </span>
                         </div>
 
                         <div className="central stat font-arimo" id="trending">
-                        <span className="central">
-                            <div className="profile_flex-row">
-                                <span className='trending img' id="trending_icon"><Trending_icon width="24" height="30" stroke="#3A506B" alt="trending"/></span>
-                                <span>7.231</span>
-                                <span className='var_info profile_span_padding_l'>{Translation.t("task.questions")}</span>
-                            </div>
-                        </span>
+                            <span className="central">
+                                <div className="profile_flex-row">
+                                    <span className='trending img' id="trending_icon"><Trending_icon width="24" height="30" stroke="#3A506B" alt="trending"/></span>
+                                    <span>7.231</span>
+                                    <span className='var_info profile_span_padding_l'>{Translation.t("task.questions")}</span>
+                                </div>
+                            </span>
                         </div>
 
                         <div className="central stat font-arimo" id="since">
-                        <span className="central">
-                            <div className="profile_flex-row">
-                                <span className='calender img' id="calender_icon"><Calender_icon   alt="calendar" stroke="#3A506B"/></span>
-                                <span className='profile_span_padding_r'>{Translation.t("profile.memberSince")}</span><span
-                                className='var_info'>21.03.2020</span>
-                            </div>
-                        </span>
+                            <span className="central">
+                                <div className="profile_flex-row">
+                                    <span className='calender img' id="calender_icon"><Calender_icon   alt="calendar" stroke="#3A506B"/></span>
+                                    <span className='profile_span_padding_r'>{Translation.t("profile.memberSince")}</span><span
+                                    className='var_info'>21.03.2020</span>
+                                </div>
+                            </span>
                         </div>
 
                         <div id="profile_levelbar">
@@ -167,10 +164,9 @@ class Profile extends React.Component {
                             <div>
                                 <h2 className='font-Arimo profile_h2'>{Translation.t("profile.favoriteSubjects")}</h2>
                                 <div id="profile_favorite_box">
-                                    <Profile_Subject Subject="Deutsch" Underline="Sprachenlernen - Babel"/>
-                                    <Profile_Subject Subject="Mathe"
-                                                    Underline="2 x 3 macht 4 Widdewiddewitt und 3 macht 9"/>
-                                    <Profile_Subject Subject="Informatik" Underline="0110001101000101110111"/>
+                                    <ProfileSubject subject="german"/>
+                                    <ProfileSubject subject="math"/>
+                                    <ProfileSubject subject="computerScience"/>
                                 </div>
                             </div>
                         </div>
@@ -179,25 +175,23 @@ class Profile extends React.Component {
                                 <h2 className='font-Arimo profile_h2'>{Translation.t("profile.certificates")}</h2>
                                 <div id="profile_certificate_box">
 
-                                    <ProfileCerficate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="0 Fehler in 100 Fragen" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="Bestes Layout" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="0 Fehler in 100 Fragen" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="Bestes Layout" Datum="23.01.2020"/>
 
-                                    <ProfileCerficate Title="5.000 Fragen beantwortet" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="1.000 Punkte erreicht" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="5.000 Punkte erreicht" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="5.000 Fragen beantwortet" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="1.000 Punkte erreicht" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="5.000 Punkte erreicht" Datum="23.01.2020"/>
 
-                                    <ProfileCerficate Title="500 Informatikpunkte" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="1.000 Informatikpunkte" Datum="23.01.2020"/>
-                                    <ProfileCerficate Title="Informatikabschluss" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="500 Informatikpunkte" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="1.000 Informatikpunkte" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="Informatikabschluss" Datum="23.01.2020"/>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         );
     }
 }
