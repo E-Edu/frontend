@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
-import {Link} from "react-router-dom";
-import {button} from "@storybook/addon-knobs";
+import { Link } from 'react-router-dom';
+import { button } from '@storybook/addon-knobs';
 
 class Button extends React.Component {
     constructor(props) {
@@ -12,17 +12,18 @@ class Button extends React.Component {
     }
 
     render() {
-        let classes = this.props.styleType || "Primary";
-        if (this.props.disable){
-            classes = classes + " disabled";
+        let classes = this.props.styleType || 'Primary';
+        if (this.props.disable) {
+            classes = classes + ' disabled';
         }
-        return(
+        return (
             <button
-                type={this.props.type || "text"}
-                className={"button " + classes}
-                disabled={this.props.disable || false}
-                >{this.props.name || "Default"}</button>
-            );
+                type={this.props.type || 'text'}
+                className={'button ' + classes}
+                disabled={this.props.disable || false}>
+                {this.props.name || 'Default'}
+            </button>
+        );
     }
 }
 
