@@ -22,7 +22,6 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
-        'react-html'
     ],
     rules: {
         'no-console': 'error',
@@ -49,6 +48,7 @@ module.exports = {
         'camelcase': ['error', {allow: ['de_DE', 'en_US']}],
         'no-whitespace-before-property': 'error',
         'object-curly-newline': ['error', {'minProperties': 3}],
+        "indent": ["error", 4]
         /*'no-use-before-define': 'error'*/
         /*'id-blacklist': ['error', 'data', 'err', 'e', 'cb', 'callback']*/
     },
