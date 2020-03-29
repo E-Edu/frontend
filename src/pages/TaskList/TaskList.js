@@ -1,6 +1,5 @@
 import React from 'react';
 import './TaskList.scss';
-import { Link } from 'react-router-dom';
 import UsersIcon from '../../components/icons/user.icon.js';
 import UserIcon from '../../components/icons/users.icon.js';
 import Award from '../../components/icons/award.icon';
