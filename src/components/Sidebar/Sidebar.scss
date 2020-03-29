@@ -1,52 +1,54 @@
-#Menu {
+@import './src/css/styles';
+
+.menu {
+  align-items: center;
+  background: #0b132b 0 0 no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 7.6666665rem;
+
+  .menu-element:first-child {
+    margin-top: 0;
+  }
+
+  .menu-element {
     align-items: center;
-    background: #0b132b 0 0 no-repeat padding-box;
+    color: #687d9a;
+    flex-direction: column;
+    line-height: 1.2em;
+    margin: 0.6rem 0;
+    text-decoration: none;
+  }
+
+  .menu-element:hover {
+    cursor: pointer;
+  }
+
+  .menu-element:focus {
+    outline: none;
+  }
+
+  .icon-size {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .top-icons {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    left: 0;
-    opacity: 1;
-    text-align: center;
-    top: 0;
-    width: 7.6666665rem;
-    position: fixed;
+    justify-content: center;
+    margin-top: 6.6666665rem;
+  }
 
-    a.menuElement:first-child {
-        margin-top: 0;
-    }
-
-    a.menuElement {
-        align-items: center;
-        color: #687d9a;
-        flex-direction: column;
-        line-height: 1.2em;
-        margin: 0.6rem 0;
-        text-decoration: none;
-    }
-
-    a.menuElement:hover {
-        cursor: pointer;
-    }
-
-    a.menuElement:focus {
-        outline: none;
-    }
-
-    .iconSize {
-        height: 1.6rem;
-        width: 1.6rem;
-    }
-
-    .topIcons {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 6.6666665rem;
-    }
-
-    .bottomIcons {
-        margin-bottom: 1.3333334rem;
-    }
+  .bottom-icons {
+    margin-bottom: 1.3333334rem;
+  }
 }

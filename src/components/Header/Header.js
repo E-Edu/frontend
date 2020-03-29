@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Header.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Help_Image from '../../assets/icons/helpcircle.svg';
 import Logout_Image from '../../assets/icons/logout.svg';
 
@@ -9,17 +9,17 @@ class Header extends Component {
         switch (this.props.side) {
             case 'Landing':
                 return (
-                    <div className='headerNavbar'>
+                    <div className="header-navbar">
                         <div className="logo">
-                            <img id="logoImg" src="/assets/logo.svg" alt=""/>
-                            <h1 id='title'>E-EDU</h1>
+                            <img className="logo-img" src="/assets/logo.svg" alt="" />
+                            <h1 className="title">E-EDU</h1>
                         </div>
-                        <div id='Button_Box_Landing'>
+                        <div className="button-box-landing">
                             {/*TODO Route zurück auf /login /register*/}
-                            <Link className='BTN_Log' id='Button_Login' to={'/dashboard'}>
+                            <Link className="btn-log btn-login" to={'/dashboard'}>
                                 LOGIN
                             </Link>
-                            <Link className='BTN_Log' id='Button_Register' to={'/dashboard'}>
+                            <Link className="btn-log btn-register" to={'/dashboard'}>
                                 REGISTER
                             </Link>
                         </div>
@@ -27,19 +27,21 @@ class Header extends Component {
                 );
             case 'Dashboard':
                 return (
-                    <div className='headerNavbar'>
-                            <Link to={'/'} style={{textDecoration: "none"}}>
-                                <div className="logo">
-                                    <img id="logoImg" src="/assets/logo.svg" alt=""/>
-                                    <h1 id='title'>E-EDU</h1>
-                                </div>
+                    <div className="header-navbar">
+                        <Link to={'/'} style={{ textDecoration: 'none' }}>
+                            <div className="logo">
+                                <img className="logo-img" src="/assets/logo.svg" alt="" />
+                                <h1 className="title">E-EDU</h1>
+                            </div>
+                        </Link>
+                        <div id="button-box-dashboard">
+                            <Link
+                                to={{ pathname: '/imprint', state: { prevPath: 'Dashboard' } }}
+                                className="btn-dash btn-info">
+                                <img src={Help_Image} alt="Help" />
                             </Link>
-                        <div id='Button_Box_Dashboard'>
-                            <Link to={{pathname: '/imprint', state: { prevPath: "Dashboard" }}} className='BTN_Dash' id='Button_Info' >
-                                <img src={Help_Image} alt='Help'/>
-                            </Link>
-                            <Link className='BTN_Dash' id='Button_Logout'>
-                                <img src={Logout_Image} alt='Logout'/>
+                            <Link className="btn-dash btn-logout">
+                                <img src={Logout_Image} alt="Logout" />
                             </Link>
                         </div>
                     </div>
@@ -50,4 +52,3 @@ class Header extends Component {
 }
 
 export default Header;
-

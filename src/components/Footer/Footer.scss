@@ -1,33 +1,36 @@
-$Primary: #0b132b;
-$Second: #5bc0be;
+@import './src/css/styles';
 
-.FooterNavbar {
-	align-items: center;
-	background-color: $Primary;
-	bottom: 0;
-	display: flex;
-	flex-direction: column;
-	height: 5.3333335rem;
-	justify-content: center;
-	left: 0;
-	width: 100vw;
+.footer-navbar {
+  align-items: center;
+  background-color: $color-bluegrey;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 5.3333335rem;
+  justify-content: center;
+  left: 0;
+  width: 100vw;
 
-	a {
-		color: #687d9a;
-		padding: 0 1rem;
-		text-decoration: none;
-		transition: all 0.2s;
-	}
-	a:hover {
-		color: $Second;
-	}
-	a:focus {
-		outline: none;
-	}
-	span {
-		color: #687d9a;
-	}
-	#Copyright {
-		padding-top: 0.7rem;
-	}
+  a {
+    color: #687d9a;
+    padding: 0 1rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    color: $color-turquoise;
+  }
+
+  a:focus {
+    outline: none;
+  }
+
+  span {
+    color: #687d9a;
+  }
+
+  .copyright {
+    padding-top: 0.7rem;
+  }
 }

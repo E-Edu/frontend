@@ -1,118 +1,120 @@
-.Subjekts_content {
+@import './src/css/styles';
+
+.subjekts-content {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 1.5rem;
+
+  .subjekt {
+    border: 1px solid #707070;
+    border-radius: 13px;
+    display: flex;
+    height: 160px;
+    margin: 1.2rem 2rem 1.2rem 3rem;
+    padding-bottom: 0.5rem;
+    width: 340px;
+
+    .image {
+      align-items: center;
+      border: 1px solid #5bc0be;
+      border-radius: 50px;
+      display: flex;
+      height: 45px;
+      justify-content: center;
+      margin: 0.5rem 0 0 0.8rem;
+      width: 45px;
+
+      .icon {
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .box-content {
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      justify-content: flex-start;
+      margin-left: 0.8rem;
+      margin-top: 0.65rem;
+      width: 70%;
+
+      .subject-name {
+        color: #0b132b;
+        font-family: Hind Siliguri;
+        font-size: 28px;
+        letter-spacing: 0;
+        margin: 0;
+        text-align: left;
+      }
+
+      .under-name {
+        color: #3a506b;
+        font-size: 0.8rem;
+        letter-spacing: 0;
+        margin-top: -0.5rem;
+        opacity: 1;
+        text-align: left;
+      }
+
+      .points {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .user-points,
+        .community-points {
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+
+          .point-text {
+            margin-left: 0.4rem;
+          }
+
+        }
+
+        span {
+          align-items: center;
+          display: flex;
+          font-size: 13px;
+          font-weight: 500;
+          white-space: nowrap;
+        }
+      }
+
+      .weekend-task {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 0.8rem;
+        margin-top: 1rem;
+
+        span {
+          font-size: 13px;
+          font-weight: 500;
+          margin-left: 8px;
+          white-space: nowrap;
+        }
+
+        .calender {
+          height: 1.8rem;
+          width: 1.8rem;
+        }
+      }
+
+      .points {
+        display: flex;
+      }
+    }
+  }
+
+  .flex-row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1.5rem;
-
-    .Subjekt {
-        margin: 1.2rem 2rem 1.2rem 3rem;
-        padding-bottom: 0.5rem;
-
-        width: 340px;
-        height: 160px;
-        border: 1px solid #707070;
-        border-radius: 13px;
-        display: flex;
-
-        .image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50px;
-            border: 1px solid #5BC0BE;
-            width: 45px;
-            height: 45px;
-            margin: 0.5rem 0rem 0rem 0.8rem;
-
-            .icon {
-                width: 30px;
-                height: 30px;
-            }
-        }
-
-        .box-content {
-            width: 70%;
-            height: 80%;
-            display: flex;
-            flex-direction: column;
-            margin-left: 0.8rem;
-            margin-top: 0.65rem;
-            justify-content: flex-start;
-
-            .subject_name {
-                text-align: left;
-                font-size: 28px;
-                font-family: Hind Siliguri;
-                margin: 0;
-                letter-spacing: 0;
-                color: #0B132B;
-            }
-
-            .under_name {
-                text-align: left;
-                font-size: 0.8rem;
-                letter-spacing: 0;
-                color: #3A506B;
-                opacity: 1;
-                margin-top: -0.5rem;
-            }
-
-            .points {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 100%;
-
-                .user_points, .community_points {
-                    display: flex;
-                    flex-direction: row;
-                    width: 50%;
-
-                    .pointText {
-                        margin-left: 0.4rem;
-                    }
-
-                }
-
-                span {
-                    display: flex;
-                    align-items: center;
-                    white-space: nowrap;
-                    font-weight: 500;
-                    font-size: 13px;
-                }
-            }
-
-            .weekend_task {
-                margin-top: 1rem;
-                margin-bottom: 0.8rem;
-                display: flex;
-                align-items: center;
-                flex-wrap: nowrap;
-
-                span {
-                    margin-left: 8px;
-                    white-space: nowrap;
-                    font-weight: 500;
-                    font-size: 13px;
-                }
-
-                #calender {
-                    width: 1.8rem;
-                    height: 1.8rem;
-                }
-            }
-
-            .points {
-                display: flex;
-            }
-        }
-    }
-
-    .flex-row {
-        display: flex;
-        flex-direction: row;
-    }
+  }
 }

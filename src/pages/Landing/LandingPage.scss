@@ -1,91 +1,88 @@
-$turquoise: #5BC0BE;
+@import './src/css/styles';
 
 .landing {
-    height: 100%;
-    #content {
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        justify-content: center;
-        align-items: center;
+  height: 100%;
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .image-landigpage {
+
+    width: 50%;
+
+    img {
+      margin-left: 2rem;
+      padding-left: 2rem;
+    }
+  }
+
+  .text-content {
+    align-items: flex-start;
+    color: #0b132b;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 50%;
+
+    h2 {
+      margin: 0;
+      padding: 0;
     }
 
-    #image-landigpage {
+    h4 {
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 0;
+      width: 30vw;
 
-        width: 50%;
-
-        img {
-            padding-left: 2rem;
-			margin-left: 2rem;
-        }
+      span {
+        color: #5bc0be;
+      }
     }
 
-    #text-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: #0b132b;
-        justify-content: center;
-        width: 50%;
-        padding: 0 1rem;
-        font-size: 2.5rem;
-
-        h2 {
-            padding: 0;
-            margin: 0;
-        }
-
-        h4 {
-            font-size: 1.5rem;
-            padding: 0;
-            margin: 0;
-			width: 30vw;
-			span{
-				color: #5BC0BE;
-			}
-        }
-
-        a {
-            text-decoration: none;
-            color: #687d9a;
-            transition: all 0.2s;
-        }
-
-        a:hover {
-            color: #5bc0be;
-        }
-
-        a:focus {
-            outline: none;
-        }
-
+    a {
+      color: #687d9a;
+      text-decoration: none;
+      transition: all 0.2s;
     }
 
-    #text-content #title {
-        font: Bold 68px/110px Hind Siliguri;
-
-        margin-bottom: 1rem;
-
-        padding: 0;
+    a:hover {
+      color: #5bc0be;
     }
 
-    #text-content h5 {
-        font: Bold 1.6666666rem/3.3333333rem Hind Siliguri;
-        padding: 0;
-        margin: 0;
+    a:focus {
+      outline: none;
     }
 
-    #text-content #text {
-        font: Bold 25px/45px Hind Siliguri;
-        padding: 0;
-        margin: 0;
-    }
+  }
 
-    .react-modal-body {
-        top: -10%;
-        width: auto !important;
+  .text-content .title {
+    font: Bold 68px/110px Hind Siliguri;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
 
-        .react-modal-body-close {
-        }
-    }
+  .text-content h5 {
+    font: Bold 1.6666666rem/3.3333333rem Hind Siliguri;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-content .text {
+    font: Bold 25px/45px Hind Siliguri;
+    margin: 0;
+    padding: 0;
+  }
+
+  .react-modal-body {
+    top: -10%;
+    width: auto !important;
+  }
 }

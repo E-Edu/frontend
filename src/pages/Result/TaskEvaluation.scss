@@ -1,148 +1,141 @@
-$bluegrey: #0B132B;
-$grey: #3A506B;
-$red: #BA1919;
-$warmGrey: #707070;
-$turquoise: #5BC0BE;
-$lightGrey: #687D9A;
-$mediumBlue: #1C2541;
-$lightBlue: #96B4DD;
+@import './src/css/styles';
 
 .result {
-    font-family: Hind Siliguri;
+  font-family: Hind Siliguri;
 
-    .resultContainer {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+  .result-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-        #TaskHeader {
-            margin-bottom: 2.5rem;
-            width: 90%;
-        }
-
-        .resultContentHeader {
-            align-items: baseline;
-            display: flex;
-
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-
-            .resultLeft {
-                margin-left: 7.266667rem;
-                margin-top: 2.2666667rem;
-
-
-                .resultSubject {
-                    color: $bluegrey;
-                    font-family: Hind Siliguri;
-                    font-size: 4.0rem;
-                    font-weight: bolder;
-                    font-weight: bolder;
-                    margin-right: 2.6666667rem;
-                    margin-top: 2.2666667rem;
-
-                }
-
-                .resultModule {
-                    color: $grey;
-                    font-size: 2.1333334rem;
-                    font-weight: bolder;
-                }
-            }
-
-            .resultRight {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-right: 16.533333rem;
-
-                img {
-                    height: 1.3333334rem;
-                    margin-right: 0.4rem;
-                    width: 1.3333334rem;
-                }
-
-                .resultPoints {
-                    align-items: center;
-                    color: $grey;
-                    display: flex;
-                    flex-direction: row;
-                    font-size: 1.0666667rem;
-                    font-weight: bolder;
-
-                    &:first-child {
-                        margin-right: 1.7333333rem;
-                    }
-
-                    p {
-                        margin: 0.6666667rem 0;
-                    }
-                }
-            }
-        }
-
-        .resultEvaluation {
-            align-items: baseline;
-            color: $grey;
-            display: flex;
-            flex-direction: row;
-            font-size: 2.6666667rem;
-            font-weight: normal;
-            justify-content: space-between;
-            width: 60.0rem;
-
-            p {
-                color: $grey;
-                font-size: 2.1333334rem;
-                margin: 0;
-
-                span {
-                    color: $grey;
-                    font-size: 2.6666667rem;
-                }
-            }
-        }
-
-        .resultPointcount {
-            align-items: baseline;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 2.0rem;
-            width: 60.0rem;
-
-            .resultNewPoints {
-                color: #1C2541 !important;
-                font-size: 4.0rem;
-                font-weight: bold;
-
-            }
-
-            .resultWeeklyPoints {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                p {
-                    color: $grey;
-                    font-size: 2.0rem;
-                    font-weight: normal;
-
-                    span {
-                        font-size: 2.6666667rem;
-                    }
-                }
-            }
-        }
-
-        .resultQuestions {
-            width: 60.0rem;
-
-            .resultQuestion {
-                margin: 0.6666667rem 0;
-            }
-        }
+    .task-header {
+      margin-bottom: 2.5rem;
+      width: 90%;
     }
+
+    .result-content-header {
+      align-items: baseline;
+      display: flex;
+
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .result-left {
+        margin-left: 7.266667rem;
+        margin-top: 2.2666667rem;
+
+
+        .result-subject {
+          color: $color-bluegrey;
+          font-family: Hind Siliguri;
+          font-size: 4rem;
+          font-weight: bolder;
+          font-weight: bolder;
+          margin-right: 2.6666667rem;
+          margin-top: 2.2666667rem;
+
+        }
+
+        .result-module {
+          color: $color-grey;
+          font-size: 2.1333334rem;
+          font-weight: bolder;
+        }
+      }
+
+      .result-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 16.533333rem;
+
+        img {
+          height: 1.3333334rem;
+          margin-right: 0.4rem;
+          width: 1.3333334rem;
+        }
+
+        .result-points {
+          align-items: center;
+          color: $color-grey;
+          display: flex;
+          flex-direction: row;
+          font-size: 1.0666667rem;
+          font-weight: bolder;
+
+          &:first-child {
+            margin-right: 1.7333333rem;
+          }
+
+          p {
+            margin: 0.6666667rem 0;
+          }
+        }
+      }
+    }
+
+    .result-evaluation {
+      align-items: baseline;
+      color: $color-grey;
+      display: flex;
+      flex-direction: row;
+      font-size: 2.6666667rem;
+      font-weight: normal;
+      justify-content: space-between;
+      width: 60rem;
+
+      p {
+        color: $color-grey;
+        font-size: 2.1333334rem;
+        margin: 0;
+
+        span {
+          color: $color-grey;
+          font-size: 2.6666667rem;
+        }
+      }
+    }
+
+    .result-pointcount {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2rem;
+      width: 60rem;
+
+      .result-new-points {
+        color: #1c2541 !important;
+        font-size: 4rem;
+        font-weight: bold;
+
+      }
+
+      .result-weekly-points {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+          color: $color-grey;
+          font-size: 2rem;
+          font-weight: normal;
+
+          span {
+            font-size: 2.6666667rem;
+          }
+        }
+      }
+    }
+
+    .result-questions {
+      width: 60rem;
+
+      .result-question {
+        margin: 0.6666667rem 0;
+      }
+    }
+  }
 }
