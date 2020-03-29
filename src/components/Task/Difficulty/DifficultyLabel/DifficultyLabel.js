@@ -9,21 +9,18 @@ class DifficultyLabel extends Component {
         const { backgroundColor } = color;
         const { borderColor } = color;
         return (
-            <span
-                style={{
-                    color: '#1C2541',
-                    backgroundColor,
-                    borderWidth: 1,
-                    borderStyle: 'solid',
-                    borderColor,
-                    borderRadius: 15,
-                    padding: '0 0.5rem',
-                    width: '3rem',
-                    height: '1.5rem',
-                    textAlign: 'center',
-                }}>
-                {Translation.t(`difficulty.${difficulty}`)}
-            </span>
+            <span style={{
+                color: '#1C2541',
+                backgroundColor,
+                borderWidth: 1,
+                borderStyle: 'solid',
+                borderColor,
+                borderRadius: 10,
+                padding: '0 0.33rem',
+            }}
+          >
+            {Translation.t(`difficulty.${difficulty}`)}
+          </span>
         );
     }
 }
