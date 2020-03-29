@@ -7,8 +7,8 @@ import icon_teacher from '../../../assets/icons/teacher.svg';
 import ThumbsUpIcon from '../../../components/icons/thumbs-up.icon';
 import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
 import ReportInfo from '../../../components/ReportInfo/ReportInfo';
+import Modal from 'react-animated-modal';
 import colorData from '../../../lib/Colors';
-import { Translation } from '../../../i18n/i18n';
 
 class Report extends Component {
     // like: 0 - not liked, 1 - liked, 2 -disliked
@@ -16,7 +16,6 @@ class Report extends Component {
         teacher: this.props.teacher,
         likes: Number(this.props.likes),
         dislikes: Number(this.props.dislikes),
-        difficulty: this.props.difficulty,
         messages: this.props.messages,
         subject: this.props.subject,
         like: this.props.liked || 0,
@@ -72,13 +71,9 @@ class Report extends Component {
     };
 
     render() {
-        const { difficulty } = this.state;
-        const color = colorData.difficultyColor[difficulty];
-        const { backgroundColor } = color;
-        const { borderColor } = color;
-        const { subject } = this.props;
-        const { messages } = this.props;
-        const { teacher } = this.props;
+        const subject = this.props.subject;
+        const messages = this.props.messages;
+        const teacher = this.props.teacher;
 
         return (
             <div className="report-component text-dark">
@@ -138,23 +133,7 @@ class Report extends Component {
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t(`difficulty.${difficulty}`)}
-                        </span>
+                        <DifficultyLabel difficulty={this.props.difficulty}/>
                     </div>
                 </div>
                 <div

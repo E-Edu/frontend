@@ -15,8 +15,11 @@ class DifficultyLabel extends Component {
                 borderWidth: 1,
                 borderStyle: 'solid',
                 borderColor,
-                borderRadius: 10,
-                padding: '0 0.33rem',
+                borderRadius: 15,
+                padding: '0 0.5rem',
+                width: '3rem',
+                height: '1.5rem',
+                textAlign: 'center'
             }}
           >
             {Translation.t(`difficulty.${difficulty}`)}
