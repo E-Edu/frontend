@@ -10,71 +10,68 @@ import Download from '../../assets/icons/download.svg';
 import './Profile.scss';
 import '../../css/main.css';
 import Data from '../../lib/Colors.json';
-import {Translation} from "../../i18n/i18n";
+import { Translation } from '../../i18n/i18n';
 
 class ProfileSubject extends React.Component {
-
     render() {
         const subject = this.props.subject;
-        const border = "0.73333335rem solid " + Data["subjectColor"][subject];
+        const border = '0.73333335rem solid ' + Data['subjectColor'][subject];
 
         return (
-            <div className='profile_subjekt' style={{borderLeft: border}}>
-                <div className='profileTop'>
-                    <div className='profile_subjekt_img'>
-                        <img id="logo" alt="subjekt_img" src={File}/>
+            <div className="profile_subjekt" style={{ borderLeft: border }}>
+                <div className="profileTop">
+                    <div className="profile_subjekt_img">
+                        <img id="logo" alt="subjekt_img" src={File} />
                     </div>
                     <div id="text">
-                        <div className='profile_subjekt_name'>
-                            <span id="title">{Translation.t("subject." + subject + ".name")}</span>
+                        <div className="profile_subjekt_name">
+                            <span id="title">{Translation.t('subject.' + subject + '.name')}</span>
                         </div>
                         <div className="profile_subjekt_underline">
-                            <span id="fach_info">{Translation.t("subject." + subject + ".description")}</span>
+                            <span id="fach_info">{Translation.t('subject.' + subject + '.description')}</span>
                         </div>
                     </div>
                 </div>
-                <div className='profileBottom'>
-                </div>
+                <div className="profileBottom"></div>
             </div>
-        )
+        );
     }
 }
 
 class ProfileCertificate extends React.Component {
     render() {
         return (
-            <div className='profile_certifikate'>
-                <div className='CertificatesRow'>
-                    <div className='titelCertificate'>
-                        <img id="badgeimage" src={Badge} alt="badge"/>
+            <div className="profile_certifikate">
+                <div className="CertificatesRow">
+                    <div className="titelCertificate">
+                        <img id="badgeimage" src={Badge} alt="badge" />
                         <p id="badgetitle">{this.props.Title}</p>
                     </div>
-                    <div className='dateCertificate'>
+                    <div className="dateCertificate">
                         <p id="date">Erreicht am {this.props.Datum}</p>
                     </div>
                 </div>
-                <img id="downloadimage" src={Download} alt="download"/>
+                <img id="downloadimage" src={Download} alt="download" />
             </div>
         );
     }
 }
 
 class Profile extends React.Component {
-
     constructor(props) {
         super(props);
     }
 
     state = {
-        username: "Morpheus",
-        disabled: true
+        username: 'Morpheus',
+        disabled: true,
     };
 
     componentDidUpdate() {
         console.log(this.state);
     }
 
-/*    componentDidMount() {
+    /*    componentDidMount() {
         const top = document.getElementsByClassName('headerNavbar')[0].clientHeight;
         const left = document.getElementById('Menu').clientWidth;
         document.getElementById('main').setAttribute("style", `margin-top:${top}px;margin-left:${left}px;`);
@@ -96,20 +93,30 @@ class Profile extends React.Component {
             <div>
                 <div id="main">
                     <div>
-                        <div className='resultContentHeader' id="resultContentHeaderID">
-                            <div className='resultLeft'><span className='resultSubject'>Profile</span></div>
+                        <div className="resultContentHeader" id="resultContentHeaderID">
+                            <div className="resultLeft">
+                                <span className="resultSubject">Profile</span>
+                            </div>
                         </div>
                     </div>
                     <div id="profile_head">
                         <div className="central">
-                            <img id="pb" alt='Profilbild'
-                                 src="https://yt3.ggpht.com/a/AATXAJzQuI4-bNmqwbklzCjvm576_nZwSdpG5jX-Hw=s176-c-k-c0x00ffffff-no-rj-mo"/>
+                            <img
+                                id="pb"
+                                alt="Profilbild"
+                                src="https://yt3.ggpht.com/a/AATXAJzQuI4-bNmqwbklzCjvm576_nZwSdpG5jX-Hw=s176-c-k-c0x00ffffff-no-rj-mo"
+                            />
                             <span className="central" id="name">
-                                <div className='profile_flex-row'>
-                                    <input onChange={this.usernameChangeListener} id='usernameInput' type='text'
-                                           value={this.state.username} disabled={this.state.disabled}/>
+                                <div className="profile_flex-row">
+                                    <input
+                                        onChange={this.usernameChangeListener}
+                                        id="usernameInput"
+                                        type="text"
+                                        value={this.state.username}
+                                        disabled={this.state.disabled}
+                                    />
                                     <a onClick={this.usernameClickListener}>
-                                        <img className='pen img' src={Task_icon} alt="pen"/>
+                                        <img className="pen img" src={Task_icon} alt="pen" />
                                     </a>
                                 </div>
                             </span>
@@ -118,9 +125,13 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="points">
                             <span className="central">
                                 <div className="profile_flex-row">
-                                    <span className='user img' id="user_icon"><User_icon alt="user icon" stroke="#3A506B"/></span>
+                                    <span className="user img" id="user_icon">
+                                        <User_icon alt="user icon" stroke="#3A506B" />
+                                    </span>
                                     <span>6.526</span>
-                                    <span className='var_info profile_span_padding_l'>{Translation.t("task.points")}</span>
+                                    <span className="var_info profile_span_padding_l">
+                                        {Translation.t('task.points')}
+                                    </span>
                                 </div>
                             </span>
                         </div>
@@ -128,9 +139,13 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="trending">
                             <span className="central">
                                 <div className="profile_flex-row">
-                                    <span className='trending img' id="trending_icon"><Trending_icon width="24" height="30" stroke="#3A506B" alt="trending"/></span>
+                                    <span className="trending img" id="trending_icon">
+                                        <Trending_icon width="24" height="30" stroke="#3A506B" alt="trending" />
+                                    </span>
                                     <span>7.231</span>
-                                    <span className='var_info profile_span_padding_l'>{Translation.t("task.questions")}</span>
+                                    <span className="var_info profile_span_padding_l">
+                                        {Translation.t('task.questions')}
+                                    </span>
                                 </div>
                             </span>
                         </div>
@@ -138,9 +153,13 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo" id="since">
                             <span className="central">
                                 <div className="profile_flex-row">
-                                    <span className='calender img' id="calender_icon"><Calender_icon   alt="calendar" stroke="#3A506B"/></span>
-                                    <span className='profile_span_padding_r'>{Translation.t("profile.memberSince")}</span><span
-                                    className='var_info'>21.03.2020</span>
+                                    <span className="calender img" id="calender_icon">
+                                        <Calender_icon alt="calendar" stroke="#3A506B" />
+                                    </span>
+                                    <span className="profile_span_padding_r">
+                                        {Translation.t('profile.memberSince')}
+                                    </span>
+                                    <span className="var_info">21.03.2020</span>
                                 </div>
                             </span>
                         </div>
@@ -149,43 +168,43 @@ class Profile extends React.Component {
                             <div id="levelbar_back">
                                 <div id="levelbar_font">
                                     <span>Level</span>
-                                    <span> 145</span><br/>
+                                    <span> 145</span>
+                                    <br />
                                     <span>1423 / 8000</span>
                                 </div>
-                                <div id='levelbar_front'/>
+                                <div id="levelbar_front" />
                             </div>
                             <div id="level_rank">
-                                <img stroke="#5BC0BE" alt="tag" className="tag" src={Tags_icon}/>
-                                <span id="level_Rang">{Translation.t("profile.rank.teachingMaster")}</span>
+                                <img stroke="#5BC0BE" alt="tag" className="tag" src={Tags_icon} />
+                                <span id="level_Rang">{Translation.t('profile.rank.teachingMaster')}</span>
                             </div>
                         </div>
 
                         <div id="favorite_subject">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>{Translation.t("profile.favoriteSubjects")}</h2>
+                                <h2 className="font-Arimo profile_h2">{Translation.t('profile.favoriteSubjects')}</h2>
                                 <div id="profile_favorite_box">
-                                    <ProfileSubject subject="german"/>
-                                    <ProfileSubject subject="math"/>
-                                    <ProfileSubject subject="computerScience"/>
+                                    <ProfileSubject subject="german" />
+                                    <ProfileSubject subject="math" />
+                                    <ProfileSubject subject="computerScience" />
                                 </div>
                             </div>
                         </div>
                         <div id="favorite_certificate">
                             <div>
-                                <h2 className='font-Arimo profile_h2'>{Translation.t("profile.certificates")}</h2>
+                                <h2 className="font-Arimo profile_h2">{Translation.t('profile.certificates')}</h2>
                                 <div id="profile_certificate_box">
+                                    <ProfileCertificate Title="1.000 Fragen beantwortet" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="0 Fehler in 100 Fragen" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="Bestes Layout" Datum="23.01.2020" />
 
-                                    <ProfileCertificate Title="1.000 Fragen beantwortet" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="0 Fehler in 100 Fragen" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="Bestes Layout" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="5.000 Fragen beantwortet" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="1.000 Punkte erreicht" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="5.000 Punkte erreicht" Datum="23.01.2020" />
 
-                                    <ProfileCertificate Title="5.000 Fragen beantwortet" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="1.000 Punkte erreicht" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="5.000 Punkte erreicht" Datum="23.01.2020"/>
-
-                                    <ProfileCertificate Title="500 Informatikpunkte" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="1.000 Informatikpunkte" Datum="23.01.2020"/>
-                                    <ProfileCertificate Title="Informatikabschluss" Datum="23.01.2020"/>
+                                    <ProfileCertificate Title="500 Informatikpunkte" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="1.000 Informatikpunkte" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="Informatikabschluss" Datum="23.01.2020" />
                                 </div>
                             </div>
                         </div>

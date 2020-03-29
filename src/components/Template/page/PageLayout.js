@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './PageLayout.scss';
-import Header from "../../Header/Header";
-import Sidebar from "../../Sidebar/Sidebar";
-import Footer from "../../Footer/Footer";
-import {withRouter} from 'react-router-dom';
+import Header from '../../Header/Header';
+import Sidebar from '../../Sidebar/Sidebar';
+import Footer from '../../Footer/Footer';
+import { withRouter } from 'react-router-dom';
 
 class PageLayout extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class PageLayout extends Component {
     }
 
     state = {
-        visible: false
+        visible: false,
     };
 
     hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
@@ -33,17 +33,16 @@ class PageLayout extends Component {
 
     render() {
         return (
-            <div id="pageLayout" style={{gridTemplateAreas: this.gridLayout()}}>
-                <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'}/>
-                <Sidebar active="PAGE-ROUTE" visible={this.renderSitebar()}/>
-                <div id="layoutContainer">
-                    {this.props.children}
-                </div>
-          {/*      {
+            <div id="pageLayout" style={{ gridTemplateAreas: this.gridLayout() }}>
+                <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'} />
+                <Sidebar active="PAGE-ROUTE" visible={this.renderSitebar()} />
+                <div id="layoutContainer">{this.props.children}</div>
+                {/*      {
                     this.state.visible && <Footer/>
                 }*/}
-                <Footer visible={!this.renderSitebar()}/>
-            </div>);
+                <Footer visible={!this.renderSitebar()} />
+            </div>
+        );
     }
 }
 

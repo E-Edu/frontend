@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Sidebar.scss';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import icons from './icons';
 
 class MenuElement extends Component {
     constructor(props) {
         super(props);
-        this.state = {active: props.active, file: props.file, name: props.name};
+        this.state = { active: props.active, file: props.file, name: props.name };
     }
 
     setActivity(activity) {
         // the active changes the icon
-        this.setState({active: activity || this.props.active});
+        this.setState({ active: activity || this.props.active });
     }
 
     onMouseEnterHandler = () => {
@@ -22,14 +22,21 @@ class MenuElement extends Component {
         this.setActivity(false);
     };
 
-
     render() {
-        let spacer = "";
+        let spacer = '';
         if (this.props.spacer) {
-            spacer = <div style={{
-                width: 60, borderWidth: 2, backgroundColor: "#ffffff", borderRadius: 2,
-                height: 1, alignSelf: "center"
-            }}/>;
+            spacer = (
+                <div
+                    style={{
+                        width: 60,
+                        borderWidth: 2,
+                        backgroundColor: '#ffffff',
+                        borderRadius: 2,
+                        height: 1,
+                        alignSelf: 'center',
+                    }}
+                />
+            );
         }
         let color;
         // get the right filename, if active or not
@@ -40,35 +47,40 @@ class MenuElement extends Component {
         }
         let nameText = '';
         if (this.state.name) {
-            nameText = <p style={{
-                margin: '0 0.8rem',
-                overflowWrap: 'break-word',
-                textAlign: 'center',
-                color: color
-            }}>{this.state.name}</p>;
+            nameText = (
+                <p
+                    style={{
+                        margin: '0 0.8rem',
+                        overflowWrap: 'break-word',
+                        textAlign: 'center',
+                        color: color,
+                    }}>
+                    {this.state.name}
+                </p>
+            );
         }
 
         const File = icons[this.state.file];
-        return ([spacer,
+        return [
+            spacer,
             <Link
                 to={'/' + this.props.url}
-                className='menuElement'
+                className="menuElement"
                 key={this.state.file}
-                style={{display: 'block'}}
+                style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
-                onMouseLeave={this.onMouseLeaveHandler}
-            >
-                <File stroke={color}/>
+                onMouseLeave={this.onMouseLeaveHandler}>
+                <File stroke={color} />
                 {nameText}
-            </Link>
-        ]);
+            </Link>,
+        ];
     }
 }
 
 class Sidebar extends Component {
     constructor(props) {
         super(props);
-        this.state = {activeName: props.active};
+        this.state = { activeName: props.active };
     }
 
     render() {
@@ -83,27 +95,37 @@ class Sidebar extends Component {
             ['Reports', 'alert-circle', 'reports/list', 3, true],
             ['Lehrer hinzufügen', 'teacher', 'teacher/add', 3],
         ];
-        let sitesHtml = sites.map(site => {
+        let sitesHtml = sites.map((site) => {
             if (permission >= site[3]) {
-                return <MenuElement name={site[0]} file={site[1]} url={site[2]}
-                                    active={this.state.activeName === site[2]} key={site[0]} spacer={site[4]}/>;
+                return (
+                    <MenuElement
+                        name={site[0]}
+                        file={site[1]}
+                        url={site[2]}
+                        active={this.state.activeName === site[2]}
+                        key={site[0]}
+                        spacer={site[4]}
+                    />
+                );
             }
-            return "";
+            return '';
         });
 
         if (this.props.visible) {
             return null;
         }
         return (
-
-            <div id='Menu'>
-                <div className="topIcons">
-                    {sitesHtml}
-                </div>
+            <div id="Menu">
+                <div className="topIcons">{sitesHtml}</div>
                 <div className="bottomIcons">
-                    <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'}
-                                 spacer={true}/>
-                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'profile'}/>
+                    <MenuElement
+                        name=""
+                        file="settings"
+                        url="settings"
+                        active={this.state.activeName === 'settings'}
+                        spacer={true}
+                    />
+                    <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'profile'} />
                 </div>
             </div>
         );
