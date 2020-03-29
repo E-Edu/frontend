@@ -1,123 +1,122 @@
-$Primary: #0b132b;
-$Second: #5bc0be;
+@import './src/css/styles';
 
-.headerNavbar {
+.header-navbar {
+  align-items: center;
+  background: $color-bluegrey 0 0 no-repeat padding-box;
+  display: flex;
+  height: 5.3333335rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  .logo {
     align-items: center;
-    background: $Primary 0% 0% no-repeat padding-box;
     display: flex;
-    height: 5.3333335rem;
-    justify-content: space-between;
-    left: 0.0rem;
-    position: fixed;
-    top: 0.0rem;
-    width: 100%;
-    z-index: 3;
+    flex-direction: row;
+    margin-left: 3rem;
 
-    .logo {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        margin-left: 3.0rem;
-
-        #logoImg {
-            height: 90%;
-            width: 2.4rem;
-        }
-    }
-	a{
-		height: 100%;
-	}
-
-    #title {
-        color: $Second;
-        font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
-        letter-spacing: 0;
-        margin: 0;
-        padding-left: 2.0rem;
-        text-align: left;
-        z-index: 22;
+    .logo-img {
+      height: 90%;
+      width: 2.4rem;
     }
 
-    .BTN_Log {
-        background-color: Transparent;
-        border: 2px solid $Second;
-        border-radius: 10px;
-        font: 22px/42px Hind Siliguri;
-        font-weight: 400;
-        max-height: 30px;
-        padding: 2.5px 26.21px;
-        text-decoration: none;
-        width: 159px;
+    .title {
+      color: $color-turquoise;
+      font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
+      letter-spacing: 0;
+      margin: 0;
+      padding-left: 2rem;
+      white-space: nowrap;
     }
+  }
 
-    #Button_Login {
-        background-color: $Second;
-        color: #0b132b;
-        margin-right: 3.7333333rem;
-        padding: 2.5px 40px;
-        transition: all 0.5s;
-    }
+  a {
+    height: 100%;
+  }
 
-    #Button_Register {
-        color: $Second;
-        transition: all 0.2s;
-    }
 
-    #Button_Box_Landing {
-        margin-right: 6.4rem;
-    }
+  .btn-log {
+    background-color: Transparent;
+    border: 2px solid $color-turquoise;
+    border-radius: 10px;
+    font: 22px/42px Hind Siliguri;
+    font-weight: 400;
+    max-height: 30px;
+    padding: 2.5px 26.21px;
+    text-decoration: none;
+    width: 159px;
+  }
 
-    #Button_Login:hover {
-        background-color: rgba(91, 192, 190, 0.8);
-        cursor: pointer;
-    }
+  .btn-login {
+    background-color: $color-turquoise;
+    color: $color-bluegrey;
+    margin-right: 3.7333333rem;
+    padding: 2.5px 40px;
+    transition: all 0.5s;
+  }
 
-    #Button_Register:hover {
-        background-color: rgba(91, 192, 190, 0.3);
-        cursor: pointer;
-    }
+  .btn-register {
+    color: $color-lightGrey;
+    transition: all 0.2s;
+  }
 
-    #Button_Login:focus {
-        outline: none;
-    }
+  .button-box-landing {
+    margin-right: 6.4rem;
+  }
 
-    #Button_Register:hover {
-        background-color: rgba(91, 192, 190, 0.3);
-        cursor: pointer;
-    }
+  .btn-login:hover {
+    background-color: rgba(91, 192, 190, 0.8);
+    cursor: pointer;
+  }
 
-    #Button_Register:focus {
-        outline: none;
-    }
+  .btn-register:hover {
+    background-color: rgba(91, 192, 190, 0.3);
+    cursor: pointer;
+  }
 
-    #Button_Box_Dashbord {
-        margin-right: 6.4rem;
-    }
+  .btn-login:focus {
+    outline: none;
+  }
 
-    #Button_Box_Dashboard {
-        margin-right: 6.4rem;
-    }
+  .btn-register:hover {
+    background-color: rgba(91, 192, 190, 0.3);
+    cursor: pointer;
+  }
 
-    .BTN_Dash {
-        background-color: transparent;
-        border: none;
-        color: $Second;
-        margin: 0 1rem;
-    }
+  .btn-register:focus {
+    outline: none;
+  }
 
-    #Button_Info:hover {
-        cursor: pointer;
-    }
+  .button-box-dashboard {
+    margin-right: 6.4rem;
+  }
 
-    #Button_Logout:hover {
-        cursor: pointer;
-    }
+  .button-box-dashboard {
+    margin-right: 6.4rem;
+  }
 
-    #Button_Info:focus {
-        outline: none;
-    }
+  .btn-dash {
+    background-color: transparent;
+    color: $color-turquoise;
+    margin: 0 1rem;
+  }
 
-    #Button_Logout:focus {
-        outline: none;
-    }
+  .btn-info:hover {
+    cursor: pointer;
+  }
+
+  .btn-logout:hover {
+    cursor: pointer;
+  }
+
+  .btn-info:focus {
+    outline: none;
+  }
+
+  .btn-info:focus {
+    outline: none;
+  }
 }

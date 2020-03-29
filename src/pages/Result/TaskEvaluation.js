@@ -9,29 +9,29 @@ class TaskEvaluation extends React.Component {
     render() {
         return (
             <div>
-                <div className="result" id="main">
-                    <div className="resultContainer">
+                <div className="result">
+                    <div className="result-container">
                         {' '}
                         //TODO: Result -> Evaluation
                         <TaskHeader module="Mathe" />
-                        <div className="resultEvaluation">
+                        <div className="result-evaluation">
                             <span>Auswertung</span>
                             <p>
                                 Korrekte Fragen:<span> 7 von 10 </span>
                             </p>
                         </div>
-                        <div className="resultPointcount">
-                            <div className="resultNewPoints">+7 Punkte</div>
-                            <div className="resultWeeklyPoints">
+                        <div className="result-pointcount">
+                            <div className="result-new-points">+7 Punkte</div>
+                            <div className="result-weekly-points">
                                 <p>
                                     Diese Woche: <span> 22 Punkte</span>
                                 </p>
                             </div>
                         </div>
-                        <div className="resultQuestions">
+                        <div className="result-questions">
                             {this.results.map((value, index) => {
                                 return (
-                                    <div className="resultQuestion" key={index}>
+                                    <div className="result-question" key={index}>
                                         <ResultQuestion color={value} index={index + 1} />
                                     </div>
                                 );

@@ -38,22 +38,22 @@ class ReportInfo extends Component {
     render() {
         return (
             <div className="reportcontainer">
-                <div className="topInfos">
-                    <div className="subjectPath">
+                <div className="top-infos">
+                    <div className="subject-path">
                         {this.state.subject} | {this.state.theme} | {this.state.themeart}
                     </div>
 
-                    <div className="InfosRight">
-                        <div id="likes">
+                    <div className="infos-right">
+                        <div className="likes">
                             <span>{this.state.dislikes}</span>
                             <img src={down} />
                             <span> {this.state.likes}</span>
                             <img src={up} />
                         </div>
-                        <div id="teacher">
+                        <div className="teacher">
                             {this.state.teacher} <img src={teacher} />
                         </div>
-                        <div id="messages">
+                        <div className="messages">
                             {this.state.messages} <img src={mail} />
                         </div>
                     </div>
@@ -61,7 +61,7 @@ class ReportInfo extends Component {
                 <div className="TaskName">{this.state.TaskName}</div>
                 <div className="TaskText">{this.state.TaskText}</div>
 
-                <div className="Buttons">
+                <div className="buttons">
                     <div className="row-1">
                         <button onClick={this.handleClick} className="half">
                             Behalten
@@ -69,8 +69,8 @@ class ReportInfo extends Component {
                         <button className="half">Löschen</button>
                     </div>
                 </div>
-                <div id="doneDiv">
-                    <button id="done" className="button">
+                <div className="done-div">
+                    <button className="done" className="button">
                         Fertig
                     </button>
                 </div>

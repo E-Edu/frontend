@@ -11,23 +11,23 @@ class CorrectionReviewBoxes extends Component {
 
     render() {
         return (
-            <span className="correctionBox">
-                <div className="correctionBoxHeader">
+            <span className="correction-box">
+                <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
-                    <div className="correctionDifficulty">
+                    <div className="correction-difficulty">
                         <p>Leicht </p>
                     </div>
                 </div>
-                <div className="correctionBoxBottom">
-                    <div className="correctionPupil">
+                <div className="correction-box-bottom">
+                    <div className="correction-pupil">
                         <img src={User} />
                         <p> Max Musterman</p>
                     </div>
-                    <div className="correctionDate">
+                    <div className="correction-date">
                         <img src={Calendar} />
                         <p> Vor 3 Tagen</p>
                     </div>
-                    <div className="correctionCorrect">
+                    <div className="correction-correct">
                         <img src={Edit} />
                         <p>Korrigieren </p>
                     </div>

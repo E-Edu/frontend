@@ -1,23 +1,24 @@
-h1.AddTeacherText-content {
-  position: relative;
-  font: Medium 4.0rem/6.4666667rem Hind Siliguri;
-  padding: 0;
-  width: 26.666666rem;
+@import './src/css/styles';
+
+.add-teacher-text-content {
+  font: Medium 4rem/6.4666667rem Hind Siliguri;
   height: 3.3333333rem;
+  padding: 0;
+  position: relative;
+  width: 26.666666rem;
 }
 
-.AddTeacherReport-component {
-  position: relative;
-  margin-bottom: 1.3333334rem;
-  padding-left: 0.6666667rem;
-  left: 50%;
+.add-teacher-report-component {
   border: 0.06666667rem solid #707070;
   border-radius: 0.6666667rem;
-  width: 66.666664rem;
-  height: 6.6666665rem;
-  -webkit-transform: translate(-50%, 0%);
-  transform: translate(-50%, 0%);
   font: Regular 1.3333334rem/1.5333333rem Arimo;
+  height: 6.6666665rem;
+  left: 50%;
+  margin-bottom: 1.3333334rem;
+  padding-left: 0.6666667rem;
+  position: relative;
+  transform: translate(-50%, 0%);
+  width: 66.666664rem;
 
   .clickable:hover {
     cursor: pointer;
@@ -28,9 +29,7 @@ h1.AddTeacherText-content {
   }
 }
 
-  .AddTeacherInvalid {
-    background-color: transparent;
-    -webkit-box-shadow: inset 0 0 0.33333334rem 0 rgba(255, 0, 0, 1);
-    -moz-box-shadow: inset 0 0 0.33333334rem 0 rgba(255, 0, 0, 1);
-    box-shadow: inset 0 0 0.33333334rem 0 rgba(255, 0, 0, 1);
-  }
+.add-teacher-invalid {
+  background-color: transparent;
+  box-shadow: inset 0 0 0.33333334rem 0 rgba(255, 0, 0, 1);
+}

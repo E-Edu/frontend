@@ -173,7 +173,7 @@ class Report extends Component {
                             style={{ marginLeft: 20 }}
                             src={icon_info}
                             alt="info-icon"
-                            className="InfoIcon"
+                            className="info-icon"
                             onClick={this.showModal}
                         />
                     </div>
@@ -204,7 +204,7 @@ class ReportsList extends Component {
         return (
             <div>
                 <div id="main">
-                    <h1 className="text-dark ReportText-content">Reports</h1>
+                    <h1 className="text-dark report-text-content">Reports</h1>
                     <div
                         style={{
                             display: 'flex',

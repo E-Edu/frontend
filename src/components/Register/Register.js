@@ -123,31 +123,6 @@ class Register extends React.Component {
         this.setState({ isPasswordShown2: !isPasswordShown2 });
     };
 
-    // Sends the form - implemented on the submit button, not onSubmit (Form)
-    /*
-    handleSubmit = event => {
-        console.log("--- SUBMIT FUNKTION ---");
-        event.preventDefault();
-
-        const user = {
-            name: this.state.firstName
-            /*
-			<<< HIER WENN SCHNITTSTELLE DA >>>
-            first_name: this.state.firstName,
-            last_name: this.state.lastName,
-            email: this.state.mail,
-            role: this.state.role  <--- eventuell einen neuen State<int> machen
-       
-        };
-
-        axios
-            .post(`https://jsonplaceholder.typicode.com/users`, { user })
-            .then(res => {
-                console.log(res);
-                console.log(res.data);
-            });
-    };
-*/
     handleSubmit = (e) => {
         e.preventDefault();
 
@@ -175,13 +150,13 @@ class Register extends React.Component {
         return (
             <div className="register">
                 <div className="box">
-                    <h1 id="Headline">Register</h1>
+                    <h1 className="headline">Register</h1>
                     <form onSubmit={this.handleSubmit} method="post" noValidate>
                         <div className="box-inhalt">
                             {(() => {
                                 if (this.state.clicked) {
                                     return (
-                                        <span className="yo">
+                                        <span>
                                             <div className="input-box second">
                                                 <input
                                                     onChange={this.handleChange}
@@ -200,14 +175,13 @@ class Register extends React.Component {
                                                     value={this.state.password}
                                                     name="password"
                                                     type={isPasswordShown ? 'text' : 'password'}
-                                                    id="passwort"
                                                     placeholder="Passwort"
-                                                    className="input-field"
+                                                    className="input-field passwort"
                                                     noValidate
                                                 />
                                                 <span className="eye" onClick={this.togglePassword}>
-                                                    <img className="" src={isPasswordShown ? eye_off : eye} />
-                                                    <i id="hide2" className="fa fa-eye-slash" />
+                                                    <img src={isPasswordShown ? eye_off : eye} />
+                                                    <i className="hide2 fa fa-eye-slash" />
                                                 </span>
                                             </div>
 
@@ -217,9 +191,8 @@ class Register extends React.Component {
                                                     value={this.state.password2}
                                                     name="password2"
                                                     type={isPasswordShown2 ? 'text' : 'password'}
-                                                    id="passwort"
                                                     placeholder="Passwort wiederholen"
-                                                    className="input-field"
+                                                    className="passwort input-field"
                                                     noValidate
                                                 />
                                                 <span className="eye">
@@ -227,11 +200,11 @@ class Register extends React.Component {
                                                         onClick={this.togglePassword2}
                                                         src={isPasswordShown2 ? eye_off : eye}
                                                     />
-                                                    <i id="hide2" className="fa fa-eye-slash" />
+                                                    <i className="hide2" className="fa fa-eye-slash" />
                                                 </span>
                                             </div>
 
-                                            <div className="checkContainer">
+                                            <div className="check-container">
                                                 <p>
                                                     <input
                                                         className="privacycheck"
@@ -251,7 +224,7 @@ class Register extends React.Component {
                                                     to="/"
                                                     onClick={this.handleSubmit}
                                                     type="submit"
-                                                    className="btn-UI btn-Base"
+                                                    className="btn-ui btn-base"
                                                     disabled={this.state.disabled}>
                                                     Submit
                                                 </button>
@@ -283,17 +256,15 @@ class Register extends React.Component {
                                                     required
                                                 />
                                             </div>
-                                            <div className="btn-group roleBtn">
+                                            <div className="btn-group role-btn">
                                                 <div
                                                     onClick={(e) => this.handleSpecial(e, 'Student')}
-                                                    className="btn-specialButton btn"
                                                     className={
                                                         this.state.isStudent
-                                                            ? 'btn-specialButton btn active'
-                                                            : 'btn-specialButton btn'
-                                                    }
-                                                    id="btn-specialButton1">
-                                                    <UserIcon stroke="black"></UserIcon>
+                                                            ? 'btn-special-button btn-special-button1 btn active'
+                                                            : 'btn-special-button btn-special-button1 btn'
+                                                    }>
+                                                    <UserIcon stroke="black" />
                                                     <span>Student</span>
                                                 </div>
 
@@ -301,19 +272,18 @@ class Register extends React.Component {
                                                     onClick={(e) => this.handleSpecial(e, 'Teacher')}
                                                     className={
                                                         this.state.isStudent
-                                                            ? 'btn-specialButton btn-specialButton2 btn'
-                                                            : 'btn-specialButton btn-specialButton2 btn active'
-                                                    }
-                                                    id="btn-specialButton2">
+                                                            ? 'btn-special-button btn-special-button2 btn'
+                                                            : 'btn-special-button btn-special-button2 btn active'
+                                                    }>
                                                     <span>Teacher</span>
-                                                    <TeacherIcon></TeacherIcon>
+                                                    <TeacherIcon />
                                                 </div>
                                             </div>
 
-                                            <div className="btn-UI-container">
+                                            <div className="btn-ui-container">
                                                 <button
                                                     onClick={this.handleClick}
-                                                    className="btn-UI btn-weiter"
+                                                    className="btn-ui btn-weiter"
                                                     type="button">
                                                     Weiter
                                                 </button>

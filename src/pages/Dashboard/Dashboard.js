@@ -17,30 +17,30 @@ class Subjekt extends React.Component {
         const border = '0.73333335rem solid ' + color;
 
         return (
-            <div className="Subjekt" style={{ borderLeft: border }}>
+            <div className="subjekt" style={{ borderLeft: border }}>
                 <div className="image">
                     <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
                 </div>
                 <div className="box-content">
-                    <h3 className="subject_name">{subject}</h3>
-                    <span className="under_name">{this.props.Underline}</span>
-                    <div className="weekend_task flex-row">
-                        <CalenderIcon id="calender" width="27" height="27" stroke="#000000" />
+                    <h3 className="subject-name">{subject}</h3>
+                    <span className="under-name">{this.props.Underline}</span>
+                    <div className="weekend-task flex-row">
+                        <CalenderIcon className="calender" width="27" height="27" stroke="#000000" />
                         <span>Wöchentliche Aufgaben</span>
-                        <span className="weekend_task_text">{this.props.Weekendtask}</span>
+                        <span className="weekend-task-text">{this.props.Weekendtask}</span>
                     </div>
                     <div className="points">
-                        <div className="user_points flex-row">
+                        <div className="user-points flex-row">
                             <UserIcon stroke="#000000" width="27" height="27" />
-                            <span className="pointText">
-                                <span className="user_Points">{this.props.Points}</span>
+                            <span className="point-text">
+                                <span className="user-points">{this.props.Points}</span>
                                 <span>Punkte</span>
                             </span>
                         </div>
-                        <div className="community_points flex-row">
+                        <div className="community-points flex-row">
                             <UsersIcon stroke="#000000" width="27" height="27" />
-                            <span className="pointText">
-                                <span className="community_Points">{this.props.Community_Points}</span>
+                            <span className="point-text">
+                                <span className="community-points">{this.props.Community_Points}</span>
                                 <span>Punkte</span>
                             </span>
                         </div>
@@ -132,8 +132,8 @@ class dashboard extends React.Component {
 
     render() {
         return (
-            <div id="dashboard">
-                <div className="Subjekts_content">{this.renderSubjects()}</div>
+            <div className="dashboard">
+                <div className="subjekts-content">{this.renderSubjects()}</div>
             </div>
         );
     }

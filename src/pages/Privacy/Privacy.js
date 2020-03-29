@@ -5,8 +5,8 @@ class Privacy extends Component {
     render() {
         return (
             <div className="privacy">
-                <div className="headingFont">Privacy policy</div>
-                <div className="fontBox">
+                <div className="heading-font">Privacy policy</div>
+                <div className="font-box">
                     <h1>Privacy Policy for E-Edu</h1>
 
                     <p>

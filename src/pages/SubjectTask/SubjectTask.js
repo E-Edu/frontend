@@ -39,26 +39,26 @@ class SubjectTask extends React.Component {
 
         return (
             <div>
-                <div id="main">
-                    <div className="subjectTask" id="subjectTask">
-                        <div className="subjectTaskContainer">
-                            <div className="subjectTaskContentHeader">
-                                <div className="subjectTaskLeft">
-                                    <span className="subjectTaskSubject">
+                <div className="main">
+                    <div className="subject-task subject-task">
+                        <div className="subject-task-container">
+                            <div className="subject-task-content-header">
+                                <div className="subject-task-left">
+                                    <span className="subject-task-subject">
                                         {Translation.t('subject.' + subject + '.name')}
                                     </span>
-                                    <span className="subjectTaskModule">
+                                    <span className="subject-task-module">
                                         {Translation.t('lection.' + subject + '.' + lection + '.name')}
                                     </span>
                                 </div>
-                                <div className="subjectTaskRight">
-                                    <div className="subjectTaskPoints">
+                                <div className="subject-task-right">
+                                    <div className="subject-task-points">
                                         <img src={User} alt="" />
                                         <p>
                                             <span> 213</span> {Translation.t('taskList.points')}
                                         </p>
                                     </div>
-                                    <div className="subjectTaskPoints">
+                                    <div className="subject-task-points">
                                         <img src={Users} alt="" />
                                         <p>
                                             <span> 21.323</span> {Translation.t('taskList.points')}
@@ -67,37 +67,38 @@ class SubjectTask extends React.Component {
                                 </div>
                             </div>
 
-                            <div className="progressDisplay">
+                            <div className="progress-display">
                                 <span>
                                     {Translation.t('task.question')} 4 {Translation.t('task.of')} 10{' '}
                                 </span>
-                                <div className="progressBar">
+                                <div className="progress-bar">
                                     <div
-                                        className="progressPer"
+                                        className="progress-per"
                                         per="90"
                                         style={{
                                             width: `${(this.state.currentQuestion / this.state.maxQuestion) * 100}%`,
-                                        }}></div>
+                                        }}
+                                    />
                                 </div>
-                                <div className="subjectTaskTitel">
+                                <div className="subject-task-titel">
                                     <span>{taskTitle}</span>
                                 </div>
-                                <div className="subjectTaskDescription">{this.renderDescription(description)}</div>
+                                <div className="subject-task-description">{this.renderDescription(description)}</div>
                             </div>
-                            <div className="subjectTaskAnswer">
-                                <div className="subjectTaskAnswerHeader">
+                            <div className="subject-task-answer">
+                                <div className="subject-task-answer-header">
                                     <span>{Translation.t('task.answer')}</span>
                                 </div>
-                                <div className="subjectTaskAnswerfield">
+                                <div className="subject-task-answer-field">
                                     <input type="text" placeholder="test" />
                                 </div>
 
-                                <div className="subjectTaskButtons">
+                                <div className="subject-task-buttons">
                                     <Link to="/task/result" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        <button className="subjectTaskSkip">{Translation.t('task.skip')}</button>
+                                        <button className="subject-task-skip">{Translation.t('task.skip')}</button>
                                     </Link>
                                     <Link to="/task/result" style={{ textDecoration: 'none', color: 'inherit' }}>
-                                        <button className="subjectTaskNext">{Translation.t('task.nextTask')}</button>
+                                        <button className="subject-task-next">{Translation.t('task.nextTask')}</button>
                                     </Link>
                                 </div>
                             </div>

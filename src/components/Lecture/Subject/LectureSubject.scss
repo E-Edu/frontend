@@ -1,39 +1,30 @@
-$bluegrey: #0B132B;
-$grey: #3A506B;
-$red: #BA1919;
-$warmGrey: #707070;
-$turquoise: #5BC0BE;
-$lightGrey: #687D9A;
-$mediumBlue: #1C2541;
-$lightBlue: #96B4DD;
+@import './src/css/styles';
 
-.LectureSubject {
+.lecture-subject-wrapper {
+  .lecture-subject {
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    min-width: 280px;
+    padding: 0.8rem;
 
-    .lectureSubject {
-        align-items: center;
-        border: 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: row;
-        min-width: 280px;
-        padding: 0.8rem;
-        /*width:20vw;*/
-
-        .iconContainer {
-            align-items: center;
-            border: 1px solid $turquoise;
-            border-radius: 10000px;
-            display: flex;
-            height: 1.2rem;
-            justify-content: space-around;
-            padding: 1rem;
-            width: 1.2rem;
-        }
-
-        p {
-            color: $grey;
-            font-size: 1.25rem;
-            margin: 0 0 0 1rem;
-        }
+    .icon-container {
+      align-items: center;
+      border: 1px solid $color-turquoise;
+      border-radius: 10000px;
+      display: flex;
+      height: 1.2rem;
+      justify-content: space-around;
+      padding: 1rem;
+      width: 1.2rem;
     }
+
+    .lecture-subject-title {
+      color: $color-grey;
+      font-size: 1.25rem;
+      margin: 0 0 0 1rem;
+    }
+  }
 }

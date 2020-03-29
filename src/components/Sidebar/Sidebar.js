@@ -65,7 +65,7 @@ class MenuElement extends Component {
             spacer,
             <Link
                 to={'/' + this.props.url}
-                className="menuElement"
+                className="menu-element"
                 key={this.state.file}
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
@@ -115,9 +115,9 @@ class Sidebar extends Component {
             return null;
         }
         return (
-            <div id="Menu">
-                <div className="topIcons">{sitesHtml}</div>
-                <div className="bottomIcons">
+            <div className="menu">
+                <div className="top-icons">{sitesHtml}</div>
+                <div className="bottom-icons">
                     <MenuElement
                         name=""
                         file="settings"

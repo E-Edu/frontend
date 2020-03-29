@@ -1,143 +1,142 @@
-.resultContentHeader {
-    width: 100%;
+@import './src/css/styles';
 
-    .resultLeft {
-        margin-left: 12.666667rem;
+.result-content-header {
+  width: 100%;
 
-        .resultSubject {
-            color: #0B132B;
-            font-size: 4.0rem;
-            font-weight: bolder;
-            margin-right: 2.6666667rem;
-            margin-top: 2.2666667rem;
-        }
+  .result-left {
+    margin-left: 12.666667rem;
+
+    .result-subject {
+      color: #0b132b;
+      font-size: 4rem;
+      font-weight: bolder;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
     }
+  }
 
-    .Middle {
-        align-items: center;
+  .middle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .result-center {
+      .result-subject {
         display: flex;
-        justify-content: center;
+        font-size: 1.3333334rem;
+        margin-right: 2.6666667rem;
+        margin-top: 2.2666667rem;
 
-        .resultCenter {
-
-            .resultSubject {
-                display: flex;
-                font-size: 1.3333334rem;
-                margin-right: 2.6666667rem;
-                margin-top: 2.2666667rem;
-
-                .icon {
-                    margin-right: 0.5rem;
-                }
-
-                .points {
-                    color: #3A506B;
-                }
-
-            }
+        .icon {
+          margin-right: 0.5rem;
         }
-    }
 
-    .resultRight {
-        margin-right: 7.266667rem;
-
-        .resultSubject {
-            color: #0B132B;
-            font-size: 4.0rem;
-            font-weight: bolder;
-            margin-right: 2.6666667rem;
-            margin-top: 2.2666667rem;
-
-            #input-search {
-                align-items: center;
-                border: 0.06666667rem solid #3A506B;
-                border-radius: 0.53333336rem;
-                display: flex;
-                flex-direction: row;
-                height: 2.8666666rem;
-                width: 26.066668rem;
-
-                div {
-                    padding: 0 0.5rem;
-                    padding-bottom: 0.33333334rem;
-                }
-            }
-
-            input {
-                background: transparent;
-                border: none;
-                color: #3A506B;
-                font-size: 1.3333334rem;
-                height: 2.8666666rem;
-                letter-spacing: 0;
-                opacity: 1;
-                opacity: 1;
-                text-align: left;
-                width: 26.066668rem;
-            }
-
-            input:focus {
-                outline: none;
-            }
+        .points {
+          color: #3a506b;
         }
+
+      }
     }
+  }
+
+  .result-right {
+    margin-right: 7.266667rem;
+
+    .result-subject {
+      color: #0b132b;
+      font-size: 4rem;
+      font-weight: bolder;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
+
+      .input-search {
+        align-items: center;
+        border: 0.06666667rem solid #3a506b;
+        border-radius: 0.53333336rem;
+        display: flex;
+        flex-direction: row;
+        height: 2.8666666rem;
+        width: 26.066668rem;
+
+        div {
+          padding: 0 0.5rem;
+          padding-bottom: 0.33333334rem;
+        }
+      }
+
+      input {
+        background: transparent;
+        color: #3a506b;
+        font-size: 1.3333334rem;
+        height: 2.8666666rem;
+        letter-spacing: 0;
+        opacity: 1;
+        text-align: left;
+        width: 26.066668rem;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+  }
 
 }
 
-.Tasklist {
-    align-items: center;
+.task-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .teacher-information {
+    img {
+      border: 0.13333334rem solid #5bc0be;
+      border-radius: 6.6666665rem;
+      max-height: 7.3333335rem;
+      max-width: 7.3333335rem;
+    }
+  }
+
+  .task {
+    border: 0.06666667rem solid #707070;
+    border-radius: 0.53333336rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
+    height: 8rem;
+    margin: 0.6666667rem;
+    width: 65rem;
 
-    .teacher_information {
-        img {
-            border: 0.13333334rem solid #5BC0BE;
-            border-radius: 6.6666665rem;
-            max-height: 7.3333335rem;
-            max-width: 7.3333335rem;
-        }
-    }
+    .task-head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 1rem;
+      margin-top: 1rem;
 
-    .Task {
-        border: 0.06666667rem solid #707070;
-        border-radius: 0.53333336rem;
+      .task-head-elements {
         display: flex;
-        flex-direction: column;
-        height: 8.0rem;
-        margin: 0.6666667rem;
-        width: 65.0rem;
+        flex-direction: row;
 
-        .Task_Head {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0 1rem;
-            margin-top: 1rem;
-
-            .Task_Head_Elements {
-                display: flex;
-                flex-direction: row;
-
-                .Task_element {
-                    display: flex;
-                    flex-direction: row;
-                    padding: 0 1rem;
-                }
-            }
-
-            span {
-                padding: 0 0.3rem;
-            }
+        .task-element {
+          display: flex;
+          flex-direction: row;
+          padding: 0 1rem;
         }
+      }
 
-        .Task_Bottom {
-            display: flex;
-            flex-direction: row;
-            margin: 0 1rem;
-        }
+      span {
+        padding: 0 0.3rem;
+      }
     }
+
+    .task-bottom {
+      display: flex;
+      flex-direction: row;
+      margin: 0 1rem;
+    }
+  }
 }
 
 
