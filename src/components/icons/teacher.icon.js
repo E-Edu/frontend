@@ -1,5 +1,5 @@
-import "./index.scss";
-import React, { Component } from "react";
+import './index.scss';
+import React, { Component } from 'react';
 
 class TeacherIcon extends Component {
     constructor(props) {
@@ -7,7 +7,7 @@ class TeacherIcon extends Component {
     }
 
     state = {
-        email: ""
+        email: '',
     };
 
     render(props) {
@@ -26,9 +26,8 @@ class TeacherIcon extends Component {
                     width="27"
                     height="27"
                     viewBox="0 0 27 27"
-                    fill={this.props.color || "none"}
-                    stroke={this.props.fill || "currentColor"}
-                >
+                    fill={this.props.color || 'none'}
+                    stroke={this.props.fill || 'currentColor'}>
                     <path
                         id="Pfad_71"
                         data-name="Pfad 71"

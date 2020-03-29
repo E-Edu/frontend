@@ -1,20 +1,20 @@
 import React from 'react';
-import {number,color, withKnobs} from "@storybook/addon-knobs";
-import {storiesOf} from "@storybook/react";
-import DownloadIcon from "./download.icon";
+import { number, color, withKnobs } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import DownloadIcon from './download.icon';
 
 const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);
 
 stories.add('DownloadIcon default', () => {
-    return <DownloadIcon/>
+    return <DownloadIcon />;
 });
 
 stories.add('DownloadIcon dynamicProperties', () => {
-    const height = number("height", 24);
-    const width = number("width", 24);
-    const fill = color("fill", "#ffffff");
-    const stroke = color("stroke", "#000000");
+    const height = number('height', 24);
+    const width = number('width', 24);
+    const fill = color('fill', '#ffffff');
+    const stroke = color('stroke', '#000000');
 
-    return <DownloadIcon height={height} width={width} fill={fill} stroke={stroke}/>;
+    return <DownloadIcon height={height} width={width} fill={fill} stroke={stroke} />;
 });

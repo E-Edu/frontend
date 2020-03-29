@@ -8,11 +8,9 @@ import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
 import ReportInfo from '../../../components/ReportInfo/ReportInfo';
 import Modal from 'react-animated-modal';
 import colorData from '../../../lib/Colors';
-import {Translation} from "../../../i18n/i18n";
-
+import { Translation } from '../../../i18n/i18n';
 
 class Report extends Component {
-
     constructor(props) {
         super(props);
     }
@@ -25,23 +23,22 @@ class Report extends Component {
         difficulty: this.props.difficulty,
         messages: this.props.messages,
         subject: this.props.subject,
-        like: (this.props.liked || 0),
-        thumbsInactive: "#3A506B",
-        thumbGreen: colorData.difficultyColor["easy"].border,
-        thumbRed: colorData.difficultyColor["hard"].border
+        like: this.props.liked || 0,
+        thumbsInactive: '#3A506B',
+        thumbGreen: colorData.difficultyColor['easy'].border,
+        thumbRed: colorData.difficultyColor['hard'].border,
     };
 
     like = () => {
         let likes = this.state.likes;
         let dislikes = this.state.dislikes;
         if (this.state.like === 1) {
-            this.setState({like: 0, likes: likes-1});
-        }
-        else {
+            this.setState({ like: 0, likes: likes - 1 });
+        } else {
             if (this.state.like === 2) {
-                this.setState({dislikes: dislikes-1});
+                this.setState({ dislikes: dislikes - 1 });
             }
-            this.setState({like: 1, likes: likes+1});
+            this.setState({ like: 1, likes: likes + 1 });
         }
     };
 
@@ -49,19 +46,18 @@ class Report extends Component {
         let likes = this.state.likes;
         let dislikes = this.state.dislikes;
         if (this.state.like === 2) {
-            this.setState({like: 0, dislikes: dislikes-1});
-        }
-        else {
+            this.setState({ like: 0, dislikes: dislikes - 1 });
+        } else {
             if (this.state.like === 1) {
-                this.setState({likes: likes-1});
+                this.setState({ likes: likes - 1 });
             }
-            this.setState({like: 2, dislikes: dislikes+1});
+            this.setState({ like: 2, dislikes: dislikes + 1 });
         }
     };
 
     showModal = () => {
         if (!this.state.showModal) {
-            this.setState({showModal: true})
+            this.setState({ showModal: true });
         }
     };
 
@@ -75,7 +71,7 @@ class Report extends Component {
 
     handleKeyPress = (event) => {
         if (event.keyCode === 27) {
-            this.setState({showModal: false})
+            this.setState({ showModal: false });
         }
     };
 
@@ -90,84 +86,148 @@ class Report extends Component {
 
         return (
             <div className="report-component text-dark">
-                <Modal visible={this.state.showModal}
+                <Modal
+                    visible={this.state.showModal}
                     closemodal={() => {
-                        this.setState({showModal: false});
+                        this.setState({ showModal: false });
                     }}
                     type="fadeIn">
-                    <ReportInfo/>
+                    <ReportInfo />
                 </Modal>
-                <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
-                    <p style={{marginLeft: 20}}>{subject}</p>
-                    <div style={{
-                        display: "flex", alignItems: "center", marginRight: 20,
-                        width: 100, right: 0, justifyContent: "flex-end"
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
                     }}>
-                        <div style={{
-                            display: "flex", alignItems: "center", marginRight: 20,
-                            width: 400, right: 0, justifyContent: "flex-end"
+                    <p style={{ marginLeft: 20 }}>{subject}</p>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            marginRight: 20,
+                            width: 100,
+                            right: 0,
+                            justifyContent: 'flex-end',
                         }}>
-                            <div style={{marginLeft: 10}} onClick={this.like}>
-                                <ThumbsUpIcon stroke={this.state.like === 1 ?
-                                  this.state.thumbGreen : this.state.thumbsInactive} />
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginRight: 20,
+                                width: 400,
+                                right: 0,
+                                justifyContent: 'flex-end',
+                            }}>
+                            <div style={{ marginLeft: 10 }} onClick={this.like}>
+                                <ThumbsUpIcon
+                                    stroke={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
+                                />
                             </div>
-                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.state.likes}</span>
+                            <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.likes}</span>
                         </div>
-                        <div style={{
-                            display: "flex", alignItems: "center", marginRight: 20,
-                            width: 400, right: 0, justifyContent: "flex-end"
-                        }}>
-                            <div style={{marginLeft: 10}} onClick={this.dislike}>
-                                <ThumbsDownIcon stroke={this.state.like === 2 ?
-                                  this.state.thumbRed : this.state.thumbsInactive} />
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginRight: 20,
+                                width: 400,
+                                right: 0,
+                                justifyContent: 'flex-end',
+                            }}>
+                            <div style={{ marginLeft: 10 }} onClick={this.dislike}>
+                                <ThumbsDownIcon
+                                    stroke={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
+                                />
                             </div>
-                            <span style={{marginLeft: 10, textAlign: "right"}}>{this.state.dislikes}</span>
+                            <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <span style={{
-                            display: "flex", alignItems: "center", marginRight: 20, color: "#1C2541",
-                            right: 0, justifyContent: "flex-end", backgroundColor: backgroundColor,
-                            borderWidth: 1, borderStyle: "solid", borderColor: borderColor, borderRadius: 10,
-                            padding: "0.0rem 0.33333334rem"
-                        }}>{Translation.t("difficulty." + difficulty)}</span>
+                        <span
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginRight: 20,
+                                color: '#1C2541',
+                                right: 0,
+                                justifyContent: 'flex-end',
+                                backgroundColor: backgroundColor,
+                                borderWidth: 1,
+                                borderStyle: 'solid',
+                                borderColor: borderColor,
+                                borderRadius: 10,
+                                padding: '0.0rem 0.33333334rem',
+                            }}>
+                            {Translation.t('difficulty.' + difficulty)}
+                        </span>
                     </div>
                 </div>
-                <div style={{marginTop: 30, display: "flex", alignItems: "center", justifyContent: "space-between"}}>
-                    <div style={{width: 400}}>
-                        <img style={{marginLeft: 20}} src={icon_info} alt="info-icon" className="InfoIcon"
-                            onClick={this.showModal}/>
-                    </div>
-                    <div style={{display: "flex", alignItems: "center"}}>
-                        <img src={icon_mail} alt="mail-icon"/>
-                        <span style={{marginLeft: 10}}>{messages}</span>
-                    </div>
-                    <div style={{
-                        display: "flex", alignItems: "center", marginRight: 20,
-                        width: 400, right: 0, justifyContent: "flex-end"
+                <div
+                    style={{
+                        marginTop: 30,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
                     }}>
-                        <span style={{marginLeft: 10, textAlign: "right"}}>{teacher}</span>
-                        <img style={{marginLeft: 10}} src={icon_teacher} alt="teacher-icon"/>
+                    <div style={{ width: 400 }}>
+                        <img
+                            style={{ marginLeft: 20 }}
+                            src={icon_info}
+                            alt="info-icon"
+                            className="InfoIcon"
+                            onClick={this.showModal}
+                        />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <img src={icon_mail} alt="mail-icon" />
+                        <span style={{ marginLeft: 10 }}>{messages}</span>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            marginRight: 20,
+                            width: 400,
+                            right: 0,
+                            justifyContent: 'flex-end',
+                        }}>
+                        <span style={{ marginLeft: 10, textAlign: 'right' }}>{teacher}</span>
+                        <img style={{ marginLeft: 10 }} src={icon_teacher} alt="teacher-icon" />
                     </div>
                 </div>
             </div>
         );
     }
-
 }
 
 class ReportsList extends Component {
-
-
     render() {
         return (
             <div>
                 <div id="main">
                     <h1 className="text-dark ReportText-content">Reports</h1>
-                    <div style={{display: "flex", flexDirection: "column", justifyContent: "center",
-                        alignItems: "center"}}>
-                        <Report subject="Mathe | Grundrechnen | Plus" messages="20" teacher="Herr Lehrer Mustermann"
-                                likes="3" dislikes="178" difficulty="easy"/>
-                        <Report subject="Englisch | Grammatik | Komma" messages="100" teacher="Herr Lehrer Mustermann"
-                                likes="20" dislikes="1" difficulty="hard"/>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                        <Report
+                            subject="Mathe | Grundrechnen | Plus"
+                            messages="20"
+                            teacher="Herr Lehrer Mustermann"
+                            likes="3"
+                            dislikes="178"
+                            difficulty="easy"
+                        />
+                        <Report
+                            subject="Englisch | Grammatik | Komma"
+                            messages="100"
+                            teacher="Herr Lehrer Mustermann"
+                            likes="20"
+                            dislikes="1"
+                            difficulty="hard"
+                        />
                     </div>
                 </div>
             </div>

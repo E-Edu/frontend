@@ -1,11 +1,11 @@
-name: Linting
+name: CodeStyle
 
 on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Linting
+    name: CodeStyle
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -14,3 +14,4 @@ jobs:
       - run: npm install
       - run: npm install -g react-scripts
       - run: npm run lint
+      - run: npm run prettier

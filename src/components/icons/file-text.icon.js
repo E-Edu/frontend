@@ -1,5 +1,5 @@
 import './index.scss';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class FileTextIcon extends Component {
     constructor(props) {
@@ -12,8 +12,9 @@ class FileTextIcon extends Component {
 
     render(props) {
         return (
-            <div className='icon'>
-                <svg xmlns="http://www.w3.org/2000/svg"
+            <div className="icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     width={this.props.width || '24'}
                     height={this.props.height || '24'}
                     viewBox="0 0 24 24"
