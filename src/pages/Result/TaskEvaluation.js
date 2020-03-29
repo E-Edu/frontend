@@ -9,7 +9,7 @@ class TaskEvaluation extends React.Component {
     render() {
         return (
             <div>
-                <div className="result ">
+                <div className="result">
                     <div className="result-container">
                         {' '}
                         //TODO: Result -> Evaluation

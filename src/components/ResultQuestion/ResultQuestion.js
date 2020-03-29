@@ -16,7 +16,7 @@ class ResultQuestion extends Component {
                     <div className="result-top">
                         <div className="result-left-top">
                             <p className="result-question-label">Frage {this.props.index} </p>
-                            <p className="resultq-uestion-titel">Äpfel und Birnen</p>
+                            <p className="result-question-titel">Äpfel und Birnen</p>
                         </div>
                         <div className="result-right-top">
                             <p className="result-rating">Frage bewerten: </p>

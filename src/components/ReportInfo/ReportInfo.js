@@ -43,7 +43,7 @@ class ReportInfo extends Component {
                         {this.state.subject} | {this.state.theme} | {this.state.themeart}
                     </div>
 
-                    <div className="-infos-right">
+                    <div className="infos-right">
                         <div className="likes">
                             <span>{this.state.dislikes}</span>
                             <img src={down} />

@@ -116,7 +116,7 @@ class Profile extends React.Component {
                             </span>
                         </div>
 
-                        <div className="central stat font-arimo" className="points">
+                        <div className="central stat font-arimo points">
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="user img user-icon">

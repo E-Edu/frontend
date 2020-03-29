@@ -86,7 +86,7 @@ class SubjectTask extends React.Component {
                                 <div className="subject-task-description">{this.renderDescription(description)}</div>
                             </div>
                             <div className="subject-task-answer">
-                                <div className="subject-task.-answer-header">
+                                <div className="subject-task-answer-header">
                                     <span>{Translation.t('task.answer')}</span>
                                 </div>
                                 <div className="subject-task-answer-field">
