@@ -11,33 +11,17 @@ class Button extends React.Component {
         }
     }
 
-    onLeave = (e) => {
-        e.target.style.backgroundColor = this.props.backgroundColor;
-        e.target.style.color = this.props.FontColor;
-        console.log("leave")
-    };
-
-    onEnter = (e) => {
-        e.target.style.backgroundColor = this.props.hoverback;
-        e.target.style.color = this.props.hovercolor;
-        console.log("enter")
-    };
-
     render() {
-        let style = {
-            backgroundColor: this.props.backgroundColor,
-            border: "3px solid" + this.props.BorderColor,
-            color: this.props.FontColor,
-        };
+        let classes = this.props.styleType || "Primary";
+        if (this.props.disable){
+            classes = classes + " disabled";
+        }
         return(
             <button
-                type={this.props.type}
-                style={style}
-                onMouseOver={() => {console.log("Over")}}
-                onMouseLeave={this.onLeave}
-                onMouseEnter={this.onEnter}
-                className="button"
-                >{this.props.name}</button>
+                type={this.props.type || "text"}
+                className={"button " + classes}
+                disabled={this.props.disable || false}
+                >{this.props.name || "Default"}</button>
             );
     }
 }
