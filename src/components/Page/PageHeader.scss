@@ -1,0 +1,19 @@
+@import './src/css/styles';
+
+.page-header {
+  width: 100%;
+
+    .page-titles {
+      font-weight: bolder;
+      color: $color-bluegrey;
+
+      .page-main-title {
+        font-size: 4rem;
+        margin-right: 1rem;
+      }
+
+      .page-secondary-title {
+        font-size: 2rem;
+      }
+    }
+}
