@@ -7,9 +7,9 @@ class Settings extends Component {
     render() {
         return (
             <div>
-                <div className="settings" id="main">
+                <div className="settings">
                     <h1 className="text-dark">{Translation.t('settings.settings')}</h1>
-                    <div className="settingsContent">
+                    <div className="settings-content">
                         <table>
                             <tr>
                                 <td width="13.333333rem" className="topic">

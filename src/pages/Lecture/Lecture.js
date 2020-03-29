@@ -46,8 +46,8 @@ class Lecture extends React.Component {
 
     render() {
         return (
-            <div id="lecture">
-                <div id="main">
+            <div className="lecture">
+                <div className="main">
                     <TaskHeader module="Mathe" />
 
                     {this.data.map((value, index) => {

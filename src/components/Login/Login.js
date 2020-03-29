@@ -68,11 +68,11 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="loginComponent">
+            <div className="login-component">
                 {/*describes the login-popup*/}
                 <form className="box" onSubmit={this.handleSubmit} action="loginPop.html" method="post">
                     <div className="boxinhalt">
-                        <h1 id="Headline">L O G I N</h1>
+                        <h1 className="headline">L O G I N</h1>
                         {/*describes the email-input-box*/}
                         <div className="input-box">
                             <input
@@ -89,27 +89,26 @@ class Login extends Component {
                             <input
                                 type="password"
                                 name="passwort"
-                                id="passwort"
                                 placeholder="Enter Password..."
-                                className="input-field"
+                                className="input-field passwort"
                                 required
                                 onChange={this.handlePasswortChange}
                             />
                             {/*describes the two eye-icons in the field*/}
                             <span className="eye" onClick={this.changeVisibility}>
-                                <img id="hide1" src={eye} />
-                                <img id="hide2" src={eyeOff} />
+                                <img className="hide1" src={eye} />
+                                <img className="hide2" src={eyeOff} />
                             </span>
                         </div>
                         {/*describes the google-login-field*/}
-                        <button className="pointer" id="google-login">
+                        <button className="pointergoogle-login">
                             <img
-                                id="googleBild"
+                                className="google-bild"
                                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
                             />
                             Log In with Google
                         </button>
-                        <input type="submit" id="login" className="button pointer" value="Log In" />
+                        <input type="submit" className="login button pointer" value="Log In" />
                     </div>
                 </form>
             </div>

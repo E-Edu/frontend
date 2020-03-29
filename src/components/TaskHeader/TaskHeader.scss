@@ -1,76 +1,66 @@
-$bluegrey: #0B132B;
-$grey: #3A506B;
-$red: #BA1919;
-$warmGrey: #707070;
-$turquoise: #5BC0BE;
-$lightGrey: #687D9A;
-$mediumBlue: #1C2541;
-$lightBlue: #96B4DD;
+@import './src/css/styles';
 
-#TaskHeader {
+.task-header {
+  width: 100%;
+  /*Header*/
+  .lecture-header {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    /*Header*/
-    .lectureHeader {
-        align-items: baseline;
+
+    .lecture-header-topic {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+
+      .lecture-subject {
+        color: $color-bluegrey;
+        font-family: Hind Siliguri;
+        font-size: 60px;
+        font-weight: bolder;
+      }
+
+      .lecture-module {
+        color: $color-grey;
+        font-size: 32px;
+        font-weight: bolder;
+        margin-left: 2.5rem;
+      }
+    }
+
+    .lecture-header-points {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+
+
+      .lecture-points {
+        align-items: center;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
 
-        .lectureHeaderTopic {
-            align-items: baseline;
-            display: flex;
-            flex-direction: row;
-
-            .lectureSubject {
-                color: $bluegrey;
-                font-family: Hind Siliguri;
-                font-size: 60px;
-                font-weight: bolder;
-            }
-
-            .lectureModule {
-                color: $grey;
-                font-size: 32px;
-                font-weight: bolder;
-                margin-left: 2.5rem;
-            }
+        &:first-child {
+          margin-right: 1.2rem;
         }
 
-        .lectureHeaderPoints {
-            align-items: baseline;
-            display: flex;
-            flex-direction: row;
-
-
-            .lecturePoints {
-                align-items: center;
-                display: flex;
-                flex-direction: row;
-
-                &:first-child {
-                    margin-right: 1.2rem;
-                }
-
-                .lecturePointText {
-                    margin-left: 0.5rem;
-                }
-            }
+        .lecture-point-text {
+          margin-left: 0.5rem;
         }
-
-        .lectureHeaderSearch {
-            display: flex;
-
-            input {
-                border: 1px solid black;
-                border-radius: 0.5rem;
-                height: 1.7rem;
-                padding: 0 0.4rem;
-                width: 13rem;
-
-
-            }
-        }
-
+      }
     }
+
+    .lecture-header-search {
+      display: flex;
+
+      input {
+        border: 1px solid #000;
+        border-radius: 0.5rem;
+        height: 1.7rem;
+        padding: 0 0.4rem;
+        width: 13rem;
+      }
+    }
+  }
 }

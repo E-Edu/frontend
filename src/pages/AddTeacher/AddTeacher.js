@@ -9,7 +9,7 @@ import CheckIcon from '../../components/icons/check.icon';
 class AddRequest extends Component {
     render() {
         return (
-            <div className="AddTeacherReport-component text-dark">
+            <div className="add-teacher-report-component text-dark">
                 <div
                     style={{
                         display: 'flex',
@@ -95,12 +95,6 @@ class AddTeacher extends Component {
         }
     };
 
-    componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('main').setAttribute('style', `margin-top:${top}px;margin-left:${left}px;`);
-    }
-
     render() {
         let pendingRequests = [
             ['Herr Lehrer Mustermann', 'lehrer.mustermann@lehrer-mail.de'],
@@ -119,16 +113,16 @@ class AddTeacher extends Component {
         });
         return (
             <div>
-                <div id="main">
+                <div className="main">
                     <div style={{ marginLeft: 50 }}>
-                        <h1 className="text-dark AddTeacherText-content">Lehrer hinzufügen</h1>
+                        <h1 className="text-dark add-teacher-text-content">Lehrer hinzufügen</h1>
                         <div style={{ display: 'flex' }}>
                             <input
                                 type="text"
-                                id="teacherEmail"
+                                className="teacher-email"
                                 placeholder="Email des Lehrers"
                                 style={{ padding: 5 }}
-                                className={this.state.valid}
+                                /*className={this.state.valid } TODO bessere lösung finden*/
                                 onChange={this.emailChange}
                             />
                             <img

@@ -19,7 +19,8 @@
     "react-dom": "^16.13.1",
     "react-i18next": "^11.3.4",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "stylelint-scss": "^3.16.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,8 +29,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint": "eslint src/**/*.js",
-    "prettier": "prettier --check \"src/**/*.js\""
+    "lint:eslint": "eslint src/**/*.js",
+    "lint:prettier": "prettier --check 'src/**/*.js'",
+    "lint:style": "stylelint 'src/**/*.scss'",
+    "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:style"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -65,6 +68,9 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^2.0.2",
     "storybook-react-router": "^1.0.8",
+    "stylelint": "^13.2.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "typescript": "^3.8.3"
   }
 }

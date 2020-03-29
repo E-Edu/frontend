@@ -9,13 +9,13 @@ class LectureGroup extends React.Component {
 
     render() {
         return (
-            <div className="LectureGroupe">
-                <div className="lectureGroup">
-                    <div className="lectureGroupTitle">
+            <div className="lecture-group-wrapper">
+                <div className="lecture-group">
+                    <div className="lecture-group-title">
                         <p>{this.props.name}</p>
                     </div>
 
-                    <div className="lectureGroupSubjects">
+                    <div className="lecture-group-subjects">
                         {this.props.fields.map((value, index) => {
                             return <LectureSubject key={index} name={value.name} />;
                         })}

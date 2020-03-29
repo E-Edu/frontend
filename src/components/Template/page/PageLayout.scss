@@ -1,26 +1,28 @@
-#pageLayout {
-    width: 100vw;
-    min-height: 100vh;
-    display: grid;
-    /*grid-template: "header header" "sidebar content" "footer footer";*/
-    grid-template-rows: 86px 1fr auto;
-    grid-template-columns: 123px auto;
+@import './src/css/styles';
 
-    .headerNavbar {
-        grid-area: header;
-    }
+.page-layout {
+  display: grid;
+  grid-template-columns: 123px auto;
+  /*grid-template: "header header" "sidebar content" "footer footer";*/
+  grid-template-rows: 86px 1fr auto;
+  min-height: 100vh;
+  width: 100vw;
 
-    #Menu{
-        grid-area: sidebar;
-    }
+  .header-navbar {
+    grid-area: header;
+  }
 
-    #layoutContainer {
-        grid-area: content;
-        align-self: stretch;
-    }
+  .menu {
+    grid-area: sidebar;
+  }
 
-    .FooterNavbar {
-        grid-area: footer;
-        align-self: end;
-    }
+  .layout-container {
+    align-self: stretch;
+    grid-area: content;
+  }
+
+  .footer-navbar {
+    align-self: end;
+    grid-area: footer;
+  }
 }

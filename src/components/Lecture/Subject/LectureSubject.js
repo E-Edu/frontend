@@ -10,13 +10,13 @@ class LectureSubject extends React.Component {
 
     render() {
         return (
-            <div className="LectureSubject">
+            <div className="lecture-subject-wrapper">
                 <Link to="/task/list" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <div className="lectureSubject">
-                        <span className="iconContainer">
+                    <div className="lecture-subject">
+                        <span className="icon-container">
                             <CodepenIcon width="30" height="30" />
                         </span>
-                        <p className="lectureSubjectTitle">{this.props.name}</p>
+                        <p className="lecture-subject-title">{this.props.name}</p>
                     </div>
                 </Link>
             </div>

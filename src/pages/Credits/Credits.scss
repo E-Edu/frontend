@@ -1,108 +1,106 @@
-$dark: #1C2541;
-$bluegray: #3A506B;
-$primary: #5BC0BE;
-
+@import './src/css/styles';
+//TODO refactor to english
 body {
-    font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
-    cursor: default;
+  cursor: default;
+  font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
 
-    .content {
-        margin-top:7rem;
-        margin-bottom: 8.0rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-
-        .picture {
-            margin-top: 1.3333334rem;
-            width: 30%;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        .credits {
-            .featuretext {
-                text-align: center;
-                color: $bluegray;
-
-                .heading {
-                    font-size: 5.3333335rem;
-                    color: $dark;
-                }
-
-                .communityproject {
-                    font-size: 2.6666667rem;
-
-                    span {
-                        color: $primary;
-                    }
-                }
-
-                .teilnehmende {
-                    font-size: 2.0rem;
-                }
-            }
-
-            .mitwirkende {
-                .subheading {
-                    text-align: center;
-                    font-size: 2.6666667rem;
-                    color: $bluegray;
-                    font-weight: bolder;
-                    margin-bottom: 4.0rem;
-                    margin-top: 2.6666667rem;
-                }
-
-                .morpheus {
-                    .idea {
-                        font-size: 2.0rem;
-                        font-style: normal;
-                        text-align: center;
-                        color: $primary;
-                        font-weight: normal;
-                        margin: 0.6666667rem 0;
-                    }
-
-                    .name {
-                        display: block;
-                        text-align: center;
-                        font-size: 1.3333334rem;
-                        color: $bluegray;
-                        margin-top: 0.33333334rem;
-                    }
-
-                    margin-bottom: 1.3333334rem;
-
-                }
-
-                .credits-container {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+    margin-top: 7rem;
 
 
-                    .cerdits-heading {
-                        text-align: center;
-                        font-size: 2.0rem;
-                        font-style: normal;
-                        color: $primary;
-                        font-weight: normal;
-                        margin: 0.6666667rem 0;
-                    }
+    .picture {
+      margin-top: 1.3333334rem;
+      width: 30%;
 
-                    .credits-name {
-                        display: block;
-                        text-align: center;
-                        font-size: 1.3333334rem;
-                        color: $bluegray;
-                        margin: 0.33333334rem 0;
-                    }
-                }
-            }
-        }
-
+      img {
+        width: 100%;
+      }
     }
+
+    .credits {
+      .featuretext {
+        color: $color-bluegrey;
+        text-align: center;
+
+        .heading {
+          color: $color-dark;
+          font-size: 5.3333335rem;
+        }
+
+        .communityproject {
+          font-size: 2.6666667rem;
+
+          span {
+            color: $color-primary;
+          }
+        }
+
+        .teilnehmende {
+          font-size: 2rem;
+        }
+      }
+
+      .mitwirkende {
+        .subheading {
+          color: $color-bluegrey;
+          font-size: 2.6666667rem;
+          font-weight: bolder;
+          margin-bottom: 4rem;
+          margin-top: 2.6666667rem;
+          text-align: center;
+        }
+
+        .morpheus {
+
+          margin-bottom: 1.3333334rem;
+
+          .idea {
+            color: $color-dark;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: normal;
+            margin: 0.6666667rem 0;
+            text-align: center;
+          }
+
+          .name {
+            color: $color-bluegrey;
+            display: block;
+            font-size: 1.3333334rem;
+            margin-top: 0.33333334rem;
+            text-align: center;
+          }
+
+        }
+
+        .credits-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+
+          .cerdits-heading {
+            color: $color-bluegrey;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: normal;
+            margin: 0.6666667rem 0;
+            text-align: center;
+          }
+
+          .credits-name {
+            color: $color-bluegrey;
+            display: block;
+            font-size: 1.3333334rem;
+            margin: 0.33333334rem 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }

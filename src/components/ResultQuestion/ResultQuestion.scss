@@ -1,140 +1,133 @@
-$bluegrey: #0B132B;
-$grey: #3A506B;
-$red: #BA1919;
-$warmGrey: #707070;
-$turquoise: #5BC0BE;
-$lightGrey: #687D9A;
-$mediumBlue: #1C2541;
-$lightBlue: #96B4DD;
+@import './src/css/styles';
 
-.resultQuestionbox {
-    border: 0.06666667rem solid #707070;
-    border-radius: 0.53333336rem;
+.result-question-box {
+  border: 0.06666667rem solid #707070;
+  border-radius: 0.53333336rem;
+  display: flex;
+  flex-direction: row;
+  height: 8.4rem;
+
+  .result-status-bar {
+    border-bottom-left-radius: 0.53333336rem;
+    border-top-left-radius: 0.53333336rem;
+    padding: 8.4rem 0.53333336rem 0 0;
+  }
+
+  .result-content {
     display: flex;
-    flex-direction: row;
-    height: 8.4rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.8rem;
+    width: calc(100% - 0.8rem);
 
-    .resultStatusBar {
-        border-bottom-left-radius: 0.53333336rem;
-        border-top-left-radius: 0.53333336rem;
-        padding: 8.4rem 0.53333336rem 0 0;
-    }
+    .result-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 
-    .resultContent {
+      .result-left-top {
+        align-items: baseline;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        padding: 0.8rem;
-        width: calc(100% - 0.8rem);
 
-        .resultTop {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            .resultLeftTop {
-                align-items: baseline;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                p:first-child {
-                    margin-right: 1rem;
-                }
-
-                .resultQuestionLabel {
-                    color: $grey;
-                    font-size: 1.0666667rem;
-                    margin-top: 0;
-                    padding-top: 0;
-                }
-
-                .resultQuestionTitel {
-                    color: #707070;
-                    font-size: 1.3333334rem;
-                    margin-top: 0;
-                }
-            }
-
-            .resultRightTop {
-                align-items: baseline;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                img {
-                    margin: 0 0.33333334rem;
-                }
-
-                .resultRating {
-                    color: $grey;
-                    font-size: 1.0666667rem;
-                    margin-top: 0;
-                }
-
-                .resultRatingIcons {
-                    color: $grey;
-                    font-size: 1.0666667rem;
-                    margin-top: 0;
-                }
-            }
+        p:first-child {
+          margin-right: 1rem;
         }
 
-        .resultBottom {
-            color: $grey;
-            display: flex;
-            flex-direction: row;
-            height: 2.6666667rem;
-            justify-content: space-between;
-
-            .resultLeftBottom {
-                align-items: baseline;
-                display: flex;
-                flex-direction: row;
-                height: 2.6666667rem;
-                margin-bottom: 0;
-                padding-bottom: 0;
-
-                width: 50%;
-
-                .resultMyAnswer {
-                    color: $grey;
-                    font-size: 1.0666667rem;
-                    margin-bottom: 0;
-                }
-
-                p:first-child {
-                    margin-bottom: 0;
-                    padding-bottom: 0;
-                    padding-right: 0.33333334rem;
-                }
-            }
-
-            .resultRightBottom {
-                align-items: baseline;
-                display: flex;
-                flex-direction: row;
-                height: 2.6666667rem;
-                margin-bottom: 0;
-                width: 50%;
-
-                p:first-child {
-                    margin-bottom: 0;
-                    padding-bottom: 0.0rem;
-                    padding-right: 0.33333334rem;
-                }
-
-                .resultMyAnswer {
-                    font-size: 1.0666667rem;
-                    margin-bottom: 0;
-                }
-
-                .resultRightAnswer {
-                    font-size: 1.0666667rem;
-                    margin-bottom: 0;
-                    padding-bottom: 0.0rem;
-                }
-            }
+        .result-question-label {
+          color: $color-grey;
+          font-size: 1.0666667rem;
+          margin-top: 0;
+          padding-top: 0;
         }
+
+        .result-question-titel {
+          color: #707070;
+          font-size: 1.3333334rem;
+          margin-top: 0;
+        }
+      }
+
+      .result-right-top {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        img {
+          margin: 0 0.33333334rem;
+        }
+
+        .result-rating {
+          color: $color-grey;
+          font-size: 1.0666667rem;
+          margin-top: 0;
+        }
+
+        .result-rating-icons {
+          color: $color-grey;
+          font-size: 1.0666667rem;
+          margin-top: 0;
+        }
+      }
     }
+
+    .result-bottom {
+      color: $color-grey;
+      display: flex;
+      flex-direction: row;
+      height: 2.6666667rem;
+      justify-content: space-between;
+
+      .result-left-bottom {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        height: 2.6666667rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        width: 50%;
+
+        .result-my-answer {
+          color: $color-grey;
+          font-size: 1.0666667rem;
+          margin-bottom: 0;
+        }
+
+        p:first-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          padding-right: 0.33333334rem;
+        }
+      }
+
+      .result-right-bottom {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        height: 2.6666667rem;
+        margin-bottom: 0;
+        width: 50%;
+
+        p:first-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          padding-right: 0.33333334rem;
+        }
+
+        .result-my-answer {
+          font-size: 1.0666667rem;
+          margin-bottom: 0;
+        }
+
+        .result-right-answer {
+          font-size: 1.0666667rem;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
 }

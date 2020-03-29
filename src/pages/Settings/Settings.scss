@@ -1,11 +1,13 @@
+@import './src/css/styles';
+
 .settings {
-  position: relative;
   padding-left: 3rem;
+  position: relative;
   width: 100%;
 
-  .settingsContent {
+  .settings-content {
+    color: #3a506b;
     position: relative;
-    color: #3A506B;
   }
 
   .topic {

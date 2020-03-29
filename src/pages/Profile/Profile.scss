@@ -1,15 +1,18 @@
-.resultContentHeader {
+@import './src/css/styles';
+
+.result-content-header {
   align-items: baseline;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  .resultLeft {
+
+  .result-left {
     margin-left: 7.266667rem;
 
-    .resultSubject {
+    .result-subject {
       color: #0b132b;
-      font-size: 4.0rem;
+      font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.6666667rem;
       margin-top: 2.2666667rem;
@@ -17,7 +20,7 @@
   }
 }
 
-.profile_subjekt {
+.profile-subjekt {
 
   background-color: transparent;
   border: 1px solid #707070;
@@ -26,18 +29,20 @@
   margin: 5px 15px;
   width: 400px;
 
-  .profileTop {
+  .profile-top {
     align-items: center;
     display: flex;
     flex-direction: row;
   }
-  .profileBottom {
+
+  .profile-bottom {
     align-items: center;
     display: flex;
     flex-direction: row;
   }
 }
-.profile_certifikate {
+
+.profile-certifikate {
 
   align-items: center;
   border: 1px solid #707070;
@@ -51,21 +56,23 @@
   padding: 0;
   width: 412px;
 
-  #downloadimage {
+  .download-image {
 
     height: 27px;
     margin-left: 2.5rem;
     width: 27px;
 
   }
-  #downloadimage:hover {
+
+  .download-image:hover {
     cursor: pointer;
   }
   
-  .CertificatesRow {
+  .certificates-row {
     margin: 0;
     width: 80%;
-    .titelCertificate {
+
+    .titel-certificate {
       color: #5bc0be;
       display: flex;
       flex-direction: row;
@@ -74,7 +81,8 @@
       margin: 0;
       padding: 0;
     }
-    .dateCertificate {
+
+    .date-certificate {
       color: #0b132b;
       display: flex;
       flex-direction: row;
@@ -84,7 +92,7 @@
     }
   }
 
-  .favorite_certificate {
+  .favorite-certificate {
     display: flex;
     flex-direction: row;
   }
@@ -94,41 +102,48 @@
     margin-left: 2.6666667rem;
     margin-top: 0.33333334rem;
   }
-  #badgetitle {
+
+  .badge-title {
     margin-left: 5px;
-    white-space:nowrap;
+    white-space: nowrap;
   }
 
-  #badgeimage {
+  .badge-image {
     margin-left: 0.6666667rem;
   }
 }
 
-#favorite_certificate {
+.favorite-certificate {
   text-align: center;
 }
-#profile_head {
+
+.profile-head {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  .profile_h2 {
+
+  .profile-h2 {
     color: #1c2541;
-    font-size: 2.0rem;
+    font-size: 2rem;
     font-weight: 300;
   }
-  .profile_span_padding_l {
+
+  .profile-span-padding-l {
     padding-left: 0.5rem;
   }
-  .profile_span_padding_r {
+
+  .profile-span-padding-r {
     padding-right: 0.5rem;
   }
-  .profile_flex-row {
+
+  .profile-flex-row {
     align-items: center;
     display: flex;
     flex-direction: row;
   }
+
   .central {
     align-items: center;
     display: flex;
@@ -155,45 +170,49 @@
     text-align: left;
   }
 
-  .var_info {
+  .var-info {
     margin-left: 0.5%;
   }
 
-  #name {
+  .name {
     color: #1c2541;
     font-size: 1.7333333rem;
     letter-spacing: 0;
     margin-left: 2.3rem;
     opacity: 1;
     text-align: center;
-    input:fokus{
+
+    input:focus {
       outline: none;
     }
-    input:disabled{
+
+    input:disabled {
       background: transparent;
-      border: none;
       font-size: 1.3333334rem;
       text-align: center;
       width: 8rem;
     }
-    input:enabled{
+
+    input:enabled {
       background: transparent;
       
       font-size: 1.3333334rem;
       text-align: center;
       width: 8rem;
     }
+
     img {
-      margin-left: 1.0rem;
+      margin-left: 1rem;
     }
-    img:hover{
+
+    img:hover {
       cursor: pointer;
       
     }
   }
 }
 
-#profile_levelbar {
+.profile-levelbar {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -201,7 +220,8 @@
   margin-top: 4%;
   text-align: center;
   width: 100%;
-  #levelbar_back {
+
+  .levelbar-back {
     background-color: transparent;
     border: 0.06666667rem solid #707070;
     border-radius: 13.333333rem;
@@ -209,7 +229,7 @@
     position: relative;
     width: 32.666668rem;
 
-    #levelbar_front {
+    .levelbar-front {
       background-color: #5bc0be;
       border-radius: 13.333333rem;
       height: 100%;
@@ -220,27 +240,30 @@
       z-index: -2;
     }
 
-    #levelbar_font {
+    .levelbar-font {
       position: relative;
       text-align: center;
       z-index: 2;
     }
 
-    #level_Rang {
+    .level-rang {
       color: #5bc0be;
       font: Bold 1.7333333rem/2.0666666rem Arimo;
     }
   }
 }
-#level_rank {
+
+.level-rank {
   align-items: center;
   display: flex;
   margin-top: 1rem;
+
   img {
     height: 1.8rem;
     margin-right: 0.8rem;
     width: 1.8rem;
   }
+
   span {
     color: #5bc0be;
     font: Bold 1.7333333rem/2.0666666rem Arimo;
@@ -251,7 +274,7 @@
   }
 }
 
-.profile_subjekt_img {
+.profile-subjekt-img {
   border: 0.06666667rem solid #5bc0be;
   border-radius: 6.6666665rem;
 
@@ -262,16 +285,17 @@
   width: 4.133333rem;
 }
 
-#logo {
-  height: 2.0rem;
+//TODO ist das hier wirklich notwendig? --> Prüfen
+.logo {
+  height: 2rem;
   padding: 1.0666667rem;
-  width: 2.0rem;
+  width: 2rem;
 }
 
-#favorite_subject {
+.favorite-subject {
   text-align: center;
 
-  #profile_favorite_box {
+  .profile-favorite-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
@@ -280,7 +304,8 @@
     text-align: left;
   }
 }
-#profile_certificate_box {
+
+.profile-certificate-box {
   display: flex;
   flex-basis: 31%;
   flex-direction: row;
@@ -289,7 +314,8 @@
   margin: 0 2rem;
   
 }
-#title {
+
+.title {
   color: #0b132b;
   font-size: 2.4rem;
   letter-spacing: 0;
@@ -298,32 +324,38 @@
   
 }
 
-#text {
+.text {
   align-items: center;
 
   flex-direction: column;
   justify-content: left;
   text-align: left;
 }
-#fach_info {
+
+.fach-info {
   text-align: left;
 }
 
-#pb {
+.pb {
 
   border: 2px solid #5bc0be;
   border-radius: 100px;
   max-height: 110px;
   max-width: 110px;
 }
-#user_icon, #trending_icon, #calender_icon{
-  color: #3A506B;
+
+.user-icon,
+.trending-icon,
+.calender-icon {
+  color: #3a506b;
 
 }
-#trending_icon{
+
+.trending-icon {
   height: 30px;
 }
-#user_icon, #calender_icon{
-  height: 24px;
 
+.user-icon,
+.calender-icon {
+  height: 24px;
 }

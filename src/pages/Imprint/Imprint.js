@@ -5,16 +5,16 @@ class Imprint extends Component {
     render() {
         return (
             <div className="imprint">
-                <div className="headingFont">Imprint</div>
-                <div className="fontBox">
-                    <p class="3DMsoNoSpacing">
+                <div className="heading-font">Imprint</div>
+                <div className="font-box">
+                    <p>
                         <span class="font0.8rem">
                             Sind Sie Betreiber einer kommerziellen Seite, so unterliegen Sie der Impressumspflicht. Da
                             dies sehr viel Mühe und viel Fachwissen erfordert, haben wir hier für Sie eine kostenlose
                             Vorlage erstellt.{' '}
                         </span>
                     </p>
-                    <p class="3DMsoNoSpacing">
+                    <p>
                         <span class="font0.8rem">
                             Diese Vorlage beinhaltet auch einen Haftungsausschluss / Disclaimer. Sie dürfen diese
                             Vorlage gerne kostenlos verwenden. Diese Vorlage wurde mit viel Mühe bund Sorgfalt erstellt.
@@ -22,14 +22,14 @@ class Imprint extends Component {
                             kostenfreie Verwendung ein Backlink auf diese Seite benötigt wird.{' '}
                         </span>
                     </p>
-                    <p class="3DMsoNoSpacing">
+                    <p>
                         <span class="font0.8rem">
                             Wenn Sie diese Vorlage verwenden, so verwenden Sie dies bitte vollständig.{' '}
                         </span>
                         Der Haftungsausschluss ist auf deutsch und kann nur für Webseiten benutzt werden, die Ihren Sitz
                         in Deutschland haben und somit das deutsche Recht gilt.
                     </p>
-                    <p class="3DMsoNoSpacing">&nbsp;</p>
+                    <p>&nbsp;</p>
                     <p>
                         <strong>Impressum</strong>
                     </p>

@@ -33,7 +33,7 @@ class LandingPage extends Component {
     render() {
         return (
             <div className="landing">
-                <div className="Main">
+                <div className="main">
                     {(() => {
                         if (this.state.redirect) {
                             this.setState({ redirect: false });
@@ -65,11 +65,11 @@ class LandingPage extends Component {
                         <Route exact path="/dashboard" component={Register} />
                     </Modal>
 
-                    <div id="content">
-                        <div id="image-landigpage">
-                            <img id="landigpage-img" src={Landing_Image} alt="landigpage-teaching image" />
+                    <div className="content">
+                        <div className="image-landigpage">
+                            <img className="landigpage-img" src={Landing_Image} alt="landigpage-teaching image" />
                         </div>
-                        <div id="text-content">
+                        <div className="text-content">
                             <h2
                                 dangerouslySetInnerHTML={{
                                     __html: Translation.t('landingPage.title'),

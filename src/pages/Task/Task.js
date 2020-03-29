@@ -8,12 +8,6 @@ class Template extends Component {
 
     state = {};
 
-    componentDidMount() {
-        const top = document.getElementsByClassName('HeaderNavbar').clientHeight;
-        const left = document.getElementById('Menu').clientWidth;
-        document.getElementById('main').setAttribute('style', `margin-top:${top}px;margin-left:${left}px;`);
-    }
-
     render() {
         return (
             <div>

@@ -20,16 +20,16 @@ class Task extends React.Component {
         const borderColor = color.borderColor;
 
         return (
-            <div className="Task">
-                <div className="Task_Head">
+            <div className="task">
+                <div className="task-head">
                     <span>{name}</span>
-                    <div className="Task_Head_Elements">
-                        <div className="Task_element">
+                    <div className="task-head-elements">
+                        <div className="task-element">
                             <span>{questions}</span>
                             <span>{Translation.t('taskList.questions')}</span>
                         </div>
-                        <div className="Task_element">
-                            <Award className="ico" stroke="#3A506B" />
+                        <div className="task-element">
+                            <Award className="icon" stroke="#3A506B" />
                             <span>{rightQuestions}</span>
                         </div>
                         <span
@@ -51,7 +51,7 @@ class Task extends React.Component {
                         </span>
                     </div>
                 </div>
-                <div className="Task_Bottom">
+                <div className="task-bottom">
                     <span>{description}</span>
                 </div>
             </div>
@@ -117,37 +117,37 @@ class TaskList extends React.Component {
     render() {
         return (
             <div>
-                <div className="Tasklist" id="main">
-                    <div className="resultContentHeader">
-                        <div className="resultLeft">
-                            <span className="resultSubject">{Translation.t('taskList.task')}</span>
+                <div className="task-list main">
+                    <div className="result-content-header">
+                        <div className="result-left">
+                            <span className="result-subject">{Translation.t('taskList.task')}</span>
                         </div>
 
-                        <div className="Middle">
-                            <div className="resultCenter">
-                                <div className="resultSubject">
-                                    <UsersIcon className="ico" stroke="#3A506B" />
+                        <div className="middle">
+                            <div className="result-center">
+                                <div className="result-subject">
+                                    <UsersIcon className="icon" stroke="#3A506B" />
                                     <span className="points">213</span>
                                     <span className="points">{Translation.t('taskList.points')}</span>
                                 </div>
                             </div>
-                            <div className="resultCenter" id="second">
-                                <div className="resultSubject">
-                                    <UserIcon className="ico" stroke="#3A506B" />
+                            <div className="result-center second">
+                                <div className="result-subject">
+                                    <UserIcon className="icon" stroke="#3A506B" />
 
                                     <span className="points">21.323</span>
                                     <span className="points">{Translation.t('taskList.points')}</span>
                                 </div>
                             </div>
                         </div>
-                        <div className="resultRight">
-                            <span className="resultSubject">
+                        <div className="result-right">
+                            <span className="result-subject">
                                 <div id="input-search">
                                     <Search height="30" width="30" />
                                     <input
                                         onChange={this.OnChangeSearch}
                                         type="text"
-                                        id="site-search"
+                                        className="site-search"
                                         name="search"
                                         aria-label="Search"
                                         placeholder={Translation.t('taskList.search')}
@@ -157,7 +157,7 @@ class TaskList extends React.Component {
                         </div>
                     </div>
 
-                    <div id="Task-Content-List">{this.renderTasks()}</div>
+                    <div id="task-content-list">{this.renderTasks()}</div>
                 </div>
             </div>
         );
