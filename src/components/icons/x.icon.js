@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { Component } from 'react';
 
-class EditIcon extends Component {
+class XIcon extends Component {
     constructor(props) {
         super(props);
     }
@@ -19,12 +19,13 @@ class EditIcon extends Component {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="feather feather-edit-2">
-                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                    class="feather feather-x">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </div>
         );
     }
 }
 
-export default EditIcon;
+export default XIcon;

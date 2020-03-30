@@ -10,8 +10,8 @@ class SettingsIcon extends Component {
         return (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width={this.props.width || '24'}
+                height={this.props.height || '24'}
                 viewBox="0 0 24 24"
                 fill={this.props.fill || 'none'}
                 stroke={this.props.stroke || 'currentColor'}

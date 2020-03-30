@@ -6,10 +6,6 @@ class SearchIcon extends Component {
         super(props);
     }
 
-    state = {
-        email: '',
-    };
-
     render(props) {
         return (
             <div className="icon">

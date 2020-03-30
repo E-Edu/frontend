@@ -6,10 +6,6 @@ class CodepenIcon extends Component {
         super(props);
     }
 
-    state = {
-        email: '',
-    };
-
     render(props) {
         return (
             <svg
