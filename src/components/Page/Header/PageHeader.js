@@ -11,8 +11,6 @@ class PageHeader extends Component {
         const { mainTitle } = this.props;
         const { secondaryTitle } = this.props;
 
-        console.log(mainTitle)
-        console.log(secondaryTitle)
         return (
             <div className="page-header">
                 <div className="page-titles">
