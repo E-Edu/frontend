@@ -1,0 +1,122 @@
+@import './src/css/styles';
+
+.header-navbar {
+  align-items: baseline;
+  background: $color-bluegrey 0 0 no-repeat padding-box;
+  display: flex;
+  height: 5.3333335rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  .logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
+
+    .logo-img {
+      height: 90%;
+      width: 2.4rem;
+    }
+
+    .title {
+      color: $color-turquoise;
+      font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
+      letter-spacing: 0;
+      margin: 0;
+      padding-left: 2rem;
+      white-space: nowrap;
+    }
+  }
+
+  a {
+    height: 100%;
+  }
+
+
+  .btn-log {
+    background-color: Transparent;
+    border: 2px solid $color-turquoise;
+    border-radius: 10px;
+    font: 22px/42px Hind Siliguri;
+    font-weight: 400;
+    max-height: 30px;
+    padding: 2.5px 26.21px;
+    text-decoration: none;
+    width: 159px;
+  }
+
+  .btn-login {
+    background-color: $color-turquoise;
+    color: $color-bluegrey;
+    margin-right: 3.7333333rem;
+    padding: 2.5px 40px;
+    transition: all 0.5s;
+  }
+
+  .btn-register {
+    color: $color-lightGrey;
+    transition: all 0.2s;
+  }
+
+  .button-box-landing {
+    margin-right: 6.4rem;
+  }
+
+  .btn-login:hover {
+    background-color: rgba(91, 192, 190, 0.8);
+    cursor: pointer;
+  }
+
+  .btn-register:hover {
+    background-color: rgba(91, 192, 190, 0.3);
+    cursor: pointer;
+  }
+
+  .btn-login:focus {
+    outline: none;
+  }
+
+  .btn-register:hover {
+    background-color: rgba(91, 192, 190, 0.3);
+    cursor: pointer;
+  }
+
+  .btn-register:focus {
+    outline: none;
+  }
+
+  .button-box-dashboard {
+    margin-right: 6.4rem;
+  }
+
+  .button-box-dashboard {
+    margin-right: 6.4rem;
+  }
+
+  .btn-dash {
+    background-color: transparent;
+    color: $color-turquoise;
+    margin: 0 1rem;
+  }
+
+  .btn-info:hover {
+    cursor: pointer;
+  }
+
+  .btn-logout:hover {
+    cursor: pointer;
+  }
+
+  .btn-info:focus {
+    outline: none;
+  }
+
+  .btn-info:focus {
+    outline: none;
+  }
+}

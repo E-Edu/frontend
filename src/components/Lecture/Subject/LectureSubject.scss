@@ -1,0 +1,30 @@
+@import './src/css/styles';
+
+.lecture-subject-wrapper {
+  .lecture-subject {
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    min-width: 280px;
+    padding: 0.8rem;
+
+    .icon-container {
+      align-items: center;
+      border: 1px solid $color-turquoise;
+      border-radius: 10000px;
+      display: flex;
+      height: 1.2rem;
+      justify-content: space-around;
+      padding: 1rem;
+      width: 1.2rem;
+    }
+
+    .lecture-subject-title {
+      color: $color-grey;
+      font-size: 1.25rem;
+      margin: 0 0 0 1rem;
+    }
+  }
+}

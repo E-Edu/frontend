@@ -1,0 +1,28 @@
+@import './src/css/styles';
+
+.privacy {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  /*Für die Privacy überschrift*/
+  .heading-font {
+    font-family: Hind Siliguri;
+    font-size: 5.3333335rem;
+    opacity: 1;
+    text-align: left;
+    width: 50vw;
+  }
+
+  /*Für die Textbox*/
+  .font-box {
+    color: #0b132b;
+    font: Hind Siliguri;
+    font-size: 1.3333334rem;
+    letter-spacing: 0;
+    margin-top: 0.33333334rem;
+    opacity: 1;
+    text-align: left;
+    width: 50vw;
+  }
+}

@@ -1,0 +1,16 @@
+@import './src/css/styles';
+
+.settings {
+  padding-left: 3rem;
+  position: relative;
+  width: 100%;
+
+  .settings-content {
+    color: #3a506b;
+    position: relative;
+  }
+
+  .topic {
+    font-size: 1.6666666rem;
+  }
+}

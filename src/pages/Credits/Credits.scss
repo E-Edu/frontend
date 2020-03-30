@@ -1,0 +1,106 @@
+@import './src/css/styles';
+//TODO refactor to english
+body {
+  cursor: default;
+  font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+    margin-top: 7rem;
+
+
+    .picture {
+      margin-top: 1.3333334rem;
+      width: 30%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .credits {
+      .featuretext {
+        color: $color-bluegrey;
+        text-align: center;
+
+        .heading {
+          color: $color-dark;
+          font-size: 5.3333335rem;
+        }
+
+        .communityproject {
+          font-size: 2.6666667rem;
+
+          span {
+            color: $color-primary;
+          }
+        }
+
+        .teilnehmende {
+          font-size: 2rem;
+        }
+      }
+
+      .mitwirkende {
+        .subheading {
+          color: $color-bluegrey;
+          font-size: 2.6666667rem;
+          font-weight: bolder;
+          margin-bottom: 4rem;
+          margin-top: 2.6666667rem;
+          text-align: center;
+        }
+
+        .morpheus {
+
+          margin-bottom: 1.3333334rem;
+
+          .idea {
+            color: $color-dark;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: normal;
+            margin: 0.6666667rem 0;
+            text-align: center;
+          }
+
+          .name {
+            color: $color-bluegrey;
+            display: block;
+            font-size: 1.3333334rem;
+            margin-top: 0.33333334rem;
+            text-align: center;
+          }
+
+        }
+
+        .credits-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+
+          .cerdits-heading {
+            color: $color-bluegrey;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: normal;
+            margin: 0.6666667rem 0;
+            text-align: center;
+          }
+
+          .credits-name {
+            color: $color-bluegrey;
+            display: block;
+            font-size: 1.3333334rem;
+            margin: 0.33333334rem 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import './src/css/styles';
+
+.result-content-header {
+  width: 100%;
+
+  .result-left {
+    margin-left: 12.666667rem;
+
+    .result-subject {
+      color: #0b132b;
+      font-size: 4rem;
+      font-weight: bolder;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
+    }
+  }
+
+  .middle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .result-center {
+      .result-subject {
+        display: flex;
+        font-size: 1.3333334rem;
+        margin-right: 2.6666667rem;
+        margin-top: 2.2666667rem;
+
+        .icon {
+          margin-right: 0.5rem;
+        }
+
+        .points {
+          color: #3a506b;
+        }
+
+      }
+    }
+  }
+
+  .result-right {
+    margin-right: 7.266667rem;
+
+    .result-subject {
+      color: #0b132b;
+      font-size: 4rem;
+      font-weight: bolder;
+      margin-right: 2.6666667rem;
+      margin-top: 2.2666667rem;
+
+      .input-search {
+        align-items: center;
+        border: 0.06666667rem solid #3a506b;
+        border-radius: 0.53333336rem;
+        display: flex;
+        flex-direction: row;
+        height: 2.8666666rem;
+        width: 26.066668rem;
+
+        div {
+          padding: 0 0.5rem;
+          padding-bottom: 0.33333334rem;
+        }
+      }
+
+      input {
+        background: transparent;
+        color: #3a506b;
+        font-size: 1.3333334rem;
+        height: 2.8666666rem;
+        letter-spacing: 0;
+        opacity: 1;
+        text-align: left;
+        width: 26.066668rem;
+      }
+
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+
+}
+
+.task-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .teacher-information {
+    img {
+      border: 0.13333334rem solid #5bc0be;
+      border-radius: 6.6666665rem;
+      max-height: 7.3333335rem;
+      max-width: 7.3333335rem;
+    }
+  }
+
+  .task {
+    border: 0.06666667rem solid #707070;
+    border-radius: 0.53333336rem;
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    margin: 0.6666667rem;
+    width: 65rem;
+
+    .task-head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 1rem;
+      margin-top: 1rem;
+
+      .task-head-elements {
+        display: flex;
+        flex-direction: row;
+
+        .task-element {
+          display: flex;
+          flex-direction: row;
+          padding: 0 1rem;
+        }
+      }
+
+      span {
+        padding: 0 0.3rem;
+      }
+    }
+
+    .task-bottom {
+      display: flex;
+      flex-direction: row;
+      margin: 0 1rem;
+    }
+  }
+}
+
+

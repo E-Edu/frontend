@@ -1,0 +1,149 @@
+@import './src/css/styles';
+
+.reportcontainer {
+  background: #fff;
+  border-radius: 0.26666668rem;
+  color: #003;
+  margin-top: 1rem;
+  padding: 5%;
+
+  .top-infos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .subject-path {
+    font-size: 0.93333334rem;
+  }
+
+  /*Infos an der Rechten seite*/
+  .infos-right {
+    font-size: 0.93333334rem;
+    text-align: right;
+    width: 49.5%;
+
+    .likes {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+
+      span {
+        color: #3a506b;
+        font: Regular 1.3333334rem/1.5333333rem Arimo;
+        letter-spacing: 0;
+        margin-left: 1.5rem;
+        opacity: 1;
+      }
+
+      img {
+        height: 1.3333334rem;
+        margin-left: 0.5rem;
+        width: 1.3333334rem;
+      }
+    }
+
+    .teacher {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        height: 1.3333334rem;
+        margin-left: 0.5rem;
+        width: 1.3333334rem;
+      }
+    }
+
+    .messages {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        height: 1.3333334rem;
+        margin-left: 0.5rem;
+        width: 1.3333334rem;
+      }
+    }
+
+  }
+
+  /*Aufgaben Überschrift*/
+  .task-name {
+    font-size: 1.3333334rem;
+    margin-top: 0.33333334rem;
+    text-align: center;
+  }
+
+  /*Aufgaben Text*/
+  .task-text {
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    max-height: 6.6666665rem;
+  }
+
+  /*Behalte und Löschen Button*/
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+
+    .row-1 {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+      max-height: 50%;
+      vertical-align: center;
+      width: 40%;
+    }
+  }
+
+  .half:active {
+    transform: translateY(0.26666668rem);
+  }
+
+  .half {
+    background: #fff 0% 0% no-repeat padding-box;
+    border: 0.06666667rem solid #707070;
+    border-radius: 0.53333336rem;
+    cursor: pointer;
+    font: Regular 1.5333333rem Arimo;
+    height: 2.5rem;
+    opacity: 1;
+    width: 6.6666665rem;
+  }
+
+  /* Fertig Button*/
+  .done-div {
+    display: flex;
+    justify-content: center;
+
+    .done {
+      background: #5bc0be 0% 0% no-repeat padding-box;
+      justify-content: center;
+      justify-self: center;
+      min-width: 40%;
+    }
+
+    .button {
+      background: #fff 0 0 no-repeat padding-box;
+      border: 0.06666667rem solid #707070;
+      border-radius: 0.53333336rem;
+      color: #3a506b;
+      cursor: pointer;
+
+      font: Regular 1.5333333rem/1.8rem Arimo;
+      height: 2.5rem;
+      letter-spacing: 0;
+      opacity: 1;
+      text-align: center;
+    }
+
+    .button:active {
+      background-color: #3e8e41;
+      transform: translateY(0.26666668rem);
+    }
+  }
+}

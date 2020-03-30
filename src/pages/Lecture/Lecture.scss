@@ -1,0 +1,21 @@
+@import './src/css/styles';
+
+.lecture {
+  .main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .task-header {
+      margin-bottom: 2.5rem;
+      width: 90%;
+    }
+
+    .lecture-group-wrapper {
+      margin-bottom: 2.5rem;
+      width: 90%;
+    }
+  }
+
+
+}

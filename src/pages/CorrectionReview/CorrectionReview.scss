@@ -1,0 +1,41 @@
+@import './src/css/styles';
+
+.correction-content {
+  .correction-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    h1 {
+      color: #0b132b;
+      font-size: 4rem;
+      font-weight: bold;
+      margin-left: 2rem;
+    }
+
+    .correction-mode {
+      background-color: #5bc0be;
+      border: 0.2rem solid #5bc0be;
+      border-radius: 0.6666667rem;
+      color: #0b132b;
+      font-size: 1.7333333rem;
+      font-weight: bolder;
+      height: 3.3333333rem;
+      margin-right: 6rem;
+      text-align: center;
+      width: 19.066668rem;
+    }
+  }
+
+  .box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+}

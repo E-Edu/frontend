@@ -1,0 +1,183 @@
+@import './src/css/styles';
+//TODO rename to englisch classes
+.login-component {
+  /*
+    * white bachgroundcanvas
+    */
+  .box {
+    background: #fff;
+    border-radius: 0.26666668rem;
+    box-shadow: 0 0 0.6666667rem #888;
+    color: #003;
+    height: 35vh;
+    padding: 0;
+    text-align: center;
+    width: 50vw;
+
+    /*field that displays the text and all buttons and input-fields of the login*/
+    .box-inhalt {
+      margin-top: -10%;
+    }
+
+    /*sets size and form of the input-boxes for password and email*/
+    .input-box {
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.4rem;
+      margin: 0.6666667rem auto;
+      outline: none;
+      padding: 0.26666668rem;
+      width: 90%;
+
+      /*sets size of the actual inputfields in the input-boxes*/
+      input {
+        background: transparent;
+        outline: none;
+        width: 100%;
+      }
+    }
+
+    /*sets the form and size of all buttons*/
+    .button {
+      background: none;
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.4rem;
+      margin: 0.6666667rem auto;
+      outline: #0b132b;
+      padding: 0.26666668rem;
+      width: 70%;
+    }
+
+    /*sets position of the headline "LOGIN"*/
+    .headline {
+      padding-top: -50%;
+    }
+
+    /*sets size and color of the login-button*/
+    .login {
+      background: #5bc0be;
+      border-color: #303030;
+      margin: 0.6666667rem auto;
+      width: 70%;
+    }
+
+    /*sets the size of the google-icon in the google-login-field*/
+    .google-bild {
+      padding: none;
+
+      width: 1rem;
+    }
+
+    /*describes the field for the google-login*/
+    .google-login {
+      background: none;
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.6666667rem;
+      font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
+      margin: 0.6666667rem auto;
+      outline: #0b132b;
+      padding: 0.26666668rem;
+
+      width: 70%;
+    }
+
+    /*sets the position of the two eye-icons in the password-field*/
+    .eye {
+      position: absolute;
+      right: 20%;
+    }
+
+    /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
+    .hide1 {
+      display: none;
+    }
+
+    /*field that displays the text and all buttons and input-fields of the login*/
+    .boxinhalt {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 0 5rem;
+    }
+
+    /*sets size and form of the input-boxes for password and email*/
+    .input-box {
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.4rem;
+      margin: 0.6666667rem auto;
+      outline: none;
+      padding: 0.26666668rem;
+      position: relative;
+      width: 90%;
+      /*sets size of the actual inputfields in the input-boxes*/
+      input {
+        background: transparent;
+        font-size: 1rem;
+        outline: none;
+        width: 100%;
+      }
+    }
+
+    /*sets the form and size of all buttons*/
+    .button,
+    button {
+      background: none;
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+      margin: 0.6666667rem auto;
+      outline: #0b132b;
+      padding: 0.26666668rem;
+      width: 70%;
+    }
+
+    /*sets position of the headline "LOGIN"*/
+    .headline {
+      font-size: 2.5rem;
+      padding-top: -50%;
+    }
+
+    /*sets size and color of the login-button*/
+    .login {
+      background: #5bc0be;
+      border-color: #303030;
+      margin: 0.6666667rem auto;
+      width: 70%;
+    }
+
+    /*sets the size of the google-icon in the google-login-field*/
+    .google-bild {
+      padding: 0 0.5rem;
+      width: 1rem;
+    }
+
+    /*describes the field for the google-login*/
+    .google-login {
+      background: none;
+      border: 0.06666667rem solid #0b132b;
+      border-radius: 0.6666667rem;
+      font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
+      margin: 0.6666667rem auto;
+      outline: #0b132b;
+      padding: 0.26666668rem;
+      width: 70%;
+    }
+
+    /*sets the position of the two eye-icons in the password-field*/
+    .eye {
+      position: absolute;
+      right: 0.53333336rem;
+      top: 0;
+    }
+
+    /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
+    .hide1 {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pointer {
+      cursor: pointer;
+    }
+  }
+}

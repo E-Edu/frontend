@@ -1,0 +1,66 @@
+@import './src/css/styles';
+
+.task-header {
+  width: 100%;
+  /*Header*/
+  .lecture-header {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .lecture-header-topic {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+
+      .lecture-subject {
+        color: $color-bluegrey;
+        font-family: Hind Siliguri;
+        font-size: 60px;
+        font-weight: bolder;
+      }
+
+      .lecture-module {
+        color: $color-grey;
+        font-size: 32px;
+        font-weight: bolder;
+        margin-left: 2.5rem;
+      }
+    }
+
+    .lecture-header-points {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+
+
+      .lecture-points {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+
+        &:first-child {
+          margin-right: 1.2rem;
+        }
+
+        .lecture-point-text {
+          margin-left: 0.5rem;
+        }
+      }
+    }
+
+    .lecture-header-search {
+      display: flex;
+
+      input {
+        border: 1px solid #000;
+        border-radius: 0.5rem;
+        height: 1.7rem;
+        padding: 0 0.4rem;
+        width: 13rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import './src/css/styles';
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 123px auto;
+  /*grid-template: "header header" "sidebar content" "footer footer";*/
+  grid-template-rows: 86px 1fr auto;
+  min-height: 100vh;
+  width: 100vw;
+
+  .header-navbar {
+    grid-area: header;
+  }
+
+  .menu {
+    grid-area: sidebar;
+  }
+
+  .layout-container {
+    align-self: stretch;
+    grid-area: content;
+  }
+
+  .footer-navbar {
+    align-self: end;
+    grid-area: footer;
+  }
+}

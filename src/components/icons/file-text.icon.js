@@ -1,7 +1,7 @@
 import './index.scss';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class LogoutIcon extends Component {
+class FileTextIcon extends Component {
     constructor(props) {
         super(props);
     }
@@ -12,8 +12,9 @@ class LogoutIcon extends Component {
 
     render(props) {
         return (
-            <div className='icon'>
-                <svg xmlns="http://www.w3.org/2000/svg"
+            <div className="icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     width={this.props.width || '24'}
                     height={this.props.height || '24'}
                     viewBox="0 0 24 24"
@@ -34,4 +35,4 @@ class LogoutIcon extends Component {
     }
 }
 
-export default LogoutIcon;
+export default FileTextIcon;

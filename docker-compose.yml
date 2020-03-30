@@ -6,3 +6,5 @@ services:
         restart: always
         ports:
             - 5004:80
+        environment:
+          - SENTRY_ENVIRONMENT=production
