@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './LandingPage.scss';
 import { Redirect, Route } from 'react-router-dom';
+import Modal from 'react-animated-modal';
+import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
-import Modal from 'react-animated-modal';
 import Query from '../../lib/api/Query';
-import { gql } from 'apollo-boost';
 import { Translation } from '../../i18n/i18n';
 
 class LandingPage extends Component {
@@ -25,9 +25,7 @@ class LandingPage extends Component {
                     }
                 }
             `
-        ).then((response) => {
-            console.log(response.data);
-        });
+        );
     }
 
     render() {
@@ -42,7 +40,7 @@ class LandingPage extends Component {
                         }
                     })()}
 
-                    {/*TODO Route zurück auf /login /register*/}
+                    {/* TODO Route zurück auf /login /register */}
                     <Route
                         exact
                         path={['/dashboard', '/dashboard']}
@@ -56,11 +54,10 @@ class LandingPage extends Component {
                     <Modal
                         visible={this.state.showModal}
                         closemodal={() => {
-                            console.log('close modal');
                             this.setState({ showModal: false, redirect: '/' });
                         }}
                         type="fadeIn">
-                        {/*TODO Route zurück auf /login /register*/}
+                        {/* TODO Route zurück auf /login /register */}
                         <Route exact path="/dashboard" component={Login} />
                         <Route exact path="/dashboard" component={Register} />
                     </Modal>
@@ -70,15 +67,8 @@ class LandingPage extends Component {
                             <img className="landigpage-img" src={Landing_Image} alt="landigpage-teaching image" />
                         </div>
                         <div className="text-content">
-                            <h2
-                                dangerouslySetInnerHTML={{
-                                    __html: Translation.t('landingPage.title'),
-                                }}
-                            />
-                            <h4
-                                dangerouslySetInnerHTML={{
-                                    __html: Translation.t('landingPage.description'),
-                                }}
+                            <h2 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.title') }} />
+                            <h4 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.description') }} />
                             />
                         </div>
                     </div>

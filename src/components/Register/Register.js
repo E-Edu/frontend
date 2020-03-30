@@ -1,10 +1,10 @@
 import React from 'react';
 import './Register.scss';
+import { Link } from 'react-router-dom';
 import eye from '../../assets/icons/eye.svg';
 import eye_off from '../../assets/icons/eye-off.svg';
-import TeacherIcon from '../../components/icons/teacher.icon';
-import UserIcon from '../../components/icons/user.icon';
-import { Link } from 'react-router-dom';
+import TeacherIcon from '../icons/teacher.icon';
+import UserIcon from '../icons/user.icon';
 
 // Regular Expression für die Validierung der Mail
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
@@ -51,10 +51,7 @@ class Register extends React.Component {
     handleChange = (e) => {
         e.preventDefault();
         const { name, value } = e.target;
-        let formErrors = this.state.formErrors;
-
-        console.log('Name: ', name);
-        console.log('Value: ', value);
+        const { formErrors } = this.state;
 
         switch (name) {
             case 'firstName':
@@ -72,43 +69,31 @@ class Register extends React.Component {
                 formErrors.password = value.length < 6 ? 'minimum 6 characters required ' : '';
                 break;
             case 'password2':
-                formErrors.password2 = value != value.password ? 'Passwörter sind unterschiedlich' : '';
+                formErrors.password2 = value !== value.password ? 'Passwörter sind unterschiedlich' : '';
                 break;
             default:
-                console.log('Break');
                 break;
         }
-        this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+        this.setState({ formErrors, [name]: value });
     };
 
     // Shows second page of register
     handleClick = () => {
-        this.setState({
-            clicked: true,
-        });
+        this.setState({ clicked: true });
     };
 
     // Determines if user accepted the privacy policy
     handlePrivacy = () => {
-        this.setState({
-            accepted: !this.state.accepted,
-        });
-        setTimeout(() => {
-            console.log(this.state.accepted);
-        }, 2000);
+        this.setState({ accepted: !this.state.accepted });
     };
 
     // Handles the two special Buttons student and teacher
     handleSpecial(e, data) {
         e.preventDefault();
-        console.log(data);
         let student = true;
-        if (data == 'Teacher') student = false;
+        if (data === 'Teacher') student = false;
 
-        this.setState({
-            role: data,
-            isStudent: student,
-        });
+        this.setState({ role: data, isStudent: student });
     }
 
     // Toggeles the password field to text - toggles the icon in the jsx (ternary statement below)
@@ -135,8 +120,6 @@ class Register extends React.Component {
 		Password: ${this.state.password}
 		Role: ${this.state.role}
 		`);
-        } else {
-            console.log('FORM INVALID - ERROR MSG');
         }
     };
 
@@ -231,66 +214,65 @@ class Register extends React.Component {
                                             </div>
                                         </span>
                                     );
-                                } else {
-                                    return (
-                                        <span className="input-container">
-                                            <div className="input-box">
-                                                <input
-                                                    onChange={this.handleChange}
-                                                    type="text"
-                                                    name="firstName"
-                                                    value={this.state.firstName}
-                                                    placeholder="Vorname"
-                                                    className="input-field"
-                                                    noValidate
-                                                />
-                                            </div>
-                                            <div className="input-box">
-                                                <input
-                                                    onChange={this.handleChange}
-                                                    type="text"
-                                                    name="lastName"
-                                                    value={this.state.lastName}
-                                                    placeholder="Nachname"
-                                                    className="input-field"
-                                                    required
-                                                />
-                                            </div>
-                                            <div className="btn-group role-btn">
-                                                <div
-                                                    onClick={(e) => this.handleSpecial(e, 'Student')}
-                                                    className={
-                                                        this.state.isStudent
-                                                            ? 'btn-special-button btn-special-button1 btn active'
-                                                            : 'btn-special-button btn-special-button1 btn'
-                                                    }>
-                                                    <UserIcon stroke="black" />
-                                                    <span>Student</span>
-                                                </div>
-
-                                                <div
-                                                    onClick={(e) => this.handleSpecial(e, 'Teacher')}
-                                                    className={
-                                                        this.state.isStudent
-                                                            ? 'btn-special-button btn-special-button2 btn'
-                                                            : 'btn-special-button btn-special-button2 btn active'
-                                                    }>
-                                                    <span>Teacher</span>
-                                                    <TeacherIcon />
-                                                </div>
-                                            </div>
-
-                                            <div className="btn-ui-container">
-                                                <button
-                                                    onClick={this.handleClick}
-                                                    className="btn-ui btn-weiter"
-                                                    type="button">
-                                                    Weiter
-                                                </button>
-                                            </div>
-                                        </span>
-                                    );
                                 }
+                                return (
+                                    <span className="input-container">
+                                        <div className="input-box">
+                                            <input
+                                                onChange={this.handleChange}
+                                                type="text"
+                                                name="firstName"
+                                                value={this.state.firstName}
+                                                placeholder="Vorname"
+                                                className="input-field"
+                                                noValidate
+                                            />
+                                        </div>
+                                        <div className="input-box">
+                                            <input
+                                                onChange={this.handleChange}
+                                                type="text"
+                                                name="lastName"
+                                                value={this.state.lastName}
+                                                placeholder="Nachname"
+                                                className="input-field"
+                                                required
+                                            />
+                                        </div>
+                                        <div className="btn-group role-btn">
+                                            <div
+                                                onClick={(e) => this.handleSpecial(e, 'Student')}
+                                                className={
+                                                    this.state.isStudent
+                                                        ? 'btn-special-button btn-special-button1 btn active'
+                                                        : 'btn-special-button btn-special-button1 btn'
+                                                }>
+                                                <UserIcon stroke="black" />
+                                                <span>Student</span>
+                                            </div>
+
+                                            <div
+                                                onClick={(e) => this.handleSpecial(e, 'Teacher')}
+                                                className={
+                                                    this.state.isStudent
+                                                        ? 'btn-special-button btn-special-button2 btn'
+                                                        : 'btn-special-button btn-special-button2 btn active'
+                                                }>
+                                                <span>Teacher</span>
+                                                <TeacherIcon />
+                                            </div>
+                                        </div>
+
+                                        <div className="btn-ui-container">
+                                            <button
+                                                onClick={this.handleClick}
+                                                className="btn-ui btn-weiter"
+                                                type="button">
+                                                Weiter
+                                            </button>
+                                        </div>
+                                    </span>
+                                );
                             })()}
                         </div>
                     </form>

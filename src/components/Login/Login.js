@@ -5,42 +5,26 @@ import eye from '../../assets/icons/eye.svg';
 import eyeOff from '../../assets/icons/eye-off.svg';
 
 class Login extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {
-        email: '',
-        password: '',
-    };
+    state = { email: '', password: '' };
 
     handleEmailChange = (event) => {
         this.setState({ email: event.target.value });
-        console.log(this.state.email);
     };
 
     handlePasswortChange = (event) => {
         this.setState({ password: event.target.value });
-        console.log(this.state.password);
     };
 
     handleSubmit = (event) => {
         event.preventDefault();
 
-        const user = {
-            email: this.state.email,
-            password: this.state.password,
-        };
+        const user = { email: this.state.email, password: this.state.password };
 
         const response = axios.post(`https://jsonplaceholder.typicode.com/users`, { user }).then(
             (res) => {
-                /*axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => {*/
-                console.log(res);
-                console.log(res.data);
+                /* axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => { */
             },
-            (onerror) => {
-                console.log('False Data');
-            }
+            (onerror) => {}
         );
         if (response) {
             this.props.history.push('/dashboard');
@@ -51,9 +35,9 @@ class Login extends Component {
      * @public
      */
     changeVisibility() {
-        let passwortType = document.getElementById('password');
-        let hiddenEye = document.getElementById('hide1');
-        let openEye = document.getElementById('hide2');
+        const passwortType = document.getElementById('password');
+        const hiddenEye = document.getElementById('hide1');
+        const openEye = document.getElementById('hide2');
 
         if (passwortType.type === 'password') {
             passwortType.type = 'text';
@@ -69,11 +53,11 @@ class Login extends Component {
     render() {
         return (
             <div className="login-component">
-                {/*describes the login-popup*/}
+                {/* describes the login-popup */}
                 <form className="box" onSubmit={this.handleSubmit} action="loginPop.html" method="post">
                     <div className="boxinhalt">
                         <h1 className="headline">L O G I N</h1>
-                        {/*describes the email-input-box*/}
+                        {/* describes the email-input-box */}
                         <div className="input-box">
                             <input
                                 type="text"
@@ -84,7 +68,7 @@ class Login extends Component {
                                 onChange={this.handleEmailChange}
                             />
                         </div>
-                        {/*describes the password-input-box*/}
+                        {/* describes the password-input-box */}
                         <div className="input-box">
                             <input
                                 type="password"
@@ -94,13 +78,13 @@ class Login extends Component {
                                 required
                                 onChange={this.handlePasswortChange}
                             />
-                            {/*describes the two eye-icons in the field*/}
+                            {/* describes the two eye-icons in the field */}
                             <span className="eye" onClick={this.changeVisibility}>
                                 <img className="hide1" src={eye} />
                                 <img className="hide2" src={eyeOff} />
                             </span>
                         </div>
-                        {/*describes the google-login-field*/}
+                        {/* describes the google-login-field */}
                         <button className="pointer google-login">
                             <img
                                 className="google-bild"

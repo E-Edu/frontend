@@ -11,13 +11,13 @@ class TaskEvaluation extends React.Component {
             <div>
                 <div className="result">
                     <div className="result-container">
-                        {' '}
-                        //TODO: Result -> Evaluation
+                        {/* //TODO: Result -> Evaluation */}
                         <TaskHeader module="Mathe" />
                         <div className="result-evaluation">
                             <span>Auswertung</span>
                             <p>
-                                Korrekte Fragen:<span> 7 von 10 </span>
+                                Korrekte Fragen:
+                                <span> 7 von 10 </span>
                             </p>
                         </div>
                         <div className="result-pointcount">

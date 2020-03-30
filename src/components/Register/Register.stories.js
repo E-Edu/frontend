@@ -1,7 +1,7 @@
 import React from 'react';
-import Register from './Register';
 import { withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import Register from './Register';
 
 const stories = storiesOf('register', module);
 stories.addDecorator(withKnobs);

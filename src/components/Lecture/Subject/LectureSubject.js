@@ -1,13 +1,9 @@
 import React from 'react';
 import './LectureSubject.scss';
-import CodepenIcon from '../../icons/codepen.icon';
 import { Link } from 'react-router-dom';
+import CodepenIcon from '../../icons/codepen.icon';
 
 class LectureSubject extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="lecture-subject-wrapper">

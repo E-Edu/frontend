@@ -1,9 +1,6 @@
 import React from 'react';
-import Calender_icon from '../../components/icons/calender.icon.js';
 import Tags_icon from '../../assets/icons/tag.svg';
-import User_icon from '../../components/icons/user.icon.js';
 import Task_icon from '../../assets/icons/pencile.svg';
-import Trending_icon from '../../components/icons/trending-up.icon.js';
 import File from '../../assets/icons/file-text.svg';
 import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
@@ -11,11 +8,14 @@ import './Profile.scss';
 import '../../css/main.css';
 import Data from '../../lib/Colors.json';
 import { Translation } from '../../i18n/i18n';
+import UserIcon from '../../components/icons/user.icon';
+import TrendingUpIcon from '../../components/icons/trending-up.icon';
+import CalenderIcon from '../../components/icons/calender.icon';
 
 class ProfileSubject extends React.Component {
     render() {
-        const subject = this.props.subject;
-        const border = '0.73333335rem solid ' + Data['subjectColor'][subject];
+        const { subject } = this.props;
+        const border = `0.73333335rem solid ${Data.subjectColor[subject]}`;
 
         return (
             <div className="profile-subjekt" style={{ borderLeft: border }}>
@@ -25,10 +25,10 @@ class ProfileSubject extends React.Component {
                     </div>
                     <div className="text">
                         <div className="profile-subjekt-name">
-                            <span className="title">{Translation.t('subject.' + subject + '.name')}</span>
+                            <span className="title">{Translation.t(`subject.${subject}.name`)}</span>
                         </div>
                         <div className="profile-subjekt-underline">
-                            <span className="fach-info">{Translation.t('subject.' + subject + '.description')}</span>
+                            <span className="fach-info">{Translation.t(`subject.${subject}.description`)}</span>
                         </div>
                     </div>
                 </div>
@@ -48,10 +48,10 @@ class ProfileCertificate extends React.Component {
                         <p className="badge-title">{this.props.Title}</p>
                     </div>
                     <div className="date-certificate">
-                        <p className="date">Erreicht am {this.props.Datum}</p>
+                        <p className="date">Erreicht am{this.props.Datum}</p>
                     </div>
                 </div>
-                <img className="download-image" src={Download} alt="download" />
+                <img className="download-image" src={Download} alt="download" />;
             </div>
         );
     }
@@ -62,14 +62,7 @@ class Profile extends React.Component {
         super(props);
     }
 
-    state = {
-        username: 'Morpheus',
-        disabled: true,
-    };
-
-    componentDidUpdate() {
-        console.log(this.state);
-    }
+    state = { username: 'Morpheus', disabled: true };
 
     usernameClickListener = () => {
         this.state.disabled = !this.state.disabled;
@@ -78,7 +71,7 @@ class Profile extends React.Component {
 
     usernameChangeListener = () => {
         this.state.username = document.getElementById('usernameInput').value;
-        //TODO: Send data to backend
+        // TODO: Send data to backend
         this.setState(this.state);
     };
 
@@ -120,7 +113,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="user img user-icon">
-                                        <User_icon alt="user icon" stroke="#3A506B" />
+                                        <UserIcon alt="user icon" stroke="#3A506B" />
                                     </span>
                                     <span>6.526</span>
                                     <span className="var-info profile-span-padding-l">
@@ -134,7 +127,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="trending img trending-icon">
-                                        <Trending_icon width="24" height="30" stroke="#3A506B" alt="trending" />
+                                        <TrendingUpIcon width="24" height="30" stroke="#3A506B" alt="trending" />
                                     </span>
                                     <span>7.231</span>
                                     <span className="var-info profile-span-padding-l">
@@ -148,7 +141,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="calender img calender-icon">
-                                        <Calender_icon alt="calendar" stroke="#3A506B" />
+                                        <CalenderIcon alt="calendar" stroke="#3A506B" />
                                     </span>
                                     <span className="profile-span-padding-r">
                                         {Translation.t('profile.memberSince')}

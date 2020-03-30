@@ -1,109 +1,53 @@
 import React from 'react';
 import './TaskList.scss';
+import { Link } from 'react-router-dom';
 import UsersIcon from '../../components/icons/user.icon.js';
 import UserIcon from '../../components/icons/users.icon.js';
-import Award from '../../components/icons/award.icon';
 import Search from '../../components/icons/search.icon';
-import colorData from '../../lib/Colors';
-import { Link } from 'react-router-dom';
 import { Translation } from '../../i18n/i18n';
-
-class Task extends React.Component {
-    render() {
-        const name = this.props.name;
-        const difficulty = this.props.difficulty;
-        const description = this.props.description;
-        const questions = this.props.questions;
-        const rightQuestions = this.props.rightQuestions;
-        const color = colorData.difficultyColor[difficulty];
-        const backgroundColor = color.backgroundColor;
-        const borderColor = color.borderColor;
-
-        return (
-            <div className="task">
-                <div className="task-head">
-                    <span>{name}</span>
-                    <div className="task-head-elements">
-                        <div className="task-element">
-                            <span>{questions}</span>
-                            <span>{Translation.t('taskList.questions')}</span>
-                        </div>
-                        <div className="task-element">
-                            <Award className="icon" stroke="#3A506B" />
-                            <span>{rightQuestions}</span>
-                        </div>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor: backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor: borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t('difficulty.' + difficulty)}
-                        </span>
-                    </div>
-                </div>
-                <div className="task-bottom">
-                    <span>{description}</span>
-                </div>
-            </div>
-        );
-    }
-}
+import Task from '../../components/Task/Task/Task';
 
 class TaskList extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { search: '', tasks: [] };
     }
-
-    state = {
-        search: '',
-        tasks: [],
-    };
 
     OnChangeSearch = () => {
         this.state.search(document.getElementById('site-search').value);
-        //TODO: Backend request
-        this.setState(this.state);
+        // TODO: Backend request
+        this.setState((prevState) => ({ prevState }));
+        this.loadFakeData();
     };
 
     loadFakeData() {
         this.state.tasks.push(
             {
+                id: 'ee035b07-b1b1-43e8-a5a7-13ecba5eaa50',
                 description: 'A short description what to do in this task',
                 difficulty: 'easy',
             },
             {
+                id: 'c0764f51-6c75-44d7-a16f-77cfcce1672f',
                 description: 'A short description what to do in this task',
                 difficulty: 'medium',
             },
             {
+                id: 'eacbd1ab-5c8b-49dc-b68e-223b7746fa93',
                 description: 'A short description what to do in this task',
                 difficulty: 'hard',
             }
         );
 
-        this.setState(this.state);
-    }
-
-    componentDidMount() {
-        this.loadFakeData();
+        this.setState((task) => ({ task }));
     }
 
     renderTasks() {
         return this.state.tasks.map((task, index) => {
             return (
-                <Link key={index} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
-                        name={Translation.t('taskList.task') + ' ' + (index + 1)}
+                        name={`${Translation.t('taskList.task')} ${index + 1}`}
                         questions="12"
                         rightQuestions="10"
                         difficulty={task.difficulty}

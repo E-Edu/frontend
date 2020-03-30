@@ -3,19 +3,16 @@ import './CorrectionReviewBoxes.scss';
 import Calendar from '../../assets/icons/calendar.svg';
 import User from '../../assets/icons/user.svg';
 import Edit from '../../assets/icons/edit.svg';
+import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
 
 class CorrectionReviewBoxes extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <span className="correction-box">
                 <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
                     <div className="correction-difficulty">
-                        <p>Leicht </p>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div className="correction-box-bottom">

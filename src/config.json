@@ -1,5 +1,5 @@
 {
-  "apiUser": "https://user.e-edu.the-morpheus.de/",
-  "apiReport": "https://report.e-edu.the-morpheus.de/",
-  "apiTask": "https://task.e-edu.the-morpheus.de/"
+    "apiUser": "https://user.e-edu.the-morpheus.de/",
+    "apiReport": "https://report.e-edu.the-morpheus.de/",
+    "apiTask": "https://task.e-edu.the-morpheus.de/"
 }

@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import './PageLayout.scss';
+import { withRouter } from 'react-router-dom';
 import Header from '../../Header/Header';
 import Sidebar from '../../Sidebar/Sidebar';
 import Footer from '../../Footer/Footer';
-import { withRouter } from 'react-router-dom';
 
 class PageLayout extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {
-        visible: false,
-    };
+    state = { visible: false };
 
     hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
 
     renderSitebar() {
         const route = this.props.location.pathname;
-        /*this.setState(() => {
+        /* this.setState(() => {
             return {visible: true};
-        });*/
+        }); */
         return this.hiddenSidebarPages.includes(route);
     }
 
@@ -39,7 +33,7 @@ class PageLayout extends Component {
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>
-                }*/}
+                } */}
                 <Footer visible={!this.renderSitebar()} />
             </div>
         );

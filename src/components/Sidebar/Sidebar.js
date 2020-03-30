@@ -6,7 +6,11 @@ import icons from './icons';
 class MenuElement extends Component {
     constructor(props) {
         super(props);
-        this.state = { active: props.active, file: props.file, name: props.name };
+        this.state = {
+            active: props.active,
+            file: props.file,
+            name: props.name,
+        };
     }
 
     setActivity(activity) {
@@ -53,7 +57,7 @@ class MenuElement extends Component {
                         margin: '0 0.8rem',
                         overflowWrap: 'break-word',
                         textAlign: 'center',
-                        color: color,
+                        color,
                     }}>
                     {this.state.name}
                 </p>
@@ -64,7 +68,7 @@ class MenuElement extends Component {
         return [
             spacer,
             <Link
-                to={'/' + this.props.url}
+                to={`/${this.props.url}`}
                 className="menu-element"
                 key={this.state.file}
                 style={{ display: 'block' }}
@@ -86,7 +90,7 @@ class Sidebar extends Component {
     render() {
         const permission = 3; // TODO get this from user-ms
         const sites = [
-            //Name, icon name, route, permission, spacer before it
+            // Name, icon name, route, permission, spacer before it
             ['Home', 'home', 'dashboard', 0],
             ['Aufgaben', 'edit', 'task', 0],
             ['Neue Aufgabe', 'plus-circle', 'dashboard', 2, true],
@@ -95,7 +99,7 @@ class Sidebar extends Component {
             ['Reports', 'alert-circle', 'reports/list', 3, true],
             ['Lehrer hinzufügen', 'teacher', 'teacher/add', 3],
         ];
-        let sitesHtml = sites.map((site) => {
+        const sitesHtml = sites.map((site) => {
             if (permission >= site[3]) {
                 return (
                     <MenuElement
@@ -123,7 +127,7 @@ class Sidebar extends Component {
                         file="settings"
                         url="settings"
                         active={this.state.activeName === 'settings'}
-                        spacer={true}
+                        spacer
                     />
                     <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'profile'} />
                 </div>

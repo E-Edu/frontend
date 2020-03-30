@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './ReportsList.scss';
+import Modal from 'react-animated-modal';
 import icon_info from '../../../assets/icons/info.svg';
 import icon_mail from '../../../assets/icons/mail.svg';
 import icon_teacher from '../../../assets/icons/teacher.svg';
 import ThumbsUpIcon from '../../../components/icons/thumbs-up.icon';
 import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
 import ReportInfo from '../../../components/ReportInfo/ReportInfo';
-import Modal from 'react-animated-modal';
+import DifficultyLabel from '../../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import colorData from '../../../lib/Colors';
-import { Translation } from '../../../i18n/i18n';
 
 class Report extends Component {
     constructor(props) {
@@ -25,13 +25,13 @@ class Report extends Component {
         subject: this.props.subject,
         like: this.props.liked || 0,
         thumbsInactive: '#3A506B',
-        thumbGreen: colorData.difficultyColor['easy'].border,
-        thumbRed: colorData.difficultyColor['hard'].border,
+        thumbGreen: colorData.difficultyColor.easy.border,
+        thumbRed: colorData.difficultyColor.hard.border,
     };
 
     like = () => {
-        let likes = this.state.likes;
-        let dislikes = this.state.dislikes;
+        const { likes } = this.state;
+        const { dislikes } = this.state;
         if (this.state.like === 1) {
             this.setState({ like: 0, likes: likes - 1 });
         } else {
@@ -43,8 +43,8 @@ class Report extends Component {
     };
 
     dislike = () => {
-        let likes = this.state.likes;
-        let dislikes = this.state.dislikes;
+        const { likes } = this.state;
+        const { dislikes } = this.state;
         if (this.state.like === 2) {
             this.setState({ like: 0, dislikes: dislikes - 1 });
         } else {
@@ -76,13 +76,13 @@ class Report extends Component {
     };
 
     render() {
-        const difficulty = this.state.difficulty;
+        const { difficulty } = this.state;
         const color = colorData.difficultyColor[difficulty];
-        const backgroundColor = color.backgroundColor;
-        const borderColor = color.borderColor;
-        const subject = this.props.subject;
-        const messages = this.props.messages;
-        const teacher = this.props.teacher;
+        const { backgroundColor } = color;
+        const { borderColor } = color;
+        const { subject } = this.props;
+        const { messages } = this.props;
+        const { teacher } = this.props;
 
         return (
             <div className="report-component text-dark">
@@ -142,23 +142,7 @@ class Report extends Component {
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor: backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor: borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t('difficulty.' + difficulty)}
-                        </span>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div
