@@ -1,10 +1,10 @@
 @import '../../../src/css/styles';
 
 .page {
-  width: available;
   margin-left: 2rem;
   margin-right: 2rem;
   max-width: 100%;
+  width: available;
 
   @media (max-width: 30rem) {
     margin-left: 0;
