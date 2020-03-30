@@ -13,6 +13,5 @@ jobs:
           node-version: '12.x'
       - run: npm install
       - run: npm install -g react-scripts
-      - run: npm run lint:eslint
       - run: npm run lint:prettier
       - run: npm run lint:style
