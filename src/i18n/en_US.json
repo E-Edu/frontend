@@ -79,6 +79,12 @@
             },
             "favoriteSubjects": "Favorite Subjects",
             "certificates": "Certificates"
+        },
+        "addTeacher": {
+            "title": "Add teacher",
+            "emailOfTeacher": "Teachers email",
+            "pendingRequests": "Pending requests",
+            "noPendingRequests": "No pending requests"
         }
     }
 }

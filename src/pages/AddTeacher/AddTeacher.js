@@ -1,100 +1,52 @@
-import React, { Component } from 'react';
-import './AddTeacher.scss';
-import icon_mail from '../../assets/icons/mail.svg';
-import icon_x from '../../assets/icons/x.svg';
-import icon_teacher from '../../assets/icons/teacher.svg';
-import icon_user_plus from '../../assets/icons/user-plus.svg';
-import CheckIcon from '../../components/icons/check.icon';
-
-class AddRequest extends Component {
-    render() {
-        return (
-            <div className="add-teacher-report-component text-dark">
-                <div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        marginTop: 10,
-                    }}>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={icon_teacher} alt="teacher-icon" />
-                        <span style={{ marginLeft: 10 }}>{this.props.name}</span>
-                    </div>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span>Ablehnen</span>
-                        <img style={{ marginLeft: 20 }} src={icon_x} alt="x-icon" />
-                    </div>
-                </div>
-                <div
-                    style={{
-                        marginTop: 20,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                    }}>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={icon_mail} alt="mail-icon" />
-                        <span style={{ marginLeft: 10 }}>{this.props.email}</span>
-                    </div>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span style={{ marginRight: 20 }}>Annehmen</span>
-                        <CheckIcon stroke="#19BA3F" />
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+import React, { Component } from "react";
+import "./AddTeacher.scss";
+import icon_user_plus from "../../assets/icons/user-plus.svg";
+import Page from "../../components/Page/Page";
+import TextInput from "../../components/Input/TextBox/TextInput";
+import { Translation } from "../../i18n/i18n";
+import AddTeacherRequest from "./AddTeacherRequest/AddTeacherRequest";
 
 class AddTeacher extends Component {
+
     constructor(props) {
         super(props);
-        this.state = { valid: '' };
     }
+
+    state = {
+        validEmail: false,
+        email: "",
+        pendingRequests: [
+            ["Herr Lehrer Mustermann", "lehrer.mustermann@lehrer-mail.de"],
+            ["Herr Lehrer Mustermann2", "lehrer.mustermann2@lehrer-mail.de"]
+        ]
+    };
 
     isValidEmail() {
         const regex =
+<<<<<<< HEAD
             '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])';
         const email = document.getElementById('teacherEmail').value;
         return email.match(regex) !== null;
+=======
+            "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])";
+        return this.state.email.match(regex) !== null;
+>>>>>>> Implemented teacher requests
     }
 
-    emailChange = () => {
-        if (this.isValidEmail()) {
-            this.setState({ valid: '' });
-        } else {
-            this.setState({ valid: 'AddTeacherInvalid' });
-        }
+    emailChange = (event) => {
+        this.state.email = event.target.value;
+        this.state.validEmail = this.isValidEmail();
+        console.log(this.state);
+        this.setState(this.state);
     };
 
     add = () => {
-        if (this.isValidEmail()) {
-            alert('Teacher added');
-            document.getElementById('teacherEmail').value = '';
-        } else {
-            this.setState({ valid: 'AddTeacherInvalid' });
-        }
+        this.state.validEmail = this.isValidEmail();
+        this.setState(this.state);
+        if (this.state.validEmail) alert("Teacher added");
     };
 
+<<<<<<< HEAD
     render() {
         const pendingRequests = [
             ['Herr Lehrer Mustermann', 'lehrer.mustermann@lehrer-mail.de'],
@@ -115,9 +67,19 @@ class AddTeacher extends Component {
                     key={request[0]}>
                     <AddRequest name={request[0]} email={request[1]} />
                 </div>
+=======
+    renderRequests() {
+        return this.state.pendingRequests.map((request, index) => {
+            return (
+                <AddTeacherRequest key={index} name={request[0]} email={request[1]}/>
+>>>>>>> Implemented teacher requests
             );
         });
+    }
+
+    render() {
         return (
+<<<<<<< HEAD
             <div>
                 <div className="main">
                     <div style={{ marginLeft: 50 }}>
@@ -148,8 +110,34 @@ class AddTeacher extends Component {
                         <h1>{requestsHeadline}</h1>
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column' }}>{requestsText}</div>
+=======
+            <Page
+                mainTitle={Translation.t("addTeacher.title")}>
+                <div className="add-teacher">
+                    <TextInput
+                        shadow={this.state.validEmail || this.state.email === "" ? "" : "red"}
+                        maxWidth="30rem"
+                        placeholder={Translation.t("addTeacher.emailOfTeacher")}
+                        onChange={this.emailChange}
+                        className="test"
+                    />
+                    <img
+                        className="add-teacher-button"
+                        src={icon_user_plus}
+                        alt="user-plus-icon"
+                        onClick={this.add}
+                    />
                 </div>
-            </div>
+                <h1 className="requests-title">{
+                    Translation.t(
+                        "addTeacher." + (this.state.pendingRequests.length === 0 ? "noP" : "p") + "endingRequests"
+                    )
+                }</h1>
+                <div className="pending-requests">
+                    {this.renderRequests()}
+>>>>>>> Implemented teacher requests
+                </div>
+            </Page>
         );
     }
 }

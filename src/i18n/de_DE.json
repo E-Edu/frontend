@@ -80,5 +80,51 @@
             "favoriteSubjects": "Favorisierte Fächer",
             "certificates": "Zertifikate"
         }
+      }
+    },
+    "landingPage": {
+      "title": "Education for everyone",
+      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>\"The Morpheus Tutorials\"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
+    },
+    "taskList": {
+      "questions": "Fragen",
+      "task": "Aufgabe",
+      "points": "Punkte",
+      "search": "Suche"
+    },
+    "difficulty": {
+      "easy": "Leicht",
+      "medium": "Mittel",
+      "hard": "Schwer"
+    },
+    "task": {
+      "question": "Frage",
+      "questions": "Fragen",
+      "points": "Punkte",
+      "of": "von",
+      "answer": "Antwort",
+      "skip": "Überspringen",
+      "nextTask": "Nächste Aufgabe"
+    },
+    "settings": {
+      "settings": "Einstellungen",
+      "email": "Email",
+      "password": "Passwort",
+      "change": "Ändern",
+      "language": "Sprache"
+    },
+    "profile": {
+      "memberSince": "Dabei seit",
+      "rank": {
+        "teachingMaster": "Der Lehrende Meister"
+      },
+      "favoriteSubjects": "Favorisierte Fächer",
+      "certificates": "Zertifikate"
+    },
+    "addTeacher": {
+      "title": "Lehrer hinzufügen",
+      "emailOfTeacher": "Email des Lehrers",
+      "pendingRequests": "Ausstehende Anfragen",
+      "noPendingRequests": "Keine ausstehenden Anfragen"
     }
 }

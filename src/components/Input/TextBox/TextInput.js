@@ -10,16 +10,16 @@ class TextInput extends Component {
     render() {
         const { placeholder } = this.props;
         const { onChange } = this.props;
-        const { width } = this.props;
+        const { maxWidth } = this.props;
         let { shadow } = this.props;
 
         const style = {};
 
-        if (width) style.maxWidth = width;
+        if (maxWidth) style.maxWidth = maxWidth;
         if (shadow !== undefined) {
             switch (shadow) {
                 case "red": {
-                    shadow = "inset 0 0 0.33333334rem 0 rgba(255, 0, 0, 1)";
+                    shadow = "inset 0 0 0.33rem 0 rgba(255, 0, 0, 1)";
                     break;
                 }
 
