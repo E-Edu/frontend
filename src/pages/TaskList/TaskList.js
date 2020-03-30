@@ -29,7 +29,7 @@ class Task extends React.Component {
                             <Award className="icon" stroke="#3A506B" />
                             <span>{rightQuestions}</span>
                         </div>
-                        <DifficultyLabel difficulty={this.props.difficulty}/>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div className="task-bottom">

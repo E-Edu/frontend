@@ -17,15 +17,15 @@ class CorrectionReviewBoxes extends Component {
                 </div>
                 <div className="correction-box-bottom">
                     <div className="correction-pupil">
-                        <img src={User} />
+                        <img src={User}/>
                         <p> Max Musterman</p>
                     </div>
                     <div className="correction-date">
-                        <img src={Calendar} />
+                        <img src={Calendar}/>
                         <p> Vor 3 Tagen</p>
                     </div>
                     <div className="correction-correct">
-                        <img src={Edit} />
+                        <img src={Edit}/>
                         <p>Korrigieren </p>
                     </div>
                 </div>

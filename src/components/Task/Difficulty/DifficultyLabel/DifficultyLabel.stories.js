@@ -7,5 +7,5 @@ const stories = storiesOf('difficultylabel', module);
 stories.addDecorator(withKnobs);
 
 stories.add('default', () => {
-    return <DifficultyLabel difficulty="medium"/>;
+    return <DifficultyLabel difficulty="medium" />;
 });

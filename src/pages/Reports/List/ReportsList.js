@@ -133,7 +133,7 @@ class Report extends Component {
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <DifficultyLabel difficulty={this.props.difficulty}/>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div
