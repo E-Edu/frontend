@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header';
 import { radios, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import Header from './Header';
 
 const stories = storiesOf('header', module);
 stories.addDecorator(withKnobs);

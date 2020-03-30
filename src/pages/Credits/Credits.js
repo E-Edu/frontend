@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import './Credits.scss';
 
 class Credits extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {};
-
     render() {
         return (
             <div className="credits">

@@ -1,7 +1,7 @@
 import React from 'react';
-import LectureGroup from './LectureGroup';
 import { object, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import LectureGroup from './LectureGroup';
 
 const stories = storiesOf('lectureGroup', module);
 stories.addDecorator(withKnobs);

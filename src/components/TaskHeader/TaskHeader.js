@@ -1,13 +1,9 @@
 import React from 'react';
 import './TaskHeader.scss';
-import UserIcon from '../../components/icons/user.icon';
-import UsersIcon from '../../components/icons/users.icon';
+import UserIcon from '../icons/user.icon';
+import UsersIcon from '../icons/users.icon';
 
 class TaskHeader extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="task-header">

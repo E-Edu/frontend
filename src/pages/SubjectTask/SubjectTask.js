@@ -1,20 +1,13 @@
 import React from 'react';
 import './SubjectTask.scss';
 
+import { Link } from 'react-router-dom';
 import User from '../../assets/icons/user.svg';
 import Users from '../../assets/icons/users.svg';
-import { Link } from 'react-router-dom';
 import { Translation } from '../../i18n/i18n';
 
 class SubjectTask extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {
-        currentQuestion: 4,
-        maxQuestion: 10,
-    };
+    state = { currentQuestion: 4, maxQuestion: 10 };
 
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
 
@@ -30,7 +23,7 @@ class SubjectTask extends React.Component {
     }
 
     render() {
-        //TODO: Pass these arguments
+        // TODO: Pass these arguments
         const taskTitle = 'Äpfel und Birnen';
         const description =
             'Peter hat 3 Äpfel und 4 Birnen. Er gibt Lena 2 Äpfel und 1 Birne ab.\n' + 'Wieviele Äpfel hat Peter noch?';
@@ -45,10 +38,10 @@ class SubjectTask extends React.Component {
                             <div className="subject-task-content-header">
                                 <div className="subject-task-left">
                                     <span className="subject-task-subject">
-                                        {Translation.t('subject.' + subject + '.name')}
+                                        {Translation.t(`subject.${subject}.name`)}
                                     </span>
                                     <span className="subject-task-module">
-                                        {Translation.t('lection.' + subject + '.' + lection + '.name')}
+                                        {Translation.t(`lection.${subject}.${lection}.name`)}
                                     </span>
                                 </div>
                                 <div className="subject-task-right">
@@ -69,7 +62,7 @@ class SubjectTask extends React.Component {
 
                             <div className="progress-display">
                                 <span>
-                                    {Translation.t('task.question')} 4 {Translation.t('task.of')} 10{' '}
+                                    {Translation.t('task.question')} 4{Translation.t('task.of')} 10 10{' '}
                                 </span>
                                 <div className="progress-bar">
                                     <div

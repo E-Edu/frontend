@@ -15,11 +15,11 @@ class Header extends Component {
                             <h1 className="title">E-EDU</h1>
                         </div>
                         <div className="button-box-landing">
-                            {/*TODO Route zurück auf /login /register*/}
-                            <Link className="btn-log btn-login" to={'/dashboard'}>
+                            {/* TODO Route zurück auf /login /register */}
+                            <Link className="btn-log btn-login" to="/dashboard">
                                 LOGIN
                             </Link>
-                            <Link className="btn-log btn-register" to={'/dashboard'}>
+                            <Link className="btn-log btn-register" to="/dashboard">
                                 REGISTER
                             </Link>
                         </div>
@@ -28,7 +28,7 @@ class Header extends Component {
             case 'Dashboard':
                 return (
                     <div className="header-navbar">
-                        <Link to={'/'} style={{ textDecoration: 'none' }}>
+                        <Link to="/" style={{ textDecoration: 'none' }}>
                             <div className="logo">
                                 <img className="logo-img" src="/assets/logo.svg" alt="" />
                                 <h1 className="title">E-EDU</h1>

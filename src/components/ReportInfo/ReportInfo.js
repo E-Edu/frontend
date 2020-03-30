@@ -4,17 +4,7 @@ import down from '../../assets/icons/thumbs-down.svg';
 import up from '../../assets/icons/thumbs-up.svg';
 import mail from '../../assets/icons/mail.svg';
 import teacher from '../../assets/icons/teacher.svg';
-/*
-    -subject
-    -theme
-    -themeart
-    -Dislikes
-    -Likes
-    -teacher
-    -messages
-    -TaskName
-    -TaskText
- */
+
 class ReportInfo extends Component {
     constructor() {
         super();
@@ -31,16 +21,15 @@ class ReportInfo extends Component {
                 'Peter hat 3 Äpfel und 4 Birnen. Er gibt 2 Äpfel und 1 Birne ab.  Wie viele Äpfel hat Peter noch?',
         };
     }
-    handleClick = () => {
-        console.log('Hi');
-    };
+
+    handleClick = () => {};
 
     render() {
         return (
             <div className="reportcontainer">
                 <div className="top-infos">
                     <div className="subject-path">
-                        {this.state.subject} | {this.state.theme} | {this.state.themeart}
+                        {this.state.subject} |{this.state.theme} |{this.state.themeart}
                     </div>
 
                     <div className="infos-right">

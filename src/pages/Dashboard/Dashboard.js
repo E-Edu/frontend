@@ -1,20 +1,20 @@
 import React from 'react';
 import './Dashboard.scss';
+import { Link } from 'react-router-dom';
+import { gql } from 'apollo-boost';
 import CalenderIcon from '../../components/icons/calender.icon.js';
 import UserIcon from '../../components/icons/user.icon';
 import UsersIcon from '../../components/icons/users.icon';
 import Data from '../../lib/Colors';
 import File from '../../components/icons/file-text.icon.js';
-import { Link } from 'react-router-dom';
 import Query from '../../lib/api/Query';
-import { gql } from 'apollo-boost';
 import { Translation } from '../../i18n/i18n';
 
 class Subjekt extends React.Component {
     render() {
-        const subject = this.props.subject;
-        const color = this.props.color;
-        const border = '0.73333335rem solid ' + color;
+        const { subject } = this.props;
+        const { color } = this.props;
+        const border = `0.73333335rem solid ${color}`;
 
         return (
             <div className="subjekt" style={{ borderLeft: border }}>
@@ -52,9 +52,7 @@ class Subjekt extends React.Component {
 }
 
 class dashboard extends React.Component {
-    state = {
-        subjects: [],
-    };
+    state = { subjects: [] };
 
     navigate(path) {
         this.props.history.push(`/${path}`);
@@ -62,33 +60,19 @@ class dashboard extends React.Component {
 
     loadFakeData() {
         this.state.subjects.push(
-            {
-                nameKey: 'german',
-            },
-            {
-                nameKey: 'computerScience',
-            },
-            {
-                nameKey: 'history',
-            },
-            {
-                nameKey: 'politics',
-            },
-            {
-                nameKey: 'physics',
-            },
-            {
-                nameKey: 'biology',
-            },
-            {
-                nameKey: 'chemistry',
-            }
+            { nameKey: 'german' },
+            { nameKey: 'computerScience' },
+            { nameKey: 'history' },
+            { nameKey: 'politics' },
+            { nameKey: 'physics' },
+            { nameKey: 'biology' },
+            { nameKey: 'chemistry' }
         );
     }
 
     async loadSubjects() {
-        let subjects = [];
-        let result = await Query.queryGQL(gql`
+        const subjects = [];
+        const result = await Query.queryGQL(gql`
             query {
                 subjectById(subjectId: 0) {
                     displayName
@@ -96,13 +80,10 @@ class dashboard extends React.Component {
             }
         `);
 
-        console.log(result);
-        subjects.push({
-            displayName: result.data.subjectById.displayName,
-        });
+        subjects.push({ displayName: result.data.subjectById.displayName });
 
         // push our new states
-        for (let subject of subjects) this.state.subjects.push(subject);
+        for (const subject of subjects) this.state.subjects.push(subject);
 
         // refresh the state
         this.setState(this.state);
@@ -113,9 +94,9 @@ class dashboard extends React.Component {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subjekt
-                        subject={Translation.t('subject.' + subject.nameKey + '.name')}
-                        Underline={Translation.t('subject.' + subject.nameKey + '.description')}
-                        color={Data['subjectColor'][subject.nameKey]}
+                        subject={Translation.t(`subject.${subject.nameKey}.name`)}
+                        Underline={Translation.t(`subject.${subject.nameKey}.description`)}
+                        color={Data.subjectColor[subject.nameKey]}
                         Weekendtask="4/5"
                         Points="213"
                         Community_Points="21.323"

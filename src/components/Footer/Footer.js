@@ -3,12 +3,6 @@ import './Footer.scss';
 import { Link } from 'react-router-dom';
 
 class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {};
-
     render() {
         if (this.props.visible) {
             return null;

@@ -5,10 +5,6 @@ import User from '../../assets/icons/user.svg';
 import Edit from '../../assets/icons/edit.svg';
 
 class CorrectionReviewBoxes extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <span className="correction-box">
