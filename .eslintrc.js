@@ -39,7 +39,7 @@ module.exports = {
         'prettier',
     ],
     rules: {
-        'no-magic-numbers': 'error',
+        'no-magic-numbers': 'warn',
         'no-multi-spaces': 'error',
         'no-script-url': 'error',
         'prettier/prettier': ['error'],
@@ -53,6 +53,12 @@ module.exports = {
         'no-use-before-define': 'off',
         'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
         'import/extensions': 'off',
-        'space-infix-ops': 'error'
+        'space-infix-ops': 'error',
+        'no-param-reassign': 'off',
+        'react/destructuring-assignment': 'off',
+        'react/no-unused-state': 'off',
+        'react/prefer-stateless-function': 'off',
+        'react/no-array-index-key': 'warn',
+        'class-methods-use-this': 'off',
     },
 };

@@ -9,9 +9,9 @@ class UserIcon extends Component {
                     xmlns="http://www.w3.org/2000/svg"
                     width={this.props.width || 24}
                     height={this.props.height || 24}
-                    viewBox="0 0 24 24"
                     fill={this.props.fill || 'none'}
                     stroke={this.props.stroke || 'currentColor'}
+                    viewBox="0 0 24 24"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
