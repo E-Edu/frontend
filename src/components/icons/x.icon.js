@@ -2,6 +2,11 @@ import './index.scss';
 import React, { Component } from 'react';
 
 class XIcon extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
     render(props) {
         return (
             <div className="icon">
