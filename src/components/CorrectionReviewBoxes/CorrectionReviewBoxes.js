@@ -12,20 +12,20 @@ class CorrectionReviewBoxes extends Component {
                 <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
                     <div className="correction-difficulty">
-                        <DifficultyLabel difficulty={this.props.difficulty}/>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div className="correction-box-bottom">
                     <div className="correction-pupil">
-                        <img src={User}/>
+                        <img src={User} />
                         <p> Max Musterman</p>
                     </div>
                     <div className="correction-date">
-                        <img src={Calendar}/>
+                        <img src={Calendar} />
                         <p> Vor 3 Tagen</p>
                     </div>
                     <div className="correction-correct">
-                        <img src={Edit}/>
+                        <img src={Edit} />
                         <p>Korrigieren </p>
                     </div>
                 </div>

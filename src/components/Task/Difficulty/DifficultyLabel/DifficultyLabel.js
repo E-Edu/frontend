@@ -1,29 +1,24 @@
 import React, { Component } from 'react';
 import colorData from '../../../../lib/Colors.json';
 import { Translation } from '../../../../i18n/i18n';
+import './DifficultyLabel.scss';
 
 class DifficultyLabel extends Component {
     render() {
-        const difficulty = this.props.difficulty ? this.props.difficulty : 'easy';
-        const color = colorData.difficultyColor[difficulty];
+        const difficulty = this.props.difficulty;
+        const colors = colorData.difficultyColor;
+        let color;
+        if (difficulty in colors) {
+            color = colorData.difficultyColor[difficulty];
+        } else {
+            color = colorData.difficultyColor.unknown;
+        }
         const { backgroundColor } = color;
         const { borderColor } = color;
         return (
-            <span style={{
-                color: '#1C2541',
-                backgroundColor,
-                borderWidth: 1,
-                borderStyle: 'solid',
-                borderColor,
-                borderRadius: 15,
-                padding: '0 0.5rem',
-                width: '3rem',
-                height: '1.5rem',
-                textAlign: 'center'
-            }}
-          >
-            {Translation.t(`difficulty.${difficulty}`)}
-          </span>
+            <span className="difficulty-label" style={{ backgroundColor, borderColor }}>
+                {Translation.t(`difficulty.${difficulty}`)}
+            </span>
         );
     }
 }

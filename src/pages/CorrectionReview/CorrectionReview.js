@@ -12,12 +12,12 @@ class CorrectionReview extends Component {
                         <button className="correction-mode">Korrekturmodus</button>
                     </div>
                     <div className="box">
-                        <CorrectionReviewBoxes />
-                        <CorrectionReviewBoxes />
-                        <CorrectionReviewBoxes />
-                        <CorrectionReviewBoxes />
-                        <CorrectionReviewBoxes />
-                        <CorrectionReviewBoxes />
+                        <CorrectionReviewBoxes difficulty="easy" />
+                        <CorrectionReviewBoxes difficulty="medium" />
+                        <CorrectionReviewBoxes difficulty="hard" />
+                        <CorrectionReviewBoxes difficulty="easy" />
+                        <CorrectionReviewBoxes difficulty="medium" />
+                        <CorrectionReviewBoxes difficulty="hard" />
                     </div>
                 </div>
             </div>
