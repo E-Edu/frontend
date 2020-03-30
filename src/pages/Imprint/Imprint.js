@@ -8,14 +8,14 @@ class Imprint extends Component {
                 <div className="heading-font">Imprint</div>
                 <div className="font-box">
                     <p>
-                        <span class="font0.8rem">
+                        <span className="font0.8rem">
                             Sind Sie Betreiber einer kommerziellen Seite, so unterliegen Sie der Impressumspflicht. Da
                             dies sehr viel Mühe und viel Fachwissen erfordert, haben wir hier für Sie eine kostenlose
                             Vorlage erstellt.{' '}
                         </span>
                     </p>
                     <p>
-                        <span class="font0.8rem">
+                        <span className="font0.8rem">
                             Diese Vorlage beinhaltet auch einen Haftungsausschluss / Disclaimer. Sie dürfen diese
                             Vorlage gerne kostenlos verwenden. Diese Vorlage wurde mit viel Mühe bund Sorgfalt erstellt.
                             Eine Haftung können wir dennoch nicht übernehmen. Bitte beachten Sie, dass für eine
@@ -23,7 +23,7 @@ class Imprint extends Component {
                         </span>
                     </p>
                     <p>
-                        <span class="font0.8rem">
+                        <span className="font0.8rem">
                             Wenn Sie diese Vorlage verwenden, so verwenden Sie dies bitte vollständig.{' '}
                         </span>
                         Der Haftungsausschluss ist auf deutsch und kann nur für Webseiten benutzt werden, die Ihren Sitz
@@ -35,7 +35,7 @@ class Imprint extends Component {
                     </p>
                     <p>&nbsp;</p>
                     <p>
-                        <span class="underline">Angaben gem. § 5 TMG:</span>
+                        <span className="underline">Angaben gem. § 5 TMG:</span>
                     </p>
                     <p>&nbsp;</p>
                     <p>Vorname, Name</p>
@@ -43,7 +43,7 @@ class Imprint extends Component {
                     <p>PLZ</p>
                     <p>&nbsp;</p>
                     <p>
-                        <span class="underline">Kontaktaufnahme:</span>
+                        <span className="underline">Kontaktaufnahme:</span>
                     </p>
                     <p>&nbsp;</p>
                     <p>Telefon:</p>
@@ -54,10 +54,10 @@ class Imprint extends Component {
                         <strong>Umsatzsteuer-ID</strong>
                     </p>
                     <p>
-                        <span class="underline">&nbsp;</span>
+                        <span className="underline">&nbsp;</span>
                     </p>
                     <p>
-                        <span class="underline">
+                        <span className="underline">
                             Umsatzsteuer-Identifikationsnummer gem. § 27 a Umsatzsteuergesetz:
                         </span>
                     </p>
@@ -65,7 +65,7 @@ class Imprint extends Component {
                     <p>DE XXX XXX XXX</p>
                     <p>
                         <strong>
-                            <span class="underline">&nbsp;</span>
+                            <span className="underline">&nbsp;</span>
                         </strong>
                     </p>
                     <p>
@@ -73,7 +73,7 @@ class Imprint extends Component {
                     </p>
                     <p>&nbsp;</p>
                     <p>
-                        <span class="underline">Haftung für Inhalte</span>
+                        <span className="underline">Haftung für Inhalte</span>
                     </p>
                     <p>
                         <strong>&nbsp;</strong>
@@ -95,7 +95,7 @@ class Imprint extends Component {
                     </p>
                     <p>&nbsp;</p>
                     <p>
-                        <span class="underline">Haftungsbeschränkung für externe Links</span>
+                        <span className="underline">Haftungsbeschränkung für externe Links</span>
                     </p>
                     <p>
                         <strong>&nbsp;</strong>
@@ -129,7 +129,7 @@ class Imprint extends Component {
                     </p>
                     <p>&nbsp;</p>
                     <p>
-                        <span class="underline">Urheberrecht</span>
+                        <span className="underline">Urheberrecht</span>
                     </p>
                     <p>
                         <strong>&nbsp;</strong>

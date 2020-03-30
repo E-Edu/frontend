@@ -3,10 +3,6 @@ import './LectureGroup.scss';
 import LectureSubject from '../Subject/LectureSubject';
 
 class LectureGroup extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="lecture-group-wrapper">

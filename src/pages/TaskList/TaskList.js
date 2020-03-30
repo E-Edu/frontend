@@ -1,23 +1,23 @@
 import React from 'react';
 import './TaskList.scss';
+import { Link } from 'react-router-dom';
 import UsersIcon from '../../components/icons/user.icon.js';
 import UserIcon from '../../components/icons/users.icon.js';
 import Award from '../../components/icons/award.icon';
 import Search from '../../components/icons/search.icon';
 import colorData from '../../lib/Colors';
-import { Link } from 'react-router-dom';
 import { Translation } from '../../i18n/i18n';
 
 class Task extends React.Component {
     render() {
-        const name = this.props.name;
-        const difficulty = this.props.difficulty;
-        const description = this.props.description;
-        const questions = this.props.questions;
-        const rightQuestions = this.props.rightQuestions;
+        const { name } = this.props;
+        const { difficulty } = this.props;
+        const { description } = this.props;
+        const { questions } = this.props;
+        const { rightQuestions } = this.props;
         const color = colorData.difficultyColor[difficulty];
-        const backgroundColor = color.backgroundColor;
-        const borderColor = color.borderColor;
+        const { backgroundColor } = color;
+        const { borderColor } = color;
 
         return (
             <div className="task">
@@ -40,14 +40,14 @@ class Task extends React.Component {
                                 color: '#1C2541',
                                 right: 0,
                                 justifyContent: 'flex-end',
-                                backgroundColor: backgroundColor,
+                                backgroundColor,
                                 borderWidth: 1,
                                 borderStyle: 'solid',
-                                borderColor: borderColor,
+                                borderColor,
                                 borderRadius: 10,
                                 padding: '0.0rem 0.33333334rem',
                             }}>
-                            {Translation.t('difficulty.' + difficulty)}
+                            {Translation.t(`difficulty.${difficulty}`)}
                         </span>
                     </div>
                 </div>
@@ -60,42 +60,23 @@ class Task extends React.Component {
 }
 
 class TaskList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {
-        search: '',
-        tasks: [],
-    };
+    state = { search: '', tasks: [] };
 
     OnChangeSearch = () => {
         this.state.search(document.getElementById('site-search').value);
-        //TODO: Backend request
+        // TODO: Backend request
         this.setState(this.state);
+        this.loadFakeData();
     };
 
     loadFakeData() {
         this.state.tasks.push(
-            {
-                description: 'A short description what to do in this task',
-                difficulty: 'easy',
-            },
-            {
-                description: 'A short description what to do in this task',
-                difficulty: 'medium',
-            },
-            {
-                description: 'A short description what to do in this task',
-                difficulty: 'hard',
-            }
+            { description: 'A short description what to do in this task', difficulty: 'easy' },
+            { description: 'A short description what to do in this task', difficulty: 'medium' },
+            { description: 'A short description what to do in this task', difficulty: 'hard' }
         );
 
         this.setState(this.state);
-    }
-
-    componentDidMount() {
-        this.loadFakeData();
     }
 
     renderTasks() {
@@ -103,7 +84,7 @@ class TaskList extends React.Component {
             return (
                 <Link key={index} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
-                        name={Translation.t('taskList.task') + ' ' + (index + 1)}
+                        name={`${Translation.t('taskList.task')} ${index + 1}`}
                         questions="12"
                         rightQuestions="10"
                         difficulty={task.difficulty}

@@ -1,7 +1,7 @@
 import React from 'react';
-import TaskHeader from './TaskHeader';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import TaskHeader from './TaskHeader';
 
 const stories = storiesOf('taskHeader', module);
 stories.addDecorator(withKnobs);

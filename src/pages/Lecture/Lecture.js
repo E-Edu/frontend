@@ -4,19 +4,9 @@ import TaskHeader from '../../components/TaskHeader/TaskHeader';
 import LectureGroup from '../../components/Lecture/Group/LectureGroup';
 
 class Lecture extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     data = [
-        {
-            name: 'Grundrechnen',
-            fields: [{ name: 'Plus' }, { name: 'Minus' }, { name: 'Mal' }, { name: 'Geteilt' }],
-        },
-        {
-            name: 'Geometrie',
-            fields: [{ name: 'Flächeninhalt' }, { name: 'Volumen' }, { name: 'Winkel berechnung' }],
-        },
+        { name: 'Grundrechnen', fields: [{ name: 'Plus' }, { name: 'Minus' }, { name: 'Mal' }, { name: 'Geteilt' }] },
+        { name: 'Geometrie', fields: [{ name: 'Flächeninhalt' }, { name: 'Volumen' }, { name: 'Winkel berechnung' }] },
         {
             name: 'Lineare Algebra',
             fields: [

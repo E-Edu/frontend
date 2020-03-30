@@ -4,10 +4,6 @@ import ThumbsUp from '../../assets/icons/thumbs-up.svg';
 import ThumbsDown from '../../assets/icons/thumbs-down.svg';
 
 class ResultQuestion extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="result-question-box">
@@ -15,7 +11,10 @@ class ResultQuestion extends Component {
                 <div className="result-content">
                     <div className="result-top">
                         <div className="result-left-top">
-                            <p className="result-question-label">Frage {this.props.index} </p>
+                            <p className="result-question-label">
+                                Frage
+                                {this.props.index}
+                            </p>
                             <p className="result-question-titel">Äpfel und Birnen</p>
                         </div>
                         <div className="result-right-top">

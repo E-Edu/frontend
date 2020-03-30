@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "lint:eslint": "eslint \"./src/**/*.js\"",
+    "lint:eslint": "eslint --ext .ts,.js \"./src/**\"",
     "lint:prettier": "prettier --check \"./src/**/*.js\"",
     "lint:style": "stylelint \"./src/**/*.scss\"",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:style"

@@ -17,7 +17,8 @@ class TaskEvaluation extends React.Component {
                         <div className="result-evaluation">
                             <span>Auswertung</span>
                             <p>
-                                Korrekte Fragen:<span> 7 von 10 </span>
+                                Korrekte Fragen:
+                                <span> 7 von 10 </span>
                             </p>
                         </div>
                         <div className="result-pointcount">
