@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { Component } from 'react';
 
-class LogoutIcon extends Component {
+class CalenderIcon extends Component {
     state = { email: '' };
 
     render(props) {
@@ -28,4 +28,4 @@ class LogoutIcon extends Component {
     }
 }
 
-export default LogoutIcon;
+export default CalenderIcon;

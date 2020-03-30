@@ -8,6 +8,9 @@ import './Profile.scss';
 import '../../css/main.css';
 import Data from '../../lib/Colors.json';
 import { Translation } from '../../i18n/i18n';
+import UserIcon from '../../components/icons/user.icon';
+import TrendingUpIcon from '../../components/icons/trending-up.icon';
+import CalenderIcon from '../../components/icons/calender.icon';
 
 class ProfileSubject extends React.Component {
     render() {
@@ -110,7 +113,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="user img user-icon">
-                                        <User_icon alt="user icon" stroke="#3A506B" />
+                                        <UserIcon alt="user icon" stroke="#3A506B" />
                                     </span>
                                     <span>6.526</span>
                                     <span className="var-info profile-span-padding-l">
@@ -124,7 +127,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="trending img trending-icon">
-                                        <Trending_icon width="24" height="30" stroke="#3A506B" alt="trending" />
+                                        <TrendingUpIcon width="24" height="30" stroke="#3A506B" alt="trending" />
                                     </span>
                                     <span>7.231</span>
                                     <span className="var-info profile-span-padding-l">
@@ -138,7 +141,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="calender img calender-icon">
-                                        <Calender_icon alt="calendar" stroke="#3A506B" />
+                                        <CalenderIcon alt="calendar" stroke="#3A506B" />
                                     </span>
                                     <span className="profile-span-padding-r">
                                         {Translation.t('profile.memberSince')}

@@ -1,7 +1,7 @@
 import './index.scss';
 import React, { Component } from 'react';
 
-class ListIcon extends Component {
+class TrendingUpIcon extends Component {
     render(props) {
         return (
             <div className="icon">
@@ -24,4 +24,4 @@ class ListIcon extends Component {
     }
 }
 
-export default ListIcon;
+export default TrendingUpIcon;

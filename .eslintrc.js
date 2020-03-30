@@ -53,5 +53,6 @@ module.exports = {
         'no-use-before-define': 'off',
         'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
         'import/extensions': 'off',
+        'space-infix-ops': 'error'
     },
 };
