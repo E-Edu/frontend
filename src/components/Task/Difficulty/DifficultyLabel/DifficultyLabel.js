@@ -5,7 +5,7 @@ import './DifficultyLabel.scss';
 
 class DifficultyLabel extends Component {
     render() {
-        const difficulty = this.props.difficulty;
+        const { difficulty } = this.props;
         const colors = colorData.difficultyColor;
         let color;
         if (difficulty in colors) {

@@ -23,9 +23,9 @@
             "backgroundColor": "rgba(186, 25, 25, 0.3)",
             "borderColor": "rgba(186, 25, 25, 1)"
         },
-      "unknown": {
-        "backgroundColor": "rgba(80, 80, 80, 0.3)",
-        "borderColor": "rgba(80, 80, 80, 1)"
-      }
+        "unknown": {
+            "backgroundColor": "rgba(80, 80, 80, 0.3)",
+            "borderColor": "rgba(80, 80, 80, 1)"
+        }
     }
 }

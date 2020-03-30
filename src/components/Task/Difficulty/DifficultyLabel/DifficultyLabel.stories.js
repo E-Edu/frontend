@@ -1,7 +1,7 @@
 import React from 'react';
-import DifficultyLabel from './DifficultyLabel';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import DifficultyLabel from './DifficultyLabel';
 
 const stories = storiesOf('difficultylabel', module);
 stories.addDecorator(withKnobs);

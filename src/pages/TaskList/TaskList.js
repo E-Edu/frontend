@@ -1,68 +1,51 @@
 import React from 'react';
 import './TaskList.scss';
+import { Link } from 'react-router-dom';
 import UsersIcon from '../../components/icons/user.icon.js';
 import UserIcon from '../../components/icons/users.icon.js';
-import Award from '../../components/icons/award.icon';
 import Search from '../../components/icons/search.icon';
-import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
-import { Link } from 'react-router-dom';
 import { Translation } from '../../i18n/i18n';
-
-class Task extends React.Component {
-    render() {
-        const name = this.props.name;
-        const description = this.props.description;
-        const questions = this.props.questions;
-        const rightQuestions = this.props.rightQuestions;
-
-        return (
-            <div className="task">
-                <div className="task-head">
-                    <span>{name}</span>
-                    <div className="task-head-elements">
-                        <div className="task-element">
-                            <span>{questions}</span>
-                            <span>{Translation.t('taskList.questions')}</span>
-                        </div>
-                        <div className="task-element">
-                            <Award className="icon" stroke="#3A506B" />
-                            <span>{rightQuestions}</span>
-                        </div>
-                        <DifficultyLabel difficulty={this.props.difficulty} />
-                    </div>
-                </div>
-                <div className="task-bottom">
-                    <span>{description}</span>
-                </div>
-            </div>
-        );
-    }
-}
+import Task from '../../components/Task/Task/Task';
 
 class TaskList extends React.Component {
-    state = { search: '', tasks: [] };
+    constructor(props) {
+        super(props);
+        this.state = { search: '', tasks: [] };
+    }
 
     OnChangeSearch = () => {
         this.state.search(document.getElementById('site-search').value);
         // TODO: Backend request
-        this.setState(this.state);
+        this.setState((prevState) => ({ prevState }));
         this.loadFakeData();
     };
 
     loadFakeData() {
         this.state.tasks.push(
-            { description: 'A short description what to do in this task', difficulty: 'easy' },
-            { description: 'A short description what to do in this task', difficulty: 'medium' },
-            { description: 'A short description what to do in this task', difficulty: 'hard' }
+            {
+                id: 'ee035b07-b1b1-43e8-a5a7-13ecba5eaa50',
+                description: 'A short description what to do in this task',
+                difficulty: 'easy',
+            },
+            {
+                id: 'c0764f51-6c75-44d7-a16f-77cfcce1672f',
+                description: 'A short description what to do in this task',
+                difficulty: 'medium',
+            },
+            {
+                id: 'eacbd1ab-5c8b-49dc-b68e-223b7746fa93',
+                description: 'A short description what to do in this task',
+                difficulty: 'hard',
+            }
         );
 
-        this.setState(this.state);
+        this.setState((task) => ({ task }));
     }
 
     renderTasks() {
         return this.state.tasks.map((task, index) => {
             return (
-                <Link key={index} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
                         name={`${Translation.t('taskList.task')} ${index + 1}`}
                         questions="12"
