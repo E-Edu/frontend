@@ -1,23 +1,19 @@
 import React from 'react';
 import './TaskList.scss';
-import { Link } from 'react-router-dom';
 import UsersIcon from '../../components/icons/user.icon.js';
 import UserIcon from '../../components/icons/users.icon.js';
 import Award from '../../components/icons/award.icon';
 import Search from '../../components/icons/search.icon';
-import colorData from '../../lib/Colors';
+import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
+import { Link } from 'react-router-dom';
 import { Translation } from '../../i18n/i18n';
 
 class Task extends React.Component {
     render() {
-        const { name } = this.props;
-        const { difficulty } = this.props;
-        const { description } = this.props;
-        const { questions } = this.props;
-        const { rightQuestions } = this.props;
-        const color = colorData.difficultyColor[difficulty];
-        const { backgroundColor } = color;
-        const { borderColor } = color;
+        const name = this.props.name;
+        const description = this.props.description;
+        const questions = this.props.questions;
+        const rightQuestions = this.props.rightQuestions;
 
         return (
             <div className="task">
@@ -32,23 +28,7 @@ class Task extends React.Component {
                             <Award className="icon" stroke="#3A506B" />
                             <span>{rightQuestions}</span>
                         </div>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t(`difficulty.${difficulty}`)}
-                        </span>
+                        <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
                 </div>
                 <div className="task-bottom">
