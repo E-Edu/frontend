@@ -3,10 +3,6 @@ import './PageHeader.scss';
 
 class PageHeader extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { mainTitle } = this.props;
         const { secondaryTitle } = this.props;

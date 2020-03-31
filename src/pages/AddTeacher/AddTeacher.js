@@ -8,10 +8,6 @@ import AddTeacherRequest from "./AddTeacherRequest/AddTeacherRequest";
 
 class AddTeacher extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     state = {
         validEmail: false,
         email: "",

@@ -3,10 +3,6 @@ import './PageContent.scss';
 
 class PageContent extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { children } = this.props;
 
