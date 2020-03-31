@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './Button';
 import { color, text, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
+import Button from './Button';
 
 const stories = storiesOf('Button', module);
 stories.addDecorator(withKnobs);
@@ -18,7 +18,7 @@ stories.add('Primary Button', () => {
 stories.add('Primary Button disabled', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
-    return <Button name={label} type={type} disable={true} styleType="primary" />;
+    return <Button name={label} type={type} disable styleType="primary" />;
 });
 
 stories.add('Secondary Button', () => {
@@ -29,5 +29,5 @@ stories.add('Secondary Button', () => {
 stories.add('Secondary Button disabled', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
-    return <Button name={label} type={type} disable={true} styleType="secondary" />;
+    return <Button name={label} type={type} disable styleType="secondary" />;
 });
