@@ -1,0 +1,22 @@
+@import '../../../css/styles';
+@import '../Page';
+
+.page-header {
+  max-width: 100%;
+  word-break: break-all;
+
+  .page-titles {
+    color: $color-bluegrey;
+    display: inline-block;
+
+    .page-main-title {
+      font-size: 4rem;
+      font-weight: 500;
+      margin-right: 2rem;
+    }
+
+    .page-secondary-title {
+      font-size: 1.5rem;
+    }
+  }
+}
