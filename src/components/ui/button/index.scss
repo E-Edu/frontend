@@ -2,15 +2,15 @@
 @import './src/css/styles';
 
 .button {
-  font: Medium 26px/42px Hind Siliguri;
-  text-align: center;
-  font-size: 26px;
-  letter-spacing: 0;
-  height: 50px;
-  width: 150px;
-  border: 3px solid #5BC0BE;
+  border: 3px solid #5bc0be;
   border-radius: 10px;
+  font: Medium 26px/42px Hind Siliguri;
+  font-size: 26px;
+  height: 50px;
+  letter-spacing: 0;
+  text-align: center;
   transition: 0.2s;
+  width: 150px;
 
   :hover {
     cursor: pointer;
@@ -23,7 +23,7 @@
 
 .primary {
   background-color: $color-primary;
-  color: #0B132B;
+  color: #0b132b;
 
   :hover {
     background-color: rgba(91, 192, 190, 0.8);
@@ -32,15 +32,16 @@
 
 .secondary {
   background-color: transparent;
-  color: #5BC0BE;
+  color: #5bc0be;
 
   :hover {
     background-color: rgba(91, 192, 190, 0.2);
   }
 }
 
-.disabled{
-  background-color: $color-grey;
-  border-color: $color-grey;
+.disabled {
+  background-color: $color-warmGrey;
+  border-color: $color-lightGrey;
+  color: $color-grey;
   pointer-events: none;
 }
