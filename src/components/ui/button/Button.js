@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 import { button } from '@storybook/addon-knobs';
 
 class Button extends React.Component {
-    constructor(props) {
-        super(props);
-        for (let propsKey in this.props) {
-            console.log(propsKey, this.props[propsKey]);
-        }
-    }
 
     render() {
         let classes = this.props.styleType || 'Primary';
