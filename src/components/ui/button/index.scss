@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:400,500&display=swap');
 @import './src/css/styles';
-.button{
-  text-align: center;
+
+.button {
   font: Medium 26px/42px Hind Siliguri;
+  text-align: center;
   font-size: 26px;
   letter-spacing: 0;
   height: 50px;
@@ -10,27 +11,34 @@
   border: 3px solid #5BC0BE;
   border-radius: 10px;
   transition: 0.2s;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  :focus {
+    outline: none;
+  }
 }
-.button:hover{
-  cursor: pointer;
-}
-.button:focus{
-  outline: none;
-}
-.primary{
+
+.primary {
   background-color: $color-primary;
   color: #0B132B;
+
+  :hover {
+    background-color: rgba(91, 192, 190, 0.8);
+  }
 }
-.primary:hover{
-  background-color: rgba(91, 192, 190, 0.8);
-}
-.secondary{
+
+.secondary {
   background-color: transparent;
   color: #5BC0BE;
+
+  :hover {
+    background-color: rgba(91, 192, 190, 0.2);
+  }
 }
-.secondary:hover{
-  background-color: rgba(91, 192, 190, 0.2);
-}
+
 .disabled{
   background-color: $color-grey;
   border-color: $color-grey;
