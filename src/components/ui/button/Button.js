@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './Button.scss';
 import { Link } from 'react-router-dom';
 import { button } from '@storybook/addon-knobs';
 
