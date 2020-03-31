@@ -3,11 +3,10 @@ import './AddTeacherRequest.scss';
 import icon_mail from '../../../assets/icons/mail.svg';
 import icon_teacher from '../../../assets/icons/teacher.svg';
 import CheckIcon from '../../../components/icons/check.icon';
-import { Translation } from "../../../i18n/i18n";
-import XIcon from "../../../components/icons/x.icon";
+import { Translation } from '../../../i18n/i18n';
+import XIcon from '../../../components/icons/x.icon';
 
 class AddTeacherRequest extends Component {
-
     render() {
         return (
             <div className="teacher-request">

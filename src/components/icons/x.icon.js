@@ -2,7 +2,6 @@ import './index.scss';
 import React, { Component } from 'react';
 
 class XIcon extends Component {
-
     render(props) {
         return (
             <div className="icon">

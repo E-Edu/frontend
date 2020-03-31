@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, color, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import XIcon from "./x.icon";
+import XIcon from './x.icon';
 
 const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);

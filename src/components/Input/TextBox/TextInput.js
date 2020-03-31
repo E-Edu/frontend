@@ -1,8 +1,7 @@
-import React, {Component} from "react";
-import "./TextInput.scss"
+import React, { Component } from 'react';
+import './TextInput.scss';
 
 class TextInput extends Component {
-
     constructor(props) {
         super(props);
     }
@@ -18,8 +17,8 @@ class TextInput extends Component {
         if (maxWidth) style.maxWidth = maxWidth;
         if (shadow !== undefined) {
             switch (shadow) {
-                case "red": {
-                    shadow = "inset 0 0 0.33rem 0 rgba(255, 0, 0, 1)";
+                case 'red': {
+                    shadow = 'inset 0 0 0.33rem 0 rgba(255, 0, 0, 1)';
                     break;
                 }
 
@@ -32,16 +31,8 @@ class TextInput extends Component {
             if (shadow) style.boxShadow = shadow;
         }
 
-        return (
-          <input
-            className="text-box"
-            placeholder={placeholder}
-            onChange={onChange}
-            style={style}
-          />
-        );
+        return <input className="text-box" placeholder={placeholder} onChange={onChange} style={style} />;
     }
-
 }
 
 export default TextInput;
