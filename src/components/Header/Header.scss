@@ -4,7 +4,7 @@
   align-items: baseline;
   background: $color-bluegrey 0 0 no-repeat padding-box;
   display: flex;
-  height: 5.3333335rem;
+  height: 5.375rem;
   justify-content: space-between;
   left: 0;
   position: fixed;
@@ -19,16 +19,16 @@
     margin-left: 3rem;
 
     .logo-img {
-      height: 90%;
+      height: 95%;
       width: 2.4rem;
     }
 
     .title {
       color: $color-turquoise;
-      font: Bold 2.9333334rem/4.733333rem Hind Siliguri;
+      font: Bold 2rem/4rem Hind Siliguri;
       letter-spacing: 0;
       margin: 0;
-      padding-left: 2rem;
+      padding-left: 1rem;
       white-space: nowrap;
     }
   }

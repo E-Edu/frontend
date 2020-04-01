@@ -5,7 +5,6 @@ import Modal from 'react-animated-modal';
 import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
-import Landing_Image from '../../assets/Picture/landingpage-teaching.svg';
 import Query from '../../lib/api/Query';
 import { Translation } from '../../i18n/i18n';
 
@@ -29,6 +28,7 @@ class LandingPage extends Component {
     }
 
     render() {
+        const backgroundSvg = 'assets/landing-background.svg';
         return (
             <div className="landing">
                 <div className="main">
@@ -63,14 +63,11 @@ class LandingPage extends Component {
                     </Modal>
 
                     <div className="content">
-                        <div className="image-landigpage">
-                            <img className="landigpage-img" src={Landing_Image} alt="landigpage-teaching image" />
-                        </div>
                         <div className="text-content">
                             <h2 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.title') }} />
                             <h4 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.description') }} />
-                            />
                         </div>
+                        <img className="hero-image" src="assets/landing-person.svg" alt="" />
                     </div>
                 </div>
             </div>
