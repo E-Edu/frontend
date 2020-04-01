@@ -5,8 +5,10 @@ import XIcon from '../../components/icons/x.icon';
 import TeacherIcon from '../../components/icons/teacher.icon';
 import CheckIcon from '../../components/icons/check.icon';
 import IconText from '../../components/IconText/IconText';
+import IconButton from '../../components/Buttons/IconButton/IconButton';
 
 class AddRequest extends Component {
+
     render() {
         return (
             <div className="add-teacher-report-component text-dark">
@@ -21,19 +23,10 @@ class AddRequest extends Component {
                         {/* TODO: find a better solution */}
                         <TeacherIcon color="#3a506b" fill="none" />
                     </IconText>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span style={{ marginRight: 20 }}>Ablehnen</span>
+                    {/* TODO: Link to a methode */}
+                    <IconButton text="Ablehnen" distance="0.8rem" clickEvent={() => null}>
                         <XIcon stroke="#ba1919" />
-                    </div>
+                    </IconButton>
                 </div>
                 <div
                     style={{
@@ -45,19 +38,10 @@ class AddRequest extends Component {
                     <IconText text={this.props.email} position="left" distance="0.4rem">
                         <MailIcon stroke="#3a506b" />
                     </IconText>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span style={{ marginRight: 20 }}>Annehmen</span>
+                    {/* TODO: Link to a methode */}
+                    <IconButton text="Annehmen" distance="0.8rem">
                         <CheckIcon stroke="#19BA3F" />
-                    </div>
+                    </IconButton>
                 </div>
             </div>
         );

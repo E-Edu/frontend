@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './CorrectionReviewBoxes.scss';
-import Calendar from '../../components/icons/calendar.icon';
-import User from '../../components/icons/user.icon';
-import Edit from '../../assets/icons/edit.svg';
+import CalendarIcon from '../../components/icons/calendar.icon';
+import UserIcon from '../../components/icons/user.icon';
+import EditIcon from '../../components/icons/edit.icon';
 import IconText from '../../components/IconText/IconText';
+import IconButton from '../../components/Buttons/IconButton/IconButton';
 
 class CorrectionReviewBoxes extends Component {
     constructor(props) {
@@ -21,15 +22,14 @@ class CorrectionReviewBoxes extends Component {
                 </div>
                 <div className="correction-box-bottom">
                     <IconText text="Max Musterman" position="left" class="correction-pupil">
-                        <User width="21" height="21"></User>
+                        <UserIcon width="21" height="21"></UserIcon>
                     </IconText>
                     <IconText text="Vor 3 Tagen" position="left" class="correction-data">
-                        <Calendar width="21" height="21"></Calendar>
+                        <CalendarIcon width="21" height="21"></CalendarIcon>
                     </IconText>
-                    <div className="correction-correct">
-                        <img src={Edit} />
-                        <p>Korrigieren </p>
-                    </div>
+                    <IconButton text="Korrigieren" distance="0.4rem" class="correction-correct">
+                        <EditIcon></EditIcon>
+                    </IconButton>
                 </div>
             </span>
         );
