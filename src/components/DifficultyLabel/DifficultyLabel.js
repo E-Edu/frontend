@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './IconButton.scss';
+import './DifficultyLabel.scss';
 
-class IconButton extends Component {
+class DifficultyLabel extends Component {
     constructor(props) {
         super(props);
     }
@@ -43,4 +43,4 @@ class IconButton extends Component {
     }
 }
 
-export default IconButton;
+export default DifficultyLabel;

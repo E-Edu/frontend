@@ -22,9 +22,9 @@ class CorrectionReviewBoxes extends Component {
                     <IconText text="Vor 3 Tagen" position="left" class="correction-data">
                         <Calendar width="21" height="21"></Calendar>
                     </IconText>
-                   <IconButton text="Korrigieren" class="correction-correct" distance="0.4rem">
-                       <Edit />
-                   </IconButton>
+                    <IconButton text="Korrigieren" distance="0.4rem" class="correction-correct">
+                        <Edit></Edit>
+                    </IconButton>
                 </div>
             </span>
         );
