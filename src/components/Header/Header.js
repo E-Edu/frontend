@@ -24,7 +24,7 @@ class Header extends Component {
                         </div>
                     </div>
                 );
-            case 'Dashboard':
+            default:
                 return (
                     <div className="header-navbar">
                         <Link to="/" style={{ textDecoration: 'none' }}>
