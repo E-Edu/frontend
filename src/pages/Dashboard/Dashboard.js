@@ -1,55 +1,11 @@
 import React from 'react';
 import './Dashboard.scss';
-import CalenderIcon from '../../components/icons/calender.icon.js';
-import UserIcon from '../../components/icons/user.icon';
-import UsersIcon from '../../components/icons/users.icon';
 import Data from '../../lib/Colors';
-import File from '../../components/icons/file-text.icon.js';
 import { Link } from 'react-router-dom';
 import Query from '../../lib/api/Query';
 import { gql } from 'apollo-boost';
 import { Translation } from '../../i18n/i18n';
-
-class Subjekt extends React.Component {
-    render() {
-        const subject = this.props.subject;
-        const color = this.props.color;
-        const border = '0.73333335rem solid ' + color;
-
-        return (
-            <div className="subjekt" style={{ borderLeft: border }}>
-                <div className="image">
-                    <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
-                </div>
-                <div className="box-content">
-                    <h3 className="subject-name">{subject}</h3>
-                    <span className="under-name">{this.props.Underline}</span>
-                    <div className="weekend-task flex-row">
-                        <CalenderIcon className="calender" width="27" height="27" stroke="#000000" />
-                        <span>Wöchentliche Aufgaben</span>
-                        <span className="weekend-task-text">{this.props.Weekendtask}</span>
-                    </div>
-                    <div className="points">
-                        <div className="user-points flex-row">
-                            <UserIcon stroke="#000000" width="27" height="27" />
-                            <span className="point-text">
-                                <span className="user-points">{this.props.Points}</span>
-                                <span>Punkte</span>
-                            </span>
-                        </div>
-                        <div className="community-points flex-row">
-                            <UsersIcon stroke="#000000" width="27" height="27" />
-                            <span className="point-text">
-                                <span className="community-points">{this.props.Community_Points}</span>
-                                <span>Punkte</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+import Subject from '../../components/Subject/Subject.js';
 
 class dashboard extends React.Component {
     state = {
@@ -112,7 +68,7 @@ class dashboard extends React.Component {
         return this.state.subjects.map((subject, index) => {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <Subjekt
+                    <Subject
                         subject={Translation.t('subject.' + subject.nameKey + '.name')}
                         Underline={Translation.t('subject.' + subject.nameKey + '.description')}
                         color={Data['subjectColor'][subject.nameKey]}
@@ -133,7 +89,7 @@ class dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="subjekts-content">{this.renderSubjects()}</div>
+                <div className="subjects-content">{this.renderSubjects()}</div>
             </div>
         );
     }

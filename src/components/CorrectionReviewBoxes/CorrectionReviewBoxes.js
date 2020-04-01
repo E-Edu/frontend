@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './CorrectionReviewBoxes.scss';
-import Calendar from '../../assets/icons/calendar.svg';
-import User from '../../assets/icons/user.svg';
+import Calendar from '../../components/icons/calendar.icon';
+import User from '../../components/icons/user.icon';
 import Edit from '../../assets/icons/edit.svg';
+import IconText from '../../components/IconText/IconText';
 
 class CorrectionReviewBoxes extends Component {
     constructor(props) {
@@ -19,14 +20,12 @@ class CorrectionReviewBoxes extends Component {
                     </div>
                 </div>
                 <div className="correction-box-bottom">
-                    <div className="correction-pupil">
-                        <img src={User} />
-                        <p> Max Musterman</p>
-                    </div>
-                    <div className="correction-date">
-                        <img src={Calendar} />
-                        <p> Vor 3 Tagen</p>
-                    </div>
+                    <IconText text="Max Musterman" position="left" class="correction-pupil">
+                        <User width="21" height="21"></User>
+                    </IconText>
+                    <IconText text="Vor 3 Tagen" position="left" class="correction-data">
+                        <Calendar width="21" height="21"></Calendar>
+                    </IconText>
                     <div className="correction-correct">
                         <img src={Edit} />
                         <p>Korrigieren </p>

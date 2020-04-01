@@ -1,12 +1,13 @@
 import React from 'react';
-import Calender_icon from '../../components/icons/calender.icon.js';
-import Tags_icon from '../../assets/icons/tag.svg';
-import User_icon from '../../components/icons/user.icon.js';
-import Task_icon from '../../assets/icons/pencile.svg';
-import Trending_icon from '../../components/icons/trending-up.icon.js';
+import CalendarIcon from '../../components/icons/calendar.icon.js';
+import TagsIcon from '../../assets/icons/tag.svg';
+import UserIcon from '../../components/icons/user.icon.js';
+import TaskIcon from '../../assets/icons/pencile.svg';
+import TrendingIcon from '../../components/icons/trending-up.icon.js';
 import File from '../../assets/icons/file-text.svg';
 import Badge from '../../assets/icons/award.svg';
 import Download from '../../assets/icons/download.svg';
+import IconText from '../../components/IconText/IconText';
 import './Profile.scss';
 import '../../css/main.css';
 import Data from '../../lib/Colors.json';
@@ -110,7 +111,7 @@ class Profile extends React.Component {
                                         disabled={this.state.disabled}
                                     />
                                     <a onClick={this.usernameClickListener}>
-                                        <img className="pen img" src={Task_icon} alt="pen" />
+                                        <img className="pen img" src={TaskIcon} alt="pen" />
                                     </a>
                                 </div>
                             </span>
@@ -118,43 +119,25 @@ class Profile extends React.Component {
 
                         <div className="central stat font-arimo points">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="user img user-icon">
-                                        <User_icon alt="user icon" stroke="#3A506B" />
-                                    </span>
-                                    <span>6.526</span>
-                                    <span className="var-info profile-span-padding-l">
-                                        {Translation.t('task.points')}
-                                    </span>
-                                </div>
+                                <IconText text={'6.526 ' + Translation.t('task.points')} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <UserIcon stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 
                         <div className="central stat font-arimo trending">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="trending img trending-icon">
-                                        <Trending_icon width="24" height="30" stroke="#3A506B" alt="trending" />
-                                    </span>
-                                    <span>7.231</span>
-                                    <span className="var-info profile-span-padding-l">
-                                        {Translation.t('task.questions')}
-                                    </span>
-                                </div>
+                                <IconText text={'6.526 ' + Translation.t('task.points')} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <TrendingIcon width="24" height="30" stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 
                         <div className="central stat font-arimo since">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="calender img calender-icon">
-                                        <Calender_icon alt="calendar" stroke="#3A506B" />
-                                    </span>
-                                    <span className="profile-span-padding-r">
-                                        {Translation.t('profile.memberSince')}
-                                    </span>
-                                    <span className="var-info">21.03.2020</span>
-                                </div>
+                                <IconText text={Translation.t('profile.memberSince') + ' 21.03.2020'} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <CalendarIcon width="24" height="30" stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 
@@ -169,7 +152,7 @@ class Profile extends React.Component {
                                 <div className="levelbar-front" />
                             </div>
                             <div className="level-rank">
-                                <img stroke="#5BC0BE" alt="tag" className="tag" src={Tags_icon} />
+                                <img stroke="#5BC0BE" alt="tag" className="tag" src={TagsIcon} />
                                 <span className="level-rang">{Translation.t('profile.rank.teachingMaster')}</span>
                             </div>
                         </div>

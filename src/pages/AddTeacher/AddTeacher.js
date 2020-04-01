@@ -1,69 +1,7 @@
 import React, { Component } from 'react';
 import './AddTeacher.scss';
-import icon_mail from '../../assets/icons/mail.svg';
-import icon_x from '../../assets/icons/x.svg';
-import icon_teacher from '../../assets/icons/teacher.svg';
+import AddRequest from '../../components/AddRequest/AddRequest';
 import icon_user_plus from '../../assets/icons/user-plus.svg';
-import CheckIcon from '../../components/icons/check.icon';
-
-class AddRequest extends Component {
-    render() {
-        return (
-            <div className="add-teacher-report-component text-dark">
-                <div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        marginTop: 10,
-                    }}>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={icon_teacher} alt="teacher-icon" />
-                        <span style={{ marginLeft: 10 }}>{this.props.name}</span>
-                    </div>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span>Ablehnen</span>
-                        <img style={{ marginLeft: 20 }} src={icon_x} alt="x-icon" />
-                    </div>
-                </div>
-                <div
-                    style={{
-                        marginTop: 20,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                    }}>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={icon_mail} alt="mail-icon" />
-                        <span style={{ marginLeft: 10 }}>{this.props.email}</span>
-                    </div>
-                    <div
-                        className="clickable"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            marginRight: 20,
-                            width: 100,
-                            right: 0,
-                            justifyContent: 'flex-end',
-                        }}>
-                        <span style={{ marginRight: 20 }}>Annehmen</span>
-                        <CheckIcon stroke="#19BA3F" />
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
 
 class AddTeacher extends Component {
     constructor(props) {
