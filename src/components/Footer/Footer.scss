@@ -2,24 +2,25 @@
 
 .footer-navbar {
   align-items: center;
+  align-items: center;
   background-color: $color-bluegrey;
   bottom: 0;
   display: flex;
-  flex-direction: column;
-  height: 5.3333335rem;
-  justify-content: center;
+  flex-direction: row;
+  height: 6.813rem;
+  justify-content: space-between;
   left: 0;
   width: 100vw;
 
   a {
-    color: #687d9a;
+    color: $color-turquoise;
     padding: 0 1rem;
     text-decoration: none;
     transition: all 0.2s;
   }
 
   a:hover {
-    color: $color-turquoise;
+    color: $color-turquoise-light;
   }
 
   a:focus {
@@ -27,10 +28,14 @@
   }
 
   span {
-    color: #687d9a;
+    color: $color-turquoise;
   }
 
   .copyright {
-    padding-top: 0.7rem;
+    margin-right: 5.125rem;
+  }
+
+  .legal {
+    margin-left: calc(5.125rem - 0.063rem);
   }
 }
