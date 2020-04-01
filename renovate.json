@@ -1,0 +1,12 @@
+{
+  "schedule": [
+    "after 7pm every weekday",
+    "before 8am every weekday"
+  ],
+  "baseBranches": ["experimental"],
+  "labels": [
+    "renovate"
+  ],
+  "rangeStrategy": "pin",
+  "automerge": false
+}
