@@ -1,9 +1,7 @@
 import React from 'react';
 import './TaskList.scss';
 import { Link } from 'react-router-dom';
-import UsersIcon from '../../components/icons/user.icon.js';
-import UserIcon from '../../components/icons/users.icon.js';
-import Search from '../../components/icons/search.icon';
+import { Search, User, Users } from 'react-feather';
 import { Translation } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
 
@@ -70,14 +68,14 @@ class TaskList extends React.Component {
                         <div className="middle">
                             <div className="result-center">
                                 <div className="result-subject">
-                                    <UsersIcon className="icon" stroke="#3A506B" />
+                                    <Users className="icon" color="#3A506B" />
                                     <span className="points">213</span>
                                     <span className="points">{Translation.t('taskList.points')}</span>
                                 </div>
                             </div>
                             <div className="result-center second">
                                 <div className="result-subject">
-                                    <UserIcon className="icon" stroke="#3A506B" />
+                                    <User className="icon" color="#3A506B" />
 
                                     <span className="points">21.323</span>
                                     <span className="points">{Translation.t('taskList.points')}</span>
@@ -87,7 +85,7 @@ class TaskList extends React.Component {
                         <div className="result-right">
                             <span className="result-subject">
                                 <div id="input-search">
-                                    <Search height="30" width="30" />
+                                    <Search size="30" />
                                     <input
                                         onChange={this.OnChangeSearch}
                                         type="text"

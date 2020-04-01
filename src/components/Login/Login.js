@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Login.scss';
-import eye from '../../assets/icons/eye.svg';
-import eyeOff from '../../assets/icons/eye-off.svg';
+import { Eye, EyeOff } from 'react-feather';
 
 class Login extends Component {
     state = { email: '', password: '' };
@@ -80,8 +79,8 @@ class Login extends Component {
                             />
                             {/* describes the two eye-icons in the field */}
                             <span className="eye" onClick={this.changeVisibility}>
-                                <img className="hide1" src={eye} />
-                                <img className="hide2" src={eyeOff} />
+                                <Eye className="hide1" />
+                                <EyeOff className="hide2" />
                             </span>
                         </div>
                         {/* describes the google-login-field */}

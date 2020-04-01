@@ -1,6 +1,5 @@
 import React from 'react';
 import './Button.scss';
-import { Link } from 'react-router-dom';
 import { button } from '@storybook/addon-knobs';
 
 class Button extends React.Component {

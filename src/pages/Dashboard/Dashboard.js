@@ -2,11 +2,8 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
-import CalenderIcon from '../../components/icons/calender.icon.js';
-import UserIcon from '../../components/icons/user.icon';
-import UsersIcon from '../../components/icons/users.icon';
+import { Calendar, File, User, Users } from 'react-feather';
 import Data from '../../lib/Colors';
-import File from '../../components/icons/file-text.icon.js';
 import Query from '../../lib/api/Query';
 import { Translation } from '../../i18n/i18n';
 
@@ -19,26 +16,26 @@ class Subjekt extends React.Component {
         return (
             <div className="subjekt" style={{ borderLeft: border }}>
                 <div className="image">
-                    <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
+                    <File className="icon" size="30" color="#000000" />
                 </div>
                 <div className="box-content">
                     <h3 className="subject-name">{subject}</h3>
                     <span className="under-name">{this.props.Underline}</span>
                     <div className="weekend-task flex-row">
-                        <CalenderIcon className="calender" width="27" height="27" stroke="#000000" />
+                        <Calendar className="calender" size="27" color="#000000" />
                         <span>Wöchentliche Aufgaben</span>
                         <span className="weekend-task-text">{this.props.Weekendtask}</span>
                     </div>
                     <div className="points">
                         <div className="user-points flex-row">
-                            <UserIcon stroke="#000000" width="27" height="27" />
+                            <User color="#000000" size="27" />
                             <span className="point-text">
                                 <span className="user-points">{this.props.Points}</span>
                                 <span>Punkte</span>
                             </span>
                         </div>
                         <div className="community-points flex-row">
-                            <UsersIcon stroke="#000000" width="27" height="27" />
+                            <Users color="#000000" size="27" />
                             <span className="point-text">
                                 <span className="community-points">{this.props.Community_Points}</span>
                                 <span>Punkte</span>

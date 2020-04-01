@@ -2,8 +2,7 @@ import React from 'react';
 import './SubjectTask.scss';
 
 import { Link } from 'react-router-dom';
-import User from '../../assets/icons/user.svg';
-import Users from '../../assets/icons/users.svg';
+import { User, Users } from 'react-feather';
 import { Translation } from '../../i18n/i18n';
 
 class SubjectTask extends React.Component {
@@ -44,13 +43,13 @@ class SubjectTask extends React.Component {
                                 </div>
                                 <div className="subject-task-right">
                                     <div className="subject-task-points">
-                                        <img src={User} alt="" />
+                                        <User />
                                         <p>
                                             <span> 213</span> {Translation.t('taskList.points')}
                                         </p>
                                     </div>
                                     <div className="subject-task-points">
-                                        <img src={Users} alt="" />
+                                        <Users />
                                         <p>
                                             <span> 21.323</span> {Translation.t('taskList.points')}
                                         </p>

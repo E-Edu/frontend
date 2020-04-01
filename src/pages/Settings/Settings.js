@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/main.scss';
 import './Settings.scss';
+import { Edit2 } from 'react-feather';
 import { Translation } from '../../i18n/i18n';
 
 class Settings extends Component {
@@ -23,10 +24,7 @@ class Settings extends Component {
                                 <td className="topic">{Translation.t('settings.password')}</td>
                                 <td>************</td>
                                 <td>
-                                    {/* TODO edit icon
-                                        import EditIcon from "../../assets/icons/edit.icon;
-                                        <EditIcon stroke={"#3A506B"} width={20} height={20}/>
-                                        */}
+                                    <Edit2 />
                                     {Translation.t('settings.change')}
                                 </td>
                             </tr>
