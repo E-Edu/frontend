@@ -1,16 +1,9 @@
 import React from 'react';
-import Tags_icon from '../../assets/icons/tag.svg';
-import Task_icon from '../../assets/icons/pencile.svg';
-import File from '../../assets/icons/file-text.svg';
-import Badge from '../../assets/icons/award.svg';
-import Download from '../../assets/icons/download.svg';
 import './Profile.scss';
 import '../../css/main.css';
+import { Award, Calendar, Download, Edit2, File, Tag, TrendingUp, User } from 'react-feather';
 import Data from '../../lib/Colors.json';
 import { Translation } from '../../i18n/i18n';
-import UserIcon from '../../components/icons/user.icon';
-import TrendingUpIcon from '../../components/icons/trending-up.icon';
-import CalenderIcon from '../../components/icons/calender.icon';
 
 class ProfileSubject extends React.Component {
     render() {
@@ -21,7 +14,7 @@ class ProfileSubject extends React.Component {
             <div className="profile-subjekt" style={{ borderLeft: border }}>
                 <div className="profile-top">
                     <div className="profile-subjekt-img">
-                        <img className="logo" alt="subjekt-img" src={File} />
+                        <File className="logo" />
                     </div>
                     <div className="text">
                         <div className="profile-subjekt-name">
@@ -44,14 +37,14 @@ class ProfileCertificate extends React.Component {
             <div className="profile-certifikate">
                 <div className="certificates-row">
                     <div className="titel-certificate">
-                        <img className="badge-image" src={Badge} alt="badge" />
+                        <Award className="badge-image" />
                         <p className="badge-title">{this.props.Title}</p>
                     </div>
                     <div className="date-certificate">
                         <p className="date">Erreicht am{this.props.Datum}</p>
                     </div>
                 </div>
-                <img className="download-image" src={Download} alt="download" />;
+                <Download className="download-image" />
             </div>
         );
     }
@@ -103,7 +96,7 @@ class Profile extends React.Component {
                                         disabled={this.state.disabled}
                                     />
                                     <a onClick={this.usernameClickListener}>
-                                        <img className="pen img" src={Task_icon} alt="pen" />
+                                        <Edit2 className="pen img" />
                                     </a>
                                 </div>
                             </span>
@@ -113,7 +106,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="user img user-icon">
-                                        <UserIcon alt="user icon" stroke="#3A506B" />
+                                        <User color="#3A506B" />
                                     </span>
                                     <span>6.526</span>
                                     <span className="var-info profile-span-padding-l">
@@ -127,7 +120,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="trending img trending-icon">
-                                        <TrendingUpIcon width="24" height="30" stroke="#3A506B" alt="trending" />
+                                        <TrendingUp size="24" color="#3A506B" />
                                     </span>
                                     <span>7.231</span>
                                     <span className="var-info profile-span-padding-l">
@@ -141,7 +134,7 @@ class Profile extends React.Component {
                             <span className="central">
                                 <div className="profile-flex-row">
                                     <span className="calender img calender-icon">
-                                        <CalenderIcon alt="calendar" stroke="#3A506B" />
+                                        <Calendar color="#3A506B" />
                                     </span>
                                     <span className="profile-span-padding-r">
                                         {Translation.t('profile.memberSince')}
@@ -162,7 +155,7 @@ class Profile extends React.Component {
                                 <div className="levelbar-front" />
                             </div>
                             <div className="level-rank">
-                                <img stroke="#5BC0BE" alt="tag" className="tag" src={Tags_icon} />
+                                <Tag color="#5BC0BE" />
                                 <span className="level-rang">{Translation.t('profile.rank.teachingMaster')}</span>
                             </div>
                         </div>

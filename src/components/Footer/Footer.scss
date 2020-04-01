@@ -2,7 +2,6 @@
 
 .footer-navbar {
   align-items: center;
-  align-items: center;
   background-color: $color-bluegrey;
   bottom: 0;
   display: flex;
@@ -33,6 +32,10 @@
 
   .copyright {
     margin-right: 5.125rem;
+
+    span {
+      color: #fff;
+    }
   }
 
   .legal {

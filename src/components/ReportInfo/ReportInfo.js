@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './ReportInfo.scss';
-import down from '../../assets/icons/thumbs-down.svg';
-import up from '../../assets/icons/thumbs-up.svg';
-import mail from '../../assets/icons/mail.svg';
-import teacher from '../../assets/icons/teacher.svg';
+import { ArrowDown, ArrowUp, Mail } from 'react-feather';
+import TeacherIcon from '../icons/teacher.icon';
 
 class ReportInfo extends Component {
     constructor() {
@@ -35,15 +33,15 @@ class ReportInfo extends Component {
                     <div className="infos-right">
                         <div className="likes">
                             <span>{this.state.dislikes}</span>
-                            <img src={down} />
+                            <ArrowDown />
                             <span> {this.state.likes}</span>
-                            <img src={up} />
+                            <ArrowUp />
                         </div>
                         <div className="teacher">
-                            {this.state.teacher} <img src={teacher} />
+                            {this.state.teacher} <TeacherIcon />
                         </div>
                         <div className="messages">
-                            {this.state.messages} <img src={mail} />
+                            {this.state.messages} <Mail />
                         </div>
                     </div>
                 </div>

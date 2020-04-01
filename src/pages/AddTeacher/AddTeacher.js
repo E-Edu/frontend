@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './AddTeacher.scss';
-import icon_user_plus from '../../assets/icons/user-plus.svg';
+import { UserPlus } from 'react-feather';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import { Translation } from '../../i18n/i18n';
@@ -52,7 +52,7 @@ class AddTeacher extends Component {
                         onChange={this.emailChange}
                         className="test"
                     />
-                    <img className="add-teacher-button" src={icon_user_plus} alt="user-plus-icon" onClick={this.add} />
+                    <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
                     {Translation.t(`addTeacher.${this.state.pendingRequests.length === 0 ? 'noP' : 'p'}endingRequests`)}

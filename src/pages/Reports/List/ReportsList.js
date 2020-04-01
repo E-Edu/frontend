@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import './ReportsList.scss';
 import Modal from 'react-animated-modal';
-import icon_info from '../../../assets/icons/info.svg';
-import icon_mail from '../../../assets/icons/mail.svg';
-import icon_teacher from '../../../assets/icons/teacher.svg';
-import ThumbsUpIcon from '../../../components/icons/thumbs-up.icon';
-import ThumbsDownIcon from '../../../components/icons/thumbs-down.icon';
+import { Info, Mail, ThumbsDown, ThumbsUp } from 'react-feather';
 import ReportInfo from '../../../components/ReportInfo/ReportInfo';
 import DifficultyLabel from '../../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import colorData from '../../../lib/Colors';
+import TeacherIcon from '../../../components/icons/teacher.icon';
 
 class Report extends Component {
     constructor(props) {
@@ -120,8 +117,8 @@ class Report extends Component {
                                 justifyContent: 'flex-end',
                             }}>
                             <div style={{ marginLeft: 10 }} onClick={this.like}>
-                                <ThumbsUpIcon
-                                    stroke={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
+                                <ThumbsUp
+                                    color={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.likes}</span>
@@ -136,8 +133,8 @@ class Report extends Component {
                                 justifyContent: 'flex-end',
                             }}>
                             <div style={{ marginLeft: 10 }} onClick={this.dislike}>
-                                <ThumbsDownIcon
-                                    stroke={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
+                                <ThumbsDown
+                                    color={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
@@ -153,16 +150,10 @@ class Report extends Component {
                         justifyContent: 'space-between',
                     }}>
                     <div style={{ width: 400 }}>
-                        <img
-                            style={{ marginLeft: 20 }}
-                            src={icon_info}
-                            alt="info-icon"
-                            className="info-icon"
-                            onClick={this.showModal}
-                        />
+                        <Info style={{ marginLeft: 20 }} className="info-icon" onClick={this.showModal} />
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src={icon_mail} alt="mail-icon" />
+                        <Mail />
                         <span style={{ marginLeft: 10 }}>{messages}</span>
                     </div>
                     <div
@@ -175,7 +166,7 @@ class Report extends Component {
                             justifyContent: 'flex-end',
                         }}>
                         <span style={{ marginLeft: 10, textAlign: 'right' }}>{teacher}</span>
-                        <img style={{ marginLeft: 10 }} src={icon_teacher} alt="teacher-icon" />
+                        <TeacherIcon style={{ marginLeft: 10 }} />
                     </div>
                 </div>
             </div>
