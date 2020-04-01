@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
-import Help_Image from '../../assets/icons/helpcircle.svg';
-import Logout_Image from '../../assets/icons/logout.svg';
+import { HelpCircle, LogOut } from 'react-feather';
 
 class Header extends Component {
     render() {
@@ -38,10 +37,10 @@ class Header extends Component {
                             <Link
                                 to={{ pathname: '/imprint', state: { prevPath: 'Dashboard' } }}
                                 className="btn-dash btn-info">
-                                <img src={Help_Image} alt="Help" />
+                                <HelpCircle />
                             </Link>
-                            <Link className="btn-dash btn-logout">
-                                <img src={Logout_Image} alt="Logout" />
+                            <Link className="btn-dash btn-logout" to="/">
+                                <LogOut />
                             </Link>
                         </div>
                     </div>

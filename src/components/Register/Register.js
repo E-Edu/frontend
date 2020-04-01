@@ -1,10 +1,8 @@
 import React from 'react';
 import './Register.scss';
 import { Link } from 'react-router-dom';
-import eye from '../../assets/icons/eye.svg';
-import eye_off from '../../assets/icons/eye-off.svg';
+import { Eye, EyeOff, User } from 'react-feather';
 import TeacherIcon from '../icons/teacher.icon';
-import UserIcon from '../icons/user.icon';
 
 // Regular Expression für die Validierung der Mail
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
@@ -61,10 +59,9 @@ class Register extends React.Component {
             case 'lastName':
                 formErrors.lastName = value.length < 3 ? 'minimum 3 characters required ' : '';
                 break;
-
             case 'role':
                 formErrors.role = value === '' ? 'Please select your role' : '';
-
+                break;
             case 'password':
                 formErrors.password = value.length < 6 ? 'minimum 6 characters required ' : '';
                 break;
@@ -163,8 +160,8 @@ class Register extends React.Component {
                                                     noValidate
                                                 />
                                                 <span className="eye" onClick={this.togglePassword}>
-                                                    <img src={isPasswordShown ? eye_off : eye} />
-                                                    <i className="hide2 fa fa-eye-slash" />
+                                                    <Eye className="hide1" />
+                                                    <EyeOff className="hide2" />
                                                 </span>
                                             </div>
 
@@ -179,11 +176,8 @@ class Register extends React.Component {
                                                     noValidate
                                                 />
                                                 <span className="eye">
-                                                    <img
-                                                        onClick={this.togglePassword2}
-                                                        src={isPasswordShown2 ? eye_off : eye}
-                                                    />
-                                                    <i className="hide2" className="fa fa-eye-slash" />
+                                                    <Eye className="hide1" />
+                                                    <EyeOff className="hide2" />
                                                 </span>
                                             </div>
 
@@ -247,7 +241,7 @@ class Register extends React.Component {
                                                         ? 'btn-special-button btn-special-button1 btn active'
                                                         : 'btn-special-button btn-special-button1 btn'
                                                 }>
-                                                <UserIcon stroke="black" />
+                                                <User color="black" />
                                                 <span>Student</span>
                                             </div>
 

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './ResultQuestion.scss';
-import ThumbsUp from '../../assets/icons/thumbs-up.svg';
-import ThumbsDown from '../../assets/icons/thumbs-down.svg';
+import { ThumbsDown, ThumbsUp } from 'react-feather';
 
 class ResultQuestion extends Component {
     render() {
@@ -19,8 +18,8 @@ class ResultQuestion extends Component {
                         </div>
                         <div className="result-right-top">
                             <p className="result-rating">Frage bewerten: </p>
-                            <img src={ThumbsUp} alt="" />
-                            <img src={ThumbsDown} alt="" />
+                            <ThumbsUp />
+                            <ThumbsDown />
                         </div>
                     </div>
                     <div className="result-bottom">

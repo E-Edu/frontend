@@ -1,7 +1,6 @@
 import React from 'react';
 import './TaskHeader.scss';
-import UserIcon from '../icons/user.icon';
-import UsersIcon from '../icons/users.icon';
+import { User, Users } from 'react-feather';
 
 class TaskHeader extends React.Component {
     render() {
@@ -13,13 +12,13 @@ class TaskHeader extends React.Component {
                     </div>
                     <div className="lecture-header-points">
                         <div className="lecture-points">
-                            <UserIcon />
+                            <User />
                             <p className="lecture-point-text">
                                 <span>213</span> Punkte
                             </p>
                         </div>
                         <div className="lecture-points">
-                            <UsersIcon />
+                            <Users />
                             <p className="lecture-point-text">
                                 <span>21.323</span> Punkte
                             </p>

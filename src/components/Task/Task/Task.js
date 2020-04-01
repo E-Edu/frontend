@@ -1,6 +1,6 @@
 import React from 'react';
+import { Award } from 'react-feather';
 import { Translation } from '../../../i18n/i18n';
-import Award from '../../icons/award.icon';
 import DifficultyLabel from '../Difficulty/DifficultyLabel/DifficultyLabel';
 
 class Task extends React.Component {
@@ -20,7 +20,7 @@ class Task extends React.Component {
                             <span>{Translation.t('taskList.questions')}</span>
                         </div>
                         <div className="task-element">
-                            <Award className="icon" stroke="#3A506B" />
+                            <Award className="icon" color="#3A506B" />
                             <span>{rightQuestions}</span>
                         </div>
                         <DifficultyLabel difficulty={this.props.difficulty} />
