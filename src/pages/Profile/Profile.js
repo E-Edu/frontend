@@ -3,6 +3,7 @@ import './Profile.scss';
 import '../../css/main.css';
 import { Award, Calendar, Download, Edit2, File, Tag, TrendingUp, User } from 'react-feather';
 import Data from '../../lib/Colors.json';
+import IconText from '../../components/IconText/IconText';
 import { Translation } from '../../i18n/i18n';
 
 class ProfileSubject extends React.Component {
@@ -104,43 +105,25 @@ class Profile extends React.Component {
 
                         <div className="central stat font-arimo points">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="user img user-icon">
-                                        <User color="#3A506B" />
-                                    </span>
-                                    <span>6.526</span>
-                                    <span className="var-info profile-span-padding-l">
-                                        {Translation.t('task.points')}
-                                    </span>
-                                </div>
+                                <IconText text={'6.526 ' + Translation.t('task.points')} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <User stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 
                         <div className="central stat font-arimo trending">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="trending img trending-icon">
-                                        <TrendingUp size="24" color="#3A506B" />
-                                    </span>
-                                    <span>7.231</span>
-                                    <span className="var-info profile-span-padding-l">
-                                        {Translation.t('task.questions')}
-                                    </span>
-                                </div>
+                                <IconText text={'6.526 ' + Translation.t('task.points')} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <TrendingUp size="24" stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 
                         <div className="central stat font-arimo since">
                             <span className="central">
-                                <div className="profile-flex-row">
-                                    <span className="calender img calender-icon">
-                                        <Calendar color="#3A506B" />
-                                    </span>
-                                    <span className="profile-span-padding-r">
-                                        {Translation.t('profile.memberSince')}
-                                    </span>
-                                    <span className="var-info">21.03.2020</span>
-                                </div>
+                                <IconText text={Translation.t('profile.memberSince') + ' 21.03.2020'} position="left" distance="0.4rem" class="profile-flex-row">
+                                    <Calendar stroke="#3A506B" />
+                                </IconText>
                             </span>
                         </div>
 

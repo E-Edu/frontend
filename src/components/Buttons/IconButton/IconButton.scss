@@ -1,0 +1,13 @@
+@import './src/css/styles';
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    right: 0;
+    justify-content: flex-end;
+
+    .text {
+        width: 100%;
+    }
+}

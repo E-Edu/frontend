@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './CorrectionReviewBoxes.scss';
 import { Calendar, Edit, User } from 'react-feather';
 import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
+import IconText from '../../components/IconText/IconText';
+import IconButton from '../../components/Buttons/IconButton/IconButton';
 
 class CorrectionReviewBoxes extends Component {
     render() {
@@ -14,18 +16,15 @@ class CorrectionReviewBoxes extends Component {
                     </div>
                 </div>
                 <div className="correction-box-bottom">
-                    <div className="correction-pupil">
-                        <User />
-                        <p> Max Musterman</p>
-                    </div>
-                    <div className="correction-date">
-                        <Calendar />
-                        <p> Vor 3 Tagen</p>
-                    </div>
-                    <div className="correction-correct">
-                        <Edit />
-                        <p>Korrigieren </p>
-                    </div>
+                    <IconText text="Max Musterman" position="left" class="correction-pupil">
+                        <User width="21" height="21"></User>
+                    </IconText>
+                    <IconText text="Vor 3 Tagen" position="left" class="correction-data">
+                        <Calendar width="21" height="21"></Calendar>
+                    </IconText>
+                   <IconButton text="Korrigieren" class="correction-correct" distance="0.4rem">
+                       <Edit />
+                   </IconButton>
                 </div>
             </span>
         );
