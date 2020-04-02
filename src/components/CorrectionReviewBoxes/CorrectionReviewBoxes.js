@@ -4,6 +4,7 @@ import { Calendar, Edit, User } from 'react-feather';
 import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import IconText from '../../components/IconText/IconText';
 import IconButton from '../../components/Buttons/IconButton/IconButton';
+import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
 
 class CorrectionReviewBoxes extends Component {
     render() {
@@ -11,9 +12,13 @@ class CorrectionReviewBoxes extends Component {
             <span className="correction-box">
                 <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
+<<<<<<< HEAD
                     <div className="correction-difficulty">
                         <DifficultyLabel difficulty={this.props.difficulty} />
                     </div>
+=======
+                    <DifficultyLabel level="easy"></DifficultyLabel>
+>>>>>>> Added DifficultyLabel component
                 </div>
                 <div className="correction-box-bottom">
                     <IconText text="Max Musterman" position="left" class="correction-pupil">

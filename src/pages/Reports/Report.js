@@ -4,6 +4,7 @@ import { Info, Mail, ThumbsUp, ThumbsDown } from 'react-feather';
 import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
+import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
 import Modal from 'react-animated-modal';
 import colorData from '../../lib/Colors';
 import { Translation } from '../../i18n/i18n';
@@ -140,23 +141,7 @@ class Report extends Component {
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor: backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor: borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t('difficulty.' + difficulty)}
-                        </span>
+                        <DifficultyLabel level={difficulty} />
                     </div>
                 </div>
                 <div
