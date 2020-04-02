@@ -53,7 +53,9 @@ class ReportInfo extends Component {
                         <button onClick={this.handleClick} className="half" type="button">
                             Behalten
                         </button>
-                        <button className="half" type="button">Löschen</button>
+                        <button className="half" type="button">
+                            Löschen
+                        </button>
                     </div>
                 </div>
                 <div className="done-div">

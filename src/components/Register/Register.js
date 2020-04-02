@@ -7,15 +7,12 @@ import TeacherIcon from '../icons/teacher.icon';
 // Regular Expression für die Validierung der Mail
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
-
 // Validates Form errors
 const formValid = ({ formErrors, ...rest }) => {
     let valid = true;
 
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
-
-
 };
 
 class Register extends React.Component {

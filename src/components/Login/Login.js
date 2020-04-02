@@ -84,7 +84,7 @@ class Login extends Component {
                             </span>
                         </div>
                         {/* describes the google-login-field */}
-                        <button className="pointer google-login">
+                        <button className="pointer google-login" type="button">
                             <img
                                 className="google-bild"
                                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"

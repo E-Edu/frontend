@@ -29,7 +29,7 @@ class Result extends React.Component {
                                 </p>
                             </div>
                             <div className="resultPoints">
-                                <img className="resultIcons" src={Users} alt="multiple users icon"/>
+                                <img className="resultIcons" src={Users} alt="multiple users icon" />
                                 <p>
                                     <span> 21.323</span> Punkte
                                 </p>

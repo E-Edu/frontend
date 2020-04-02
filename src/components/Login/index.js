@@ -54,8 +54,8 @@ class Template extends Component {
                             </span>
                         </div>
 
-                        <button id="google-login">
-                            <img id="googleBild" src="google-logo.png" alt="Google icon"/> Log In with Google{' '}
+                        <button id="google-login" type="button">
+                            <img id="googleBild" src="google-logo.png" alt="Google icon" /> Log In with Google{' '}
                         </button>
                         <input type="submit" className="" id="login" className="button" value="Log In" />
                     </div>

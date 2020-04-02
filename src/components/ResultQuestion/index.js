@@ -19,7 +19,7 @@ class ResultQuestion extends Component {
                         </div>
                         <div className="resultRightTop">
                             <p className="resultRating">Frage bewerten: </p>
-                            <img className="resultRatingIcons" src={Thumbs_Up} alt="like icon"/>
+                            <img className="resultRatingIcons" src={Thumbs_Up} alt="like icon" />
                             <img className="resultRatingIcons" src={Thumbs_Down} alt="dislike icon" />
                         </div>
                     </div>
