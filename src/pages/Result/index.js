@@ -1,13 +1,11 @@
 import React from 'react';
 import './index.scss';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+
 import ResultQuestion from '../../components/ResultQuestion';
 
 class Result extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
 
     render() {
         return (

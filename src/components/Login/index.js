@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import './Login.scss';
 
 class Template extends Component {
-    constructor(props) {
-        super(props);
-    }
-
+   
     state = {};
 
     /** Method to switch between visibility and non-visibility

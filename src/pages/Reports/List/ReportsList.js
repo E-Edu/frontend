@@ -75,8 +75,7 @@ class Report extends Component {
     render() {
         const { difficulty } = this.state;
         const color = colorData.difficultyColor[difficulty];
-        const { backgroundColor } = color;
-        const { borderColor } = color;
+        
         const { subject } = this.props;
         const { messages } = this.props;
         const { teacher } = this.props;

@@ -28,7 +28,7 @@ class LandingPage extends Component {
     }
 
     render() {
-        const backgroundSvg = 'assets/landing-background.svg';
+      
         return (
             <div className="landing">
                 <div className="main">

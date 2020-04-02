@@ -16,18 +16,21 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        /*
         const user = { email: this.state.email, password: this.state.password };
-
+        
         const response = axios.post(`https://jsonplaceholder.typicode.com/users`, { user }).then(
+            
             (res) => {
-                /* axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => { */
+                 axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => { 
             },
             (onerror) => {}
         );
+
         if (response) {
             this.props.history.push('/dashboard');
         }
+        */
     };
 
     /** Method to switch between visibility and non-visibility

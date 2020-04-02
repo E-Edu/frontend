@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './index.scss';
-import { useParams } from 'react-router-dom';
+
 
 class ResultQuestion extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
 
     render() {
         return (
