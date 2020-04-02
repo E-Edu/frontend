@@ -5,6 +5,7 @@ import UserIcon from '../../components/icons/user.icon';
 import EditIcon from '../../components/icons/edit.icon';
 import IconText from '../../components/IconText/IconText';
 import IconButton from '../../components/Buttons/IconButton/IconButton';
+import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
 
 class CorrectionReviewBoxes extends Component {
     constructor(props) {
@@ -16,9 +17,7 @@ class CorrectionReviewBoxes extends Component {
             <span className="correction-box">
                 <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
-                    <div className="correction-difficulty">
-                        <p>Leicht </p>
-                    </div>
+                    <DifficultyLabel level="easy"></DifficultyLabel>
                 </div>
                 <div className="correction-box-bottom">
                     <IconText text="Max Musterman" position="left" class="correction-pupil">

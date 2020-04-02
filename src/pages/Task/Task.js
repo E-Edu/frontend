@@ -5,6 +5,7 @@ import Award from '../../components/icons/award.icon';
 import { Translation } from '../../i18n/i18n';
 import AwardIcon from '../../components/icons/award.icon';
 import IconText from '../../components/IconText/IconText';
+import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
 
 class Task extends React.Component {
     render() {
@@ -29,23 +30,7 @@ class Task extends React.Component {
                         <IconText text={rightQuestions} fontColor="#3A506B" class="task-element">
                             <Award stroke="#3A506B" />
                         </IconText>
-                        <span
-                            style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginRight: 20,
-                                color: '#1C2541',
-                                right: 0,
-                                justifyContent: 'flex-end',
-                                backgroundColor: backgroundColor,
-                                borderWidth: 1,
-                                borderStyle: 'solid',
-                                borderColor: borderColor,
-                                borderRadius: 10,
-                                padding: '0.0rem 0.33333334rem',
-                            }}>
-                            {Translation.t('difficulty.' + difficulty)}
-                        </span>
+                        <DifficultyLabel level={difficulty}></DifficultyLabel>
                     </div>
                 </div>
                 <div className="task-bottom">
