@@ -8,7 +8,10 @@ class IconButton extends Component {
 
     render() {
         return (
-            <div className={'icon-button ' + this.props.class} style={{ width: this.props.width }} onClick={this.props.clickEvent}>
+            <div
+                className={'icon-button ' + this.props.class}
+                style={{ width: this.props.width }}
+                onClick={this.props.clickEvent}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}

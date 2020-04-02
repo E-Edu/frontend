@@ -1,13 +1,13 @@
 @import './src/css/styles';
 
 .icon-text {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    right: 0;
-    justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  right: 0;
 
-    .text {
-        width: 100%;
-    }
+  .text {
+    width: 100%;
+  }
 }

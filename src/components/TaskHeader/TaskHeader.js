@@ -17,10 +17,20 @@ class TaskHeader extends React.Component {
                         <span className="lecture-subject">{this.props.module}</span>
                     </div>
                     <div className="lecture-header-points">
-                        <IconText text="213 Punkte" position="left" class="lecture-points" distance="0.4rem" fontColor="#0b132b">
+                        <IconText
+                            text="213 Punkte"
+                            position="left"
+                            class="lecture-points"
+                            distance="0.4rem"
+                            fontColor="#0b132b">
                             <UserIcon stroke="#0b132b" />
                         </IconText>
-                        <IconText text="21.323 Punkte" position="left" class="lecture-points" distance="0.4rem" fontColor="#0b132b">
+                        <IconText
+                            text="21.323 Punkte"
+                            position="left"
+                            class="lecture-points"
+                            distance="0.4rem"
+                            fontColor="#0b132b">
                             <UsersIcon stroke="#0b132b" />
                         </IconText>
                     </div>
