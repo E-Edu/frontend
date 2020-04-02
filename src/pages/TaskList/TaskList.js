@@ -43,7 +43,6 @@ class TaskList extends React.Component {
 
     renderTasks() {
         return this.state.tasks.map((task, index) => {
-            console.log('Task', task);
             return (
                 <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
@@ -69,12 +68,20 @@ class TaskList extends React.Component {
 
                         <div className="middle">
                             <div className="result-center">
-                                <IconText text={"213 " + Translation.t('taskList.points')} position="left" class="result-subject" fontColor="#3A506B">
+                                <IconText
+                                    text={'213 ' + Translation.t('taskList.points')}
+                                    position="left"
+                                    class="result-subject"
+                                    fontColor="#3A506B">
                                     <Users className="icon" stroke="#3A506B" />
                                 </IconText>
                             </div>
                             <div className="result-center second">
-                                <IconText text={"21.323 " + Translation.t('taskList.points')} position="left" class="result-subject" fontColor="#3A506B">
+                                <IconText
+                                    text={'21.323 ' + Translation.t('taskList.points')}
+                                    position="left"
+                                    class="result-subject"
+                                    fontColor="#3A506B">
                                     <User className="icon" stroke="#3A506B" />
                                 </IconText>
                             </div>

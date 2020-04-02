@@ -4,6 +4,7 @@ import { Check, Mail, X } from 'react-feather';
 import Teacher from '../../../components/icons/teacher.icon';
 import IconText from '../../../components/IconText/IconText';
 import IconButton from '../../../components/Buttons/IconButton/IconButton';
+import { Translation } from '../../../i18n/i18n';
 
 class AddTeacherRequest extends Component {
     render() {
@@ -12,18 +13,18 @@ class AddTeacherRequest extends Component {
                 <div className="teacher-infos">
                     <IconText text={this.props.name} position="left" distance="0.4rem" class="teacher-info">
                         {/* TODO: find a better solution */}
-                        <Teacher color="#3a506b" fill="none" size="29"/>
+                        <Teacher color="#3a506b" fill="none" size="29" />
                     </IconText>
                     <IconText text={this.props.email} position="left" distance="0.4rem" class="teacher-info">
-                        <Mail stroke="#3a506b" size="29"/>
+                        <Mail stroke="#3a506b" size="29" />
                     </IconText>
                 </div>
                 <div className="request-actions">
-                    <IconButton text="Ablehnen" class="request-action">
-                        <X stroke="#ba1919" size="29"/>
+                    <IconButton text={Translation.t('addTeacher.acceptAction')} class="request-action">
+                        <X stroke="#ba1919" size="29" />
                     </IconButton>
-                    <IconButton text="Annehmen" class="request-action">
-                        <Check stroke="#19BA3F" size="29"/>
+                    <IconButton text={Translation.t('addTeacher.denyAction')} class="request-action">
+                        <Check stroke="#19BA3F" size="29" />
                     </IconButton>
                 </div>
             </div>

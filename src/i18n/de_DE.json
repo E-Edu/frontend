@@ -34,6 +34,10 @@
                 "description": "Irgendwas mit Äpfeln und Bananen"
             }
         },
+        "subjectInfos": {
+            "weekendtask": "Wöchentliche Aufgaben",
+            "points": "Punkte"
+        },
         "lection": {
             "math": {
                 "addition": {
@@ -79,6 +83,18 @@
             },
             "favoriteSubjects": "Favorisierte Fächer",
             "certificates": "Zertifikate"
+        },
+        "addTeacher": {
+            "title": "Lehrer hinzufügen",
+            "emailOfTeacher": "Email des Lehrers",
+            "pendingRequests": "Ausstehende Anfragen",
+            "noPendingRequests": "Keine ausstehenden Anfragen",
+            "acceptAction": "Annehmen",
+            "denyAction": "Ablehnen"
+        },
+        "correction": {
+            "date": "vor 3 Tagen",
+            "correctionAction": "Korrigieren"
         }
     },
     "landingPage": {
@@ -124,6 +140,12 @@
         "title": "Lehrer hinzufügen",
         "emailOfTeacher": "Email des Lehrers",
         "pendingRequests": "Ausstehende Anfragen",
-        "noPendingRequests": "Keine ausstehenden Anfragen"
+        "noPendingRequests": "Keine ausstehenden Anfragen",
+        "acceptAction": "Annehmen",
+        "denyAction": "Ablehnen"
+    },
+    "correction": {
+        "date": "vor 3 Tagen",
+        "correctionAction": "Korrigieren"
     }
 }

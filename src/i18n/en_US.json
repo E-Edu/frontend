@@ -34,6 +34,10 @@
                 "description": "Something about apples and bananas"
             }
         },
+        "subjectInfos": {
+            "weekendtask": "weekly exercises",
+            "points": "points"
+        },
         "lection": {
             "math": {
                 "addition": {
@@ -84,7 +88,13 @@
             "title": "Add teacher",
             "emailOfTeacher": "Teachers email",
             "pendingRequests": "Pending requests",
-            "noPendingRequests": "No pending requests"
+            "noPendingRequests": "No pending requests",
+            "acceptAction": "Accept",
+            "denyAction": "Deny"
+        },
+        "correction": {
+            "date": "3 days ago",
+            "correctionAction": "correct"
         }
     }
 }

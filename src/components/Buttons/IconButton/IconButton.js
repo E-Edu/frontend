@@ -2,16 +2,10 @@ import React, { Component } from 'react';
 import './IconButton.scss';
 
 class IconButton extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
+        const width = this.props.width;
         return (
-            <div
-                className={'icon-button ' + this.props.class}
-                style={{ width: this.props.width }}
-                onClick={this.props.clickEvent}>
+            <div className={'icon-button ' + this.props.class} style={{ width: width }} onClick={this.props.clickEvent}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}

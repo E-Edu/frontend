@@ -2,6 +2,7 @@ import React from 'react';
 import './Subject.scss';
 import { Calendar, File, User, Users } from 'react-feather';
 import IconText from '../../components/IconText/IconText';
+import { Translation } from '../../i18n/i18n';
 
 class Subject extends React.Component {
     render() {
@@ -16,23 +17,23 @@ class Subject extends React.Component {
                 </div>
                 <div className="box-content">
                     <h3 className="subject-name">{subject}</h3>
-                    <span className="under-name">{this.props.Underline}</span>
+                    <span className="under-name">{this.props.underline}</span>
                     <IconText
-                        text={'Wöchentliche Aufgaben ' + this.props.Weekendtask}
+                        text={Translation.t('subjectInfos.weekendtask') + ' ' + this.props.weekendtask}
                         position="left"
                         class="weekend-task flex-row">
                         <Calendar className="calender" width="27" height="27" stroke="#000000" />
                     </IconText>
                     <div className="points">
                         <IconText
-                            text={this.props.Points + ' Punkte'}
+                            text={this.props.points + ' ' + Translation.t('subjectInfos.points')}
                             position="left"
                             distance="0.4rem"
                             class="user-points flex-row">
                             <User stroke="#000000" width="27" height="27" />
                         </IconText>
                         <IconText
-                            text={this.props.Community_Points + 'Punkte'}
+                            text={this.props.community_Points + ' ' + Translation.t('subjectInfos.points')}
                             position="left"
                             distance="0.4rem"
                             class="community-points flex-row">

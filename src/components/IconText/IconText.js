@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './IconText.scss';
 
 class IconText extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className={'icon-text ' + this.props.class} style={{ width: this.props.width }}>
