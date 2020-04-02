@@ -8,7 +8,6 @@ import IconText from '../../components/IconText/IconText';
 import IconButton from '../../components/Buttons/IconButton/IconButton';
 
 class AddRequest extends Component {
-
     render() {
         return (
             <div className="add-teacher-report-component text-dark">
