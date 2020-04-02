@@ -57,7 +57,7 @@ App.propTypes = {
     children: React.PropTypes.Community_Points,
     children: React.PropTypes.Datum,
     children: React.PropTypes.description,
-    
+
     children: React.PropTypes.difficulty,
     children: React.PropTypes.disable,
     children: React.PropTypes.dislikes,
@@ -74,7 +74,7 @@ App.propTypes = {
     children: React.PropTypes.liked,
     children: React.PropTypes.likes,
     children: React.PropTypes.location,
-    
+
     children: React.PropTypes.location.pathname,
     children: React.PropTypes.mainTitle,
     children: React.PropTypes.maxWidth,
@@ -82,7 +82,7 @@ App.propTypes = {
     children: React.PropTypes.module,
     children: React.PropTypes.name,
     children: React.PropTypes.onChange,
-    
+
     children: React.PropTypes.Points,
     children: React.PropTypes.questions,
     children: React.PropTypes.rightQuestions,
@@ -101,16 +101,7 @@ App.propTypes = {
     children: React.PropTypes.visible,
     children: React.PropTypes.Weekendtask,
     children: React.PropTypes.width,
-    
-
-    
     children: React.PropTypes.url,
-   
-    
-    
-    
-   
-    
 };
 
 export default App;
