@@ -1,21 +1,18 @@
 @import './src/css/styles';
 
 .profile-certifikate {
-
   align-items: center;
   border: 1px solid #707070;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  
   height: 84px;
   margin: 10px 15px;
   padding: 0;
   width: 412px;
   
   .download-image {
-  
     height: 27px;
     margin-left: 2.5rem;
     width: 27px;
@@ -34,7 +31,7 @@
       color: #5bc0be;
       display: flex;
       flex-direction: row;
-      font-size: 1.7333333rem;
+      font-size: 1.733rem;
       font-weight: bold;
       margin: 0;
       padding: 0;
@@ -44,7 +41,7 @@
       color: #0b132b;
       display: flex;
       flex-direction: row;
-      font-size: 1.0666667rem;
+      font-size: 1.066rem;
       margin: 0;
       padding: 0;
     }
@@ -56,9 +53,7 @@
   }
   
   p {
-    margin: 0;
-    margin-left: 2.6666667rem;
-    margin-top: 0.33333334rem;
+    margin: 0.333rem 0 0 2.667rem;
   }
   
   .badge-title {
@@ -67,6 +62,6 @@
   }
   
   .badge-image {
-    margin-left: 0.6666667rem;
+    margin-left: 0.667rem;
   }
 }

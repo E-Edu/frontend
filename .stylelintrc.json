@@ -4,9 +4,19 @@
     "stylelint-scss"
   ],
   "rules": {
-    "scss/dollar-variable-pattern": "^color-",
+    "scss/dollar-variable-pattern": "^color-|^font-",
     "scss/at-extend-no-missing-placeholder": true,
     "max-nesting-depth": 10,
-    "selector-max-compound-selectors": 10
+    "selector-max-compound-selectors": 10,
+    "number-max-precision": 3,
+    "number-no-trailing-zeros": true,
+    "string-quotes": "single",
+    "unit-case": "lower",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-bang-space-before": "always",
+    "declaration-bang-space-after": "never",
+    "declaration-colon-space-after": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-empty-line-before": "never"
   }
 }

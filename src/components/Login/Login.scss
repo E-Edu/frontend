@@ -6,8 +6,8 @@
     */
   .box {
     background: #fff;
-    border-radius: 0.26666668rem;
-    box-shadow: 0 0 0.6666667rem #888;
+    border-radius: 0.267rem;
+    box-shadow: 0 0 0.667rem #888;
     color: #003;
     height: 35vh;
     padding: 0;
@@ -21,11 +21,11 @@
 
     /*sets size and form of the input-boxes for password and email*/
     .input-box {
-      border: 0.06666667rem solid #0b132b;
+      border: 0.067rem solid #0b132b;
       border-radius: 0.4rem;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       outline: none;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 90%;
 
       /*sets size of the actual inputfields in the input-boxes*/
@@ -39,11 +39,11 @@
     /*sets the form and size of all buttons*/
     .button {
       background: none;
-      border: 0.06666667rem solid #0b132b;
+      border: 0.067rem solid #0b132b;
       border-radius: 0.4rem;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       outline: #0b132b;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 70%;
     }
 
@@ -56,27 +56,25 @@
     .login {
       background: #5bc0be;
       border-color: #303030;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       width: 70%;
     }
 
     /*sets the size of the google-icon in the google-login-field*/
     .google-bild {
       padding: none;
-
       width: 1rem;
     }
 
     /*describes the field for the google-login*/
     .google-login {
       background: none;
-      border: 0.06666667rem solid #0b132b;
-      border-radius: 0.6666667rem;
-      font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
-      margin: 0.6666667rem auto;
+      border: 0.067rem solid #0b132b;
+      border-radius: 0.667rem;
+      font-family: Medium 5.333rem/8.6rem HindSiliguri-Regular, sans-serif;
+      margin: 0.667rem auto;
       outline: #0b132b;
-      padding: 0.26666668rem;
-
+      padding: 0.267rem;
       width: 70%;
     }
 
@@ -101,11 +99,11 @@
 
     /*sets size and form of the input-boxes for password and email*/
     .input-box {
-      border: 0.06666667rem solid #0b132b;
+      border: 0.067rem solid #0b132b;
       border-radius: 0.4rem;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       outline: none;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       position: relative;
       width: 90%;
       /*sets size of the actual inputfields in the input-boxes*/
@@ -121,12 +119,12 @@
     .button,
     button {
       background: none;
-      border: 0.06666667rem solid #0b132b;
+      border: 0.067rem solid #0b132b;
       border-radius: 0.4rem;
       font-size: 1rem;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       outline: #0b132b;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 70%;
     }
 
@@ -140,7 +138,7 @@
     .login {
       background: #5bc0be;
       border-color: #303030;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       width: 70%;
     }
 
@@ -153,19 +151,19 @@
     /*describes the field for the google-login*/
     .google-login {
       background: none;
-      border: 0.06666667rem solid #0b132b;
-      border-radius: 0.6666667rem;
-      font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
-      margin: 0.6666667rem auto;
+      border: 0.067rem solid #0b132b;
+      border-radius: 0.667rem;
+      font-family: Medium 5.333rem/8.6rem HindSiliguri-Regular, sans-serif;
+      margin: 0.667rem auto;
       outline: #0b132b;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 70%;
     }
 
     /*sets the position of the two eye-icons in the password-field*/
     .eye {
       position: absolute;
-      right: 0.53333336rem;
+      right: 0.533rem;
       top: 0;
     }
 

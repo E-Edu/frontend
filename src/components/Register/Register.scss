@@ -17,7 +17,6 @@ UserIcon {
     font-family: 'Hind Siliguri', sans-serif;
     margin-top: 7rem;
 
-    //font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
     a {
       color: #0b132b;
       margin: 0 0.2rem;
@@ -40,12 +39,9 @@ UserIcon {
     }
   }
 
-  /*
-  * white bachgroundcanvas
-  */
   .box {
     background: #fff;
-    border-radius: 0.26666668rem;
+    border-radius: 0.8rem;
     color: #003;
     height: auto;
     min-height: 35vh;
@@ -53,26 +49,23 @@ UserIcon {
     text-align: center;
     width: 50vw;
 
-    /*field that displays the text and all buttons and input-fields of the login*/
     .box-inhalt {
       margin-top: -10%;
       text-align: center;
     }
 
-    /*sets size and form of the input-boxes for password and email*/
     .input-box {
       align-items: center;
-      border: 0.06666667rem solid #003;
+      border: 0.067rem solid #003;
       border-radius: 0.4rem;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
-      margin: 0.6666667rem 0;
+      margin: 0.667rem 0;
       outline: none;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 100%;
 
-      /*sets size of the actual inputfields in the input-boxes*/
       input {
         background: transparent;
         outline: none;
@@ -90,19 +83,15 @@ UserIcon {
       max-height: 1.6rem;
     }
 
-    /*sets the form and size of all buttons*/
     .button {
-
       background: none;
-      border: 0.06666667rem solid #003;
+      border: 0.067rem solid #003;
       border-radius: 0.4rem;
-      margin: 0.6666667rem auto;
+      margin: 0.667rem auto;
       outline: #000;
-      padding: 0.26666668rem;
+      padding: 0.267rem;
       width: 70%;
     }
-
-    // --------------- Basti --------------
 
     .input-box-initial {
       display: none;
@@ -113,13 +102,10 @@ UserIcon {
       width: 100%;
 
       .btn {
-
         background-color: #fff;
         border-bottom: 1px solid #003;
-        // border-left: 1px solid #000033;
         border-top: 1px solid #003;
         cursor: pointer;
-        //border-left: 1px solid #000033;
         padding: 10px 24px;
         width: 50%;
       }
@@ -160,10 +146,6 @@ UserIcon {
       border-radius: 0 6px 6px 0;
     }
 
-    .btn-group button:not(:last-child) {
-      /* Prevent double borders */
-    }
-
     .btn-group button:hover {
       background-color: #5bc0be;
     }
@@ -173,23 +155,20 @@ UserIcon {
     }
 
     .btn-ui {
-
       background: #fff 0% 0% no-repeat padding-box;
       border: 2px solid #459695;
       border-radius: 20px;
       color: #0b132b;
       cursor: pointer;
-      font: Regular 2.1333334rem/1.8666667rem Arimo;
-      height: 3.2666667rem;
-      letter-spacing: 0.031999998rem;
+      font: Regular 2.133rem/1.867rem Arimo;
+      height: 3.267rem;
+      letter-spacing: 0.032rem;
       margin-left: 1.2rem;
       margin-right: 1.2rem;
-      margin-top: 0.13333334rem;
+      margin-top: 0.133rem;
       opacity: 1;
-      opacity: 1;
-
       text-align: center;
-      width: 15.333333rem;
+      width: 15.333rem;
     }
 
     .btn-weiter {
@@ -207,13 +186,10 @@ UserIcon {
       opacity: 0.3;
     }
 
-    /* --------------- Basti ENDE --------------- */
-
-    /*sets position of the headline "LOGIN"*/
     .headline {
       color: #0b132b;
-      font-family: Hind Siliguri;
-      font-size: 2.1333334rem;
+      font-family: HindSiliguri-Regular, sans-serif;
+      font-size: 2.133rem;
       font-weight: 500;
       letter-spacing: 1.6rem;
       opacity: 1;
@@ -221,7 +197,6 @@ UserIcon {
       text-transform: uppercase;
     }
 
-    /*icon of the non-slashed eye; sets the passwordvisibility of non-visible*/
     .hide1 {
       display: none;
       margin: 0;
@@ -255,32 +230,30 @@ UserIcon {
 
     .input-field {
       color: #0b132b;
-      font: Italic 1.3333334rem/1.9333333rem Arimo;
-      letter-spacing: 0.033333335rem;
+      font: Italic 1.333rem/1.933rem Arimo;
+      letter-spacing: 0.033rem;
       opacity: 1;
       text-align: left;
     }
 
     .input-field::placeholder {
       color: #0b132b;
-      font: Italic 1.3333334rem/1.9333333rem Arimo;
-      letter-spacing: 0.033333335rem;
+      font: Italic 1.333rem/1.933rem Arimo;
+      letter-spacing: 0.033rem;
       text-align: left;
     }
   }
 
-  @media only screen and (max-width: 55.333332rem) {
-
+  @media only screen and (max-width: 55.333rem) {
     height: 30rem;
 
     .box {
-
       height: 20rem;
 
       .headline {
         color: #0b132b;
-        font-family: Hind Siliguri;
-        font-size: 1.3333334rem;
+        font-family: HindSiliguri-Regular, sans-serif;
+        font-size: 1.333rem;
         font-weight: 500;
         letter-spacing: 0.25rem;
         opacity: 1;
@@ -289,7 +262,7 @@ UserIcon {
       }
 
       .btn-ui-container {
-        margin-top: 0.13333334rem;
+        margin-top: 0.133rem;
       }
 
       .btn-ui {
@@ -299,12 +272,11 @@ UserIcon {
 
     .check-container p {
       font-size: 0.8rem;
-
       white-space: pre-line;
 
       .privacycheck {
-        min-height: 1.3333334rem;
-        min-width: 1.3333334rem;
+        min-height: 1.333rem;
+        min-width: 1.333rem;
       }
     }
   }
@@ -323,17 +295,17 @@ UserIcon {
 
       .role-btn {
         .btn-special-button {
-          font-size: 0.6666667rem;
-          padding: 0.13333334rem;
+          font-size: 0.667rem;
+          padding: 0.133rem;
         }
       }
 
       .btn-ui-container {
-        margin-top: 0.13333334rem;
+        margin-top: 0.133rem;
       }
 
       .check-container p {
-        font-size: 0.53333336rem;
+        font-size: 0.533rem;
       }
     }
   }

@@ -8,14 +8,14 @@
   width: 100%;
 
   .result-left {
-    margin-left: 7.266667rem;
+    margin-left: 7.267rem;
 
     .result-subject {
       color: #0b132b;
       font-size: 4rem;
       font-weight: bolder;
-      margin-right: 2.6666667rem;
-      margin-top: 2.2666667rem;
+      margin-right: 2.667rem;
+      margin-top: 2.267rem;
     }
   }
 }
@@ -59,7 +59,7 @@
     justify-content: center;
     padding-top: 0.5rem;
     white-space: nowrap;
- 
+
     .img {
       margin-right: 0.4rem;
       max-width: 27px;
@@ -70,7 +70,7 @@
 
   .stat {
     color: #3a506b;
-    font-size: 1.0666667rem;
+    font-size: 1.067rem;
     font-weight: 400;
     letter-spacing: 0;
     margin-bottom: 0.2%;
@@ -84,7 +84,7 @@
 
   .name {
     color: #1c2541;
-    font-size: 1.7333333rem;
+    font-size: 1.733rem;
     letter-spacing: 0;
     margin-left: 2.3rem;
     opacity: 1;
@@ -96,15 +96,14 @@
 
     input:disabled {
       background: transparent;
-      font-size: 1.3333334rem;
+      font-size: 1.333rem;
       text-align: center;
       width: 8rem;
     }
 
     input:enabled {
       background: transparent;
-      
-      font-size: 1.3333334rem;
+      font-size: 1.333rem;
       text-align: center;
       width: 8rem;
     }
@@ -115,7 +114,7 @@
 
     img:hover {
       cursor: pointer;
-      
+
     }
   }
 }
@@ -131,15 +130,15 @@
 
   .levelbar-back {
     background-color: transparent;
-    border: 0.06666667rem solid #707070;
-    border-radius: 13.333333rem;
-    height: 3.3333333rem;
+    border: 0.067rem solid #707070;
+    border-radius: 13.333rem;
+    height: 3.333rem;
     position: relative;
-    width: 32.666668rem;
+    width: 32.667rem;
 
     .levelbar-front {
       background-color: #5bc0be;
-      border-radius: 13.333333rem;
+      border-radius: 13.333rem;
       height: 100%;
       left: 0;
       position: absolute;
@@ -156,7 +155,7 @@
 
     .level-rang {
       color: #5bc0be;
-      font: Bold 1.7333333rem/2.0666666rem Arimo;
+      font: 1.733rem/2.067rem Arimo-Bold;
     }
   }
 }
@@ -174,7 +173,7 @@
 
   span {
     color: #5bc0be;
-    font: Bold 1.7333333rem/2.0666666rem Arimo;
+    font: 1.733rem/2.067rem Arimo-Bold;
     letter-spacing: 0;
     opacity: 1;
     text-align: left;
@@ -183,20 +182,19 @@
 }
 
 .profile-subjekt-img {
-  border: 0.06666667rem solid #5bc0be;
-  border-radius: 6.6666665rem;
-
-  height: 4.133333rem;
+  border: 0.067rem solid #5bc0be;
+  border-radius: 6.667rem;
+  height: 4.133rem;
   margin-left: 1rem;
   margin-right: 1.5rem;
   margin-top: 0.5rem;
-  width: 4.133333rem;
+  width: 4.133rem;
 }
 
 //TODO ist das hier wirklich notwendig? --> Prüfen
 .logo {
   height: 2rem;
-  padding: 1.0666667rem;
+  padding: 1.066rem;
   width: 2rem;
 }
 
@@ -208,7 +206,7 @@
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    padding: 0.33333334rem;
+    padding: 0.333rem;
     text-align: left;
   }
 }
@@ -220,7 +218,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 2rem;
-  
+
 }
 
 .title {
@@ -229,12 +227,11 @@
   letter-spacing: 0;
   opacity: 1;
   text-align: left;
-  
+
 }
 
 .text {
   align-items: center;
-
   flex-direction: column;
   justify-content: left;
   text-align: left;
@@ -245,7 +242,6 @@
 }
 
 .pb {
-
   border: 2px solid #5bc0be;
   border-radius: 100px;
   max-height: 110px;

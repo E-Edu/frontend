@@ -60,8 +60,6 @@ typings/
 # next.js build output
 .next
 
-# package lock file
-package-lock.json
 
 # Ignore editor config files
 .vscode/
