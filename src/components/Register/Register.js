@@ -106,14 +106,7 @@ class Register extends React.Component {
         e.preventDefault();
 
         if (formValid(this.state)) {
-            console.log(`
-		-- SUBMITTING --
-		First Name: ${this.state.firstName}
-		Last Name: ${this.state.lastName}
-		Mail: ${this.state.email}
-		Password: ${this.state.password}
-		Role: ${this.state.role}
-		`);
+            //TODO: Write your stuff
         }
     };
 

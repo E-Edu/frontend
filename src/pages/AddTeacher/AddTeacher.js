@@ -25,7 +25,6 @@ class AddTeacher extends Component {
     emailChange = (event) => {
         this.state.email = event.target.value;
         this.state.validEmail = this.isValidEmail();
-        console.log(this.state);
         this.setState(this.state);
     };
 
