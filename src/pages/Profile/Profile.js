@@ -8,10 +8,6 @@ import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 
 class Profile extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     state = { username: 'Morpheus', disabled: true };
 
     usernameClickListener = () => {

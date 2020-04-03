@@ -7,7 +7,7 @@ class Credits extends Component {
             <div className="credits">
                 <div className="content">
                     <div className="picture">
-                        <img src="assets/credits-heroimage.svg" alt="Hero image" />
+                        <img src="assets/credits-heroimage.svg" alt="Hero" />
                     </div>
                     <div className="credits">
                         <div className="featuretext">
