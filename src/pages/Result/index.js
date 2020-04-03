@@ -5,8 +5,6 @@ import Header from '../../components/Header';
 import ResultQuestion from '../../components/ResultQuestion';
 
 class Result extends React.Component {
-    
-
     render() {
         return (
             <div className="result">

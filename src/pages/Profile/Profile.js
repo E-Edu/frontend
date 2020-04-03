@@ -51,8 +51,6 @@ class ProfileCertificate extends React.Component {
 }
 
 class Profile extends React.Component {
-    
-
     state = { username: 'Morpheus', disabled: true };
 
     usernameClickListener = () => {

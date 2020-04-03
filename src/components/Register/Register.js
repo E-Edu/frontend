@@ -121,7 +121,6 @@ class Register extends React.Component {
         // constants for the toggle functions (eye and password)
         const { isPasswordShown } = this.state;
         const { isPasswordShown2 } = this.state;
-       
 
         return (
             <div className="register">
