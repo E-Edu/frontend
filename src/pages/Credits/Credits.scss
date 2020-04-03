@@ -2,7 +2,7 @@
 //TODO refactor to english
 body {
   cursor: default;
-  font-family: Medium 5.3333335rem/8.6rem Hind Siliguri;
+  font-family: Medium 5.333rem/8.6rem HindSiliguri-Regular, sans-serif;
 
   .content {
     align-items: center;
@@ -13,7 +13,7 @@ body {
 
 
     .picture {
-      margin-top: 1.3333334rem;
+      margin-top: 1.333rem;
       width: 30%;
 
       img {
@@ -28,11 +28,11 @@ body {
 
         .heading {
           color: $color-dark;
-          font-size: 5.3333335rem;
+          font-size: 5.333rem;
         }
 
         .communityproject {
-          font-size: 2.6666667rem;
+          font-size: 2.667rem;
 
           span {
             color: $color-primary;
@@ -47,31 +47,30 @@ body {
       .mitwirkende {
         .subheading {
           color: $color-bluegrey;
-          font-size: 2.6666667rem;
+          font-size: 2.667rem;
           font-weight: bolder;
           margin-bottom: 4rem;
-          margin-top: 2.6666667rem;
+          margin-top: 2.667rem;
           text-align: center;
         }
 
         .morpheus {
-
-          margin-bottom: 1.3333334rem;
+          margin-bottom: 1.333rem;
 
           .idea {
             color: $color-dark;
             font-size: 2rem;
             font-style: normal;
             font-weight: normal;
-            margin: 0.6666667rem 0;
+            margin: 0.667rem 0;
             text-align: center;
           }
 
           .name {
             color: $color-bluegrey;
             display: block;
-            font-size: 1.3333334rem;
-            margin-top: 0.33333334rem;
+            font-size: 1.333rem;
+            margin-top: 0.333rem;
             text-align: center;
           }
 
@@ -88,15 +87,15 @@ body {
             font-size: 2rem;
             font-style: normal;
             font-weight: normal;
-            margin: 0.6666667rem 0;
+            margin: 0.667rem 0;
             text-align: center;
           }
 
           .credits-name {
             color: $color-bluegrey;
             display: block;
-            font-size: 1.3333334rem;
-            margin: 0.33333334rem 0;
+            font-size: 1.333rem;
+            margin: 0.333rem 0;
             text-align: center;
           }
         }

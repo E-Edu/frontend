@@ -5,6 +5,7 @@
   background: #0b132b 0 0 no-repeat padding-box;
   display: flex;
   flex-direction: column;
+  font-family: HindSiliguri-Regular, sans-serif;
   height: 100%;
   justify-content: space-between;
   left: 0;
@@ -12,7 +13,7 @@
   position: fixed;
   text-align: center;
   top: 0;
-  width: 7.6666665rem;
+  width: 7.667rem;
 
   .menu-element:first-child {
     margin-top: 0;
@@ -45,10 +46,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 6.6666665rem;
+    margin-top: 6.667rem;
   }
 
   .bottom-icons {
-    margin-bottom: 1.3333334rem;
+    margin-bottom: 1.333rem;
   }
 }
