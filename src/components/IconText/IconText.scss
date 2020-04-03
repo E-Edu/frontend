@@ -4,8 +4,15 @@
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
   right: 0;
+
+  .left {
+    margin-left: 0.5rem;
+  }
+
+  .right {
+    margin-right: 0.5rem;
+  }
 
   .text {
     width: 100%;

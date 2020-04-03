@@ -4,7 +4,7 @@ import './IconText.scss';
 class IconText extends Component {
     render() {
         return (
-            <div className={'icon-text ' + this.props.class} style={{ width: this.props.width }}>
+            <div className={`icon-text ${this.props.class}`} style={{ width: this.props.width }}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}
@@ -15,7 +15,7 @@ class IconText extends Component {
                                 paddingLeft: this.props.distance,
                                 textAlign: 'left',
                             }}
-                            className="text">
+                            className="text left">
                             {this.props.text}
                         </span>
                     </>
@@ -28,7 +28,7 @@ class IconText extends Component {
                                 paddingRight: this.props.distance,
                                 textAlign: 'right',
                             }}
-                            className="text">
+                            className="text right">
                             {this.props.text}
                         </span>
                         {this.props.children}
