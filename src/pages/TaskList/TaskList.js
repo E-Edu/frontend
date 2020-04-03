@@ -69,7 +69,7 @@ class TaskList extends React.Component {
                         <div className="middle">
                             <div className="result-center">
                                 <IconText
-                                    text={'213 ' + Translation.t('taskList.points')}
+                                    text={`213 ${Translation.t('taskList.points')}`}
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
@@ -78,7 +78,7 @@ class TaskList extends React.Component {
                             </div>
                             <div className="result-center second">
                                 <IconText
-                                    text={'21.323 ' + Translation.t('taskList.points')}
+                                    text={`21.323 ${Translation.t('taskList.points')}`}
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">

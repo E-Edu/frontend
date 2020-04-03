@@ -4,7 +4,7 @@ import './IconText.scss';
 class IconText extends Component {
     render() {
         return (
-            <div className={'icon-text ' + this.props.class} style={{ width: this.props.width }}>
+            <div className={`icon-text ${this.props.class}`} style={{ width: this.props.width }}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}

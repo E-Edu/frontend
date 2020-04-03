@@ -50,8 +50,8 @@ class dashboard extends React.Component {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subject
-                        subject={Translation.t('subject.' + subject.nameKey + '.name')}
-                        underline={Translation.t('subject.' + subject.nameKey + '.description')}
+                        subject={Translation.t(`subject.${subject.nameKey}.name`)}
+                        underline={Translation.t(`subject.${subject.nameKey}.description`)}
                         color={Data.subjectColor[subject.nameKey]}
                         weekendtask="4/5"
                         points="213"

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './Report.scss';
 import { Info, Mail, ThumbsUp, ThumbsDown } from 'react-feather';
+import Modal from 'react-animated-modal';
 import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
-import Modal from 'react-animated-modal';
 import colorData from '../../lib/Colors';
 import { Translation } from '../../i18n/i18n';
 
@@ -24,13 +24,13 @@ class Report extends Component {
         subject: this.props.subject,
         like: this.props.liked || 0,
         thumbsInactive: '#3A506B',
-        thumbGreen: colorData.difficultyColor['easy'].border,
-        thumbRed: colorData.difficultyColor['hard'].border,
+        thumbGreen: colorData.difficultyColor.easy.border,
+        thumbRed: colorData.difficultyColor.hard.border,
     };
 
     like = () => {
-        let likes = this.state.likes;
-        let dislikes = this.state.dislikes;
+        const { likes } = this.state;
+        const { dislikes } = this.state;
         if (this.state.like === 1) {
             this.setState({ like: 0, likes: likes - 1 });
         } else {
@@ -42,8 +42,8 @@ class Report extends Component {
     };
 
     dislike = () => {
-        let likes = this.state.likes;
-        let dislikes = this.state.dislikes;
+        const { likes } = this.state;
+        const { dislikes } = this.state;
         if (this.state.like === 2) {
             this.setState({ like: 0, dislikes: dislikes - 1 });
         } else {
@@ -77,8 +77,8 @@ class Report extends Component {
     render() {
         const { difficulty } = this.state;
         const color = colorData.difficultyColor[difficulty];
-        const backgroundColor = color.backgroundColor;
-        const borderColor = color.borderColor;
+        const { backgroundColor } = color;
+        const { borderColor } = color;
         const { subject, messages, teacher } = this.props;
 
         return (
@@ -156,7 +156,7 @@ class Report extends Component {
                         <Mail color="#3a506b" />
                     </IconText>
                     <IconText text={teacher} distance="0.8rem" class="teacher-name">
-                        {/*TODO: finde a better solution*/}
+                        {/* TODO: finde a better solution */}
                         <Teacher stroke="none" fill="#3a506b" />
                     </IconText>
                 </div>

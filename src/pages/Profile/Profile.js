@@ -58,7 +58,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo points">
                             <span className="central">
                                 <IconText
-                                    text={'6.526 ' + Translation.t('task.points')}
+                                    text={`6.526 ${Translation.t('task.points')}`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
@@ -70,7 +70,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo trending">
                             <span className="central">
                                 <IconText
-                                    text={'6.526 ' + Translation.t('task.points')}
+                                    text={`6.526 ${Translation.t('task.points')}`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
@@ -82,7 +82,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo since">
                             <span className="central">
                                 <IconText
-                                    text={Translation.t('profile.memberSince') + ' 21.03.2020'}
+                                    text={`${Translation.t('profile.memberSince')} 21.03.2020`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">

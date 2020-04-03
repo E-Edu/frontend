@@ -13,7 +13,7 @@ class ProfileCertificate extends React.Component {
                         <p className="badge-title">{this.props.Title}</p>
                     </div>
                     <div className="date-certificate">
-                        <p className="date">{Translation.t('profile.date') + ' ' + this.props.Datum}</p>
+                        <p className="date">{`${Translation.t('profile.date')} ${this.props.Datum}`}</p>
                     </div>
                 </div>
                 <Download className="download-image" />

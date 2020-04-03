@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './CorrectionReviewBoxes.scss';
 import { Calendar, Edit, User } from 'react-feather';
 import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
-import IconText from '../../components/IconText/IconText';
-import IconButton from '../../components/Buttons/IconButton/IconButton';
+import IconText from '../IconText/IconText';
+import IconButton from '../Buttons/IconButton/IconButton';
 import { Translation } from '../../i18n/i18n';
 
 class CorrectionReviewBoxes extends Component {

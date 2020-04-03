@@ -3,9 +3,9 @@ import './IconButton.scss';
 
 class IconButton extends Component {
     render() {
-        const width = this.props.width;
+        const { width } = this.props;
         return (
-            <div className={'icon-button ' + this.props.class} style={{ width: width }} onClick={this.props.clickEvent}>
+            <div className={`icon-button ${this.props.class}`} style={{ width }} onClick={this.props.clickEvent}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}

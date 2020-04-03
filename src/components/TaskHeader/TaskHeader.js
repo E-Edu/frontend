@@ -1,12 +1,12 @@
 import React from 'react';
 import './TaskHeader.scss';
 import { User, Users } from 'react-feather';
-import IconText from '../../components/IconText/IconText';
+import IconText from '../IconText/IconText';
 import { Translation } from '../../i18n/i18n';
 
 class TaskHeader extends React.Component {
     render() {
-        const module = this.props.module;
+        const { module } = this.props;
         return (
             <div className="task-header">
                 <div className="lecture-header">
@@ -15,7 +15,7 @@ class TaskHeader extends React.Component {
                     </div>
                     <div className="lecture-header-points">
                         <IconText
-                            text={'213' + ' ' + Translation.t('task.points')}
+                            text={`${'213' + ' '}${Translation.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"
@@ -23,7 +23,7 @@ class TaskHeader extends React.Component {
                             <User color="#0b132b" />
                         </IconText>
                         <IconText
-                            text={'21.323' + ' ' + Translation.t('task.points')}
+                            text={`${'21.323' + ' '}${Translation.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"

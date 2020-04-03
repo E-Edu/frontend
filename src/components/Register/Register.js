@@ -106,7 +106,7 @@ class Register extends React.Component {
         e.preventDefault();
 
         if (formValid(this.state)) {
-            //TODO: Write your stuff
+            // TODO: Write your stuff
         }
     };
 
