@@ -13,7 +13,7 @@ class AddTeacherRequest extends Component {
                 <div className="teacher-infos">
                     <IconText text={this.props.name} position="left" distance="0.4rem" class="teacher-info">
                         {/* TODO: find a better solution */}
-                        <Teacher stroke="#3a506b" fill="none" width="29" height="29" />
+                        <Teacher color="#3a506b" fill="none" width="29" height="29" />
                     </IconText>
                     <IconText text={this.props.email} position="left" distance="0.4rem" class="teacher-info">
                         <Mail color="#3a506b" size="29" />
