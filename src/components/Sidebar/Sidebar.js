@@ -74,7 +74,7 @@ class MenuElement extends Component {
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File stroke={color} />
+                <File color={color} fill="none" />
                 {nameText}
             </Link>,
         ];
@@ -92,7 +92,7 @@ class Sidebar extends Component {
         const sites = [
             // Name, icon name, route, permission, spacer before it
             ['Home', 'home', 'dashboard', 0],
-            ['Aufgaben', 'edit', 'task', 0],
+            ['Aufgaben', 'edit', 'task/lecture', 0],
             ['Neue Aufgabe', 'plus-circle', 'dashboard', 2, true],
             ['Meine Aufgaben', 'list', 'task/list', 2],
             ['Korrektur', 'check', 'correction/review', 1],

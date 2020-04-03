@@ -60,5 +60,7 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
         'react/no-array-index-key': 'warn',
         'class-methods-use-this': 'off',
+        'import/no-extraneous-dependencies': 'off',
+        'react/prop-types':'off',
     },
 };

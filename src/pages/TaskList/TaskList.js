@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Search, User, Users } from 'react-feather';
 import { Translation } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
+import IconText from '../../components/IconText/IconText';
 
 class TaskList extends React.Component {
     constructor(props) {
@@ -67,19 +68,22 @@ class TaskList extends React.Component {
 
                         <div className="middle">
                             <div className="result-center">
-                                <div className="result-subject">
+                                <IconText
+                                    text={`213 ${Translation.t('taskList.points')}`}
+                                    position="left"
+                                    class="result-subject"
+                                    fontColor="#3A506B">
                                     <Users className="icon" color="#3A506B" />
-                                    <span className="points">213</span>
-                                    <span className="points">{Translation.t('taskList.points')}</span>
-                                </div>
+                                </IconText>
                             </div>
                             <div className="result-center second">
-                                <div className="result-subject">
+                                <IconText
+                                    text={`21.323 ${Translation.t('taskList.points')}`}
+                                    position="left"
+                                    class="result-subject"
+                                    fontColor="#3A506B">
                                     <User className="icon" color="#3A506B" />
-
-                                    <span className="points">21.323</span>
-                                    <span className="points">{Translation.t('taskList.points')}</span>
-                                </div>
+                                </IconText>
                             </div>
                         </div>
                         <div className="result-right">

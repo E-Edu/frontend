@@ -1,12 +1,12 @@
 @import './src/css/styles';
 
 .correction-box {
-  border: 0.06666667rem solid #707070;
-  border-radius: 0.53333336rem;
+  border: 0.067rem solid #707070;
+  border-radius: 0.533rem;
   display: flex;
   flex-direction: column;
   height: 7.8rem;
-  margin: 2.3333333rem 0;
+  margin: 2.333rem 0;
   width: 50rem;
 
 
@@ -15,12 +15,12 @@
     color: #1c2541;
     display: flex;
     flex-direction: row;
-    font-size: 1.3333334rem;
+    font-size: 1.333rem;
     font-weight: normal;
     justify-content: space-between;
     margin-left: 1.2rem;
-    margin-right: 1.1333333rem;
-    margin-top: 0.33333334rem;
+    margin-right: 1.133rem;
+    margin-top: 0.333rem;
   }
 
   .correction-box-bottom {
@@ -28,7 +28,7 @@
     color: #1c2541;
     display: flex;
     flex-direction: row;
-    font-size: 1.3333334rem;
+    font-size: 1.333rem;
     justify-content: space-between;
     width: 100%;
 
@@ -36,7 +36,7 @@
       align-items: center;
       display: flex;
       flex-direction: row;
-      margin-left: 1.3333334rem;
+      margin-left: 1.333rem;
     }
 
     .correction-date {
@@ -49,19 +49,19 @@
       align-items: center;
       display: flex;
       flex-direction: row-reverse;
-      margin-right: 1.3333334rem;
+      margin-right: 1.333rem;
     }
 
     img {
       color: #1c2541;
-      height: 1.3333334rem;
-      width: 1.3333334rem;
+      height: 1.333rem;
+      width: 1.333rem;
 
     }
 
     p {
       margin: 0;
-      padding: 0.13333334rem;
+      padding: 0.133rem;
     }
   }
 }

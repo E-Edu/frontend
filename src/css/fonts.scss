@@ -1,2 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap');
+@font-face {
+  font-family: 'HindSiliguri-Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/HindSiliguri-Medium.eot');
+  src: url('./fonts/HindSiliguri-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/HindSiliguri-Medium.svg#HindSiliguri-Medium') format('svg'),
+    url('./fonts/HindSiliguri-Medium.ttf') format('truetype'),
+    url('./fonts/HindSiliguri-Medium.woff') format('woff'),
+    url('./fonts/HindSiliguri-Medium.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'HindSiliguri-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/HindSiliguri-Regular.eot');
+  src: url('./fonts/HindSiliguri-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/HindSiliguri-Regular.svg#HindSiliguri-Regular') format('svg'),
+    url('./fonts/HindSiliguri-Regular.ttf') format('truetype'),
+    url('./fonts/HindSiliguri-Regular.woff') format('woff'),
+    url('./fonts/HindSiliguri-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HindSiliguri-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/HindSiliguri-Bold.eot');
+  src: url('./fonts/HindSiliguri-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/HindSiliguri-Bold.svg#HindSiliguri-Bold') format('svg'),
+    url('./fonts/HindSiliguri-Bold.ttf') format('truetype'),
+    url('./fonts/HindSiliguri-Bold.woff') format('woff'),
+    url('./fonts/HindSiliguri-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Arimo-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Arimo-Regular.eot');
+  src: url('./fonts/Arimo-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Arimo-Regular.svg#Arimo-Regular') format('svg'),
+    url('./fonts/Arimo-Regular.ttf') format('truetype'),
+    url('./fonts/Arimo-Regular.woff') format('woff'),
+    url('./fonts/Arimo-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Arimo-Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Arimo-Italic.eot');
+  src: url('./fonts/Arimo-Italic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Arimo-Italic.svg#Arimo-Italic') format('svg'),
+    url('./fonts/Arimo-Italic.ttf') format('truetype'),
+    url('./fonts/Arimo-Italic.woff') format('woff'),
+    url('./fonts/Arimo-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Arimo-BoldItalic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Arimo-BoldItalic.eot');
+  src: url('./fonts/Arimo-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Arimo-BoldItalic.svg#Arimo-BoldItalic') format('svg'),
+    url('./fonts/Arimo-BoldItalic.ttf') format('truetype'),
+    url('./fonts/Arimo-BoldItalic.woff') format('woff'),
+    url('./fonts/Arimo-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Arimo-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Arimo-Bold.eot');
+  src: url('./fonts/Arimo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Arimo-Bold.svg#Arimo-Bold') format('svg'),
+    url('./fonts/Arimo-Bold.ttf') format('truetype'),
+    url('./fonts/Arimo-Bold.woff') format('woff'),
+    url('./fonts/Arimo-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'HindSiliguri-SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/HindSiliguri-SemiBold.eot');
+  src: url('./fonts/HindSiliguri-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/HindSiliguri-SemiBold.svg#HindSiliguri-SemiBold') format('svg'),
+    url('./fonts/HindSiliguri-SemiBold.ttf') format('truetype'),
+    url('./fonts/HindSiliguri-SemiBold.woff') format('woff'),
+    url('./fonts/HindSiliguri-SemiBold.woff2') format('woff2');
+}
+

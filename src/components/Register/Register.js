@@ -5,18 +5,15 @@ import { Eye, EyeOff, User } from 'react-feather';
 import TeacherIcon from '../icons/teacher.icon';
 
 // Regular Expression für die Validierung der Mail
+/*
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-
+*/
 // Validates Form errors
 const formValid = ({ formErrors, ...rest }) => {
     let valid = true;
 
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
-
-    Object.values(rest).forEach((val) => {
-        val === null && (valid = false);
-    });
 };
 
 class Register extends React.Component {
@@ -109,14 +106,7 @@ class Register extends React.Component {
         e.preventDefault();
 
         if (formValid(this.state)) {
-            console.log(`
-		-- SUBMITTING --
-		First Name: ${this.state.firstName}
-		Last Name: ${this.state.lastName}
-		Mail: ${this.state.email}
-		Password: ${this.state.password}
-		Role: ${this.state.role}
-		`);
+            // TODO: Write your stuff
         }
     };
 
@@ -124,8 +114,6 @@ class Register extends React.Component {
         // constants for the toggle functions (eye and password)
         const { isPasswordShown } = this.state;
         const { isPasswordShown2 } = this.state;
-        const { isPasswordValid } = this.state;
-        const { formErrors } = this.state;
 
         return (
             <div className="register">

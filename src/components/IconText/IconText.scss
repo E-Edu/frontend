@@ -1,0 +1,20 @@
+@import './src/css/styles';
+
+.icon-text {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+
+  .left {
+    margin-left: 0.5rem;
+  }
+
+  .right {
+    margin-right: 0.5rem;
+  }
+
+  .text {
+    width: 100%;
+  }
+}

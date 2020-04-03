@@ -4,14 +4,14 @@
   width: 100%;
 
   .result-left {
-    margin-left: 12.666667rem;
+    margin-left: 12.667rem;
 
     .result-subject {
       color: #0b132b;
       font-size: 4rem;
       font-weight: bolder;
-      margin-right: 2.6666667rem;
-      margin-top: 2.2666667rem;
+      margin-right: 2.667rem;
+      margin-top: 2.267rem;
     }
   }
 
@@ -23,9 +23,9 @@
     .result-center {
       .result-subject {
         display: flex;
-        font-size: 1.3333334rem;
-        margin-right: 2.6666667rem;
-        margin-top: 2.2666667rem;
+        font-size: 1.333rem;
+        margin-right: 2.667rem;
+        margin-top: 2.267rem;
 
         .icon {
           margin-right: 0.5rem;
@@ -40,39 +40,39 @@
   }
 
   .result-right {
-    margin-right: 7.266667rem;
+    margin-right: 7.267rem;
 
     .result-subject {
       color: #0b132b;
       font-size: 4rem;
       font-weight: bolder;
-      margin-right: 2.6666667rem;
-      margin-top: 2.2666667rem;
+      margin-right: 2.667rem;
+      margin-top: 2.267rem;
 
       .input-search {
         align-items: center;
-        border: 0.06666667rem solid #3a506b;
-        border-radius: 0.53333336rem;
+        border: 0.067rem solid #3a506b;
+        border-radius: 0.533rem;
         display: flex;
         flex-direction: row;
-        height: 2.8666666rem;
-        width: 26.066668rem;
+        height: 2.867rem;
+        width: 26.067rem;
 
         div {
           padding: 0 0.5rem;
-          padding-bottom: 0.33333334rem;
+          padding-bottom: 0.333rem;
         }
       }
 
       input {
         background: transparent;
         color: #3a506b;
-        font-size: 1.3333334rem;
-        height: 2.8666666rem;
+        font-size: 1.333rem;
+        height: 2.867rem;
         letter-spacing: 0;
         opacity: 1;
         text-align: left;
-        width: 26.066668rem;
+        width: 26.067rem;
       }
 
       input:focus {
@@ -92,10 +92,10 @@
 
   .teacher-information {
     img {
-      border: 0.13333334rem solid #5bc0be;
-      border-radius: 6.6666665rem;
-      max-height: 7.3333335rem;
-      max-width: 7.3333335rem;
+      border: 0.133rem solid #5bc0be;
+      border-radius: 6.667rem;
+      max-height: 7.333rem;
+      max-width: 7.333rem;
     }
   }
 }

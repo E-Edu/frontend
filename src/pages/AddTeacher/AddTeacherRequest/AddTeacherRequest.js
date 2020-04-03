@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import './AddTeacherRequest.scss';
 import { Check, Mail, X } from 'react-feather';
-import TeacherIcon from '../../../components/icons/teacher.icon';
+import Teacher from '../../../components/icons/teacher.icon';
+import IconText from '../../../components/IconText/IconText';
+import IconButton from '../../../components/Buttons/IconButton/IconButton';
+import { Translation } from '../../../i18n/i18n';
 
 class AddTeacherRequest extends Component {
     render() {
         return (
             <div className="teacher-request">
                 <div className="teacher-infos">
-                    <div className="teacher-info">
-                        <TeacherIcon />
-                        <span>{this.props.name}</span>
-                    </div>
-                    <div className="teacher-info">
-                        <Mail />
-                        <span>{this.props.email}</span>
-                    </div>
+                    <IconText text={this.props.name} position="left" distance="0.4rem" class="teacher-info">
+                        {/* TODO: find a better solution */}
+                        <Teacher color="#3a506b" fill="none" width="29" height="29" />
+                    </IconText>
+                    <IconText text={this.props.email} position="left" distance="0.4rem" class="teacher-info">
+                        <Mail color="#3a506b" size="29" />
+                    </IconText>
                 </div>
                 <div className="request-actions">
-                    <div className="request-action">
-                        <span>Ablehnen</span>
-                        <X size="29" color="#ba1919" />
-                    </div>
-                    <div className="request-action">
-                        <span>Annehmen</span>
-                        <Check size="29" color="#19BA3F" />
-                    </div>
+                    <IconButton text={Translation.t('addTeacher.acceptAction')} class="request-action">
+                        <X color="#ba1919" size="29" />
+                    </IconButton>
+                    <IconButton text={Translation.t('addTeacher.denyAction')} class="request-action">
+                        <Check color="#19BA3F" size="29" />
+                    </IconButton>
                 </div>
             </div>
         );
