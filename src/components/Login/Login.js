@@ -16,18 +16,21 @@ class Login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-
+        /*
         const user = { email: this.state.email, password: this.state.password };
-
+        
         const response = axios.post(`https://jsonplaceholder.typicode.com/users`, { user }).then(
+            
             (res) => {
-                /* axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => { */
+                 axios.post(`https://user.e-edu.the-morpheus.de/users/login`, {user}).then(res => { 
             },
             (onerror) => {}
         );
+
         if (response) {
             this.props.history.push('/dashboard');
         }
+        */
     };
 
     /** Method to switch between visibility and non-visibility
@@ -84,10 +87,11 @@ class Login extends Component {
                             </span>
                         </div>
                         {/* describes the google-login-field */}
-                        <button className="pointer google-login">
+                        <button className="pointer google-login" type="button">
                             <img
                                 className="google-bild"
                                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
+                                alt="log in with google"
                             />
                             Log In with Google
                         </button>

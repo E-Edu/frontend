@@ -50,4 +50,60 @@ class App extends Component {
     }
 }
 
+/*
+App.propTypes = {
+    children: React.PropTypes.boolean.active,
+    children: React.PropTypes.children,
+    children: React.PropTypes.color,
+    children: React.PropTypes.Community_Points,
+    children: React.PropTypes.Datum,
+    children: React.PropTypes.description,
+
+    children: React.PropTypes.difficulty,
+    children: React.PropTypes.disable,
+    children: React.PropTypes.dislikes,
+    children: React.PropTypes.Download,
+    children: React.PropTypes.fields,
+    children: React.PropTypes.fields.map,
+    children: React.PropTypes.file,
+    children: React.PropTypes.fill,
+    children: React.PropTypes.height,
+
+    children: React.PropTypes.history,
+    children: React.PropTypes.history.push,
+    children: React.PropTypes.index,
+    children: React.PropTypes.liked,
+    children: React.PropTypes.likes,
+    children: React.PropTypes.location,
+
+    children: React.PropTypes.location.pathname,
+    children: React.PropTypes.mainTitle,
+    children: React.PropTypes.maxWidth,
+    children: React.PropTypes.messages,
+    children: React.PropTypes.module,
+    children: React.PropTypes.name,
+    children: React.PropTypes.onChange,
+
+    children: React.PropTypes.Points,
+    children: React.PropTypes.questions,
+    children: React.PropTypes.rightQuestions,
+    children: React.PropTypes.secondaryTitle,
+    children: React.PropTypes.shadow,
+    children: React.PropTypes.side,
+    children: React.PropTypes.spacer,
+    children: React.PropTypes.stroke,
+    children: React.PropTypes.strokewidth,
+    children: React.PropTypes.styletype,
+    children: React.PropTypes.subject,
+    children: React.PropTypes.teacher,
+    children: React.PropTypes.type,
+    children: React.PropTypes.Underline,
+    children: React.PropTypes.url,
+    children: React.PropTypes.visible,
+    children: React.PropTypes.Weekendtask,
+    children: React.PropTypes.width,
+    children: React.PropTypes.url,
+};
+*/
+
 export default App;
