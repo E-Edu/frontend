@@ -50,8 +50,9 @@ class App extends Component {
     }
 }
 
+/*
 App.propTypes = {
-    children: React.PropTypes.active,
+    children: React.PropTypes.boolean.active,
     children: React.PropTypes.children,
     children: React.PropTypes.color,
     children: React.PropTypes.Community_Points,
@@ -103,5 +104,6 @@ App.propTypes = {
     children: React.PropTypes.width,
     children: React.PropTypes.url,
 };
+*/
 
 export default App;
