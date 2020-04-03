@@ -1,0 +1,14 @@
+@import './src/css/styles';
+
+.icon-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  right: 0;
+
+  .text {
+    width: 100%;
+  }
+}

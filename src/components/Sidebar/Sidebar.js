@@ -74,7 +74,7 @@ class MenuElement extends Component {
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File stroke={color} />
+                <File color={color} />
                 {nameText}
             </Link>,
         ];
