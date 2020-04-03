@@ -15,7 +15,7 @@ class IconText extends Component {
                                 paddingLeft: this.props.distance,
                                 textAlign: 'left',
                             }}
-                            className="text">
+                            className="text left">
                             {this.props.text}
                         </span>
                     </>
@@ -28,7 +28,7 @@ class IconText extends Component {
                                 paddingRight: this.props.distance,
                                 textAlign: 'right',
                             }}
-                            className="text">
+                            className="text right">
                             {this.props.text}
                         </span>
                         {this.props.children}
