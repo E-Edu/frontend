@@ -4,7 +4,7 @@ import { Info, Mail, ThumbsUp, ThumbsDown } from 'react-feather';
 import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
-import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
+import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import Modal from 'react-animated-modal';
 import colorData from '../../lib/Colors';
 import { Translation } from '../../i18n/i18n';
@@ -75,13 +75,11 @@ class Report extends Component {
     };
 
     render() {
-        const difficulty = this.state.difficulty;
+        const { difficulty } = this.state;
         const color = colorData.difficultyColor[difficulty];
         const backgroundColor = color.backgroundColor;
         const borderColor = color.borderColor;
-        const subject = this.props.subject;
-        const messages = this.props.messages;
-        const teacher = this.props.teacher;
+        const { subject, messages, teacher } = this.props;
 
         return (
             <div className="report-component text-dark">
@@ -120,7 +118,7 @@ class Report extends Component {
                             }}>
                             <div style={{ marginLeft: 10 }} onClick={this.like}>
                                 <ThumbsUp
-                                    stroke={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
+                                    color={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.likes}</span>
@@ -136,12 +134,12 @@ class Report extends Component {
                             }}>
                             <div style={{ marginLeft: 10 }} onClick={this.dislike}>
                                 <ThumbsDown
-                                    stroke={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
+                                    color={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
                         </div>
-                        <DifficultyLabel level={difficulty} />
+                        <DifficultyLabel difficulty={difficulty} />
                     </div>
                 </div>
                 <div
@@ -152,10 +150,10 @@ class Report extends Component {
                         justifyContent: 'space-between',
                     }}>
                     <span style={{ marginLeft: 20, width: 400 }}>
-                        <Info stroke="#3a506b" />
+                        <Info color="#3a506b" />
                     </span>
                     <IconText text={messages} distance="0.8rem" position="left" class="messages-count">
-                        <Mail stroke="#3a506b" />
+                        <Mail color="#3a506b" />
                     </IconText>
                     <IconText text={teacher} distance="0.8rem" class="teacher-name">
                         {/*TODO: finde a better solution*/}

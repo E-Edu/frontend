@@ -82,7 +82,8 @@
                 "teachingMaster": "Der Lehrende Meister"
             },
             "favoriteSubjects": "Favorisierte Fächer",
-            "certificates": "Zertifikate"
+            "certificates": "Zertifikate",
+            "date": "Erreicht am"
         },
         "addTeacher": {
             "title": "Lehrer hinzufügen",

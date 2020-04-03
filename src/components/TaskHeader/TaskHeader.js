@@ -20,7 +20,7 @@ class TaskHeader extends React.Component {
                             class="lecture-points"
                             distance="0.4rem"
                             fontColor="#0b132b">
-                            <User stroke="#0b132b" />
+                            <User color="#0b132b" />
                         </IconText>
                         <IconText
                             text={'21.323' + ' ' + Translation.t('task.points')}
@@ -28,7 +28,7 @@ class TaskHeader extends React.Component {
                             class="lecture-points"
                             distance="0.4rem"
                             fontColor="#0b132b">
-                            <Users stroke="#0b132b" />
+                            <Users color="#0b132b" />
                         </IconText>
                     </div>
                     <div className="lecture-header-search">

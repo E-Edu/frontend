@@ -4,7 +4,7 @@ import colorData from '../../lib/Colors';
 import { Award } from 'react-feather';
 import { Translation } from '../../i18n/i18n';
 import IconText from '../../components/IconText/IconText';
-import DifficultyLabel from '../../components/DifficultyLabel/DifficultyLabel';
+import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 
 class Task extends Component {
     render() {
@@ -27,7 +27,7 @@ class Task extends Component {
                             <span>{Translation.t('taskList.questions')}</span>
                         </div>
                         <IconText text={rightQuestions} fontColor="#3A506B" class="task-element">
-                            <Award stroke="#3A506B" />
+                            <Award color="#3A506B" />
                         </IconText>
                         <DifficultyLabel level={difficulty}></DifficultyLabel>
                     </div>

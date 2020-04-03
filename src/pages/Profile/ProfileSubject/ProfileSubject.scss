@@ -1,0 +1,23 @@
+@import './src/css/styles';
+
+.profile-subjekt {
+
+  background-color: transparent;
+  border: 1px solid #707070;
+  border-radius: 11px;
+  height: 110px;
+  margin: 5px 15px;
+  width: 400px;
+  
+  .profile-top {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .profile-bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+}

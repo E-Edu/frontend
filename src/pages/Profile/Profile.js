@@ -1,55 +1,11 @@
 import React from 'react';
 import './Profile.scss';
 import '../../css/main.css';
-import { Award, Calendar, Download, Edit2, File, Tag, TrendingUp, User } from 'react-feather';
-import Data from '../../lib/Colors.json';
+import { Calendar, Edit2, Tag, TrendingUp, User } from 'react-feather';
 import IconText from '../../components/IconText/IconText';
 import { Translation } from '../../i18n/i18n';
-
-class ProfileSubject extends React.Component {
-    render() {
-        const { subject } = this.props;
-        const border = `0.73333335rem solid ${Data.subjectColor[subject]}`;
-
-        return (
-            <div className="profile-subjekt" style={{ borderLeft: border }}>
-                <div className="profile-top">
-                    <div className="profile-subjekt-img">
-                        <File className="logo" />
-                    </div>
-                    <div className="text">
-                        <div className="profile-subjekt-name">
-                            <span className="title">{Translation.t(`subject.${subject}.name`)}</span>
-                        </div>
-                        <div className="profile-subjekt-underline">
-                            <span className="fach-info">{Translation.t(`subject.${subject}.description`)}</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="profile-bottom" />
-            </div>
-        );
-    }
-}
-
-class ProfileCertificate extends React.Component {
-    render() {
-        return (
-            <div className="profile-certifikate">
-                <div className="certificates-row">
-                    <div className="titel-certificate">
-                        <Award className="badge-image" />
-                        <p className="badge-title">{this.props.Title}</p>
-                    </div>
-                    <div className="date-certificate">
-                        <p className="date">Erreicht am{this.props.Datum}</p>
-                    </div>
-                </div>
-                <Download className="download-image" />
-            </div>
-        );
-    }
-}
+import ProfileSubject from './ProfileSubject/ProfileSubject';
+import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 
 class Profile extends React.Component {
     constructor(props) {
@@ -110,7 +66,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <User stroke="#3A506B" />
+                                    <User color="#3A506B" />
                                 </IconText>
                             </span>
                         </div>
@@ -122,7 +78,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <TrendingUp size="24" stroke="#3A506B" />
+                                    <TrendingUp size="24" color="#3A506B" />
                                 </IconText>
                             </span>
                         </div>
@@ -134,7 +90,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <Calendar stroke="#3A506B" />
+                                    <Calendar color="#3A506B" />
                                 </IconText>
                             </span>
                         </div>

@@ -73,7 +73,7 @@ class TaskList extends React.Component {
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
-                                    <Users className="icon" stroke="#3A506B" />
+                                    <Users className="icon" color="#3A506B" />
                                 </IconText>
                             </div>
                             <div className="result-center second">
@@ -82,7 +82,7 @@ class TaskList extends React.Component {
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
-                                    <User className="icon" stroke="#3A506B" />
+                                    <User className="icon" color="#3A506B" />
                                 </IconText>
                             </div>
                         </div>

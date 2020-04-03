@@ -82,7 +82,8 @@
                 "teachingMaster": "The Teaching Master"
             },
             "favoriteSubjects": "Favorite Subjects",
-            "certificates": "Certificates"
+            "certificates": "Certificates",
+            "date": "Reached at"
         },
         "addTeacher": {
             "title": "Add teacher",

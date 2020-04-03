@@ -6,14 +6,13 @@ import { Translation } from '../../i18n/i18n';
 
 class Subject extends React.Component {
     render() {
-        const subject = this.props.subject;
-        const color = this.props.color;
-        const border = '0.73333335rem solid ' + color;
+        const { subject, color } = this.props;
+        const border = '0.733rem solid ' + color;
 
         return (
             <div className="subject" style={{ borderLeft: border }}>
                 <div className="image">
-                    <File strokewidth="1.5" className="icon" width="30" height="30" stroke="#000000" />
+                    <File size="30" color="#000000" />
                 </div>
                 <div className="box-content">
                     <h3 className="subject-name">{subject}</h3>
@@ -22,7 +21,7 @@ class Subject extends React.Component {
                         text={Translation.t('subjectInfos.weekendtask') + ' ' + this.props.weekendtask}
                         position="left"
                         class="weekend-task flex-row">
-                        <Calendar className="calender" width="27" height="27" stroke="#000000" />
+                        <Calendar className="calender" size="27" color="#000000" />
                     </IconText>
                     <div className="points">
                         <IconText
@@ -30,14 +29,14 @@ class Subject extends React.Component {
                             position="left"
                             distance="0.4rem"
                             class="user-points flex-row">
-                            <User stroke="#000000" width="27" height="27" />
+                            <User color="#000000" size="27" />
                         </IconText>
                         <IconText
                             text={this.props.community_Points + ' ' + Translation.t('subjectInfos.points')}
                             position="left"
                             distance="0.4rem"
                             class="community-points flex-row">
-                            <Users stroke="#000000" width="27" height="27" />
+                            <Users color="#000000" size="27" />
                         </IconText>
                     </div>
                 </div>
