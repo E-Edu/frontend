@@ -29,7 +29,7 @@ class PageLayout extends Component {
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
                 <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'} />
-                <Sidebar active="PAGE-ROUTE" visible={this.renderSitebar()} />
+                <Sidebar active={this.props.location.pathname} visible={this.renderSitebar()} />
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>
