@@ -13,6 +13,15 @@ class MenuElement extends Component {
         };
     }
 
+    static getDerivedStateFromProps(props, state) {
+        if (state.active !== props.active) {
+            return {
+                active: props.active,
+            };
+        }
+        return null;
+    }
+
     setActivity(activity) {
         // the active changes the icon
         this.setState({ active: activity || this.props.active });
@@ -87,6 +96,15 @@ class Sidebar extends Component {
         this.state = { activeName: props.active };
     }
 
+    static getDerivedStateFromProps(props, state) {
+        if (state.activeName !== props.active) {
+            return {
+                activeName: props.active,
+            };
+        }
+        return null;
+    }
+
     render() {
         const permission = 3; // TODO get this from user-ms
         const sites = [
@@ -106,7 +124,7 @@ class Sidebar extends Component {
                         name={site[0]}
                         file={site[1]}
                         url={site[2]}
-                        active={this.state.activeName === site[2]}
+                        active={this.state.activeName === '/' + site[2]}
                         key={site[0]}
                         spacer={site[4]}
                     />

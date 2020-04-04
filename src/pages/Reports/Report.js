@@ -157,7 +157,7 @@ class Report extends Component {
                     </IconText>
                     <IconText text={teacher} distance="0.8rem" class="teacher-name">
                         {/* TODO: finde a better solution */}
-                        <Teacher stroke="none" fill="#3a506b" />
+                        <Teacher color="#3a506b" fill="none" />
                     </IconText>
                 </div>
             </div>

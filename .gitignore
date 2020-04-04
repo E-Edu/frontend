@@ -78,4 +78,4 @@ frontend.iml
 
 
 #react enviroment variables
-src/react-app-env.d.ts
+react-app-env.d.ts
