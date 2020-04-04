@@ -59,7 +59,7 @@ class ReportInfo extends Component {
                     </div>
                 </div>
                 <div className="done-div">
-                    <button className="done" className="button" type="button">
+                    <button className="done button" type="button">
                         Fertig
                     </button>
                 </div>

@@ -12,10 +12,10 @@ class TaskList extends React.Component {
         this.state = { search: '', tasks: [] };
     }
 
-    OnChangeSearch = () => {
-        this.state.search(document.getElementById('site-search').value);
+    OnChangeSearch = (event) => {
         // TODO: Backend request
-        this.setState((prevState) => ({ prevState }));
+        this.setState({ search: event.target.value });
+        // FIXME: Adds just new entries
         this.loadFakeData();
     };
 
@@ -103,7 +103,7 @@ class TaskList extends React.Component {
                         </div>
                     </div>
 
-                    <div id="task-content-list">{this.renderTasks()}</div>
+                    <div className="task-content-list">{this.renderTasks()}</div>
                 </div>
             </div>
         );

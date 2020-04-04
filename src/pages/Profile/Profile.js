@@ -11,14 +11,12 @@ class Profile extends React.Component {
     state = { username: 'Morpheus', disabled: true };
 
     usernameClickListener = () => {
-        this.state.disabled = !this.state.disabled;
-        this.setState(this.state);
+        this.setState({ disabled: !this.state.disabled });
     };
 
-    usernameChangeListener = () => {
-        this.state.username = document.getElementById('usernameInput').value;
+    usernameChangeListener = (event) => {
         // TODO: Send data to backend
-        this.setState(this.state);
+        this.setState({ username: event.target.value });
     };
 
     render() {
@@ -48,9 +46,9 @@ class Profile extends React.Component {
                                         value={this.state.username}
                                         disabled={this.state.disabled}
                                     />
-                                    <a onClick={this.usernameClickListener}>
+                                    <span onClick={this.usernameClickListener}>
                                         <Edit2 className="pen img" />
-                                    </a>
+                                    </span>
                                 </div>
                             </span>
                         </div>

@@ -1,5 +1,4 @@
-import ApolloClient, { gql } from 'apollo-boost';
-import { UserAuth } from './model/Model';
+import ApolloClient from 'apollo-boost';
 
 const API_URL = 'https://api.e-edu.the-morpheus.de/graphql';
 /* const API_URL = "http://steve.de/graphql"; */
