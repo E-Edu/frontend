@@ -17,4 +17,4 @@ i18n.use(initReactI18next).init({
 });
 
 // eslint-disable-next-line
-export const Translation = i18n;
+export default i18n;

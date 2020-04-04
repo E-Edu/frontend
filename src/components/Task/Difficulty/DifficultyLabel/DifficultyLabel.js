@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import colorData from '../../../../lib/Colors.json';
-import { Translation } from '../../../../i18n/i18n';
 import './DifficultyLabel.scss';
+import { WithT as i18n } from 'i18next';
 
 class DifficultyLabel extends Component {
     render() {
@@ -17,7 +17,7 @@ class DifficultyLabel extends Component {
         const { borderColor } = color;
         return (
             <span className="difficulty-label" style={{ backgroundColor, borderColor }}>
-                {Translation.t(`difficulty.${difficulty}`)}
+                {i18n.t(`difficulty.${difficulty}`)}
             </span>
         );
     }

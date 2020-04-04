@@ -4,7 +4,7 @@ import { Check, Mail, X } from 'react-feather';
 import Teacher from '../../../components/icons/teacher.icon';
 import IconText from '../../../components/IconText/IconText';
 import IconButton from '../../../components/Buttons/IconButton/IconButton';
-import { Translation } from '../../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 
 class AddTeacherRequest extends Component {
     render() {
@@ -20,10 +20,10 @@ class AddTeacherRequest extends Component {
                     </IconText>
                 </div>
                 <div className="request-actions">
-                    <IconButton text={Translation.t('addTeacher.acceptAction')} class="request-action">
+                    <IconButton text={i18n.t('addTeacher.acceptAction')} class="request-action">
                         <X color="#ba1919" size="29" />
                     </IconButton>
-                    <IconButton text={Translation.t('addTeacher.denyAction')} class="request-action">
+                    <IconButton text={i18n.t('addTeacher.denyAction')} class="request-action">
                         <Check color="#19BA3F" size="29" />
                     </IconButton>
                 </div>

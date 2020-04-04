@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award } from 'react-feather';
-import { Translation } from '../../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 import DifficultyLabel from '../Difficulty/DifficultyLabel/DifficultyLabel';
 
 class Task extends React.Component {
@@ -17,7 +17,7 @@ class Task extends React.Component {
                     <div className="task-head-elements">
                         <div className="task-element">
                             <span>{questions}</span>
-                            <span>{Translation.t('taskList.questions')}</span>
+                            <span>{i18n.t('taskList.questions')}</span>
                         </div>
                         <div className="task-element">
                             <Award className="icon" color="#3A506B" />

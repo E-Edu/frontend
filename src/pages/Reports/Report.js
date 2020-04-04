@@ -7,6 +7,7 @@ import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import colorData from '../../lib/Colors';
+import { WithT as i18n } from 'i18next';
 
 class Report extends Component {
     // like: 0 - not liked, 1 - liked, 2 -disliked

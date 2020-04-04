@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProfileCertificate.scss';
 import { Award, Download } from 'react-feather';
-import { Translation } from '../../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 
 class ProfileCertificate extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class ProfileCertificate extends React.Component {
                         <p className="badge-title">{this.props.Title}</p>
                     </div>
                     <div className="date-certificate">
-                        <p className="date">{`${Translation.t('profile.date')} ${this.props.Datum}`}</p>
+                        <p className="date">{`${i18n.t('profile.date')} ${this.props.Datum}`}</p>
                     </div>
                 </div>
                 <Download className="download-image" />

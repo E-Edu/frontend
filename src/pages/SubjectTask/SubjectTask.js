@@ -3,7 +3,7 @@ import './SubjectTask.scss';
 
 import { Link } from 'react-router-dom';
 import { User, Users } from 'react-feather';
-import { Translation } from '../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 
 class SubjectTask extends React.Component {
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
@@ -35,23 +35,23 @@ class SubjectTask extends React.Component {
                             <div className="subject-task-content-header">
                                 <div className="subject-task-left">
                                     <span className="subject-task-subject">
-                                        {Translation.t(`subject.${subject}.name`)}
+                                        {i18n.t(`subject.${subject}.name`)}
                                     </span>
                                     <span className="subject-task-module">
-                                        {Translation.t(`lection.${subject}.${lection}.name`)}
+                                        {i18n.t(`lection.${subject}.${lection}.name`)}
                                     </span>
                                 </div>
                                 <div className="subject-task-right">
                                     <div className="subject-task-points">
                                         <User />
                                         <p>
-                                            <span> 213</span> {Translation.t('taskList.points')}
+                                            <span> 213</span> {i18n.t('taskList.points')}
                                         </p>
                                     </div>
                                     <div className="subject-task-points">
                                         <Users />
                                         <p>
-                                            <span> 21.323</span> {Translation.t('taskList.points')}
+                                            <span> 21.323</span> {i18n.t('taskList.points')}
                                         </p>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ class SubjectTask extends React.Component {
 
                             <div className="progress-display">
                                 <span>
-                                    {Translation.t('task.question')} 4{Translation.t('task.of')} 10 10{' '}
+                                    {i18n.t('task.question')} 4{i18n.t('task.of')} 10 10{' '}
                                 </span>
                                 <div className="progress-bar">
                                     <div
@@ -76,7 +76,7 @@ class SubjectTask extends React.Component {
                             </div>
                             <div className="subject-task-answer">
                                 <div className="subject-task-answer-header">
-                                    <span>{Translation.t('task.answer')}</span>
+                                    <span>{i18n.t('task.answer')}</span>
                                 </div>
                                 <div className="subject-task-answer-field">
                                     <input type="text" placeholder="test" />
@@ -85,12 +85,12 @@ class SubjectTask extends React.Component {
                                 <div className="subject-task-buttons">
                                     <Link to="/task/result" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <button className="subject-task-skip" type="button">
-                                            {Translation.t('task.skip')}
+                                            {i18n.t('task.skip')}
                                         </button>
                                     </Link>
                                     <Link to="/task/result" style={{ textDecoration: 'none', color: 'inherit' }}>
                                         <button className="subject-task-next" type="button">
-                                            {Translation.t('task.nextTask')}
+                                            {i18n.t('task.nextTask')}
                                         </button>
                                     </Link>
                                 </div>

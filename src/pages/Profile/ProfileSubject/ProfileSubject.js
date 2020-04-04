@@ -2,7 +2,7 @@ import React from 'react';
 import './ProfileSubject.scss';
 import { File } from 'react-feather';
 import Data from '../../../lib/Colors.json';
-import { Translation } from '../../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 
 class ProfileSubject extends React.Component {
     render() {
@@ -17,10 +17,10 @@ class ProfileSubject extends React.Component {
                     </div>
                     <div className="text">
                         <div className="profile-subjekt-name">
-                            <span className="title">{Translation.t(`subject.${subject}.name`)}</span>
+                            <span className="title">{i18n.t(`subject.${subject}.name`)}</span>
                         </div>
                         <div className="profile-subjekt-underline">
-                            <span className="fach-info">{Translation.t(`subject.${subject}.description`)}</span>
+                            <span className="fach-info">{i18n.t(`subject.${subject}.description`)}</span>
                         </div>
                     </div>
                 </div>

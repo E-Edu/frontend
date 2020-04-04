@@ -3,7 +3,7 @@ import './AddTeacher.scss';
 import { UserPlus } from 'react-feather';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
-import { Translation } from '../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 import AddTeacherRequest from './AddTeacherRequest/AddTeacherRequest';
 
 class AddTeacher extends Component {
@@ -36,25 +36,27 @@ class AddTeacher extends Component {
 
     renderRequests() {
         return this.state.pendingRequests.map((request, index) => {
-            return <AddTeacherRequest key={index} name={request[0]} email={request[1]} />;
+            return <AddTeacherRequest key={index} name={request[0]} email={request[1]}/>;
         });
     }
 
     render() {
         return (
-            <Page mainTitle={Translation.t('addTeacher.title')}>
+            <Page mainTitle={i18n.t('page.addTeacher.title')}>
                 <div className="add-teacher">
                     <TextInput
                         shadow={this.state.validEmail || this.state.email === '' ? '' : 'red'}
                         maxWidth="30rem"
-                        placeholder={Translation.t('addTeacher.emailOfTeacher')}
+                        placeholder={i18n.t('page.addTeacher.emailOfTeacher')}
                         onChange={this.emailChange}
                         className="test"
                     />
-                    <UserPlus className="add-teacher-button" onClick={this.add} />
+                    <UserPlus className="add-teacher-button" onClick={this.add}/>
                 </div>
                 <h1 className="requests-title">
-                    {Translation.t(`addTeacher.${this.state.pendingRequests.length === 0 ? 'noP' : 'p'}endingRequests`)}
+                    this.state.pendingRequests.length === 0?
+                    {i18n.t('page.addTeacher.noPendingRequests', 'Keine ausstehenden Anfragen')}:
+                    {i18n.t('page.addTeacher.pendingRequests', 'Ausstehende Anfragen')}
                 </h1>
                 <div className="pending-requests">{this.renderRequests()}</div>
             </Page>

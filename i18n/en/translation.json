@@ -1,0 +1,61 @@
+{
+  "correction": {
+    "date": "",
+    "correctionAction": ""
+  },
+  "subjectInfos": {
+    "weekendtask": "",
+    "points": ""
+  },
+  "taskList": {
+    "questions": "",
+    "points": "",
+    "task": "",
+    "search": ""
+  },
+  "task": {
+    "points": "",
+    "question": "",
+    "of": "",
+    "answer": "",
+    "skip": "",
+    "nextTask": ""
+  },
+  "addTeacher": {
+    "title": "",
+    "emailOfTeacher": "",
+    "acceptAction": "",
+    "denyAction": ""
+  },
+  "landingPage": {
+    "title": "Education for <span>You</span>",
+    "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>\"The Morpheus Tutorials\"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
+  },
+  "profile": {
+    "memberSince": "",
+    "rank": {
+      "teachingMaster": ""
+    },
+    "favoriteSubjects": "",
+    "certificates": "",
+    "date": ""
+  },
+  "settings": {
+    "settings": "",
+    "email": "",
+    "change": "",
+    "password": "",
+    "language": ""
+  },
+  "page": {
+    "addTeacher": {
+      "emailOfTeacher": "",
+      "noPendingRequests": "Keine ausstehenden Anfragen",
+      "pendingRequests": "Ausstehende Anfragen"
+    },
+    "landing": {
+      "title": "Education for <span>You</span>",
+      "description": "E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>\"The Morpheus Tutorials\"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können."
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { Calendar, Edit, User } from 'react-feather';
 import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import IconText from '../IconText/IconText';
 import IconButton from '../Buttons/IconButton/IconButton';
-import { Translation } from '../../i18n/i18n';
+import { WithT as i18n } from 'i18next';
 
 class CorrectionReviewBoxes extends Component {
     render() {
@@ -20,11 +20,11 @@ class CorrectionReviewBoxes extends Component {
                     <IconText text="Max Musterman" position="left" class="correction-pupil">
                         <User />
                     </IconText>
-                    <IconText text={Translation.t('correction.date')} position="left" class="correction-data">
+                    <IconText text={i18n.t('correction.date')} position="left" class="correction-data">
                         <Calendar />
                     </IconText>
                     <IconButton
-                        text={Translation.t('correction.correctionAction')}
+                        text={i18n.t('correction.correctionAction')}
                         distance="0.4rem"
                         class="correction-correct">
                         <Edit />
