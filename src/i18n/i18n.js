@@ -1,20 +1,18 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import en_US from './en_US.json';
-import de_DE from './de_DE.json';
+import de from './de/resource.json';
+import en from './en/resource.json';
 
 i18n.use(initReactI18next).init({
     debug: true,
-    fallbackLng: 'en_US',
-    lng: 'de_DE',
+    fallbackLng: 'de',
+    lng: 'en',
     load: 'all',
-
-    resources: { de_DE, en_US },
-
+    ns: false,
+    resources: { de, en },
     react: { wait: true },
-
     interpolation: { escapeValue: false },
 });
 
 // eslint-disable-next-line
-export default i18n;
+export const t = i18n;

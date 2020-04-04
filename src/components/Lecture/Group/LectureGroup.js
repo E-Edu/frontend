@@ -1,6 +1,7 @@
 import React from 'react';
 import './LectureGroup.scss';
 import LectureSubject from '../Subject/LectureSubject';
+import { t } from '../../../i18n/i18n';
 
 class LectureGroup extends React.Component {
     render() {

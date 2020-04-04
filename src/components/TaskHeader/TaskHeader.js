@@ -2,7 +2,7 @@ import React from 'react';
 import './TaskHeader.scss';
 import { User, Users } from 'react-feather';
 import IconText from '../IconText/IconText';
-import { WithT as i18n } from 'i18next';
+import { t } from '../../i18n/i18n';
 
 class TaskHeader extends React.Component {
     render() {
@@ -15,7 +15,7 @@ class TaskHeader extends React.Component {
                     </div>
                     <div className="lecture-header-points">
                         <IconText
-                            text={`${'213' + ' '}${i18n.t('task.points')}`}
+                            text={`${'213' + ' '}${t.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"
@@ -23,7 +23,7 @@ class TaskHeader extends React.Component {
                             <User color="#0b132b" />
                         </IconText>
                         <IconText
-                            text={`${'21.323' + ' '}${i18n.t('task.points')}`}
+                            text={`${'21.323' + ' '}${t.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"

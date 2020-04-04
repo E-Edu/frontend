@@ -1,41 +1,78 @@
 const fs = require('fs');
-const Parser = require('i18next-scanner').Parser;
+const chalk = require('chalk');
 
-const customHandler = function(key) {
-    parser.set(key, '__TRANSLATION__');
+module.exports = {
+    input: [
+        'app/**/*.{js,jsx}',
+        // Use ! to filter out files or directories
+        '!app/**/*.spec.{js,jsx}',
+        '!app/i18n/**',
+        '!**/node_modules/**',
+    ],
+    output: './',
+    options: {
+        debug: true,
+        sort: true,
+        func: {
+            list: ['i18next.t', 'i18n.t','t.t'],
+            extensions: ['.js', '.jsx']
+        },
+        trans: {
+            component: 'Trans',
+            i18nKey: 'i18nKey',
+            defaultsKey: 'defaults',
+            extensions: ['.js', '.jsx'],
+            fallbackKey: function(ns, value) {
+                return value;
+            },
+            acorn: {
+                ecmaVersion: 10, // defaults to 10
+                sourceType: 'module', // defaults to 'module'
+                // Check out https://github.com/acornjs/acorn/tree/master/acorn#interface for additional options
+            }
+        },
+        lngs: ['en','de'],
+        ns: [
+            'locale',
+            'resource'
+        ],
+
+        defaultLng: 'en',
+        defaultNs: 'resource',
+        defaultValue: '__STRING_NOT_TRANSLATED__',
+        resource: {
+            loadPath: 'src/i18n/{{lng}}/{{ns}}.json',
+            savePath: 'src/i18n/{{lng}}/{{ns}}.json',
+            jsonIndent: 2,
+            lineEnding: '\n'
+        },
+        /*nsSeparator: true, // namespace separator
+        keySeparator: true, // key separator*/
+        nsSeparator: ':',
+        keySeparator: '.',
+        interpolation: {
+            prefix: '{{',
+            suffix: '}}'
+        }
+    },
+    transform: function customTransform(file, enc, done) {
+        "use strict";
+        const parser = this.parser;
+        const content = fs.readFileSync(file.path, enc);
+        let count = 0;
+
+        parser.parseFuncFromString(content, { list: ['i18next._', 'i18next.__'] }, (key, options) => {
+            parser.set(key, Object.assign({}, options, {
+                nsSeparator: ':',
+                keySeparator: '.',
+            }));
+            ++count;
+        });
+
+        if (count > 0) {
+            console.log(`i18next-scanner: count=${chalk.cyan(count)}, file=${chalk.yellow(JSON.stringify(file.relative))}`);
+        }
+
+        done();
+    }
 };
-
-const parser = new Parser();
-let content = '';
-
-// Parse Translation Function
-// i18next.t('key');
-content = fs.readFileSync('src/App.js', 'utf-8');
-parser
-    .parseFuncFromString(content, customHandler) // pass a custom handler
-    .parseFuncFromString(content, { list: ['i18next.t'] }) // override `func.list`
-    .parseFuncFromString(content, { list: ['i18next.t'] }, customHandler)
-    .parseFuncFromString(content); // use default options and handler
-
-/*
-// Parse Trans component
-content = fs.readFileSync('/path/to/app.jsx', 'utf-8');
-parser
-    .parseTransFromString(content, customHandler) // pass a custom handler
-    .parseTransFromString(content, { component: 'Trans', i18nKey: 'i18nKey', defaultsKey: 'defaults' })
-    .parseTransFromString(content, { fallbackKey: true }) // Uses defaultValue as the fallback key when the i18nKey attribute is missing
-    .parseTransFromString(content); // use default options and handler
-*/
-
-// Parse HTML Attribute
-// <div data-i18n="key"></div>
-content = fs.readFileSync('./public/index.html', 'utf-8');
-parser
-    .parseAttrFromString(content, customHandler) // pass a custom handler
-    .parseAttrFromString(content, { list: ['data-i18n'] }) // override `attr.list`
-    .parseAttrFromString(content, { list: ['data-i18n'] }, customHandler)
-    .parseAttrFromString(content); // using default options and handler
-
-console.log(parser.get());
-console.log(parser.get({ sort: true }));
-console.log(parser.get('translation:key', { lng: 'de' }));

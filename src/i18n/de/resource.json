@@ -1,0 +1,218 @@
+{
+  "translation": {
+    "component": {
+      "addTeacherRequest": {
+        "acceptAction": "Accept",
+        "denyAction": "Deny"
+      },
+      "subject": {
+        "description": {
+          "math": "Something about apples and bananas",
+          "german": "Language learning - Babel",
+          "computerscience": "01010101010101010110",
+          "biology": "Biology",
+          "physic": "Pay attention to falling apples!",
+          "history": "I have a dream...",
+          "politics": "Political Education",
+          "chemistry": "Chemistry",
+          "unknown": "Unknown"
+        },
+        "label": {
+          "math": "Math",
+          "german": "German",
+          "computerscience": "Computer Science",
+          "biology": "Biology",
+          "physic": "Physics",
+          "history": "History",
+          "politics": "Politics",
+          "chemistry": "Chemistry",
+          "unknown": "Unknown"
+        }
+      },
+      "task": {
+        "difficulty": {
+          "easy": "Easy",
+          "medium": "Medium",
+          "hard": "Hard",
+          "unknown": "Unknown"
+        }
+      },
+      "profileCertificate": {
+        "date": "Reached at"
+      }
+    },
+    "correction": {
+      "date": "__STRING_NOT_TRANSLATED__",
+      "correctionAction": "__STRING_NOT_TRANSLATED__"
+    },
+    "subjectInfos": {
+      "weekendtask": "__STRING_NOT_TRANSLATED__",
+      "points": "__STRING_NOT_TRANSLATED__"
+    },
+    "taskList": {
+      "questions": "__STRING_NOT_TRANSLATED__",
+      "points": "__STRING_NOT_TRANSLATED__",
+      "task": "__STRING_NOT_TRANSLATED__"
+    },
+    "task": {
+      "points": "__STRING_NOT_TRANSLATED__",
+      "question": "__STRING_NOT_TRANSLATED__",
+      "of": "__STRING_NOT_TRANSLATED__",
+      "answer": "__STRING_NOT_TRANSLATED__",
+      "skip": "__STRING_NOT_TRANSLATED__",
+      "nextTask": "__STRING_NOT_TRANSLATED__"
+    },
+    "page": {
+      "addTeacher": {
+        "title": "Add teacher",
+        "emailOfTeacher": "Teachers email",
+        "noPendingRequests": "No pending requests",
+        "pendingRequests": "Pending requests"
+      },
+      "correctionReview": {
+        "heading": "Correction",
+        "button": {
+          "correctionMode": "Correction mode"
+        }
+      },
+      "landing": {
+        "title": "Education for <span>You</span>",
+        "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers."
+      },
+      "profile": {
+        "points": "Points",
+        "memberSince": "Member since",
+        "rank": {
+          "teachingMaster": "The Teaching Master"
+        },
+        "favoriteSubjects": "Favorite subjects",
+        "certificates": "Certificates"
+      },
+      "settings": {
+        "title": "Settings",
+        "email": "Email",
+        "change": "Change",
+        "password": "Password",
+        "language": "Language"
+      },
+      "task": {
+        "questions": "Questions"
+      },
+      "taskList": {
+        "task": "Questions",
+        "points": "Points",
+        "search": "Search"
+      }
+    },
+    "settings": {
+      "change": "__STRING_NOT_TRANSLATED__"
+    }
+  },
+  "component": {
+    "addTeacherRequest": {
+      "acceptAction": "Accept",
+      "denyAction": "Deny"
+    },
+    "subject": {
+      "description": {
+        "math": "Something about apples and bananas",
+        "german": "Language learning - Babel",
+        "computerscience": "01010101010101010110",
+        "biology": "Biology",
+        "physic": "Pay attention to falling apples!",
+        "history": "I have a dream...",
+        "politics": "Political Education",
+        "chemistry": "Chemistry",
+        "unknown": "Unknown"
+      },
+      "label": {
+        "math": "Math",
+        "german": "German",
+        "computerscience": "Computer Science",
+        "biology": "Biology",
+        "physic": "Physics",
+        "history": "History",
+        "politics": "Politics",
+        "chemistry": "Chemistry",
+        "unknown": "Unknown"
+      }
+    },
+    "task": {
+      "difficulty": {
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard",
+        "unknown": "Unknown"
+      }
+    },
+    "profileCertificate": {
+      "date": "Reached at"
+    }
+  },
+  "correction": {
+    "date": "__STRING_NOT_TRANSLATED__",
+    "correctionAction": "__STRING_NOT_TRANSLATED__"
+  },
+  "subjectInfos": {
+    "weekendtask": "__STRING_NOT_TRANSLATED__",
+    "points": "__STRING_NOT_TRANSLATED__"
+  },
+  "taskList": {
+    "questions": "__STRING_NOT_TRANSLATED__",
+    "points": "__STRING_NOT_TRANSLATED__",
+    "task": "__STRING_NOT_TRANSLATED__"
+  },
+  "task": {
+    "points": "__STRING_NOT_TRANSLATED__",
+    "question": "__STRING_NOT_TRANSLATED__",
+    "of": "__STRING_NOT_TRANSLATED__",
+    "answer": "__STRING_NOT_TRANSLATED__",
+    "skip": "__STRING_NOT_TRANSLATED__",
+    "nextTask": "__STRING_NOT_TRANSLATED__"
+  },
+  "page": {
+    "addTeacher": {
+      "title": "Add teacher",
+      "emailOfTeacher": "Teachers email",
+      "noPendingRequests": "No pending requests",
+      "pendingRequests": "Pending requests"
+    },
+    "correctionReview": {
+      "heading": "Correction",
+      "button": {
+        "correctionMode": "Correction mode"
+      }
+    },
+    "landing": {
+      "title": "Education for <span>You</span>",
+      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers."
+    },
+    "profile": {
+      "points": "Points",
+      "memberSince": "Member since",
+      "rank": {
+        "teachingMaster": "The Teaching Master"
+      },
+      "favoriteSubjects": "Favorite subjects",
+      "certificates": "Certificates"
+    },
+    "settings": {
+      "title": "Settings",
+      "email": "Email",
+      "change": "Change",
+      "password": "Password",
+      "language": "Language"
+    },
+    "task": {
+      "questions": "Questions"
+    },
+    "taskList": {
+      "task": "Questions",
+      "points": "Points",
+      "search": "Search"
+    }
+  },
+  "settings": {
+    "change": "__STRING_NOT_TRANSLATED__"
+  }
+}

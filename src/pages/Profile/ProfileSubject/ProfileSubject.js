@@ -2,7 +2,8 @@ import React from 'react';
 import './ProfileSubject.scss';
 import { File } from 'react-feather';
 import Data from '../../../lib/Colors.json';
-import { WithT as i18n } from 'i18next';
+import { t } from '../../../i18n/i18n';
+import SubjectLabel from '../../../components/Subject/subjectLabel/subjectLabel';
 
 class ProfileSubject extends React.Component {
     render() {
@@ -12,15 +13,15 @@ class ProfileSubject extends React.Component {
         return (
             <div className="profile-subjekt" style={{ borderLeft: border }}>
                 <div className="profile-top">
-                    <div className="profile-subjekt-img">
+                    <div className="profile-subject-img">
                         <File className="logo" />
                     </div>
                     <div className="text">
                         <div className="profile-subjekt-name">
-                            <span className="title">{i18n.t(`subject.${subject}.name`)}</span>
+                            <SubjectLabel className="fach-info" subjectLabel={subject} />
                         </div>
                         <div className="profile-subjekt-underline">
-                            <span className="fach-info">{i18n.t(`subject.${subject}.description`)}</span>
+                            <span>{t.t(`subject.${subject}.description`)}</span>
                         </div>
                     </div>
                 </div>

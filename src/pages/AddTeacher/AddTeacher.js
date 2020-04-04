@@ -3,8 +3,8 @@ import './AddTeacher.scss';
 import { UserPlus } from 'react-feather';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
-import { WithT as i18n } from 'i18next';
-import AddTeacherRequest from './AddTeacherRequest/AddTeacherRequest';
+import { t } from '../../i18n/i18n';
+import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 
 class AddTeacher extends Component {
     state = {
@@ -36,27 +36,27 @@ class AddTeacher extends Component {
 
     renderRequests() {
         return this.state.pendingRequests.map((request, index) => {
-            return <AddTeacherRequest key={index} name={request[0]} email={request[1]}/>;
+            return <AddTeacherRequest key={index} name={request[0]} email={request[1]} />;
         });
     }
 
     render() {
         return (
-            <Page mainTitle={i18n.t('page.addTeacher.title')}>
+            <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">
                     <TextInput
                         shadow={this.state.validEmail || this.state.email === '' ? '' : 'red'}
                         maxWidth="30rem"
-                        placeholder={i18n.t('page.addTeacher.emailOfTeacher')}
+                        placeholder={t.t('page.addTeacher.emailOfTeacher', 'Teachers email')}
                         onChange={this.emailChange}
                         className="test"
                     />
-                    <UserPlus className="add-teacher-button" onClick={this.add}/>
+                    <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
                     this.state.pendingRequests.length === 0?
-                    {i18n.t('page.addTeacher.noPendingRequests', 'Keine ausstehenden Anfragen')}:
-                    {i18n.t('page.addTeacher.pendingRequests', 'Ausstehende Anfragen')}
+                    {t.t('page.addTeacher.noPendingRequests', 'No pending requests')}:
+                    {t.t('page.addTeacher.pendingRequests', 'Pending requests')}
                 </h1>
                 <div className="pending-requests">{this.renderRequests()}</div>
             </Page>

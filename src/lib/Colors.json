@@ -1,14 +1,14 @@
 {
     "subjectColor": {
-        "german": "#B52020",
-        "math": "#202BB5",
-        "computerScience": "#303030",
-        "history": "#F45E00",
-        "politics": "#B520AB",
-        "physics": "#707070",
-        "biology": "#31AD03",
-        "religion": "#08B4CB",
-        "chemistry": "#FAE700"
+        "GERMAN": "#B52020",
+        "MATH": "#202BB5",
+        "COMPUTERSCIENCE": "#303030",
+        "HISTORY": "#F45E00",
+        "POLITICS": "#B520AB",
+        "PHYSICS": "#707070",
+        "BIOLOGY": "#31AD03",
+        "RELIGION": "#08B4CB",
+        "CHEMISTRY": "#FAE700"
     },
     "difficultyColor": {
         "easy": {

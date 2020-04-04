@@ -35,7 +35,7 @@
     "lint:prettier": "prettier --check \"./src/**/*.js\"",
     "lint:style": "stylelint \"./src/**/*.scss\"",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:style",
-    "i18n":"i18next-scanner --config i18next-scanner.config.js 'src/**/*.{js,jsx}'"
+    "i18n": "i18next-scanner --config i18next-scanner.config.js 'src/**/*.{js,jsx}'",
     "test:open": "cypress open",
     "test:run": "cypress run"
   },
@@ -55,7 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-react": "7.9.4",
+    "@babel/preset-react": "^7.9.4",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-links": "5.3.18",
     "@storybook/addons": "5.3.18",
@@ -77,7 +77,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "3.0.0",
-    "i18next-scanner": "^2.11.0",
+    "i18next-scanner": "2.11.0",
     "postcss-loader": "3.0.0",
     "prettier": "2.0.2",
     "sass-loader": "8.0.2",

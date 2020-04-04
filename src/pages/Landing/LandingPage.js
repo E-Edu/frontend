@@ -6,7 +6,7 @@ import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
-import { WithT as i18n } from 'i18next';
+import { t } from '../../i18n/i18n';
 
 class LandingPage extends Component {
     state = { showModal: false, redirect: false };
@@ -23,7 +23,7 @@ class LandingPage extends Component {
                         status
                     }
                 }
-            `,
+            `
         );
     }
 
@@ -35,7 +35,7 @@ class LandingPage extends Component {
                         if (this.state.redirect) {
                             this.setState({ redirect: false });
 
-                            return <Redirect exact to={this.state.redirect}/>;
+                            return <Redirect exact to={this.state.redirect} />;
                         }
                     })()}
 
@@ -57,21 +57,27 @@ class LandingPage extends Component {
                         }}
                         type="fadeIn">
                         {/* TODO Route zurück auf /login /register */}
-                        <Route exact path="/dashboard" component={Login}/>
-                        <Route exact path="/dashboard" component={Register}/>
+                        <Route exact path="/dashboard" component={Login} />
+                        <Route exact path="/dashboard" component={Register} />
                     </Modal>
 
                     <div className="content">
                         <div className="text-content">
-                            <h2>{i18n.t('page.landing.title', 'Education for <span>You</span>')}</h2>
-                            <h4>
-                                {i18n.t(
-                                    'page.landing.description',
-                                    'E-Edu ist eine Lernplattform die im Rahmen des Hackathon #WirVsVirus vom Team  <span>"The Morpheus Tutorials"</span> erstellt wurde.<br>E-Edu bietet eine Lernplattform für Schüler die von Lehrern erstellte Aufgaben bearbeiten können.',
-                                )}
-                            </h4>
+                            <h2
+                                dangerouslySetInnerHTML={{
+                                    __html: t.t('page.landing.title', 'Education for <span>You</span>'),
+                                }}
+                            />
+                            <h4
+                                dangerouslySetInnerHTML={{
+                                    __html: t.t(
+                                        'page.landing.description',
+                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
+                                    ),
+                                }}
+                            />
                         </div>
-                        <img className="hero-image" src="assets/landing-person.svg" alt=""/>
+                        <img className="hero-image" src="assets/landing-person.svg" alt="" />
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './AddTeacherRequest.scss';
 import { Check, Mail, X } from 'react-feather';
-import Teacher from '../../../components/icons/teacher.icon';
-import IconText from '../../../components/IconText/IconText';
-import IconButton from '../../../components/Buttons/IconButton/IconButton';
-import { WithT as i18n } from 'i18next';
+import Teacher from '../icons/teacher.icon';
+import IconText from '../IconText/IconText';
+import IconButton from '../Buttons/IconButton/IconButton';
+import { t } from '../../i18n/i18n';
 
 class AddTeacherRequest extends Component {
     render() {
@@ -20,10 +20,10 @@ class AddTeacherRequest extends Component {
                     </IconText>
                 </div>
                 <div className="request-actions">
-                    <IconButton text={i18n.t('addTeacher.acceptAction')} class="request-action">
+                    <IconButton text={t.t('component.addTeacherRequest.acceptAction', 'Accept')} class="request-action">
                         <X color="#ba1919" size="29" />
                     </IconButton>
-                    <IconButton text={i18n.t('addTeacher.denyAction')} class="request-action">
+                    <IconButton text={t.t('component.addTeacherRequest.denyAction', 'Deny')} class="request-action">
                         <Check color="#19BA3F" size="29" />
                     </IconButton>
                 </div>
