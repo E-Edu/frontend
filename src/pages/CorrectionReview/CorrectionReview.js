@@ -10,7 +10,7 @@ class CorrectionReview extends Component {
                 <div className="correction-content" id="main">
                     <div className="correction-header">
                         <h1>{t.t('page.correctionReview.heading', 'Correction')}</h1>
-                        <button className="correction-mode">
+                        <button type="button" className="correction-mode">
                             {t.t('page.correctionReview.button.correctionMode', 'Correction mode')}
                         </button>
                     </div>

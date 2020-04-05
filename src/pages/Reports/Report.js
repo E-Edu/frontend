@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './Report.scss';
-import { Info, Mail, ThumbsUp, ThumbsDown } from 'react-feather';
+import { Info, Mail, ThumbsDown, ThumbsUp } from 'react-feather';
 import Modal from 'react-animated-modal';
 import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import colorData from '../../lib/Colors';
-import { t } from '../../i18n/i18n';
 
 class Report extends Component {
     nullSubtrahend = '1';

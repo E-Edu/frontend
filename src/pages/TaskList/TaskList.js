@@ -42,12 +42,12 @@ class TaskList extends React.Component {
     }
 
     renderTasks() {
-        const indexAdd = 1;
+        const indexSubstituent = 1;
         return this.state.tasks.map((task, index) => {
             return (
                 <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
-                        name={`${t.t('taskList.task')} ${index + 1}`}
+                        name={`${t.t('taskList.task')} ${index + indexSubstituent}`}
                         questions="12"
                         rightQuestions="10"
                         difficulty={task.difficulty}

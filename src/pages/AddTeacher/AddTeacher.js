@@ -43,7 +43,6 @@ class AddTeacher extends Component {
     }
 
     render() {
-        const nullPendingRequst = 0;
         return (
             <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">

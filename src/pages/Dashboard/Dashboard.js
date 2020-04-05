@@ -2,9 +2,7 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
-import Data from '../../lib/Colors';
-import Query from '../../lib/api/Query';
-import { t } from '../../i18n/i18n';
+import Query from '../../lib/api/Query.ts';
 import Subject from '../../components/Subject/Subject.js';
 
 class dashboard extends React.Component {

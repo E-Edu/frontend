@@ -7,6 +7,7 @@ import { t } from '../../i18n/i18n';
 class TaskHeader extends React.Component {
     render() {
         const { module } = this.props;
+        const points = 213;
         return (
             <div className="task-header">
                 <div className="lecture-header">
@@ -15,7 +16,7 @@ class TaskHeader extends React.Component {
                     </div>
                     <div className="lecture-header-points">
                         <IconText
-                            text={`${'213' + ' '}${t.t('task.points')}`}
+                            text={`${points} ${t.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"
@@ -23,7 +24,7 @@ class TaskHeader extends React.Component {
                             <User color="#0b132b" />
                         </IconText>
                         <IconText
-                            text={`${'21.323' + ' '}${t.t('task.points')}`}
+                            text={`${points} ${t.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"
