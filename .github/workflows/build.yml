@@ -11,26 +11,52 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.16.1'
-      - run: npm install
-      - run: npm install -g react-scripts
-      - run: npm run build
-      - name: Upload math result for job 1
-        uses: actions/upload-artifact@v1
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
         with:
-          name: testSetup
-          path: .
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
 
   codeStyle:
     needs: setup
     runs-on: ubuntu-latest
     name: CodeStyle
     steps:
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          name: testSetup
-      - run: npm run lint:prettier
-      - run: npm run lint:style
+          node-version: '12.16.1'
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Dependencies
+        run: npm run lint:prettier
+
+      - name: Install Dependencies
+        run: npm run lint:style
 
   e2e:
     needs: setup
@@ -38,10 +64,25 @@ jobs:
     # let's make sure our tests pass on Chrome browser
     name: E2E on Chrome
     steps:
-      - name: Download math result for job 2
-        uses: actions/download-artifact@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          name: testSetup
+          node-version: '12.16.1'
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        run: npm install
+
       - uses: cypress-io/github-action@v1
         with:
           browser: chrome
