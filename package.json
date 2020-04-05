@@ -34,7 +34,9 @@
     "lint:eslint": "eslint --ext .ts,.js \"./src/**\"",
     "lint:prettier": "prettier --check \"./src/**/*.js\"",
     "lint:style": "stylelint \"./src/**/*.scss\"",
-    "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:style"
+    "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:style",
+    "test:open": "cypress open",
+    "test:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -63,9 +65,12 @@
     "autoprefixer": "9.7.5",
     "awesome-typescript-loader": "5.2.1",
     "css-loader": "3.4.2",
+    "cypress": "4.3.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-config-prettier": "6.10.1",
+    "eslint-plugin-chai-friendly": "0.5.0",
+    "eslint-plugin-cypress": "2.10.3",
     "eslint-plugin-import": "2.20.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-prettier": "3.1.2",
