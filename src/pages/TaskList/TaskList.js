@@ -42,6 +42,7 @@ class TaskList extends React.Component {
     }
 
     renderTasks() {
+        const indexAdd = 1;
         return this.state.tasks.map((task, index) => {
             return (
                 <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>

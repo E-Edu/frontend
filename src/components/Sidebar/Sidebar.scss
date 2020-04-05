@@ -15,27 +15,6 @@
   top: 0;
   width: 7.667rem;
 
-  .menu-element:first-child {
-    margin-top: 0;
-  }
-
-  .menu-element {
-    align-items: center;
-    color: #687d9a;
-    flex-direction: column;
-    line-height: 1.2em;
-    margin: 0.6rem 0;
-    text-decoration: none;
-  }
-
-  .menu-element:hover {
-    cursor: pointer;
-  }
-
-  .menu-element:focus {
-    outline: none;
-  }
-
   .icon-size {
     height: 1.6rem;
     width: 1.6rem;

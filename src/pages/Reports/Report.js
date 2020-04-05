@@ -10,51 +10,30 @@ import colorData from '../../lib/Colors';
 import { t } from '../../i18n/i18n';
 
 class Report extends Component {
+    nullSubtrahend = '1';
+
     // like: 0 - not liked, 1 - liked, 2 -disliked
-    state = {
-        teacher: this.props.teacher,
-        likes: Number(this.props.likes),
-        dislikes: Number(this.props.dislikes),
-        difficulty: this.props.difficulty,
-        messages: this.props.messages,
-        subject: this.props.subject,
-        like: this.props.liked || 0,
-        thumbsInactive: '#3A506B',
-        thumbGreen: colorData.difficultyColor.easy.border,
-        thumbRed: colorData.difficultyColor.hard.border,
+    likeState = {
+        unset: 0,
+        liked: 1,
+        disliked: 2,
     };
 
-    like = () => {
-        const { likes } = this.state;
-        const { dislikes } = this.state;
-        if (this.state.like === 1) {
-            this.setState({ like: 0, likes: likes - 1 });
-        } else {
-            if (this.state.like === 2) {
-                this.setState({ dislikes: dislikes - 1 });
-            }
-            this.setState({ like: 1, likes: likes + 1 });
-        }
-    };
-
-    dislike = () => {
-        const { likes } = this.state;
-        const { dislikes } = this.state;
-        if (this.state.like === 2) {
-            this.setState({ like: 0, dislikes: dislikes - 1 });
-        } else {
-            if (this.state.like === 1) {
-                this.setState({ likes: likes - 1 });
-            }
-            this.setState({ like: 2, dislikes: dislikes + 1 });
-        }
-    };
-
-    showModal = () => {
-        if (!this.state.showModal) {
-            this.setState({ showModal: true });
-        }
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            teacher: this.props.teacher,
+            likes: Number(this.props.likes),
+            dislikes: Number(this.props.dislikes),
+            difficulty: this.props.difficulty,
+            messages: this.props.messages,
+            subject: this.props.subject,
+            like: this.props.liked || this.likeState.unset,
+            thumbsInactive: '#3A506B',
+            thumbGreen: colorData.difficultyColor.easy.border,
+            thumbRed: colorData.difficultyColor.hard.border,
+        };
+    }
 
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress);
@@ -64,8 +43,43 @@ class Report extends Component {
         document.removeEventListener('keydown', this.handleKeyPress);
     }
 
+    like = () => {
+        const { likes } = this.state;
+        const { dislikes } = this.state;
+        const step = 1;
+        if (this.state.like === this.likeState.liked) {
+            this.setState({ like: this.likeState.unset, likes: likes - this.nullSubtrahend });
+        } else {
+            if (this.state.like === this.likeState.disliked) {
+                this.setState({ dislikes: dislikes - this.nullSubtrahend });
+            }
+            this.setState({ like: this.likeState.liked, likes: likes + step });
+        }
+    };
+
+    dislike = () => {
+        const { likes } = this.state;
+        const { dislikes } = this.state;
+        const step = 1;
+        if (this.state.like === this.likeState.disliked) {
+            this.setState({ like: this.likeState.unset, dislikes: dislikes - this.nullSubtrahend });
+        } else {
+            if (this.state.like === this.likeState.liked) {
+                this.setState({ likes: likes - this.nullSubtrahend });
+            }
+            this.setState({ like: this.likeState.disliked, dislikes: dislikes + step });
+        }
+    };
+
+    showModal = () => {
+        if (!this.state.showModal) {
+            this.setState({ showModal: true });
+        }
+    };
+
     handleKeyPress = (event) => {
-        if (event.keyCode === 27) {
+        const keyCode = 27;
+        if (event.keyCode === keyCode) {
             this.setState({ showModal: false });
         }
     };
@@ -109,9 +123,17 @@ class Report extends Component {
                                 right: 0,
                                 justifyContent: 'flex-end',
                             }}>
-                            <div style={{ marginLeft: 10 }} onClick={this.like}>
+                            <div
+                                style={{ marginLeft: 10, outline: 'none' }}
+                                onClick={this.like}
+                                role="button"
+                                tabIndex="0">
                                 <ThumbsUp
-                                    color={this.state.like === 1 ? this.state.thumbGreen : this.state.thumbsInactive}
+                                    color={
+                                        this.state.like === this.likeState.liked
+                                            ? this.state.thumbGreen
+                                            : this.state.thumbsInactive
+                                    }
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.likes}</span>
@@ -125,9 +147,17 @@ class Report extends Component {
                                 right: 0,
                                 justifyContent: 'flex-end',
                             }}>
-                            <div style={{ marginLeft: 10 }} onClick={this.dislike}>
+                            <div
+                                style={{ marginLeft: 10, outline: 'none' }}
+                                onClick={this.dislike}
+                                role="button"
+                                tabIndex="0">
                                 <ThumbsDown
-                                    color={this.state.like === 2 ? this.state.thumbRed : this.state.thumbsInactive}
+                                    color={
+                                        this.state.like === this.likeState.disliked
+                                            ? this.state.thumbRed
+                                            : this.state.thumbsInactive
+                                    }
                                 />
                             </div>
                             <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>

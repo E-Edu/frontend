@@ -7,6 +7,7 @@ class TaskEvaluation extends React.Component {
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
 
     render() {
+        const nullSubtrahend = 1;
         return (
             <div>
                 <div className="result">
@@ -32,7 +33,7 @@ class TaskEvaluation extends React.Component {
                             {this.results.map((value, index) => {
                                 return (
                                     <div className="result-question" key={index}>
-                                        <ResultQuestion color={value} index={index + 1} />
+                                        <ResultQuestion color={value} index={index + nullSubtrahend} />
                                     </div>
                                 );
                             })}

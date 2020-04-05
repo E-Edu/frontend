@@ -5,11 +5,14 @@ import Modal from 'react-animated-modal';
 import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
-import Query from '../../lib/api/Query';
+import Query from '../../lib/api/Query.ts';
 import { t } from '../../i18n/i18n';
 
 class LandingPage extends Component {
-    state = { showModal: false, redirect: false };
+    constructor(props) {
+        super(props);
+        this.state = { showModal: false, redirect: false };
+    }
 
     login() {
         Query.mutationGQL(
@@ -37,6 +40,7 @@ class LandingPage extends Component {
 
                             return <Redirect exact to={this.state.redirect} />;
                         }
+                        return null;
                     })()}
 
                     {/* TODO Route zurück auf /login /register */}

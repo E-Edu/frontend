@@ -8,10 +8,13 @@ import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 
 class Profile extends React.Component {
-    state = { username: 'Morpheus', disabled: true };
+    constructor(props) {
+        super(props);
+        this.state = { username: 'Morpheus', disabled: true };
+    }
 
     usernameClickListener = () => {
-        this.setState({ disabled: !this.state.disabled });
+        this.setState((prevstate) => ({ disabled: !prevstate.disabled }));
     };
 
     usernameChangeListener = (event) => {
@@ -46,7 +49,11 @@ class Profile extends React.Component {
                                         value={this.state.username}
                                         disabled={this.state.disabled}
                                     />
-                                    <span onClick={this.usernameClickListener}>
+                                    <span
+                                        style={{ outline: 'none' }}
+                                        onClick={this.usernameClickListener}
+                                        role="button"
+                                        tabIndex="0">
                                         <Edit2 className="pen img" />
                                     </span>
                                 </div>

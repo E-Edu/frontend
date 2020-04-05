@@ -25,6 +25,10 @@ module.exports = {
         '**/*.config.js',
         'spec/**',
         '**/*.scss',
+        'src/css/fonts',
+        '**/*.json',
+        'src/lib/schema.gql',
+        'src/lib/api/*',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -71,5 +75,6 @@ module.exports = {
         'cypress/no-force': 'warn',
         'no-unused-expressions': 0,
         'chai-friendly/no-unused-expressions': 2,
+        'jsx-a11y/click-events-have-key-events': 'off'
     },
 };

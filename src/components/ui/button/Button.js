@@ -9,6 +9,8 @@ class Button extends React.Component {
             classes += ' disabled';
         }
         return (
+            // eslint bug with props
+            // eslint-disable-next-line
             <button
                 type={this.props.type || 'text'}
                 className={`button ${classes}`}

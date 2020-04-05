@@ -7,19 +7,16 @@ import { t } from '../../i18n/i18n';
 import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 
 class AddTeacher extends Component {
-    state = {
-        validEmail: false,
-        email: '',
-        pendingRequests: [
-            ['Herr Lehrer Mustermann', 'lehrer.mustermann@lehrer-mail.de'],
-            ['Herr Lehrer Mustermann2', 'lehrer.mustermann2@lehrer-mail.de'],
-        ],
-    };
-
-    isValidEmail() {
-        const regex =
-            '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])';
-        return this.state.email.match(regex) !== null;
+    constructor(props) {
+        super(props);
+        this.state = {
+            validEmail: false,
+            email: '',
+            pendingRequests: [
+                ['Herr Lehrer Mustermann', 'lehrer.mustermann@lehrer-mail.de'],
+                ['Herr Lehrer Mustermann2', 'lehrer.mustermann2@lehrer-mail.de'],
+            ],
+        };
     }
 
     emailChange = (event) => {
@@ -31,8 +28,13 @@ class AddTeacher extends Component {
 
     add = () => {
         this.setState({ validEmail: this.isValidEmail() });
-        if (this.state.validEmail) alert('Teacher added');
     };
+
+    isValidEmail() {
+        const regex =
+            '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])';
+        return this.state.email.match(regex) !== null;
+    }
 
     renderRequests() {
         return this.state.pendingRequests.map((request, index) => {
@@ -41,6 +43,7 @@ class AddTeacher extends Component {
     }
 
     render() {
+        const nullPendingRequst = 0;
         return (
             <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">
