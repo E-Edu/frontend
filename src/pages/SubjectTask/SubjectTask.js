@@ -10,7 +10,7 @@ class SubjectTask extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state({ currentQuestion: 4, maxQuestion: 10 });
+        this.state = { currentQuestion: 4, maxQuestion: 10 };
     }
 
     renderDescription(description) {
