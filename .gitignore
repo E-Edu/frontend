@@ -79,3 +79,7 @@ frontend.iml
 
 #react enviroment variables
 react-app-env.d.ts
+
+# ignore screenshots and videos of cypress
+/cypress/screenshots/
+/cypress/videos/

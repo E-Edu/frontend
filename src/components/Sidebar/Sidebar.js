@@ -124,7 +124,7 @@ class Sidebar extends Component {
                         name={site[0]}
                         file={site[1]}
                         url={site[2]}
-                        active={this.state.activeName === '/' + site[2]}
+                        active={this.state.activeName === `/${site[2]}`}
                         key={site[0]}
                         spacer={site[4]}
                     />
