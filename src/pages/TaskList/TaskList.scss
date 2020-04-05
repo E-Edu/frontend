@@ -49,19 +49,41 @@
       margin-right: 2.667rem;
       margin-top: 2.267rem;
 
-      .input-search {
-        align-items: center;
-        border: 0.067rem solid #3a506b;
-        border-radius: 0.533rem;
+      #input-search {      
         display: flex;
         flex-direction: row;
+        align-items:center;
+        
         height: 2.867rem;
         width: 26.067rem;
+        border: 1px solid #3A506B;
+        border-radius: 8px;
+
+        input{
+          background: transparent;
+          color: #3a506b;
+          
+          text-align: left;
+          width: 100%;
+          border: none;
+          outline:none;
+          opacity: 1;
+          padding: 0 0.5rem;
+          
+        }
+       
+        
+
 
         div {
           padding: 0 0.5rem;
           padding-bottom: 0.333rem;
+          
+         
         }
+        
+        
+        
       }
 
       input {
@@ -73,7 +95,17 @@
         opacity: 1;
         text-align: left;
         width: 26.067rem;
+        border: 1px solid #3A506B;
+        border-radius: 8px;
+        opacity: 1;
+        padding: 0 0.5rem;
+        
+        
+       
+      
       }
+
+     
 
       input:focus {
         outline: none;

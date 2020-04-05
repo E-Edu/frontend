@@ -90,7 +90,7 @@ class TaskList extends React.Component {
                         <div className="result-right">
                             <span className="result-subject">
                                 <div id="input-search">
-                                    <Search size="30" />
+                                    <Search size="30" color="#3a506b"/>
                                     <input
                                         onChange={this.OnChangeSearch}
                                         type="text"
@@ -99,6 +99,7 @@ class TaskList extends React.Component {
                                         aria-label="Search"
                                         placeholder={t.t('page.taskList.search', 'Search')}
                                     />
+                                    
                                 </div>
                             </span>
                         </div>
