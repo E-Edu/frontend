@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './TextInput.scss';
 
 class TextInput extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { placeholder } = this.props;
         const { onChange } = this.props;

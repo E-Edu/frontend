@@ -9,9 +9,11 @@ import TeacherIcon from '../icons/teacher.icon';
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 */
 // Validates Form errors
-const formValid = ({ formErrors, ...rest }) => {
+const formValid = ({ formErrors }) => {
     let valid = true;
 
+    // TODO: Please fix this
+    // eslint-disable-next-line
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
 };
@@ -47,20 +49,22 @@ class Register extends React.Component {
         e.preventDefault();
         const { name, value } = e.target;
         const { formErrors } = this.state;
+        const nameMin = 3;
+        const passMin = 6;
 
         switch (name) {
             case 'firstName':
-                formErrors.firstName = value.length < 3 ? 'minimum 3 characters required ' : '';
+                formErrors.firstName = value.length < nameMin ? 'minimum 3 characters required ' : '';
                 break;
 
             case 'lastName':
-                formErrors.lastName = value.length < 3 ? 'minimum 3 characters required ' : '';
+                formErrors.lastName = value.length < nameMin ? 'minimum 3 characters required ' : '';
                 break;
             case 'role':
                 formErrors.role = value === '' ? 'Please select your role' : '';
                 break;
             case 'password':
-                formErrors.password = value.length < 6 ? 'minimum 6 characters required ' : '';
+                formErrors.password = value.length < passMin ? 'minimum 6 characters required ' : '';
                 break;
             case 'password2':
                 formErrors.password2 = value !== value.password ? 'Passwörter sind unterschiedlich' : '';
@@ -78,17 +82,8 @@ class Register extends React.Component {
 
     // Determines if user accepted the privacy policy
     handlePrivacy = () => {
-        this.setState({ accepted: !this.state.accepted });
+        this.setState((state) => ({ accepted: !state.accepted }));
     };
-
-    // Handles the two special Buttons student and teacher
-    handleSpecial(e, data) {
-        e.preventDefault();
-        let student = true;
-        if (data === 'Teacher') student = false;
-
-        this.setState({ role: data, isStudent: student });
-    }
 
     // Toggeles the password field to text - toggles the icon in the jsx (ternary statement below)
     togglePassword = () => {
@@ -109,6 +104,15 @@ class Register extends React.Component {
             // TODO: Write your stuff
         }
     };
+
+    // Handles the two special Buttons student and teacher
+    handleSpecial(e, data) {
+        e.preventDefault();
+        let student = true;
+        if (data === 'Teacher') student = false;
+
+        this.setState({ role: data, isStudent: student });
+    }
 
     render() {
         // constants for the toggle functions (eye and password)
@@ -147,7 +151,12 @@ class Register extends React.Component {
                                                     className="input-field passwort"
                                                     noValidate
                                                 />
-                                                <span className="eye" onClick={this.togglePassword}>
+                                                <span
+                                                    className="eye"
+                                                    style={{ outline: 'none' }}
+                                                    onClick={this.togglePassword}
+                                                    role="button"
+                                                    tabIndex="0">
                                                     <Eye className="hide1" />
                                                     <EyeOff className="hide2" />
                                                 </span>
@@ -184,7 +193,12 @@ class Register extends React.Component {
                                                     </span>
                                                 </p>
                                             </div>
-                                            <div onClick={this.handleRedirect} className="btn-UI-container">
+                                            <div
+                                                onClick={this.handleRedirect}
+                                                style={{ outline: 'none' }}
+                                                className="btn-UI-container"
+                                                role="button"
+                                                tabIndex="0">
                                                 <button
                                                     to="/"
                                                     onClick={this.handleSubmit}
@@ -224,22 +238,28 @@ class Register extends React.Component {
                                         <div className="btn-group role-btn">
                                             <div
                                                 onClick={(e) => this.handleSpecial(e, 'Student')}
+                                                style={{ outline: 'none' }}
                                                 className={
                                                     this.state.isStudent
                                                         ? 'btn-special-button btn-special-button1 btn active'
                                                         : 'btn-special-button btn-special-button1 btn'
-                                                }>
+                                                }
+                                                role="button"
+                                                tabIndex="0">
                                                 <User color="black" />
                                                 <span>Student</span>
                                             </div>
 
                                             <div
                                                 onClick={(e) => this.handleSpecial(e, 'Teacher')}
+                                                style={{ outline: 'none' }}
                                                 className={
                                                     this.state.isStudent
                                                         ? 'btn-special-button btn-special-button2 btn'
                                                         : 'btn-special-button btn-special-button2 btn active'
-                                                }>
+                                                }
+                                                role="button"
+                                                tabIndex="0">
                                                 <span>Teacher</span>
                                                 <TeacherIcon />
                                             </div>

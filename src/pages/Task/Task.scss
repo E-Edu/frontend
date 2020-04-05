@@ -1,0 +1,40 @@
+@import './src/css/styles';
+
+.task {
+  border: 0.067rem solid #707070;
+  border-radius: 0.533rem;
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  margin: 0.667rem;
+  width: 65rem;
+
+  .task-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1rem;
+    margin-top: 1rem;
+
+    .task-head-elements {
+      display: flex;
+      flex-direction: row;
+
+      .task-element {
+        display: flex;
+        flex-direction: row;
+        padding: 0 1rem;
+      }
+    }
+
+    span {
+      padding: 0 0.3rem;
+    }
+  }
+
+  .task-bottom {
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+  }
+}

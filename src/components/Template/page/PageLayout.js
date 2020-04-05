@@ -6,16 +6,11 @@ import Sidebar from '../../Sidebar/Sidebar';
 import Footer from '../../Footer/Footer';
 
 class PageLayout extends Component {
-    state = { visible: false };
-
     hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
 
-    renderSitebar() {
-        const route = this.props.location.pathname;
-        /* this.setState(() => {
-            return {visible: true};
-        }); */
-        return this.hiddenSidebarPages.includes(route);
+    constructor(props) {
+        super(props);
+        this.state = { visible: false };
     }
 
     gridLayout() {
@@ -25,11 +20,19 @@ class PageLayout extends Component {
         return "'header header' 'sidebar content'";
     }
 
+    renderSitebar() {
+        const route = this.props.location.pathname;
+        /* this.setState(() => {
+            return {visible: true};
+        }); */
+        return this.hiddenSidebarPages.includes(route);
+    }
+
     render() {
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
                 <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'} />
-                <Sidebar active="PAGE-ROUTE" visible={this.renderSitebar()} />
+                <Sidebar active={this.props.location.pathname} visible={this.renderSitebar()} />
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>

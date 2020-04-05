@@ -5,7 +5,12 @@ class IconButton extends Component {
     render() {
         const { width } = this.props;
         return (
-            <div className={`icon-button ${this.props.class}`} style={{ width }} onClick={this.props.clickEvent}>
+            <div
+                className={`icon-button ${this.props.class}`}
+                style={{ width, outline: 'none' }}
+                onClick={this.props.clickEvent}
+                role="button"
+                tabIndex="0">
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}

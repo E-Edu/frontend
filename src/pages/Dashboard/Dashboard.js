@@ -2,13 +2,19 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
-import Data from '../../lib/Colors';
-import Query from '../../lib/api/Query';
-import { Translation } from '../../i18n/i18n';
+import Query from '../../lib/api/Query.ts';
 import Subject from '../../components/Subject/Subject.js';
 
 class dashboard extends React.Component {
-    state = { subjects: [] };
+    constructor(props) {
+        super(props);
+        this.state = { subjects: [] };
+    }
+
+    componentDidMount() {
+        this.loadSubjects();
+        this.loadFakeData();
+    }
 
     navigate(path) {
         this.props.history.push(`/${path}`);
@@ -16,13 +22,13 @@ class dashboard extends React.Component {
 
     loadFakeData() {
         this.state.subjects.push(
-            { nameKey: 'german' },
-            { nameKey: 'computerScience' },
-            { nameKey: 'history' },
-            { nameKey: 'politics' },
-            { nameKey: 'physics' },
-            { nameKey: 'biology' },
-            { nameKey: 'chemistry' }
+            { nameKey: 'GERMAN' },
+            { nameKey: 'COMPUTERSCIENCE' },
+            { nameKey: 'HISTORY' },
+            { nameKey: 'POLITICS' },
+            { nameKey: 'PHYSICS' },
+            { nameKey: 'BIOLOGY' },
+            { nameKey: 'CHEMISTRY' }
         );
     }
 
@@ -36,13 +42,14 @@ class dashboard extends React.Component {
             }
         `);
 
+        // TODO: Check graphql to fix
+        // eslint-disable-next-line
         subjects.push({ displayName: result.data.subjectById.displayName });
 
-        // push our new states
-        for (const subject of subjects) this.state.subjects.push(subject);
-
         // refresh the state
-        this.setState(this.state);
+        this.setState((state) => ({
+            subjects: state.subjects.concat(subjects),
+        }));
     }
 
     renderSubjects() {
@@ -50,9 +57,9 @@ class dashboard extends React.Component {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subject
-                        subject={Translation.t(`subject.${subject.nameKey}.name`)}
-                        underline={Translation.t(`subject.${subject.nameKey}.description`)}
-                        color={Data.subjectColor[subject.nameKey]}
+                        subject={subject.nameKey}
+                        desciption={subject.nameKey}
+                        color={subject.nameKey}
                         weekendtask="4/5"
                         points="213"
                         community_Points="21.323"
@@ -60,11 +67,6 @@ class dashboard extends React.Component {
                 </Link>
             );
         });
-    }
-
-    componentDidMount() {
-        this.loadSubjects();
-        this.loadFakeData();
     }
 
     render() {

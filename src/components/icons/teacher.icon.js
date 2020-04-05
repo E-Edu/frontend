@@ -2,14 +2,16 @@ import './index.scss';
 import React, { Component } from 'react';
 
 class TeacherIcon extends Component {
-    render(props) {
+    render() {
+        const standardWidth = 24;
+        const standardHeight = 24;
         return (
             <div className="icon">
                 <svg
                     id="Teacher"
                     xmlns="http://www.w3.org/2000/svg"
-                    width={this.props.width || 24}
-                    height={this.props.height || 24}
+                    width={this.props.width || standardWidth}
+                    height={this.props.height || standardHeight}
                     viewBox="0 0 27 27"
                     fill={this.props.color || 'none'}
                     stroke={this.props.fill || 'currentColor'}>

@@ -3,10 +3,6 @@ import PageContent from './Content/PageContent';
 import PageHeader from './Header/PageHeader';
 
 class Page extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { children } = this.props;
         const { mainTitle } = this.props;

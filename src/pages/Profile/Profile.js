@@ -3,22 +3,23 @@ import './Profile.scss';
 import '../../css/main.css';
 import { Calendar, Edit2, Tag, TrendingUp, User } from 'react-feather';
 import IconText from '../../components/IconText/IconText';
-import { Translation } from '../../i18n/i18n';
+import { t } from '../../i18n/i18n';
 import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 
 class Profile extends React.Component {
-    state = { username: 'Morpheus', disabled: true };
+    constructor(props) {
+        super(props);
+        this.state = { username: 'Morpheus', disabled: true };
+    }
 
     usernameClickListener = () => {
-        this.state.disabled = !this.state.disabled;
-        this.setState(this.state);
+        this.setState((prevstate) => ({ disabled: !prevstate.disabled }));
     };
 
-    usernameChangeListener = () => {
-        this.state.username = document.getElementById('usernameInput').value;
+    usernameChangeListener = (event) => {
         // TODO: Send data to backend
-        this.setState(this.state);
+        this.setState({ username: event.target.value });
     };
 
     render() {
@@ -48,9 +49,13 @@ class Profile extends React.Component {
                                         value={this.state.username}
                                         disabled={this.state.disabled}
                                     />
-                                    <a onClick={this.usernameClickListener}>
+                                    <span
+                                        style={{ outline: 'none' }}
+                                        onClick={this.usernameClickListener}
+                                        role="button"
+                                        tabIndex="0">
                                         <Edit2 className="pen img" />
-                                    </a>
+                                    </span>
                                 </div>
                             </span>
                         </div>
@@ -58,7 +63,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo points">
                             <span className="central">
                                 <IconText
-                                    text={`6.526 ${Translation.t('task.points')}`}
+                                    text={`6.526 ${t.t('page.profile.points', 'Points')}`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
@@ -70,7 +75,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo trending">
                             <span className="central">
                                 <IconText
-                                    text={`6.526 ${Translation.t('task.points')}`}
+                                    text={`6.526 ${t.t('page.profile.points', '')}`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
@@ -82,7 +87,7 @@ class Profile extends React.Component {
                         <div className="central stat font-arimo since">
                             <span className="central">
                                 <IconText
-                                    text={`${Translation.t('profile.memberSince')} 21.03.2020`}
+                                    text={`${t.t('page.profile.memberSince', 'Member since')} 21.03.2020`}
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
@@ -103,35 +108,42 @@ class Profile extends React.Component {
                             </div>
                             <div className="level-rank">
                                 <Tag color="#5BC0BE" />
-                                <span className="level-rang">{Translation.t('profile.rank.teachingMaster')}</span>
+                                <span className="level-rang">
+                                    {t.t('page.profile.rank.teachingMaster', 'The Teaching Master')}
+                                </span>{' '}
+                                {/* TODO ändern in component */}
                             </div>
                         </div>
 
                         <div className="favorite-subject">
                             <div>
-                                <h2 className="font-arimo profile-h2">{Translation.t('profile.favoriteSubjects')}</h2>
+                                <h2 className="font-arimo profile-h2">
+                                    {t.t('page.profile.favoriteSubjects', 'Favorite subjects')}
+                                </h2>
                                 <div className="profile-favorite-box">
-                                    <ProfileSubject subject="german" />
-                                    <ProfileSubject subject="math" />
-                                    <ProfileSubject subject="computerScience" />
+                                    <ProfileSubject subject="GERMAN" />
+                                    <ProfileSubject subject="MATH" />
+                                    <ProfileSubject subject="COMUTERSIENCE" />
                                 </div>
                             </div>
                         </div>
                         <div className="favorite-certificate">
                             <div>
-                                <h2 className="font-arimo profile-h2">{Translation.t('profile.certificates')}</h2>
+                                <h2 className="font-arimo profile-h2">
+                                    {t.t('page.profile.certificates', 'Certificates')}
+                                </h2>
                                 <div className="profile-certificate-box">
-                                    <ProfileCertificate Title="1.000 Fragen beantwortet" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="0 Fehler in 100 Fragen" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="Bestes Layout" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="1.000 Questions answered" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="0 Error in 100 questions" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="Best layout" Datum="23.01.2020" />
 
-                                    <ProfileCertificate Title="5.000 Fragen beantwortet" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="1.000 Punkte erreicht" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="5.000 Punkte erreicht" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="5,000 questions answered" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="1.000 points achieved" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="5,000 points achieved" Datum="23.01.2020" />
 
-                                    <ProfileCertificate Title="500 Informatikpunkte" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="1.000 Informatikpunkte" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="Informatikabschluss" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="500 computer science points" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="1,000 IT points" Datum="23.01.2020" />
+                                    <ProfileCertificate Title="Computer Science degree" Datum="23.01.2020" />
                                 </div>
                             </div>
                         </div>

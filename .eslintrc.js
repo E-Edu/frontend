@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es6: true,
+        'cypress/globals': true,
     },
     extends: [
         'airbnb',
@@ -24,6 +25,10 @@ module.exports = {
         '**/*.config.js',
         'spec/**',
         '**/*.scss',
+        'src/css/fonts',
+        '**/*.json',
+        'src/lib/schema.gql',
+        'src/lib/api/*',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -37,6 +42,8 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'prettier',
+        'cypress',
+        'chai-friendly',
     ],
     rules: {
         'no-magic-numbers': 'warn',
@@ -62,5 +69,12 @@ module.exports = {
         'class-methods-use-this': 'off',
         'import/no-extraneous-dependencies': 'off',
         'react/prop-types':'off',
+        'cypress/no-assigning-return-values': 'error',
+        'cypress/no-unnecessary-waiting': 'error',
+        'cypress/assertion-before-screenshot': 'warn',
+        'cypress/no-force': 'warn',
+        'no-unused-expressions': 0,
+        'chai-friendly/no-unused-expressions': 2,
+        'jsx-a11y/click-events-have-key-events': 'off'
     },
 };
