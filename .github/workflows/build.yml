@@ -1,16 +1,56 @@
 name: Build
 
-on: [pull_request]
+on: [pull_request,push]
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
     name: Build
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '12.16.1'
       - run: npm install
       - run: npm install -g react-scripts
       - run: npm run build
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v1
+        with:
+          name: testSetup
+          path: .
+
+  codeStyle:
+    needs: setup
+    runs-on: ubuntu-latest
+    name: CodeStyle
+    steps:
+      - name: Download math result for job 2
+        uses: actions/download-artifact@v1
+        with:
+          name: testSetup
+      - run: npm run lint:prettier
+      - run: npm run lint:style
+
+  e2e:
+    needs: setup
+    runs-on: ubuntu-16.04
+    # let's make sure our tests pass on Chrome browser
+    name: E2E on Chrome
+    steps:
+      - name: Download math result for job 2
+        uses: actions/download-artifact@v1
+        with:
+          name: testSetup
+      - uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
+          start: npm start
+          # quote the url to be safe against YML parsing surprises
+          wait-on: 'http://localhost:3000'
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
