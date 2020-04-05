@@ -53,10 +53,7 @@ jobs:
         run: npm install
 
       - name: Install Dependencies
-        run: npm run lint:prettier
-
-      - name: Install Dependencies
-        run: npm run lint:style
+        run: npm run lint:all
 
   e2e:
     needs: setup

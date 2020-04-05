@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Task.scss';
 import { Award } from 'react-feather';
-import colorData from '../../lib/Colors';
 import { t } from '../../i18n/i18n';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';

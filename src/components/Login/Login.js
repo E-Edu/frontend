@@ -4,7 +4,10 @@ import './Login.scss';
 import { Eye, EyeOff } from 'react-feather';
 
 class Login extends Component {
-    state = { email: '', password: '' };
+    constructor(props) {
+        super(props);
+        this.state = { email: '', password: '' };
+    }
 
     handleEmailChange = (event) => {
         this.setState({ email: event.target.value });
@@ -81,7 +84,12 @@ class Login extends Component {
                                 onChange={this.handlePasswortChange}
                             />
                             {/* describes the two eye-icons in the field */}
-                            <span className="eye" onClick={this.changeVisibility}>
+                            <span
+                                className="eye"
+                                style={{ outline: 'none' }}
+                                onClick={this.changeVisibility}
+                                role="button"
+                                tabIndex="0">
                                 <Eye className="hide1" />
                                 <EyeOff className="hide2" />
                             </span>

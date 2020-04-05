@@ -10,7 +10,7 @@ class SubjectTask extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state({ currentQuestion: 4, maxQuestion: 10 });
+        this.state = { currentQuestion: 4, maxQuestion: 10 };
     }
 
     renderDescription(description) {
@@ -26,7 +26,7 @@ class SubjectTask extends React.Component {
             'Peter hat 3 Äpfel und 4 Birnen. Er gibt Lena 2 Äpfel und 1 Birne ab.\n Wieviele Äpfel hat Peter noch?';
         const subject = 'math';
         const lection = 'addition';
-
+        const percentMultiplicator = 100;
         return (
             <div>
                 <div className="main">
@@ -63,7 +63,10 @@ class SubjectTask extends React.Component {
                                     <div
                                         className="progress-per"
                                         style={{
-                                            width: `${(this.state.currentQuestion / this.state.maxQuestion) * 100}%`,
+                                            width: `${
+                                                (this.state.currentQuestion / this.state.maxQuestion) *
+                                                percentMultiplicator
+                                            }%`,
                                         }}
                                     />
                                 </div>

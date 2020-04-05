@@ -6,16 +6,11 @@ import Sidebar from '../../Sidebar/Sidebar';
 import Footer from '../../Footer/Footer';
 
 class PageLayout extends Component {
-    state = { visible: false };
-
     hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
 
-    renderSitebar() {
-        const route = this.props.location.pathname;
-        /* this.setState(() => {
-            return {visible: true};
-        }); */
-        return this.hiddenSidebarPages.includes(route);
+    constructor(props) {
+        super(props);
+        this.state = { visible: false };
     }
 
     gridLayout() {
@@ -23,6 +18,14 @@ class PageLayout extends Component {
             return "'header header' 'content content' 'footer footer'";
         }
         return "'header header' 'sidebar content'";
+    }
+
+    renderSitebar() {
+        const route = this.props.location.pathname;
+        /* this.setState(() => {
+            return {visible: true};
+        }); */
+        return this.hiddenSidebarPages.includes(route);
     }
 
     render() {
