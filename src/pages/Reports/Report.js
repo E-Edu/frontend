@@ -7,13 +7,8 @@ import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import colorData from '../../lib/Colors';
-import { Translation } from '../../i18n/i18n';
 
 class Report extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     // like: 0 - not liked, 1 - liked, 2 -disliked
     state = {
         teacher: this.props.teacher,
@@ -76,9 +71,6 @@ class Report extends Component {
 
     render() {
         const { difficulty } = this.state;
-        const color = colorData.difficultyColor[difficulty];
-        const { backgroundColor } = color;
-        const { borderColor } = color;
         const { subject, messages, teacher } = this.props;
 
         return (

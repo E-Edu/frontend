@@ -15,7 +15,7 @@ class TaskHeader extends React.Component {
                     </div>
                     <div className="lecture-header-points">
                         <IconText
-                            text={`${'213' + ' '}${Translation.t('task.points')}`}
+                            text={`${'213'} ' ' ${Translation.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"
@@ -23,7 +23,7 @@ class TaskHeader extends React.Component {
                             <User color="#0b132b" />
                         </IconText>
                         <IconText
-                            text={`${'21.323' + ' '}${Translation.t('task.points')}`}
+                            text={`${'21.323'} ' ' ${Translation.t('task.points')}`}
                             position="left"
                             class="lecture-points"
                             distance="0.4rem"

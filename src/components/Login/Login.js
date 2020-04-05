@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './Login.scss';
 import { Eye, EyeOff } from 'react-feather';
 

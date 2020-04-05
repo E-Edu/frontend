@@ -23,14 +23,14 @@ class AddTeacher extends Component {
     }
 
     emailChange = (event) => {
-        this.state.email = event.target.value;
-        this.state.validEmail = this.isValidEmail();
-        this.setState(this.state);
+        this.setState({
+            email: event.target.value,
+            validEmail: this.isValidEmail(),
+        });
     };
 
     add = () => {
-        this.state.validEmail = this.isValidEmail();
-        this.setState(this.state);
+        this.setState({ validEmail: this.isValidEmail() });
         if (this.state.validEmail) alert('Teacher added');
     };
 

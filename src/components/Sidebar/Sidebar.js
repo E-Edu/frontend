@@ -106,7 +106,7 @@ class Sidebar extends Component {
     }
 
     render() {
-        const permission = 3; // TODO get this from user-ms
+        const permission = 3; // TODO: get this from user-ms
         const sites = [
             // Name, icon name, route, permission, spacer before it
             ['Home', 'home', 'dashboard', 0],
@@ -140,13 +140,7 @@ class Sidebar extends Component {
             <div className="menu">
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
-                    <MenuElement
-                        name=""
-                        file="settings"
-                        url="settings"
-                        active={this.state.activeName === 'settings'}
-                        spacer
-                    />
+                    <MenuElement name="" file="settings" url="settings" active={this.state.activeName === 'settings'} />
                     <MenuElement name="" file="user" url="profile" active={this.state.activeName === 'profile'} />
                 </div>
             </div>
