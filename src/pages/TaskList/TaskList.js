@@ -2,7 +2,7 @@ import React from 'react';
 import './TaskList.scss';
 import { Link } from 'react-router-dom';
 import { Search, User, Users } from 'react-feather';
-import { Translation } from '../../i18n/i18n';
+import { t } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
 import IconText from '../../components/IconText/IconText';
 
@@ -46,7 +46,7 @@ class TaskList extends React.Component {
             return (
                 <Link key={task.id} to="/task/subject" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Task
-                        name={`${Translation.t('taskList.task')} ${index + 1}`}
+                        name={`${t.t('taskList.task')} ${index + 1}`}
                         questions="12"
                         rightQuestions="10"
                         difficulty={task.difficulty}
@@ -63,13 +63,13 @@ class TaskList extends React.Component {
                 <div className="task-list main">
                     <div className="result-content-header">
                         <div className="result-left">
-                            <span className="result-subject">{Translation.t('taskList.task')}</span>
+                            <span className="result-subject">{t.t('page.taskList.task', 'Questions')}</span>
                         </div>
 
                         <div className="middle">
                             <div className="result-center">
                                 <IconText
-                                    text={`213 ${Translation.t('taskList.points')}`}
+                                    text={`213 ${t.t('page.taskList.points', 'Points')}`}
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
@@ -78,7 +78,7 @@ class TaskList extends React.Component {
                             </div>
                             <div className="result-center second">
                                 <IconText
-                                    text={`21.323 ${Translation.t('taskList.points')}`}
+                                    text={`21.323 ${t.t('page.taskList.points', 'Points')}`}
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
@@ -96,7 +96,7 @@ class TaskList extends React.Component {
                                         className="site-search"
                                         name="search"
                                         aria-label="Search"
-                                        placeholder={Translation.t('taskList.search')}
+                                        placeholder={t.t('page.taskList.search', 'Search')}
                                     />
                                 </div>
                             </span>

@@ -6,7 +6,7 @@ import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
-import { Translation } from '../../i18n/i18n';
+import { t } from '../../i18n/i18n';
 
 class LandingPage extends Component {
     state = { showModal: false, redirect: false };
@@ -63,8 +63,19 @@ class LandingPage extends Component {
 
                     <div className="content">
                         <div className="text-content">
-                            <h2 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.title') }} />
-                            <h4 dangerouslySetInnerHTML={{ __html: Translation.t('landingPage.description') }} />
+                            <h2
+                                dangerouslySetInnerHTML={{
+                                    __html: t.t('page.landing.title', 'Education for <span>You</span>'),
+                                }}
+                            />
+                            <h4
+                                dangerouslySetInnerHTML={{
+                                    __html: t.t(
+                                        'page.landing.description',
+                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
+                                    ),
+                                }}
+                            />
                         </div>
                         <img className="hero-image" src="assets/landing-person.svg" alt="" />
                     </div>

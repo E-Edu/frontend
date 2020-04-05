@@ -3,8 +3,8 @@ import './AddTeacher.scss';
 import { UserPlus } from 'react-feather';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
-import { Translation } from '../../i18n/i18n';
-import AddTeacherRequest from './AddTeacherRequest/AddTeacherRequest';
+import { t } from '../../i18n/i18n';
+import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 
 class AddTeacher extends Component {
     state = {
@@ -42,19 +42,21 @@ class AddTeacher extends Component {
 
     render() {
         return (
-            <Page mainTitle={Translation.t('addTeacher.title')}>
+            <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">
                     <TextInput
                         shadow={this.state.validEmail || this.state.email === '' ? '' : 'red'}
                         maxWidth="30rem"
-                        placeholder={Translation.t('addTeacher.emailOfTeacher')}
+                        placeholder={t.t('page.addTeacher.emailOfTeacher', 'Teachers email')}
                         onChange={this.emailChange}
                         className="test"
                     />
                     <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
-                    {Translation.t(`addTeacher.${this.state.pendingRequests.length === 0 ? 'noP' : 'p'}endingRequests`)}
+                    this.state.pendingRequests.length === 0?
+                    {t.t('page.addTeacher.noPendingRequests', 'No pending requests')}:
+                    {t.t('page.addTeacher.pendingRequests', 'Pending requests')}
                 </h1>
                 <div className="pending-requests">{this.renderRequests()}</div>
             </Page>

@@ -2,6 +2,7 @@ import React from 'react';
 import './LectureSubject.scss';
 import { Link } from 'react-router-dom';
 import { Codepen } from 'react-feather';
+import { t } from '../../../i18n/i18n';
 
 class LectureSubject extends React.Component {
     render() {

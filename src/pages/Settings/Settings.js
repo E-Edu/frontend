@@ -2,36 +2,35 @@ import React, { Component } from 'react';
 import '../../css/main.scss';
 import './Settings.scss';
 import { Edit2 } from 'react-feather';
-import { Translation } from '../../i18n/i18n';
+import { t } from '../../i18n/i18n';
 
 class Settings extends Component {
     render() {
         return (
             <div>
                 <div className="settings">
-                    <h1 className="text-dark">{Translation.t('settings.settings')}</h1>
+                    <h1 className="text-dark">{t.t('page.settings.title', 'Settings')}</h1>
                     <div className="settings-content">
                         <table>
                             <tr>
                                 <td width="13.333333rem" className="topic">
-                                    {Translation.t('settings.email')}
+                                    {t.t('page.settings.email', 'Email')}
                                 </td>
                                 <td width="8rem">test@test.de</td>
-                                <td>{Translation.t('settings.change')}</td>
-                                {/* Datenbankverbindung Schnittstellen Team? */}
+                                <td>{t.t('page.settings.change', 'Change')}</td>
                             </tr>
                             <tr>
-                                <td className="topic">{Translation.t('settings.password')}</td>
+                                <td className="topic">{t.t('page.settings.password', 'Password')}</td>
                                 <td>************</td>
                                 <td>
                                     <Edit2 />
-                                    {Translation.t('settings.change')}
+                                    {t.t('settings.change')}
                                 </td>
                             </tr>
                             <tr>
-                                <td className="topic">{Translation.t('settings.language')}</td>
+                                <td className="topic">{t.t('page.settings.language', 'Language')}</td>
                                 <td>Deutsch</td>
-                                <td>{Translation.t('settings.change')}</td>
+                                <td>{t.t('page.settings.change', 'Change')}</td>
                             </tr>
                         </table>
                     </div>
