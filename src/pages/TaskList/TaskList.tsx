@@ -5,6 +5,7 @@ import { Search, User, Users } from 'react-feather';
 import { t } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
 import IconText from '../../components/IconText/IconText';
+import TextInput from '../../components/Input/TextBox/TextInput';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
 interface TaskListSate {
@@ -104,22 +105,16 @@ class TaskList extends React.Component<TaskListSate> {
                         </div>
                         <div className="result-right">
                             <span className="result-subject">
-                                <div id="input-search">
-                                    <Search size="30" color="#3a506b"/>
-                                    <input
-                                        onChange={this.OnChangeSearch}
-                                        type="text"
-                                        className="site-search"
-                                        name="search"
-                                        aria-label="Search"
-                                        placeholder={t.t('page.taskList.search', 'Search')}
-                                    />
-                                    
-                                </div>
+                                <TextInput placeholder={t.t('page.taskList.search', 'Search')}/>
+
+
+
+                                {/* TODO: implement Search icon <Search size="30" color="#3a506b"/> */}
+                               
+
                             </span>
                         </div>
                     </div>
-
                     <div className="task-content-list">{this.renderTasks()}</div>
                 </div>
             </div>
