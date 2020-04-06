@@ -1,7 +1,7 @@
 import React from 'react';
 import './TaskList.scss';
 import { Link } from 'react-router-dom';
-import { Search, User, Users } from 'react-feather';
+import { User, Users } from 'react-feather';
 import { t } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
 import IconText from '../../components/IconText/IconText';
@@ -105,13 +105,9 @@ class TaskList extends React.Component<TaskListSate> {
                         </div>
                         <div className="result-right">
                             <span className="result-subject">
-                                <TextInput placeholder={t.t('page.taskList.search', 'Search')}/>
-
-
+                                <TextInput placeholder={t.t('page.taskList.search', 'Search')} />
 
                                 {/* TODO: implement Search icon <Search size="30" color="#3a506b"/> */}
-                               
-
                             </span>
                         </div>
                     </div>

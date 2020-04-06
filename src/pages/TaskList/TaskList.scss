@@ -49,36 +49,21 @@
       margin-right: 2.667rem;
       margin-top: 2.267rem;
 
-      #input-search {      
-        display: flex;
-        flex-direction: row;
-        align-items:center;
-        
-        height: 2.867rem;
-        width: 26.067rem;
-        border: 1px solid #3A506B;
-        border-radius: 8px;
-
-        div {
-          padding: 0 0.5rem;
-          padding-bottom: 0.333rem;
-        }
-       
-      }
+      
 
       input {
         background: transparent;
+        border: 1px solid #3a506b;
+        border-radius: 8px;
         color: #3a506b;
         font-size: 1.333rem;
         height: 2.867rem;
         letter-spacing: 0;
         opacity: 1;
-        text-align: left;
-        width: 26.067rem;
-        border: 1px solid #3A506B;
-        border-radius: 8px;
         opacity: 1;
         padding: 0 0.5rem;
+        text-align: left;
+        width: 26.067rem;
       
       }
 
