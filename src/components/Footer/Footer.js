@@ -12,12 +12,12 @@ class Footer extends Component {
         return (
             <div className="footer-navbar">
                 <div className="legal">
-                    <Link to="/imprint">Impressum</Link>
-                    <Link to="/privacy">Datenschutzerklärung</Link>
-                    <Link to="/credits">Credits</Link>
-                    <Link to="https://github.com/E-Edu/general">
+                    <Link to="/imprint" className="imprint-link">Impressum</Link>
+                    <Link to="/privacy" className="privacy-link">Datenschutzerklärung</Link>
+                    <Link to="/credits" className="credits-link">Credits</Link>
+                    <a href="https://github.com/E-Edu/general" className="github-link">
                         <GitHub color="#5bc0be" />
-                    </Link>
+                    </a>
                 </div>
                 <div className="copyright">
                     <span>&copy; 2020 The Morpheus Tutorials Community</span>
