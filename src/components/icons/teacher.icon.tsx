@@ -1,7 +1,16 @@
 import './index.scss';
-import React, { Component } from 'react';
+import React from 'react';
+import { ColorProperty } from 'csstype';
 
-class TeacherIcon extends Component {
+interface TeacherIconProps {
+    width?: string;
+    height?: string;
+    fill?: ColorProperty;
+    stroke?: ColorProperty;
+    color?: ColorProperty;
+}
+
+class TeacherIcon extends React.Component<Partial<TeacherIconProps>> {
     render() {
         const standardWidth = 24;
         const standardHeight = 24;

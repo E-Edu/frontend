@@ -15,9 +15,9 @@ class PageLayout extends Component {
 
     gridLayout() {
         if (this.renderSitebar()) {
-            return "'header header' 'content content' 'footer footer'";
+            return '\'header header\' \'content content\' \'footer footer\'';
         }
-        return "'header header' 'sidebar content'";
+        return '\'header header\' \'sidebar content\'';
     }
 
     renderSitebar() {
@@ -31,13 +31,13 @@ class PageLayout extends Component {
     render() {
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
-                <Header side={!this.renderSitebar() ? 'Dashboard' : 'Landing'} />
-                <Sidebar active={this.props.location.pathname} visible={this.renderSitebar()} />
+                <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'}/>
+                <Sidebar active={this.props.location.pathname} visible={this.renderSitebar()}/>
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>
                 } */}
-                <Footer visible={!this.renderSitebar()} />
+                <Footer visible={!this.renderSitebar()}/>
             </div>
         );
     }

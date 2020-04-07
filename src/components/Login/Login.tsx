@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Eye, EyeOff } from 'react-feather';
 
-class Login extends Component {
+class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = { email: '', password: '' };
@@ -40,7 +40,7 @@ class Login extends Component {
      * @public
      */
     changeVisibility() {
-        const passwortType = document.getElementById('password');
+        /*const passwortType = document.getElementById('password');
         const hiddenEye = document.getElementById('hide1');
         const openEye = document.getElementById('hide2');
 
@@ -52,7 +52,8 @@ class Login extends Component {
             passwortType.type = 'password';
             hiddenEye.style.display = 'none';
             openEye.style.display = 'block';
-        }
+        }*/
+        //TODO not with document.getElementById. Thats not the react style
     }
 
     render() {
@@ -89,7 +90,7 @@ class Login extends Component {
                                 style={{ outline: 'none' }}
                                 onClick={this.changeVisibility}
                                 role="button"
-                                tabIndex="0">
+                                tabIndex={1}>
                                 <Eye className="hide1" />
                                 <EyeOff className="hide2" />
                             </span>

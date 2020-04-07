@@ -3,9 +3,11 @@ import './ReportInfo.scss';
 import { ArrowDown, ArrowUp, Mail } from 'react-feather';
 import TeacherIcon from '../icons/teacher.icon';
 
-class ReportInfo extends Component {
-    constructor() {
-        super();
+//TODO Statemanagement
+
+class ReportInfo extends React.Component {
+    constructor(props) {
+        super(props);
         this.state = {
             subject: 'Mathe',
             theme: 'Grundrechnen',

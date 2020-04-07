@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
 
-class MenuElement extends Component {
+//TODO Statemanagement
+
+interface MenuElementProps {
+    active?: boolean;
+    spacer?: string;
+    url?: string;
+}
+
+class MenuElement extends React.Component<MenuElementProps> {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +44,7 @@ class MenuElement extends Component {
     };
 
     render() {
-        let spacer = '';
+        let spacer: any;
         if (this.props.spacer) {
             spacer = (
                 <div
@@ -58,7 +66,7 @@ class MenuElement extends Component {
         } else {
             color = '#5BC0BE';
         }
-        let nameText = '';
+        let nameText: any;
         if (this.state.name) {
             nameText = (
                 <p
@@ -83,7 +91,7 @@ class MenuElement extends Component {
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File color={color} fill="none" />
+                <File color={color} fill="none"/>
                 {nameText}
             </Link>,
         ];

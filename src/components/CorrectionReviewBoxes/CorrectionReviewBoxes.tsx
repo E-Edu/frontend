@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CorrectionReviewBoxes.scss';
 import { Calendar, Edit, User } from 'react-feather';
 import DifficultyLabel from '../Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import IconText from '../IconText/IconText';
 import IconButton from '../Buttons/IconButton/IconButton';
 import { t } from '../../i18n/i18n';
+import { DifficultyEnum } from '../../models/difficulty.enum';
 
-class CorrectionReviewBoxes extends Component {
+interface CorrectionReviewBoxesProps {
+    difficulty: DifficultyEnum
+}
+
+class CorrectionReviewBoxes extends React.Component<CorrectionReviewBoxesProps> {
     render() {
         return (
             <span className="correction-box">

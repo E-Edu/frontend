@@ -1,10 +1,28 @@
-import React, { Component } from 'react';
-import './IconText.scss';
+import React from 'react';
+import './IconButton.scss';
+import { ColorProperty } from 'csstype';
 
-class IconText extends Component {
+interface IconButtonProps {
+    class?: string;
+    clickEvent?: any;
+    width?: string;
+    position?: 'left' | 'right';
+    fontColor?: ColorProperty;
+    fontSize?: number;
+    distance?: string;
+    text?: string;
+}
+
+class IconButton extends React.Component<IconButtonProps> {
     render() {
+        const { width } = this.props;
         return (
-            <div className={`icon-text ${this.props.class}`} style={{ width: this.props.width }}>
+            <div
+                className={`icon-button ${this.props.class}`}
+                style={{ width, outline: 'none' }}
+                onClick={this.props.clickEvent}
+                role="button"
+                tabIndex={0}>
                 {this.props.position === 'left' ? (
                     <>
                         {this.props.children}
@@ -15,7 +33,7 @@ class IconText extends Component {
                                 paddingLeft: this.props.distance,
                                 textAlign: 'left',
                             }}
-                            className="text left">
+                            className="text">
                             {this.props.text}
                         </span>
                     </>
@@ -28,7 +46,7 @@ class IconText extends Component {
                                 paddingRight: this.props.distance,
                                 textAlign: 'right',
                             }}
-                            className="text right">
+                            className="text">
                             {this.props.text}
                         </span>
                         {this.props.children}
@@ -39,4 +57,4 @@ class IconText extends Component {
     }
 }
 
-export default IconText;
+export default IconButton;

@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './PageHeader.scss';
 
-class PageHeader extends Component {
+interface PageHeaderProps {
+    mainTitle: string;
+    secondaryTitle?: string;
+}
+
+class PageHeader extends React.Component<PageHeaderProps> {
     render() {
-        const { mainTitle } = this.props;
-        const { secondaryTitle } = this.props;
+        const { mainTitle, secondaryTitle } = this.props;
 
         return (
             <div className="page-header">

@@ -1,12 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ResultQuestion.scss';
 import { ThumbsDown, ThumbsUp } from 'react-feather';
+import { ColorProperty } from 'csstype';
 
-class ResultQuestion extends Component {
+interface ResultQuestionProps {
+    color?: ColorProperty;
+    index?: number;
+}
+
+class ResultQuestion extends React.Component<ResultQuestionProps> {
     render() {
         return (
             <div className="result-question-box">
-                <div className="result-status-bar" style={{ backgroundColor: this.props.color }} />
+                <div className="result-status-bar" style={{ backgroundColor: this.props.color }}/>
                 <div className="result-content">
                     <div className="result-top">
                         <div className="result-left-top">
@@ -18,8 +24,8 @@ class ResultQuestion extends Component {
                         </div>
                         <div className="result-right-top">
                             <p className="result-rating">Frage bewerten: </p>
-                            <ThumbsUp />
-                            <ThumbsDown />
+                            <ThumbsUp/>
+                            <ThumbsDown/>
                         </div>
                     </div>
                     <div className="result-bottom">

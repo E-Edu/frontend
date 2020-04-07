@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import colorData from '../../../../lib/Colors.json';
 import './DifficultyLabel.scss';
 import { t } from '../../../../i18n/i18n';
+import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
-class DifficultyLabel extends Component {
+interface DifficultyLabelProps {
+    difficulty: DifficultyEnum
+}
+
+class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
         const { difficulty } = this.props;
         const colors = colorData.difficultyColor;
@@ -17,7 +22,7 @@ class DifficultyLabel extends Component {
         const { borderColor } = color;
 
         switch (difficulty) {
-            case 'easy':
+            case DifficultyEnum.EASY:
                 return (
                     <span
                         className="difficulty-label"
@@ -28,7 +33,7 @@ class DifficultyLabel extends Component {
                         {t.t('component.task.difficulty.easy', 'Easy')}
                     </span>
                 );
-            case 'medium':
+            case DifficultyEnum.MEDIUM:
                 return (
                     <span
                         className="difficulty-label"
@@ -39,7 +44,7 @@ class DifficultyLabel extends Component {
                         {t.t('component.task.difficulty.medium', 'Medium')}
                     </span>
                 );
-            case 'hard':
+            case DifficultyEnum.HARD:
                 return (
                     <span
                         className="difficulty-label"

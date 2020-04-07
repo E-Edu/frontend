@@ -2,8 +2,8 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
-import Query from '../../lib/api/Query.ts';
-import Subject from '../../components/Subject/Subject.js';
+import Subject from '../../components/Subject/Subject';
+import Query from '../../lib/api/Query';
 
 class dashboard extends React.Component {
     constructor(props) {

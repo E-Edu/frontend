@@ -6,17 +6,17 @@ import Header from './Header';
 const stories = storiesOf('header', module);
 stories.addDecorator(withKnobs);
 
-const site = { dashboard: 'Dashboard', landingpage: 'Landing' };
+const site = { dashboard: 'dashboard', landingpage: 'landing' };
 
 stories.add('landingpage', () => {
-    return <Header side={site.landingpage} />;
+    return <Header site={site.landingpage} />;
 });
 
 stories.add('dashboard', () => {
-    return <Header side={site.dashboard} />;
+    return <Header site={site.dashboard} />;
 });
 
 stories.add('dynamicInput', () => {
     const radio = radios('Site', site, site.dashboard);
-    return <Header side={radio} />;
+    return <Header site={radio} />;
 });

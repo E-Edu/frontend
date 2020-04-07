@@ -2,7 +2,12 @@ import React from 'react';
 import './LectureGroup.scss';
 import LectureSubject from '../Subject/LectureSubject';
 
-class LectureGroup extends React.Component {
+interface LectureGroupProps {
+    name: string;
+    fields: { name: string }[];
+}
+
+class LectureGroup extends React.Component<LectureGroupProps> {
     render() {
         return (
             <div className="lecture-group-wrapper">
@@ -13,7 +18,7 @@ class LectureGroup extends React.Component {
 
                     <div className="lecture-group-subjects">
                         {this.props.fields.map((value, index) => {
-                            return <LectureSubject key={index} name={value.name} />;
+                            return <LectureSubject key={index} name={value.name}/>;
                         })}
                     </div>
                 </div>

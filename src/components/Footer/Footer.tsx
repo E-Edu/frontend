@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Footer.scss';
 import { Link } from 'react-router-dom';
 import { GitHub } from 'react-feather';
 
-class Footer extends Component {
+interface FooterProps {
+    visible: boolean;
+}
+
+class Footer extends React.Component<FooterProps> {
     render() {
         if (this.props.visible) {
             return null;

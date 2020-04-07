@@ -9,17 +9,18 @@ import TeacherIcon from '../icons/teacher.icon';
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 */
 // Validates Form errors
-const formValid = ({ formErrors }) => {
+/*const formValid = ({ formErrors:FormErrors }) => {
     let valid = true;
 
-    // TODO: Please fix this
+
     // eslint-disable-next-line
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
-};
+};*/
+//TODO Rewrite everything from scratch
 
 class Register extends React.Component {
-    constructor(props) {
+    /*constructor(props) {
         super(props);
         this.state = {
             firstName: '',
@@ -35,7 +36,7 @@ class Register extends React.Component {
             isPasswordShown2: false,
             isPasswordValid: true,
             isStudent: true,
-            formErrors: {
+            formErrors:{
                 firsName: '',
                 lastName: '',
                 role: '',
@@ -281,7 +282,7 @@ class Register extends React.Component {
                 </div>
             </div>
         );
-    }
+    }*/
 }
 
 export default Register;
