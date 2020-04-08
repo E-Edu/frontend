@@ -29,7 +29,7 @@ class Sidebar extends Component {
         const sites = [
             // Name, icon name, route, permission, spacer before it
             ['Home', 'home', 'dashboard', this.permission.user],
-            ['Aufgaben', 'edit', 'task/lectur', this.permission.user],
+            ['Aufgaben', 'edit', 'task/lecture', this.permission.user],
             ['Neue Aufgabe', 'plus-circle', 'dashboard', this.permission.teacher, true],
             ['Meine Aufgaben', 'list', 'task/list', this.permission.teacher],
             ['Korrektur', 'check', 'correction/review', this.permission.privilegedStudent],
