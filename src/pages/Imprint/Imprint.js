@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Imprint.scss';
+import React, { Component } from "react";
+import "./Imprint.scss";
 
 class Imprint extends Component {
     render() {
@@ -7,28 +7,6 @@ class Imprint extends Component {
             <div className="imprint">
                 <div className="heading-font">Imprint</div>
                 <div className="font-box">
-                    <p>
-                        <span className="font0.8rem">
-                            Sind Sie Betreiber einer kommerziellen Seite, so unterliegen Sie der Impressumspflicht. Da
-                            dies sehr viel Mühe und viel Fachwissen erfordert, haben wir hier für Sie eine kostenlose
-                            Vorlage erstellt.{' '}
-                        </span>
-                    </p>
-                    <p>
-                        <span className="font0.8rem">
-                            Diese Vorlage beinhaltet auch einen Haftungsausschluss / Disclaimer. Sie dürfen diese
-                            Vorlage gerne kostenlos verwenden. Diese Vorlage wurde mit viel Mühe bund Sorgfalt erstellt.
-                            Eine Haftung können wir dennoch nicht übernehmen. Bitte beachten Sie, dass für eine
-                            kostenfreie Verwendung ein Backlink auf diese Seite benötigt wird.{' '}
-                        </span>
-                    </p>
-                    <p>
-                        <span className="font0.8rem">
-                            Wenn Sie diese Vorlage verwenden, so verwenden Sie dies bitte vollständig.{' '}
-                        </span>
-                        Der Haftungsausschluss ist auf deutsch und kann nur für Webseiten benutzt werden, die Ihren Sitz
-                        in Deutschland haben und somit das deutsche Recht gilt.
-                    </p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>Impressum</strong>
@@ -38,17 +16,17 @@ class Imprint extends Component {
                         <span className="underline">Angaben gem. § 5 TMG:</span>
                     </p>
                     <p>&nbsp;</p>
-                    <p>Vorname, Name</p>
-                    <p>Adresse</p>
-                    <p>PLZ</p>
+                    <p>Cedric Mössner</p>
+                    <p>Werderstraße 79</p>
+                    <p>79379 Müllheim</p>
                     <p>&nbsp;</p>
                     <p>
                         <span className="underline">Kontaktaufnahme:</span>
                     </p>
                     <p>&nbsp;</p>
-                    <p>Telefon:</p>
+                    <p>Telefon: +49 160 4095874</p>
                     <p>Fax:</p>
-                    <p>E-Mail:</p>
+                    <p>E-Mail: kontakt@the-morpheus.de</p>
                     <p>&nbsp;</p>
                     <p>
                         <strong>Umsatzsteuer-ID</strong>
@@ -62,7 +40,7 @@ class Imprint extends Component {
                         </span>
                     </p>
                     <p>&nbsp;</p>
-                    <p>DE XXX XXX XXX</p>
+                    <p>DE327206699</p>
                     <p>
                         <strong>
                             <span className="underline">&nbsp;</span>
@@ -117,11 +95,12 @@ class Imprint extends Component {
                     </p>
                     <p>
                         Diese Haftungsausschlusserklärung gilt auch innerhalb des eigenen Internetauftrittes „
-                        <em>Name Ihrer Domain</em>“ gesetzten Links und Verweise von Fragestellern, Blogeinträgern,
-                        Gästen des Diskussionsforums. Für illegale, fehlerhafte oder unvollständige Inhalte und
-                        insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargestellten
-                        Informationen entstehen, haftet allein der Diensteanbieter der Seite, auf welche verwiesen
-                        wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+                        <em>Name Ihrer Domain</em> {/* TODO insert right domains */}“ gesetzten Links und Verweise von
+                        Fragestellern, Blogeinträgern, Gästen des Diskussionsforums. Für illegale, fehlerhafte oder
+                        unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung
+                        solcherart dargestellten Informationen entstehen, haftet allein der Diensteanbieter der Seite,
+                        auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung
+                        lediglich verweist.
                     </p>
                     <p>
                         Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unverzüglich
