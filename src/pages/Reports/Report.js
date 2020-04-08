@@ -126,7 +126,8 @@ class Report extends Component {
                                 style={{ marginLeft: 10, outline: 'none' }}
                                 onClick={this.like}
                                 role="button"
-                                tabIndex="0">
+                                tabIndex="0"
+                                className="thumbs-up">
                                 <ThumbsUp
                                     color={
                                         this.state.like === this.likeState.liked
@@ -135,7 +136,9 @@ class Report extends Component {
                                     }
                                 />
                             </div>
-                            <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.likes}</span>
+                            <span style={{ marginLeft: 10, textAlign: 'right' }} className="thumbs-up-value">
+                                {this.state.likes}
+                            </span>
                         </div>
                         <div
                             style={{
@@ -150,7 +153,8 @@ class Report extends Component {
                                 style={{ marginLeft: 10, outline: 'none' }}
                                 onClick={this.dislike}
                                 role="button"
-                                tabIndex="0">
+                                tabIndex="0"
+                                className="thumbs-down">
                                 <ThumbsDown
                                     color={
                                         this.state.like === this.likeState.disliked
@@ -159,7 +163,9 @@ class Report extends Component {
                                     }
                                 />
                             </div>
-                            <span style={{ marginLeft: 10, textAlign: 'right' }}>{this.state.dislikes}</span>
+                            <span style={{ marginLeft: 10, textAlign: 'right' }} className="thumbs-down-value">
+                                {this.state.dislikes}
+                            </span>
                         </div>
                         <DifficultyLabel difficulty={difficulty} />
                     </div>

@@ -1,15 +1,15 @@
 describe('Login and registration test', () => {
-    it('Login', () => {
+    it('Should login', () => {
         cy.visit('/');
         cy.get('.btn-login').click();
         cy.url().should('include', '/dashboard');
     });
-    it('Register', () => {
+    it('Should register', () => {
         cy.visit('/');
         cy.get('.btn-register').click();
         cy.url().should('include', '/dashboard');
     });
-    it('Logout', () => {
+    it('Should logout', () => {
         cy.get('.btn-logout').click();
         cy.url().should('include', '/');
     });
