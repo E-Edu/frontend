@@ -29,6 +29,7 @@ module.exports = {
         '**/*.json',
         'src/lib/schema.gql',
         'src/lib/api/*',
+        'src/react-app-env.d.ts',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
