@@ -1,9 +1,9 @@
-describe('Doing tasks Test', () => {
+describe('doing tasks test', () => {
     beforeEach(() => {
         cy.visit('/dashboard');
     });
 
-    it('Should open German subject', () => {
+    it('should open german subject', () => {
         cy.get('.subject').eq(0).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -19,7 +19,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open Computer Sience subject', () => {
+    it('should open computer sience subject', () => {
         cy.get('.subject').eq(1).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -35,7 +35,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open History subject', () => {
+    it('should open history subject', () => {
         cy.get('.subject').eq(2).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -51,7 +51,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open Politics subject', () => {
+    it('should open politics subject', () => {
         cy.get('.subject').eq(3).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -67,7 +67,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open Physics subject', () => {
+    it('should open physics subject', () => {
         cy.get('.subject').eq(4).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -83,7 +83,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open Biology subject', () => {
+    it('should open biology subject', () => {
         cy.get('.subject').eq(5).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
@@ -99,7 +99,7 @@ describe('Doing tasks Test', () => {
             .url().should('include', '/task/result');
     });
 
-    it('Should open Chemistry subject', () => {
+    it('should open chemistry subject', () => {
         cy.get('.subject').eq(6).click()
             .url().should('include', '/task/lecture')
             .get('.lecture-subject').should('contain', 'Mathe')
