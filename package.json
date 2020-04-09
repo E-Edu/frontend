@@ -31,7 +31,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -c .storybook watch-css -s public",
     "build-storybook": "build-storybook -s public",
-    "lint:eslint": "npm run lint:eslintcypress && npm run lint:eslintsrc",
+    "lint:eslint": "npm run lint:eslintsrc",
     "lint:eslintsrc": "eslint --ext .ts,.js \"./src/**\"",
     "lint:eslintcypress": "eslint --ext .ts,.js \"./cypress/integration/**\"",
     "lint:prettier": "prettier --check \"./src/**/*.js\"",
