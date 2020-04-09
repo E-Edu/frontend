@@ -11,6 +11,10 @@ import { ColorProperty } from 'csstype';
 interface SubjectProps {
     subject?: any;
     color?: ColorProperty;
+    desciption?: string;
+    weekendtask?: string;
+    points?: string;
+    community_Points?: string;
 }
 
 class Subject extends React.Component<SubjectProps> {

@@ -4,7 +4,11 @@ import { User, Users } from 'react-feather';
 import IconText from '../IconText/IconText';
 import { t } from '../../i18n/i18n';
 
-class TaskHeader extends React.Component {
+interface TaskHeaderProps {
+    module?:string;
+}
+
+class TaskHeader extends React.Component<TaskHeaderProps> {
     render() {
         const { module } = this.props;
         const points = 213;

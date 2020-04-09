@@ -2,13 +2,19 @@ import React from 'react';
 import { Award } from 'react-feather';
 import { t } from '../../../i18n/i18n';
 import DifficultyLabel from '../Difficulty/DifficultyLabel/DifficultyLabel';
+import { DifficultyEnum } from '../../../models/difficulty.enum';
 
-class Task extends React.Component {
+interface TaskProps {
+    name?: string;
+    description?: string;
+    questions?: string;
+    rightQuestions?: string;
+    difficulty?: DifficultyEnum;
+}
+
+class Task extends React.Component<TaskProps> {
     render() {
-        const { name } = this.props;
-        const { description } = this.props;
-        const { questions } = this.props;
-        const { rightQuestions } = this.props;
+        const { name, description, questions, rightQuestions, difficulty } = this.props;
 
         return (
             <div className="task">
@@ -20,10 +26,10 @@ class Task extends React.Component {
                             <span>{t.t('taskList.questions')}</span>
                         </div>
                         <div className="task-element">
-                            <Award className="icon" color="#3A506B" />
+                            <Award className="icon" color="#3A506B"/>
                             <span>{rightQuestions}</span>
                         </div>
-                        <DifficultyLabel difficulty={this.props.difficulty} />
+                        <DifficultyLabel difficulty={difficulty}/>
                     </div>
                 </div>
                 <div className="task-bottom">

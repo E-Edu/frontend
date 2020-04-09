@@ -1,11 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ReportInfo.scss';
 import { ArrowDown, ArrowUp, Mail } from 'react-feather';
 import TeacherIcon from '../icons/teacher.icon';
 
 //TODO Statemanagement
 
-class ReportInfo extends React.Component {
+interface ReportState {
+    subject?: string
+    theme?: string;
+    themeart?: string;
+    dislikes?: string;
+    likes?: string;
+    teacher?: string;
+    messages?: string;
+    TaskName?: string;
+    TaskText?: string;
+}
+
+class ReportInfo extends React.Component<ReportState> {
+    state: ReportState;
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +36,8 @@ class ReportInfo extends React.Component {
         };
     }
 
-    handleClick = () => {};
+    handleClick = () => {
+    };
 
     render() {
         return (
@@ -35,15 +50,15 @@ class ReportInfo extends React.Component {
                     <div className="infos-right">
                         <div className="likes">
                             <span>{this.state.dislikes}</span>
-                            <ArrowDown />
+                            <ArrowDown/>
                             <span> {this.state.likes}</span>
-                            <ArrowUp />
+                            <ArrowUp/>
                         </div>
                         <div className="teacher">
-                            {this.state.teacher} <TeacherIcon />
+                            {this.state.teacher} <TeacherIcon/>
                         </div>
                         <div className="messages">
-                            {this.state.messages} <Mail />
+                            {this.state.messages} <Mail/>
                         </div>
                     </div>
                 </div>
@@ -69,4 +84,5 @@ class ReportInfo extends React.Component {
         );
     }
 }
+
 export default ReportInfo;

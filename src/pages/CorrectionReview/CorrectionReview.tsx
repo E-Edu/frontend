@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './CorrectionReview.scss';
 import CorrectionReviewBoxes from '../../components/CorrectionReviewBoxes/CorrectionReviewBoxes';
 import { t } from '../../i18n/i18n';
+import { DifficultyEnum } from '../../models/difficulty.enum';
 
 class CorrectionReview extends Component {
     render() {
@@ -15,12 +16,12 @@ class CorrectionReview extends Component {
                         </button>
                     </div>
                     <div className="box">
-                        <CorrectionReviewBoxes difficulty="easy" />
-                        <CorrectionReviewBoxes difficulty="medium" />
-                        <CorrectionReviewBoxes difficulty="hard" />
-                        <CorrectionReviewBoxes difficulty="easy" />
-                        <CorrectionReviewBoxes difficulty="medium" />
-                        <CorrectionReviewBoxes difficulty="hard" />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD}/>
                     </div>
                 </div>
             </div>

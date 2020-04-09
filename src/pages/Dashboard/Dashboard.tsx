@@ -2,14 +2,45 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
-import Subject from '../../components/Subject/Subject';
 import Query from '../../lib/api/Query';
+import { Subject as SubjectModel } from '../../lib/api/model/Model';
+import Subject from '../../components/Subject/Subject';
+import * as H from 'history';
 
-class dashboard extends React.Component {
+interface DashboardState {
+    subjects?: SubjectModel[];
+}
+
+interface MatchParams {
+    name: string;
+}
+
+interface DashboardRouter extends RouteComponentProps<MatchParams> {
+}
+
+// from typings
+interface RouteComponentProps<P> {
+    match: match<P>;
+    location: H.Location;
+    history: H.History;
+    staticContext?: any;
+}
+
+interface match<P> {
+    params: P;
+    isExact: boolean;
+    path: string;
+    url: string;
+}
+
+
+class dashboard extends React.Component<DashboardState, DashboardRouter> {
     constructor(props) {
         super(props);
         this.state = { subjects: [] };
     }
+
+    state: DashboardState;
 
     componentDidMount() {
         this.loadSubjects();
@@ -22,18 +53,19 @@ class dashboard extends React.Component {
 
     loadFakeData() {
         this.state.subjects.push(
-            { nameKey: 'GERMAN' },
-            { nameKey: 'COMPUTERSCIENCE' },
-            { nameKey: 'HISTORY' },
-            { nameKey: 'POLITICS' },
-            { nameKey: 'PHYSICS' },
-            { nameKey: 'BIOLOGY' },
-            { nameKey: 'CHEMISTRY' }
+            { displayName: 'GERMAN' },
+            { displayName: 'COMPUTERSCIENCE' },
+            { displayName: 'HISTORY' },
+            { displayName: 'POLITICS' },
+            { displayName: 'PHYSICS' },
+            { displayName: 'BIOLOGY' },
+            { displayName: 'CHEMISTRY' },
         );
     }
 
     async loadSubjects() {
         const subjects = [];
+
         const result = await Query.queryGQL(gql`
             query {
                 subjectById(subjectId: 0) {
@@ -47,9 +79,9 @@ class dashboard extends React.Component {
         subjects.push({ displayName: result.data.subjectById.displayName });
 
         // refresh the state
-        this.setState((state) => ({
-            subjects: state.subjects.concat(subjects),
-        }));
+        subjects.forEach(value => {
+            this.state.subjects.push(value);
+        });
     }
 
     renderSubjects() {
@@ -57,9 +89,9 @@ class dashboard extends React.Component {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subject
-                        subject={subject.nameKey}
-                        desciption={subject.nameKey}
-                        color={subject.nameKey}
+                        subject={subject.displayName}
+                        desciption={subject.displayName}
+                        color={subject.displayName}
                         weekendtask="4/5"
                         points="213"
                         community_Points="21.323"

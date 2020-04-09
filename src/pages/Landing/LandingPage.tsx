@@ -5,8 +5,9 @@ import Modal from 'react-animated-modal';
 import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
-import Query from '../../lib/api/Query.ts';
+import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
+
 
 class LandingPage extends Component {
     constructor(props) {

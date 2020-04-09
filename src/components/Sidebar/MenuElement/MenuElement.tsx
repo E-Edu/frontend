@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactText } from 'react';
 import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
@@ -7,18 +7,16 @@ import icons from '../icons';
 
 interface MenuElementProps {
     active?: boolean;
-    spacer?: string;
-    url?: string;
+    url?: string | number | boolean;
+    file?: string | number | boolean;
+    name?: string | number | boolean;
+    key?: ReactText;
+    spacer?: string | number | boolean;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
     constructor(props) {
         super(props);
-        this.state = {
-            active: props.active,
-            file: props.file,
-            name: props.name,
-        };
     }
 
     static getDerivedStateFromProps(props, state) {
@@ -44,6 +42,7 @@ class MenuElement extends React.Component<MenuElementProps> {
     };
 
     render() {
+        const { active, file, name } = this.props;
         let spacer: any;
         if (this.props.spacer) {
             spacer = (
@@ -61,13 +60,13 @@ class MenuElement extends React.Component<MenuElementProps> {
         }
         let color;
         // get the right filename, if active or not
-        if (!this.state.active) {
+        if (!active) {
             color = '#96B4DD';
         } else {
             color = '#5BC0BE';
         }
         let nameText: any;
-        if (this.state.name) {
+        if (name) {
             nameText = (
                 <p
                     style={{
@@ -76,18 +75,18 @@ class MenuElement extends React.Component<MenuElementProps> {
                         textAlign: 'center',
                         color,
                     }}>
-                    {this.state.name}
+                    {name}
                 </p>
             );
         }
 
-        const File = icons[this.state.file];
+        // @ts-ignore
+        const File = icons[file];
         return [
             spacer,
             <Link
                 to={`/${this.props.url}`}
                 className="menu-element"
-                key={this.state.file}
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
