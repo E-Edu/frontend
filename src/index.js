@@ -7,7 +7,7 @@ import './i18n/i18n';
 import * as serviceWorker from './serviceWorker';
 
 /* if (process.env.SENTRY_ENVIRONMENT === 'production') { */
-Sentry.init({ dsn: 'https://c737493cfbe14ee8b4e2ff39b8f3dcd1@sentry.the-morpheus.de/6', maxBreadcrumbs: 50 });
+Sentry.init({ dsn: 'https://347584c352de4679b1baf3bdb2a17f58@sentry.the-morpheus.de/3', maxBreadcrumbs: 50 });
 /* } */
 
 ReactDOM.render(<App />, document.getElementById('root'));
