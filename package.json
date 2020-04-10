@@ -32,7 +32,7 @@
     "lint:eslint": "npm run lint:eslintsrc",
     "lint:eslintsrc": "eslint --ext .ts,.js \"./src/**\"",
     "lint:eslintcypress": "eslint --ext .ts,.js \"./cypress/integration/**\"",
-    "lint:prettier": "prettier --check \"./src/**/*.ts\"",
+    "lint:prettier": "prettier --check \"./src/**/*.{ts,tsx}\"",
     "lint:style": "stylelint \"./src/**/*.scss\"",
     "lint:all": "npm run lint:eslint && npm run lint:style",
     "lint:fix": "npm run lint:eslint -- --fix && npm run lint:style -- --fix",

@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import axios from 'axios';
 import './Login.scss';
 import { Eye, EyeOff } from 'react-feather';
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { email: '', password: '' };
-    }
+
 
     handleEmailChange = (event) => {
         this.setState({ email: event.target.value });
@@ -91,8 +88,8 @@ class Login extends React.Component {
                                 onClick={this.changeVisibility}
                                 role="button"
                                 tabIndex={1}>
-                                <Eye className="hide1" />
-                                <EyeOff className="hide2" />
+                                <Eye className="hide1"/>
+                                <EyeOff className="hide2"/>
                             </span>
                         </div>
                         {/* describes the google-login-field */}
@@ -104,7 +101,7 @@ class Login extends React.Component {
                             />
                             Log In with Google
                         </button>
-                        <input type="submit" className="login button pointer" value="Log In" />
+                        <input type="submit" className="login button pointer" value="Log In"/>
                     </div>
                 </form>
             </div>

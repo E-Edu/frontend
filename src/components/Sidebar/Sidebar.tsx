@@ -15,10 +15,6 @@ class Sidebar extends React.Component<SidebarProps> {
         admin: 3,
     };
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { active } = this.props;
         const permission = 3; // TODO: get this from user-ms

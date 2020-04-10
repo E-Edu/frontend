@@ -1,8 +1,5 @@
 import React from 'react';
 import './Register.scss';
-import { Link } from 'react-router-dom';
-import { Eye, EyeOff, User } from 'react-feather';
-import TeacherIcon from '../icons/teacher.icon';
 
 // Regular Expression für die Validierung der Mail
 /*
@@ -17,6 +14,7 @@ const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
 };*/
+
 //TODO Rewrite everything from scratch
 
 class Register extends React.Component {

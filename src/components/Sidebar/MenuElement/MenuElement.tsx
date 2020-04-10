@@ -15,9 +15,6 @@ interface MenuElementProps {
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
-    constructor(props) {
-        super(props);
-    }
 
 /*    static getDerivedStateFromProps(props, state) {
         if (state.active !== props.active) {
