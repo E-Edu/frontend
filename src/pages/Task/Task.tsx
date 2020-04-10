@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Task.scss';
 import { Award } from 'react-feather';
 import { t } from '../../i18n/i18n';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
+import { DifficultyEnum } from '../../models/difficulty.enum';
 
-class Task extends Component {
+interface TaskProps {
+    name?: string;
+    difficulty?: DifficultyEnum;
+    description?: string;
+    questions?: string[];
+    rightQuestions: string;//TODO badly chosen name?
+}
+
+class Task extends React.Component<TaskProps> {
     render() {
-        const { name } = this.props;
-        const { difficulty } = this.props;
-        const { description } = this.props;
-        const { questions } = this.props;
-        const { rightQuestions } = this.props;
+        const { name, difficulty, description, questions, rightQuestions } = this.props;
 
         return (
             <div className="task">
@@ -23,9 +28,9 @@ class Task extends Component {
                             <span>{t.t('page.task.questions', 'Questions')}</span>
                         </div>
                         <IconText text={rightQuestions} fontColor="#3A506B" class="task-element">
-                            <Award color="#3A506B" />
+                            <Award color="#3A506B"/>
                         </IconText>
-                        <DifficultyLabel level={difficulty} />
+                        <DifficultyLabel difficulty={difficulty}/>
                     </div>
                 </div>
                 <div className="task-bottom">

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './ReportsList.scss';
-import Report from '../Report';
 
 class ReportsList extends Component {
     render() {
@@ -15,22 +14,22 @@ class ReportsList extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                        <Report
+                        {/* <Report
                             subject="Mathe | Grundrechnen | Plus"
                             messages="20"
                             teacher="Herr Lehrer Mustermann"
-                            likes="3"
-                            dislikes="178"
-                            difficulty="easy"
+                            likes={3}
+                            dislikes={178}
+                            difficulty={DifficultyEnum.EASY}
                         />
                         <Report
                             subject="Englisch | Grammatik | Komma"
                             messages="100"
                             teacher="Herr Lehrer Mustermann"
-                            likes="20"
-                            dislikes="1"
-                            difficulty="hard"
-                        />
+                            likes={20}
+                            dislikes={1}
+                            difficulty={DifficultyEnum.HARD}
+                        />*/}
                     </div>
                 </div>
             </div>

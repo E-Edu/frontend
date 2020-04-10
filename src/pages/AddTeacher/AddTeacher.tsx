@@ -64,8 +64,8 @@ class AddTeacher extends React.Component<AddTeacherState> {
                     <UserPlus className="add-teacher-button" onClick={this.add}/>
                 </div>
                 <h1 className="requests-title">
-                    this.state.pendingRequests.length === 0?
-                    {t.t('page.addTeacher.noPendingRequests', 'No pending requests')}:
+                    {/*{()=>this.state.pendingRequests.length === 0?*/}
+                    {/*{t.t('page.addTeacher.noPendingRequests', 'No pending requests')}:*/}
                     {t.t('page.addTeacher.pendingRequests', 'Pending requests')}
                 </h1>
                 <div className="pending-requests">{this.renderRequests()}</div>

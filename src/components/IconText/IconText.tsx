@@ -11,7 +11,7 @@ interface IconProps {
     fontColor?: ColorProperty;
     fontSize?: number;
     distance?: string;
-    position: 'left' | 'right';
+    position?: 'left' | 'right';
 }
 
 class IconText extends React.Component<IconProps> {

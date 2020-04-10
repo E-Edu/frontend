@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Report.scss';
 import { Info, Mail, ThumbsDown, ThumbsUp } from 'react-feather';
 import Modal from 'react-animated-modal';
@@ -6,10 +6,24 @@ import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
-import colorData from '../../lib/Colors';
+import colorData from '../../lib/Colors.json';
+import { DifficultyEnum } from '../../models/difficulty.enum';
 
-class Report extends Component {
-    nullSubtrahend = '1';
+
+//TODO REVISION
+
+interface ReportProps {
+    teacher?: string;
+    likes?: number;
+    dislikes?: number;
+    difficulty?: DifficultyEnum;
+    messages?: string;
+    subject?: string;
+    liked?: number;
+}
+
+class Report extends React.Component<ReportProps> {
+    /*nullSubtrahend = '1';
 
     // like: 0 - not liked, 1 - liked, 2 -disliked
     likeState = {
@@ -82,9 +96,10 @@ class Report extends Component {
             this.setState({ showModal: false });
         }
     };
-
+*/
     render() {
-        const { difficulty } = this.state;
+  return null;
+        /*const { difficulty } = this.state;
         const { subject, messages, teacher } = this.props;
 
         return (
@@ -95,7 +110,7 @@ class Report extends Component {
                         this.setState({ showModal: false });
                     }}
                     type="fadeIn">
-                    <ReportInfo />
+                    <ReportInfo/>
                 </Modal>
                 <div
                     style={{
@@ -167,7 +182,7 @@ class Report extends Component {
                                 {this.state.dislikes}
                             </span>
                         </div>
-                        <DifficultyLabel difficulty={difficulty} />
+                        <DifficultyLabel difficulty={difficulty}/>
                     </div>
                 </div>
                 <div
@@ -178,18 +193,18 @@ class Report extends Component {
                         justifyContent: 'space-between',
                     }}>
                     <span style={{ marginLeft: 20, width: 400 }}>
-                        <Info color="#3a506b" />
+                        <Info color="#3a506b"/>
                     </span>
                     <IconText text={messages} distance="0.8rem" position="left" class="messages-count">
-                        <Mail color="#3a506b" />
+                        <Mail color="#3a506b"/>
                     </IconText>
                     <IconText text={teacher} distance="0.8rem" class="teacher-name">
-                        {/* TODO: finde a better solution */}
-                        <Teacher color="#3a506b" fill="none" />
+                        {/!* TODO: finde a better solution *!/}
+                        <Teacher color="#3a506b" fill="none"/>
                     </IconText>
                 </div>
             </div>
-        );
+        );*/
     }
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import './PageLayout.scss';
 import { withRouter } from 'react-router-dom';
 import Header from '../../Header/Header';
@@ -11,6 +11,7 @@ interface MatchParams {
 }
 
 interface PageLayoutProps extends RouteComponentProps<MatchParams> {
+    childern?: ReactNode;
 }
 
 // from typings
@@ -55,7 +56,7 @@ class PageLayout extends React.Component<PageLayoutProps> {
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
                 <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'}/>
-                <Sidebar active={this.props.location.pathname} visible={this.renderSitebar()}/>
+                <Sidebar visible={this.renderSitebar()} active={this.props.location.pathname}/>
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>

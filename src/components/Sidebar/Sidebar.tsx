@@ -19,15 +19,6 @@ class Sidebar extends React.Component<SidebarProps> {
         super(props);
     }
 
-    static getDerivedStateFromProps(props, state) {
-        if (state.activeName !== props.active) {
-            return {
-                activeName: props.active,
-            };
-        }
-        return null;
-    }
-
     render() {
         const { active } = this.props;
         const permission = 3; // TODO: get this from user-ms
@@ -41,14 +32,14 @@ class Sidebar extends React.Component<SidebarProps> {
             ['Reports', 'alert-circle', 'reports/list', this.permission.admin, true],
             ['Lehrer hinzufügen', 'teacher', 'teacher/add', this.permission.admin],
         ];
-        const sitesHtml = sites.map((site,index) => {
+        const sitesHtml = sites.map((site, index) => {
             if (permission >= site[3]) {
                 return (
                     <MenuElement
                         name={site[0]}
                         file={site[1]}
                         url={site[2]}
-                        active={active === `/${site[2]}`}
+                        active={this.props.active === site[2]}
                         key={index}
                         spacer={site[4]}
                     />

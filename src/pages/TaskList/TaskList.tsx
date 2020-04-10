@@ -5,8 +5,22 @@ import { Search, User, Users } from 'react-feather';
 import { t } from '../../i18n/i18n';
 import Task from '../../components/Task/Task/Task';
 import IconText from '../../components/IconText/IconText';
+import { DifficultyEnum } from '../../models/difficulty.enum';
 
-class TaskList extends React.Component {
+interface TaskListSate {
+    search?: string;
+    tasks: TaskModel[];
+}
+
+interface TaskModel {
+    id: string;
+    description: string;
+    difficulty: DifficultyEnum;
+}
+
+class TaskList extends React.Component<TaskListSate> {
+    state: TaskListSate;
+
     constructor(props) {
         super(props);
         this.state = { search: '', tasks: [] };
@@ -25,18 +39,18 @@ class TaskList extends React.Component {
             {
                 id: 'ee035b07-b1b1-43e8-a5a7-13ecba5eaa50',
                 description: 'A short description what to do in this task',
-                difficulty: 'easy',
+                difficulty: DifficultyEnum.EASY,
             },
             {
                 id: 'c0764f51-6c75-44d7-a16f-77cfcce1672f',
                 description: 'A short description what to do in this task',
-                difficulty: 'medium',
+                difficulty: DifficultyEnum.MEDIUM,
             },
             {
                 id: 'eacbd1ab-5c8b-49dc-b68e-223b7746fa93',
                 description: 'A short description what to do in this task',
-                difficulty: 'hard',
-            }
+                difficulty: DifficultyEnum.HARD,
+            },
         );
 
         this.setState((task) => ({ task }));
@@ -75,7 +89,7 @@ class TaskList extends React.Component {
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
-                                    <Users className="icon" color="#3A506B" />
+                                    <Users className="icon" color="#3A506B"/>
                                 </IconText>
                             </div>
                             <div className="result-center second">
@@ -84,14 +98,14 @@ class TaskList extends React.Component {
                                     position="left"
                                     class="result-subject"
                                     fontColor="#3A506B">
-                                    <User className="icon" color="#3A506B" />
+                                    <User className="icon" color="#3A506B"/>
                                 </IconText>
                             </div>
                         </div>
                         <div className="result-right">
                             <span className="result-subject">
                                 <div id="input-search">
-                                    <Search size="30" />
+                                    <Search size="30"/>
                                     <input
                                         onChange={this.OnChangeSearch}
                                         type="text"

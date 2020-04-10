@@ -19,14 +19,14 @@ class MenuElement extends React.Component<MenuElementProps> {
         super(props);
     }
 
-    static getDerivedStateFromProps(props, state) {
+/*    static getDerivedStateFromProps(props, state) {
         if (state.active !== props.active) {
             return {
                 active: props.active,
             };
         }
         return null;
-    }
+    }*/
 
     setActivity(activity) {
         // the active changes the icon

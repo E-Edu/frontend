@@ -7,7 +7,19 @@ import { t } from '../../i18n/i18n';
 import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 
-class Profile extends React.Component {
+interface ProfileProps {
+
+}
+
+interface ProfileState {
+    username?: string;
+    disabled?: boolean;
+}
+
+class Profile extends React.Component<ProfileProps, ProfileState> {
+
+    state: ProfileState;
+
     constructor(props) {
         super(props);
         this.state = { username: 'Morpheus', disabled: true };
@@ -53,8 +65,8 @@ class Profile extends React.Component {
                                         style={{ outline: 'none' }}
                                         onClick={this.usernameClickListener}
                                         role="button"
-                                        tabIndex="0">
-                                        <Edit2 className="pen img" />
+                                        tabIndex={0}>
+                                        <Edit2 className="pen img"/>
                                     </span>
                                 </div>
                             </span>
@@ -67,7 +79,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <User color="#3A506B" />
+                                    <User color="#3A506B"/>
                                 </IconText>
                             </span>
                         </div>
@@ -79,7 +91,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <TrendingUp size="24" color="#3A506B" />
+                                    <TrendingUp size="24" color="#3A506B"/>
                                 </IconText>
                             </span>
                         </div>
@@ -91,7 +103,7 @@ class Profile extends React.Component {
                                     position="left"
                                     distance="0.4rem"
                                     class="profile-flex-row">
-                                    <Calendar color="#3A506B" />
+                                    <Calendar color="#3A506B"/>
                                 </IconText>
                             </span>
                         </div>
@@ -101,13 +113,13 @@ class Profile extends React.Component {
                                 <div className="levelbar-font">
                                     <span>Level</span>
                                     <span> 145</span>
-                                    <br />
+                                    <br/>
                                     <span>1423 / 8000</span>
                                 </div>
-                                <div className="levelbar-front" />
+                                <div className="levelbar-front"/>
                             </div>
                             <div className="level-rank">
-                                <Tag color="#5BC0BE" />
+                                <Tag color="#5BC0BE"/>
                                 <span className="level-rang">
                                     {t.t('page.profile.rank.teachingMaster', 'The Teaching Master')}
                                 </span>{' '}
@@ -121,9 +133,9 @@ class Profile extends React.Component {
                                     {t.t('page.profile.favoriteSubjects', 'Favorite subjects')}
                                 </h2>
                                 <div className="profile-favorite-box">
-                                    <ProfileSubject subject="GERMAN" />
-                                    <ProfileSubject subject="MATH" />
-                                    <ProfileSubject subject="COMUTERSIENCE" />
+                                    <ProfileSubject subject="GERMAN"/>
+                                    <ProfileSubject subject="MATH"/>
+                                    <ProfileSubject subject="COMUTERSIENCE"/>
                                 </div>
                             </div>
                         </div>
@@ -133,17 +145,17 @@ class Profile extends React.Component {
                                     {t.t('page.profile.certificates', 'Certificates')}
                                 </h2>
                                 <div className="profile-certificate-box">
-                                    <ProfileCertificate Title="1.000 Questions answered" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="0 Error in 100 questions" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="Best layout" Datum="23.01.2020" />
+                                    <ProfileCertificate title="1.000 Questions answered" date="23.01.2020"/>
+                                    <ProfileCertificate title="0 Error in 100 questions" date="23.01.2020"/>
+                                    <ProfileCertificate title="Best layout" date="23.01.2020"/>
 
-                                    <ProfileCertificate Title="5,000 questions answered" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="1.000 points achieved" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="5,000 points achieved" Datum="23.01.2020" />
+                                    <ProfileCertificate title="5,000 questions answered" date="23.01.2020"/>
+                                    <ProfileCertificate title="1.000 points achieved" date="23.01.2020"/>
+                                    <ProfileCertificate title="5,000 points achieved" date="23.01.2020"/>
 
-                                    <ProfileCertificate Title="500 computer science points" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="1,000 IT points" Datum="23.01.2020" />
-                                    <ProfileCertificate Title="Computer Science degree" Datum="23.01.2020" />
+                                    <ProfileCertificate title="500 computer science points" date="23.01.2020"/>
+                                    <ProfileCertificate title="1,000 IT points" date="23.01.2020"/>
+                                    <ProfileCertificate title="Computer Science degree" date="23.01.2020"/>
                                 </div>
                             </div>
                         </div>

@@ -1,12 +1,17 @@
 import React from 'react';
 import './SubjectTask.scss';
-
 import { Link } from 'react-router-dom';
 import { User, Users } from 'react-feather';
 import { t } from '../../i18n/i18n';
 
-class SubjectTask extends React.Component {
+interface SubjectTaskState {
+    currentQuestion: number;
+    maxQuestion: number;
+}
+
+class SubjectTask extends React.Component<SubjectTaskState> {
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
+    state: SubjectTaskState;
 
     constructor(props) {
         super(props);
@@ -41,13 +46,13 @@ class SubjectTask extends React.Component {
                                 </div>
                                 <div className="subject-task-right">
                                     <div className="subject-task-points">
-                                        <User />
+                                        <User/>
                                         <p>
                                             <span> 213</span> {t.t('taskList.points')}
                                         </p>
                                     </div>
                                     <div className="subject-task-points">
-                                        <Users />
+                                        <Users/>
                                         <p>
                                             <span> 21.323</span> {t.t('taskList.points')}
                                         </p>
@@ -80,7 +85,7 @@ class SubjectTask extends React.Component {
                                     <span>{t.t('task.answer')}</span>
                                 </div>
                                 <div className="subject-task-answer-field">
-                                    <input type="text" placeholder="test" />
+                                    <input type="text" placeholder="test"/>
                                 </div>
 
                                 <div className="subject-task-buttons">

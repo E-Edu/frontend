@@ -5,50 +5,22 @@ import { gql } from 'apollo-boost';
 import Query from '../../lib/api/Query';
 import { Subject as SubjectModel } from '../../lib/api/model/Model';
 import Subject from '../../components/Subject/Subject';
-import * as H from 'history';
 
 interface DashboardState {
     subjects?: SubjectModel[];
 }
 
-interface MatchParams {
-    name: string;
-}
-
-interface DashboardRouter extends RouteComponentProps<MatchParams> {
-}
-
-// from typings
-interface RouteComponentProps<P> {
-    match: match<P>;
-    location: H.Location;
-    history: H.History;
-    staticContext?: any;
-}
-
-interface match<P> {
-    params: P;
-    isExact: boolean;
-    path: string;
-    url: string;
-}
-
-
-class dashboard extends React.Component<DashboardState, DashboardRouter> {
+class dashboard extends React.Component<DashboardState> {
     constructor(props) {
         super(props);
         this.state = { subjects: [] };
     }
 
-    state: DashboardState;
+    state: DashboardState = {};
 
     componentDidMount() {
         this.loadSubjects();
         this.loadFakeData();
-    }
-
-    navigate(path) {
-        this.props.history.push(`/${path}`);
     }
 
     loadFakeData() {

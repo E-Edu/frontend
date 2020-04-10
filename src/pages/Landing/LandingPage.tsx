@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './LandingPage.scss';
-import { Redirect, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Modal from 'react-animated-modal';
 import { gql } from 'apollo-boost';
 import Login from '../../components/Login/Login';
@@ -8,11 +8,20 @@ import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
 
+interface LandingPageProps {
 
-class LandingPage extends Component {
+}
+
+interface LandingPageState {
+    showModal: boolean;
+
+}
+
+
+class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
     constructor(props) {
         super(props);
-        this.state = { showModal: false, redirect: false };
+        this.state = { showModal: false };
     }
 
     login() {
@@ -27,7 +36,7 @@ class LandingPage extends Component {
                         status
                     }
                 }
-            `
+            `,
         );
     }
 
@@ -35,35 +44,15 @@ class LandingPage extends Component {
         return (
             <div className="landing">
                 <div className="main">
-                    {(() => {
-                        if (this.state.redirect) {
-                            this.setState({ redirect: false });
-
-                            return <Redirect exact to={this.state.redirect} />;
-                        }
-                        return null;
-                    })()}
-
-                    {/* TODO Route zurück auf /login /register */}
-                    <Route
-                        exact
-                        path={['/dashboard', '/dashboard']}
-                        render={() => {
-                            if (!this.state.showModal && !this.state.redirect) {
-                                this.setState({ showModal: true });
-                            }
-                        }}
-                    />
-
                     <Modal
                         visible={this.state.showModal}
                         closemodal={() => {
-                            this.setState({ showModal: false, redirect: '/' });
+                            this.setState({ showModal: false });
                         }}
                         type="fadeIn">
                         {/* TODO Route zurück auf /login /register */}
-                        <Route exact path="/dashboard" component={Login} />
-                        <Route exact path="/dashboard" component={Register} />
+                        <Route exact path="/dashboard" component={Login}/>
+                        <Route exact path="/dashboard" component={Register}/>
                     </Modal>
 
                     <div className="content">
@@ -77,12 +66,12 @@ class LandingPage extends Component {
                                 dangerouslySetInnerHTML={{
                                     __html: t.t(
                                         'page.landing.description',
-                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
+                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.',
                                     ),
                                 }}
                             />
                         </div>
-                        <img className="hero-image" src="assets/landing-person.svg" alt="" />
+                        <img className="hero-image" src="assets/landing-person.svg" alt=""/>
                     </div>
                 </div>
             </div>
