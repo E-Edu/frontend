@@ -53,6 +53,7 @@ class PageLayout extends React.Component<PageLayoutProps> {
     }
 
     render() {
+        console.log(this.props.location.pathname);
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
                 <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'}/>
