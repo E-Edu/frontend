@@ -14,14 +14,16 @@ class dashboard extends React.Component<DashboardState> {
     constructor(props) {
         super(props);
         this.state = { subjects: [] };
-    }
-
-    state: DashboardState = {};
-
-    componentDidMount() {
         this.loadSubjects();
         this.loadFakeData();
     }
+
+    state: DashboardState;
+
+    /*componentDidMount() {
+        this.loadSubjects();
+        this.loadFakeData();
+    }*/
 
     loadFakeData() {
         this.state.subjects.push(
@@ -51,7 +53,7 @@ class dashboard extends React.Component<DashboardState> {
         subjects.push({ displayName: result.data.subjectById.displayName });
 
         // refresh the state
-        subjects.forEach(value => {
+        subjects.forEach((value) => {
             this.state.subjects.push(value);
         });
     }

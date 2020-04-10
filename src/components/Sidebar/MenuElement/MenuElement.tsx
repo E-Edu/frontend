@@ -11,7 +11,7 @@ interface MenuElementProps {
     file?: string | number | boolean;
     name?: string | number | boolean;
     key?: ReactText;
-    spacer?: string | number | boolean;
+    spacer?:  boolean;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
