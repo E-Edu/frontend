@@ -1,4 +1,4 @@
-import React, { ReactText } from 'react';
+import React from 'react';
 import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
