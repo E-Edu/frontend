@@ -16,12 +16,12 @@ class CorrectionReview extends Component {
                         </button>
                     </div>
                     <div className="box">
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY}/>
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM}/>
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD}/>
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY}/>
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM}/>
-                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD}/>
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY} />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM} />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD} />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.EASY} />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.MEDIUM} />
+                        <CorrectionReviewBoxes difficulty={DifficultyEnum.HARD} />
                     </div>
                 </div>
             </div>

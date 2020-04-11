@@ -28,32 +28,32 @@ jobs:
       - name: Build
         run: npm run build
 
-#  codeStyle:
-#    needs: setup
-#    runs-on: ubuntu-latest
-#    name: CodeStyle
-#    steps:
-#      - uses: actions/checkout@v2
-#      - uses: actions/setup-node@v1
-#        with:
-#          node-version: '12.16.1'
-#      - name: Cache node modules
-#        uses: actions/cache@v1
-#        env:
-#          cache-name: cache-node-modules
-#        with:
-#          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-#          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-#          restore-keys: |
-#            ${{ runner.os }}-build-${{ env.cache-name }}-
-#            ${{ runner.os }}-build-
-#            ${{ runner.os }}-
-#
-#      - name: Install Dependencies
-#        run: npm install
-#
-#      - name: Install Dependencies
-#        run: npm run lint:all
+  codeStyle:
+    needs: setup
+    runs-on: ubuntu-latest
+    name: CodeStyle
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.16.1'
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install Dependencies
+        run: npm run lint:all
 
   e2e:
     needs: setup

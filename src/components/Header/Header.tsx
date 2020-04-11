@@ -14,7 +14,7 @@ class Header extends React.Component<HeaderInterface> {
                 return (
                     <div className="header-navbar">
                         <div className="logo">
-                            <img className="logo-img" src="/assets/logo.svg" alt=""/>
+                            <img className="logo-img" src="/assets/logo.svg" alt="" />
                             <h1 className="title">E-EDU</h1>
                         </div>
                         <div className="button-box-landing">
@@ -33,7 +33,7 @@ class Header extends React.Component<HeaderInterface> {
                     <div className="header-navbar">
                         <Link to="/" style={{ textDecoration: 'none' }}>
                             <div className="logo">
-                                <img className="logo-img" src="/assets/logo.svg" alt=""/>
+                                <img className="logo-img" src="/assets/logo.svg" alt="" />
                                 <h1 className="title">E-EDU</h1>
                             </div>
                         </Link>
@@ -41,10 +41,10 @@ class Header extends React.Component<HeaderInterface> {
                             <Link
                                 to={{ pathname: '/imprint', state: { prevPath: 'Dashboard' } }}
                                 className="btn-dash btn-info">
-                                <HelpCircle/>
+                                <HelpCircle />
                             </Link>
                             <Link className="btn-dash btn-logout" to="/">
-                                <LogOut/>
+                                <LogOut />
                             </Link>
                         </div>
                     </div>

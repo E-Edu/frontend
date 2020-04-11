@@ -11,7 +11,7 @@ interface TaskProps {
     difficulty?: DifficultyEnum;
     description?: string;
     questions?: string[];
-    rightQuestions: string;//TODO badly chosen name?
+    rightQuestions: string; // TODO badly chosen name?
 }
 
 class Task extends React.Component<TaskProps> {
@@ -28,9 +28,9 @@ class Task extends React.Component<TaskProps> {
                             <span>{t.t('page.task.questions', 'Questions')}</span>
                         </div>
                         <IconText text={rightQuestions} fontColor="#3A506B" class="task-element">
-                            <Award color="#3A506B"/>
+                            <Award color="#3A506B" />
                         </IconText>
-                        <DifficultyLabel difficulty={difficulty}/>
+                        <DifficultyLabel difficulty={difficulty} />
                     </div>
                 </div>
                 <div className="task-bottom">

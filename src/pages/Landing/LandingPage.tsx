@@ -8,15 +8,11 @@ import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
 
-interface LandingPageProps {
-
-}
+interface LandingPageProps {}
 
 interface LandingPageState {
     showModal: boolean;
-
 }
-
 
 class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
     constructor(props) {
@@ -36,7 +32,7 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
                         status
                     }
                 }
-            `,
+            `
         );
     }
 
@@ -51,8 +47,8 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
                         }}
                         type="fadeIn">
                         {/* TODO Route zurück auf /login /register */}
-                        <Route exact path="/dashboard" component={Login}/>
-                        <Route exact path="/dashboard" component={Register}/>
+                        <Route exact path="/dashboard" component={Login} />
+                        <Route exact path="/dashboard" component={Register} />
                     </Modal>
 
                     <div className="content">
@@ -66,12 +62,12 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
                                 dangerouslySetInnerHTML={{
                                     __html: t.t(
                                         'page.landing.description',
-                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.',
+                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
                                     ),
                                 }}
                             />
                         </div>
-                        <img className="hero-image" src="assets/landing-person.svg" alt=""/>
+                        <img className="hero-image" src="assets/landing-person.svg" alt="" />
                     </div>
                 </div>
             </div>

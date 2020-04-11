@@ -11,6 +11,7 @@ interface SubjectTaskState {
 
 class SubjectTask extends React.Component<SubjectTaskState> {
     results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
+
     state: SubjectTaskState;
 
     constructor(props) {
@@ -46,13 +47,13 @@ class SubjectTask extends React.Component<SubjectTaskState> {
                                 </div>
                                 <div className="subject-task-right">
                                     <div className="subject-task-points">
-                                        <User/>
+                                        <User />
                                         <p>
                                             <span> 213</span> {t.t('taskList.points')}
                                         </p>
                                     </div>
                                     <div className="subject-task-points">
-                                        <Users/>
+                                        <Users />
                                         <p>
                                             <span> 21.323</span> {t.t('taskList.points')}
                                         </p>
@@ -85,7 +86,7 @@ class SubjectTask extends React.Component<SubjectTaskState> {
                                     <span>{t.t('task.answer')}</span>
                                 </div>
                                 <div className="subject-task-answer-field">
-                                    <input type="text" placeholder="test"/>
+                                    <input type="text" placeholder="test" />
                                 </div>
 
                                 <div className="subject-task-buttons">

@@ -2,7 +2,7 @@ import React from 'react';
 import PageContent from './Content/PageContent';
 import PageHeader from './Header/PageHeader';
 
-//TODO move in Templates
+// TODO move in Templates
 
 interface PageProps {
     children: any;
@@ -16,7 +16,7 @@ class Page extends React.Component<PageProps> {
 
         return (
             <div className="page">
-                <PageHeader mainTitle={mainTitle} secondaryTitle={secondaryTitle}/>
+                <PageHeader mainTitle={mainTitle} secondaryTitle={secondaryTitle} />
                 <PageContent>{children}</PageContent>
             </div>
         );

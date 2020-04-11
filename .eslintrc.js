@@ -7,7 +7,10 @@ module.exports = {
     extends: [
         'airbnb',
         'prettier',
+        'prettier/@typescript-eslint',
         'prettier/react',
+        'plugin:prettier/recommended',
+        'plugin:react/recommended',
     ],
     globals: {
         Atomics: 'readonly',
@@ -30,6 +33,7 @@ module.exports = {
         'src/lib/schema.gql',
         'src/lib/api/*',
         'src/react-app-env.d.ts',
+        'src/store/*',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -61,6 +65,7 @@ module.exports = {
         'no-use-before-define': 'off',
         'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
         'import/extensions': 'off',
+        'import/no-unresolved': 'off',
         'space-infix-ops': 'error',
         'no-param-reassign': 'off',
         'react/destructuring-assignment': 'off',
@@ -69,13 +74,23 @@ module.exports = {
         'react/no-array-index-key': 'warn',
         'class-methods-use-this': 'off',
         'import/no-extraneous-dependencies': 'off',
-        'react/prop-types':'off',
+        'react/prop-types': 'off',
         'cypress/no-assigning-return-values': 'error',
         'cypress/no-unnecessary-waiting': 'error',
         'cypress/assertion-before-screenshot': 'warn',
         'cypress/no-force': 'warn',
         'no-unused-expressions': 0,
         'chai-friendly/no-unused-expressions': 2,
-        'jsx-a11y/click-events-have-key-events': 'off'
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react/jsx-tag-spacing': ['error', {
+            'closingSlash': 'never',
+            'afterOpening': 'never',
+            'beforeClosing': 'never',
+            'beforeSelfClosing': 'allow',
+        }],
+        'react/state-in-constructor': 'warn',
+        'no-unused-vars': 'warn',
+        'import/prefer-default-export': 'off',
+        'react/jsx-key':'warn',
     },
 };

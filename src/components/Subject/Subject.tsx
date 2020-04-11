@@ -1,12 +1,12 @@
 import React from 'react';
 import './Subject.scss';
 import { Calendar, File, User, Users } from 'react-feather';
+import { ColorProperty } from 'csstype';
 import IconText from '../IconText/IconText';
 import { t } from '../../i18n/i18n';
 import SubjectLabel from './subjectLabel/subjectLabel';
 import SubjectDescription from './subjectDescription/subjectDescription';
 import Data from '../../lib/Colors.json';
-import { ColorProperty } from 'csstype';
 
 interface SubjectProps {
     subject?: any;
@@ -14,7 +14,7 @@ interface SubjectProps {
     desciption?: string;
     weekendtask?: string;
     points?: string;
-    community_Points?: string;
+    communityPoints?: string;
 }
 
 class Subject extends React.Component<SubjectProps> {
@@ -26,16 +26,16 @@ class Subject extends React.Component<SubjectProps> {
         return (
             <div className="subject" style={{ borderLeft: border }}>
                 <div className="image">
-                    <File size="30" color="#000000"/>
+                    <File size="30" color="#000000" />
                 </div>
                 <div className="box-content">
-                    <SubjectLabel className="subject-name" subjectLabel={subject}/>
-                    <SubjectDescription className="under-name" subjectDescription={this.props.desciption}/>
+                    <SubjectLabel className="subject-name" subjectLabel={subject} />
+                    <SubjectDescription className="under-name" subjectDescription={this.props.desciption} />
                     <IconText
                         text={`${t.t('subjectInfos.weekendtask')} ${this.props.weekendtask}`}
                         position="left"
                         class="weekend-task flex-row">
-                        <Calendar className="calender" size="27" color="#000000"/>
+                        <Calendar className="calender" size="27" color="#000000" />
                     </IconText>
                     <div className="points">
                         <IconText
@@ -43,14 +43,14 @@ class Subject extends React.Component<SubjectProps> {
                             position="left"
                             distance="0.4rem"
                             class="user-points flex-row">
-                            <User color="#000000" size="27"/>
+                            <User color="#000000" size="27" />
                         </IconText>
                         <IconText
-                            text={`${this.props.community_Points} ${t.t('subjectInfos.points')}`}
+                            text={`${this.props.communityPoints} ${t.t('subjectInfos.points')}`}
                             position="left"
                             distance="0.4rem"
                             class="community-points flex-row">
-                            <Users color="#000000" size="27"/>
+                            <Users color="#000000" size="27" />
                         </IconText>
                     </div>
                 </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import './IconText.scss';
 import { ColorProperty } from 'csstype';
 
-
 interface IconProps {
     color?: ColorProperty;
     text?: string;

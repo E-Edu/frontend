@@ -12,7 +12,7 @@ interface SitesItems {
     label: string;
     iconName: string;
     route: string;
-    permission: PermissionEnum,
+    permission: PermissionEnum;
     spacerBefore: boolean;
 }
 
@@ -85,7 +85,7 @@ class Sidebar extends React.Component<SidebarProps> {
                         name={site.label}
                         file={site.iconName}
                         url={site.route}
-                        active={this.props.active === '/' + site.route}
+                        active={this.props.active === `/${site.route}`}
                         key={index}
                         spacer={site.spacerBefore}
                     />
@@ -101,8 +101,8 @@ class Sidebar extends React.Component<SidebarProps> {
             <div className="menu">
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
-                    <MenuElement name="" key={0} file="settings" url="settings" active={active === 'settings'}/>
-                    <MenuElement name="" key={1} file="user" url="profile" active={active === 'profile'}/>
+                    <MenuElement name="" key={0} file="settings" url="settings" active={active === 'settings'} />
+                    <MenuElement name="" key={1} file="user" url="profile" active={active === 'profile'} />
                 </div>
             </div>
         );
