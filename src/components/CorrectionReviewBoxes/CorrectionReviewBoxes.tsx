@@ -8,7 +8,7 @@ import { t } from '../../i18n/i18n';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
 interface CorrectionReviewBoxesProps {
-    difficulty: DifficultyEnum
+    difficulty: DifficultyEnum;
 }
 
 class CorrectionReviewBoxes extends React.Component<CorrectionReviewBoxesProps> {

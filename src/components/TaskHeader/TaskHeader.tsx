@@ -5,7 +5,7 @@ import IconText from '../IconText/IconText';
 import { t } from '../../i18n/i18n';
 
 interface TaskHeaderProps {
-    module?:string;
+    module?: string;
 }
 
 class TaskHeader extends React.Component<TaskHeaderProps> {

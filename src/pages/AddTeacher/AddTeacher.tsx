@@ -6,7 +6,6 @@ import TextInput from '../../components/Input/TextBox/TextInput';
 import { t } from '../../i18n/i18n';
 import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 
-
 interface AddTeacherState {
     email?: string;
     pendingRequests?: string[][];
@@ -27,6 +26,7 @@ class AddTeacher extends React.Component<AddTeacherState> {
     }
 
     state: AddTeacherState;
+
     emailChange = (event) => {
         this.setState({
             email: event.target.value,
@@ -46,7 +46,7 @@ class AddTeacher extends React.Component<AddTeacherState> {
 
     renderRequests() {
         return this.state.pendingRequests.map((request, index) => {
-            return <AddTeacherRequest key={index} name={request[0]} email={request[1]}/>;
+            return <AddTeacherRequest key={index} name={request[0]} email={request[1]} />;
         });
     }
 
@@ -61,7 +61,7 @@ class AddTeacher extends React.Component<AddTeacherState> {
                         onChange={this.emailChange}
                         className="test"
                     />
-                    <UserPlus className="add-teacher-button" onClick={this.add}/>
+                    <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
                     {this.state.pendingRequests.length === 0?

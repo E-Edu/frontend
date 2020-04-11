@@ -14,7 +14,7 @@ class TextInput extends React.Component<TextInputProps> {
         const { placeholder, onChange, maxWidth, className } = this.props;
         let { shadow } = this.props;
 
-        const style: any = {}; //TODO Check if this is necessary
+        const style: any = {}; // TODO Check if this is necessary
 
         if (maxWidth) style.maxWidth = maxWidth;
         if (shadow !== undefined) {
@@ -30,7 +30,9 @@ class TextInput extends React.Component<TextInputProps> {
             }
             if (shadow) style.boxShadow = shadow;
         }
-        return <input className={'text-box ' + className} placeholder={placeholder} onChange={onChange} style={style}/>;
+        return (
+            <input className={`text-box ${className}`} placeholder={placeholder} onChange={onChange} style={style} />
+        );
     }
 }
 

@@ -5,7 +5,7 @@ import { t } from '../../../../i18n/i18n';
 import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
 interface DifficultyLabelProps {
-    difficulty: DifficultyEnum
+    difficulty: DifficultyEnum;
 }
 
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {

@@ -4,8 +4,6 @@ import './Login.scss';
 import { Eye, EyeOff } from 'react-feather';
 
 class Login extends React.Component {
-
-
     handleEmailChange = (event) => {
         this.setState({ email: event.target.value });
     };
@@ -37,7 +35,7 @@ class Login extends React.Component {
      * @public
      */
     changeVisibility() {
-        /*const passwortType = document.getElementById('password');
+        /* const passwortType = document.getElementById('password');
         const hiddenEye = document.getElementById('hide1');
         const openEye = document.getElementById('hide2');
 
@@ -49,8 +47,8 @@ class Login extends React.Component {
             passwortType.type = 'password';
             hiddenEye.style.display = 'none';
             openEye.style.display = 'block';
-        }*/
-        //TODO not with document.getElementById. Thats not the react style
+        } */
+        // TODO not with document.getElementById. Thats not the react style
     }
 
     render() {
@@ -87,9 +85,9 @@ class Login extends React.Component {
                                 style={{ outline: 'none' }}
                                 onClick={this.changeVisibility}
                                 role="button"
-                                tabIndex={1}>
-                                <Eye className="hide1"/>
-                                <EyeOff className="hide2"/>
+                                tabIndex={-1}>
+                                <Eye className="hide1" />
+                                <EyeOff className="hide2" />
                             </span>
                         </div>
                         {/* describes the google-login-field */}
@@ -101,7 +99,7 @@ class Login extends React.Component {
                             />
                             Log In with Google
                         </button>
-                        <input type="submit" className="login button pointer" value="Log In"/>
+                        <input type="submit" className="login button pointer" value="Log In" />
                     </div>
                 </form>
             </div>

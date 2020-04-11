@@ -5,7 +5,6 @@ import Data from '../../../lib/Colors.json';
 import { t } from '../../../i18n/i18n';
 import SubjectLabel from '../../../components/Subject/subjectLabel/subjectLabel';
 
-
 interface ProfileSubjectProps {
     subject: string;
 }
@@ -19,18 +18,18 @@ class ProfileSubject extends React.Component<ProfileSubjectProps> {
             <div className="profile-subjekt" style={{ borderLeft: border }}>
                 <div className="profile-top">
                     <div className="profile-subject-img">
-                        <File className="logo"/>
+                        <File className="logo" />
                     </div>
                     <div className="text">
                         <div className="profile-subjekt-name">
-                            <SubjectLabel className="fach-info" subjectLabel={subject}/>
+                            <SubjectLabel className="fach-info" subjectLabel={subject} />
                         </div>
                         <div className="profile-subjekt-underline">
                             <span>{t.t(`subject.${subject}.description`)}</span>
                         </div>
                     </div>
                 </div>
-                <div className="profile-bottom"/>
+                <div className="profile-bottom" />
             </div>
         );
     }

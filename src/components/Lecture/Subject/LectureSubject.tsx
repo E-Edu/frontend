@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Codepen } from 'react-feather';
 
 interface LectureSubjectProps {
-    name: string
+    name: string;
 }
 
 class LectureSubject extends React.Component<LectureSubjectProps> {
@@ -14,7 +14,7 @@ class LectureSubject extends React.Component<LectureSubjectProps> {
                 <Link to="/task/list" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div className="lecture-subject">
                         <span className="icon-container">
-                            <Codepen size="30"/>
+                            <Codepen size="30" />
                         </span>
                         <p className="lecture-subject-title">{this.props.name}</p>
                     </div>

@@ -9,8 +9,7 @@ import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/Di
 import colorData from '../../lib/Colors.json';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
-
-//TODO REVISION
+// TODO REVISION
 
 interface ReportProps {
     teacher?: string;
@@ -23,7 +22,7 @@ interface ReportProps {
 }
 
 class Report extends React.Component<ReportProps> {
-    /*nullSubtrahend = '1';
+    /* nullSubtrahend = '1';
 
     // like: 0 - not liked, 1 - liked, 2 -disliked
     likeState = {
@@ -98,8 +97,8 @@ class Report extends React.Component<ReportProps> {
     };
 */
     render() {
-  return null;
-        /*const { difficulty } = this.state;
+        return null;
+        /* const { difficulty } = this.state;
         const { subject, messages, teacher } = this.props;
 
         return (
@@ -204,7 +203,7 @@ class Report extends React.Component<ReportProps> {
                     </IconText>
                 </div>
             </div>
-        );*/
+        ); */
     }
 }
 

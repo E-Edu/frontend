@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import '../../css/main.scss';
 import './Settings.scss';
 
-//TODO REVISION
+// TODO REVISION
 class Settings extends Component {
     render() {
-        return (
-            <div>NOT FINISHED YET</div>
-        );
-        /*return (
+        return <div>NOT FINISHED YET</div>;
+        /* return (
             <div>
                 <div className="settings">
                     <h1 className="text-dark">{t.t('page.settings.title', 'Settings')}</h1>
@@ -38,7 +36,7 @@ class Settings extends Component {
                     </div>
                 </div>
             </div>
-        );*/
+        ); */
     }
 }
 

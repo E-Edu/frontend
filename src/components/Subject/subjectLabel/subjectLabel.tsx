@@ -13,33 +13,45 @@ class SubjectLabel extends React.Component<SubjectLabelProps> {
 
         switch (subjectLabel) {
             case 'MATH':
-                return <span className={'title ' + subjectLabel}>{t.t('component.subject.label.math', 'Math')}</span>;
+                return <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.math', 'Math')}</span>;
             case 'GERMAN':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.german', 'German')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.german', 'German')}</span>
+                );
             case 'COMPUTERSCIENCE':
                 return (
-                    <span
-                        className={'title ' + subjectLabel}>{t.t('component.subject.label.computerscience', 'Computer Science')}</span>
+                    <span className={`title ${subjectLabel}`}>
+                        {t.t('component.subject.label.computerscience', 'Computer Science')}
+                    </span>
                 );
             case 'BIOLOGY':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.biology', 'Biology')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.biology', 'Biology')}</span>
+                );
             case 'PHYSICS':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.physic', 'Physics')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.physic', 'Physics')}</span>
+                );
             case 'HISTORY':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.history', 'History')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.history', 'History')}</span>
+                );
             case 'POLITICS':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.politics', 'Politics')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>
+                        {t.t('component.subject.label.politics', 'Politics')}
+                    </span>
+                );
             case 'CHEMISTRY':
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.chemistry', 'Chemistry')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>
+                        {t.t('component.subject.label.chemistry', 'Chemistry')}
+                    </span>
+                );
             default:
-                return <span
-                    className={'title ' + subjectLabel}>{t.t('component.subject.label.unknown', 'Unknown')}</span>;
+                return (
+                    <span className={`title ${subjectLabel}`}>{t.t('component.subject.label.unknown', 'Unknown')}</span>
+                );
         }
     }
 }

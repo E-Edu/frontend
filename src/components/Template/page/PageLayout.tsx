@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 import './PageLayout.scss';
 import { withRouter } from 'react-router-dom';
+import * as H from 'history';
 import Header from '../../Header/Header';
 import Sidebar from '../../Sidebar/Sidebar';
 import Footer from '../../Footer/Footer';
-import * as H from 'history';
 
 interface MatchParams {
     name: string;
@@ -53,16 +53,15 @@ class PageLayout extends React.Component<PageLayoutProps> {
     }
 
     render() {
-        console.log(this.props.location.pathname);
         return (
             <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
-                <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'}/>
-                <Sidebar visible={this.renderSitebar()} active={this.props.location.pathname}/>
+                <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'} />
+                <Sidebar visible={this.renderSitebar()} active={this.props.location.pathname} />
                 <div className="layout-container">{this.props.children}</div>
                 {/*      {
                     this.state.visible && <Footer/>
                 } */}
-                <Footer visible={!this.renderSitebar()}/>
+                <Footer visible={!this.renderSitebar()} />
             </div>
         );
     }

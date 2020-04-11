@@ -3,27 +3,25 @@ import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
 
-//TODO Statemanagement
+// TODO Statemanagement
 
 interface MenuElementProps {
     active?: boolean;
     url?: string | number | boolean;
     file?: string | number | boolean;
     name?: string | number | boolean;
-    key?: ReactText;
-    spacer?:  boolean;
+    spacer?: boolean;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
-
-/*    static getDerivedStateFromProps(props, state) {
+    /*    static getDerivedStateFromProps(props, state) {
         if (state.active !== props.active) {
             return {
                 active: props.active,
             };
         }
         return null;
-    }*/
+    } */
 
     setActivity(activity) {
         // the active changes the icon
@@ -87,7 +85,7 @@ class MenuElement extends React.Component<MenuElementProps> {
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File color={color} fill="none"/>
+                <File color={color} fill="none" />
                 {nameText}
             </Link>,
         ];
