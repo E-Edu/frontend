@@ -26,10 +26,10 @@ class AddTeacherRequest extends React.Component<TeacherProps>  {
                 </div>
                 <div className="request-actions">
                     <IconButton text={t.t('component.addTeacherRequest.acceptAction', 'Accept')} class="request-action">
-                        <X color="#ba1919" size="29"/>
+                        <Check color="#19BA3F" size="29"/>
                     </IconButton>
                     <IconButton text={t.t('component.addTeacherRequest.denyAction', 'Deny')} class="request-action">
-                        <Check color="#19BA3F" size="29"/>
+                        <X color="#ba1919" size="29"/>
                     </IconButton>
                 </div>
             </div>
