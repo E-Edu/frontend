@@ -9,7 +9,7 @@
     "@sentry/browser": "5.15.4",
     "axios": "0.19.2",
     "graphql": "15.0.0",
-    "i18next": "19.4.0",
+    "i18next": "19.4.1",
     "node-sass": "4.13.1",
     "react": "16.13.1",
     "react-animated-modal": "1.1.1",
