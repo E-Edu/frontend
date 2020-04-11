@@ -85,7 +85,7 @@ class Login extends React.Component {
                                 style={{ outline: 'none' }}
                                 onClick={this.changeVisibility}
                                 role="button"
-                                tabIndex={-1}>
+                                tabIndex={0}>
                                 <Eye className="hide1" />
                                 <EyeOff className="hide2" />
                             </span>
