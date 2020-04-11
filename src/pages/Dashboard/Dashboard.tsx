@@ -20,10 +20,10 @@ class dashboard extends React.Component<DashboardState> {
 
     state: DashboardState;
 
-    /*componentDidMount() {
+    /* componentDidMount() {
         this.loadSubjects();
         this.loadFakeData();
-    }*/
+    } */
 
     loadFakeData() {
         this.state.subjects.push(
@@ -33,7 +33,7 @@ class dashboard extends React.Component<DashboardState> {
             { displayName: 'POLITICS' },
             { displayName: 'PHYSICS' },
             { displayName: 'BIOLOGY' },
-            { displayName: 'CHEMISTRY' },
+            { displayName: 'CHEMISTRY' }
         );
     }
 
@@ -68,7 +68,7 @@ class dashboard extends React.Component<DashboardState> {
                         color={subject.displayName}
                         weekendtask="4/5"
                         points="213"
-                        community_Points="21.323"
+                        communityPoints="21.323"
                     />
                 </Link>
             );

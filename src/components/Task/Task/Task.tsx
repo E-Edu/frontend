@@ -26,10 +26,10 @@ class Task extends React.Component<TaskProps> {
                             <span>{t.t('taskList.questions')}</span>
                         </div>
                         <div className="task-element">
-                            <Award className="icon" color="#3A506B"/>
+                            <Award className="icon" color="#3A506B" />
                             <span>{rightQuestions}</span>
                         </div>
-                        <DifficultyLabel difficulty={difficulty}/>
+                        <DifficultyLabel difficulty={difficulty} />
                     </div>
                 </div>
                 <div className="task-bottom">

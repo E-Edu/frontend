@@ -29,7 +29,7 @@ class ReportsList extends Component {
                             likes={20}
                             dislikes={1}
                             difficulty={DifficultyEnum.HARD}
-                        />*/}
+                        /> */}
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ class ProfileCertificate extends React.Component<ProfileCertificateProps> {
             <div className="profile-certifikate">
                 <div className="certificates-row">
                     <div className="titel-certificate">
-                        <Award className="badge-image"/>
+                        <Award className="badge-image" />
                         <p className="badge-title">{this.props.title}</p>
                     </div>
                     <div className="date-certificate">
@@ -23,7 +23,7 @@ class ProfileCertificate extends React.Component<ProfileCertificateProps> {
                         }`}</p>
                     </div>
                 </div>
-                <Download className="download-image"/>
+                <Download className="download-image" />
             </div>
         );
     }

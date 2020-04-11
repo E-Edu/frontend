@@ -3,10 +3,10 @@ import './ReportInfo.scss';
 import { ArrowDown, ArrowUp, Mail } from 'react-feather';
 import TeacherIcon from '../icons/teacher.icon';
 
-//TODO Statemanagement
+// TODO Statemanagement
 
 interface ReportState {
-    subject?: string
+    subject?: string;
     theme?: string;
     themeart?: string;
     dislikes?: string;
@@ -36,8 +36,7 @@ class ReportInfo extends React.Component<ReportState> {
         };
     }
 
-    handleClick = () => {
-    };
+    handleClick = () => {};
 
     render() {
         return (
@@ -50,15 +49,15 @@ class ReportInfo extends React.Component<ReportState> {
                     <div className="infos-right">
                         <div className="likes">
                             <span>{this.state.dislikes}</span>
-                            <ArrowDown/>
+                            <ArrowDown />
                             <span> {this.state.likes}</span>
-                            <ArrowUp/>
+                            <ArrowUp />
                         </div>
                         <div className="teacher">
-                            {this.state.teacher} <TeacherIcon/>
+                            {this.state.teacher} <TeacherIcon />
                         </div>
                         <div className="messages">
-                            {this.state.messages} <Mail/>
+                            {this.state.messages} <Mail />
                         </div>
                     </div>
                 </div>

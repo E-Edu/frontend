@@ -6,19 +6,19 @@ import './Register.scss';
 const emailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 */
 // Validates Form errors
-/*const formValid = ({ formErrors:FormErrors }) => {
+/* const formValid = ({ formErrors:FormErrors }) => {
     let valid = true;
 
 
     // eslint-disable-next-line
     Object.values(formErrors).forEach((val) => val.length > 0 && (valid = false));
     return valid;
-};*/
+}; */
 
-//TODO Rewrite everything from scratch
+// TODO Rewrite everything from scratch
 
 class Register extends React.Component {
-    /*constructor(props) {
+    /* constructor(props) {
         super(props);
         this.state = {
             firstName: '',
@@ -280,7 +280,7 @@ class Register extends React.Component {
                 </div>
             </div>
         );
-    }*/
+    } */
 }
 
 export default Register;

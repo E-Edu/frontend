@@ -1,12 +1,25 @@
 {
   "schedule": [
-    "after 7pm every weekday",
-    "before 8am every weekday"
+    "after 10pm every weekday",
+    "before 6am every weekday",
+    "every weekend"
   ],
-  "baseBranches": ["experimental"],
+  "baseBranches": [
+    "experimental"
+  ],
   "labels": [
     "renovate"
   ],
   "rangeStrategy": "pin",
-  "automerge": false
+  "automerge": false,
+  "packageRules": [
+    {
+      "updateTypes": [
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
+  ]
 }
