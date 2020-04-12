@@ -1,6 +1,10 @@
 ---
 name: Enhancement
 about: Tell us what you want to add!
+title: ''
+labels: FEATURE REQUEST
+assignees: ''
+
 ---
 
 <!--

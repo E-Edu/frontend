@@ -1,6 +1,10 @@
 ---
 name: Improvement
 about: You want to fix something necessary?
+title: ''
+labels: IMPROVEMEMNT
+assignees: ''
+
 ---
 
 <!--

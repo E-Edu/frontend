@@ -2,12 +2,10 @@
 
 .subject {
   border: 1px solid #707070;
-  border-radius: 13px;
+  border-radius: 0.8rem;
   display: flex;
-  height: 180px;
-  margin: 1.2rem 2rem 1.2rem 3rem;
+  height: 10rem;
   padding-bottom: 0.5rem;
-  width: 340px;
 
   .image {
     align-items: center;
@@ -28,8 +26,7 @@
   .box-content {
     display: flex;
     flex-direction: column;
-    height: 80%;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin-left: 0.8rem;
     margin-top: 0.65rem;
     width: 70%;
@@ -37,7 +34,7 @@
     .subject-name {
       color: #0b132b;
       font-family: HindSiliguri-Regular, sans-serif;
-      font-size: 28px;
+      font-size: 1.5rem;
       letter-spacing: 0;
       margin: 0;
       text-align: left;
@@ -47,7 +44,6 @@
       color: #3a506b;
       font-size: 0.8rem;
       letter-spacing: 0;
-      margin-top: -0.5rem;
       opacity: 1;
       text-align: left;
     }
