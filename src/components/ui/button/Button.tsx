@@ -22,10 +22,7 @@ class Button extends React.Component<ButtonProps, ButtonState> {
         return (
             // eslint bug with props
             // eslint-disable-next-line
-            <button
-                type={this.props.type}
-                className={`button ${classes}`}
-                disabled={this.props.disable || false}>
+            <button type={this.props.type} className={`button ${classes}`} disabled={this.props.disable || false}>
                 {this.props.name || 'Default'}
             </button>
         );

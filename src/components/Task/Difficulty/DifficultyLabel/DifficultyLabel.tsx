@@ -16,7 +16,7 @@ class DifficultyLabel extends React.Component<DifficultyLabelProps> {
         if (difficulty in colors) {
             color = colorData.difficultyColor[difficulty];
         } else {
-            color = colorData.difficultyColor.unknown;
+            color = colorData.difficultyColor.UNKNOWN;
         }
         const { backgroundColor } = color;
         const { borderColor } = color;

@@ -37,31 +37,29 @@ class PageLayout extends React.Component<PageLayoutProps> {
         this.state = { visible: false };
     }
 
-    gridLayout(): string {
-        if (this.renderSitebar()) {
-            return '\'header header\' \'content content\' \'footer footer\'';
-        }
-        return '\'header header\' \'sidebar content\'';
+    getClasses(): string {
+        return this.isloggedIn() ? 'page-layout logged-in' : 'page-layout logged-out';
     }
 
-    renderSitebar(): boolean {
+    isloggedIn(): boolean {
         const route = this.props.location.pathname;
         /* this.setState(() => {
             return {visible: true};
         }); */
-        return this.hiddenSidebarPages.includes(route);
+        return !this.hiddenSidebarPages.includes(route);
     }
 
     render() {
         return (
-            <div className="page-layout" style={{ gridTemplateAreas: this.gridLayout() }}>
-                <Header site={!this.renderSitebar() ? 'dashboard' : 'landing'} />
-                <Sidebar visible={this.renderSitebar()} active={this.props.location.pathname} />
+            <div className={this.getClasses()}>
+                <Header site={this.isloggedIn() ? 'dashboard' : 'landing'} />
+                <Sidebar
+                    className={this.isloggedIn() ? 'menu-bar' : 'logged-in-hidden'}
+                    visible={this.isloggedIn()}
+                    active={this.props.location.pathname}
+                />
                 <div className="layout-container">{this.props.children}</div>
-                {/*      {
-                    this.state.visible && <Footer/>
-                } */}
-                <Footer visible={!this.renderSitebar()} />
+                <Footer visible={this.isloggedIn()} />
             </div>
         );
     }

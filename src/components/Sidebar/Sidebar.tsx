@@ -6,6 +6,7 @@ import { PermissionEnum } from '../../models/permission.enum';
 interface SidebarProps {
     active?: string;
     visible?: boolean;
+    className?: string;
 }
 
 interface SitesItems {
@@ -36,46 +37,11 @@ class Sidebar extends React.Component<SidebarProps> {
                 spacerBefore: false,
             },
             {
-                label: 'Aufgaben',
-                iconName: 'edit',
-                route: 'task/lecture',
-                permission: PermissionEnum.USER,
-                spacerBefore: false,
-            },
-            {
                 label: 'Neue Aufgabe',
                 iconName: 'plus-circle',
-                route: 'dashboard',
-                permission: PermissionEnum.PRIVILEGEDSTUDENT,
-                spacerBefore: true,
-            },
-            {
-                label: 'Meine Aufgaben',
-                iconName: 'list',
-                route: 'task/list',
-                permission: PermissionEnum.PRIVILEGEDSTUDENT,
-                spacerBefore: false,
-            },
-            {
-                label: 'Korrektur',
-                iconName: 'check',
-                route: 'correction/review',
-                permission: PermissionEnum.PRIVILEGEDSTUDENT,
-                spacerBefore: false,
-            },
-            {
-                label: 'Reports',
-                iconName: 'alert-circle',
-                route: 'reports/list',
+                route: 'task/add',
                 permission: PermissionEnum.ADMIN,
                 spacerBefore: true,
-            },
-            {
-                label: 'Lehrer hinzufügen',
-                iconName: 'teacher',
-                route: 'teacher/add',
-                permission: PermissionEnum.ADMIN,
-                spacerBefore: false,
             },
         ];
         const sitesHtml = sites.map((site, index) => {
@@ -94,11 +60,12 @@ class Sidebar extends React.Component<SidebarProps> {
             return '';
         });
 
-        if (this.props.visible) {
+        if (!this.props.visible) {
             return null;
         }
+
         return (
-            <div className="menu">
+            <div className={`menu ${this.props.className}`}>
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
                     <MenuElement name="" key={0} file="settings" url="settings" active={active === 'settings'} />
