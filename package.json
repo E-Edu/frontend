@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "apollo-boost": "0.4.7",
     "@apollo/react-hooks": "3.1.4",
     "@sentry/browser": "5.15.4",
+    "apollo-boost": "0.4.7",
     "axios": "0.19.2",
     "graphql": "15.0.0",
+    "html-react-parser": "0.10.3",
     "i18next": "19.4.1",
     "node-sass": "4.13.1",
     "react": "16.13.1",
