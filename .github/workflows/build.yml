@@ -52,7 +52,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Install Dependencies
+      - name: Linting
         run: npm run lint:all
 
   e2e:
@@ -80,13 +80,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - uses: cypress-io/github-action@v1
+      - name: e2e
+        uses: cypress-io/github-action@v1
         with:
           browser: chrome
           start: npm start
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://localhost:3000'
-      - uses: actions/upload-artifact@v1
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-screenshots
