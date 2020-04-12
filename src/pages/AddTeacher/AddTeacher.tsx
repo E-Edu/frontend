@@ -16,12 +16,12 @@ class AddTeacher extends React.Component<AddTeacherState> {
     constructor(props) {
         super(props);
         this.state = {
-            validEmail: false,
             email: '',
             pendingRequests: [
                 ['Herr Lehrer Mustermann', 'lehrer.mustermann@lehrer-mail.de'],
                 ['Herr Lehrer Mustermann2', 'lehrer.mustermann2@lehrer-mail.de'],
             ],
+            validEmail: false,
         };
     }
 
