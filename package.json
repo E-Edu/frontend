@@ -34,7 +34,7 @@
     "lint:prettier": "prettier --check \"./src/**/*.{ts,tsx}\"",
     "lint:style": "stylelint \"./src/**/*.scss\"",
     "lint:all": "npm run lint:eslint && npm run lint:style",
-    "lint:fix": "npm run lint:eslint -- --fix && npm run lint:style -- --fix",
+    "lint:fix": "npm run lint:eslint -- --fix && stylelint \"./src/**/*.scss\" --fix",
     "lint:tslint": "tslint",
     "i18n": "i18next-scanner --config i18next-scanner.config.js 'src/**/*.{js,jsx}'",
     "test:open": "cypress open",

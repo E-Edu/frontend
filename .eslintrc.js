@@ -7,9 +7,9 @@ module.exports = {
     extends: [
         'airbnb',
         'prettier',
-        'prettier/@typescript-eslint',
         'prettier/react',
-        'plugin:prettier/recommended',
+        /*'prettier/@typescript-eslint',*/
+        /*'plugin:prettier/recommended',*/
         'plugin:react/recommended',
     ],
     globals: {
@@ -88,6 +88,7 @@ module.exports = {
             'beforeClosing': 'never',
             'beforeSelfClosing': 'allow',
         }],
+        'react/jsx-curly-spacing':'off',
         'react/state-in-constructor': 'warn',
         'no-unused-vars': 'warn',
         'import/prefer-default-export': 'off',

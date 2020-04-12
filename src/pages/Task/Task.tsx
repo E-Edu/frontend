@@ -27,7 +27,7 @@ class Task extends React.Component<TaskProps> {
                             <span>{questions}</span>
                             <span>{t.t('page.task.questions', 'Questions')}</span>
                         </div>
-                        <IconText text={rightQuestions} fontColor="#3A506B" class="task-element">
+                        <IconText text={rightQuestions} fontColor="#3A506B" distance="1rem">
                             <Award color="#3A506B" />
                         </IconText>
                         <DifficultyLabel difficulty={difficulty} />

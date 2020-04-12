@@ -5,12 +5,18 @@
     align-items: flex-start;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    @media (max-width: 1279px) {
+      flex-direction: column;
+    }
 
     .lecture-group-title {
       color: $color-grey;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       width: 20%;
+      @media (max-width: 1279px) {
+        margin-bottom: 1rem;
+        width: 100%;
+      }
 
       p {
         margin: 0;
@@ -24,6 +30,25 @@
       grid-row-gap: 1.3rem;
       grid-template-columns: 1fr 1fr 1fr;
       width: 80%;
+      @media (max-width: 1279px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+      }
+      @media (max-width: 1023px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        width: 70vw;
+      }
+      @media (max-width: 639px) {
+        grid-template-columns: 1fr;
+        width: 85vw;
+      }
+
+      @media (min-width: 2300px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
     }
   }
 }

@@ -1,10 +1,28 @@
 @import './src/css/styles';
 
-.subjects-content {
+.dashboard {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  margin-left: 1.5rem;
+  padding-top: 2rem;
+
+  .subjects-content {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+
+    @media (max-width: 1279px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 2300px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 }
