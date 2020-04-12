@@ -8,6 +8,7 @@ import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
+import Markdown from '../../components/Markdown/Markdown';
 
 interface LandingPageProps {}
 
