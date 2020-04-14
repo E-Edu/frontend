@@ -6,11 +6,12 @@ import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
 interface DifficultyLabelProps {
     difficulty: DifficultyEnum;
+    active?: boolean;
 }
 
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
-        const { difficulty } = this.props;
+        const { difficulty, active } = this.props;
         const colors = colorData.difficultyColor;
         let color;
         if (difficulty in colors) {
@@ -18,55 +19,39 @@ class DifficultyLabel extends React.Component<DifficultyLabelProps> {
         } else {
             color = colorData.difficultyColor.UNKNOWN;
         }
-        const { backgroundColor } = color;
         const { borderColor } = color;
-
+        let text;
         switch (difficulty) {
             case DifficultyEnum.EASY:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.easy', 'Easy')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.easy', 'Easy');
+                break;
             case DifficultyEnum.MEDIUM:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.medium', 'Medium')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.medium', 'Medium');
+                break;
             case DifficultyEnum.HARD:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.hard', 'Hard')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.hard', 'Hard');
+                break;
             default:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.unknown', 'Unknown')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.unknown', 'Unknown');
         }
+        let backgroundColor;
+        if (active) {
+            backgroundColor = color.backgroundColor.active;
+        } else {
+            backgroundColor = color.backgroundColor.inactive;
+        }
+        return (
+            <div className="difficulty-label-container">
+                <span
+                    className="difficulty-label-item"
+                    style={{
+                        backgroundColor,
+                        borderColor,
+                    }}>
+                    {text}
+                </span>
+            </div>
+        );
     }
 }
 
