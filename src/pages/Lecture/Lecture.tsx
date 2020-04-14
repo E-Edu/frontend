@@ -1,46 +1,21 @@
 import React from 'react';
 import './Lecture.scss';
+import { observer } from 'mobx-react';
 import TaskHeader from '../../components/TaskHeader/TaskHeader';
 import LectureGroup from '../../components/Lecture/Group/LectureGroup';
+import LectureStore from '../../store/lecture.store';
 
+const lectureStore = new LectureStore();
+
+@observer
 class Lecture extends React.Component {
-    data = [
-        { name: 'Grundrechnen', fields: [{ name: 'Plus' }, { name: 'Minus' }, { name: 'Mal' }, { name: 'Geteilt' }] },
-        { name: 'Geometrie', fields: [{ name: 'Flächeninhalt' }, { name: 'Volumen' }, { name: 'Winkel berechnung' }] },
-        {
-            name: 'Lineare Algebra',
-            fields: [
-                { name: 'Vektoren' },
-                { name: 'Lineare Gleichungssysteme' },
-                { name: 'Geraden berechnen' },
-                { name: 'Ebenen in der Vektorrechnung' },
-                { name: 'Lagebeziehung' },
-            ],
-        },
-        { name: 'Logik', fields: [{ name: 'Logik Aufgaben' }] },
-        {
-            name: 'Analysis',
-            fields: [
-                { name: 'Grundlagen' },
-                { name: 'Funktionen Grundlagen' },
-                { name: 'Sekante, Tangente und Nor...' },
-                { name: 'Gleichungen lösen' },
-                { name: 'Kurvendiskussion' },
-                { name: 'Lineare Gleichungssysteme' },
-                { name: 'Rationale Funktionen (Bruc…' },
-                { name: 'e-Funktion' },
-                { name: 'Integralrechnung' },
-            ],
-        },
-    ];
-
     render() {
         return (
             <div className="lecture">
                 <div className="main">
                     <TaskHeader module="Mathe" />
 
-                    {this.data.map((value, index) => {
+                    {lectureStore.data.map((value, index) => {
                         return <LectureGroup key={index} name={value.name} fields={value.fields} />;
                     })}
                 </div>

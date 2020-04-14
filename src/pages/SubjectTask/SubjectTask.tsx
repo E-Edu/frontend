@@ -2,22 +2,15 @@ import React from 'react';
 import './SubjectTask.scss';
 import { Link } from 'react-router-dom';
 import { User, Users } from 'react-feather';
+import { observer } from 'mobx-react';
 import { t } from '../../i18n/i18n';
+import SubjectTaskStore from '../../store/subjectTask.store';
 
-interface SubjectTaskState {
-    currentQuestion: number;
-    maxQuestion: number;
-}
+const subjectTaskStore = new SubjectTaskStore();
 
-class SubjectTask extends React.Component<SubjectTaskState> {
-    results = ['#BA1919', '#19BA3f', '#687D9A', '#687D9A', '#19BA3f'];
-
-    state: SubjectTaskState;
-
-    constructor(props) {
-        super(props);
-        this.state = { currentQuestion: 4, maxQuestion: 10 };
-    }
+@observer
+class SubjectTask extends React.Component {
+    results = ['#BA1919', '#19ba3f', '#687D9A', '#687D9A', '#19BA3f'];
 
     renderDescription(description) {
         return description.split('\n').map((value, index) => {
@@ -40,9 +33,10 @@ class SubjectTask extends React.Component<SubjectTaskState> {
                         <div className="subject-task-container">
                             <div className="subject-task-content-header">
                                 <div className="subject-task-left">
+                                    {/* TODO: Fix the translations */}
                                     <span className="subject-task-subject">{t.t(`subject.${subject}.name`)}</span>
                                     <span className="subject-task-module">
-                                        {t.t(`lection.${subject}.${lection}.name`)}
+                                        {t.t(`lection ${subject}.${lection}.name`)}
                                     </span>
                                 </div>
                                 <div className="subject-task-right">
@@ -70,7 +64,7 @@ class SubjectTask extends React.Component<SubjectTaskState> {
                                         className="progress-per"
                                         style={{
                                             width: `${
-                                                (this.state.currentQuestion / this.state.maxQuestion) *
+                                                (subjectTaskStore.currentQuestion / subjectTaskStore.maxQuestion) *
                                                 percentMultiplicator
                                             }%`,
                                         }}
