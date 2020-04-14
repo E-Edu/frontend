@@ -1,4 +1,4 @@
-import {computed, observable, action} from "mobx";
+import {observable} from "mobx";
 
 class SubjectTaskStore {
     @observable currentQuestion = 4;
