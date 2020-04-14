@@ -1,5 +1,4 @@
 import React from 'react';
-import { useLocalStore } from 'mobx-react';
 import colorData from '../../../../lib/Colors.json';
 import './DifficultyLabel.scss';
 import { t } from '../../../../i18n/i18n';
