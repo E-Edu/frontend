@@ -4,23 +4,20 @@ import { Route } from 'react-router-dom';
 import Modal from 'react-animated-modal';
 import { gql } from 'apollo-boost';
 import parse from 'html-react-parser';
+import { observer } from 'mobx-react';
 import Login from '../../components/Login/Login';
 import Register from '../../components/Register/Register';
 import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
+import LandingPageStore from '../../store/landingPage.store';
 
+// tslint:disable-next-line:no-empty-interface
 interface LandingPageProps {}
 
-interface LandingPageState {
-    showModal: boolean;
-}
+const landingPageStore = new LandingPageStore();
 
-class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
-    constructor(props) {
-        super(props);
-        this.state = { showModal: false };
-    }
-
+@observer
+class LandingPage extends React.Component<LandingPageProps> {
     login() {
         Query.mutationGQL(
             gql`
@@ -42,9 +39,9 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
             <div className="landing">
                 <div className="main">
                     <Modal
-                        visible={this.state.showModal}
+                        visible={landingPageStore.showModal}
                         closemodal={() => {
-                            this.setState({ showModal: false });
+                            landingPageStore.setShowModal(true);
                         }}
                         type="fadeIn">
                         {/* TODO Route zurück auf /login /register */}
