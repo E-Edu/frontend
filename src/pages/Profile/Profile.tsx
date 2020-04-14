@@ -2,33 +2,27 @@ import React from 'react';
 import './Profile.scss';
 import '../../css/main.css';
 import { Calendar, Edit2, Tag, TrendingUp, User } from 'react-feather';
+import { observer } from 'mobx-react';
 import IconText from '../../components/IconText/IconText';
 import { t } from '../../i18n/i18n';
 import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
+import ProfileStore from '../../store/profile.store';
 
+// tslint:disable-next-line:no-empty-interface
 interface ProfileProps {}
 
-interface ProfileState {
-    username?: string;
-    disabled?: boolean;
-}
+const profileStore = new ProfileStore();
 
-class Profile extends React.Component<ProfileProps, ProfileState> {
-    state: ProfileState;
-
-    constructor(props) {
-        super(props);
-        this.state = { username: 'Morpheus', disabled: true };
-    }
-
+@observer
+class Profile extends React.Component<ProfileProps> {
     usernameClickListener = () => {
-        this.setState((prevstate) => ({ disabled: !prevstate.disabled }));
+        profileStore.setDisabled(!profileStore.disabled);
     };
 
     usernameChangeListener = (event) => {
         // TODO: Send data to backend
-        this.setState({ username: event.target.value });
+        profileStore.setUsername(event.target.value);
     };
 
     render() {
@@ -55,8 +49,8 @@ class Profile extends React.Component<ProfileProps, ProfileState> {
                                         onChange={this.usernameChangeListener}
                                         className="username-input"
                                         type="text"
-                                        value={this.state.username}
-                                        disabled={this.state.disabled}
+                                        value={profileStore.username}
+                                        disabled={profileStore.disabled}
                                     />
                                     <span
                                         style={{ outline: 'none' }}

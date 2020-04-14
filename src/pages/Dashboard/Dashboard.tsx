@@ -2,23 +2,21 @@ import React from 'react';
 import './Dashboard.scss';
 import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
+import { observer } from 'mobx-react';
 import Query from '../../lib/api/Query';
-import { Subject as SubjectModel } from '../../lib/api/model/Model';
+// import { Subject as SubjectModel } from '../../lib/api/model/Model';
 import Subject from '../../components/Subject/Subject';
+import DashboardStore from '../../store/dashboard.store';
 
-interface DashboardState {
-    subjects?: SubjectModel[];
-}
+const dashboardStore = new DashboardStore();
 
-class dashboard extends React.Component<DashboardState> {
+@observer
+class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { subjects: [] };
         this.loadSubjects();
         this.loadFakeData();
     }
-
-    state: DashboardState;
 
     /* componentDidMount() {
         this.loadSubjects();
@@ -26,15 +24,15 @@ class dashboard extends React.Component<DashboardState> {
     } */
 
     loadFakeData() {
-        this.state.subjects.push(
+        dashboardStore.setSubjects([
             { displayName: 'GERMAN' },
             { displayName: 'COMPUTERSCIENCE' },
             { displayName: 'HISTORY' },
             { displayName: 'POLITICS' },
             { displayName: 'PHYSICS' },
             { displayName: 'BIOLOGY' },
-            { displayName: 'CHEMISTRY' }
-        );
+            { displayName: 'CHEMISTRY' },
+        ]);
     }
 
     async loadSubjects() {
@@ -53,13 +51,11 @@ class dashboard extends React.Component<DashboardState> {
         subjects.push({ displayName: result.data.subjectById.displayName });
 
         // refresh the state
-        subjects.forEach((value) => {
-            this.state.subjects.push(value);
-        });
+        dashboardStore.addSubjects(subjects);
     }
 
     renderSubjects() {
-        return this.state.subjects.map((subject, index) => {
+        return dashboardStore.subjects.map((subject, index) => {
             return (
                 <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subject
@@ -84,4 +80,4 @@ class dashboard extends React.Component<DashboardState> {
     }
 }
 
-export default dashboard;
+export default Dashboard;
