@@ -1,4 +1,4 @@
-import {computed, observable, action} from "mobx";
+import {observable, action} from "mobx";
 
 class LandingPageStore {
     @observable showModal = false;

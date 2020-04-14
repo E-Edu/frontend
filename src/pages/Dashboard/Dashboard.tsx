@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { gql } from 'apollo-boost';
 import { observer } from 'mobx-react';
 import Query from '../../lib/api/Query';
-import { Subject as SubjectModel } from '../../lib/api/model/Model';
+// import { Subject as SubjectModel } from '../../lib/api/model/Model';
 import Subject from '../../components/Subject/Subject';
 import DashboardStore from '../../store/dashboard.store';
 
