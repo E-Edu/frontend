@@ -10,23 +10,23 @@ stories.add('default', () => {
     return <Button />;
 });
 
-stories.add('Primary Button', () => {
+stories.add('Primary ComboBox', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
     return <Button name={label} type={type} disable={false} styleType="primary" />;
 });
-stories.add('Primary Button disabled', () => {
+stories.add('Primary ComboBox disabled', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
     return <Button name={label} type={type} disable styleType="primary" />;
 });
 
-stories.add('Secondary Button', () => {
+stories.add('Secondary ComboBox', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
     return <Button name={label} type={type} disable={false} styleType="secondary" />;
 });
-stories.add('Secondary Button disabled', () => {
+stories.add('Secondary ComboBox disabled', () => {
     const label = text('Label', 'Default');
     const type = text('type', 'text');
     return <Button name={label} type={type} disable styleType="secondary" />;

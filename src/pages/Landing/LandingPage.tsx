@@ -51,7 +51,6 @@ class LandingPage extends React.Component<LandingPageProps, LandingPageState> {
                         <Route exact path="/dashboard" component={Login} />
                         <Route exact path="/dashboard" component={Register} />
                     </Modal>
-
                     <div className="content">
                         <div className="text-content">
                             <h2>{parse(t.t('page.landing.title', 'Education for <span>You</span>'))}</h2>
