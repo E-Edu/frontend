@@ -7,11 +7,12 @@ interface TextInputProps {
     maxWidth?: string;
     shadow?: string;
     className?: string;
+    rows?: number;
 }
 
 class TextInput extends React.Component<TextInputProps> {
     render() {
-        const { placeholder, onChange, maxWidth, className } = this.props;
+        const { placeholder, onChange, maxWidth, className, rows } = this.props;
         let { shadow } = this.props;
 
         const style: any = {}; // TODO Check if this is necessary
@@ -29,6 +30,18 @@ class TextInput extends React.Component<TextInputProps> {
                 }
             }
             if (shadow) style.boxShadow = shadow;
+        }
+        const minNumberOfRows = 0;
+        if (rows && rows > minNumberOfRows) {
+            return (
+                <textarea
+                    className={`text-box ${className}`}
+                    placeholder={placeholder}
+                    onChange={onChange}
+                    rows={rows}
+                    style={style}
+                />
+            );
         }
         return (
             <input className={`text-box ${className}`} placeholder={placeholder} onChange={onChange} style={style} />
