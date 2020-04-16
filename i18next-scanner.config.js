@@ -3,11 +3,12 @@ const chalk = require('chalk');
 
 module.exports = {
     input: [
-        'app/**/*.{js,jsx}',
+        'app/**/*.{ts,tsx}',
         // Use ! to filter out files or directories
-        '!app/**/*.spec.{js,jsx}',
+        '!app/**/*.spec.{ts,tsx}',
         '!app/i18n/**',
         '!**/node_modules/**',
+        '!app/**/*.store.{ts,tsx}',
     ],
     output: './',
     options: {
@@ -15,13 +16,13 @@ module.exports = {
         sort: true,
         func: {
             list: ['i18next.t', 'i18n.t','t.t'],
-            extensions: ['.js', '.jsx']
+            extensions: ['.ts', '.tsx']
         },
         trans: {
             component: 'Trans',
             i18nKey: 'i18nKey',
             defaultsKey: 'defaults',
-            extensions: ['.js', '.jsx'],
+            extensions: ['.ts', '.tsx'],
             fallbackKey: function(ns, value) {
                 return value;
             },

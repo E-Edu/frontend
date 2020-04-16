@@ -1,13 +1,14 @@
 .add-task {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.flex-row-box{
-  width: 80%;
+
+.flex-row-box {
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  width: 80%;
 }
