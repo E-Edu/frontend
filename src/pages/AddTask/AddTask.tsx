@@ -4,15 +4,15 @@ import PageHeader from '../../components/Page/Header/PageHeader';
 import { t } from '../../i18n/i18n';
 import Button from '../../components/ui/button/Button';
 import TextInput from '../../components/Input/TextBox/TextInput';
-import ComboBox from '../../components/ui/ComboBox/ComboBox';
-import AddQuestion from '../../components/Task/Add/Question/AddQuestion';
+
+
 
 interface Task {
     Name: string;
     Subjekt: string;
     Module: string;
     difficulty: string;
-}
+
 
 class AddTask extends React.Component {
     setTaskDifficulty = (difficulty: string): void => {
@@ -39,30 +39,33 @@ class AddTask extends React.Component {
                 </div>
                 <div className="flex-row-box">
                     <TextInput placeholder="Aufgaben Pack Title" />
-                    <select>
-                        <option>Fach</option>
-                    </select>
                 </div>
                 <div className="flex-row-box">
                     <div className="difficulty-select">
-                        <button onClick={() => this.setTaskDifficulty('easy')} className="difficulty-select-easy">
+                        <button
+                            onClick={() => this.setTaskDifficulty('easy')}
+                            className="difficulty-select-easy"
+                            type="button">
                             Easy
                         </button>
-                        <button onClick={() => this.setTaskDifficulty('medium')} className="difficulty-select-medium">
+                        <button
+                            onClick={() => this.setTaskDifficulty('medium')}
+                            className="difficulty-select-medium"
+                            type="button">
                             Medium
                         </button>
-                        <button onClick={() => this.setTaskDifficulty('hard')} className="difficulty-select-hard">
+                        <button
+                            onClick={() => this.setTaskDifficulty('hard')}
+                            className="difficulty-select-hard"
+                            type="button">
                             Hard
                         </button>
                     </div>
-                    <ComboBox />
                 </div>
                 <div className="flex-row-box">
                     <textarea placeholder="Beschreibung der aufgabe" rows={5} style={{ width: '70%' }} />
                 </div>
-                <div className="flex-row-box Task-container">
-                    <AddQuestion />
-                </div>
+                <div className="flex-row-box Task-container" />
             </div>
         );
     }

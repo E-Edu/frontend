@@ -1,109 +1,113 @@
 {
-    "component": {
-        "addTeacherRequest": {
-            "acceptAction": "Accept",
-            "denyAction": "Deny"
-        },
-        "subject": {
-            "description": {
-                "math": "Something about apples and bananas",
-                "german": "Language learning - Babel",
-                "computerscience": "01010101010101010110",
-                "biology": "Biology",
-                "physic": "Pay attention to falling apples!",
-                "history": "I have a dream...",
-                "politics": "Political Education",
-                "chemistry": "Chemistry",
-                "unknown": "Unknown"
-            },
-            "label": {
-                "math": "Math",
-                "german": "German",
-                "computerscience": "Computer Science",
-                "biology": "Biology",
-                "physic": "Physics",
-                "history": "History",
-                "politics": "Politics",
-                "chemistry": "Chemistry",
-                "unknown": "Unknown"
-            }
-        },
-        "task": {
-            "difficulty": {
-                "easy": "Easy",
-                "medium": "Medium",
-                "hard": "Hard",
-                "unknown": "Unknown"
-            }
-        },
-        "profileCertificate": {
-            "date": "Reached at"
-        }
+  "component": {
+    "addTeacherRequest": {
+      "acceptAction": "Accept",
+      "denyAction": "Deny"
     },
-    "correction": {
-        "date": "__STRING_NOT_TRANSLATED__",
-        "correctionAction": "__STRING_NOT_TRANSLATED__"
+    "profileCertificate": {
+      "date": "Reached at"
     },
-    "subjectInfos": {
-        "weekendtask": "__STRING_NOT_TRANSLATED__",
-        "points": "__STRING_NOT_TRANSLATED__"
-    },
-    "taskList": {
-        "questions": "__STRING_NOT_TRANSLATED__",
-        "points": "__STRING_NOT_TRANSLATED__",
-        "task": "__STRING_NOT_TRANSLATED__"
+    "subject": {
+      "description": {
+        "biology": "Biology",
+        "chemistry": "Chemistry",
+        "computerscience": "01010101010101010110",
+        "german": "Language learning - Babel",
+        "history": "I have a dream...",
+        "math": "Something about apples and bananas",
+        "physic": "Pay attention to falling apples!",
+        "politics": "Political Education",
+        "unknown": "Unknown"
+      },
+      "label": {
+        "biology": "Biology",
+        "chemistry": "Chemistry",
+        "computerscience": "Computer Science",
+        "german": "German",
+        "history": "History",
+        "math": "Math",
+        "physic": "Physics",
+        "politics": "Politics",
+        "unknown": "Unknown"
+      }
     },
     "task": {
-        "points": "__STRING_NOT_TRANSLATED__",
-        "question": "__STRING_NOT_TRANSLATED__",
-        "of": "__STRING_NOT_TRANSLATED__",
-        "answer": "__STRING_NOT_TRANSLATED__",
-        "skip": "__STRING_NOT_TRANSLATED__",
-        "nextTask": "__STRING_NOT_TRANSLATED__"
+      "difficulty": {
+        "easy": "Easy",
+        "hard": "Hard",
+        "medium": "Medium",
+        "unknown": "Unknown"
+      }
+    }
+  },
+  "correction": {
+    "correctionAction": "__STRING_NOT_TRANSLATED__",
+    "date": "__STRING_NOT_TRANSLATED__"
+  },
+  "page": {
+    "addTask": {
+      "publish": "publish",
+      "title": "Create new task"
     },
-    "page": {
-        "addTeacher": {
-            "title": "Add teacher",
-            "emailOfTeacher": "Teachers email",
-            "noPendingRequests": "No pending requests",
-            "pendingRequests": "Pending requests"
-        },
-        "correctionReview": {
-            "heading": "Correction",
-            "button": {
-                "correctionMode": "Correction mode"
-            }
-        },
-        "landing": {
-            "title": "Education for <span>You</span>",
-            "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers."
-        },
-        "profile": {
-            "points": "Points",
-            "memberSince": "Member since",
-            "rank": {
-                "teachingMaster": "The Teaching Master"
-            },
-            "favoriteSubjects": "Favorite subjects",
-            "certificates": "Certificates"
-        },
-        "settings": {
-            "title": "Settings",
-            "email": "Email",
-            "change": "Change",
-            "password": "Password",
-            "language": "Language"
-        },
-        "task": {
-            "questions": "Questions"
-        },
-        "taskList": {
-            "task": "Questions",
-            "points": "Points",
-            "search": "Search"
-        }
+    "addTeacher": {
+      "emailOfTeacher": "Teachers email",
+      "noPendingRequests": "No pending requests",
+      "pendingRequests": "Pending requests",
+      "title": "Add teacher"
+    },
+    "correctionReview": {
+      "button": {
+        "correctionMode": "Correction mode"
+      },
+      "heading": "Correction"
+    },
+    "landing": {
+      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.",
+      "title": "Education for <span>You</span>"
+    },
+    "profile": {
+      "certificates": "Certificates",
+      "favoriteSubjects": "Favorite subjects",
+      "memberSince": "Member since",
+      "points": "Points",
+      "rank": {
+        "teachingMaster": "The Teaching Master"
+      }
     },
     "settings": {
-        "change": "__STRING_NOT_TRANSLATED__"
+      "change": "Change",
+      "email": "Email",
+      "language": "Language",
+      "password": "Password",
+      "title": "Settings"
+    },
+    "task": {
+      "questions": "Questions"
+    },
+    "taskList": {
+      "points": "Points",
+      "search": "Search",
+      "task": "Questions"
     }
+  },
+  "settings": {
+    "change": "__STRING_NOT_TRANSLATED__"
+  },
+  "subjectInfos": {
+    "points": "__STRING_NOT_TRANSLATED__",
+    "weekendtask": "__STRING_NOT_TRANSLATED__"
+  },
+  "task": {
+    "answer": "__STRING_NOT_TRANSLATED__",
+    "nextTask": "__STRING_NOT_TRANSLATED__",
+    "of": "__STRING_NOT_TRANSLATED__",
+    "points": "__STRING_NOT_TRANSLATED__",
+    "question": "__STRING_NOT_TRANSLATED__",
+    "skip": "__STRING_NOT_TRANSLATED__"
+  },
+  "taskList": {
+    "points": "__STRING_NOT_TRANSLATED__",
+    "questions": "__STRING_NOT_TRANSLATED__",
+    "task": "__STRING_NOT_TRANSLATED__"
+  }
 }

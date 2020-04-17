@@ -7,5 +7,5 @@ const stories = storiesOf('ComboBox', module);
 stories.addDecorator(withKnobs);
 
 stories.add('default', () => {
-    return <Combobox />;
+    return <Combobox data={['Test1', 'Test2']} />;
 });

@@ -1,111 +1,115 @@
 {
-    "component": {
-        "addTeacherRequest": {
-            "acceptAction": "Accept",
-            "denyAction": "Deny"
-        },
-        "subject": {
-            "description": {
-                "math": "Something about apples and bananas",
-                "german": "Language learning - Babel",
-                "computerscience": "01010101010101010110",
-                "biology": "Biology",
-                "physic": "Pay attention to falling apples!",
-                "history": "I have a dream...",
-                "politics": "Political Education",
-                "chemistry": "Chemistry",
-                "unknown": "Unknown"
-            },
-            "label": {
-                "math": "Math",
-                "german": "German",
-                "computerscience": "Computer Science",
-                "biology": "Biology",
-                "physic": "Physics",
-                "history": "History",
-                "politics": "Politics",
-                "chemistry": "Chemistry",
-                "unknown": "Unknown"
-            }
-        },
-        "task": {
-            "difficulty": {
-                "easy": "Easy",
-                "medium": "Medium",
-                "hard": "Hard",
-                "unknown": "Unknown"
-            }
-        },
-        "profileCertificate": {
-            "date": "Reached at"
-        }
+  "component": {
+    "addTeacherRequest": {
+      "acceptAction": "Accept",
+      "denyAction": "Deny"
     },
-    "correction": {
-        "date": "3 days ago",
-        "correctionAction": "correct"
+    "profileCertificate": {
+      "date": "Reached at"
     },
-    "subjectInfos": {
-        "weekendtask": "weekly exercises",
-        "points": "points"
-    },
-    "taskList": {
-        "questions": "Questions",
-        "task": "Task",
-        "points": "Points",
-        "search": "Search"
+    "subject": {
+      "description": {
+        "biology": "Biology",
+        "chemistry": "Chemistry",
+        "computerscience": "01010101010101010110",
+        "german": "Language learning - Babel",
+        "history": "I have a dream...",
+        "math": "Something about apples and bananas",
+        "physic": "Pay attention to falling apples!",
+        "politics": "Political Education",
+        "unknown": "Unknown"
+      },
+      "label": {
+        "biology": "Biology",
+        "chemistry": "Chemistry",
+        "computerscience": "Computer Science",
+        "german": "German",
+        "history": "History",
+        "math": "Math",
+        "physic": "Physics",
+        "politics": "Politics",
+        "unknown": "Unknown"
+      }
     },
     "task": {
-        "question": "Question",
-        "questions": "Questions",
-        "of": "of",
-        "points": "Points",
-        "answer": "Answer",
-        "skip": "Skip",
-        "nextTask": "Next task"
+      "difficulty": {
+        "easy": "Easy",
+        "hard": "Hard",
+        "medium": "Medium",
+        "unknown": "Unknown"
+      }
+    }
+  },
+  "correction": {
+    "correctionAction": "correct",
+    "date": "3 days ago"
+  },
+  "page": {
+    "addTask": {
+      "publish": "publish",
+      "title": "Create new task"
     },
-    "page": {
-        "addTeacher": {
-            "title": "Add teacher",
-            "emailOfTeacher": "Teachers email",
-            "noPendingRequests": "No pending requests",
-            "pendingRequests": "Pending requests"
-        },
-        "correctionReview": {
-            "heading": "Correction",
-            "button": {
-                "correctionMode": "Correction mode"
-            }
-        },
-        "landing": {
-            "title": "Education for <span>You</span>",
-            "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers."
-        },
-        "profile": {
-            "points": "Points",
-            "memberSince": "Member since",
-            "rank": {
-                "teachingMaster": "The Teaching Master"
-            },
-            "favoriteSubjects": "Favorite subjects",
-            "certificates": "Certificates"
-        },
-        "settings": {
-            "title": "Settings",
-            "email": "Email",
-            "change": "Change",
-            "password": "Password",
-            "language": "Language"
-        },
-        "task": {
-            "questions": "Questions"
-        },
-        "taskList": {
-            "task": "Questions",
-            "points": "Points",
-            "search": "Search"
-        }
+    "addTeacher": {
+      "emailOfTeacher": "Teachers email",
+      "noPendingRequests": "No pending requests",
+      "pendingRequests": "Pending requests",
+      "title": "Add teacher"
+    },
+    "correctionReview": {
+      "button": {
+        "correctionMode": "Correction mode"
+      },
+      "heading": "Correction"
+    },
+    "landing": {
+      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.",
+      "title": "Education for <span>You</span>"
+    },
+    "profile": {
+      "certificates": "Certificates",
+      "favoriteSubjects": "Favorite subjects",
+      "memberSince": "Member since",
+      "points": "Points",
+      "rank": {
+        "teachingMaster": "The Teaching Master"
+      }
     },
     "settings": {
-        "change": "Change"
+      "change": "Change",
+      "email": "Email",
+      "language": "Language",
+      "password": "Password",
+      "title": "Settings"
+    },
+    "task": {
+      "questions": "Questions"
+    },
+    "taskList": {
+      "points": "Points",
+      "search": "Search",
+      "task": "Questions"
     }
+  },
+  "settings": {
+    "change": "Change"
+  },
+  "subjectInfos": {
+    "points": "points",
+    "weekendtask": "weekly exercises"
+  },
+  "task": {
+    "answer": "Answer",
+    "nextTask": "Next task",
+    "of": "of",
+    "points": "Points",
+    "question": "Question",
+    "questions": "Questions",
+    "skip": "Skip"
+  },
+  "taskList": {
+    "points": "Points",
+    "questions": "Questions",
+    "search": "Search",
+    "task": "Task"
+  }
 }
