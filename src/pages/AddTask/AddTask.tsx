@@ -4,6 +4,7 @@ import PageHeader from '../../components/Page/Header/PageHeader';
 import { t } from '../../i18n/i18n';
 import Button from '../../components/ui/button/Button';
 import TextInput from '../../components/Input/TextBox/TextInput';
+import AddQuestion from "../../components/Task/Add/Question/AddQuestion";
 
 interface Task {
     Name: string;
@@ -63,7 +64,9 @@ class AddTask extends React.Component {
                 <div className="flex-row-box">
                     <textarea placeholder="Beschreibung der aufgabe" rows={5} style={{ width: '70%' }} />
                 </div>
-                <div className="flex-row-box Task-container" />
+                <div className="flex-row-box Task-container">
+                    <AddQuestion />
+                </div>
             </div>
         );
     }

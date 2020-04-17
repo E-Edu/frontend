@@ -58,9 +58,11 @@ class AddQuestion extends React.Component {
                             />
                         );
                     })}
-                    <div onClick={this.addQuestion} className="add-answer">
-                        <p style={{ margin: '0' }}>Add Answer</p>
-                    </div>
+                    {questions.length < letters.length ? (
+                        <div onClick={this.addQuestion} className="add-answer" role="button" tabIndex={0}>
+                            <p style={{ margin: '0' }}>Add Answer</p>
+                        </div>
+                    ) : null}
                 </div>
             </div>
         );
