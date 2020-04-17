@@ -4,7 +4,6 @@ import { ChevronDown, ChevronUp } from 'react-feather';
 
 interface ComboBoxState {
     isVisible: boolean;
-    value: string;
 }
 interface ComboBoxProps {
     disable?: boolean;
@@ -18,13 +17,10 @@ interface ComboBoxProps {
 class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
     constructor(props) {
         super(props);
-        this.state = { isVisible: false, value: '' };
+        this.state = { isVisible: false };
     }
 
     setElement(index: number) {
-        this.setState({
-            value: this.props.data[index],
-        });
         this.props.callbackValue(this.props.data[index]);
         this.toogle();
     }
@@ -54,7 +50,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
                     className={this.state.isVisible ? 'combo-box-opened combo-box' : 'combo-box-closed combo-box'}
                     style={{ width: this.props.width, height: this.props.height }}
                     onClick={() => this.toogle()}
-                    value={this.state.value}
+                    value={this.props.value}
                 />
                 {this.state.isVisible ? (
                     <ChevronUp

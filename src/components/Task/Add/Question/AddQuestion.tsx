@@ -3,7 +3,12 @@ import './AddQuestion.scss';
 import TextInput from '../../../Input/TextBox/TextInput';
 import MultipleChoiceAnswer from '../MultipleChoiceAnswer/MultipleChoiceAnswer';
 
-class AddQuestion extends React.Component {
+interface AddQuestionProps {
+    questions: { selected: boolean; value: string }[];
+    questionsCallback: (value: { selected: boolean; value: string }[]) => void;
+}
+
+class AddQuestion extends React.Component<AddQuestionProps> {
     constructor(props) {
         super(props);
         this.state = {
