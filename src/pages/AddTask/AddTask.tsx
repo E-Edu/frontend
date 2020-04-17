@@ -5,14 +5,12 @@ import { t } from '../../i18n/i18n';
 import Button from '../../components/ui/button/Button';
 import TextInput from '../../components/Input/TextBox/TextInput';
 
-
-
 interface Task {
     Name: string;
     Subjekt: string;
     Module: string;
     difficulty: string;
-
+}
 
 class AddTask extends React.Component {
     setTaskDifficulty = (difficulty: string): void => {
