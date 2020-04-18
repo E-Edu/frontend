@@ -29,6 +29,7 @@
     margin-left: 1.3rem;
     padding: 5px; // to convert this to rem, change this also in TextInput.scss
     text-align: center;
+
     &:focus {
       outline: none; // Chrome
     }

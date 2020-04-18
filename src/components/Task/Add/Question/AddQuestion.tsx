@@ -1,17 +1,23 @@
 import React from 'react';
 import './AddQuestion.scss';
+import { observer } from 'mobx-react';
 import TextInput from '../../../Input/TextBox/TextInput';
 import MultipleChoiceAnswer from '../MultipleChoiceAnswer/MultipleChoiceAnswer';
 
 interface AddQuestionProps {
-    /* questionsCallback: (value: { selected: boolean; value: string }[]) => void;
-    addQuestion: ({ selected: boolean, value: string }) => void; */
     questions: { title: string; description: string; answers: { value: string; selected: boolean }[] }[];
-    questionsCallback: any;
-    addQuestion: any;
+    setQuestions: (
+        value: { title: string; description: string; answers: { value: string; selected: boolean }[] }[]
+    ) => void;
+    addQuestion: (value: {
+        title: string;
+        description: string;
+        answers: { value: string; selected: boolean }[];
+    }) => void;
     questionIndex: number;
 }
 
+@observer
 class AddQuestion extends React.Component<AddQuestionProps> {
     constructor(props) {
         super(props);
@@ -26,7 +32,7 @@ class AddQuestion extends React.Component<AddQuestionProps> {
     updateQuestion = (updatedQuestion) => {
         const { questions } = this.props;
         questions[this.props.questionIndex] = updatedQuestion;
-        this.props.questionsCallback(questions);
+        this.props.setQuestions(questions);
     };
 
     selectAnswerHandler = (answerIndex: number) => {
@@ -38,9 +44,9 @@ class AddQuestion extends React.Component<AddQuestionProps> {
     };
 
     updateAnswerHandler = (answerIndex: number) => {
-        return (answer: string) => {
+        return (answer) => {
             const question = this.getQuestion();
-            question.answers[answerIndex].value = answer;
+            question.answers[answerIndex].value = answer.target.value;
             this.updateQuestion(question);
         };
     };
@@ -48,7 +54,6 @@ class AddQuestion extends React.Component<AddQuestionProps> {
     addAnswerHandler = () => {
         const question = this.getQuestion();
         question.answers.push({ value: '', selected: false });
-        console.log(question.answers);
         this.updateQuestion(question);
     };
 
@@ -67,15 +72,14 @@ class AddQuestion extends React.Component<AddQuestionProps> {
 
     render() {
         const letters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const { questions } = this.props;
-        console.log(questions);
+        const question = this.getQuestion();
         return (
             <div className="multiplechoice">
                 {/* TODO translate this */}
                 <TextInput placeholder="Question Title" onChange={this.changeTitleHandler} />
                 <TextInput placeholder="Question Description" rows={5} onChange={this.changeDescriptionHandler} />
                 <div className="answer">
-                    {questions.map((value, index) => {
+                    {question.answers.map((value, index) => {
                         const name = `Answer ${letters[index]}`;
                         return (
                             <MultipleChoiceAnswer
@@ -86,7 +90,7 @@ class AddQuestion extends React.Component<AddQuestionProps> {
                             />
                         );
                     })}
-                    {questions.length < letters.length ? (
+                    {question.answers.length < letters.length ? (
                         <div onClick={this.addAnswerHandler} className="add-answer" role="button" tabIndex={0}>
                             <p style={{ margin: '0' }}>Add Answer</p>
                         </div>
