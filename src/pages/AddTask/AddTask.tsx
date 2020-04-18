@@ -1,13 +1,15 @@
 import React from 'react';
 import './AddTask.scss';
-import { observer } from 'mobx-react';
+import {observer} from 'mobx-react';
 import PageHeader from '../../components/Page/Header/PageHeader';
-import { t } from '../../i18n/i18n';
+import {t} from '../../i18n/i18n';
 import Button from '../../components/ui/button/Button';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import AddQuestion from '../../components/Task/Add/Question/AddQuestion';
 import ComboBox from '../../components/ui/ComboBox/ComboBox';
 import AddTaskStore from '../../store/addTask.store';
+import DifficultyLabel from "../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel";
+import {DifficultyEnum} from "../../models/difficulty.enum";
 
 interface Task {
     Name: string;
@@ -54,26 +56,9 @@ class AddTask extends React.Component {
                     />
                 </div>
                 <div className="flex-row-box">
-                    <div className="difficulty-select">
-                        <button
-                            onClick={() => this.setTaskDifficulty('easy')}
-                            className="difficulty-select-easy"
-                            type="button">
-                            Easy
-                        </button>
-                        <button
-                            onClick={() => this.setTaskDifficulty('medium')}
-                            className="difficulty-select-medium"
-                            type="button">
-                            Medium
-                        </button>
-                        <button
-                            onClick={() => this.setTaskDifficulty('hard')}
-                            className="difficulty-select-hard"
-                            type="button">
-                            Hard
-                        </button>
-                    </div>
+                    <DifficultyLabel difficulty={DifficultyEnum.EASY} />
+                    <DifficultyLabel difficulty={DifficultyEnum.MEDIUM} />
+                    <DifficultyLabel difficulty={DifficultyEnum.HARD} />
                     <ComboBox
                         data={['Test1', 'Test2']}
                         height="1.6rem"
