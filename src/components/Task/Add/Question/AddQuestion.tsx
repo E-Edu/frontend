@@ -4,67 +4,105 @@ import TextInput from '../../../Input/TextBox/TextInput';
 import MultipleChoiceAnswer from '../MultipleChoiceAnswer/MultipleChoiceAnswer';
 
 interface AddQuestionProps {
-    questions: { selected: boolean; value: string }[];
-    questionsCallback: (value: { selected: boolean; value: string }[]) => void;
+    /* questionsCallback: (value: { selected: boolean; value: string }[]) => void;
+    addQuestion: ({ selected: boolean, value: string }) => void; */
+    questions: { title: string; description: string; answers: { value: string; selected: boolean }[] }[];
+    questionsCallback: any;
+    addQuestion: any;
 }
 
-class AddQuestion extends React.Component<AddQuestionProps> {
+interface AddQuestionState {
+    title: string;
+}
+
+class AddQuestion extends React.Component<AddQuestionProps, AddQuestionState> {
     constructor(props) {
         super(props);
-        this.state = {
-            questions: [
-                {
-                    name: 'Answer A',
-                    selected: false,
-                    value: '',
-                },
-                {
-                    name: 'Answer B',
-                    selected: false,
-                    value: '',
-                },
-            ],
-        };
+        this.state = { title: '' };
+        // add empty question
+        this.props.addQuestion({ title: '', description: '', answers: [{ value: '', selected: false }] });
     }
 
-    addQuestion = () => {
-        // @ts-ignore
-        const { questions } = this.state;
-        questions.push({ name: '', selected: false, value: '' });
-        this.setState({ questions });
+    getQuestion = () => {
+        const { questions } = this.props;
+        let currentQuestion: { title: string; description: string; answers: { value: string; selected: boolean }[] };
+        questions.forEach((question) => {
+            if (question.title === this.state.title) {
+                currentQuestion = question;
+            }
+            return question;
+        });
+        return currentQuestion;
     };
 
-    onChange = (index, value) => {
-        // @ts-ignore
-        const { questions } = this.state;
-        questions[index].value = value;
-        this.setState({ questions });
+    updateQuestion = (updatedQuestion) => {
+        const { questions } = this.props;
+        questions.forEach((question, index) => {
+            if (question.title === this.state.title) {
+                questions[index] = updatedQuestion;
+            }
+        });
+        this.props.questionsCallback(questions);
+    };
+
+    selectAnswerHandler = (answerIndex: number) => {
+        return () => {
+            const question = this.getQuestion();
+            question.answers[answerIndex].selected = !question.answers[answerIndex].selected;
+            this.updateQuestion(question);
+        };
+    };
+
+    updateAnswerHandler = (answerIndex: number) => {
+        return (answer: string) => {
+            const question = this.getQuestion();
+            question.answers[answerIndex].value = answer;
+            this.updateQuestion(question);
+        };
+    };
+
+    addAnswerHandler = () => {
+        const question = this.getQuestion();
+        question.answers.push({ value: '', selected: false });
+        this.updateQuestion(question);
+    };
+
+    changeTitleHandler = (title) => {
+        this.setState({ title });
+        const question = this.getQuestion();
+        question.title = title;
+        this.updateQuestion(question);
+    };
+
+    changeDescriptionHandler = (description) => {
+        const question = this.getQuestion();
+        question.description = description;
+        this.updateQuestion(question);
     };
 
     render() {
-        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        // @ts-ignore
-        const { questions } = this.state;
+        const letters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const { questions } = this.props;
 
         return (
             <div className="multiplechoice">
                 {/* TODO translate this */}
-                <TextInput placeholder="Question Title" />
-                <TextInput placeholder="Question Title" rows={5} />
+                <TextInput placeholder="Question Title" onChange={this.changeTitleHandler} />
+                <TextInput placeholder="Question Description" rows={5} onChange={this.changeDescriptionHandler} />
                 <div className="answer">
                     {questions.map((value, index) => {
+                        const name = `Answer ${letters[index]}`;
                         return (
                             <MultipleChoiceAnswer
-                                placeholder={`Answer ${letters[index]}`}
-                                selectHandler={() => console.log('selected')}
-                                onChangeHandler={(val) => {
-                                    this.onChange(index, val.target.value);
-                                }}
+                                placeholder={name}
+                                selectHandler={this.selectAnswerHandler(index)}
+                                onChangeHandler={this.updateAnswerHandler(index)}
+                                key={name}
                             />
                         );
                     })}
                     {questions.length < letters.length ? (
-                        <div onClick={this.addQuestion} className="add-answer" role="button" tabIndex={0}>
+                        <div onClick={this.addAnswerHandler} className="add-answer" role="button" tabIndex={0}>
                             <p style={{ margin: '0' }}>Add Answer</p>
                         </div>
                     ) : null}

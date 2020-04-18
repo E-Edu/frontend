@@ -9,7 +9,7 @@ class AddTaskStore {
     @observable lectureList: string[] = [];
     @observable selectedLecture: string = '';
     @observable description: string = '';
-    @observable taskList: {title: string, description: string, answers:{name: string, selected: boolean}[]}[] = [];
+    @observable taskList: {title: string, description: string, answers:{value: string, selected: boolean}[]}[] = [];
 
     @action setTitle(value: string) {
         this.title = value;
@@ -32,10 +32,10 @@ class AddTaskStore {
     @action setDescription(value: string) {
         this.description = value;
     }
-    @action setTaskList(value: {title: string, description: string, answers:{name: string, selected: boolean}[]}[]) {
+    @action setTaskList(value: {title: string, description: string, answers:{value: string, selected: boolean}[]}[]) {
         this.taskList = value;
     }
-    @action addTaskListItem(value: {title: string, description: string, answers:{name: string, selected: boolean}[]}) {
+    @action addTaskListItem(value: {title: string, description: string, answers:{value: string, selected: boolean}[]}) {
         this.taskList.push(value);
     }
 }
