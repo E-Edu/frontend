@@ -9,39 +9,23 @@ interface AddQuestionProps {
     questions: { title: string; description: string; answers: { value: string; selected: boolean }[] }[];
     questionsCallback: any;
     addQuestion: any;
+    questionIndex: number;
 }
 
-interface AddQuestionState {
-    title: string;
-}
-
-class AddQuestion extends React.Component<AddQuestionProps, AddQuestionState> {
+class AddQuestion extends React.Component<AddQuestionProps> {
     constructor(props) {
         super(props);
-        this.state = { title: '' };
         // add empty question
         this.props.addQuestion({ title: '', description: '', answers: [{ value: '', selected: false }] });
     }
 
     getQuestion = () => {
-        const { questions } = this.props;
-        let currentQuestion: { title: string; description: string; answers: { value: string; selected: boolean }[] };
-        questions.forEach((question) => {
-            if (question.title === this.state.title) {
-                currentQuestion = question;
-            }
-            return question;
-        });
-        return currentQuestion;
+        return this.props.questions[this.props.questionIndex];
     };
 
     updateQuestion = (updatedQuestion) => {
         const { questions } = this.props;
-        questions.forEach((question, index) => {
-            if (question.title === this.state.title) {
-                questions[index] = updatedQuestion;
-            }
-        });
+        questions[this.props.questionIndex] = updatedQuestion;
         this.props.questionsCallback(questions);
     };
 
@@ -64,6 +48,7 @@ class AddQuestion extends React.Component<AddQuestionProps, AddQuestionState> {
     addAnswerHandler = () => {
         const question = this.getQuestion();
         question.answers.push({ value: '', selected: false });
+        console.log(question.answers);
         this.updateQuestion(question);
     };
 
@@ -83,7 +68,7 @@ class AddQuestion extends React.Component<AddQuestionProps, AddQuestionState> {
     render() {
         const letters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         const { questions } = this.props;
-
+        console.log(questions);
         return (
             <div className="multiplechoice">
                 {/* TODO translate this */}

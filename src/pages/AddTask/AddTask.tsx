@@ -22,7 +22,6 @@ const addTaskStore = new AddTaskStore();
 class AddTask extends React.Component {
     constructor(props) {
         super(props);
-        addTaskStore.setTaskList([{ title: '', description: '', answers: [{ value: '', selected: false }] }]);
     }
     setTaskDifficulty = (difficulty: string): void => {
         const oldbuttonDiffiClassList = document.getElementsByClassName('difficulty-select-')[0].classList;
@@ -98,8 +97,9 @@ class AddTask extends React.Component {
                 <div className="flex-row-box Task-container">
                     <AddQuestion
                         questions={addTaskStore.taskList}
-                        addQuestion={addTaskStore.addTaskListItem}
-                        questionsCallback={addTaskStore.setTaskList}
+                        addQuestion={(value) => addTaskStore.addTaskListItem(value)}
+                        questionsCallback={(value) => addTaskStore.setTaskList(value)}
+                        questionIndex={0}
                     />
                 </div>
             </div>
