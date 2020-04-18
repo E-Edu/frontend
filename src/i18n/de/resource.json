@@ -1,113 +1,122 @@
 {
   "component": {
     "addTeacherRequest": {
-      "acceptAction": "Accept",
-      "denyAction": "Deny"
+      "acceptAction": "Akzeptieren",
+      "denyAction": "Ablehnen"
     },
     "profileCertificate": {
-      "date": "Reached at"
+      "date": "Erreicht am"
     },
     "subject": {
       "description": {
-        "biology": "Biology",
-        "chemistry": "Chemistry",
+        "biology": "Biologie",
+        "chemistry": "Chemie",
         "computerscience": "01010101010101010110",
-        "german": "Language learning - Babel",
-        "history": "I have a dream...",
-        "math": "Something about apples and bananas",
-        "physic": "Pay attention to falling apples!",
-        "politics": "Political Education",
-        "unknown": "Unknown"
+        "german": "Sprachen lernen - Babel",
+        "history": "Ich habe einen Traum...",
+        "math": "Etwas mit Äpfeln und Bananen",
+        "physic": "Achte auf fallende Äpfel!",
+        "politics": "Politische Bildung",
+        "unknown": "Unbekannt"
       },
       "label": {
-        "biology": "Biology",
-        "chemistry": "Chemistry",
-        "computerscience": "Computer Science",
-        "german": "German",
-        "history": "History",
-        "math": "Math",
-        "physic": "Physics",
-        "politics": "Politics",
-        "unknown": "Unknown"
+        "biology": "Biologie",
+        "chemistry": "Chemie",
+        "computerscience": "Informatik",
+        "german": "Deutsch",
+        "history": "Geschichte",
+        "math": "Mathe",
+        "physic": "Physik",
+        "politics": "Politik",
+        "unknown": "Unbekannt"
       }
     },
     "task": {
       "difficulty": {
-        "easy": "Easy",
-        "hard": "Hard",
-        "medium": "Medium",
-        "unknown": "Unknown"
+        "easy": "Einfach",
+        "hard": "Mittel",
+        "medium": "Schwer",
+        "unknown": "Unbekannt"
+      },
+      "add": {
+        "question": {
+          "title": "Titel der Frage",
+          "description": "Beschreibung der Frage",
+          "answer": "Antwort",
+          "addAnswer": "Antwort hinzufügen"
+        }
       }
     }
   },
   "correction": {
-    "correctionAction": "__STRING_NOT_TRANSLATED__",
-    "date": "__STRING_NOT_TRANSLATED__"
+    "correctionAction": "korrekt",
+    "date": "vor 3 Tagen"
   },
   "page": {
     "addTask": {
-      "publish": "publish",
-      "title": "Create new task"
+      "publish": "veröffentlichen",
+      "title": "Neue Frage erstellen",
+      "packageTitle": "Aufgabenpacktitel",
+      "description": "Beschreibung der Aufgabe"
     },
     "addTeacher": {
-      "emailOfTeacher": "Teachers email",
-      "noPendingRequests": "No pending requests",
-      "pendingRequests": "Pending requests",
-      "title": "Add teacher"
+      "emailOfTeacher": "Email des Lehrers",
+      "noPendingRequests": "Keine ausstehenden Anfragen",
+      "pendingRequests": "Ausstehende Anfragen",
+      "title": "Lehrer hinzufügen"
     },
     "correctionReview": {
       "button": {
-        "correctionMode": "Correction mode"
+        "correctionMode": "Korrekturmodus"
       },
-      "heading": "Correction"
+      "heading": "Korrektur"
     },
     "landing": {
-      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.",
-      "title": "Education for <span>You</span>"
+      "description": "E-Edu ist eine Lernplattform, erstellt als Teil des Hackathons #WirVsVirus von dem Team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu bietet  eine Lernplattfrom für Schüler, die an Aufgaben von Lehrern arbeiten können.",
+      "title": "Bildung für <span>Dich</span>"
     },
     "profile": {
-      "certificates": "Certificates",
-      "favoriteSubjects": "Favorite subjects",
-      "memberSince": "Member since",
-      "points": "Points",
+      "certificates": "Zertifikate",
+      "favoriteSubjects": "Lieblingsfächer",
+      "memberSince": "Mitglied seit",
+      "points": "Punkte",
       "rank": {
-        "teachingMaster": "The Teaching Master"
+        "teachingMaster": "Der Lehrermeister"
       }
     },
     "settings": {
-      "change": "Change",
+      "change": "Ändern",
       "email": "Email",
-      "language": "Language",
-      "password": "Password",
-      "title": "Settings"
+      "language": "Sprache",
+      "password": "Passwort",
+      "title": "Einstellungen"
     },
     "task": {
-      "questions": "Questions"
+      "questions": "Fragen"
     },
     "taskList": {
-      "points": "Points",
-      "search": "Search",
-      "task": "Questions"
+      "points": "Punkte",
+      "search": "Suche",
+      "task": "Fragen"
     }
   },
-  "settings": {
-    "change": "__STRING_NOT_TRANSLATED__"
-  },
   "subjectInfos": {
-    "points": "__STRING_NOT_TRANSLATED__",
-    "weekendtask": "__STRING_NOT_TRANSLATED__"
+    "points": "Punkte",
+    "weekendtask": "Wochenendaufgaben"
   },
   "task": {
-    "answer": "__STRING_NOT_TRANSLATED__",
-    "nextTask": "__STRING_NOT_TRANSLATED__",
-    "of": "__STRING_NOT_TRANSLATED__",
-    "points": "__STRING_NOT_TRANSLATED__",
-    "question": "__STRING_NOT_TRANSLATED__",
-    "skip": "__STRING_NOT_TRANSLATED__"
+    "answer": "Antwort",
+    "nextTask": "Nächste Aufgabe",
+    "of": "von",
+    "points": "Punkte",
+    "question": "Frage",
+    "questions": "Fragen",
+    "skip": "Überspringen"
   },
   "taskList": {
-    "points": "__STRING_NOT_TRANSLATED__",
-    "questions": "__STRING_NOT_TRANSLATED__",
-    "task": "__STRING_NOT_TRANSLATED__"
+    "points": "Punkte",
+    "questions": "Fragen",
+    "search": "Suche",
+    "task": "Aufgabe"
   }
 }
