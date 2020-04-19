@@ -58,7 +58,7 @@
       "title": "Create new task",
       "packageTitle": "Task package title",
       "description": "Description of the Task",
-      "addNewTask": "Add new Task"
+      "addNewQuestion": "Add new Question"
     },
     "addTeacher": {
       "emailOfTeacher": "Teachers email",

@@ -114,7 +114,7 @@ class AddTask extends React.Component {
                 </div>
                 <div onClick={this.addQuestionHandler} className="add-question" role="button" tabIndex={0}>
                     <Plus style={{ marginRight: '0.5rem' }} />
-                    <p style={{ margin: '0' }}>{t.t('page.addTask.addNewTask', 'Add new Task')}</p>
+                    <p style={{ margin: '0' }}>{t.t('page.addTask.addNewQuestion', 'Add new Question')}</p>
                 </div>
             </div>
         );

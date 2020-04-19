@@ -58,7 +58,7 @@
       "title": "Neue Frage erstellen",
       "packageTitle": "Aufgabenpacktitel",
       "description": "Beschreibung der Aufgabe",
-      "addNewTask": "Neue Frage hinzufügen"
+      "addNewQuestion": "Neue Frage hinzufügen"
     },
     "addTeacher": {
       "emailOfTeacher": "Email des Lehrers",
