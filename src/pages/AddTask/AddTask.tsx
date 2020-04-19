@@ -50,6 +50,7 @@ class AddTask extends React.Component {
                         data={['Test1', 'Test2']}
                         height="1.6rem"
                         width="20rem"
+                        placeholder="Subject"
                         callbackValue={(value: string) => {
                             addTaskStore.setSelectedSubject(value);
                         }}
@@ -85,6 +86,7 @@ class AddTask extends React.Component {
                         data={['Test1', 'Test2']}
                         height="1.6rem"
                         width="20rem"
+                        placeholder="Model / Thema"
                         callbackValue={(value: string) => {
                             addTaskStore.setSelectedLecture(value);
                         }}

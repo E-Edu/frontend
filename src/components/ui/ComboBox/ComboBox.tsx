@@ -10,6 +10,7 @@ interface ComboBoxProps {
     disable?: boolean;
     width?: string;
     height?: string;
+    placeholder: string;
     data: string[];
     value: string;
     callbackValue: (value: string) => void;
@@ -20,6 +21,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
     constructor(props) {
         super(props);
         this.state = { isVisible: false };
+        this.props.callbackValue(this.props.placeholder);
     }
 
     setElement(index: number) {
@@ -34,13 +36,13 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
     }
 
     render() {
-        const getData = this.props.data.map((item, index) => {
+        const { width, height, value, data } = this.props;
+        const { isVisible } = this.state;
+
+        const getData = data.map((item, index) => {
             return (
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-                <li
-                    style={{ width: this.props.width, height: this.props.height }}
-                    key={index}
-                    onClick={() => this.setElement(index)}>
+                <li style={{ width, height }} key={index} onClick={() => this.setElement(index)}>
                     {item}
                 </li>
             );
@@ -50,11 +52,11 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
             <div>
                 <input
                     className={this.state.isVisible ? 'combo-box-opened combo-box' : 'combo-box-closed combo-box'}
-                    style={{ width: this.props.width, height: this.props.height }}
+                    style={{ width, height }}
                     onClick={() => this.toogle()}
-                    value={this.props.value}
+                    value={value}
                 />
-                {this.state.isVisible ? (
+                {isVisible ? (
                     <ChevronUp
                         className="chevron"
                         onClick={() => this.toogle()}
@@ -71,7 +73,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
                         color="#5BC0BE"
                     />
                 )}
-                {this.state.isVisible ? <ul>{getData}</ul> : null}
+                {isVisible ? <ul>{getData}</ul> : null}
             </div>
         );
     }
