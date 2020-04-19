@@ -15,7 +15,7 @@ class MultipleChoiceAnswer extends React.Component<MultipleChoiceAnswerProps> {
         return (
             <div className="multiplechoice-answer">
                 <input type="checkbox" onChange={selectHandler} />
-                <TextInput placeholder={placeholder} onChange={onChangeHandler} />
+                <TextInput placeholder={placeholder} onChange={onChangeHandler} className="text-input" />
             </div>
         );
     }

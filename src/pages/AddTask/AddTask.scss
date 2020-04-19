@@ -4,10 +4,30 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .header {
+    margin-top: 2rem;
+  }
+
+  .first-row {
+    margin-top: 4rem;
+  }
+
+  .second-row {
+    margin-top: 1.5rem;
+  }
+
   .flex-row-box {
     align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .flex-column-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 80%;
   }
@@ -17,8 +37,11 @@
     border: 0.133rem solid #1c2541;
     border-radius: 0.667rem;
     box-sizing: border-box;
+    cursor: pointer;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
     padding: 5px; // to convert this to rem, change this also in TextInput.scss
     text-align: center;
     width: 80%;
@@ -26,5 +49,17 @@
     &:focus {
       outline: none; // Chrome
     }
+  }
+
+  .difficulty-labels {
+    justify-content: flex-start;
+
+    .difficulty {
+      margin-right: 1rem;
+    }
+  }
+
+  .third-row {
+    margin-top: 2.5rem;
   }
 }

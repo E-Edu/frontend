@@ -1,13 +1,17 @@
 import React from 'react';
 import './DifficultyLabel.scss';
+import { observer } from 'mobx-react';
 import { t } from '../../../../i18n/i18n';
 import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
 interface DifficultyLabelProps {
     difficulty: DifficultyEnum;
     selected?: boolean;
+    onClick?: () => void;
+    className?: string;
 }
 
+@observer
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
         const { difficulty, selected } = this.props;
@@ -40,11 +44,14 @@ class DifficultyLabel extends React.Component<DifficultyLabelProps> {
         }
         return (
             <span
-                className="difficulty-label"
+                className={`difficulty-label ${this.props.className}`}
                 style={{
                     backgroundColor,
                     borderColor,
-                }}>
+                }}
+                onClick={this.props.onClick}
+                role="button"
+                tabIndex={0}>
                 {text}
             </span>
         );

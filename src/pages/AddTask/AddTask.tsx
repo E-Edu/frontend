@@ -33,23 +33,18 @@ class AddTask extends React.Component {
     };
 
     render() {
-        const testTask: Task = {
-            Module: 'TestModule',
-            Name: 'TestName',
-            Subjekt: 'TestSubjekt',
-            difficulty: 'easy',
-        };
-
         return (
             <div className="add-task">
-                <div className="flex-row-box">
+                <div className="flex-row-box header">
                     <PageHeader mainTitle={t.t('page.addTask.title', 'Create new task')} />
                     <Button styleType="primary" name={t.t('page.addTask.publish', 'publish')} />
                 </div>
-                <div className="flex-row-box">
+                <div className="flex-row-box first-row">
                     <TextInput
                         placeholder={t.t('page.addTask.packageTitle', 'Task package title')}
                         onChange={(value) => addTaskStore.setTitle(value)}
+                        width="16.5rem"
+                        height="1.8rem"
                     />
                     <ComboBox
                         data={['Test1', 'Test2']}
@@ -61,10 +56,28 @@ class AddTask extends React.Component {
                         value={addTaskStore.selectedSubject}
                     />
                 </div>
-                <div className="flex-row-box">
-                    <DifficultyLabel difficulty={DifficultyEnum.EASY} />
-                    <DifficultyLabel difficulty={DifficultyEnum.MEDIUM} />
-                    <DifficultyLabel difficulty={DifficultyEnum.HARD} />
+                <div className="flex-row-box second-row">
+                    {/* TODO: write am map function} */}
+                    <div className="flex-row-box difficulty-labels">
+                        <DifficultyLabel
+                            difficulty={DifficultyEnum.EASY}
+                            selected={addTaskStore.selectedDifficulty === DifficultyEnum.EASY}
+                            onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.EASY)}
+                            className="difficulty"
+                        />
+                        <DifficultyLabel
+                            difficulty={DifficultyEnum.MEDIUM}
+                            selected={addTaskStore.selectedDifficulty === DifficultyEnum.MEDIUM}
+                            onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.MEDIUM)}
+                            className="difficulty"
+                        />
+                        <DifficultyLabel
+                            difficulty={DifficultyEnum.HARD}
+                            selected={addTaskStore.selectedDifficulty === DifficultyEnum.HARD}
+                            onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.HARD)}
+                            className="difficulty"
+                        />
+                    </div>
                     <ComboBox
                         data={['Test1', 'Test2']}
                         height="1.6rem"
@@ -75,14 +88,15 @@ class AddTask extends React.Component {
                         value={addTaskStore.selectedLecture}
                     />
                 </div>
-                <div className="flex-row-box">
+                <div className="flex-row-box third-row">
                     <TextInput
                         placeholder={t.t('page.addTask.description', 'Description of the Task')}
                         rows={5}
                         onChange={(value) => addTaskStore.setDescription(value)}
+                        width="100%"
                     />
                 </div>
-                <div className="flex-row-box Task-container">
+                <div className="flex-column-box Task-container">
                     {addTaskStore.taskList.map((task, index) => {
                         return (
                             <AddQuestion

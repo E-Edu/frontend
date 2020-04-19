@@ -5,7 +5,7 @@ class AddTaskStore {
     @observable title: string = '';
     @observable subjectList: string[] = [];
     @observable selectedSubject: string = '';
-    @observable selectedDifficulty: DifficultyEnum = DifficultyEnum.EASY;
+    @observable selectedDifficulty: DifficultyEnum = DifficultyEnum.UNKNOWN;
     @observable lectureList: string[] = [];
     @observable selectedLecture: string = '';
     @observable description: string = '';

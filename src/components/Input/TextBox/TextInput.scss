@@ -1,12 +1,11 @@
 @import '../../../css/styles';
 
 .text-box {
-  border: 0.133rem solid #1c2541;
-  border-radius: 0.667rem;
+  border: 1px solid #c6c6c6;
+  border-radius: 8px;
   box-sizing: border-box;
   padding: 5px;
   resize: vertical;
-  width: 100%;
 
   &:focus {
     outline: none; // Chrome

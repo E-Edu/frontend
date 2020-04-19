@@ -1,6 +1,7 @@
 import React from 'react';
 import './ComboBox.scss';
 import { ChevronDown, ChevronUp } from 'react-feather';
+import { observer } from 'mobx-react';
 
 interface ComboBoxState {
     isVisible: boolean;
@@ -14,6 +15,7 @@ interface ComboBoxProps {
     callbackValue: (value: string) => void;
 }
 
+@observer
 class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
     constructor(props) {
         super(props);
