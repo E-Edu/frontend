@@ -19,10 +19,10 @@ interface SitesItems {
 
 class Sidebar extends React.Component<SidebarProps> {
     permission = {
-        user: 0,
+        admin: 3,
         privilegedStudent: 1,
         teacher: 2,
-        admin: 3,
+        user: 0,
     };
 
     render() {
@@ -30,17 +30,17 @@ class Sidebar extends React.Component<SidebarProps> {
         const permission = 3; // TODO: get this from user-ms
         const sites: SitesItems[] = [
             {
-                label: 'Home',
                 iconName: 'home',
-                route: 'dashboard',
+                label: 'Home',
                 permission: PermissionEnum.USER,
+                route: 'dashboard',
                 spacerBefore: false,
             },
             {
-                label: 'Neue Aufgabe',
                 iconName: 'plus-circle',
-                route: 'task/add',
+                label: 'Neue Aufgabe',
                 permission: PermissionEnum.ADMIN,
+                route: 'task/add',
                 spacerBefore: true,
             },
         ];
