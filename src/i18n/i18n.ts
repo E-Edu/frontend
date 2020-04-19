@@ -5,14 +5,14 @@ import en from './en/resource.json';
 
 i18n.use(initReactI18next).init({
     debug: true,
+    defaultNS: 'translation',
     fallbackLng: 'de',
+    interpolation: { escapeValue: false },
     lng: 'en',
     load: 'all',
     ns: ['translation'],
-    defaultNS: 'translation',
-    resources: { de: { translation: de }, en: { translation: en } },
     react: { wait: true },
-    interpolation: { escapeValue: false },
+    resources: { de: { translation: de }, en: { translation: en } },
 });
 
 // eslint-disable-next-line
