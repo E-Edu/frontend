@@ -62,18 +62,21 @@ class AddTask extends React.Component {
                         <DifficultyLabel
                             difficulty={DifficultyEnum.EASY}
                             selected={addTaskStore.selectedDifficulty === DifficultyEnum.EASY}
+                            isSelectable
                             onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.EASY)}
                             className="difficulty"
                         />
                         <DifficultyLabel
                             difficulty={DifficultyEnum.MEDIUM}
                             selected={addTaskStore.selectedDifficulty === DifficultyEnum.MEDIUM}
+                            isSelectable
                             onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.MEDIUM)}
                             className="difficulty"
                         />
                         <DifficultyLabel
                             difficulty={DifficultyEnum.HARD}
                             selected={addTaskStore.selectedDifficulty === DifficultyEnum.HARD}
+                            isSelectable
                             onClick={() => addTaskStore.setSelectedDifficulty(DifficultyEnum.HARD)}
                             className="difficulty"
                         />

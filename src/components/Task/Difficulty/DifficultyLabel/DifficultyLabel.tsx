@@ -6,6 +6,7 @@ import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
 interface DifficultyLabelProps {
     difficulty: DifficultyEnum;
+    isSelectable?: boolean;
     selected?: boolean;
     onClick?: () => void;
     className?: string;
@@ -14,13 +15,13 @@ interface DifficultyLabelProps {
 @observer
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
-        const { difficulty, selected } = this.props;
+        const { difficulty, selected, isSelectable } = this.props;
         let text;
         let backgroundColor;
         let borderColor;
-        const opacityActive = 0.5;
-        const opacityInactive = 0.3;
-        const opacity = selected ? opacityActive : opacityInactive;
+        const opacityActive = 0.3;
+        const opacityInactive = 0;
+        const opacity = !selected && isSelectable ? opacityInactive : opacityActive;
         switch (difficulty) {
             case DifficultyEnum.EASY:
                 text = t.t('component.task.difficulty.easy', 'Easy');
@@ -48,6 +49,7 @@ class DifficultyLabel extends React.Component<DifficultyLabelProps> {
                 style={{
                     backgroundColor,
                     borderColor,
+                    cursor: isSelectable ? 'pointer' : null,
                 }}
                 onClick={this.props.onClick}
                 role="button"
