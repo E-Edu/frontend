@@ -57,7 +57,8 @@
       "publish": "publish",
       "title": "Create new task",
       "packageTitle": "Task package title",
-      "description": "Description of the Task"
+      "description": "Description of the Task",
+      "addNewTask": "Add new Task"
     },
     "addTeacher": {
       "emailOfTeacher": "Teachers email",

@@ -34,8 +34,8 @@
     "task": {
       "difficulty": {
         "easy": "Einfach",
-        "hard": "Mittel",
-        "medium": "Schwer",
+        "hard": "Schwer",
+        "medium": "Mittel",
         "unknown": "Unbekannt"
       },
       "add": {
@@ -57,7 +57,8 @@
       "publish": "veröffentlichen",
       "title": "Neue Frage erstellen",
       "packageTitle": "Aufgabenpacktitel",
-      "description": "Beschreibung der Aufgabe"
+      "description": "Beschreibung der Aufgabe",
+      "addNewTask": "Neue Frage hinzufügen"
     },
     "addTeacher": {
       "emailOfTeacher": "Email des Lehrers",

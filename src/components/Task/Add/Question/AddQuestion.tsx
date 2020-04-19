@@ -1,8 +1,10 @@
 import React from 'react';
 import './AddQuestion.scss';
 import { observer } from 'mobx-react';
+import { Plus } from 'react-feather';
 import TextInput from '../../../Input/TextBox/TextInput';
 import MultipleChoiceAnswer from '../MultipleChoiceAnswer/MultipleChoiceAnswer';
+import { t } from '../../../../i18n/i18n';
 
 interface AddQuestionProps {
     questions: { title: string; description: string; answers: { value: string; selected: boolean }[] }[];
@@ -19,12 +21,6 @@ interface AddQuestionProps {
 
 @observer
 class AddQuestion extends React.Component<AddQuestionProps> {
-    constructor(props) {
-        super(props);
-        // add empty question
-        this.props.addQuestion({ title: '', description: '', answers: [{ value: '', selected: false }] });
-    }
-
     getQuestion = () => {
         return this.props.questions[this.props.questionIndex];
     };
@@ -75,12 +71,18 @@ class AddQuestion extends React.Component<AddQuestionProps> {
         const question = this.getQuestion();
         return (
             <div className="multiplechoice">
-                {/* TODO translate this */}
-                <TextInput placeholder="Question Title" onChange={this.changeTitleHandler} />
-                <TextInput placeholder="Question Description" rows={5} onChange={this.changeDescriptionHandler} />
+                <TextInput
+                    placeholder={t.t('component.task.add.question.title', 'Title of question')}
+                    onChange={this.changeTitleHandler}
+                />
+                <TextInput
+                    placeholder={t.t('component.task.add.question.description', 'Description of question')}
+                    rows={5}
+                    onChange={this.changeDescriptionHandler}
+                />
                 <div className="answer">
                     {question.answers.map((value, index) => {
-                        const name = `Answer ${letters[index]}`;
+                        const name = `${t.t('component.task.add.question.answer', 'Answer')} ${letters[index]}`;
                         return (
                             <MultipleChoiceAnswer
                                 placeholder={name}
@@ -92,7 +94,8 @@ class AddQuestion extends React.Component<AddQuestionProps> {
                     })}
                     {question.answers.length < letters.length ? (
                         <div onClick={this.addAnswerHandler} className="add-answer" role="button" tabIndex={0}>
-                            <p style={{ margin: '0' }}>Add Answer</p>
+                            <Plus style={{ marginRight: '0.5rem' }} />
+                            <p style={{ margin: '0' }}>{t.t('component.task.add.question.addAnswer', 'Add answer')}</p>
                         </div>
                     ) : null}
                 </div>
