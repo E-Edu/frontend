@@ -1,16 +1,102 @@
 @import './src/css/styles';
 
 .settings {
-  padding-left: 3rem;
-  position: relative;
-  width: 100%;
+  margin-left: 10%;
+  width: 80%;
 
-  .settings-content {
-    color: #3a506b;
-    position: relative;
+  .header {
+    margin-top: 2rem;
+
+    span {
+      color: $color-bluegrey;
+      font-size: 4rem;
+    }
   }
 
-  .topic {
-    font-size: 1.667rem;
+  .flex-row-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .flex-column-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .content {
+    margin: 4rem 0 0;
+
+    .left {
+      width: 50%;
+
+      .labels {
+        .email,
+        .name,
+        .surname,
+        .language {
+          margin-top: 1rem;
+        }
+      }
+
+      .inputs {
+        .email,
+        .name,
+        .surname,
+        .language {
+          margin-top: 1rem;
+        }
+      }
+
+      .get-account-data {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .right {
+      justify-content: flex-end;
+      width: 50%;
+
+      .labels {
+        .password-old,
+        .password-new {
+          margin-top: 1rem;
+        }
+      }
+
+      .inputs {
+        .password-old,
+        .password-new {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .labels {
+      span {
+        color: $color-grey;
+        font-size: 1.5rem;
+      }
+    }
+
+    .inputs {
+      .text-input,
+      .multi-input {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  .actions {
+    bottom: 2.69rem;
+    position: absolute;
+    right: 10%;
+
+    .save {
+      margin-left: 2rem;
+    }
   }
 }

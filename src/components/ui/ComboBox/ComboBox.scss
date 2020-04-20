@@ -4,7 +4,9 @@
 .combo-box {
   appearance: none;
   border: #c6c6c6 solid 1px;
+  box-sizing: border-box;
   outline: none;
+  padding: 5px;
 }
 
 .combo-box-opened {

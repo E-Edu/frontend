@@ -10,6 +10,7 @@ interface ComboBoxProps {
     disable?: boolean;
     width?: string;
     height?: string;
+    className?: string;
     placeholder: string;
     data: string[];
     value: string;
@@ -36,11 +37,12 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
     }
 
     render() {
-        const { width, height, value, data } = this.props;
+        const { width, height, value, data, className } = this.props;
         const { isVisible } = this.state;
 
         const getData = data.map((item, index) => {
             return (
+                // TODO: Placeholder has the wrong style
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
                 <li style={{ width, height }} key={index} onClick={() => this.setElement(index)}>
                     {item}
@@ -49,7 +51,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
         });
 
         return (
-            <div>
+            <div className={className}>
                 <input
                     className={this.state.isVisible ? 'combo-box-opened combo-box' : 'combo-box-closed combo-box'}
                     style={{ width, height }}

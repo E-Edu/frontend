@@ -8,13 +8,18 @@ interface ButtonState {
 
 interface ButtonProps {
     disable?: boolean;
+    className?: string;
     styleType?: string;
     type?: 'button' | 'submit' | 'reset';
     name?: string;
+    width?: string;
+    height?: string;
+    fontSize?: string;
 }
 
 class Button extends React.Component<ButtonProps, ButtonState> {
     render() {
+        const { width, height, fontSize, className } = this.props;
         let classes = this.props.styleType || 'Primary';
         if (this.props.disable) {
             classes += ' disabled';
@@ -22,7 +27,11 @@ class Button extends React.Component<ButtonProps, ButtonState> {
         return (
             // eslint bug with props
             // eslint-disable-next-line
-            <button type={this.props.type} className={`button ${classes}`} disabled={this.props.disable || false}>
+            <button
+                type={this.props.type}
+                className={`button ${classes} ${className}`}
+                disabled={this.props.disable || false}
+                style={{ width, height, fontSize }}>
                 {this.props.name || 'Default'}
             </button>
         );

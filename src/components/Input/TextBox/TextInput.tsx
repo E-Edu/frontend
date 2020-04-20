@@ -10,11 +10,12 @@ interface TextInputProps {
     rows?: number;
     width?: string;
     height?: string;
+    type?: 'password';
 }
 
 class TextInput extends React.Component<TextInputProps> {
     render() {
-        const { placeholder, onChange, maxWidth, className, rows, width, height } = this.props;
+        const { placeholder, onChange, maxWidth, className, rows, width, height, type } = this.props;
         let { shadow } = this.props;
 
         const style: any = {}; // TODO Check if this is necessary and fix it
@@ -51,6 +52,7 @@ class TextInput extends React.Component<TextInputProps> {
                 placeholder={placeholder}
                 onChange={onChange}
                 style={{ width, height }}
+                type={type}
             />
         );
     }
