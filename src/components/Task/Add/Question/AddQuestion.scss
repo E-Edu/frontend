@@ -1,0 +1,55 @@
+.multiplechoice {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+
+  .question-title {
+    margin-top: 0.4rem;
+  }
+
+  .question-description {
+    margin-top: 1rem;
+  }
+
+  .answers {
+    display: grid;
+    grid-column-gap: 3rem;
+    grid-row-gap: 1.3rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1rem;
+
+    @media (max-width: 1279px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 2300px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .multiplechoice-answer {
+      height: 1.69rem;
+    }
+  }
+
+  .add-answer {
+    align-items: center;
+    border: 0.133rem solid #1c2541;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    height: 1.69rem;
+    justify-content: center;
+    margin-left: 1.3rem;
+    padding: 5px; // to convert this to rem, change this also in TextInput.scss
+    text-align: center;
+
+    &:focus {
+      outline: none; // Chrome
+    }
+  }
+}
