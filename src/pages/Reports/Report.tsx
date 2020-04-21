@@ -22,6 +22,7 @@ interface ReportProps {
 }
 
 class Report extends React.Component<ReportProps> {
+    // TODO: Statemangment with mbox for ReportInfo
     /* nullSubtrahend = '1';
 
     // like: 0 - not liked, 1 - liked, 2 -disliked
