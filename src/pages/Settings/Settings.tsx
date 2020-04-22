@@ -23,21 +23,21 @@ class Settings extends Component {
                     <div className="left flex-column-box">
                         <div className="flex-row-box">
                             <div className="labels flex-column-box">
-                                <div className="email flex-row-box">
+                                <div className="text-label flex-row-box">
                                     <span>Email</span>
                                 </div>
-                                <div className="name flex-row-box">
-                                    <span>Name</span>
-                                </div>
-                                <div className="surname flex-row-box">
-                                    <span>Nachname</span>
-                                </div>
-                                <div className="language flex-row-box">
+                                <div className="text-label flex-row-box">
                                     <span>Sprache</span>
+                                </div>
+                                <div className="text-label flex-row-box">
+                                    <span>Altes Passwort</span>
+                                </div>
+                                <div className="text-label flex-row-box">
+                                    <span>Neues Passwort</span>
                                 </div>
                             </div>
                             <div className="inputs flex-column-box">
-                                <div className="email flex-row-box">
+                                <div className="input flex-row-box">
                                     <TextInput
                                         placeholder="test@test.de"
                                         width="20rem"
@@ -46,25 +46,7 @@ class Settings extends Component {
                                         className="text-input"
                                     />
                                 </div>
-                                <div className="name flex-row-box">
-                                    <TextInput
-                                        placeholder="Hans"
-                                        width="20rem"
-                                        height="1.69rem"
-                                        onChange={(value) => settingsStore.setName(value)}
-                                        className="text-input"
-                                    />
-                                </div>
-                                <div className="surname flex-row-box">
-                                    <TextInput
-                                        placeholder="Peter"
-                                        width="20rem"
-                                        height="1.69rem"
-                                        onChange={(value) => settingsStore.setSurname(value)}
-                                        className="text-input"
-                                    />
-                                </div>
-                                <div className="language flex-row-box">
+                                <div className="input flex-row-box">
                                     <ComboBox
                                         placeholder="Sprache"
                                         data={['Deutsch', 'Englisch']}
@@ -75,61 +57,49 @@ class Settings extends Component {
                                         className="multi-input"
                                     />
                                 </div>
+                                <div className="input flex-row-box">
+                                    <TextInput
+                                        placeholder="**********"
+                                        width="20rem"
+                                        height="1.69rem"
+                                        onChange={(value) => settingsStore.setOldPassword(value)}
+                                        className="text-input"
+                                        type="password"
+                                    />
+                                </div>
+                                <div className="input flex-row-box">
+                                    <TextInput
+                                        placeholder="**********"
+                                        width="20rem"
+                                        height="1.69rem"
+                                        onChange={(value) => settingsStore.setNewPassword(value)}
+                                        className="text-input"
+                                        type="password"
+                                    />
+                                </div>
                             </div>
                         </div>
                         <Button
                             name="Account Daten Anfordern"
                             type="button"
                             styleType="secondary"
-                            width="29.2rem"
+                            width="33rem"
                             height="2.69rem"
                             fontSize="23px"
                             className="get-account-data"
                         />
-                    </div>
-                    <div className="right flex-row-box">
-                        <div className="labels flex-column-box">
-                            <div className="password-old flex-row-box">
-                                <span>Altes Passwort</span>
-                            </div>
-                            <div className="password-new flex-row-box">
-                                <span>Neues Passwort</span>
-                            </div>
-                        </div>
-                        <div className="inputs flex-column-box">
-                            <div className="password-old flex-row-box">
-                                <TextInput
-                                    placeholder="**********"
-                                    width="20rem"
-                                    height="1.69rem"
-                                    onChange={(value) => settingsStore.setOldPassword(value)}
-                                    className="text-input"
-                                    type="password"
-                                />
-                            </div>
-                            <div className="password-new flex-row-box">
-                                <TextInput
-                                    placeholder="**********"
-                                    width="20rem"
-                                    height="1.69rem"
-                                    onChange={(value) => settingsStore.setNewPassword(value)}
-                                    className="text-input"
-                                    type="password"
-                                />
-                            </div>
-                        </div>
+                        <Button
+                            name="Account löschen"
+                            type="button"
+                            styleType="secondary"
+                            width="33rem"
+                            height="2.69rem"
+                            fontSize="23px"
+                            className="delete-data"
+                        />
                     </div>
                 </div>
                 <div className="actions flex-row-box">
-                    <Button
-                        name="Account löschen"
-                        type="button"
-                        styleType="secondary"
-                        width="15rem"
-                        height="2.69rem"
-                        fontSize="23px"
-                        className="delete-data"
-                    />
                     <Button
                         name="Speichern"
                         type="button"

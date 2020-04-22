@@ -34,44 +34,19 @@
       width: 50%;
 
       .labels {
-        .email,
-        .name,
-        .surname,
-        .language {
+        .text-label {
           margin-top: 1rem;
         }
       }
 
       .inputs {
-        .email,
-        .name,
-        .surname,
-        .language {
+        .input {
           margin-top: 1rem;
         }
       }
 
       .get-account-data {
         margin-top: 1.5rem;
-      }
-    }
-
-    .right {
-      justify-content: flex-end;
-      width: 50%;
-
-      .labels {
-        .password-old,
-        .password-new {
-          margin-top: 1rem;
-        }
-      }
-
-      .inputs {
-        .password-old,
-        .password-new {
-          margin-top: 1rem;
-        }
       }
     }
 
@@ -87,6 +62,10 @@
       .multi-input {
         margin-left: 2rem;
       }
+    }
+
+    .delete-data {
+      margin-top: 1rem;
     }
   }
 
