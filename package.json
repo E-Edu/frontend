@@ -38,7 +38,7 @@
     "lint:all": "npm run lint:eslint && npm run lint:style",
     "lint:fix": "npm run lint:eslint -- --fix && stylelint \"./src/**/*.scss\" --fix",
     "lint:tslint": "tslint",
-    "i18n": "i18next-scanner --config i18next-scanner.config.js 'src/**/*.{js,jsx}'",
+    "i18n": "i18next-scanner --config i18next-scanner.config.js 'src/**/*.{ts,tsx}'",
     "test:open": "cypress open",
     "test:run": "cypress run"
   },

@@ -1,72 +1,62 @@
 import React from 'react';
-import colorData from '../../../../lib/Colors.json';
 import './DifficultyLabel.scss';
+import { observer } from 'mobx-react';
 import { t } from '../../../../i18n/i18n';
 import { DifficultyEnum } from '../../../../models/difficulty.enum';
 
 interface DifficultyLabelProps {
     difficulty: DifficultyEnum;
+    isSelectable?: boolean;
+    selected?: boolean;
+    onClick?: () => void;
+    className?: string;
 }
 
+@observer
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
-        const { difficulty } = this.props;
-        const colors = colorData.difficultyColor;
-        let color;
-        if (difficulty in colors) {
-            color = colorData.difficultyColor[difficulty];
-        } else {
-            color = colorData.difficultyColor.UNKNOWN;
-        }
-        const { backgroundColor } = color;
-        const { borderColor } = color;
-
+        const { difficulty, selected, isSelectable } = this.props;
+        let text;
+        let backgroundColor;
+        let borderColor;
+        const opacityActive = 0.3;
+        const opacityInactive = 0;
+        const opacity = !selected && isSelectable ? opacityInactive : opacityActive;
         switch (difficulty) {
             case DifficultyEnum.EASY:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.easy', 'Easy')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.easy', 'Easy');
+                backgroundColor = `rgba(25, 186, 63, ${opacity})`;
+                borderColor = 'rgba(25, 186, 63, 1)';
+                break;
             case DifficultyEnum.MEDIUM:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.medium', 'Medium')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.medium', 'Medium');
+                backgroundColor = `rgba(255, 186, 0, ${opacity})`;
+                borderColor = 'rgba(255, 186, 0, 1)';
+                break;
             case DifficultyEnum.HARD:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.hard', 'Hard')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.hard', 'Hard');
+                backgroundColor = `rgba(186, 25, 25, ${opacity})`;
+                borderColor = 'rgba(186, 25, 25, 1)';
+                break;
             default:
-                return (
-                    <span
-                        className="difficulty-label"
-                        style={{
-                            backgroundColor,
-                            borderColor,
-                        }}>
-                        {t.t('component.task.difficulty.unknown', 'Unknown')}
-                    </span>
-                );
+                text = t.t('component.task.difficulty.unknown', 'Unknown');
+                backgroundColor = `rgba(80, 80, 80, ${opacity})`;
+                borderColor = 'rgba(80, 80, 80, 1)';
         }
+        return (
+            <span
+                className={`difficulty-label ${this.props.className}`}
+                style={{
+                    backgroundColor,
+                    borderColor,
+                    cursor: isSelectable ? 'pointer' : null,
+                }}
+                onClick={this.props.onClick}
+                role="button"
+                tabIndex={0}>
+                {text}
+            </span>
+        );
     }
 }
 
