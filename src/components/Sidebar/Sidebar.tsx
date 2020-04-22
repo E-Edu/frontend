@@ -68,8 +68,8 @@ class Sidebar extends React.Component<SidebarProps> {
             <div className={`menu ${this.props.className}`}>
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
-                    <MenuElement name="" key={0} file="settings" url="settings" active={active === 'settings'} />
-                    <MenuElement name="" key={1} file="user" url="profile" active={active === 'profile'} />
+                    <MenuElement name="" key={0} file="settings" url="settings" active={active === '/settings'} />
+                    <MenuElement name="" key={1} file="user" url="profile" active={active === '/profile'} />
                 </div>
             </div>
         );

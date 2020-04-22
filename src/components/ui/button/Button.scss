@@ -3,22 +3,16 @@
 
 .button {
   border: 3px solid #5bc0be;
-  border-radius: 10px;
+  border-radius: 8px;
+  cursor: pointer;
   font: Medium 26px/42px HindSiliguri-Regular, sans-serif;
   font-size: 26px;
   height: 50px;
   letter-spacing: 0;
+  outline: none;
   text-align: center;
   transition: 0.2s;
   width: 150px;
-
-  :hover {
-    cursor: pointer;
-  }
-
-  :focus {
-    outline: none;
-  }
 }
 
 .primary {
@@ -32,7 +26,8 @@
 
 .secondary {
   background-color: transparent;
-  color: #5bc0be;
+  border-color: #c6c6c6;
+  color: #c6c6c6;
 
   :hover {
     background-color: rgba(91, 192, 190, 0.2);
