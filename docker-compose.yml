@@ -8,9 +8,3 @@ services:
       - 5004:80
     environment:
       - SENTRY_ENVIRONMENT=production
-  frontend-runner:
-    image: tcardonne/github-runner:latest
-    environment:
-      RUNNER_NAME: 'de.the-morpheus.e-edu.frontend'
-      RUNNER_REPOSITORY_URL: 'https://github.com/E-Edu/frontend'
-      GITHUB_ACCESS_TOKEN: '01ee4e0bceb0abc26622559a9f68d1b952d2668a'
