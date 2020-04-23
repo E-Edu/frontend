@@ -44,15 +44,15 @@ class Sidebar extends React.Component<SidebarProps> {
                 spacerBefore: true,
             },
         ];
-        const sitesHtml = sites.map((site, index) => {
+        const sitesHtml = sites.map((site) => {
             if (permission >= site.permission) {
                 return (
                     <MenuElement
+                        key={site.route}
                         name={site.label}
                         file={site.iconName}
                         url={site.route}
                         active={this.props.active === `/${site.route}`}
-                        key={index}
                         spacer={site.spacerBefore}
                     />
                 );
@@ -63,13 +63,18 @@ class Sidebar extends React.Component<SidebarProps> {
         if (!this.props.visible) {
             return null;
         }
-
         return (
             <div className={`menu ${this.props.className}`}>
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
-                    <MenuElement name="" key={0} file="settings" url="settings" active={active === '/settings'} />
-                    <MenuElement name="" key={1} file="user" url="profile" active={active === '/profile'} />
+                    <MenuElement
+                        key="settings"
+                        name=""
+                        file="settings"
+                        url="settings"
+                        active={active === '/settings'}
+                    />
+                    <MenuElement key="user" name="" file="user" url="profile" active={active === '/profile'} />
                 </div>
             </div>
         );

@@ -63,7 +63,7 @@ module.exports = {
         'no-debugger': 'error',
         'react/jsx-indent': 'off',
         'no-use-before-define': 'off',
-        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.tsx'] }],
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'space-infix-ops': 'error',

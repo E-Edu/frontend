@@ -27,7 +27,7 @@ class Button extends React.Component<ButtonProps, ButtonState> {
         }
         return (
             // eslint bug with props
-            // eslint-disable-next-line
+            // eslint-disable-next-line react/button-has-type
             <button
                 type={this.props.type}
                 className={`button ${classes} ${className}`}
