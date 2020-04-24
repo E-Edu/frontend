@@ -5,6 +5,7 @@ import { observer } from 'mobx-react';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import { t } from '../../i18n/i18n';
+import Validation from '../../lib/validation';
 import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 import AddTeacherStore from '../../store/addTeacher.store';
 
@@ -26,9 +27,7 @@ class AddTeacher extends React.Component {
     };
 
     isValidEmail() {
-        const regex =
-            '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])';
-        return addTeacherStore.email.match(regex) !== null;
+        return Validation.validateEmail(addTeacherStore.email);
     }
 
     renderRequests() {
