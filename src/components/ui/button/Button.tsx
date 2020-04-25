@@ -15,11 +15,12 @@ interface ButtonProps {
     width?: string;
     height?: string;
     fontSize?: string;
+    onClick?: any;
 }
 
 class Button extends React.Component<ButtonProps, ButtonState> {
     render() {
-        const { width, height, fontSize, className } = this.props;
+        const { width, height, fontSize, className, onClick } = this.props;
         let classes = this.props.styleType || 'Primary';
         if (this.props.disable) {
             classes += ' disabled';
@@ -31,7 +32,8 @@ class Button extends React.Component<ButtonProps, ButtonState> {
                 type={this.props.type}
                 className={`button ${classes} ${className}`}
                 disabled={this.props.disable || false}
-                style={{ width, height, fontSize }}>
+                style={{ width, height, fontSize }}
+                onClick={onClick}>
                 {this.props.name || 'Default'}
             </button>
         );
