@@ -26,7 +26,7 @@ class Sidebar extends React.Component<SidebarProps> {
     };
 
     render() {
-        const { active } = this.props;
+        const { active, visible, className } = this.props;
         const permission = 3; // TODO: get this from user-ms
         const sites: SitesItems[] = [
             {
@@ -49,22 +49,23 @@ class Sidebar extends React.Component<SidebarProps> {
                 return (
                     <MenuElement
                         key={site.route}
+                        keyProp={site.route}
                         name={site.label}
                         file={site.iconName}
                         url={site.route}
-                        active={this.props.active === `/${site.route}`}
+                        active={active === `/${site.route}`}
                         spacer={site.spacerBefore}
                     />
                 );
             }
-            return '';
+            return null;
         });
 
-        if (!this.props.visible) {
+        if (!visible) {
             return null;
         }
         return (
-            <div className={`menu ${this.props.className}`}>
+            <div className={`menu ${className}`}>
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
                     <MenuElement
@@ -73,6 +74,7 @@ class Sidebar extends React.Component<SidebarProps> {
                         file="settings"
                         url="settings"
                         active={active === '/settings'}
+                        spacer
                     />
                     <MenuElement key="user" name="" file="user" url="profile" active={active === '/profile'} />
                 </div>

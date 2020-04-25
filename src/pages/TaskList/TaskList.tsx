@@ -10,12 +10,6 @@ import TextInput from '../../components/Input/TextBox/TextInput';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 import TaskListStore from '../../store/taskList.store';
 
-interface TaskModel {
-    id: string;
-    description: string;
-    difficulty: DifficultyEnum;
-}
-
 const taskListStore = new TaskListStore();
 
 @observer

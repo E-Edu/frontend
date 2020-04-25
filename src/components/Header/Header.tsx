@@ -37,7 +37,7 @@ class Header extends React.Component<HeaderInterface> {
                                 <h1 className="title">E-EDU</h1>
                             </div>
                         </Link>
-                        <div id="button-box-dashboard">
+                        <div className="button-box-dashboard">
                             <Link
                                 to={{ pathname: '/imprint', state: { prevPath: 'Dashboard' } }}
                                 className="btn-dash btn-info">

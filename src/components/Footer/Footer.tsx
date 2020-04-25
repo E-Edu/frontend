@@ -26,7 +26,7 @@ class Footer extends React.Component<FooterProps> {
                         Credits
                     </Link>
                     <a href="https://github.com/E-Edu/general" className="github-link">
-                        <GitHub color="#5bc0be" />
+                        <GitHub color="#5bc0be" style={{ marginBottom: '-0.4rem' }} />
                     </a>
                 </div>
                 <div className="copyright">

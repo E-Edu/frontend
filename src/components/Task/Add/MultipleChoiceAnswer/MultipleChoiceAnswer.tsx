@@ -5,7 +5,7 @@ import TextInput from '../../../Input/TextBox/TextInput';
 interface MultipleChoiceAnswerProps {
     selectHandler: any;
     onChangeHandler: any;
-    selected?: boolean;
+    selected?: boolean; // TODO: Where used??
     placeholder: string;
 }
 

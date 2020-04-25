@@ -7,10 +7,11 @@ import icons from '../icons';
 
 interface MenuElementProps {
     active?: boolean;
-    url?: string | number | boolean;
-    file?: string | number | boolean;
-    name?: string | number | boolean;
+    url?: string;
+    file?: string;
+    name?: string;
     spacer?: boolean;
+    keyProp?: string;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
@@ -37,18 +38,18 @@ class MenuElement extends React.Component<MenuElementProps> {
     };
 
     render() {
-        const { active, file, name } = this.props;
-        let spacer: any;
-        if (this.props.spacer) {
-            spacer = (
+        const { active, file, name, keyProp, url, spacer } = this.props;
+        let spacerElement: any;
+        if (spacer) {
+            spacerElement = (
                 <div
                     style={{
-                        width: 60,
-                        borderWidth: 2,
+                        alignSelf: 'center',
                         backgroundColor: '#ffffff',
                         borderRadius: 2,
+                        borderWidth: 2,
                         height: 1,
-                        alignSelf: 'center',
+                        width: 60,
                     }}
                 />
             );
@@ -65,10 +66,10 @@ class MenuElement extends React.Component<MenuElementProps> {
             nameText = (
                 <p
                     style={{
+                        color,
                         margin: '0 0.8rem',
                         overflowWrap: 'break-word',
                         textAlign: 'center',
-                        color,
                     }}>
                     {name}
                 </p>
@@ -78,14 +79,15 @@ class MenuElement extends React.Component<MenuElementProps> {
         // @ts-ignore
         const File = icons[file];
         return [
-            spacer,
+            spacerElement,
             <Link
-                to={`/${this.props.url}`}
+                to={`/${url}`}
                 className="menu-element"
+                key={keyProp}
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File color={color} fill="none" />
+                <File color={color} fill="none" key={keyProp} />
                 {nameText}
             </Link>,
         ];

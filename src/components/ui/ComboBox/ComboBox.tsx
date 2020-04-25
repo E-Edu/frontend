@@ -44,7 +44,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
             return (
                 // TODO: Placeholder has the wrong style
                 // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-                <li style={{ width, height }} key={index} onClick={() => this.setElement(index)}>
+                <li style={{ height }} key={item} onClick={() => this.setElement(index)}>
                     {item}
                 </li>
             );
@@ -75,7 +75,7 @@ class ComboBox extends React.Component<ComboBoxProps, ComboBoxState> {
                         color="#5BC0BE"
                     />
                 )}
-                {isVisible ? <ul>{getData}</ul> : null}
+                {isVisible ? <ul style={{ width }}>{getData}</ul> : null}
             </div>
         );
     }

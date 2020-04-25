@@ -1,6 +1,7 @@
 @import './src/css/styles';
 
 .result-content-header {
+  margin-top: 1rem;
   width: 100%;
 
   .result-left {
@@ -72,7 +73,10 @@
       }
     }
   }
+}
 
+.task-content-list {
+  margin-top: 4rem;
 }
 
 .task-list {

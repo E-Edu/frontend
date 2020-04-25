@@ -9,13 +9,10 @@ import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 import ProfileStore from '../../store/profile.store';
 
-// tslint:disable-next-line:no-empty-interface
-interface ProfileProps {}
-
 const profileStore = new ProfileStore();
 
 @observer
-class Profile extends React.Component<ProfileProps> {
+class Profile extends React.Component {
     usernameClickListener = () => {
         profileStore.setDisabled(!profileStore.disabled);
     };

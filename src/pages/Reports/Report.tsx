@@ -9,7 +9,7 @@ import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/Di
 import colorData from '../../lib/Colors.json';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
-// TODO REVISION
+// TODO REVISION AND REWRITE
 
 interface ReportProps {
     teacher?: string;

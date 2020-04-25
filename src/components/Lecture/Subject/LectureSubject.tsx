@@ -9,6 +9,7 @@ interface LectureSubjectProps {
 
 class LectureSubject extends React.Component<LectureSubjectProps> {
     render() {
+        const { name } = this.props;
         return (
             <div className="lecture-subject-wrapper">
                 <Link to="/task/list" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -16,7 +17,7 @@ class LectureSubject extends React.Component<LectureSubjectProps> {
                         <span className="icon-container">
                             <Codepen size="30" />
                         </span>
-                        <p className="lecture-subject-title">{this.props.name}</p>
+                        <p className="lecture-subject-title">{name}</p>
                     </div>
                 </Link>
             </div>

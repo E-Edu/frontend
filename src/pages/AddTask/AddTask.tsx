@@ -12,13 +12,6 @@ import AddTaskStore from '../../store/addTask.store';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
-interface Task {
-    Name: string;
-    Subjekt: string;
-    Module: string;
-    difficulty: string;
-}
-
 const addTaskStore = new AddTaskStore();
 
 @observer

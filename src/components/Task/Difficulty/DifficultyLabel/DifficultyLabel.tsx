@@ -10,12 +10,13 @@ interface DifficultyLabelProps {
     selected?: boolean;
     onClick?: () => void;
     className?: string;
+    color?: string;
 }
 
 @observer
 class DifficultyLabel extends React.Component<DifficultyLabelProps> {
     render() {
-        const { difficulty, selected, isSelectable } = this.props;
+        const { difficulty, selected, isSelectable, color, className, onClick } = this.props;
         let text;
         let backgroundColor;
         let borderColor;
@@ -45,13 +46,14 @@ class DifficultyLabel extends React.Component<DifficultyLabelProps> {
         }
         return (
             <span
-                className={`difficulty-label ${this.props.className}`}
+                className={`difficulty-label ${className}`}
                 style={{
                     backgroundColor,
                     borderColor,
+                    color,
                     cursor: isSelectable ? 'pointer' : null,
                 }}
-                onClick={this.props.onClick}
+                onClick={onClick}
                 role="button"
                 tabIndex={0}>
                 {text}
