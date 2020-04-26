@@ -7,6 +7,7 @@ class SettingsStore {
     @observable selectedLanguage = '';
     @observable oldPassword = '';
     @observable newPassword = '';
+    @observable confirmationVisible = false;
 
     @action setEmail(email: string) {
         this.email = email;
@@ -25,6 +26,12 @@ class SettingsStore {
     }
     @action setNewPassword(newPassword: string) {
         this.newPassword = newPassword;
+    }
+    @action showConfirmation() {
+        this.confirmationVisible = true;
+    }
+    @action hideConfirmation() {
+        this.confirmationVisible = false;
     }
 }
 
