@@ -5,8 +5,8 @@ import Button from '../../ui/button/Button';
 
 interface ConfirmationProps {
     deleteHandler: any;
+    closeHandler: any;
 }
-
 
 class Confirmation extends React.Component<ConfirmationProps> {
     render() {
@@ -16,6 +16,9 @@ class Confirmation extends React.Component<ConfirmationProps> {
                 <p className="text">Dieser Schritt kann nicht rückgängig gemacht werden</p>
                 <AlertTriangle size="15rem" color="red" />
                 <Button onClick={this.props.deleteHandler} width="20rem" styleType="warning" name="Delete Account" />
+                <button type="button" onClick={this.props.closeHandler} className="button cancel" name="Cancel">
+                    Cancel
+                </button>
             </div>
         );
     }

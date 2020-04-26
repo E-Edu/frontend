@@ -44,7 +44,12 @@ class Settings extends Component {
                         settingsStore.hideConfirmation();
                     }}
                     type="fadeIn">
-                    <Confirmation deleteHandler={this.deleteAccount} />
+                    <Confirmation
+                        deleteHandler={this.deleteAccount}
+                        closeHandler={() => {
+                            settingsStore.hideConfirmation();
+                        }}
+                    />
                 </Modal>
                 <div className="settings">
                     <div className="header">
