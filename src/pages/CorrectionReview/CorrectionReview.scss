@@ -8,17 +8,17 @@
     width: 100%;
 
     h1 {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bold;
       margin-left: 2rem;
     }
 
     .correction-mode {
-      background-color: #5bc0be;
-      border: 0.2rem solid #5bc0be;
+      background-color: $color-primary;
+      border: 0.2rem solid $color-primary;
       border-radius: 0.667rem;
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 1.733rem;
       font-weight: bolder;
       height: 3.333rem;

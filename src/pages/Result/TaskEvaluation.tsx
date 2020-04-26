@@ -32,7 +32,7 @@ class TaskEvaluation extends React.Component {
                         <div className="result-questions">
                             {this.results.map((value, index) => {
                                 return (
-                                    <div className="result-question" key={index}>
+                                    <div className="result-question" key={value}>
                                         <ResultQuestion color={value} index={index + nullSubtrahend} />
                                     </div>
                                 );

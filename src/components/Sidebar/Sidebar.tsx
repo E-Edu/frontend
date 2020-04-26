@@ -14,7 +14,6 @@ interface SitesItems {
     iconName: string;
     route: string;
     permission: PermissionEnum;
-    spacerBefore: boolean;
 }
 
 class Sidebar extends React.Component<SidebarProps> {
@@ -34,14 +33,12 @@ class Sidebar extends React.Component<SidebarProps> {
                 label: 'Home',
                 permission: PermissionEnum.USER,
                 route: 'dashboard',
-                spacerBefore: false,
             },
             {
                 iconName: 'plus-circle',
                 label: 'Neue Aufgabe',
                 permission: PermissionEnum.ADMIN,
                 route: 'task/add',
-                spacerBefore: true,
             },
         ];
         const sitesHtml = sites.map((site) => {
@@ -49,12 +46,10 @@ class Sidebar extends React.Component<SidebarProps> {
                 return (
                     <MenuElement
                         key={site.route}
-                        keyProp={site.route}
                         name={site.label}
                         file={site.iconName}
                         url={site.route}
                         active={active === `/${site.route}`}
-                        spacer={site.spacerBefore}
                     />
                 );
             }
@@ -74,9 +69,7 @@ class Sidebar extends React.Component<SidebarProps> {
                         file="settings"
                         url="settings"
                         active={active === '/settings'}
-                        spacer
                     />
-                    <MenuElement key="user" name="" file="user" url="profile" active={active === '/profile'} />
                 </div>
             </div>
         );

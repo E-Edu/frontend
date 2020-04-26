@@ -10,7 +10,6 @@ import Credits from './pages/Credits/Credits';
 import TaskEvaluation from './pages/Result/TaskEvaluation';
 import Settings from './pages/Settings/Settings';
 import TaskList from './pages/TaskList/TaskList';
-import Profile from './pages/Profile/Profile';
 import Lecture from './pages/Lecture/Lecture';
 import PageLayout from './components/Template/page/PageLayout';
 import AddTask from './pages/AddTask/AddTask';
@@ -33,7 +32,6 @@ class App extends Component {
                     <Route path="/task/add" exact component={AddTask} />
                     <Route path="/task/subject" exact component={SubjectTask} />
                     <Route path="/settings" exact component={Settings} />
-                    <Route path="/profile" exact component={Profile} />
                 </PageLayout>
             </Router>
         );

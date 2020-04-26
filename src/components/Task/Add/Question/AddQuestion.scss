@@ -1,3 +1,5 @@
+@import './src/css/styles';
+
 .multiplechoice {
   display: flex;
   flex-direction: column;
@@ -37,7 +39,7 @@
 
   .add-answer {
     align-items: center;
-    border: 0.133rem solid #1c2541;
+    border: 0.133rem solid $color-mediumBlue;
     border-radius: 8px;
     box-sizing: border-box;
     cursor: pointer;
@@ -45,7 +47,7 @@
     height: 1.69rem;
     justify-content: center;
     margin-left: 1.3rem;
-    padding: 5px; // to convert this to rem, change this also in TextInput.scss
+    padding: 0.32rem;
     text-align: center;
 
     &:focus {

@@ -1,4 +1,3 @@
-import './index.scss';
 import React from 'react';
 import { ColorProperty } from 'csstype';
 

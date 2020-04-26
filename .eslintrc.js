@@ -90,7 +90,12 @@ module.exports = {
         }],
         'react/jsx-curly-spacing':'off',
         'react/state-in-constructor': 'warn',
-        'no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': [
+            2,
+            {
+                'args': 'none',
+            }
+        ],
         'import/prefer-default-export': 'off',
         'react/jsx-key':'warn',
     },

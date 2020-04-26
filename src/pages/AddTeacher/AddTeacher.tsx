@@ -31,12 +31,13 @@ class AddTeacher extends React.Component {
     }
 
     renderRequests() {
-        return addTeacherStore.pendingRequests.map((request, index) => {
-            return <AddTeacherRequest key={index} name={request.name} email={request.email} />;
+        return addTeacherStore.pendingRequests.map((request) => {
+            return <AddTeacherRequest key={request.name} name={request.name} email={request.email} />;
         });
     }
 
     render() {
+        const zeroValue = 0;
         return (
             <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">
@@ -50,7 +51,7 @@ class AddTeacher extends React.Component {
                     <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
-                    {addTeacherStore.pendingRequests.length === 0
+                    {addTeacherStore.pendingRequests.length === zeroValue
                         ? t.t('page.addTeacher.noPendingRequests', 'No pending requests')
                         : t.t('page.addTeacher.pendingRequests', 'Pending requests')}
                 </h1>

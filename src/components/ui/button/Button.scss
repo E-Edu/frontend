@@ -2,17 +2,17 @@
 @import './src/css/styles';
 
 .button {
-  border: 3px solid #5bc0be;
+  border: 3px solid $color-turquoise;
   border-radius: 8px;
   cursor: pointer;
   font: Medium 26px/42px HindSiliguri-Regular, sans-serif;
   font-size: 26px;
-  height: 50px;
+  height: 3.13rem;
   letter-spacing: 0;
   outline: none;
   text-align: center;
   transition: 0.2s;
-  width: 150px;
+  width: 9.38rem;
 }
 
 .primary {
@@ -26,8 +26,8 @@
 
 .secondary {
   background-color: transparent;
-  border-color: #c6c6c6;
-  color: #c6c6c6;
+  border-color: $color-warmGrey;
+  color: $color-warmGrey;
 
   :hover {
     background-color: rgba(91, 192, 190, 0.2);
@@ -35,8 +35,8 @@
 }
 
 .unset {
-  background-color: #c6c6c6;
-  border-color: #c6c6c6;
+  background-color: $color-warmGrey;
+  border-color: $color-warmGrey;
   color: #000;
 }
 

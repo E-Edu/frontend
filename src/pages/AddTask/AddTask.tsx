@@ -2,6 +2,7 @@ import React from 'react';
 import './AddTask.scss';
 import { observer } from 'mobx-react';
 import { Plus } from 'react-feather';
+import makeInspectable from 'mobx-devtools-mst';
 import PageHeader from '../../components/Page/Header/PageHeader';
 import { t } from '../../i18n/i18n';
 import Button from '../../components/ui/button/Button';
@@ -13,6 +14,8 @@ import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/Di
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
 const addTaskStore = new AddTaskStore();
+
+makeInspectable(addTaskStore);
 
 @observer
 class AddTask extends React.Component {

@@ -1,7 +1,7 @@
 @import './src/css/styles';
 
 .report-component {
-  border: 0.05rem solid #707070;
+  border: 0.05rem solid $color-warmGrey;
   border-radius: 0.7rem;
   display: flex;
   flex-direction: column;

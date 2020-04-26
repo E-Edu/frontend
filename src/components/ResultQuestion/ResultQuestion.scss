@@ -1,7 +1,7 @@
 @import './src/css/styles';
 
 .result-question-box {
-  border: 0.067rem solid #707070;
+  border: 0.067rem solid $color-warmGrey;
   border-radius: 0.533rem;
   display: flex;
   flex-direction: row;
@@ -43,7 +43,7 @@
         }
 
         .result-question-titel {
-          color: #707070;
+          color: $color-warmGrey;
           font-size: 1.333rem;
           margin-top: 0;
         }

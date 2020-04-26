@@ -13,8 +13,8 @@ class SubjectTask extends React.Component {
     results = ['#BA1919', '#19ba3f', '#687D9A', '#687D9A', '#19BA3f'];
 
     renderDescription(description) {
-        return description.split('\n').map((value, index) => {
-            return <span key={index}>{value}</span>;
+        return description.split('\n').map((value) => {
+            return <span key={value}>{value}</span>;
         });
     }
 

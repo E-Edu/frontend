@@ -3,27 +3,14 @@ import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
 
-// TODO Statemanagement
-
 interface MenuElementProps {
     active?: boolean;
     url?: string;
     file?: string;
     name?: string;
-    spacer?: boolean;
-    keyProp?: string;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
-    /*    static getDerivedStateFromProps(props, state) {
-        if (state.active !== props.active) {
-            return {
-                active: props.active,
-            };
-        }
-        return null;
-    } */
-
     setActivity(activity) {
         // the active changes the icon
         this.setState({ active: activity || this.props.active });
@@ -38,22 +25,7 @@ class MenuElement extends React.Component<MenuElementProps> {
     };
 
     render() {
-        const { active, file, name, keyProp, url, spacer } = this.props;
-        let spacerElement: any;
-        if (spacer) {
-            spacerElement = (
-                <div
-                    style={{
-                        alignSelf: 'center',
-                        backgroundColor: '#ffffff',
-                        borderRadius: 2,
-                        borderWidth: 2,
-                        height: 1,
-                        width: 60,
-                    }}
-                />
-            );
-        }
+        const { active, file, name, url } = this.props;
         let color;
         // get the right filename, if active or not
         if (!active) {
@@ -76,21 +48,18 @@ class MenuElement extends React.Component<MenuElementProps> {
             );
         }
 
-        // @ts-ignore
         const File = icons[file];
-        return [
-            spacerElement,
+        return (
             <Link
                 to={`/${url}`}
                 className="menu-element"
-                key={keyProp}
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
-                <File color={color} fill="none" key={keyProp} />
+                <File color={color} fill="none" />
                 {nameText}
-            </Link>,
-        ];
+            </Link>
+        );
     }
 }
 

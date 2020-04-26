@@ -18,8 +18,8 @@ class LectureGroup extends React.Component<LectureGroupProps> {
                     </div>
 
                     <div className="lecture-group-subjects">
-                        {fields.map((value, index) => {
-                            return <LectureSubject key={index} name={value.name} />;
+                        {fields.map((value) => {
+                            return <LectureSubject key={value.name} name={value.name} />;
                         })}
                     </div>
                 </div>

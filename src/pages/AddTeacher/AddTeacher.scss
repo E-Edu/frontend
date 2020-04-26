@@ -5,13 +5,11 @@
   flex-direction: row;
 
   .add-teacher-button {
-    border: solid;
-    border-color: #1c2541;
+    border: 2px solid $color-dark;
     border-radius: 8px;
-    border-width: 2px;
     margin-left: 0.2rem;
     max-width: 100vw;
-    padding: 5px;
+    padding: 0.32rem;
   }
 }
 

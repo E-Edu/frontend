@@ -3,7 +3,7 @@
 
 .combo-box {
   appearance: none;
-  border: #c6c6c6 solid 1px;
+  border: $color-warmGrey solid 1px;
   box-sizing: border-box;
   outline: none;
   padding: 5px;
@@ -26,7 +26,7 @@
 
 ul {
   background-color: #fff;
-  border: #c6c6c6 solid 1px;
+  border: $color-warmGrey solid 1px;
   border-radius: 0 0 8px 8px;
   border-top-style: none;
   box-sizing: border-box;
@@ -38,7 +38,7 @@ ul {
 
   li {
     align-items: center;
-    border-bottom: #c6c6c6 solid 1px;
+    border-bottom: $color-warmGrey solid 1px;
     box-sizing: border-box;
     cursor: pointer;
     display: flex;

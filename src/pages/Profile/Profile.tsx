@@ -1,6 +1,5 @@
 import React from 'react';
 import './Profile.scss';
-import '../../css/main.css';
 import { Calendar, Edit2, Tag, TrendingUp, User } from 'react-feather';
 import { observer } from 'mobx-react';
 import IconText from '../../components/IconText/IconText';

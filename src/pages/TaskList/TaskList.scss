@@ -8,7 +8,7 @@
     margin-left: 12.667rem;
 
     .result-subject {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.667rem;
@@ -33,7 +33,7 @@
         }
 
         .points {
-          color: #3a506b;
+          color: $color-grey;
         }
 
       }
@@ -44,7 +44,7 @@
     margin-right: 7.267rem;
 
     .result-subject {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.667rem;
@@ -54,9 +54,9 @@
 
       input {
         background: transparent;
-        border: 1px solid #3a506b;
+        border: 1px solid $color-grey;
         border-radius: 8px;
-        color: #3a506b;
+        color: $color-grey;
         font-size: 1.333rem;
         height: 2.867rem;
         letter-spacing: 0;
@@ -88,7 +88,7 @@
 
   .teacher-information {
     img {
-      border: 0.133rem solid #5bc0be;
+      border: 0.133rem solid $color-primary;
       border-radius: 6.667rem;
       max-height: 7.333rem;
       max-width: 7.333rem;

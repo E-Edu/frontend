@@ -1,10 +1,10 @@
 @import '../../../css/styles';
 
 .text-box {
-  border: 1px solid #c6c6c6;
+  border: 1px solid $color-warmGrey;
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0.32rem;
   resize: vertical;
 
   &:focus {
