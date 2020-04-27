@@ -34,6 +34,12 @@
   }
 }
 
+.unset {
+  background-color: #c6c6c6;
+  border-color: #c6c6c6;
+  color: #000;
+}
+
 .disabled {
   background-color: $color-warmGrey;
   border-color: $color-lightGrey;

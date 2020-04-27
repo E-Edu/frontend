@@ -45,6 +45,7 @@ class LandingPage extends React.Component<LandingPageProps> {
                         }}
                         type="fadeIn">
                         {/* TODO Route zurück auf /login /register */}
+                        <Register />
                         <Route exact path="/dashboard" component={Login} />
                         <Route exact path="/dashboard" component={Register} />
                     </Modal>

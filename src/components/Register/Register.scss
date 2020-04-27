@@ -1,318 +1,69 @@
 @import './src/css/styles';
 
-//TODO rename to english classes
-UserIcon {
-  margin-top: 0.26rem;
-}
-
 .register {
-  height: auto;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  min-height: 426.6px;
-  padding: 1rem;
-  width: auto;
+  height: 31rem;
+  width: 35rem;
 
-  form {
-    font-family: 'Hind Siliguri', sans-serif;
-    margin-top: 7rem;
+  .header {
+    margin-left: 10%;
+    margin-top: 1rem;
+    width: 80%;
 
-    a {
-      color: #0b132b;
-      margin: 0 0.2rem;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    p {
-      color: #0b132b;
-      transition: all 0.2s;
-    }
-
-    a:hover {
-      color: #5bc0be;
-    }
-
-    a:focus {
-      color: #5bc0be;
-      outline: 0;
+    span {
+      color: $color-bluegrey;
+      font-size: 4rem;
     }
   }
 
-  .box {
-    background: #fff;
-    border-radius: 0.8rem;
-    color: #003;
-    height: auto;
-    min-height: 35vh;
-    padding: 0;
-    text-align: center;
-    width: 50vw;
+  .register-content {
+    margin-left: 10%;
+    width: 80%;
 
-    .box-inhalt {
-      margin-top: -10%;
-      text-align: center;
+    .inputs .text-input {
+      margin-top: 1rem;
+
+      &:first-child {
+        margin-top: 2rem;
+      }
     }
 
-    .input-box {
-      align-items: center;
-      border: 0.067rem solid #003;
-      border-radius: 0.4rem;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      margin: 0.667rem 0;
-      outline: none;
-      padding: 0.267rem;
-      width: 100%;
+    .actions {
+      margin-top: 1.5rem;
 
       input {
-        background: transparent;
-        outline: none;
-        width: 100%;
+        margin-top: 0.8rem;
+      }
+
+      span {
+        margin-left: 0.6rem;
       }
     }
 
-    .active {
-      background-color: #5bc0be !important;
-      outline: none;
-    }
-
-    .eye {
-      cursor: pointer;
-      max-height: 1.6rem;
-    }
-
-    .button {
-      background: none;
-      border: 0.067rem solid #003;
-      border-radius: 0.4rem;
-      margin: 0.667rem auto;
-      outline: #000;
-      padding: 0.267rem;
-      width: 70%;
-    }
-
-    .input-box-initial {
-      display: none;
-    }
-
-    .role-btn {
-      display: flex;
+    .account-type {
+      justify-content: space-between;
+      margin-top: 1rem;
       width: 100%;
-
-      .btn {
-        background-color: #fff;
-        border-bottom: 1px solid #003;
-        border-top: 1px solid #003;
-        cursor: pointer;
-        padding: 10px 24px;
-        width: 50%;
-      }
-
-      .btn-special-button {
-        align-items: center;
-        border-left: 1px solid #003;
-        display: flex;
-        flex-direction: row;
-        height: 1.75rem;
-
-        span {
-          width: 90%;
-        }
-      }
-
-      .btn-special-button2 {
-        border-right: 1px solid #003;
-      }
-
-      .btn-special-button:focus {
-        background-color: #5bc0be;
-        outline: none;
-      }
     }
 
-    .btn-group .btn-group::after {
-      clear: both;
-      content: '';
-      display: table;
-    }
-
-    .btn-group :first-child {
-      border-radius: 6px 0 0 6px;
-    }
-
-    .btn-group :last-child {
-      border-radius: 0 6px 6px 0;
-    }
-
-    .btn-group button:hover {
-      background-color: #5bc0be;
-    }
-
-    .btn-ui-container {
-      margin-top: 0.4rem;
-    }
-
-    .btn-ui {
-      background: #fff 0% 0% no-repeat padding-box;
-      border: 2px solid #459695;
-      border-radius: 20px;
-      color: #0b132b;
-      cursor: pointer;
-      font: Regular 2.133rem/1.867rem Arimo;
-      height: 3.267rem;
-      letter-spacing: 0.032rem;
-      margin-left: 1.2rem;
-      margin-right: 1.2rem;
-      margin-top: 0.133rem;
-      opacity: 1;
-      text-align: center;
-      width: 15.333rem;
-    }
-
-    .btn-weiter {
-      background-color: #5bc0be;
-      margin-top: 1.7rem;
-    }
-
-    .btn-base {
-      background-color: #5bc0be;
-      opacity: 1;
-    }
-
-    .btn-disabled {
-      background-color: #5bc0be;
-      opacity: 0.3;
-    }
-
-    .headline {
-      color: #0b132b;
-      font-family: HindSiliguri-Regular, sans-serif;
-      font-size: 2.133rem;
-      font-weight: 500;
-      letter-spacing: 1.6rem;
-      opacity: 1;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .hide1 {
-      display: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .check-container p {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-
-      .privacycheck {
-        appearance: none;
-        background: #fff 0% 0% no-repeat padding-box;
-        border: 2px solid #459695;
-        border-radius: 4px;
-        height: 1.5rem;
-        margin-right: 1rem;
-        opacity: 1;
-        width: 1.5rem;
-      }
-
-      .privacycheck:checked {
-        background: #5bc0be 0% 0% no-repeat padding-box;
-      }
-
-      input:focus {
-        outline: none;
-      }
-    }
-
-    .input-field {
-      color: #0b132b;
-      font: Italic 1.333rem/1.933rem Arimo;
-      letter-spacing: 0.033rem;
-      opacity: 1;
-      text-align: left;
-    }
-
-    .input-field::placeholder {
-      color: #0b132b;
-      font: Italic 1.333rem/1.933rem Arimo;
-      letter-spacing: 0.033rem;
-      text-align: left;
+    .submit-region {
+      align-items: flex-end;
+      justify-content: space-around;
+      margin-top: 1.5rem;
+      width: 100%;
     }
   }
 
-  @media only screen and (max-width: 55.333rem) {
-    height: 30rem;
-
-    .box {
-      height: 20rem;
-
-      .headline {
-        color: #0b132b;
-        font-family: HindSiliguri-Regular, sans-serif;
-        font-size: 1.333rem;
-        font-weight: 500;
-        letter-spacing: 0.25rem;
-        opacity: 1;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .btn-ui-container {
-        margin-top: 0.133rem;
-      }
-
-      .btn-ui {
-        margin: 0.2rem;
-      }
-    }
-
-    .check-container p {
-      font-size: 0.8rem;
-      white-space: pre-line;
-
-      .privacycheck {
-        min-height: 1.333rem;
-        min-width: 1.333rem;
-      }
-    }
+  .flex-row-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  @media only screen and (max-width: 40rem) {
-    .box {
-      height: 20rem;
-      width: 10rem;
-
-      .btn-ui {
-        border-radius: 0.8rem;
-        margin: 0.2rem;
-        max-height: 2rem;
-        max-width: 5rem;
-      }
-
-      .role-btn {
-        .btn-special-button {
-          font-size: 0.667rem;
-          padding: 0.133rem;
-        }
-      }
-
-      .btn-ui-container {
-        margin-top: 0.133rem;
-      }
-
-      .check-container p {
-        font-size: 0.533rem;
-      }
-    }
+  .flex-column-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-}
-
-.input-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
 }
