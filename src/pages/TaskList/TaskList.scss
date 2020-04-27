@@ -1,6 +1,7 @@
 @import './src/css/styles';
 
 .result-content-header {
+  display: flex;
   margin-top: 1rem;
   width: 100%;
 
@@ -50,8 +51,6 @@
       margin-right: 2.667rem;
       margin-top: 2.267rem;
 
-      
-
       input {
         background: transparent;
         border: 1px solid $color-grey;
@@ -60,7 +59,6 @@
         font-size: 1.333rem;
         height: 2.867rem;
         letter-spacing: 0;
-        opacity: 1;
         opacity: 1;
         padding: 0 0.5rem;
         text-align: left;

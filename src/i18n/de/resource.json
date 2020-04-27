@@ -32,19 +32,19 @@
       }
     },
     "task": {
+      "add": {
+        "question": {
+          "addAnswer": "Antwort hinzufügen",
+          "answer": "Antwort",
+          "description": "Beschreibung der Frage",
+          "title": "Titel der Frage"
+        }
+      },
       "difficulty": {
         "easy": "Einfach",
         "hard": "Schwer",
         "medium": "Mittel",
         "unknown": "Unbekannt"
-      },
-      "add": {
-        "question": {
-          "title": "Titel der Frage",
-          "description": "Beschreibung der Frage",
-          "answer": "Antwort",
-          "addAnswer": "Antwort hinzufügen"
-        }
       }
     }
   },
@@ -54,11 +54,11 @@
   },
   "page": {
     "addTask": {
-      "publish": "veröffentlichen",
-      "title": "Neue Frage erstellen",
-      "packageTitle": "Aufgabenpacktitel",
+      "addNewQuestion": "Neue Frage hinzufügen",
       "description": "Beschreibung der Aufgabe",
-      "addNewQuestion": "Neue Frage hinzufügen"
+      "packageTitle": "Aufgabenpacktitel",
+      "publish": "veröffentlichen",
+      "title": "Neue Frage erstellen"
     },
     "addTeacher": {
       "emailOfTeacher": "Email des Lehrers",

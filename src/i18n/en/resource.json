@@ -32,19 +32,19 @@
       }
     },
     "task": {
+      "add": {
+        "question": {
+          "addAnswer": "Add answer",
+          "answer": "Answer",
+          "description": "Description of question",
+          "title": "Title of question"
+        }
+      },
       "difficulty": {
         "easy": "Easy",
         "hard": "Hard",
         "medium": "Medium",
         "unknown": "Unknown"
-      },
-      "add": {
-        "question": {
-          "title": "Title of question",
-          "description": "Description of question",
-          "answer": "Answer",
-          "addAnswer": "Add answer"
-        }
       }
     }
   },
@@ -54,11 +54,11 @@
   },
   "page": {
     "addTask": {
-      "publish": "publish",
-      "title": "Create new task",
-      "packageTitle": "Task package title",
+      "addNewQuestion": "Add new Question",
       "description": "Description of the Task",
-      "addNewQuestion": "Add new Question"
+      "packageTitle": "Task package title",
+      "publish": "publish",
+      "title": "Create new task"
     },
     "addTeacher": {
       "emailOfTeacher": "Teachers email",

@@ -2,7 +2,6 @@ import './css/main.scss';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPage from './pages/Landing/LandingPage';
-import Task from './pages/Task/Task';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Imprint from './pages/Imprint/Imprint';
 import Privacy from './pages/Privacy/Privacy';
@@ -26,7 +25,6 @@ class App extends Component {
                     <Route path="/credits" exact component={Credits} />
                     <Route path="/dashboard" exact component={Dashboard} />
                     <Route path="/task/list" exact component={TaskList} />
-                    <Route path="/task" exact component={Task} />
                     <Route path="/task/result" exact component={TaskEvaluation} />
                     <Route path="/task/lecture" exact component={Lecture} />
                     <Route path="/task/add" exact component={AddTask} />

@@ -1,5 +1,5 @@
 @import './src/css/styles';
-//TODO refactor to english
+
 body {
   cursor: default;
   font-family: Medium 5.333rem/8.6rem HindSiliguri-Regular, sans-serif;
@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     margin-bottom: 8rem;
     margin-top: 7rem;
-
 
     .picture {
       margin-top: 1.333rem;
@@ -39,12 +38,12 @@ body {
           }
         }
 
-        .teilnehmende {
+        .participants {
           font-size: 2rem;
         }
       }
 
-      .mitwirkende {
+      .contributors {
         .subheading {
           color: $color-bluegrey;
           font-size: 2.667rem;
@@ -82,7 +81,7 @@ body {
           justify-content: space-between;
 
 
-          .cerdits-heading {
+          .credits-heading {
             color: $color-bluegrey;
             font-size: 2rem;
             font-style: normal;
