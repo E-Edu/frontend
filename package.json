@@ -123,7 +123,7 @@
     "stylelint": "13.3.3",
     "stylelint-config-sass-guidelines": "7.0.0",
     "stylelint-config-standard": "20.0.0",
-    "tslint": "6.1.1",
+    "tslint": "6.1.2",
     "typescript": "3.8.3"
   }
 }
