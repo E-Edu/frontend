@@ -1,31 +1,24 @@
-# E-Edu Frontend Konvention
-Dies sind die beitrags Richtlienien für denn Bereich Frontend.
-# Code style
-Allgemein lässt sich sagen, dass in Englisch programmiert wird, sprich alle Variablen Namen und Kommentare sind in Englisch zu verfassen.<br>
-###Coding Convention
-- Code aussagekräftig und gut in Englisch kommentieren
-- Namen aussagekräftig in Eglisch Vergeben
-- Keine Unnötigen Leerzeilen
-- Keine Langen Zeilen
-- Alle angelegten Componenten werden genutzt
-- Es wir übersichtlich Programmiert
-- Es wird sich immer strengstens an die Vorgaben des Design oder anderen Anweisungen Gehalten!
+# E-Edu Frontend Conventions
 
-Bei nicht einhalten wird die Pull Request von uns abgelehnt und dies solange bis es denn Vorgaben entspricht.
-#Git
-Die Bearbeiteten issues werden dann mittels git auf Github gepusht und mittels pull request auf denn experimentel branche gemercht.
-### Git Branches
-Die Git branches werden nach folgenem Beispiel bennant: ```issue/ISSUE-ID ISSUE-TITLE```<br>
-### Commit message
-In der Commit message ist bitte wie im Beispiel einzutragen was getan wurde: ```add COMPONENT/PAGE -- edit COMPONENT/PAGE -- move COMPONENT/PAGE```<br/>
-# Bei Fragen
-Bei Frage wende dich bitte an die Frontend heads oder andere User der Orga usw.
+# Coding Style
+- In general our variables and comments are in english.
+- If one function is not self-explanatory, comment it.
+- Name your variables in camelCase.
+- Name your typescript classes in PascalCase.
+- Name your css classes in kebab-case.
+- Do not use id in html/ css.
+- Use own components e.g. Button/ InputText.
 
-Frontend Heads:
-Stefan<br>
-Discord: Stefan#3460<br/>
-Timy<br/>
-Discord: Timy Stream#2019
+If your code doesn't fit to these rules, we won't merge it until everything is correct!
 
+# Git
+## Issues
+We use issues for everything. If you want to add something, create an issue. If you want to fix something, create an issue. And if you want to improve something, you should also create an issue.
+## Branches
+Name your branch after the related issue: ```issue/ISSUE-ID ISSUE-TITLE```
+The experimental branch is our default branch. If you want to add or fix something use this branch to create your own branch.
+## Pull Requests
+Do not create a pull request to the master branch, instead create it to the experimental brach.
 
-
+# Questions?
+Feel free to contact our heads or organisation leaders.
