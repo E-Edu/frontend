@@ -77,8 +77,7 @@ class Settings extends Component {
                                     <div className="input flex-row-box">
                                         <TextInput
                                             placeholder="test@test.de"
-                                            width="20rem"
-                                            height="1.69rem"
+                                            style={{ width: '20rem', height: '1.69rem' }}
                                             onChange={(value) => settingsStore.setEmail(value)}
                                             className="text-input"
                                         />
@@ -92,13 +91,13 @@ class Settings extends Component {
                                             width="20rem"
                                             height="1.69rem"
                                             className="multi-input"
+                                            typingEnabled
                                         />
                                     </div>
                                     <div className="input flex-row-box">
                                         <TextInput
                                             placeholder="**********"
-                                            width="20rem"
-                                            height="1.69rem"
+                                            style={{ width: '20rem', height: '1.69rem' }}
                                             onChange={(value) => settingsStore.setOldPassword(value)}
                                             className="text-input"
                                             type="password"
@@ -107,8 +106,7 @@ class Settings extends Component {
                                     <div className="input flex-row-box">
                                         <TextInput
                                             placeholder="**********"
-                                            width="20rem"
-                                            height="1.69rem"
+                                            style={{ width: '20rem', height: '1.69rem' }}
                                             onChange={(value) => settingsStore.setNewPassword(value)}
                                             className="text-input"
                                             type="password"
