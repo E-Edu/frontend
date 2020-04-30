@@ -8,18 +8,19 @@ interface TextInputProps {
     shadow?: string;
     className?: string;
     rows?: number;
-    width?: string;
-    height?: string;
     type?: 'password';
+    style?: React.CSSProperties;
+    onClick?: any;
+    value?: string;
+    disabled?: boolean;
 }
 
 class TextInput extends React.Component<TextInputProps> {
     render() {
-        const { placeholder, onChange, maxWidth, className, rows, width, height, type } = this.props;
+        const { placeholder, onChange, maxWidth, className, rows, type, onClick, value, disabled } = this.props;
         let { shadow } = this.props;
 
-        const style: any = {}; // TODO Check if this is necessary and fix it
-
+        const { style } = this.props;
         if (maxWidth) style.maxWidth = maxWidth;
         if (shadow !== undefined) {
             switch (shadow) {
@@ -39,7 +40,7 @@ class TextInput extends React.Component<TextInputProps> {
             return (
                 <textarea
                     className={`text-box ${className}`}
-                    style={{ width, height }}
+                    style={style}
                     placeholder={placeholder}
                     onChange={onChange}
                     rows={rows}
@@ -51,8 +52,11 @@ class TextInput extends React.Component<TextInputProps> {
                 className={`text-box ${className}`}
                 placeholder={placeholder}
                 onChange={onChange}
-                style={{ width, height }}
+                onClick={onClick}
+                style={style}
                 type={type}
+                value={value}
+                disabled={disabled}
             />
         );
     }

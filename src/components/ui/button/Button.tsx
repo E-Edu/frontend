@@ -20,21 +20,21 @@ interface ButtonProps {
 
 class Button extends React.Component<ButtonProps, ButtonState> {
     render() {
-        const { width, height, fontSize, className, onClick } = this.props;
+        const { width, height, fontSize, className, onClick, disable, name, type } = this.props;
         let classes = this.props.styleType || 'Primary';
-        if (this.props.disable) {
+        if (disable) {
             classes += ' disabled';
         }
         return (
             // eslint bug with props
-            // eslint-disable-next-line
+            // eslint-disable-next-line react/button-has-type
             <button
-                type={this.props.type}
+                type={type}
                 className={`button ${classes} ${className}`}
-                disabled={this.props.disable || false}
-                style={{ width, height, fontSize }}
-                onClick={onClick}>
-                {this.props.name || 'Default'}
+                disabled={disable || false}
+                onClick={onClick}
+                style={{ width, height, fontSize }}>
+                {name || 'Default'}
             </button>
         );
     }

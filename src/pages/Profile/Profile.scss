@@ -11,7 +11,7 @@
     margin-left: 7.267rem;
 
     .result-subject {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.667rem;
@@ -32,7 +32,7 @@
   width: 100%;
 
   .profile-h2 {
-    color: #1c2541;
+    color: $color-dark;
     font-size: 2rem;
     font-weight: 300;
   }
@@ -63,7 +63,7 @@
     .img {
       margin-right: 0.4rem;
       max-width: 27px;
-      stroke: #3a506b;
+      stroke: $color-grey;
 
     }
   }
@@ -83,7 +83,7 @@
   }
 
   .name {
-    color: #1c2541;
+    color: $color-dark;
     font-size: 1.733rem;
     letter-spacing: 0;
     margin-left: 2.3rem;
@@ -130,14 +130,14 @@
 
   .levelbar-back {
     background-color: transparent;
-    border: 0.067rem solid #707070;
+    border: 0.067rem solid $color-warmGrey;
     border-radius: 13.333rem;
     height: 3.333rem;
     position: relative;
     width: 32.667rem;
 
     .levelbar-front {
-      background-color: #5bc0be;
+      background-color: $color-primary;
       border-radius: 13.333rem;
       height: 100%;
       left: 0;
@@ -154,7 +154,7 @@
     }
 
     .level-rang {
-      color: #5bc0be;
+      color: $color-primary;
       font: 1.733rem/2.067rem Arimo-Bold;
     }
   }
@@ -172,7 +172,7 @@
   }
 
   span {
-    color: #5bc0be;
+    color: $color-primary;
     font: 1.733rem/2.067rem Arimo-Bold;
     letter-spacing: 0;
     opacity: 1;
@@ -182,20 +182,13 @@
 }
 
 .profile-subjekt-img {
-  border: 0.067rem solid #5bc0be;
+  border: 0.067rem solid $color-primary;
   border-radius: 6.667rem;
   height: 4.133rem;
   margin-left: 1rem;
   margin-right: 1.5rem;
   margin-top: 0.5rem;
   width: 4.133rem;
-}
-
-//TODO ist das hier wirklich notwendig? --> Prüfen
-.logo {
-  height: 2rem;
-  padding: 1.066rem;
-  width: 2rem;
 }
 
 .favorite-subject {
@@ -242,7 +235,7 @@
 }
 
 .pb {
-  border: 2px solid #5bc0be;
+  border: 2px solid $color-turquoise;
   border-radius: 100px;
   max-height: 110px;
   max-width: 110px;
@@ -251,7 +244,7 @@
 .user-icon,
 .trending-icon,
 .calender-icon {
-  color: #3a506b;
+  color: $color-grey;
 
 }
 

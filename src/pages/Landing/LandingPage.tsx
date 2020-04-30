@@ -11,13 +11,11 @@ import Query from '../../lib/api/Query';
 import { t } from '../../i18n/i18n';
 import LandingPageStore from '../../store/landingPage.store';
 
-// tslint:disable-next-line:no-empty-interface
-interface LandingPageProps {}
-
+// eslint-disable-next-line
 const landingPageStore = new LandingPageStore();
 
 @observer
-class LandingPage extends React.Component<LandingPageProps> {
+class LandingPage extends React.Component {
     login() {
         Query.mutationGQL(
             gql`
@@ -38,17 +36,17 @@ class LandingPage extends React.Component<LandingPageProps> {
         return (
             <div className="landing">
                 <div className="main">
-                    <Modal
-                        visible={landingPageStore.showModal}
-                        closemodal={() => {
-                            landingPageStore.setShowModal(true);
-                        }}
-                        type="fadeIn">
-                        {/* TODO Route zurück auf /login /register */}
-                        <Register />
-                        <Route exact path="/dashboard" component={Login} />
-                        <Route exact path="/dashboard" component={Register} />
-                    </Modal>
+                    <Route path={['/login', '/register']}>
+                        <Modal
+                            visible
+                            closemodal={() => {
+                                // TODO redirect to '/'
+                            }}
+                            type="fadeIn">
+                            <Route exact path="/login" component={Login} />
+                            <Route exact path="/register" component={Register} />
+                        </Modal>
+                    </Route>
                     <div className="content">
                         <div className="text-content">
                             <h2>{parse(t.t('page.landing.title', 'Education for <span>You</span>'))}</h2>

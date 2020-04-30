@@ -2,21 +2,20 @@
 
 .profile-certifikate {
   align-items: center;
-  border: 1px solid #707070;
+  border: 1px solid $color-warmGrey;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 84px;
-  margin: 10px 15px;
+  height: 5.25rem;
+  margin: 0.63rem 0.94rem;
   padding: 0;
-  width: 412px;
+  width: 25.75rem;
   
   .download-image {
     height: 27px;
     margin-left: 2.5rem;
     width: 27px;
-  
   }
   
   .download-image:hover {
@@ -28,7 +27,7 @@
     width: 80%;
   
     .titel-certificate {
-      color: #5bc0be;
+      color: $color-primary;
       display: flex;
       flex-direction: row;
       font-size: 1.733rem;
@@ -38,7 +37,7 @@
     }
   
     .date-certificate {
-      color: #0b132b;
+      color: $color-bluegrey;
       display: flex;
       flex-direction: row;
       font-size: 1.066rem;
@@ -57,7 +56,7 @@
   }
   
   .badge-title {
-    margin-left: 5px;
+    margin-left: 0.31rem;
     white-space: nowrap;
   }
   

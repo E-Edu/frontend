@@ -1,7 +1,7 @@
 @import './src/css/styles';
 
 .correction-box {
-  border: 0.067rem solid #707070;
+  border: 0.067rem solid $color-warmGrey;
   border-radius: 0.533rem;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
 
   .correction-box-header {
     align-items: center;
-    color: #1c2541;
+    color: $color-mediumBlue;
     display: flex;
     flex-direction: row;
     font-size: 1.333rem;
@@ -25,7 +25,7 @@
 
   .correction-box-bottom {
     align-items: baseline;
-    color: #1c2541;
+    color: $color-mediumBlue;
     display: flex;
     flex-direction: row;
     font-size: 1.333rem;
@@ -53,7 +53,7 @@
     }
 
     img {
-      color: #1c2541;
+      color: $color-mediumBlue;
       height: 1.333rem;
       width: 1.333rem;
 

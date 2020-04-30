@@ -15,5 +15,4 @@ i18n.use(initReactI18next).init({
     resources: { de: { translation: de }, en: { translation: en } },
 });
 
-// eslint-disable-next-line
 export const t = i18n;

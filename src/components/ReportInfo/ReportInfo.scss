@@ -1,7 +1,7 @@
 @import './src/css/styles';
 
 .reportcontainer {
-  background: #fff;
+  background: $color-white;
   border-radius: 0.267rem;
   color: #003;
   margin-top: 1rem;
@@ -17,7 +17,6 @@
     font-size: 0.933rem;
   }
 
-  /*Infos an der Rechten seite*/
   .infos-right {
     font-size: 0.933rem;
     text-align: right;
@@ -69,21 +68,18 @@
 
   }
 
-  /*Aufgaben Überschrift*/
   .task-name {
     font-size: 1.333rem;
     margin-top: 0.333rem;
     text-align: center;
   }
 
-  /*Aufgaben Text*/
   .task-text {
     font-size: 0.8rem;
     margin-top: 0.4rem;
     max-height: 6.667rem;
   }
 
-  /*Behalte und Löschen ComboBox*/
   .buttons {
     display: flex;
     justify-content: center;
@@ -106,7 +102,7 @@
 
   .half {
     background: #fff 0 0 no-repeat padding-box;
-    border: 0.067rem solid #707070;
+    border: 0.067rem solid $color-warmGrey;
     border-radius: 0.533rem;
     cursor: pointer;
     font: 1.533rem Arimo-Regular;
@@ -115,7 +111,6 @@
     width: 6.667rem;
   }
 
-  /* Fertig ComboBox*/
   .done-div {
     display: flex;
     justify-content: center;
@@ -129,7 +124,7 @@
 
     .button {
       background: #fff 0 0 no-repeat padding-box;
-      border: 0.067rem solid #707070;
+      border: 0.067rem solid $color-warmGrey;
       border-radius: 0.533rem;
       color: #3a506b;
       cursor: pointer;

@@ -47,7 +47,6 @@ class Dashboard extends React.Component {
         `);
 
         // TODO: Check graphql to fix
-        // eslint-disable-next-line
         subjects.push({ displayName: result.data.subjectById.displayName });
 
         // refresh the state
@@ -55,9 +54,12 @@ class Dashboard extends React.Component {
     }
 
     renderSubjects() {
-        return dashboardStore.subjects.map((subject, index) => {
+        return dashboardStore.subjects.map((subject) => {
             return (
-                <Link key={index} to="/task/lecture" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link
+                    key={`subject-${subject.displayName}`}
+                    to="/task/lecture"
+                    style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Subject
                         subject={subject.displayName}
                         desciption={subject.displayName}

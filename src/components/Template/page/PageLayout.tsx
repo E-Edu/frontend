@@ -30,7 +30,7 @@ interface match<P> {
 }
 
 class PageLayout extends React.Component<PageLayoutProps> {
-    hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy'];
+    hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy', '/login', '/register'];
 
     constructor(props) {
         super(props);
@@ -50,15 +50,16 @@ class PageLayout extends React.Component<PageLayoutProps> {
     }
 
     render() {
+        const { location, children } = this.props;
         return (
             <div className={this.getClasses()}>
                 <Header site={this.isloggedIn() ? 'dashboard' : 'landing'} />
                 <Sidebar
                     className={this.isloggedIn() ? 'menu-bar' : 'logged-in-hidden'}
                     visible={this.isloggedIn()}
-                    active={this.props.location.pathname}
+                    active={location.pathname}
                 />
-                <div className="layout-container">{this.props.children}</div>
+                <div className="layout-container">{children}</div>
                 <Footer visible={this.isloggedIn()} />
             </div>
         );

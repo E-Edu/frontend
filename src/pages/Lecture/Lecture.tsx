@@ -15,8 +15,8 @@ class Lecture extends React.Component {
                 <div className="main">
                     <TaskHeader module="Mathe" />
 
-                    {lectureStore.data.map((value, index) => {
-                        return <LectureGroup key={index} name={value.name} fields={value.fields} />;
+                    {lectureStore.data.map((value) => {
+                        return <LectureGroup key={value.name} name={value.name} fields={value.fields} />;
                     })}
                 </div>
             </div>

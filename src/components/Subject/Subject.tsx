@@ -19,7 +19,7 @@ interface SubjectProps {
 
 class Subject extends React.Component<SubjectProps> {
     render() {
-        const { subject, color } = this.props;
+        const { subject, color, desciption, weekendtask, points, communityPoints } = this.props;
         const borderColor = Data.subjectColor[color];
         const border = `0.733rem solid ${borderColor}`;
 
@@ -30,23 +30,23 @@ class Subject extends React.Component<SubjectProps> {
                 </div>
                 <div className="box-content">
                     <SubjectLabel className="subject-name" subjectLabel={subject} />
-                    <SubjectDescription className="under-name" subjectDescription={this.props.desciption} />
+                    <SubjectDescription className="under-name" subjectDescription={desciption} />
                     <IconText
-                        text={`${t.t('subjectInfos.weekendtask')} ${this.props.weekendtask}`}
+                        text={`${t.t('subjectInfos.weekendtask')} ${weekendtask}`}
                         position="left"
                         class="weekend-task flex-row">
                         <Calendar className="calender" size="27" color="#000000" />
                     </IconText>
                     <div className="points">
                         <IconText
-                            text={`${this.props.points} ${t.t('subjectInfos.points')}`}
+                            text={`${points} ${t.t('subjectInfos.points')}`}
                             position="left"
                             distance="0.4rem"
                             class="user-points flex-row">
                             <User color="#000000" size="27" />
                         </IconText>
                         <IconText
-                            text={`${this.props.communityPoints} ${t.t('subjectInfos.points')}`}
+                            text={`${communityPoints} ${t.t('subjectInfos.points')}`}
                             position="left"
                             distance="0.4rem"
                             class="community-points flex-row">

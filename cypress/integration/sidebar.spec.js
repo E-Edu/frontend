@@ -16,8 +16,4 @@ describe('sidebar linking test', () => {
         cy.get('.menu-element').eq(2).click()
             .url().should('include', '/settings');
     });
-    it('should link to profile', () => {
-        cy.get('.menu-element').eq(3).click()
-            .url().should('include', '/profile');
-    });
 });

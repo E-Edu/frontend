@@ -1,15 +1,15 @@
 import React from 'react';
 import './Report.scss';
-import { Info, Mail, ThumbsDown, ThumbsUp } from 'react-feather';
+/* import { Info, Mail, ThumbsDown, ThumbsUp } from 'react-feather';
 import Modal from 'react-animated-modal';
 import Teacher from '../../components/icons/teacher.icon';
 import ReportInfo from '../../components/ReportInfo/ReportInfo';
 import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
-import colorData from '../../lib/Colors.json';
+import colorData from '../../lib/Colors.json'; */
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
-// TODO REVISION
+// TODO REVISION AND REWRITE
 
 interface ReportProps {
     teacher?: string;

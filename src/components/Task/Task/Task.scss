@@ -1,28 +1,33 @@
 @import './src/css/styles';
 
 .task {
-  border: 0.067rem solid #707070;
+  border: 0.067rem solid $color-warmGrey;
   border-radius: 0.533rem;
-  display: flex;
-  flex-direction: column;
   height: 8rem;
-  margin: 0.667rem;
+  margin: 1.5rem 0.667rem;
   width: 65rem;
 
-  .task-head {
+  .flex-column-box {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .flex-row-box {
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 0 1rem;
-    margin-top: 1rem;
+    justify-items: center;
+  }
+
+  .task-head {
+    color: $color-mediumBlue;
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0;
 
     .task-head-elements {
-      display: flex;
-      flex-direction: row;
-
       .task-element {
-        display: flex;
-        flex-direction: row;
         padding: 0 1rem;
       }
     }
@@ -33,8 +38,8 @@
   }
 
   .task-bottom {
-    display: flex;
-    flex-direction: row;
+    color: $color-grey;
     margin: 0 1rem;
+    padding: 0.3rem 0.5rem;
   }
 }

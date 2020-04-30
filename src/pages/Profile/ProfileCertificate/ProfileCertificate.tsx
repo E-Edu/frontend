@@ -10,17 +10,16 @@ interface ProfileCertificateProps {
 
 class ProfileCertificate extends React.Component<ProfileCertificateProps> {
     render() {
+        const { title, date } = this.props;
         return (
             <div className="profile-certifikate">
                 <div className="certificates-row">
                     <div className="titel-certificate">
                         <Award className="badge-image" />
-                        <p className="badge-title">{this.props.title}</p>
+                        <p className="badge-title">{title}</p>
                     </div>
                     <div className="date-certificate">
-                        <p className="date">{`${t.t('component.profileCertificate.date', 'Reached at')} ${
-                            this.props.date
-                        }`}</p>
+                        <p className="date">{`${t.t('component.profileCertificate.date', 'Reached at')} ${date}`}</p>
                     </div>
                 </div>
                 <Download className="download-image" />

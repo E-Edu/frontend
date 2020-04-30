@@ -48,7 +48,6 @@ class Login extends React.Component {
             hiddenEye.style.display = 'none';
             openEye.style.display = 'block';
         } */
-        // TODO not with document.getElementById. Thats not the react style
     }
 
     render() {
@@ -56,7 +55,7 @@ class Login extends React.Component {
             <div className="login-component">
                 {/* describes the login-popup */}
                 <form className="box" onSubmit={this.handleSubmit} action="loginPop.html" method="post">
-                    <div className="boxinhalt">
+                    <div className="box-content">
                         <h1 className="headline">L O G I N</h1>
                         {/* describes the email-input-box */}
                         <div className="input-box">

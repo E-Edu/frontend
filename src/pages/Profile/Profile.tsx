@@ -1,6 +1,5 @@
 import React from 'react';
 import './Profile.scss';
-import '../../css/main.css';
 import { Calendar, Edit2, Tag, TrendingUp, User } from 'react-feather';
 import { observer } from 'mobx-react';
 import IconText from '../../components/IconText/IconText';
@@ -9,13 +8,10 @@ import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
 import ProfileStore from '../../store/profile.store';
 
-// tslint:disable-next-line:no-empty-interface
-interface ProfileProps {}
-
 const profileStore = new ProfileStore();
 
 @observer
-class Profile extends React.Component<ProfileProps> {
+class Profile extends React.Component {
     usernameClickListener = () => {
         profileStore.setDisabled(!profileStore.disabled);
     };
@@ -114,7 +110,7 @@ class Profile extends React.Component<ProfileProps> {
                                 <span className="level-rang">
                                     {t.t('page.profile.rank.teachingMaster', 'The Teaching Master')}
                                 </span>{' '}
-                                {/* TODO ändern in component */}
+                                {/* TODO change in component */}
                             </div>
                         </div>
 

@@ -5,6 +5,7 @@ import { observer } from 'mobx-react';
 import Page from '../../components/Page/Page';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import { t } from '../../i18n/i18n';
+import Validation from '../../lib/validation';
 import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
 import AddTeacherStore from '../../store/addTeacher.store';
 
@@ -26,18 +27,17 @@ class AddTeacher extends React.Component {
     };
 
     isValidEmail() {
-        const regex =
-            '(?:[a-z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&\'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])';
-        return addTeacherStore.email.match(regex) !== null;
+        return Validation.validateEmail(addTeacherStore.email);
     }
 
     renderRequests() {
-        return addTeacherStore.pendingRequests.map((request, index) => {
-            return <AddTeacherRequest key={index} name={request.name} email={request.email} />;
+        return addTeacherStore.pendingRequests.map((request) => {
+            return <AddTeacherRequest key={request.name} name={request.name} email={request.email} />;
         });
     }
 
     render() {
+        const zeroValue = 0;
         return (
             <Page mainTitle={t.t('page.addTeacher.title', 'Add teacher')}>
                 <div className="add-teacher">
@@ -51,7 +51,7 @@ class AddTeacher extends React.Component {
                     <UserPlus className="add-teacher-button" onClick={this.add} />
                 </div>
                 <h1 className="requests-title">
-                    {addTeacherStore.pendingRequests.length === 0
+                    {addTeacherStore.pendingRequests.length === zeroValue
                         ? t.t('page.addTeacher.noPendingRequests', 'No pending requests')
                         : t.t('page.addTeacher.pendingRequests', 'Pending requests')}
                 </h1>

@@ -14,7 +14,6 @@ interface SitesItems {
     iconName: string;
     route: string;
     permission: PermissionEnum;
-    spacerBefore: boolean;
 }
 
 class Sidebar extends React.Component<SidebarProps> {
@@ -26,7 +25,7 @@ class Sidebar extends React.Component<SidebarProps> {
     };
 
     render() {
-        const { active } = this.props;
+        const { active, visible, className } = this.props;
         const permission = 3; // TODO: get this from user-ms
         const sites: SitesItems[] = [
             {
@@ -34,42 +33,43 @@ class Sidebar extends React.Component<SidebarProps> {
                 label: 'Home',
                 permission: PermissionEnum.USER,
                 route: 'dashboard',
-                spacerBefore: false,
             },
             {
                 iconName: 'plus-circle',
                 label: 'Neue Aufgabe',
                 permission: PermissionEnum.ADMIN,
                 route: 'task/add',
-                spacerBefore: true,
             },
         ];
-        const sitesHtml = sites.map((site, index) => {
+        const sitesHtml = sites.map((site) => {
             if (permission >= site.permission) {
                 return (
                     <MenuElement
+                        key={site.route}
                         name={site.label}
                         file={site.iconName}
                         url={site.route}
-                        active={this.props.active === `/${site.route}`}
-                        key={index}
-                        spacer={site.spacerBefore}
+                        active={active === `/${site.route}`}
                     />
                 );
             }
-            return '';
+            return null;
         });
 
-        if (!this.props.visible) {
+        if (!visible) {
             return null;
         }
-
         return (
-            <div className={`menu ${this.props.className}`}>
+            <div className={`menu ${className}`}>
                 <div className="top-icons">{sitesHtml}</div>
                 <div className="bottom-icons">
-                    <MenuElement name="" key={0} file="settings" url="settings" active={active === '/settings'} />
-                    <MenuElement name="" key={1} file="user" url="profile" active={active === '/profile'} />
+                    <MenuElement
+                        key="settings"
+                        name=""
+                        file="settings"
+                        url="settings"
+                        active={active === '/settings'}
+                    />
                 </div>
             </div>
         );
