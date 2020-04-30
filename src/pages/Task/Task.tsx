@@ -6,12 +6,13 @@ import IconText from '../../components/IconText/IconText';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
+// TODO is this used or can it be removed?
 interface TaskProps {
     name?: string;
     difficulty?: DifficultyEnum;
     description?: string;
     questions?: string[];
-    rightQuestions: string; // TODO badly chosen name?
+    rightQuestions: string;
 }
 
 class Task extends React.Component<TaskProps> {

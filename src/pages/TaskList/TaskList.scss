@@ -1,13 +1,15 @@
 @import './src/css/styles';
 
 .result-content-header {
+  display: flex;
+  margin-top: 1rem;
   width: 100%;
 
   .result-left {
     margin-left: 12.667rem;
 
     .result-subject {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.667rem;
@@ -32,7 +34,7 @@
         }
 
         .points {
-          color: #3a506b;
+          color: $color-grey;
         }
 
       }
@@ -43,23 +45,20 @@
     margin-right: 7.267rem;
 
     .result-subject {
-      color: #0b132b;
+      color: $color-bluegrey;
       font-size: 4rem;
       font-weight: bolder;
       margin-right: 2.667rem;
       margin-top: 2.267rem;
 
-      
-
       input {
         background: transparent;
-        border: 1px solid #3a506b;
+        border: 1px solid $color-grey;
         border-radius: 8px;
-        color: #3a506b;
+        color: $color-grey;
         font-size: 1.333rem;
         height: 2.867rem;
         letter-spacing: 0;
-        opacity: 1;
         opacity: 1;
         padding: 0 0.5rem;
         text-align: left;
@@ -72,7 +71,10 @@
       }
     }
   }
+}
 
+.task-content-list {
+  margin-top: 4rem;
 }
 
 .task-list {
@@ -84,7 +86,7 @@
 
   .teacher-information {
     img {
-      border: 0.133rem solid #5bc0be;
+      border: 0.133rem solid $color-primary;
       border-radius: 6.667rem;
       max-height: 7.333rem;
       max-width: 7.333rem;

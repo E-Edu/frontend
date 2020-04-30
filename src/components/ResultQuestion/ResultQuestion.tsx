@@ -10,15 +10,16 @@ interface ResultQuestionProps {
 
 class ResultQuestion extends React.Component<ResultQuestionProps> {
     render() {
+        const { color, index } = this.props;
         return (
             <div className="result-question-box">
-                <div className="result-status-bar" style={{ backgroundColor: this.props.color }} />
+                <div className="result-status-bar" style={{ backgroundColor: color }} />
                 <div className="result-content">
                     <div className="result-top">
                         <div className="result-left-top">
                             <p className="result-question-label">
                                 Frage
-                                {this.props.index}
+                                {index}
                             </p>
                             <p className="result-question-titel">Äpfel und Birnen</p>
                         </div>

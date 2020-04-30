@@ -13,12 +13,13 @@ interface CorrectionReviewBoxesProps {
 
 class CorrectionReviewBoxes extends React.Component<CorrectionReviewBoxesProps> {
     render() {
+        const { difficulty } = this.props;
         return (
             <span className="correction-box">
                 <div className="correction-box-header">
                     <p>AUFGABE: Plusrechnen für Einsteiger</p>
                     <div className="correction-difficulty">
-                        <DifficultyLabel difficulty={this.props.difficulty} />
+                        <DifficultyLabel difficulty={difficulty} />
                     </div>
                 </div>
                 <div className="correction-box-bottom">

@@ -63,7 +63,7 @@ module.exports = {
         'no-debugger': 'error',
         'react/jsx-indent': 'off',
         'no-use-before-define': 'off',
-        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx'] }],
+        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx', '.tsx'] }],
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'space-infix-ops': 'error',
@@ -90,7 +90,12 @@ module.exports = {
         }],
         'react/jsx-curly-spacing':'off',
         'react/state-in-constructor': 'warn',
-        'no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': [
+            2,
+            {
+                'args': 'none',
+            }
+        ],
         'import/prefer-default-export': 'off',
         'react/jsx-key':'warn',
     },

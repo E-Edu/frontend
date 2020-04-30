@@ -66,13 +66,13 @@
       }
 
       a {
-        color: #687d9a;
+        color: $color-lightGrey;
         text-decoration: none;
         transition: all 0.2s;
       }
 
       a:hover {
-        color: #5bc0be;
+        color: $color-primary;
       }
 
       a:focus {

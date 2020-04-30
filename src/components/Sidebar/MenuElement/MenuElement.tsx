@@ -3,26 +3,14 @@ import './MenuElement.scss';
 import { Link } from 'react-router-dom';
 import icons from '../icons';
 
-// TODO Statemanagement
-
 interface MenuElementProps {
     active?: boolean;
-    url?: string | number | boolean;
-    file?: string | number | boolean;
-    name?: string | number | boolean;
-    spacer?: boolean;
+    url?: string;
+    file?: string;
+    name?: string;
 }
 
 class MenuElement extends React.Component<MenuElementProps> {
-    /*    static getDerivedStateFromProps(props, state) {
-        if (state.active !== props.active) {
-            return {
-                active: props.active,
-            };
-        }
-        return null;
-    } */
-
     setActivity(activity) {
         // the active changes the icon
         this.setState({ active: activity || this.props.active });
@@ -37,22 +25,7 @@ class MenuElement extends React.Component<MenuElementProps> {
     };
 
     render() {
-        const { active, file, name } = this.props;
-        let spacer: any;
-        if (this.props.spacer) {
-            spacer = (
-                <div
-                    style={{
-                        width: 60,
-                        borderWidth: 2,
-                        backgroundColor: '#ffffff',
-                        borderRadius: 2,
-                        height: 1,
-                        alignSelf: 'center',
-                    }}
-                />
-            );
-        }
+        const { active, file, name, url } = this.props;
         let color;
         // get the right filename, if active or not
         if (!active) {
@@ -65,30 +38,28 @@ class MenuElement extends React.Component<MenuElementProps> {
             nameText = (
                 <p
                     style={{
+                        color,
                         margin: '0 0.8rem',
                         overflowWrap: 'break-word',
                         textAlign: 'center',
-                        color,
                     }}>
                     {name}
                 </p>
             );
         }
 
-        // @ts-ignore
         const File = icons[file];
-        return [
-            spacer,
+        return (
             <Link
-                to={`/${this.props.url}`}
+                to={`/${url}`}
                 className="menu-element"
                 style={{ display: 'block' }}
                 onMouseEnter={this.onMouseEnterHandler}
                 onMouseLeave={this.onMouseLeaveHandler}>
                 <File color={color} fill="none" />
                 {nameText}
-            </Link>,
-        ];
+            </Link>
+        );
     }
 }
 

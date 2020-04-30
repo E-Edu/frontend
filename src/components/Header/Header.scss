@@ -16,7 +16,10 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    height: 2rem;
     margin-left: 3rem;
+    padding: 1.066rem;
+    width: 2rem;
 
     .logo-img {
       height: 95%;
@@ -59,7 +62,7 @@
   }
 
   .btn-register {
-    color: $color-lightGrey;
+    color: $color-turquoise;
     transition: all 0.2s;
   }
 
@@ -91,11 +94,7 @@
   }
 
   .button-box-dashboard {
-    margin-right: 6.4rem;
-  }
-
-  .button-box-dashboard {
-    margin-right: 6.4rem;
+    margin-right: 1.4rem;
   }
 
   .btn-dash {

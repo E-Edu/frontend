@@ -19,14 +19,13 @@
 
       .subject-task-left {
         padding-left: 4rem;
-        /*margin-top: 34px;*/
 
         .subject-task-subject {
           color: $color-bluegrey;
           font-family: HindSiliguri-Regular, sans-serif;
           font-size: 60px;
           font-weight: bolder;
-          margin-top: 34px;
+          margin-top: 2.13rem;
         }
 
         .subject-task-module {
@@ -43,8 +42,8 @@
         justify-content: space-between;
 
         img {
-          height: 20px;
-          width: 20px;
+          height: 1.25rem;
+          width: 1.25rem;
         }
 
         .subject-task-points {
@@ -56,11 +55,11 @@
           font-weight: bolder;
 
           &:first-child {
-            margin-right: 26px;
+            margin-right: 1.63rem;
           }
 
           p {
-            margin: 10px 0;
+            margin: 0.63rem 0;
           }
         }
       }
@@ -68,7 +67,7 @@
   }
 
   .progress-display {
-    margin-top: 42px;
+    margin-top: 2.63rem;
     width: 37.5rem;
 
     .progress-bar {
@@ -78,21 +77,21 @@
       width: 37.5rem;
 
       .progress-per {
-        background-color: #5bc0be;
+        background-color: $color-primary;
         height: 5px;
         width: 40%;
       }
     }
 
     .subject-task-titel {
-      color: #3a506b;
+      color: $color-grey;
       font-size: 32px;
       font-weight: normal;
       margin-top: 73px;
     }
 
     .subject-task-description {
-      color: #3a506b;
+      color: $color-grey;
       font-size: 16px;
       margin-top: 30px;
     }
@@ -106,13 +105,9 @@
     width: 37.5rem;
 
     .subject-task-answer-header {
-      /* display: flex;
-            flex-direction: row;
-            */
       justify-content: space-between;
       margin-right: auto;
       margin-top: 1.6rem;
-      /*width: 37.5rem;*/
       width: 100%;
     }
 
@@ -121,11 +116,10 @@
       width: 100%;
 
       input {
-        border: 1px solid #707070;
+        border: 1px solid $color-warmGrey;
         border-radius: 8px;
         display: flex;
         flex-direction: row;
-        /*width: 37.5rem;*/
         height: 2rem;
         justify-content: space-between;
         padding-left: 0.5rem;
@@ -143,7 +137,7 @@
 
       .subject-task-skip {
         background: none;
-        border: 1px solid #707070;
+        border: 1px solid $color-warmGrey;
         border-radius: 8px;
         font-size: 23px;
         font-weight: normal;
@@ -152,8 +146,8 @@
       }
 
       .subject-task-next {
-        background-color: #5bc0be;
-        border: 1px solid #707070;
+        background-color: $color-primary;
+        border: 1px solid $color-warmGrey;
         border-radius: 8px;
         font-size: 23px;
         font-weight: normal;

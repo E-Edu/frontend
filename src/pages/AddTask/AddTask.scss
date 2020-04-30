@@ -1,3 +1,5 @@
+@import './src/css/styles';
+
 .add-task {
   align-items: center;
   display: flex;
@@ -34,7 +36,7 @@
 
   .add-question {
     align-items: center;
-    border: 0.133rem solid #1c2541;
+    border: 0.133rem solid $color-dark;
     border-radius: 0.667rem;
     box-sizing: border-box;
     cursor: pointer;
@@ -42,7 +44,7 @@
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 5rem;
-    padding: 5px; // to convert this to rem, change this also in TextInput.scss
+    padding: 0.32rem;
     text-align: center;
     width: 80%;
 

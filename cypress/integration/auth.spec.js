@@ -7,10 +7,11 @@ describe('login and registration test', () => {
     it('should register', () => {
         cy.visit('/')
             .get('.btn-register').click()
-            .url().should('include', '/dashboard');
+            .url().should('include', '/register');
     });
     it('should logout', () => {
-        cy.get('.btn-logout').click()
+        cy.visit('/dashboard')
+            .get('.btn-logout').click()
             .url().should('include', '/');
     });
 });
