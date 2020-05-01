@@ -7,6 +7,17 @@
     "profileCertificate": {
       "date": "Reached at"
     },
+    "register": {
+      "inputs": {
+        "emailLabel": "E-Mail",
+        "passwordLabel": "Password",
+        "retypedPasswordLabel": "Retype Password"
+      },
+      "label": "Register",
+      "student": "student",
+      "teacher": "teacher",
+      "termsText": "I have read the <a href=\"/imprint\">GTC</a> and the <a href=\"/privacy\">privacy policy</a> and accepted both."
+    },
     "subject": {
       "description": {
         "biology": "Biology",

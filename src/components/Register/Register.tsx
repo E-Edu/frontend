@@ -1,9 +1,11 @@
 import React from 'react';
 import './Register.scss';
 import { observer } from 'mobx-react';
+import parse from 'html-react-parser';
 import TextInput from '../Input/TextBox/TextInput';
 import Button from '../ui/button/Button';
 import RegisterStore from '../../store/register.store';
+import { t } from '../../i18n/i18n';
 
 const registerStore = new RegisterStore();
 
@@ -13,54 +15,63 @@ class Register extends React.Component {
         return (
             <div className="register">
                 <div className="header">
-                    <span>Register</span>
+                    <span>{t.t('component.register.label', 'Register')}</span>
                 </div>
                 <div className="register-content">
                     <div className="first-page flex-column-box">
                         <div className="inputs flex-column-box">
                             <TextInput
-                                placeholder="E-Mail"
+                                placeholder={t.t('component.register.inputs.emailLabel', 'E-Mail')}
                                 onChange={(value) => registerStore.setEmail(value.target.value)}
                                 className="text-input"
                                 style={{ height: '2.69rem', width: '28rem' }}
                             />
                             <TextInput
-                                placeholder="Passwort"
+                                placeholder={t.t('component.register.inputs.passwordLabel', 'Password')}
                                 onChange={(value) => registerStore.setPassword(value.target.value)}
                                 className="text-input"
+                                type="password"
                                 style={{ height: '2.69rem', width: '28rem' }}
                             />
                             <TextInput
-                                placeholder="Passwort bestätigen"
+                                placeholder={t.t('component.register.inputs.retypedPasswordLabel', 'Retype password')}
                                 onChange={(value) => registerStore.setRetypedPassword(value.target.value)}
                                 className="text-input"
+                                type="password"
                                 style={{ height: '2.69rem', width: '28rem' }}
                             />
                             <div className="account-type flex-row-box">
                                 <Button
-                                    name="Lehrer"
+                                    name={t.t('component.register.teacher', 'teacher')}
                                     onClick={() => registerStore.setAccountType('teacher')}
                                     width="13.5rem"
                                     height="2.69rem"
                                     fontSize="22px"
-                                    styleType="unset"
+                                    styleType={registerStore.accountType === 'teacher' ? 'selected' : 'unset'}
                                 />
                                 <Button
-                                    name="Schüler"
-                                    onClick={() => registerStore.setAccountType('pupil')}
+                                    name={t.t('component.register.student', 'student')}
+                                    onClick={() => registerStore.setAccountType('student')}
                                     width="13.5rem"
                                     height="2.69rem"
                                     fontSize="22px"
-                                    styleType="unset"
+                                    styleType={registerStore.accountType === 'student' ? 'selected' : 'unset'}
                                 />
                             </div>
                         </div>
                         <div className="actions flex-row-box">
                             <input
                                 type="checkbox"
-                                onClick={() => registerStore.setIsAgbAccepted(registerStore.isAgbAccepted)}
+                                onClick={() => registerStore.setIsGtcAccepted(!registerStore.isGtcAccepted)}
                             />
-                            <span>AGB Text. Ich habe die Datenschutzbestimmungen gelesen und akzeptiert.</span>
+                            <span>
+                                {parse(
+                                    t.t(
+                                        'component.register.termsText',
+                                        '<a href="/imprint">GTC</a> text. I have read the  <a href="/privacy">privacy policy</a> and accepted.'
+                                    )
+                                )}
+                            </span>
                         </div>
                         <div className="submit-region flex-row-box">
                             {registerStore.accountType === 'teacher' ? (

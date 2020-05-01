@@ -13,11 +13,23 @@ interface TextInputProps {
     onClick?: any;
     value?: string;
     disabled?: boolean;
+    pattern?: string;
 }
 
 class TextInput extends React.Component<TextInputProps> {
     render() {
-        const { placeholder, onChange, maxWidth, className, rows, type, onClick, value, disabled } = this.props;
+        const {
+            placeholder,
+            onChange,
+            maxWidth,
+            className,
+            rows,
+            type,
+            onClick,
+            value,
+            disabled,
+            pattern,
+        } = this.props;
         let { shadow } = this.props;
 
         const { style } = this.props;
@@ -57,6 +69,7 @@ class TextInput extends React.Component<TextInputProps> {
                 type={type}
                 value={value}
                 disabled={disabled}
+                pattern={pattern}
             />
         );
     }

@@ -4,8 +4,8 @@ class RegisterStore {
     @observable email = '';
     @observable password = '';
     @observable retypedPassword = '';
-    @observable isAgbAccepted = false;
-    @observable accountType: 'teacher' | 'pupil' | 'unset' = 'unset';
+    @observable isGtcAccepted = false;
+    @observable accountType: 'teacher' | 'student' | 'unset' = 'unset';
     @observable teacherToken = '';
 
     @action setEmail(value: string) {
@@ -17,10 +17,10 @@ class RegisterStore {
     @action setRetypedPassword(value: string) {
         this.retypedPassword = value;
     }
-    @action setIsAgbAccepted(value: boolean) {
-        this.isAgbAccepted = value;
+    @action setIsGtcAccepted(value: boolean) {
+        this.isGtcAccepted = value;
     }
-    @action setAccountType(value: 'teacher' | 'pupil' | 'unset') {
+    @action setAccountType(value: 'teacher' | 'student' | 'unset') {
         this.accountType = value;
     }
     @action setTeacherToken(value: string) {
