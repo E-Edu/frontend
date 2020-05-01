@@ -131,6 +131,7 @@ class SubjectTask extends React.Component {
                                     {currentQuestion.answers.map((answer, index) => {
                                         return (
                                             <div className="fields" key={answer.value}>
+                                                {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
                                                 <p
                                                     onClick={() => subjectTaskStore.toggleAnswerSelection(index)}
                                                     className={`field ${
