@@ -13,10 +13,12 @@ class Header extends React.Component<HeaderInterface> {
             case 'landing':
                 return (
                     <div className="header-navbar">
-                        <div className="logo">
-                            <img className="logo-img" src="/assets/logo.svg" alt="" />
-                            <h1 className="title">E-EDU</h1>
-                        </div>
+                        <Link to="/" style={{ textDecoration: 'none' }}>
+                            <div className="logo">
+                                <img className="logo-img" src="/assets/logo.svg" alt="" />
+                                <h1 className="title">E-EDU</h1>
+                            </div>
+                        </Link>
                         <div className="button-box-landing">
                             {/* TODO Route zurück auf /login */}
                             <Link className="btn-log btn-login" to="/dashboard">
