@@ -5,9 +5,17 @@
   border-radius: 8px;
   box-sizing: border-box;
   padding: 0.32rem;
+  position: relative;
   resize: vertical;
 
   &:focus {
     outline: none; // Chrome
   }
+}
+
+.input-icon {
+  margin-top: 1.7rem;
+  padding-left: 1rem;
+  position: absolute;
+  text-align: center;
 }

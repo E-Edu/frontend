@@ -29,11 +29,13 @@ class TextInput extends React.Component<TextInputProps> {
             value,
             disabled,
             pattern,
+            style,
+            children,
         } = this.props;
         let { shadow } = this.props;
 
-        const { style } = this.props;
         if (maxWidth) style.maxWidth = maxWidth;
+        if (React.Children.count(children)) style.paddingLeft = '3rem';
         if (shadow !== undefined) {
             switch (shadow) {
                 case 'red': {
@@ -60,17 +62,20 @@ class TextInput extends React.Component<TextInputProps> {
             );
         }
         return (
-            <input
-                className={`text-box ${className}`}
-                placeholder={placeholder}
-                onChange={onChange}
-                onClick={onClick}
-                style={style}
-                type={type}
-                value={value}
-                disabled={disabled}
-                pattern={pattern}
-            />
+            <>
+                <input
+                    className={`text-box ${className}`}
+                    placeholder={placeholder}
+                    onChange={onChange}
+                    onClick={onClick}
+                    style={style}
+                    type={type}
+                    value={value}
+                    disabled={disabled}
+                    pattern={pattern}
+                />
+                {children}
+            </>
         );
     }
 }
