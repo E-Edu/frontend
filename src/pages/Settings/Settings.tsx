@@ -18,6 +18,7 @@ class Settings extends Component {
         document.addEventListener('keydown', this.handleKeyPress);
     }
 
+    // TODO: remove this because it'll be deprecated
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeyPress);
     }
