@@ -1,6 +1,6 @@
 import ApolloClient from 'apollo-boost';
 
-const API_URL = 'https://api.e-edu.the-morpheus.de/graphql';
+const API_URL = 'https://api.gewia.com/graphql';
 /* const API_URL = "http://steve.de/graphql"; */
 
 export default class Query {
