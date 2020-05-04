@@ -52,6 +52,11 @@
     "correctionAction": "korrekt",
     "date": "vor 3 Tagen"
   },
+  "error": {
+    "description": "Die angeforderte Seite scheint nicht zu existieren! Zurück zur",
+    "heading": "Ups, es scheint, als wäre hier nichts",
+    "link": "Startseite"
+  },
   "page": {
     "addTask": {
       "addNewQuestion": "Neue Frage hinzufügen",
