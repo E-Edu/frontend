@@ -52,6 +52,11 @@
     "correctionAction": "correct",
     "date": "3 days ago"
   },
+  "error": {
+    "description": "The page you are looking for does not exist! Go back to",
+    "heading": "Oops, looks like here is nothing",
+    "link": "home"
+  },
   "page": {
     "addTask": {
       "addNewQuestion": "Add new Question",

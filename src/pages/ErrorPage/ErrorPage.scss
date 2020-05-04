@@ -1,0 +1,23 @@
+@import './src/css/styles';
+
+.error404 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    color: $color-warmGrey;
+    margin-top: -1rem;
+  }
+
+  .error-link {
+    color: $color-turquoise;
+    text-decoration: none;
+  }
+}

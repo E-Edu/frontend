@@ -30,7 +30,7 @@ interface match<P> {
 }
 
 class PageLayout extends React.Component<PageLayoutProps> {
-    hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy', '/login', '/register'];
+    hiddenSidebarPages = ['/', '/credits', '/imprint', '/privacy', '/login', '/register', '/error404'];
 
     constructor(props) {
         super(props);
