@@ -16,13 +16,13 @@ interface PageLayoutProps extends RouteComponentProps<MatchParams> {
 
 // from typings
 interface RouteComponentProps<P> {
-    match: match<P>;
+    match: Match<P>;
     location: H.Location;
     history: H.History;
     staticContext?: any;
 }
 
-interface match<P> {
+interface Match<P> {
     params: P;
     isExact: boolean;
     path: string;
