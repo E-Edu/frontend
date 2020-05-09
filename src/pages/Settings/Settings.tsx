@@ -56,22 +56,21 @@ class Settings extends Component {
                     <div className="header">
                         <span>{t.t('page.settings.title', 'Settings')}</span>
                     </div>
-                    {/* TODO: Translate all strings */}
                     <div className="content flex-row-box">
                         <div className="left flex-column-box">
                             <div className="flex-row-box">
                                 <div className="labels flex-column-box">
                                     <div className="text-label flex-row-box">
-                                        <span>Email</span>
+                                        <span>{t.t('page.settings.email', 'Email')}</span>
                                     </div>
                                     <div className="text-label flex-row-box">
-                                        <span>Sprache</span>
+                                        <span>{t.t('page.settings.language', 'Language')}</span>
                                     </div>
                                     <div className="text-label flex-row-box">
-                                        <span>Altes Passwort</span>
+                                        <span>{t.t('page.settings.curentPassword', 'Current Password')}</span>
                                     </div>
                                     <div className="text-label flex-row-box">
-                                        <span>Neues Passwort</span>
+                                        <span>{t.t('page.settings.newPassword', 'New Password')}</span>
                                     </div>
                                 </div>
                                 <div className="inputs flex-column-box">
@@ -85,8 +84,11 @@ class Settings extends Component {
                                     </div>
                                     <div className="input flex-row-box">
                                         <ComboBox
-                                            placeholder="Sprache"
-                                            data={['Deutsch', 'Englisch']}
+                                            placeholder={t.t('page.settings.language', 'Language')}
+                                            data={[
+                                                t.t('page.settings.languages.german', 'German'),
+                                                t.t('page.settings.languages.english', 'English'),
+                                            ]}
                                             value={settingsStore.selectedLanguage}
                                             callbackValue={(value) => settingsStore.setSelectedLanguage(value)}
                                             width="20rem"
@@ -116,7 +118,7 @@ class Settings extends Component {
                                 </div>
                             </div>
                             <Button
-                                name="Account Daten Anfordern"
+                                name={t.t('page.settings.requestAccount', 'Request Account Information')}
                                 type="button"
                                 styleType="secondary"
                                 width="33rem"
@@ -125,7 +127,7 @@ class Settings extends Component {
                                 className="get-account-data"
                             />
                             <Button
-                                name="Account löschen"
+                                name={t.t('page.settings.deleteAccount', 'Delete Account')}
                                 type="button"
                                 styleType="secondary"
                                 width="33rem"
@@ -140,7 +142,7 @@ class Settings extends Component {
                     </div>
                     <div className="actions flex-row-box">
                         <Button
-                            name="Speichern"
+                            name={t.t('page.settings.save', 'Save')}
                             type="button"
                             styleType="primary"
                             width="15rem"

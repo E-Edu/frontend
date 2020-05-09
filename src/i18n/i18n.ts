@@ -8,7 +8,7 @@ i18n.use(initReactI18next).init({
     defaultNS: 'translation',
     fallbackLng: 'de',
     interpolation: { escapeValue: false },
-    lng: 'en',
+    lng: 'de',
     load: 'all',
     ns: ['translation'],
     react: { wait: true },

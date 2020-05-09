@@ -74,7 +74,7 @@ class AddQuestion extends React.Component<AddQuestionProps> {
         const indexSummand = 1;
         return (
             <div className="multiplechoice">
-                <h2>Question {questionIndex + indexSummand}</h2>
+                <h2>{t.t('component.task.add.question.question', 'Question')} {questionIndex + indexSummand}</h2>
                 <TextInput
                     placeholder={t.t('component.task.add.question.title', 'Title of question')}
                     onChange={this.changeTitleHandler}

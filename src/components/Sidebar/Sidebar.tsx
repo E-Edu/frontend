@@ -2,6 +2,7 @@ import React from 'react';
 import './Sidebar.scss';
 import MenuElement from './MenuElement/MenuElement';
 import { PermissionEnum } from '../../models/permission.enum';
+import { t } from '../../i18n/i18n';
 
 interface SidebarProps {
     active?: string;
@@ -30,13 +31,13 @@ class Sidebar extends React.Component<SidebarProps> {
         const sites: SitesItems[] = [
             {
                 iconName: 'home',
-                label: 'Home',
+                label: t.t('component.sidebar.home', 'Home'),
                 permission: PermissionEnum.USER,
                 route: 'dashboard',
             },
             {
                 iconName: 'plus-circle',
-                label: 'Neue Aufgabe',
+                label: t.t('component.sidebar.newTask', 'New Task'),
                 permission: PermissionEnum.ADMIN,
                 route: 'task/add',
             },
