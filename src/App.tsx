@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import LandingPage from './pages/Landing/LandingPage';
 import Dashboard from './pages/Dashboard/Dashboard';
-import Imprint from './pages/Imprint/Imprint';
-import Privacy from './pages/Privacy/Privacy';
 import Credits from './pages/Credits/Credits';
 import TaskEvaluation from './pages/Result/TaskEvaluation';
 import Settings from './pages/Settings/Settings';
@@ -23,8 +21,6 @@ class App extends Component {
                 <PageLayout>
                     <Switch>
                         <Route path={['/login', '/register', '/']} exact component={LandingPage} />
-                        <Route path="/imprint" exact component={Imprint} />
-                        <Route path="/privacy" exact component={Privacy} />
                         <Route path="/credits" exact component={Credits} />
                         <Route path="/dashboard" exact component={Dashboard} />
                         <Route path="/task/list" exact component={TaskList} />
@@ -34,6 +30,14 @@ class App extends Component {
                         <Route path="/task/subject" exact component={SubjectTask} />
                         <Route path="/settings" exact component={Settings} />
                         <Route path="/register/validateemail/:token" exact component={ValidateEmail} />
+                        <Route
+                            path={['/imprint', '/privacy']}
+                            exact
+                            component={() => {
+                                window.location.href = 'https://the-morpheus.de/faq.html';
+                                return null;
+                            }}
+                        />
                         <Route path="/error404" exact component={ErrorPage} status={404} />
                         <Route path="*" status={404}>
                             <Redirect to="/error404" />

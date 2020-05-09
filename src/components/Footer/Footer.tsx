@@ -20,9 +20,6 @@ class Footer extends React.Component<FooterProps> {
                     <Link to="/imprint" className="imprint-link">
                         {t.t('component.footer.imprint', 'Imprint')}
                     </Link>
-                    <Link to="/privacy" className="privacy-link">
-                        {t.t('component.footer.privacy', 'Privacy Policy')}
-                    </Link>
                     <Link to="/credits" className="credits-link">
                         {t.t('component.footer.credits', 'Credits')}
                     </Link>
