@@ -14,6 +14,7 @@ import PageLayout from './components/Template/page/PageLayout';
 import AddTask from './pages/AddTask/AddTask';
 import SubjectTask from './pages/SubjectTask/SubjectTask';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import ValidateEmail from './pages/ValidateEmail/ValidateEmail';
 
 class App extends Component {
     render() {
@@ -32,6 +33,7 @@ class App extends Component {
                         <Route path="/task/add" exact component={AddTask} />
                         <Route path="/task/subject" exact component={SubjectTask} />
                         <Route path="/settings" exact component={Settings} />
+                        <Route path="/register/validateemail/:token" exact component={ValidateEmail} />
                         <Route path="/error404" exact component={ErrorPage} status={404} />
                         <Route path="*" status={404}>
                             <Redirect to="/error404" />
