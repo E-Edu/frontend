@@ -7,6 +7,17 @@
     "profileCertificate": {
       "date": "Erreicht am"
     },
+    "register": {
+      "inputs": {
+        "emailLabel": "E-Mail",
+        "passwordLabel": "Passwort",
+        "retypedPasswordLabel": "Passwort bestätigen"
+      },
+      "label": "Register",
+      "student": "Schüler",
+      "teacher": "Lehrer",
+      "termsText": "Ich habe die <a href=\"/imprint\">AGB</a> und die <a href=\"/privacy\">Datenschutzbestimmungen</a> gelesen und akzeptiert."
+    },
     "subject": {
       "description": {
         "biology": "Biologie",
