@@ -4,6 +4,21 @@
       "acceptAction": "Accept",
       "denyAction": "Deny"
     },
+    "button": {
+      "cancel": "Cancel"
+    },
+    "confirmation": {
+      "irreversible": "This step is irreversible",
+      "sure": "Are you sure?"
+    },
+    "footer": {
+      "credits": "Credits",
+      "imprint": "Imprint",
+      "privacy": "Privacy Policy"
+    },
+    "login": {
+      "login": "LOGIN"
+    },
     "profileCertificate": {
       "date": "Reached at"
     },
@@ -16,7 +31,12 @@
       "label": "Register",
       "student": "student",
       "teacher": "teacher",
-      "termsText": "I have read the <a href=\"/imprint\">GTC</a> and the <a href=\"/privacy\">privacy policy</a> and accepted both."
+      "termsText": "I have read the <a href=\"/imprint\">GTC</a> and the <a href=\"/privacy\">privacy policy</a> and accepted both.",
+      "register": "REGISTER"
+    },
+    "sidebar": {
+      "home": "Home",
+      "newTask": "New Task"
     },
     "subject": {
       "description": {
@@ -48,6 +68,7 @@
           "addAnswer": "Add answer",
           "answer": "Answer",
           "description": "Description of question",
+          "question": "Question",
           "title": "Title of question"
         }
       },
@@ -74,7 +95,9 @@
       "description": "Description of the Task",
       "packageTitle": "Task package title",
       "publish": "publish",
-      "title": "Create new task"
+      "subject": "Subject",
+      "title": "Create new task",
+      "topic": "Topic"
     },
     "addTeacher": {
       "emailOfTeacher": "Teachers email",
@@ -89,7 +112,7 @@
       "heading": "Correction"
     },
     "landing": {
-      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.",
+      "description": "E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <br><span>\"The Morpheus Tutorials\"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.",
       "title": "Education for <span>You</span>"
     },
     "profile": {
@@ -103,9 +126,18 @@
     },
     "settings": {
       "change": "Change",
+      "curentPassword": "Current Password",
+      "deleteAccount": "Delete Account",
       "email": "Email",
       "language": "Language",
+      "languages": {
+        "english": "English",
+        "german": "German"
+      },
+      "newPassword": "New Password",
       "password": "Password",
+      "requestAccount": "Request Account Information",
+      "save": "Save",
       "title": "Settings"
     },
     "task": {

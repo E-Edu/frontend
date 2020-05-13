@@ -4,6 +4,21 @@
       "acceptAction": "Akzeptieren",
       "denyAction": "Ablehnen"
     },
+    "button": {
+      "cancel": "Abbrechen"
+    },
+    "confirmation": {
+      "irreversible": "Dieser Schritt kann nicht rückgängig gemacht werden",
+      "sure": "Bist du dir sicher?"
+    },
+    "footer": {
+      "credits": "Credits",
+      "imprint": "Impressum",
+      "privacy": "Datenschutzerklärung"
+    },
+    "login": {
+      "login": "ANMELDEN"
+    },
     "profileCertificate": {
       "date": "Erreicht am"
     },
@@ -16,7 +31,12 @@
       "label": "Register",
       "student": "Schüler",
       "teacher": "Lehrer",
-      "termsText": "Ich habe die <a href=\"/imprint\">AGB</a> und die <a href=\"/privacy\">Datenschutzbestimmungen</a> gelesen und akzeptiert."
+      "termsText": "Ich habe die <a href=\"/imprint\">AGB</a> und die <a href=\"/privacy\">Datenschutzbestimmungen</a> gelesen und akzeptiert.",
+      "register": "REGISTRIEREN"
+    },
+    "sidebar": {
+      "home": "Startseite",
+      "newTask": "Neue Aufgabe"
     },
     "subject": {
       "description": {
@@ -48,6 +68,7 @@
           "addAnswer": "Antwort hinzufügen",
           "answer": "Antwort",
           "description": "Beschreibung der Frage",
+          "question": "Frage",
           "title": "Titel der Frage"
         }
       },
@@ -74,7 +95,9 @@
       "description": "Beschreibung der Aufgabe",
       "packageTitle": "Aufgabenpacktitel",
       "publish": "veröffentlichen",
-      "title": "Neue Frage erstellen"
+      "subject": "Fach",
+      "title": "Neue Frage erstellen",
+      "topic": "Thema"
     },
     "addTeacher": {
       "emailOfTeacher": "Email des Lehrers",
@@ -89,7 +112,7 @@
       "heading": "Korrektur"
     },
     "landing": {
-      "description": "E-Edu ist eine Lernplattform, erstellt als Teil des Hackathons #WirVsVirus von dem Team <span>\"The Morpheus Tutorials\"</span>.<br>E-Edu bietet  eine Lernplattfrom für Schüler, die an Aufgaben von Lehrern arbeiten können.",
+      "description": "E-Edu ist eine Lernplattform, erstellt als Teil des Hackathons #WirVsVirus von dem Team <br><span>\"The Morpheus Tutorials\"</span>.<br>E-Edu bietet  eine Lernplattfrom für Schüler, die an Aufgaben von Lehrern arbeiten können.",
       "title": "Bildung für <span>Dich</span>"
     },
     "profile": {
@@ -103,9 +126,18 @@
     },
     "settings": {
       "change": "Ändern",
+      "curentPassword": "Altes Passwort",
+      "deleteAccount": "Account löschen",
       "email": "Email",
       "language": "Sprache",
+      "languages": {
+        "english": "Englisch",
+        "german": "Deutsch"
+      },
+      "newPassword": "Neues Passwort",
       "password": "Passwort",
+      "requestAccount": "Account-Daten anfordern",
+      "save": "Speichern",
       "title": "Einstellungen"
     },
     "task": {

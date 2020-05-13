@@ -54,7 +54,7 @@ class LandingPage extends React.Component {
                                 {parse(
                                     t.t(
                                         'page.landing.description',
-                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
+                                        'E-Edu is a learning platform created as part of the hackathon #WirVsVirus by the team <br><span>"The Morpheus Tutorials"</span>.<br>E-Edu offers a learning platform for students who can work on tasks created by teachers.'
                                     )
                                 )}
                             </h4>
