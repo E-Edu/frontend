@@ -10,13 +10,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open computer sience subject', () => {
@@ -26,13 +20,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open history subject', () => {
@@ -42,13 +30,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open politics subject', () => {
@@ -58,13 +40,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open physics subject', () => {
@@ -74,13 +50,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open biology subject', () => {
@@ -90,13 +60,7 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 
     it('should open chemistry subject', () => {
@@ -106,12 +70,6 @@ describe('doing tasks test', () => {
             .get('.lecture-subject').eq(1).click()
             .url().should('include', '/task/list')
             .get('.task').first().click()
-            .url().should('include', '/task/subject')
-            .get('input[placeholder=test]').type('Answer')
-            .get('.subject-task-next').click()
-            .url().should('include', '/task/result')
-            .visit('/task/subject')
-            .get('.subject-task-skip').click()
-            .url().should('include', '/task/result');
+            .url().should('include', '/task/subject');
     });
 });
