@@ -7,11 +7,12 @@ import MultipleChoiceAnswer from '../MultipleChoiceAnswer/MultipleChoiceAnswer';
 import { t } from '../../../../i18n/i18n';
 
 interface AddQuestionProps {
-    questions: { title: string; description: string; answers: { value: string; selected: boolean }[] }[];
+    questions: { id: number; title: string; description: string; answers: { value: string; selected: boolean }[] }[];
     setQuestions: (
-        value: { title: string; description: string; answers: { value: string; selected: boolean }[] }[]
+        value: { id: number; title: string; description: string; answers: { value: string; selected: boolean }[] }[]
     ) => void;
     addQuestion: (value: {
+        id: number;
         title: string;
         description: string;
         answers: { value: string; selected: boolean }[];

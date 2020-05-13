@@ -25,7 +25,13 @@ class AddTask extends React.Component {
     }
 
     addQuestionHandler = () => {
-        addTaskStore.addTaskListItem({ title: '', description: '', answers: [{ value: '', selected: false }] });
+        const maxId = 0x10000;
+        addTaskStore.addTaskListItem({
+            answers: [{ value: '', selected: false }],
+            description: '',
+            id: Math.floor(Math.random() * maxId),
+            title: '',
+        });
     };
 
     render() {
@@ -96,7 +102,7 @@ class AddTask extends React.Component {
                                 addQuestion={(value) => addTaskStore.addTaskListItem(value)}
                                 setQuestions={(value) => addTaskStore.setTaskList(value)}
                                 questionIndex={index}
-                                key="add-question"
+                                key={task.id}
                             />
                         );
                     })}

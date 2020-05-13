@@ -4,7 +4,7 @@ import de from './de/resource.json';
 import en from './en/resource.json';
 
 i18n.use(initReactI18next).init({
-    debug: true,
+    debug: false,
     defaultNS: 'translation',
     fallbackLng: 'de',
     interpolation: { escapeValue: false },
