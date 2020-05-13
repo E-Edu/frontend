@@ -51,7 +51,7 @@
       margin-right: 2.667rem;
       margin-top: 2.267rem;
 
-      input {
+      .input {
         background: transparent;
         border: 1px solid $color-grey;
         border-radius: 8px;
@@ -60,13 +60,10 @@
         height: 2.867rem;
         letter-spacing: 0;
         opacity: 1;
-        padding: 0 0.5rem;
         text-align: left;
-        width: 26.067rem;
-      
       }
 
-      input:focus {
+      .input:focus {
         outline: none;
       }
     }

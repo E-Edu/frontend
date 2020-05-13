@@ -95,12 +95,12 @@ class TaskList extends React.Component {
                         </div>
                         <div className="result-right">
                             <span className="result-subject">
-                                <TextInput placeholder={t.t('page.taskList.search', 'Search')} />
-                                <Search
-                                    size="30"
-                                    color="#3a506b"
-                                    style={{ position: 'absolute', top: '3rem', left: '76rem' }}
-                                />
+                                <TextInput
+                                    className="input"
+                                    placeholder={t.t('page.taskList.search', 'Search')}
+                                    style={{ top: '2rem', position: 'absolute' }}>
+                                    <Search className="input-icon" color="#3A506B" />
+                                </TextInput>
                             </span>
                         </div>
                     </div>
