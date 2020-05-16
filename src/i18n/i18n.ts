@@ -6,9 +6,9 @@ import en from './en/resource.json';
 i18n.use(initReactI18next).init({
     debug: false,
     defaultNS: 'translation',
-    fallbackLng: 'de',
+    fallbackLng: ['en', 'de'],
     interpolation: { escapeValue: false },
-    lng: 'de',
+    lng: localStorage.getItem('language'),
     load: 'all',
     ns: ['translation'],
     react: { wait: true },
