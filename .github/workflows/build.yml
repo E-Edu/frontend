@@ -52,8 +52,8 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install Dependencies
-          if: steps.cache.outputs.cache-hit != 'true'
-          run: npm install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
       - name: Linting
         run: npm run lint:all
 
@@ -80,8 +80,8 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: Install Dependencies
-          if: steps.cache.outputs.cache-hit != 'true'
-          run: npm install
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
       - name: e2e
         uses: cypress-io/github-action@v1
         with:
