@@ -99,7 +99,7 @@
     "@types/typescript": "2.0.0",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "@typescript-eslint/parser": "2.33.0",
-    "autoprefixer": "9.7.6",
+    "autoprefixer": "9.8.0",
     "awesome-typescript-loader": "5.2.1",
     "css-loader": "3.5.3",
     "cypress": "4.5.0",
