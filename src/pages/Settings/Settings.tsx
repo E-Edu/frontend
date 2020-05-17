@@ -14,6 +14,11 @@ const settingsStore = new SettingsStore();
 
 @observer
 class Settings extends Component {
+    languages = {
+        en: t.t('page.settings.languages.en', 'English'),
+        de: t.t('page.settings.languages.de', 'German'),
+    };
+
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress);
     }
@@ -34,6 +39,17 @@ class Settings extends Component {
     deleteAccount = () => {
         settingsStore.hideConfirmation();
         // TODO redirect to landing page
+    };
+
+    changeLanguage = (language) => {
+        settingsStore.setSelectedLanguage(language);
+        Object.entries(this.languages).forEach(([key, value]) => {
+            if (language === value) {
+                language = key;
+            }
+        });
+        t.changeLanguage(language);
+        localStorage.setItem('language', language);
     };
 
     render() {
@@ -85,12 +101,11 @@ class Settings extends Component {
                                     <div className="input flex-row-box">
                                         <ComboBox
                                             placeholder={t.t('page.settings.language', 'Language')}
-                                            data={[
-                                                t.t('page.settings.languages.german', 'German'),
-                                                t.t('page.settings.languages.english', 'English'),
-                                            ]}
+                                            data={Object.keys(this.languages).map((key) => this.languages[key])}
                                             value={settingsStore.selectedLanguage}
-                                            callbackValue={(value) => settingsStore.setSelectedLanguage(value)}
+                                            callbackValue={(value) => {
+                                                this.changeLanguage(value);
+                                            }}
                                             width="20rem"
                                             height="1.69rem"
                                             className="multi-input"

@@ -131,8 +131,8 @@
       "email": "Email",
       "language": "Language",
       "languages": {
-        "english": "English",
-        "german": "German"
+        "en": "English",
+        "de": "German"
       },
       "newPassword": "New Password",
       "password": "Password",
