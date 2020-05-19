@@ -1,7 +1,7 @@
 import React from 'react';
 import './AddTeacherRequest.scss';
 import { Check, Mail, X } from 'react-feather';
-import Teacher from '../icons/teacher.icon';
+import Teacher from '../icons/TeacherIcon';
 import IconText from '../IconText/IconText';
 import IconButton from '../Buttons/IconButton/IconButton';
 import { t } from '../../i18n/i18n';

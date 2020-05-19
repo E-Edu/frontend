@@ -1,7 +1,7 @@
 import React from 'react';
 import { number, color, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
-import TeacherIcon from './teacher.icon';
+import TeacherIcon from './TeacherIcon';
 
 const stories = storiesOf('icons', module);
 stories.addDecorator(withKnobs);

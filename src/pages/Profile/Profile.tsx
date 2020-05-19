@@ -6,7 +6,7 @@ import IconText from '../../components/IconText/IconText';
 import { t } from '../../i18n/i18n';
 import ProfileSubject from './ProfileSubject/ProfileSubject';
 import ProfileCertificate from './ProfileCertificate/ProfileCertificate';
-import ProfileStore from '../../store/profile.store';
+import ProfileStore from '../../store/ProfileStore';
 
 const profileStore = new ProfileStore();
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../css/main.scss';
 import './Settings.scss';
 import { observer } from 'mobx-react';
 import Modal from 'react-animated-modal';
@@ -7,7 +6,7 @@ import { t } from '../../i18n/i18n';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import Button from '../../components/ui/button/Button';
 import ComboBox from '../../components/ui/ComboBox/ComboBox';
-import SettingsStore from '../../store/settings.store';
+import SettingsStore from '../../store/SettingsStore';
 import Confirmation from '../../components/Settings/Confirmation/Confirmation';
 
 const settingsStore = new SettingsStore();

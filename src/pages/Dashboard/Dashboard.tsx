@@ -6,7 +6,7 @@ import { observer } from 'mobx-react';
 import Query from '../../lib/api/Query';
 // import { Subject as SubjectModel } from '../../lib/api/model/Model';
 import Subject from '../../components/Subject/Subject';
-import DashboardStore from '../../store/dashboard.store';
+import DashboardStore from '../../store/DashboardStore';
 
 const dashboardStore = new DashboardStore();
 

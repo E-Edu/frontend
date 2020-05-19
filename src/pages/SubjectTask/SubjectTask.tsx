@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { User, Users } from 'react-feather';
 import { observer } from 'mobx-react';
 import { t } from '../../i18n/i18n';
-import SubjectTaskStore from '../../store/subjectTask.store';
+import SubjectTaskStore from '../../store/SubjectTaskStore';
 import Task from '../../models/task/task';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 import Question from '../../models/task/question';

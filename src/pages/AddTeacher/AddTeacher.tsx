@@ -7,7 +7,7 @@ import TextInput from '../../components/Input/TextBox/TextInput';
 import { t } from '../../i18n/i18n';
 import Validation from '../../lib/validation';
 import AddTeacherRequest from '../../components/AddTeacherRequest/AddTeacherRequest';
-import AddTeacherStore from '../../store/addTeacher.store';
+import AddTeacherStore from '../../store/AddTeacherStore';
 
 const addTeacherStore = new AddTeacherStore();
 

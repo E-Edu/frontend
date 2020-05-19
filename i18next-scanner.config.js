@@ -8,7 +8,7 @@ module.exports = {
         '!app/**/*.spec.{ts,tsx}',
         '!app/i18n/**',
         '!**/node_modules/**',
-        '!app/**/*.store.{ts,tsx}',
+        '!app/**/*Store.{ts,tsx}',
     ],
     output: './',
     options: {

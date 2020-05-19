@@ -2,7 +2,7 @@ import React from 'react';
 import './ReportInfo.scss';
 import { ArrowDown, ArrowUp, Mail } from 'react-feather';
 import { observer } from 'mobx-react';
-import TeacherIcon from '../icons/teacher.icon';
+import TeacherIcon from '../icons/TeacherIcon';
 
 interface ReportProps {
     subject?: string;

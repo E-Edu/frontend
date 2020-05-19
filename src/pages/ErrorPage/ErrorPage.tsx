@@ -1,7 +1,7 @@
 import React from 'react';
 import './ErrorPage.scss';
 import { Link } from 'react-router-dom';
-import ErrorIcon from '../../components/icons/error.icon';
+import ErrorIcon from '../../components/icons/ErrorIcon';
 import { t } from '../../i18n/i18n';
 
 class ErrorPage extends React.Component {

@@ -1,5 +1,5 @@
 import { AlertCircle, Check, Edit, Home, List, PlusCircle, Settings, User } from 'react-feather';
-import TeacherIcon from '../icons/teacher.icon';
+import TeacherIcon from '../icons/TeacherIcon';
 
 export default {
     'alert-circle': AlertCircle,

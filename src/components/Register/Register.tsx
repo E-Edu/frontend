@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import parse from 'html-react-parser';
 import TextInput from '../Input/TextBox/TextInput';
 import Button from '../ui/button/Button';
-import RegisterStore from '../../store/register.store';
+import RegisterStore from '../../store/RegisterStore';
 import { t } from '../../i18n/i18n';
 
 const registerStore = new RegisterStore();

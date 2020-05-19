@@ -8,7 +8,7 @@ import Task from '../../components/Task/Task/Task';
 import IconText from '../../components/IconText/IconText';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import { DifficultyEnum } from '../../models/difficulty.enum';
-import TaskListStore from '../../store/taskList.store';
+import TaskListStore from '../../store/TaskListStore';
 
 const taskListStore = new TaskListStore();
 

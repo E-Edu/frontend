@@ -3,7 +3,7 @@ import './Lecture.scss';
 import { observer } from 'mobx-react';
 import TaskHeader from '../../components/TaskHeader/TaskHeader';
 import LectureGroup from '../../components/Lecture/Group/LectureGroup';
-import LectureStore from '../../store/lecture.store';
+import LectureStore from '../../store/LectureStore';
 
 const lectureStore = new LectureStore();
 

@@ -1,4 +1,3 @@
-import './css/main.scss';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import LandingPage from './pages/Landing/LandingPage';

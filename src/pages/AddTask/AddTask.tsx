@@ -9,7 +9,7 @@ import Button from '../../components/ui/button/Button';
 import TextInput from '../../components/Input/TextBox/TextInput';
 import AddQuestion from '../../components/Task/Add/Question/AddQuestion';
 import ComboBox from '../../components/ui/ComboBox/ComboBox';
-import AddTaskStore from '../../store/addTask.store';
+import AddTaskStore from '../../store/AddTaskStore';
 import DifficultyLabel from '../../components/Task/Difficulty/DifficultyLabel/DifficultyLabel';
 import { DifficultyEnum } from '../../models/difficulty.enum';
 
