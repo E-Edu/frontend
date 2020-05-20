@@ -125,6 +125,6 @@
     "stylelint-config-sass-guidelines": "7.0.0",
     "stylelint-config-standard": "20.0.0",
     "tslint": "6.1.2",
-    "typescript": "3.9.2"
+    "typescript": "3.9.3"
   }
 }
